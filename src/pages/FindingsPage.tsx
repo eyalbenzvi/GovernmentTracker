@@ -52,6 +52,8 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
   const changes = data.findings.budgetChanges[ministryId] ?? [];
 
   const exemptShare = methods.find((m) => m.method === 'פטור ממכרז')?.sharePercent ?? null;
+  const excluded = data.findings.excludedContracts[ministryId];
+  const contractsSuspect = excluded?.dataSuspect === true;
 
   const anomalies = useMemo(
     () =>
@@ -131,158 +133,190 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
         </Card>
       </section>
 
+      {contractsSuspect && excluded !== undefined && (
+        <Callout tone="warning" title="נתוני ההתקשרויות של משרד זה אינם מוצגים — חשד לשגיאות במקור">
+          <p>
+            {formatNumber(excluded.excludedCount)} רשומות התקשרות בהיקף מדווח של{' '}
+            <span className="num">{formatCurrencyShort(excluded.excludedVolume)}</span> חרגו מתקרת
+            השפיות — יותר מכלל ההיקף שנותר. במצב כזה איננו מציגים דירוג ספקים או שיטות רכש, מפני
+            שאין דרך להבחין בין רשומה תקינה לשגויה.
+          </p>
+          <p className="text-xs">{excluded.rule}</p>
+          {excluded.examples.length > 0 && (
+            <ul className="mt-1 list-inside list-disc space-y-1 text-xs">
+              {excluded.examples.slice(0, 4).map((example, index) => (
+                <li key={index}>
+                  {(example.name ?? 'ספק ללא שם') + ' — היקף מדווח '}
+                  <span className="num">{formatCurrencyShort(example.volume)}</span>
+                  {example.purpose !== null && ` — "${example.purpose.slice(0, 60)}"`}
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="text-xs">
+            הרשומות המלאות זמינות במקור (מפתח התקציב) ובקובץ findings.json; דיווח שגיאות — ב-Issue.
+          </p>
+        </Callout>
+      )}
+
       {/* ---- suppliers ---- */}
-      <section aria-labelledby="suppliers-heading">
-        <SectionHeading
-          id="suppliers-heading"
-          title={`הספקים המרכזיים — ${ministryName}`}
-          description="לפי היקף ההתקשרויות המצטבר בהסכמים שפעילים מ-2023 ואילך, מדוחות ההתקשרויות של החשב הכללי."
-          action={
-            <CsvDownloadButton
-              filename={`suppliers-${ministryId}`}
-              headers={['ספק', 'סוג ישות', 'התקשרויות', 'היקף רב-שנתי', 'שולם עד כה', 'קישור']}
-              rows={(s) => [
-                s.name,
-                kindLabel(s.entityKind),
-                s.contractCount,
-                s.totalVolume,
-                s.totalExecuted,
-                s.entityUrl,
-              ]}
-              items={suppliers}
-            />
-          }
-        />
-        {suppliers.length === 0 ? (
-          <DataUnavailable reason="לא נמצאו התקשרויות למשרד זה במקור." />
-        ) : (
-          <div className="table-wrap">
-            <table className="data-table">
-              <caption className="sr-only">הספקים המרכזיים של המשרד</caption>
-              <thead>
-                <tr>
-                  <th scope="col">ספק</th>
-                  <th scope="col">סוג</th>
-                  <th scope="col">התקשרויות</th>
-                  <th scope="col">היקף רב-שנתי</th>
-                  <th scope="col">שולם עד כה</th>
-                  <th scope="col">מקור</th>
-                </tr>
-              </thead>
-              <tbody>
-                {suppliers.map((s) => (
-                  <tr key={`${s.name}-${s.entityId ?? ''}`}>
-                    <td className="font-medium">{s.name}</td>
-                    <td>
-                      <Badge tone="muted">{kindLabel(s.entityKind)}</Badge>
-                    </td>
-                    <td className="num text-left">{formatNumber(s.contractCount)}</td>
-                    <td className="num text-left" title={formatCurrencyFull(s.totalVolume)}>
-                      {formatCurrencyShort(s.totalVolume)}
-                    </td>
-                    <td className="num text-left" title={formatCurrencyFull(s.totalExecuted)}>
-                      {formatCurrencyShort(s.totalExecuted)}
-                    </td>
-                    <td>
-                      {s.entityUrl !== null ? (
-                        <SourceLink url={s.entityUrl} title={s.name} label="דף הישות" />
-                      ) : (
-                        MISSING_SHORT
-                      )}
-                    </td>
+      {!contractsSuspect && (
+        <section aria-labelledby="suppliers-heading">
+          <SectionHeading
+            id="suppliers-heading"
+            title={`הספקים המרכזיים — ${ministryName}`}
+            description="לפי היקף ההתקשרויות המצטבר בהסכמים שפעילים מ-2023 ואילך, מדוחות ההתקשרויות של החשב הכללי."
+            action={
+              <CsvDownloadButton
+                filename={`suppliers-${ministryId}`}
+                headers={['ספק', 'סוג ישות', 'התקשרויות', 'היקף רב-שנתי', 'שולם עד כה', 'קישור']}
+                rows={(s) => [
+                  s.name,
+                  kindLabel(s.entityKind),
+                  s.contractCount,
+                  s.totalVolume,
+                  s.totalExecuted,
+                  s.entityUrl,
+                ]}
+                items={suppliers}
+              />
+            }
+          />
+          {suppliers.length === 0 ? (
+            <DataUnavailable reason="לא נמצאו התקשרויות למשרד זה במקור." />
+          ) : (
+            <div className="table-wrap">
+              <table className="data-table">
+                <caption className="sr-only">הספקים המרכזיים של המשרד</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">ספק</th>
+                    <th scope="col">סוג</th>
+                    <th scope="col">התקשרויות</th>
+                    <th scope="col">היקף רב-שנתי</th>
+                    <th scope="col">שולם עד כה</th>
+                    <th scope="col">מקור</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
+                </thead>
+                <tbody>
+                  {suppliers.map((s) => (
+                    <tr key={`${s.name}-${s.entityId ?? ''}`}>
+                      <td className="font-medium">{s.name}</td>
+                      <td>
+                        <Badge tone="muted">{kindLabel(s.entityKind)}</Badge>
+                      </td>
+                      <td className="num text-left">{formatNumber(s.contractCount)}</td>
+                      <td className="num text-left" title={formatCurrencyFull(s.totalVolume)}>
+                        {formatCurrencyShort(s.totalVolume)}
+                      </td>
+                      <td className="num text-left" title={formatCurrencyFull(s.totalExecuted)}>
+                        {formatCurrencyShort(s.totalExecuted)}
+                      </td>
+                      <td>
+                        {s.entityUrl !== null ? (
+                          <SourceLink url={s.entityUrl} title={s.name} label="דף הישות" />
+                        ) : (
+                          MISSING_SHORT
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      )}
 
       {/* ---- procurement methods ---- */}
-      <section aria-labelledby="methods-heading">
-        <SectionHeading
-          id="methods-heading"
-          title="איך נקנה: שיטות הרכש"
-          description="חלוקת היקף ההתקשרויות לפי שיטת הרכש המדווחת. שיעור גבוה של פטור ממכרז אינו בהכרח חריגה — חלק מהפטורים קבועים בתקנות — אבל הוא נתון שראוי להיות גלוי."
-        />
-        {methods.length === 0 ? (
-          <DataUnavailable reason="אין נתוני שיטות רכש למשרד זה." />
-        ) : (
-          <div className="table-wrap">
-            <table className="data-table">
-              <caption className="sr-only">שיטות רכש לפי היקף</caption>
-              <thead>
-                <tr>
-                  <th scope="col">שיטה</th>
-                  <th scope="col">התקשרויות</th>
-                  <th scope="col">היקף רב-שנתי</th>
-                  <th scope="col">נתח</th>
-                </tr>
-              </thead>
-              <tbody>
-                {methods.map((m) => (
-                  <tr key={m.method}>
-                    <td className={m.method === 'פטור ממכרז' ? 'font-semibold' : undefined}>
-                      {m.method}
-                    </td>
-                    <td className="num text-left">{formatNumber(m.contractCount)}</td>
-                    <td className="num text-left" title={formatCurrencyFull(m.totalVolume)}>
-                      {formatCurrencyShort(m.totalVolume)}
-                    </td>
-                    <td className="num text-left">{formatPercent(m.sharePercent)}</td>
+      {!contractsSuspect && (
+        <section aria-labelledby="methods-heading">
+          <SectionHeading
+            id="methods-heading"
+            title="איך נקנה: שיטות הרכש"
+            description="חלוקת היקף ההתקשרויות לפי שיטת הרכש המדווחת. שיעור גבוה של פטור ממכרז אינו בהכרח חריגה — חלק מהפטורים קבועים בתקנות — אבל הוא נתון שראוי להיות גלוי."
+          />
+          {methods.length === 0 ? (
+            <DataUnavailable reason="אין נתוני שיטות רכש למשרד זה." />
+          ) : (
+            <div className="table-wrap">
+              <table className="data-table">
+                <caption className="sr-only">שיטות רכש לפי היקף</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">שיטה</th>
+                    <th scope="col">התקשרויות</th>
+                    <th scope="col">היקף רב-שנתי</th>
+                    <th scope="col">נתח</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
+                </thead>
+                <tbody>
+                  {methods.map((m) => (
+                    <tr key={m.method}>
+                      <td className={m.method === 'פטור ממכרז' ? 'font-semibold' : undefined}>
+                        {m.method}
+                      </td>
+                      <td className="num text-left">{formatNumber(m.contractCount)}</td>
+                      <td className="num text-left" title={formatCurrencyFull(m.totalVolume)}>
+                        {formatCurrencyShort(m.totalVolume)}
+                      </td>
+                      <td className="num text-left">{formatPercent(m.sharePercent)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      )}
 
       {/* ---- notable contracts ---- */}
-      <section aria-labelledby="contracts-heading">
-        <SectionHeading
-          id="contracts-heading"
-          title="ההתקשרויות הגדולות"
-          description="לפי היקף ההסכם הרב-שנתי. מטרת ההתקשרות מוצגת כלשונה בדוח הרשמי."
-        />
-        {contracts.length === 0 ? (
-          <DataUnavailable reason="לא נמצאו התקשרויות למשרד זה." />
-        ) : (
-          <ol className="space-y-2">
-            {contracts.map((c, index) => (
-              <li key={`${c.supplier}-${index}`} className="card card-pad">
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="font-medium">{c.supplier ?? 'ספק לא מזוהה'}</p>
-                    <p className="mt-0.5 max-w-2xl text-sm text-slate-600">
-                      {c.purpose ?? MISSING_SHORT}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      <span className="num">{formatDate(c.orderDate)}</span> · {c.method} ·{' '}
-                      {c.budgetTitle ?? ''}{' '}
-                      {c.budgetCode !== null && <span className="num">({c.budgetCode})</span>}
-                    </p>
+      {!contractsSuspect && (
+        <section aria-labelledby="contracts-heading">
+          <SectionHeading
+            id="contracts-heading"
+            title="ההתקשרויות הגדולות"
+            description="לפי היקף ההסכם הרב-שנתי. מטרת ההתקשרות מוצגת כלשונה בדוח הרשמי."
+          />
+          {contracts.length === 0 ? (
+            <DataUnavailable reason="לא נמצאו התקשרויות למשרד זה." />
+          ) : (
+            <ol className="space-y-2">
+              {contracts.map((c, index) => (
+                <li key={`${c.supplier}-${index}`} className="card card-pad">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="font-medium">{c.supplier ?? 'ספק לא מזוהה'}</p>
+                      <p className="mt-0.5 max-w-2xl text-sm text-slate-600">
+                        {c.purpose ?? MISSING_SHORT}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        <span className="num">{formatDate(c.orderDate)}</span> · {c.method} ·{' '}
+                        {c.budgetTitle ?? ''}{' '}
+                        {c.budgetCode !== null && <span className="num">({c.budgetCode})</span>}
+                      </p>
+                    </div>
+                    <div className="shrink-0 text-left">
+                      <p className="num font-semibold" title={formatCurrencyFull(c.volume)}>
+                        {formatCurrencyShort(c.volume)}
+                      </p>
+                      <p
+                        className="num text-xs text-slate-500"
+                        title={formatCurrencyFull(c.executed)}
+                      >
+                        שולם: {formatCurrencyShort(c.executed)}
+                      </p>
+                      {c.entityUrl !== null && (
+                        <SourceLink url={c.entityUrl} title={c.supplier ?? ''} label="דף הישות" />
+                      )}
+                    </div>
                   </div>
-                  <div className="shrink-0 text-left">
-                    <p className="num font-semibold" title={formatCurrencyFull(c.volume)}>
-                      {formatCurrencyShort(c.volume)}
-                    </p>
-                    <p
-                      className="num text-xs text-slate-500"
-                      title={formatCurrencyFull(c.executed)}
-                    >
-                      שולם: {formatCurrencyShort(c.executed)}
-                    </p>
-                    {c.entityUrl !== null && (
-                      <SourceLink url={c.entityUrl} title={c.supplier ?? ''} label="דף הישות" />
-                    )}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
-        )}
-      </section>
+                </li>
+              ))}
+            </ol>
+          )}
+        </section>
+      )}
 
       {/* ---- support recipients ---- */}
       <section aria-labelledby="recipients-heading">

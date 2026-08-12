@@ -248,6 +248,23 @@ export const findingsSchema = z.object({
   method: z.string().min(1),
   volumeNote: z.string().min(1),
   suppliers: z.record(z.array(findingsSupplierSchema)),
+  excludedContracts: z.record(
+    z.object({
+      rule: z.string().min(1),
+      excludedCount: z.number().int().min(0),
+      excludedVolume: z.number().finite(),
+      dataSuspect: z.boolean(),
+      examples: z.array(
+        z.object({
+          name: z.string().nullable(),
+          purpose: z.string().nullable(),
+          volume: z.number().finite().nullable(),
+          budgetCode: z.string().nullable(),
+          budgetTitle: z.string().nullable(),
+        }),
+      ),
+    }),
+  ),
   contractTotals: z.record(
     z.object({
       contractCount: z.number().int().min(0),

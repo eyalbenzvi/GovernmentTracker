@@ -2,7 +2,7 @@
   "generatedAt": "2026-08-12",
   "fromYear": 2023,
   "method": "הנתונים ממפתח התקציב — מראה ציבורית של דוחות ההתקשרויות של החשב הכללי, מסד התמיכות והעברות התקציב שאושרו בוועדת הכספים. זו שכבת עזר: כל שורה מקושרת חזרה לאימות, ואף נתון אינו מסומן כסופי. שמות הספקים והמקבלים הם רשומות תאגידיות פומביות (חברות, עמותות, רשויות).",
-  "volumeNote": "היקף התקשרות (volume) הוא הסכום הרב-שנתי המחויב של ההסכם, לא הוצאה שנתית. \"שולם\" (executed) הוא התשלום המצטבר עד מועד העדכון.",
+  "volumeNote": "היקף התקשרות (volume) הוא הסכום הרב-שנתי המחויב של ההסכם, לא הוצאה שנתית. \"שולם\" (executed) הוא התשלום המצטבר עד מועד העדכון. רשומות שהיקפן חורג מתקרת שפיות מוצהרת (פי 1.5 מהתקציב השנתי המרבי של התוכנית) הוצאו מהדירוגים ומוצגות בנפרד כחשודות כשגויות במקור.",
   "suppliers": {
     "transport": [
       {
@@ -417,87 +417,6 @@
     ],
     "environment": [
       {
-        "name": "מסיעי אריה שאשא בע״מ",
-        "entityId": "510840028",
-        "entityKind": "company",
-        "contractCount": 10,
-        "totalVolume": 2555575840.01,
-        "totalExecuted": 1255345.7,
-        "entityUrl": "https://next.obudget.org/i/org/company/510840028"
-      },
-      {
-        "name": "חוכמת הבורקס גבינז",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 18,
-        "totalVolume": 1116296664.46,
-        "totalExecuted": 85560.46,
-        "entityUrl": null
-      },
-      {
-        "name": "40823287",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 2,
-        "totalVolume": 1116207104,
-        "totalExecuted": 0,
-        "entityUrl": null
-      },
-      {
-        "name": "הסעות מוני סיטון בע״מ",
-        "entityId": "511011140",
-        "entityKind": "company",
-        "contractCount": 3,
-        "totalVolume": 1022057280,
-        "totalExecuted": 11076.91,
-        "entityUrl": "https://next.obudget.org/i/org/company/511011140"
-      },
-      {
-        "name": "תיירות צובה - אגודה שיתופית חקלאית בע\"מ",
-        "entityId": "570043984",
-        "entityKind": "cooperative",
-        "contractCount": 2,
-        "totalVolume": 570049951,
-        "totalExecuted": 5967,
-        "entityUrl": "https://next.obudget.org/i/org/cooperative/570043984"
-      },
-      {
-        "name": "42836764",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 1,
-        "totalVolume": 558535944,
-        "totalExecuted": 0,
-        "entityUrl": null
-      },
-      {
-        "name": "42807246",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 1,
-        "totalVolume": 558370045,
-        "totalExecuted": 0,
-        "entityUrl": null
-      },
-      {
-        "name": "בזק החברה הישראלית לתקשורת   בע״מ",
-        "entityId": "520031931",
-        "entityKind": "company",
-        "contractCount": 12,
-        "totalVolume": 520523853.04,
-        "totalExecuted": 259440.48,
-        "entityUrl": "https://next.obudget.org/i/org/company/520031931"
-      },
-      {
-        "name": "ישרוטל בע״מ",
-        "entityId": "520042482",
-        "entityKind": "company",
-        "contractCount": 1,
-        "totalVolume": 520042482,
-        "totalExecuted": 0,
-        "entityUrl": "https://next.obudget.org/i/org/company/520042482"
-      },
-      {
         "name": "סנקאר שירותים לוגיסטיים בע״מ",
         "entityId": "511464000",
         "entityKind": "company",
@@ -516,33 +435,6 @@
         "entityUrl": "https://next.obudget.org/i/org/company/516739711"
       },
       {
-        "name": "42444526",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 1,
-        "totalVolume": 516664893,
-        "totalExecuted": 0,
-        "entityUrl": null
-      },
-      {
-        "name": "שי גורדון  בע״מ",
-        "entityId": "516641107",
-        "entityKind": "company",
-        "contractCount": 2,
-        "totalVolume": 516641807,
-        "totalExecuted": 699.66,
-        "entityUrl": "https://next.obudget.org/i/org/company/516641107"
-      },
-      {
-        "name": "42496752",
-        "entityId": null,
-        "entityKind": null,
-        "contractCount": 1,
-        "totalVolume": 516633021,
-        "totalExecuted": 0,
-        "entityUrl": null
-      },
-      {
         "name": "עמית עידן  בע״מ",
         "entityId": "516429917",
         "entityKind": "company",
@@ -550,6 +442,114 @@
         "totalVolume": 516429917,
         "totalExecuted": 0,
         "entityUrl": "https://next.obudget.org/i/org/company/516429917"
+      },
+      {
+        "name": "סודקסו שירותים באתרים עסקיים ישראל בע״מ",
+        "entityId": "512687609",
+        "entityKind": "company",
+        "contractCount": 16,
+        "totalVolume": 512729922.52,
+        "totalExecuted": 24487.11,
+        "entityUrl": "https://next.obudget.org/i/org/company/512687609"
+      },
+      {
+        "name": "מסיעי אריה שאשא בע״מ",
+        "entityId": "510840028",
+        "entityKind": "company",
+        "contractCount": 6,
+        "totalVolume": 512215728.01,
+        "totalExecuted": 1255345.7,
+        "entityUrl": "https://next.obudget.org/i/org/company/510840028"
+      },
+      {
+        "name": "סמארט וויסט אקו  בע״מ",
+        "entityId": "515503738",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 410391000.05,
+        "totalExecuted": 15563813.99,
+        "entityUrl": "https://next.obudget.org/i/org/company/515503738"
+      },
+      {
+        "name": "42611981",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 313457731,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "בונר אלכסנדר",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 2,
+        "totalVolume": 310473900,
+        "totalExecuted": 2340,
+        "entityUrl": null
+      },
+      {
+        "name": "החברה הממשלתית להגנות מצוקי חוף הים התיכון בע״מ",
+        "entityId": "514971126",
+        "entityKind": "company",
+        "contractCount": 6,
+        "totalVolume": 155663069.2,
+        "totalExecuted": 115566653.14,
+        "entityUrl": "https://next.obudget.org/i/org/company/514971126"
+      },
+      {
+        "name": "רשות הגנים הלאומיים ושמורות הטבע",
+        "entityId": "500500285",
+        "entityKind": "law_mandated_organization",
+        "contractCount": 15,
+        "totalVolume": 71556926,
+        "totalExecuted": 37319208,
+        "entityUrl": "https://next.obudget.org/i/org/law_mandated_organization/500500285"
+      },
+      {
+        "name": "החברה לשירותי איכות הסביבה בע״מ",
+        "entityId": "520036450",
+        "entityKind": "company",
+        "contractCount": 15,
+        "totalVolume": 70745979.71,
+        "totalExecuted": 24357448.35,
+        "entityUrl": "https://next.obudget.org/i/org/company/520036450"
+      },
+      {
+        "name": "נס אי.אס  בע״מ",
+        "entityId": "515482198",
+        "entityKind": "company",
+        "contractCount": 7,
+        "totalVolume": 62641239.5,
+        "totalExecuted": 59549032.44,
+        "entityUrl": "https://next.obudget.org/i/org/company/515482198"
+      },
+      {
+        "name": "42357093",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 57390817,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "מרכז השלטון המקומי בישראל (ע\"ר)",
+        "entityId": "580002244",
+        "entityKind": "association",
+        "contractCount": 1,
+        "totalVolume": 56119963,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/association/580002244"
+      },
+      {
+        "name": "פארק אריאל שרון בע״מ (חל״צ)",
+        "entityId": "513837724",
+        "entityKind": "association",
+        "contractCount": 6,
+        "totalVolume": 55601949,
+        "totalExecuted": 14649421.2,
+        "entityUrl": "https://next.obudget.org/i/org/association/513837724"
       }
     ],
     "economy": [
@@ -707,14 +707,94 @@
       "top5SharePercent": 17.9
     },
     "environment": {
-      "contractCount": 1758,
-      "totalVolume": 20416436659.39,
-      "top5SharePercent": 31.3
+      "contractCount": 1728,
+      "totalVolume": 4679890731.39,
+      "top5SharePercent": 55
     },
     "economy": {
       "contractCount": 1868,
       "totalVolume": 1282898735.08,
       "top5SharePercent": 42.5
+    }
+  },
+  "excludedContracts": {
+    "transport": {
+      "rule": "תקרת שפיות: פי 1.5 מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי 1.5 מתקציב הסעיף כולו.",
+      "excludedCount": 0,
+      "excludedVolume": 0,
+      "dataSuspect": false,
+      "examples": []
+    },
+    "education": {
+      "rule": "תקרת שפיות: פי 1.5 מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי 1.5 מתקציב הסעיף כולו.",
+      "excludedCount": 0,
+      "excludedVolume": 0,
+      "dataSuspect": false,
+      "examples": []
+    },
+    "health": {
+      "rule": "תקרת שפיות: פי 1.5 מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי 1.5 מתקציב הסעיף כולו.",
+      "excludedCount": 0,
+      "excludedVolume": 0,
+      "dataSuspect": false,
+      "examples": []
+    },
+    "environment": {
+      "rule": "תקרת שפיות: פי 1.5 מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי 1.5 מתקציב הסעיף כולו.",
+      "excludedCount": 30,
+      "excludedVolume": 15736545928,
+      "dataSuspect": true,
+      "examples": [
+        {
+          "name": "תיירות צובה - אגודה שיתופית חקלאית בע\"מ",
+          "purpose": "11/6/23 אולם וכיבוד למשתתפי אשכול שלטון מקומי ביום עיון - סדנא מדדי תוצאה",
+          "volume": 570043984,
+          "budgetCode": "0026110110",
+          "budgetTitle": "הוצאות תפעול"
+        },
+        {
+          "name": "42836764",
+          "purpose": null,
+          "volume": 558535944,
+          "budgetCode": "0026110110",
+          "budgetTitle": null
+        },
+        {
+          "name": "42807246",
+          "purpose": null,
+          "volume": 558370045,
+          "budgetCode": "0026110110",
+          "budgetTitle": "הוצאות תפעול"
+        },
+        {
+          "name": "40823287",
+          "purpose": null,
+          "volume": 558103552,
+          "budgetCode": "0026120111",
+          "budgetTitle": null
+        },
+        {
+          "name": "חוכמת הבורקס גבינז",
+          "purpose": null,
+          "volume": 558103552,
+          "budgetCode": "0026110110",
+          "budgetTitle": "הוצאות תפעול"
+        },
+        {
+          "name": "חוכמת הבורקס גבינז",
+          "purpose": "31.05.23 - כיבוד למשתתפי כנס השקת דוח ביצועים סביבתיים של ה- OECD - מסיבת עיתונאים",
+          "volume": 558103552,
+          "budgetCode": "0026120114",
+          "budgetTitle": "פעולות אשכול תכנון"
+        }
+      ]
+    },
+    "economy": {
+      "rule": "תקרת שפיות: פי 1.5 מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי 1.5 מתקציב הסעיף כולו.",
+      "excludedCount": 0,
+      "excludedVolume": 0,
+      "dataSuspect": false,
+      "examples": []
     }
   },
   "procurementMethods": {
@@ -1158,52 +1238,52 @@
     ],
     "environment": [
       {
+        "method": "פטור ממכרז",
+        "contractCount": 1066,
+        "totalVolume": 1638258812.7,
+        "sharePercent": 35
+      },
+      {
         "method": "לא דווח / אחר",
-        "contractCount": 31,
-        "totalVolume": 13066138201.9,
-        "sharePercent": 64
+        "contractCount": 9,
+        "totalVolume": 1427056033.9,
+        "sharePercent": 30.5
       },
       {
         "method": "תקנה 14ב - מכרז מרכזי",
-        "contractCount": 275,
-        "totalVolume": 3732322946.91,
-        "sharePercent": 18.3
-      },
-      {
-        "method": "פטור ממכרז",
-        "contractCount": 1068,
-        "totalVolume": 2670340180.7,
-        "sharePercent": 13.1
+        "contractCount": 269,
+        "totalVolume": 666940554.91,
+        "sharePercent": 14.3
       },
       {
         "method": "מכרז מרכזי ממוכן",
         "contractCount": 2,
         "totalVolume": 410391000.05,
-        "sharePercent": 2
+        "sharePercent": 8.8
       },
       {
         "method": "התקשרות עם גופים ממשלתיים",
         "contractCount": 68,
         "totalVolume": 287758171.83,
-        "sharePercent": 1.4
+        "sharePercent": 6.1
       },
       {
         "method": "תקנה 1ב - מכרז פומבי רגיל",
         "contractCount": 208,
         "totalVolume": 220320366.66,
-        "sharePercent": 1.1
+        "sharePercent": 4.7
       },
       {
         "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
         "contractCount": 74,
         "totalVolume": 22288485.43,
-        "sharePercent": 0.1
+        "sharePercent": 0.5
       },
       {
         "method": "תקנה 5(ג)(4) - התקשרות עם מומחה - מינוי לועדה ציבורית/בורר/מ",
         "contractCount": 1,
         "totalVolume": 2395575,
-        "sharePercent": 0
+        "sharePercent": 0.1
       },
       {
         "method": "תקנה 3ג - מימוש זכות ברירה",
@@ -1668,114 +1748,6 @@
     ],
     "environment": [
       {
-        "supplier": "תיירות צובה - אגודה שיתופית חקלאית בע\"מ",
-        "entityUrl": "https://next.obudget.org/i/org/cooperative/570043984",
-        "purpose": "11/6/23 אולם וכיבוד למשתתפי אשכול שלטון מקומי ביום עיון - סדנא מדדי תוצאה",
-        "volume": 570043984,
-        "executed": 0,
-        "orderDate": "2023-06-11",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": "הוצאות תפעול",
-        "isActive": false
-      },
-      {
-        "supplier": "42836764",
-        "entityUrl": null,
-        "purpose": null,
-        "volume": 558535944,
-        "executed": 0,
-        "orderDate": "2024-09-08",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": null,
-        "isActive": false
-      },
-      {
-        "supplier": "42807246",
-        "entityUrl": null,
-        "purpose": null,
-        "volume": 558370045,
-        "executed": 0,
-        "orderDate": "2024-05-05",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": "הוצאות תפעול",
-        "isActive": false
-      },
-      {
-        "supplier": "40823287",
-        "entityUrl": null,
-        "purpose": null,
-        "volume": 558103552,
-        "executed": 0,
-        "orderDate": "2024-07-22",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026120111",
-        "budgetTitle": null,
-        "isActive": false
-      },
-      {
-        "supplier": "חוכמת הבורקס גבינז",
-        "entityUrl": null,
-        "purpose": null,
-        "volume": 558103552,
-        "executed": 0,
-        "orderDate": "2024-05-28",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": "הוצאות תפעול",
-        "isActive": false
-      },
-      {
-        "supplier": "40823287",
-        "entityUrl": null,
-        "purpose": null,
-        "volume": 558103552,
-        "executed": 0,
-        "orderDate": "2024-07-07",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": null,
-        "isActive": false
-      },
-      {
-        "supplier": "חוכמת הבורקס גבינז",
-        "entityUrl": null,
-        "purpose": "31.05.23 - כיבוד למשתתפי כנס השקת דוח ביצועים סביבתיים של ה- OECD - מסיבת עיתונאים",
-        "volume": 558103552,
-        "executed": 0,
-        "orderDate": "2023-05-31",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026120114",
-        "budgetTitle": "פעולות אשכול תכנון",
-        "isActive": false
-      },
-      {
-        "supplier": "ישרוטל בע״מ",
-        "entityUrl": "https://next.obudget.org/i/org/company/520042482",
-        "purpose": null,
-        "volume": 520042482,
-        "executed": 0,
-        "orderDate": "2005-03-02",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110110",
-        "budgetTitle": "הוצאות תפעול",
-        "isActive": false
-      },
-      {
-        "supplier": "בזק החברה הישראלית לתקשורת   בע״מ",
-        "entityUrl": "https://next.obudget.org/i/org/company/520031931",
-        "purpose": "תשלומי הו\"ק בדיעבד עבור תקופה 1.4.21-31.12.22",
-        "volume": 520031931,
-        "executed": 0,
-        "orderDate": "2001-04-21",
-        "method": "לא דווח / אחר",
-        "budgetCode": "0026110112",
-        "budgetTitle": "הוצאות מחשוב",
-        "isActive": false
-      },
-      {
         "supplier": "ל.י. קבוצת פרץ את חדידה  בע״מ",
         "entityUrl": "https://next.obudget.org/i/org/company/516739711",
         "purpose": null,
@@ -1785,6 +1757,114 @@
         "method": "לא דווח / אחר",
         "budgetCode": "0026130207",
         "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      },
+      {
+        "supplier": "עמית עידן  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516429917",
+        "purpose": null,
+        "volume": 516429917,
+        "executed": 0,
+        "orderDate": "2024-06-10",
+        "method": "פטור ממכרז",
+        "budgetCode": "0026130106",
+        "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      },
+      {
+        "supplier": "סודקסו שירותים באתרים עסקיים ישראל בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/512687609",
+        "purpose": "ישיבה 21.1.24 כיבוד -ישיבה בנושא תוכנית אסטרטגית יוש",
+        "volume": 512687609,
+        "executed": 0,
+        "orderDate": "2024-01-21",
+        "method": "פטור ממכרז",
+        "budgetCode": "0026130207",
+        "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      },
+      {
+        "supplier": "סנקאר שירותים לוגיסטיים בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/511464000",
+        "purpose": "מימוש זכות ברירה 4 מתוך 5 עם סנקאר לגרירה, הובלה ואחסנת רכבים נשוא מכרז 1/19",
+        "volume": 511464000,
+        "executed": 0,
+        "orderDate": "2001-05-04",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026130207",
+        "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      },
+      {
+        "supplier": "מסיעי אריה שאשא בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510840028",
+        "purpose": "12.3.24 - הסעה עבור סיור מקצועי כנס יחידות סביבתית",
+        "volume": 510840028,
+        "executed": 0,
+        "orderDate": "2024-03-12",
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "budgetCode": "0026130207",
+        "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      },
+      {
+        "supplier": "42611981",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 313457731,
+        "executed": 0,
+        "orderDate": "2024-07-17",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "בונר אלכסנדר",
+        "entityUrl": null,
+        "purpose": "27.08.23 - סדנת שפת גוף והשפעה למחוז צפון",
+        "volume": 310471560,
+        "executed": 0,
+        "orderDate": "2023-08-27",
+        "method": "פטור ממכרז",
+        "budgetCode": "0026110110",
+        "budgetTitle": "הוצאות תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "סמארט וויסט אקו  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/515503738",
+        "purpose": "פרויקט מתקן עיכול אנארובי (שפד\"ן)",
+        "volume": 248391000,
+        "executed": 15563813.99,
+        "orderDate": "2023-06-18",
+        "method": "מכרז מרכזי ממוכן",
+        "budgetCode": "0026130107",
+        "budgetTitle": "תמיכות",
+        "isActive": false
+      },
+      {
+        "supplier": "סמארט וויסט אקו  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/515503738",
+        "purpose": "פרויקט מתקן עיכול אנארובי (שפד\"ן)",
+        "volume": 162000000.05,
+        "executed": 0,
+        "orderDate": "2024-01-30",
+        "method": "מכרז מרכזי ממוכן",
+        "budgetCode": "0026130107",
+        "budgetTitle": "תמיכות",
+        "isActive": true
+      },
+      {
+        "supplier": "החברה הממשלתית להגנות מצוקי חוף הים התיכון בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/514971126",
+        "purpose": "המצוק החופי-פעולות",
+        "volume": 88600000,
+        "executed": 81356718.96,
+        "orderDate": "2020-08-03",
+        "method": "התקשרות עם גופים ממשלתיים",
+        "budgetCode": "0026120128",
+        "budgetTitle": "פיתוח המצוק החופי",
         "isActive": false
       }
     ],

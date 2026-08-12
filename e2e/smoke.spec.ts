@@ -306,3 +306,15 @@ test('switching ministry on findings swaps the supplier list', async ({ page }) 
   await page.getByLabel('משרד', { exact: true }).first().selectOption('education');
   await expect(heading).toContainText('משרד החינוך');
 });
+
+test('a ministry with a corrupt contracts feed shows a data-quality banner instead of rankings', async ({
+  page,
+}) => {
+  await page.goto('/#/findings');
+  await page.getByLabel('משרד', { exact: true }).first().selectOption('environment');
+  // The banner must state the suspicion and the rule…
+  await expect(page.getByText(/חשד לשגיאות במקור/)).toBeVisible();
+  await expect(page.getByText(/תקרת השפיות/)).toBeVisible();
+  // …and no supplier ranking may be presented as fact.
+  await expect(page.getByRole('heading', { name: /הספקים המרכזיים/ })).toHaveCount(0);
+});

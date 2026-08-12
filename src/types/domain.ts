@@ -284,12 +284,27 @@ export interface BudgetChangeRequest {
   sourceUrl: string;
 }
 
+export interface ExcludedContracts {
+  rule: string;
+  excludedCount: number;
+  excludedVolume: number;
+  dataSuspect: boolean;
+  examples: Array<{
+    name: string | null;
+    purpose: string | null;
+    volume: number | null;
+    budgetCode: string | null;
+    budgetTitle: string | null;
+  }>;
+}
+
 export interface Findings {
   generatedAt: string;
   fromYear: number;
   method: string;
   volumeNote: string;
   suppliers: Record<string, TopSupplier[]>;
+  excludedContracts: Record<string, ExcludedContracts>;
   contractTotals: Record<
     string,
     { contractCount: number; totalVolume: number; top5SharePercent: number | null }

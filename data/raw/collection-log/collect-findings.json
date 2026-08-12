@@ -1,47 +1,67 @@
 {
   "collectorId": "collect-findings",
-  "startedAt": "2026-08-12T18:16:14.438Z",
-  "finishedAt": "2026-08-12T18:16:14.459Z",
+  "startedAt": "2026-08-12T18:28:45.053Z",
+  "finishedAt": "2026-08-12T18:28:45.076Z",
   "environmentNote": "איסוף שכבת הממצאים בוצע מול המקור בפועל.",
   "attempts": [
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
       "purpose": "top suppliers for transport",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 3843,
+      "bytes": 4285,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.438Z",
+      "attemptedAt": "2026-08-12T18:28:45.060Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023",
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)",
       "purpose": "contract totals for transport",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 399,
+      "bytes": 841,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.439Z",
+      "attemptedAt": "2026-08-12T18:28:45.060Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
+      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
       "purpose": "purchase methods for transport",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 3604,
+      "bytes": 4056,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.439Z",
+      "attemptedAt": "2026-08-12T18:28:45.060Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
       "purpose": "notable contracts for transport",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 7110,
+      "bytes": 7562,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.440Z",
+      "attemptedAt": "2026-08-12T18:28:45.061Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)",
+      "purpose": "excluded contract records for transport",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 833,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.061Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20purpose%2C%20volume%2C%20budget_code%2C%20budget_title%20from%20contract_spending%20where%20budget_code%20like%20'0040%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'004050'%20then%20845971500%20when%20'004051'%20then%20102667500%20when%20'004052'%20then%20105853500%20when%20'004053'%20then%20189685500%20when%20'004054'%20then%2071829000%20when%20'004055'%20then%207638000%20when%20'004059'%20then%2039594000%20when%20'004099'%20then%201%20when%20'004056'%20then%2010989000%20else%201267185000%20end)%20order%20by%20volume%20desc%20nulls%20last%20limit%206",
+      "purpose": "excluded contract examples for transport",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 993,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.062Z",
       "durationMs": 0
     },
     {
@@ -51,7 +71,7 @@
       "httpStatus": 200,
       "bytes": 5727,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.440Z",
+      "attemptedAt": "2026-08-12T18:28:45.062Z",
       "durationMs": 0
     },
     {
@@ -61,47 +81,67 @@
       "httpStatus": 200,
       "bytes": 108245,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.440Z",
+      "attemptedAt": "2026-08-12T18:28:45.063Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
       "purpose": "top suppliers for education",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 4413,
+      "bytes": 5005,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.442Z",
+      "attemptedAt": "2026-08-12T18:28:45.064Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023",
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)",
       "purpose": "contract totals for education",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 403,
+      "bytes": 995,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.442Z",
+      "attemptedAt": "2026-08-12T18:28:45.065Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
+      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
       "purpose": "purchase methods for education",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 4993,
+      "bytes": 5585,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.442Z",
+      "attemptedAt": "2026-08-12T18:28:45.065Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
       "purpose": "notable contracts for education",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 9459,
+      "bytes": 10051,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.443Z",
+      "attemptedAt": "2026-08-12T18:28:45.065Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)",
+      "purpose": "excluded contract records for education",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 983,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.066Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20purpose%2C%20volume%2C%20budget_code%2C%20budget_title%20from%20contract_spending%20where%20budget_code%20like%20'0020%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002060'%20then%203911868000%20when%20'002061'%20then%2030127494000%20when%20'002062'%20then%2014903668500%20when%20'002063'%20then%2043035339000%20when%20'002064'%20then%2023430741000%20when%20'002065'%20then%207669396500%20when%20'002066'%20then%208977341000%20when%20'002067'%20then%2012841507500%20when%20'002068'%20then%203418549500%20when%20'002069'%20then%202943948000%20when%20'002070'%20then%206201288000%20when%20'002099'%20then%201%20else%20148811067000%20end)%20order%20by%20volume%20desc%20nulls%20last%20limit%206",
+      "purpose": "excluded contract examples for education",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1143,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.066Z",
       "durationMs": 0
     },
     {
@@ -111,7 +151,7 @@
       "httpStatus": 200,
       "bytes": 8154,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.444Z",
+      "attemptedAt": "2026-08-12T18:28:45.067Z",
       "durationMs": 0
     },
     {
@@ -121,47 +161,67 @@
       "httpStatus": 200,
       "bytes": 268263,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.444Z",
+      "attemptedAt": "2026-08-12T18:28:45.067Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
       "purpose": "top suppliers for health",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 4387,
+      "bytes": 4839,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.447Z",
+      "attemptedAt": "2026-08-12T18:28:45.069Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023",
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)",
       "purpose": "contract totals for health",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 402,
+      "bytes": 842,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.447Z",
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
+      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
       "purpose": "purchase methods for health",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 5745,
+      "bytes": 6193,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.450Z",
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
       "purpose": "notable contracts for health",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 6751,
+      "bytes": 7201,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.451Z",
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)",
+      "purpose": "excluded contract records for health",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 841,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20purpose%2C%20volume%2C%20budget_code%2C%20budget_title%20from%20contract_spending%20where%20budget_code%20like%20'0024%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002402'%20then%207472437500%20when%20'002404'%20then%201%20when%20'002407'%20then%2011479752000%20when%20'002416'%20then%203238600500%20when%20'002420'%20then%2078032208000%20when%20'002422'%20then%205086500%20when%20'002440'%20then%2076849500%20when%20'002450'%20then%20586044000%20when%20'002499'%20then%201%20else%2095612415000%20end)%20order%20by%20volume%20desc%20nulls%20last%20limit%206",
+      "purpose": "excluded contract examples for health",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1001,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
       "durationMs": 0
     },
     {
@@ -171,7 +231,7 @@
       "httpStatus": 200,
       "bytes": 5985,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.451Z",
+      "attemptedAt": "2026-08-12T18:28:45.070Z",
       "durationMs": 0
     },
     {
@@ -181,47 +241,67 @@
       "httpStatus": 200,
       "bytes": 173514,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.451Z",
+      "attemptedAt": "2026-08-12T18:28:45.071Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
       "purpose": "top suppliers for environment",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 3543,
+      "bytes": 4548,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023",
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)",
       "purpose": "contract totals for environment",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 402,
+      "bytes": 729,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
+      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
       "purpose": "purchase methods for environment",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 2821,
+      "bytes": 3108,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
       "purpose": "notable contracts for environment",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 5313,
+      "bytes": 7353,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)",
+      "purpose": "excluded contract records for environment",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 739,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20purpose%2C%20volume%2C%20budget_code%2C%20budget_title%20from%20contract_spending%20where%20budget_code%20like%20'0026%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'002611'%20then%20484998000%20when%20'002612'%20then%20383455500%20when%20'002613'%20then%202757630000%20when%20'002614'%20then%2024537000%20when%20'002626'%20then%2011349000%20when%20'002699'%20then%201%20else%203484347000%20end)%20order%20by%20volume%20desc%20nulls%20last%20limit%206",
+      "purpose": "excluded contract examples for environment",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2904,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
@@ -231,7 +311,7 @@
       "httpStatus": 200,
       "bytes": 5640,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
@@ -241,47 +321,67 @@
       "httpStatus": 200,
       "bytes": 130336,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.453Z",
+      "attemptedAt": "2026-08-12T18:28:45.072Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%2C%20sum(executed)%20as%20exe%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)%20and%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20is%20not%20null%20group%20by%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%2C%20entity_id%2C%20entity_kind%20order%20by%20vol%20desc%20nulls%20last%20limit%2015",
       "purpose": "top suppliers for economy",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 4068,
+      "bytes": 4372,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.455Z",
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023",
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)",
       "purpose": "contract totals for economy",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 401,
+      "bytes": 693,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.455Z",
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
+      "url": "https://next.obudget.org/api/query?query=select%20purchase_method-%3E%3E0%20as%20method%2C%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)%20group%20by%20purchase_method-%3E%3E0%20order%20by%20vol%20desc%20nulls%20last%20limit%2030",
       "purpose": "purchase methods for economy",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 2071,
+      "bytes": 2371,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.455Z",
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
       "durationMs": 0
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20entity_id%2C%20entity_kind%2C%20purpose%2C%20volume%2C%20executed%2C%20order_date%2C%20purchase_method-%3E%3E0%20as%20method%2C%20budget_code%2C%20budget_title%2C%20contract_is_active%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)%20and%20volume%20is%20not%20null%20order%20by%20volume%20desc%20limit%2010",
       "purpose": "notable contracts for economy",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 7772,
+      "bytes": 8074,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.455Z",
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20count(1)%20as%20n%2C%20sum(volume)%20as%20vol%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)",
+      "purpose": "excluded contract records for economy",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 693,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
+      "durationMs": 0
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20coalesce(entity_name%2C%20supplier_name-%3E%3E0)%20as%20name%2C%20purpose%2C%20volume%2C%20budget_code%2C%20budget_title%20from%20contract_spending%20where%20budget_code%20like%20'0038%25'%20and%20max_year%20%3E%3D%202023%20and%20not%20(volume%20is%20null%20or%20volume%20%3C%3D%20case%20substring(budget_code%2C1%2C6)%20when%20'003830'%20then%203180375000%20when%20'003840'%20then%204482639000%20when%20'003870'%20then%20646854000%20when%20'003890'%20then%2038217000%20when%20'003899'%20then%201%20else%207982134500%20end)%20order%20by%20volume%20desc%20nulls%20last%20limit%206",
+      "purpose": "excluded contract examples for economy",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 853,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
       "durationMs": 0
     },
     {
@@ -291,7 +391,7 @@
       "httpStatus": 200,
       "bytes": 6784,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.456Z",
+      "attemptedAt": "2026-08-12T18:28:45.073Z",
       "durationMs": 0
     },
     {
@@ -301,13 +401,13 @@
       "httpStatus": 200,
       "bytes": 79543,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:16:14.456Z",
+      "attemptedAt": "2026-08-12T18:28:45.074Z",
       "durationMs": 0
     }
   ],
   "summary": {
-    "total": 30,
-    "ok": 30,
+    "total": 40,
+    "ok": 40,
     "blocked": 0,
     "failed": 0
   }

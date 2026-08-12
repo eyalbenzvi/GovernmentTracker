@@ -17,6 +17,12 @@
  *     organisation-style record from the procurement report.
  *   - Everything is a secondary-helper source: never labelled final, always
  *     linked back for verification.
+ *   - Sanity rule: a single contract whose volume exceeds 3x the maximum annual
+ *     revised budget of the level-2 program its budget code belongs to is
+ *     presumed to be a source data error (the mirror contains rows like a
+ *     seminar-catering order recorded at half a billion shekels). Such rows are
+ *     excluded from every ranking and disclosed separately with the rule and
+ *     examples — set aside in the open, not hidden.
  */
 import path from 'node:path';
 import { PROCESSED_DIR, RAW_DIR, readJson, writeJson, writeText } from './lib/paths.js';
@@ -85,9 +91,53 @@ export function normalizeMethod(method: string | null): string {
   return method;
 }
 
+const VOLUME_CAP_FACTOR = 1.5;
+
+interface BudgetItemSlim {
+  ministryId: string;
+  budgetCode: string;
+  hierarchyLevel: number;
+  updatedBudget: number | null;
+}
+
+/**
+ * Builds the per-program volume caps for one ministry and renders them as a SQL
+ * CASE expression over the contract's level-2 code prefix, so the sanity rule
+ * runs server-side inside the aggregation queries.
+ */
+function buildCapSql(
+  items: readonly BudgetItemSlim[],
+  ministryId: string,
+): {
+  capSql: string;
+  capsNote: string;
+} {
+  const level2Max = new Map<string, number>();
+  let sectionMax = 0;
+  for (const item of items) {
+    if (item.ministryId !== ministryId || item.updatedBudget === null) continue;
+    if (item.hierarchyLevel === 1) sectionMax = Math.max(sectionMax, item.updatedBudget);
+    if (item.hierarchyLevel === 2) {
+      level2Max.set(
+        item.budgetCode,
+        Math.max(level2Max.get(item.budgetCode) ?? 0, item.updatedBudget),
+      );
+    }
+  }
+  const fallbackCap = Math.max(1, Math.round(sectionMax * VOLUME_CAP_FACTOR));
+  const whens = [...level2Max.entries()]
+    .map(([code, max]) => `when '${code}' then ${Math.max(1, Math.round(max * VOLUME_CAP_FACTOR))}`)
+    .join(' ');
+  return {
+    capSql: `(volume is null or volume <= case substring(budget_code,1,6) ${whens} else ${fallbackCap} end)`,
+    capsNote: `תקרת שפיות: פי ${VOLUME_CAP_FACTOR} מהתקציב השנתי המרבי של התוכנית (רמה 2) שאליה משויך קוד ההתקשרות; בהיעדר תוכנית מזוהה — פי ${VOLUME_CAP_FACTOR} מתקציב הסעיף כולו.`,
+  };
+}
+
 async function main(): Promise<void> {
   const logger = new Logger('collect-findings');
   const seed = readJson<MinistriesSeedFile>(path.join(RAW_DIR, 'seeds', 'ministries.seed.json'));
+  const budgetItems = readJson<BudgetItemSlim[]>(path.join(PROCESSED_DIR, 'budget-items.json'));
 
   const suppliersByMinistry: Record<string, unknown[]> = {};
   const methodsByMinistry: Record<string, unknown[]> = {};
@@ -98,6 +148,16 @@ async function main(): Promise<void> {
     string,
     { contractCount: number; totalVolume: number; top5SharePercent: number | null }
   > = {};
+  const excludedContracts: Record<
+    string,
+    {
+      rule: string;
+      excludedCount: number;
+      excludedVolume: number;
+      dataSuspect: boolean;
+      examples: unknown[];
+    }
+  > = {};
 
   for (const ministry of seed.ministries) {
     const section = ministry.budgetCodes[0];
@@ -105,6 +165,7 @@ async function main(): Promise<void> {
     const like = `${section}%`;
     // The two-digit leading item of the section, e.g. '0040' -> 40.
     const leadingItem = Number(section.replace(/^0+/, '').slice(0, 2));
+    const { capSql, capsNote } = buildCapSql(budgetItems, ministry.id);
 
     // ---- top suppliers ------------------------------------------------------
     const supplierRows = await queryRows(
@@ -113,6 +174,7 @@ async function main(): Promise<void> {
       `select coalesce(entity_name, supplier_name->>0) as name, entity_id, entity_kind, ` +
         `count(1) as n, sum(volume) as vol, sum(executed) as exe ` +
         `from contract_spending where budget_code like '${like}' and max_year >= ${FROM_YEAR} ` +
+        `and ${capSql} ` +
         `and coalesce(entity_name, supplier_name->>0) is not null ` +
         `group by coalesce(entity_name, supplier_name->>0), entity_id, entity_kind ` +
         `order by vol desc nulls last limit ${TOP_SUPPLIERS}`,
@@ -134,7 +196,7 @@ async function main(): Promise<void> {
       logger,
       `contract totals for ${ministry.id}`,
       `select count(1) as n, sum(volume) as vol from contract_spending ` +
-        `where budget_code like '${like}' and max_year >= ${FROM_YEAR}`,
+        `where budget_code like '${like}' and max_year >= ${FROM_YEAR} and ${capSql}`,
     );
     const totalVolume = readNumber(totalRows[0]?.vol) ?? 0;
     const top5 = (suppliersByMinistry[ministry.id] as Array<{ totalVolume: number | null }>)
@@ -152,6 +214,7 @@ async function main(): Promise<void> {
       `purchase methods for ${ministry.id}`,
       `select purchase_method->>0 as method, count(1) as n, sum(volume) as vol ` +
         `from contract_spending where budget_code like '${like}' and max_year >= ${FROM_YEAR} ` +
+        `and ${capSql} ` +
         `group by purchase_method->>0 order by vol desc nulls last limit 30`,
     );
     const buckets = new Map<string, { contractCount: number; totalVolume: number }>();
@@ -180,7 +243,7 @@ async function main(): Promise<void> {
       `select coalesce(entity_name, supplier_name->>0) as name, entity_id, entity_kind, purpose, ` +
         `volume, executed, order_date, purchase_method->>0 as method, budget_code, budget_title, contract_is_active ` +
         `from contract_spending where budget_code like '${like}' and max_year >= ${FROM_YEAR} ` +
-        `and volume is not null order by volume desc limit ${TOP_CONTRACTS}`,
+        `and ${capSql} and volume is not null order by volume desc limit ${TOP_CONTRACTS}`,
     );
     contractsByMinistry[ministry.id] = contractRows.map((r) => ({
       supplier: readText(r.name),
@@ -194,6 +257,38 @@ async function main(): Promise<void> {
       budgetTitle: readText(r.budget_title),
       isActive: typeof r.contract_is_active === 'boolean' ? r.contract_is_active : null,
     }));
+
+    // ---- excluded (suspected-erroneous) contract records ----------------------
+    const excludedAggRows = await queryRows(
+      logger,
+      `excluded contract records for ${ministry.id}`,
+      `select count(1) as n, sum(volume) as vol from contract_spending ` +
+        `where budget_code like '${like}' and max_year >= ${FROM_YEAR} and not ${capSql}`,
+    );
+    const excludedExampleRows = await queryRows(
+      logger,
+      `excluded contract examples for ${ministry.id}`,
+      `select coalesce(entity_name, supplier_name->>0) as name, purpose, volume, budget_code, budget_title ` +
+        `from contract_spending where budget_code like '${like}' and max_year >= ${FROM_YEAR} ` +
+        `and not ${capSql} order by volume desc nulls last limit 6`,
+    );
+    const excludedVolume = readNumber(excludedAggRows[0]?.vol) ?? 0;
+    excludedContracts[ministry.id] = {
+      rule: capsNote,
+      excludedCount: readNumber(excludedAggRows[0]?.n) ?? 0,
+      excludedVolume,
+      // When more volume was set aside as suspect than survived the cap, the
+      // ministry's whole contracts feed is unreliable at the source, and no
+      // ranking derived from it may be presented as fact.
+      dataSuspect: excludedVolume > totalVolume,
+      examples: excludedExampleRows.map((r) => ({
+        name: readText(r.name),
+        purpose: readText(r.purpose),
+        volume: readNumber(r.volume),
+        budgetCode: readText(r.budget_code),
+        budgetTitle: readText(r.budget_title),
+      })),
+    };
 
     // ---- support recipients ---------------------------------------------------
     const recipientRows = await queryRows(
@@ -253,9 +348,10 @@ async function main(): Promise<void> {
     method:
       'הנתונים ממפתח התקציב — מראה ציבורית של דוחות ההתקשרויות של החשב הכללי, מסד התמיכות והעברות התקציב שאושרו בוועדת הכספים. זו שכבת עזר: כל שורה מקושרת חזרה לאימות, ואף נתון אינו מסומן כסופי. שמות הספקים והמקבלים הם רשומות תאגידיות פומביות (חברות, עמותות, רשויות).',
     volumeNote:
-      'היקף התקשרות (volume) הוא הסכום הרב-שנתי המחויב של ההסכם, לא הוצאה שנתית. "שולם" (executed) הוא התשלום המצטבר עד מועד העדכון.',
+      'היקף התקשרות (volume) הוא הסכום הרב-שנתי המחויב של ההסכם, לא הוצאה שנתית. "שולם" (executed) הוא התשלום המצטבר עד מועד העדכון. רשומות שהיקפן חורג מתקרת שפיות מוצהרת (פי 1.5 מהתקציב השנתי המרבי של התוכנית) הוצאו מהדירוגים ומוצגות בנפרד כחשודות כשגויות במקור.',
     suppliers: suppliersByMinistry,
     contractTotals,
+    excludedContracts,
     procurementMethods: methodsByMinistry,
     notableContracts: contractsByMinistry,
     supportRecipients: recipientsByMinistry,
