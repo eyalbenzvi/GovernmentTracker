@@ -95,7 +95,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
     (c) =>
       (ministryId === ALL || c.ministryId === ministryId) &&
       c.coveragePercent !== null &&
-      c.coveragePercent < 99.5,
+      (c.coveragePercent < 99.5 || c.coveragePercent > 100.5),
   );
 
   const themeById = new Map(data.budgetThemes.themes.map((t) => [t.id, t]));
@@ -326,9 +326,14 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
         <SectionHeading
           id="themes-heading"
           title="התקציב לפי תמות"
-          description="קיבוץ תוכניות התקציב לתמות מובנות לציבור. הסיווג נעשה בסיוע מודל שפה בזמן הבנייה — פתחו תמה כדי לראות אילו סעיפים נכללים בה ולמה."
+          description="קיבוץ תוכניות התקציב לתמות מובנות לציבור, בחמשת משרדי העומק. הסיווג נעשה בסיוע מודל שפה בזמן הבנייה — פתחו תמה כדי לראות אילו סעיפים נכללים בה ולמה. בבחירת ״כל המשרדים״ מוצגים המשרדים המסווגים בלבד."
         />
-        {themes.length === 0 ? (
+        {ministryId !== ALL && !data.budgetThemes.coveredMinistryIds.includes(ministryId) ? (
+          <DataUnavailable
+            title="הסיווג התמטי טרם בוצע עבור משרד זה"
+            reason={`השכבה התמטית קיימת בשלב זה עבור ${data.budgetThemes.coveredMinistryIds.length} משרדי עומק (${data.budgetThemes.coveredMinistryIds.join(', ')}). נתוני התקציב, סוגי השימוש והחריגות של המשרד הנוכחי זמינים במלואם; הסיווג התמטי שלו יתווסף בעריכה מבוקרת של קובץ הסיווג.`}
+          />
+        ) : themes.length === 0 ? (
           <DataUnavailable reason="אין תוכניות תקציב מסווגות לבחירה הנוכחית." />
         ) : (
           <ol className="space-y-3">

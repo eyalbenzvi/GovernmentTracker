@@ -1,63 +1,493 @@
 {
   "collectorId": "scan-anomalies",
-  "startedAt": "2026-08-12T18:15:38.266Z",
-  "finishedAt": "2026-08-12T18:15:38.306Z",
+  "startedAt": "2026-08-12T19:34:35.173Z",
+  "finishedAt": "2026-08-12T19:35:32.407Z",
   "environmentNote": "סריקת התקנות בוצעה מול המקור בפועל; הכללים והספים מפורסמים בקובץ התוצר.",
   "attempts": [
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%204000",
-      "purpose": "regulation-level rows for anomaly scan (transport)",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0001%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-1) (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 109729,
+      "bytes": 20205,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:38.267Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:34:36.564Z",
+      "durationMs": 1389
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%204000",
-      "purpose": "regulation-level rows for anomaly scan (education)",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0002%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-2) (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 355953,
+      "bytes": 104474,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:38.284Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:34:37.022Z",
+      "durationMs": 457
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%204000",
-      "purpose": "regulation-level rows for anomaly scan (health)",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0004%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-4) (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 328663,
+      "bytes": 296980,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:38.292Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:34:38.647Z",
+      "durationMs": 1588
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%204000",
-      "purpose": "regulation-level rows for anomaly scan (environment)",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0004%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000&page=1",
+      "purpose": "regulation-level rows for anomaly scan (sec-4) (page 1)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 113466,
+      "bytes": 159442,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:38.297Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:34:39.440Z",
+      "durationMs": 792
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%204000",
-      "purpose": "regulation-level rows for anomaly scan (economy)",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0005%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-5) (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 175005,
+      "bytes": 216528,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:38.300Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:34:40.922Z",
+      "durationMs": 1471
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0006%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-6) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 100459,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:41.839Z",
+      "durationMs": 909
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0007%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-7) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 314626,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:43.435Z",
+      "durationMs": 1595
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0007%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000&page=1",
+      "purpose": "regulation-level rows for anomaly scan (sec-7) (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 42910,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:44.109Z",
+      "durationMs": 673
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0008%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-8) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 151263,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:45.710Z",
+      "durationMs": 1594
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0009%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-9) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 49985,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:46.640Z",
+      "durationMs": 920
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0010%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-10) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 14609,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:47.822Z",
+      "durationMs": 1180
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0011%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-11) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 22875,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:49.020Z",
+      "durationMs": 1197
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0012%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-12) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 36439,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:50.229Z",
+      "durationMs": 1208
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0013%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-13) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 61721,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:51.556Z",
+      "durationMs": 1326
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0014%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-14) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 26042,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:52.637Z",
+      "durationMs": 1079
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0015%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-15) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 87128,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:53.956Z",
+      "durationMs": 1318
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0016%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-16) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 54881,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:55.032Z",
+      "durationMs": 1069
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0017%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-17) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 146870,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:56.507Z",
+      "durationMs": 1472
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0018%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-18) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 151308,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:57.558Z",
+      "durationMs": 1039
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0019%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-19) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 192699,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:34:58.789Z",
+      "durationMs": 1228
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (education) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 355951,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:00.165Z",
+      "durationMs": 1373
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000&page=1",
+      "purpose": "regulation-level rows for anomaly scan (education) (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 256801,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:01.077Z",
+      "durationMs": 910
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0021%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-21) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 22191,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:02.126Z",
+      "durationMs": 1038
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0022%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-22) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 108555,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:03.715Z",
+      "durationMs": 1588
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0023%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-23) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 292789,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:04.963Z",
+      "durationMs": 1247
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (health) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 328661,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:06.042Z",
+      "durationMs": 1060
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000&page=1",
+      "purpose": "regulation-level rows for anomaly scan (health) (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 70555,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:06.926Z",
+      "durationMs": 881
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0025%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-25) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 64835,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:08.367Z",
+      "durationMs": 1429
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (environment) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 113464,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:09.591Z",
+      "durationMs": 1222
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0027%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-27) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 46219,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:10.637Z",
+      "durationMs": 1043
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0029%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-29) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 40714,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:11.982Z",
+      "durationMs": 1343
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0030%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-30) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 98778,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:13.288Z",
+      "durationMs": 1305
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0031%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-31) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9654,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:14.109Z",
+      "durationMs": 820
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0033%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-33) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 124693,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:15.719Z",
+      "durationMs": 1609
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0034%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-34) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 99194,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:16.697Z",
+      "durationMs": 974
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0035%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-35) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 3106,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:17.711Z",
+      "durationMs": 1013
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0036%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-36) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 242857,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:19.461Z",
+      "durationMs": 1749
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0037%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-37) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 70613,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:20.251Z",
+      "durationMs": 785
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (economy) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 175003,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:21.726Z",
+      "durationMs": 1474
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0039%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-39) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 51765,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:22.907Z",
+      "durationMs": 1176
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (transport) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 109727,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:23.992Z",
+      "durationMs": 1084
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0041%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-41) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 31086,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:25.045Z",
+      "durationMs": 1051
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0042%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-42) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 42352,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:26.415Z",
+      "durationMs": 1370
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0043%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-43) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 32715,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:27.455Z",
+      "durationMs": 1038
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0046%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-46) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 25664,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:28.661Z",
+      "durationMs": 1206
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0054%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-54) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 292377,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:30.285Z",
+      "durationMs": 1623
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0054%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000&page=1",
+      "purpose": "regulation-level rows for anomaly scan (sec-54) (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 30108,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:31.061Z",
+      "durationMs": 772
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20year%2C%20econ_cls_title_2%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0068%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20code%2C%20year%20limit%2060000",
+      "purpose": "regulation-level rows for anomaly scan (sec-68) (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 71199,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:32.383Z",
+      "durationMs": 1316
     }
   ],
   "summary": {
-    "total": 5,
-    "ok": 5,
+    "total": 48,
+    "ok": 48,
     "blocked": 0,
     "failed": 0
   }

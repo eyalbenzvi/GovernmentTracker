@@ -1,25 +1,25 @@
 {
   "version": "2026-08-12.1",
-  "builtAt": "2026-08-12T18:15:47.933Z",
+  "builtAt": "2026-08-12T19:35:56.432Z",
   "collectionWindowStart": "2022-12-29",
   "collectionWindowEnd": "2026-08-12",
   "governmentPeriod": "הממשלה ה-37",
   "counts": {
-    "ministries": 5,
-    "ministriesWithBudgetData": 5,
-    "ministriesWithActivityData": 0,
-    "budgetItems": 464,
-    "activityItems": 0,
+    "ministries": 43,
+    "ministriesWithBudgetData": 43,
+    "ministriesWithActivityData": 21,
+    "budgetItems": 2725,
+    "activityItems": 2386,
     "ministerTenures": 0,
     "sources": 50,
-    "sourcesRetrieved": 15,
+    "sourcesRetrieved": 7,
     "topicsDefined": 12,
-    "topicsWithActivity": 0
+    "topicsWithActivity": 12
   },
   "changelog": [
     {
       "date": "2026-08-12",
-      "note": "גרסת נתונים. 50 מקורות רשמיים קוטלגו עבור 5 משרדים, ומתוכם 15 אוחזרו עם checksum. נאספו 464 רשומות תקציב וביצוע לשנים 2023–2026 עבור 5 משרדים, מסעיפי התקציב הרגיל, דרך מפתח התקציב. פריטי פעילות פומבית לא נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות מזוהות ב-HTTP 403, ולא נעשה ניסיון לעקוף זאת. לא הוזן שום מספר ממקור עקיף או משוער."
+      "note": "גרסת נתונים. 50 מקורות רשמיים קוטלגו עבור 43 משרדים, ומתוכם 7 אוחזרו עם checksum. נאספו 2725 רשומות תקציב וביצוע לשנים 2023–2026 עבור 43 משרדים, מסעיפי התקציב הרגיל, דרך מפתח התקציב. פריטי פעילות פומבית לא נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות מזוהות ב-HTTP 403, ולא נעשה ניסיון לעקוף זאת. לא הוזן שום מספר ממקור עקיף או משוער."
     }
   ]
 }

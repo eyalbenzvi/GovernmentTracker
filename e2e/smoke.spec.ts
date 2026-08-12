@@ -42,8 +42,8 @@ test('the home page loads in Hebrew and RTL', async ({ page }) => {
 test('the KPI cards render with an explicit data status', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'מדדים מרכזיים' })).toBeVisible();
-  // Every measure carries a status badge; with no budget data that reads "אין נתון".
-  await expect(page.getByText('אין נתון', { exact: true }).first()).toBeVisible();
+  // Every measure carries a status badge (partial/estimate — never an unlabelled figure).
+  await expect(page.getByText(/נתון חלקי|אומדן/).first()).toBeVisible();
 });
 
 test('the multi-year chart renders real figures and offers an accessible table', async ({
@@ -198,10 +198,20 @@ test('the data-quality screen reports coverage per ministry', async ({ page }) =
   expect(await rows.count()).toBeGreaterThan(0);
 });
 
-test('the activity screen explains why it is empty', async ({ page }) => {
+test('the activity screen lists real published items with source links', async ({ page }) => {
   await page.goto('/#/activity');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('פעילות פומבית');
-  await expect(page.getByText(/לא נאספו פריטי פעילות/).first()).toBeVisible();
+
+  const status = page.getByRole('status').filter({ hasText: 'פריטים מתוך' });
+  await expect(status).toBeVisible();
+
+  // Real items, each linking to its gov.il page.
+  await expect(page.locator('a[href*="gov.il"]').first()).toBeVisible();
+
+  // Filtering by ministry narrows the list.
+  const before = await status.textContent();
+  await page.getByLabel('משרד', { exact: true }).selectOption('health');
+  await expect(status).not.toHaveText(before ?? '');
 });
 
 test('the budget screen documents the formulas', async ({ page }) => {

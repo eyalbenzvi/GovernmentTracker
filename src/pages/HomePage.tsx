@@ -58,9 +58,17 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
   const focusUpdatedBudget = focus?.updatedBudget ?? null;
   const focusExecution = focus?.execution ?? null;
 
+  const sortedMinistries = [...data.ministries].sort(
+    (a, b) =>
+      (a.sectionKind === 'ministry' ? 0 : 1) - (b.sectionKind === 'ministry' ? 0 : 1) ||
+      a.displayName.localeCompare(b.displayName, 'he'),
+  );
   const ministryOptions = [
-    { value: ALL, label: `כל המשרדים שנאספו (${data.ministries.length})` },
-    ...data.ministries.map((m) => ({ value: m.id, label: m.displayName })),
+    { value: ALL, label: `כל הסעיפים שנאספו (${data.ministries.length})` },
+    ...sortedMinistries.map((m) => ({
+      value: m.id,
+      label: m.sectionKind === 'ministry' ? m.displayName : `${m.displayName} (סעיף שאינו משרד)`,
+    })),
   ];
   const yearOptions = [
     { value: ALL, label: `כל שנות הניתוח (${analysisYears.join('–')})` },
@@ -106,7 +114,7 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
               value={ministryId}
               options={ministryOptions}
               onChange={setMinistryId}
-              hint="מוצגים רק משרדים שנאספו עבורם מקורות. יתר המשרדים מסומנים כ״טרם נאסף״."
+              hint="כל 43 סעיפי התקציב הרגיל נאספו: משרדי ממשלה תחילה, אחריהם מוסדות וסעיפים טכניים."
             />
             <SelectField
               label="שנת תקציב"
@@ -132,7 +140,7 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
             status={scopedSources.length > 0 ? 'partial' : 'unavailable'}
             note={
               scopedActivities.length === 0
-                ? 'המקורות זוהו וקוטלגו עם קישור ישיר. פריטי פעילות טרם נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות. ראו מסך המתודולוגיה.'
+                ? 'המקורות זוהו וקוטלגו עם קישור ישיר. לבחירה הנוכחית לא נמצאו פריטי פעילות.'
                 : 'פריטי פעילות הם פרסומים פומביים בלבד, ולא תמונה מלאה של פעילות המשרד.'
             }
           />
@@ -187,47 +195,59 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
           description="לכל משרד מוצג מה נאסף בפועל ומה חסר."
         />
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {data.ministries.map((ministry) => {
-            const coverage = data.coverage.find((c) => c.ministryId === ministry.id);
-            return (
-              <li key={ministry.id}>
-                <Card className="h-full">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <h3 className="text-base">
-                        <Link className="link" to={`/ministry/${ministry.id}`}>
-                          {ministry.officialName}
-                        </Link>
-                      </h3>
-                      <p className="mt-1 text-sm text-slate-600">{ministry.dataCoverageSummary}</p>
+          {data.ministries
+            .filter((m) => m.sectionKind === 'ministry')
+            .map((ministry) => {
+              const coverage = data.coverage.find((c) => c.ministryId === ministry.id);
+              return (
+                <li key={ministry.id}>
+                  <Card className="h-full">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <h3 className="text-base">
+                          <Link className="link" to={`/ministry/${ministry.id}`}>
+                            {ministry.officialName}
+                          </Link>
+                        </h3>
+                        <p className="mt-1 text-sm text-slate-600">
+                          {ministry.dataCoverageSummary}
+                        </p>
+                      </div>
+                      <Link
+                        to={`/ministry/${ministry.id}`}
+                        className="btn shrink-0"
+                        aria-label={`לעמוד ${ministry.officialName}`}
+                      >
+                        פירוט
+                        <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                      </Link>
                     </div>
-                    <Link
-                      to={`/ministry/${ministry.id}`}
-                      className="btn shrink-0"
-                      aria-label={`לעמוד ${ministry.officialName}`}
-                    >
-                      פירוט
-                      <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                  </div>
-                  {coverage !== undefined && coverage.limitations.length > 0 && (
-                    <ul className="mt-3 space-y-1 text-xs text-slate-500">
-                      {coverage.limitations.slice(0, 2).map((limitation) => (
-                        <li key={limitation}>• {limitation}</li>
-                      ))}
-                    </ul>
-                  )}
-                </Card>
-              </li>
-            );
-          })}
+                    {coverage !== undefined && coverage.limitations.length > 0 && (
+                      <ul className="mt-3 space-y-1 text-xs text-slate-500">
+                        {coverage.limitations.slice(0, 2).map((limitation) => (
+                          <li key={limitation}>• {limitation}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </Card>
+                </li>
+              );
+            })}
         </ul>
         <div className="mt-4">
-          <Callout tone="caution" title="משרדים שטרם נאספו">
+          <Callout tone="caution" title="סעיפים שאינם משרדי ממשלה">
             <p>
-              במאגר זה נאספו {data.ministries.length} משרדים. יתר משרדי הממשלה מסומנים כ״טרם נאסף״:
-              לא נבנתה עבורם רשימה משוערת, והרשימה הרשמית המלאה מופיעה בקטלוג המקורות תחת עמוד חברי
-              הממשלה.
+              המאגר מכסה את כל {data.ministries.length} סעיפי התקציב הרגיל.{' '}
+              {data.ministries.filter((m) => m.sectionKind === 'ministry').length} מהם הם משרדי
+              ממשלה (מוצגים למעלה); היתר — מוסדות שלטון, רשויות וסעיפים טכניים (
+              {data.ministries
+                .filter((m) => m.sectionKind === 'other')
+                .slice(0, 6)
+                .map((m) => m.displayName)
+                .join(', ')}{' '}
+              ועוד) — זמינים דרך הבחירה למעלה ובמסכי התקציב והניתוח. משרדים ללא סעיף תקציב עצמאי
+              (למשל משרד ירושלים ומסורת ישראל) מתוקצבים בתוך סעיף משרד ראש הממשלה ואינם רשומות
+              נפרדות.
             </p>
           </Callout>
         </div>

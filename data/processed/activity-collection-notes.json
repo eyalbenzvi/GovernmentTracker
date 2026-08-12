@@ -1,43 +1,14 @@
 {
   "generatedAt": "2026-08-12",
   "windowStart": "2022-12-29",
-  "emitted": 0,
+  "maxPerFeed": 200,
+  "emitted": 2386,
   "notes": [
     {
       "ministryId": null,
-      "source": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
-      "reason": "העמוד לא אוחזר (http_error). לא נגזרו ממנו פריטי פעילות."
-    },
-    {
-      "ministryId": null,
-      "source": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
-      "reason": "העמוד לא אוחזר (http_error). לא נגזרו ממנו פריטי פעילות."
-    },
-    {
-      "ministryId": "transport",
-      "source": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%AA%D7%97%D7%91%D7%95%D7%A8%D7%94%20%D7%95%D7%94%D7%91%D7%98%D7%99%D7%97%D7%95%D7%AA%20%D7%91%D7%93%D7%A8%D7%9B%D7%99%D7%9D",
-      "reason": "API הפרסומים של gov.il לא נגיש (http_error). לא נאספו פריטי פעילות עבור משרד זה."
-    },
-    {
-      "ministryId": "education",
-      "source": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A",
-      "reason": "API הפרסומים של gov.il לא נגיש (http_error). לא נאספו פריטי פעילות עבור משרד זה."
-    },
-    {
-      "ministryId": "health",
-      "source": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
-      "reason": "API הפרסומים של gov.il לא נגיש (http_error). לא נאספו פריטי פעילות עבור משרד זה."
-    },
-    {
-      "ministryId": "environment",
-      "source": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%94%D7%9E%D7%A9%D7%A8%D7%93%20%D7%9C%D7%94%D7%92%D7%A0%D7%AA%20%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94",
-      "reason": "API הפרסומים של gov.il לא נגיש (http_error). לא נאספו פריטי פעילות עבור משרד זה."
-    },
-    {
-      "ministryId": "economy",
-      "source": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%94%20%D7%95%D7%94%D7%AA%D7%A2%D7%A9%D7%99%D7%99%D7%94",
-      "reason": "API הפרסומים של gov.il לא נגיש (http_error). לא נאספו פריטי פעילות עבור משרד זה."
+      "source": "government_decisions + calls_for_bids (Budget Key mirror)",
+      "reason": "נאספו 2386 פריטים. תקרה: עד 200 פריטים למשרד לכל מקור (החדשים ראשונים); נחתכו: sec-4:decisions: 3336 פריטים ישנים נחתכו בתקרת 200 | sec-34:publications: 181 פריטים ישנים נחתכו בתקרת 200 | sec-4:publications: 270 פריטים ישנים נחתכו בתקרת 200 | transport:publications: 5191 פריטים ישנים נחתכו בתקרת 200 | sec-68:publications: 35 פריטים ישנים נחתכו בתקרת 200 | health:publications: 331 פריטים ישנים נחתכו בתקרת 200 | sec-5:publications: 25 פריטים ישנים נחתכו בתקרת 200 | sec-39:publications: 16 פריטים ישנים נחתכו בתקרת 200. יחידות מפרסמות שלא שויכו לאף סעיף (לא ננחשו): 44. הבולטות: רשות מקרקעי ישראל (2735), רשות המים (45), משרד ירושלים ומסורת ישראל (26), תיאום פעולות הממשלה בשטחים (26), המשרד לשוויון חברתי וקידום מעמד האישה (17), הרשות השופטת (16), האפוטרופוס הכללי והממונה על ענייני ירושה (14), אגף ממשל וחברה (13), הממונה על הליכי חדלות פירעון ושיקום כלכלי (10), משרד המורשת (10), האגף לאסדרת מקצועות (מנהלת היחידות המקצועיות) (9), מערך הדיגיטל הלאומי (9)"
     }
   ],
-  "policy": "פריט פעילות נוצר רק מתשובת מקור רשמי שאוחזרה ונותחה בהצלחה. לא נוצרו פריטים משוחזרים, משוערים או מנוסחים מחדש ללא מקור."
+  "policy": "פריט פעילות נוצר רק מרשומת מקור שאוחזרה בפועל, עם כותרת, תאריך פרסום וקישור לעמוד המקורי ב-gov.il. שיוך למשרד נעשה רק בהתאמת שם מפורשת; יחידות לא-מזוהות נשארות מחוץ למאגר ונרשמות כאן. gov.il עצמו דוחה לקוחות אוטומטיים מזוהים, ולכן האיסוף נעשה דרך המראה הציבורית של מפתח התקציב, ללא התחזות לדפדפן."
 }

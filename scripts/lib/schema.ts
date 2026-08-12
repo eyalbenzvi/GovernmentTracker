@@ -26,6 +26,7 @@ export const ministrySchema = z.object({
   id: z.string().min(1),
   officialName: z.string().min(1),
   displayName: z.string().min(1),
+  sectionKind: z.enum(['ministry', 'other']),
   aliases: z.array(z.string()),
   description: z.string().min(1),
   activeFrom: isoDate.nullable(),
@@ -205,6 +206,7 @@ export const usageBreakdownSchema = z.object({
 
 export const budgetThemesSchema = z.object({
   method: z.literal('llm_build_time'),
+  coveredMinistryIds: z.array(z.string().min(1)).min(1),
   methodNote: z.string().min(1),
   confidenceNote: z.string().min(1),
   themes: z

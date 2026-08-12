@@ -71,10 +71,13 @@ describe('source attribution', () => {
     for (const item of activityList) expect(item.sourceUrl).toMatch(/^https?:\/\//);
   });
 
-  it('never shows a source whose host is absent from the catalogue', () => {
+  it('never shows a source whose host family is absent from the catalogue', () => {
     const hosts = new Set(sourceList.map((s) => new URL(s.url).host));
+    const apexes = [...hosts].map((h) => h.replace(/^www\./, ''));
+    const covered = (host: string): boolean =>
+      hosts.has(host) || apexes.some((apex) => host === apex || host.endsWith('.' + apex));
     for (const item of [...budgetList, ...activityList]) {
-      expect(hosts.has(new URL(item.sourceUrl).host)).toBe(true);
+      expect(covered(new URL(item.sourceUrl).host)).toBe(true);
     }
   });
 });

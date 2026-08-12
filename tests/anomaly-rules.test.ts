@@ -104,3 +104,23 @@ describe('normalizeMethod', () => {
     expect(normalizeMethod('תקנה 1ב - מכרז פומבי רגיל')).toBe('תקנה 1ב - מכרז פומבי רגיל');
   });
 });
+
+describe('matchOffice (publication → ministry attribution)', () => {
+  const aliases = ['משרד התחבורה', 'משרד התחבורה והבטיחות בדרכים', 'רשות הספנות והנמלים'];
+
+  it('matches the full official office name', async () => {
+    const { matchOffice } = await import('../scripts/collect-activities');
+    expect(matchOffice('משרד התחבורה והבטיחות בדרכים', aliases)).toBe(true);
+  });
+
+  it('matches a subordinate authority listed as an alias', async () => {
+    const { matchOffice } = await import('../scripts/collect-activities');
+    expect(matchOffice('רשות הספנות והנמלים', aliases)).toBe(true);
+  });
+
+  it('does not match an unrelated office — attribution is never guessed', async () => {
+    const { matchOffice } = await import('../scripts/collect-activities');
+    expect(matchOffice('רשות מקרקעי ישראל', aliases)).toBe(false);
+    expect(matchOffice('משרד הבריאות', aliases)).toBe(false);
+  });
+});

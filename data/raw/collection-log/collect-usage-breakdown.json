@@ -1,18 +1,188 @@
 {
   "collectorId": "collect-usage-breakdown",
-  "startedAt": "2026-08-12T18:15:37.085Z",
-  "finishedAt": "2026-08-12T18:15:37.108Z",
+  "startedAt": "2026-08-12T19:10:16.812Z",
+  "finishedAt": "2026-08-12T19:11:07.683Z",
   "environmentNote": "אגרגציית הסיווג הכלכלי בוצעה בצד המקור (group by), כדי לא למשוך אלפי שורות תקנות בודדות.",
   "attempts": [
     {
-      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
-      "purpose": "official economic classification for transport",
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0001%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-1",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 9822,
+      "bytes": 8042,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:37.092Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:10:17.752Z",
+      "durationMs": 887
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0002%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-2",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 6511,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:18.420Z",
+      "durationMs": 667
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0004%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-4",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 13183,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:19.720Z",
+      "durationMs": 1300
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0005%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-5",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 12894,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:20.905Z",
+      "durationMs": 1185
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0006%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-6",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 12333,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:22.098Z",
+      "durationMs": 1192
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0007%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-7",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9166,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:23.192Z",
+      "durationMs": 1094
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0008%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-8",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9080,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:24.413Z",
+      "durationMs": 1221
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0009%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-9",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 8942,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:25.581Z",
+      "durationMs": 1168
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0010%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-10",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4988,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:26.789Z",
+      "durationMs": 1208
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0011%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-11",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 5159,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:27.978Z",
+      "durationMs": 1188
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0012%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-12",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 6543,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:29.193Z",
+      "durationMs": 1215
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0013%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-13",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11064,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:30.377Z",
+      "durationMs": 1184
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0014%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-14",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11082,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:31.583Z",
+      "durationMs": 1206
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0015%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-15",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 10390,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:32.794Z",
+      "durationMs": 1210
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0016%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-16",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 6220,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:34.000Z",
+      "durationMs": 1206
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0017%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-17",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 7207,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:35.181Z",
+      "durationMs": 1181
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0018%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-18",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 7575,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:36.381Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0019%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-19",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 13002,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:37.721Z",
+      "durationMs": 1340
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
@@ -21,8 +191,38 @@
       "httpStatus": 200,
       "bytes": 14195,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:37.093Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:10:38.923Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0021%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-21",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4306,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:39.984Z",
+      "durationMs": 1060
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0022%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-22",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 10029,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:41.197Z",
+      "durationMs": 1213
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0023%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-23",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11303,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:42.383Z",
+      "durationMs": 1186
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
@@ -31,8 +231,18 @@
       "httpStatus": 200,
       "bytes": 12303,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:37.094Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:10:43.624Z",
+      "durationMs": 1241
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0025%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-25",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9591,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:44.793Z",
+      "durationMs": 1168
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
@@ -41,8 +251,98 @@
       "httpStatus": 200,
       "bytes": 10001,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:37.094Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:10:46.093Z",
+      "durationMs": 1299
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0027%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-27",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 3194,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:47.316Z",
+      "durationMs": 1223
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0029%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-29",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 8159,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:48.397Z",
+      "durationMs": 1081
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0030%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-30",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11229,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:49.606Z",
+      "durationMs": 1209
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0031%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-31",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4120,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:50.801Z",
+      "durationMs": 1195
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0033%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-33",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 14503,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:52.121Z",
+      "durationMs": 1319
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0034%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-34",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 12292,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:53.197Z",
+      "durationMs": 1076
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0035%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-35",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2364,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:54.398Z",
+      "durationMs": 1201
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0036%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-36",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 12083,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:55.613Z",
+      "durationMs": 1215
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0037%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-37",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11190,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:56.799Z",
+      "durationMs": 1185
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
@@ -51,13 +351,93 @@
       "httpStatus": 200,
       "bytes": 11781,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:37.095Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:10:58.013Z",
+      "durationMs": 1213
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0039%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-39",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9742,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:59.192Z",
+      "durationMs": 1179
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for transport",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9822,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:00.409Z",
+      "durationMs": 1216
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0041%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-41",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 6282,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:01.607Z",
+      "durationMs": 1198
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0042%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-42",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 5901,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:02.813Z",
+      "durationMs": 1206
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0043%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-43",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 8186,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:04.002Z",
+      "durationMs": 1189
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0046%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-46",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 3910,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:05.197Z",
+      "durationMs": 1195
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0054%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-54",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11262,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:06.413Z",
+      "durationMs": 1215
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%2C%20sum(net_allocated)%20as%20alloc%2C%20sum(net_revised)%20as%20rev%2C%20sum(net_executed)%20as%20exec%2C%20count(1)%20as%20n%20from%20raw_budget%20where%20code%20like%20'0068%25'%20and%20depth%20%3D%204%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20group%20by%20year%2C%20econ_cls_title_1%2C%20econ_cls_title_2%20order%20by%20year%20limit%20400",
+      "purpose": "official economic classification for sec-68",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 7215,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:11:07.619Z",
+      "durationMs": 1205
     }
   ],
   "summary": {
-    "total": 5,
-    "ok": 5,
+    "total": 43,
+    "ok": 43,
     "blocked": 0,
     "failed": 0
   }

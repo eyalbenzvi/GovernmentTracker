@@ -1,84 +1,184 @@
 {
   "collectorId": "collect-activities",
-  "startedAt": "2026-08-12T18:15:38.891Z",
-  "finishedAt": "2026-08-12T18:15:46.162Z",
-  "environmentNote": "ניסיונות איסוף הפעילות בוצעו מול gov.il בפועל. כישלונות מתועדים כאן ובקובץ activity-collection-notes.json.",
+  "startedAt": "2026-08-12T19:35:33.296Z",
+  "finishedAt": "2026-08-12T19:35:53.374Z",
+  "environmentNote": "איסוף הפעילות בוצע דרך המראה הציבורית של פרסומי gov.il במפתח התקציב.",
   "attempts": [
     {
-      "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
-      "purpose": "official gov.il page",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:39.672Z",
-      "durationMs": 781
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%2C%20procedure_number_str%20from%20government_decisions%20where%20government%20like%20'%2537%25'%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%205000",
+      "purpose": "government decisions of the 37th government (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 678065,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:35.004Z",
+      "durationMs": 1707
     },
     {
-      "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
-      "purpose": "official gov.il page",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5792,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:40.819Z",
-      "durationMs": 1147
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%2C%20procedure_number_str%20from%20government_decisions%20where%20government%20like%20'%2537%25'%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%205000&page=1",
+      "purpose": "government decisions of the 37th government (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 701903,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:35.587Z",
+      "durationMs": 580
     },
     {
-      "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%AA%D7%97%D7%91%D7%95%D7%A8%D7%94%20%D7%95%D7%94%D7%91%D7%98%D7%99%D7%97%D7%95%D7%AA%20%D7%91%D7%93%D7%A8%D7%9B%D7%99%D7%9D",
-      "purpose": "published activity items for transport",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:41.360Z",
-      "durationMs": 541
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%2C%20procedure_number_str%20from%20government_decisions%20where%20government%20like%20'%2537%25'%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%205000&page=2",
+      "purpose": "government decisions of the 37th government (page 2)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 719844,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:36.904Z",
+      "durationMs": 1313
     },
     {
-      "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A",
-      "purpose": "published activity items for education",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:42.558Z",
-      "durationMs": 1198
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%2C%20procedure_number_str%20from%20government_decisions%20where%20government%20like%20'%2537%25'%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%205000&page=3",
+      "purpose": "government decisions of the 37th government (page 3)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 357704,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:37.922Z",
+      "durationMs": 1015
     },
     {
-      "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
-      "purpose": "published activity items for health",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:43.761Z",
-      "durationMs": 1203
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000",
+      "purpose": "ministry publications on gov.il in the analysis window (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 540903,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:39.472Z",
+      "durationMs": 1548
     },
     {
-      "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%94%D7%9E%D7%A9%D7%A8%D7%93%20%D7%9C%D7%94%D7%92%D7%A0%D7%AA%20%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94",
-      "purpose": "published activity items for environment",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:44.962Z",
-      "durationMs": 1201
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=1",
+      "purpose": "ministry publications on gov.il in the analysis window (page 1)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 497025,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:40.548Z",
+      "durationMs": 1071
     },
     {
-      "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%94%20%D7%95%D7%94%D7%AA%D7%A2%D7%A9%D7%99%D7%99%D7%94",
-      "purpose": "published activity items for economy",
-      "outcome": "http_error",
-      "httpStatus": 403,
-      "bytes": 5484,
-      "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:46.161Z",
-      "durationMs": 1199
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=2",
+      "purpose": "ministry publications on gov.il in the analysis window (page 2)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 484221,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:41.598Z",
+      "durationMs": 1041
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=3",
+      "purpose": "ministry publications on gov.il in the analysis window (page 3)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 520371,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:42.938Z",
+      "durationMs": 1329
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=4",
+      "purpose": "ministry publications on gov.il in the analysis window (page 4)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 516073,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:44.127Z",
+      "durationMs": 1183
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=5",
+      "purpose": "ministry publications on gov.il in the analysis window (page 5)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 510362,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:45.309Z",
+      "durationMs": 1178
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=6",
+      "purpose": "ministry publications on gov.il in the analysis window (page 6)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 559325,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:46.502Z",
+      "durationMs": 1191
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=7",
+      "purpose": "ministry publications on gov.il in the analysis window (page 7)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 539925,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:47.568Z",
+      "durationMs": 1063
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=8",
+      "purpose": "ministry publications on gov.il in the analysis window (page 8)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 578657,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:48.908Z",
+      "durationMs": 1338
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=9",
+      "purpose": "ministry publications on gov.il in the analysis window (page 9)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 556319,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:50.089Z",
+      "durationMs": 1178
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=10",
+      "purpose": "ministry publications on gov.il in the analysis window (page 10)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 532419,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:51.186Z",
+      "durationMs": 1094
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20publish_date%2C%20office%2C%20title%2C%20url_id%2C%20policy_type%20from%20government_decisions%20where%20(government%20is%20null%20or%20government%20not%20like%20'%253_%25')%20and%20publish_date%20%3E%3D%20'2022-12-29'%20and%20office%20is%20not%20null%20and%20title%20is%20not%20null%20and%20url_id%20is%20not%20null%20order%20by%20publish_date%20desc%20limit%2020000&page=11",
+      "purpose": "ministry publications on gov.il in the analysis window (page 11)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 144415,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:52.191Z",
+      "durationMs": 1003
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20page_title%2C%20page_url%2C%20publisher%2C%20start_date%2C%20claim_date%2C%20tender_type_he%20from%20calls_for_bids%20where%20start_date%20%3E%3D%20'2022-12-29'%20and%20page_title%20is%20not%20null%20and%20page_url%20is%20not%20null%20order%20by%20start_date%20desc%20limit%2020000",
+      "purpose": "calls for bids published in the window (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 15823,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:35:53.249Z",
+      "durationMs": 296
     }
   ],
   "summary": {
-    "total": 7,
-    "ok": 0,
+    "total": 17,
+    "ok": 17,
     "blocked": 0,
-    "failed": 7
+    "failed": 0
   }
 }

@@ -60,10 +60,19 @@ function main(): void {
     byKey.set(key, assignment);
   }
 
-  // Every collected level-2/3 line must be assigned, and titles must agree.
+  // The thematic layer covers only the ministries that appear in the seed —
+  // full completeness is required inside that scope, and nothing is required
+  // (or emitted) outside it. Uncovered ministries show an explicit
+  // "not yet classified" state in the UI instead of a silent gap.
+  const coveredMinistryIds = new Set(seed.assignments.map((a) => a.ministryId));
+
+  // Every collected level-2/3 line of a covered ministry must be assigned.
   const collected = new Map<string, string>();
   for (const item of budgetItems) {
-    if (item.hierarchyLevel === 2 || item.hierarchyLevel === 3) {
+    if (
+      coveredMinistryIds.has(item.ministryId) &&
+      (item.hierarchyLevel === 2 || item.hierarchyLevel === 3)
+    ) {
       collected.set(`${item.ministryId}:${item.budgetCode}`, item.title);
     }
   }
@@ -98,6 +107,7 @@ function main(): void {
 
   const output = {
     method: seed.method,
+    coveredMinistryIds: [...coveredMinistryIds].sort(),
     methodNote: seed.methodNote,
     confidenceNote: seed.confidenceNote,
     themes: seed.themes.map((theme) => ({

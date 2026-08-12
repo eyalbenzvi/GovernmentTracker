@@ -1,19 +1,185 @@
 ﻿משרד,ספק,סוג ישות,מספר התקשרויות,היקף רב-שנתי,שולם עד כה,קישור
-transport,אניה-ד״ר ו. ריזה ובנו בע״מ,company,1,20518819.4,0,https://next.obudget.org/i/org/company/510051436
-transport,עירית ירושלים,municipality,7,17451377.45,42698.75,https://next.obudget.org/i/org/municipality/500230008
-transport,GOOGLE CLOUD EMEA LIMITED,,4,16428887.21,0,
-transport,נס אי.אס  בע״מ,company,2,15624918.2,0,https://next.obudget.org/i/org/company/515482198
-transport,אלייד - ג'נרי 2  בע״מ,company,26,15220727.77,70960.54,https://next.obudget.org/i/org/company/514961853
-transport,מודיעין אזרחי בעמ,company,1,10600005.31,1313321.06,https://next.obudget.org/i/org/company/510421027
-transport,י ב מ ישראל בע״מ,company,2,10182156.54,0,https://next.obudget.org/i/org/company/510067333
-transport,נס א.ט.  בע״מ,company,16,9341996.69,85984.43,https://next.obudget.org/i/org/company/520040122
-transport,אלעד מערכות תוכנה בע״מ,company,5,5899335.14,0,https://next.obudget.org/i/org/company/510929177
-transport,הראל טכנולוגיות מידע בע״מ,company,47,5657659.35,1280757.38,https://next.obudget.org/i/org/company/511401002
-transport,בזק החברה הישראלית לתקשורת   בע״מ,company,6,5059061.89,316872.69,https://next.obudget.org/i/org/company/520031931
-transport,קונסיסט מערכות בע״מ,company,10,4896284.29,219620.54,https://next.obudget.org/i/org/company/511277261
-transport,עירית תל-אביב-יפו,municipality,5,4797887.59,3344462.9,https://next.obudget.org/i/org/municipality/500250006
-transport,פז קמעונאות ואנרגיה  בע״מ,company,3,4214021.52,547550.87,https://next.obudget.org/i/org/company/510216054
-transport,יו-ביטק סולושנס בע״מ,company,4,4193958.22,1166720.22,https://next.obudget.org/i/org/company/514008333
+sec-2,שפיר הנדסה אזרחית וימית  בע״מ,company,120,181539891.19,87445011.29,https://next.obudget.org/i/org/company/510500242
+sec-2,ערוץ  10 כנסת ישראל בע״מ,company,9,55035739.03,12179316.81,https://next.obudget.org/i/org/company/515551885
+sec-2,ש. שלמה רכב בע״מ,company,18,35162377.89,5902722.67,https://next.obudget.org/i/org/company/513763219
+sec-2,עירית ירושלים,municipality,3,34662420.9,20726902.9,https://next.obudget.org/i/org/municipality/500230008
+sec-2,מלם מערכות בע״מ,company,4,18931627.09,6803766.02,https://next.obudget.org/i/org/company/520044041
+sec-2,פיד יור מיינד - שותפות מוגבלת,partnership,156,18224537.23,7962960.98,https://next.obudget.org/i/org/partnership/540295730
+sec-2,ב. פלג אדריכלים ומתכנני ערים 1997 בע״מ,company,238,13576805.98,1935668.16,https://next.obudget.org/i/org/company/512489311
+sec-2,הרשות השניה לטלויזיה ורדיו,law_mandated_organization,2,7545149.82,3029862.42,https://next.obudget.org/i/org/law_mandated_organization/500500061
+sec-2,פז קמעונאות ואנרגיה  בע״מ,company,16,7008719.49,119519.95,https://next.obudget.org/i/org/company/510216054
+sec-2,חברת החשמל לישראל בעמ,company,2,5577662.03,777662.03,https://next.obudget.org/i/org/company/520000472
+sec-2,חברת קבוצת השומרים שמירה ובטחון בעמ,company,1,3500000,339758,https://next.obudget.org/i/org/company/510623085
+sec-2,יו-ביטק סולושנס בע״מ,company,3,2972161.84,3002498.29,https://next.obudget.org/i/org/company/514008333
+sec-2,ל. אשל שירותי מזון (1989) ירושלים בע״מ,company,38,2467811.72,1520580.07,https://next.obudget.org/i/org/company/511328619
+sec-2,ברן ישראל בע״מ,company,4,2411473.09,224116.83,https://next.obudget.org/i/org/company/510801657
+sec-2,חבר תרגומים בע״מ,company,44,2409258.45,1217951.59,https://next.obudget.org/i/org/company/512892126
+sec-4,מוזאיק יונייטד בע״מ (חל״צ),association,3,404441703.95,13704286,https://next.obudget.org/i/org/association/515122950
+sec-4,עירית ירושלים,municipality,92,192664543.58,33091197.72,https://next.obudget.org/i/org/municipality/500230008
+sec-4,סוכנות היהודית,law_mandated_organization,9,128241486.05,20259879,https://next.obudget.org/i/org/law_mandated_organization/500500046
+sec-4,גוינט ישראל (חל״צ),association,43,116399686.19,1959490.93,https://next.obudget.org/i/org/association/510681414
+sec-4,דיבימושיין בע״מ,company,6,112502214.63,37692960.55,https://next.obudget.org/i/org/company/512379918
+sec-4,עזריאלי הפקות  בע״מ,company,3,109406333.38,0,https://next.obudget.org/i/org/company/515593408
+sec-4,אלייד - ג'נרי 2  בע״מ,company,239,108507985.63,13393268.59,https://next.obudget.org/i/org/company/514961853
+sec-4,עירית תל-אביב-יפו,municipality,46,103610253.76,1513638.45,https://next.obudget.org/i/org/municipality/500250006
+sec-4,מטריקס אי. טי. בע״מ,company,40,82450627,469179.84,https://next.obudget.org/i/org/company/520039413
+sec-4,סיגנצ'ור איי.טי. (ישראל) בע״מ,company,8,81318274.88,14956348.05,https://next.obudget.org/i/org/company/513394825
+sec-4,החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ),association,7,80434165.8,0,https://next.obudget.org/i/org/association/510525348
+sec-4,מ. א. בני שמעון,municipality,12,75615167.47,70771750.9,https://next.obudget.org/i/org/municipality/500262415
+sec-4,מטריקס אי. טי. מערכות מידע מתקדמות בע״מ,company,70,67622679.36,14575797.25,https://next.obudget.org/i/org/company/511171662
+sec-4,יונייטאד בע״מ (חל״צ),association,1,65000000,0,https://next.obudget.org/i/org/association/516694189
+sec-4,"מכללת הרצוג - מיסודן של מכללות ליפשיץ והרצוג (ע""ר)",association,3,63613648.4,47309888.44,https://next.obudget.org/i/org/association/580565281
+sec-5,פלאקסי ישראל  בע״מ,company,1,198274362.5,0,https://next.obudget.org/i/org/company/512768706
+sec-5,גודי פתרונות הסעדה בע״מ,company,1,123310687.95,0,https://next.obudget.org/i/org/company/514094564
+sec-5,ענבל חברה לביטוח בע״מ,company,85,112065502.44,31984955.21,https://next.obudget.org/i/org/company/520031030
+sec-5,יוניון מוטורס בע״מ,company,543,110191346,1254917.2,https://next.obudget.org/i/org/company/511487761
+sec-5,10 ביס.קו.איל בע״מ,company,2,101480117.92,62247.18,https://next.obudget.org/i/org/company/512963489
+sec-5,מלם מערכות בע״מ,company,16,82187085.79,40159368.84,https://next.obudget.org/i/org/company/520044041
+sec-5,הקרן הפנימית לביטוחי הממשלה,government_office,50,76091324.52,4053254.73,https://next.obudget.org/i/org/government_office/500103510
+sec-5,כלמוביל בע'מ,company,303,53693122.38,2615844,https://next.obudget.org/i/org/company/510242670
+sec-5,אורדע פרינט תעשיות בע״מ,company,6,51466244.44,29860153.96,https://next.obudget.org/i/org/company/520036054
+sec-5,טלדור יועצים בע״מ,company,13,49403879.04,15593399.55,https://next.obudget.org/i/org/company/511350613
+sec-5,אס. קיו. לינק בע״מ,company,9,47921261.67,11078110.12,https://next.obudget.org/i/org/company/512042045
+sec-5,מטריקס אי. טי. מערכות מידע מתקדמות בע״מ,company,10,40252671.25,13023483.26,https://next.obudget.org/i/org/company/511171662
+sec-5,אס. פי. אל. תוכנה בע״מ,company,9,36620695,33952107.24,https://next.obudget.org/i/org/company/510756448
+sec-5,י ב מ ישראל בע״מ,company,4,35964145.46,33941027.64,https://next.obudget.org/i/org/company/510067333
+sec-5,"חברת דואר ישראל בע""מ-עמלות",,6,34563342.34,19702703.9,
+sec-6,"פתחון לב (ע""ר)",association,1,197418185,0,https://next.obudget.org/i/org/association/580328839
+sec-6,"אשל חב""ד (ע""ר)",association,1,193482513,0,https://next.obudget.org/i/org/association/580062073
+sec-6,מלם מערכות בע״מ,company,13,83850123.56,6360139.44,https://next.obudget.org/i/org/company/520044041
+sec-6,ג'י. אם. אי גרופס בע״מ,company,1,80999999.99,80691392.68,https://next.obudget.org/i/org/company/513513382
+sec-6,אלקטרה טרגט בע״מ,company,1,62381782.48,0,https://next.obudget.org/i/org/company/513105874
+sec-6,ג'ון ברייס הדרכה בע״מ,company,2,16831908.47,0,https://next.obudget.org/i/org/company/511449878
+sec-6,מסר ב.א.ב. בע״מ,company,1,14755578.89,0,https://next.obudget.org/i/org/company/513216010
+sec-6,מודיעין אזרחי בעמ,company,2,14643755.75,0,https://next.obudget.org/i/org/company/510421027
+sec-6,"פלציב עין הנציב אגודה שיתופית חקלאית בע""מ",cooperative,2,11079900,5382615.43,https://next.obudget.org/i/org/cooperative/570040535
+sec-6,אס. קיו. לינק בע״מ,company,4,9191827.05,6728.01,https://next.obudget.org/i/org/company/512042045
+sec-6,נס אי.אס  בע״מ,company,4,8998245.89,592806.8,https://next.obudget.org/i/org/company/515482198
+sec-6,לוג-און תוכנה בע״מ,company,5,8546152.19,0,https://next.obudget.org/i/org/company/510979511
+sec-6,קבוצת תיגבור בע״מ,company,4,6310470.25,34400.29,https://next.obudget.org/i/org/company/510882830
+sec-6,פרולוג'יק בע״מ,company,6,6155738.81,0,https://next.obudget.org/i/org/company/513977827
+sec-6,קלינור אחזקה בע״מ,company,2,5419574.22,0,https://next.obudget.org/i/org/company/513343947
+sec-7,אלביט מערכות בע״מ,company,20,465377665.53,78355686.56,https://next.obudget.org/i/org/company/520043027
+sec-7,הקרן הפנימית לביטוחי הממשלה,government_office,18,84047944.38,0,https://next.obudget.org/i/org/government_office/500103510
+sec-7,דיפוכם  בע״מ,company,10,41428628.61,0,https://next.obudget.org/i/org/company/511772659
+sec-7,אשת - ארגון שרותי תיירות בע״מ,company,7,35980898.74,0,https://next.obudget.org/i/org/company/511177065
+sec-7,עופר כיבוי חילוץ והצלה בע״מ,company,74,35894610.93,1969173.66,https://next.obudget.org/i/org/company/511453599
+sec-7,עמוס גזית בע״מ,company,49,31629757.42,0,https://next.obudget.org/i/org/company/510469893
+sec-7,גטר גרופ סייפטי   בע״מ,company,64,29444037.27,12870,https://next.obudget.org/i/org/company/512514886
+sec-7,דליה אנרגיות כח בע״מ,company,10,28612966.59,2244714.07,https://next.obudget.org/i/org/company/513708818
+sec-7,סיג תעשיות בע״מ,company,15,28292385.46,0,https://next.obudget.org/i/org/company/510907058
+sec-7,ש.ב.ה. שיטות בניה (1988) בע״מ,company,3,24681047.04,0,https://next.obudget.org/i/org/company/511332595
+sec-7,א. שמים קבלנות וקומפלטים בע״מ,company,14,21595046.46,690636.35,https://next.obudget.org/i/org/company/512738634
+sec-7,מרכבים טכנולוגיות תחבורה בע״מ,company,20,21318404.88,0,https://next.obudget.org/i/org/company/520026410
+sec-7,המשביר לצרכן בתי כלבו בע״מ,company,5,18043725.96,0,https://next.obudget.org/i/org/company/514357458
+sec-7,מנוליד -חירות מערכות בע״מ,company,14,16175555.22,0,https://next.obudget.org/i/org/company/510679434
+sec-7,מחלב פיתוח ובניה בע״מ,company,3,13899470.13,0,https://next.obudget.org/i/org/company/512062944
+sec-8,אלעד מערכות תוכנה בע״מ,company,14,189350193.52,52354069.66,https://next.obudget.org/i/org/company/510929177
+sec-8,טי. אנד. אם סער בטחון בע״מ,company,42,151358738.54,87810215.37,https://next.obudget.org/i/org/company/511635625
+sec-8,מטריקס אי. טי. מערכות מידע מתקדמות בע״מ,company,8,111264984.08,25994030.43,https://next.obudget.org/i/org/company/511171662
+sec-8,נס אי.אס  בע״מ,company,20,96288819.15,18774821.93,https://next.obudget.org/i/org/company/515482198
+sec-8,נס א.ט.  בע״מ,company,67,80531779,31500960.21,https://next.obudget.org/i/org/company/520040122
+sec-8,טלדור יועצים בע״מ,company,8,58600185.93,24597784.3,https://next.obudget.org/i/org/company/511350613
+sec-8,חברת דואר ישראל בע״מ,company,57,54382511.95,11473396.41,https://next.obudget.org/i/org/company/513467191
+sec-8,אדיר - הבירה בע״מ,company,18,48937872.05,500010.86,https://next.obudget.org/i/org/company/512339474
+sec-8,דפוס בארי שותפות מוגבלת,partnership,5,48529542.34,14923247.8,https://next.obudget.org/i/org/partnership/550005169
+sec-8,חברת החשמל לישראל בעמ,company,43,47281257.92,8956555.87,https://next.obudget.org/i/org/company/520000472
+sec-8,תקשובים - מרכז תקשורת עסקי בע״מ,company,7,44148671.41,13541799.1,https://next.obudget.org/i/org/company/512287186
+sec-8,עירית תל-אביב-יפו,municipality,25,39700662.98,12057951.95,https://next.obudget.org/i/org/municipality/500250006
+sec-8,פרולוג'יק בע״מ,company,10,39079396.32,15007291.76,https://next.obudget.org/i/org/company/513977827
+sec-8,א.מ.ן מחשבים בעמ,company,17,37434777.14,11571221.06,https://next.obudget.org/i/org/company/510626070
+sec-8,וואן ליין בע״מ,company,16,33534908.75,15458639.31,https://next.obudget.org/i/org/company/513050898
+sec-9,האיגוד - חברה להעברת טכנולוגיה,company,215,166052018.29,17457589.37,https://next.obudget.org/i/org/company/510384266
+sec-9,נכסי אריאל - פרוייקטים בע״מ,company,13,95840503.15,3920571.62,https://next.obudget.org/i/org/company/511515900
+sec-9,עירית ירושלים,municipality,16,73560780.21,16229301.7,https://next.obudget.org/i/org/municipality/500230008
+sec-9,משרד האוצר/הדיור הממשלתי/חשבות,government_office,16,70725270,50830583.58,https://next.obudget.org/i/org/government_office/500105994
+sec-9,סוניגו אריזות הובלות ומשלוחים בינלאומיים בע״מ,company,32,51326286.84,6674689.4,https://next.obudget.org/i/org/company/513419200
+sec-9,ב ד גרייבר בע'מ,company,169,44110267.57,1019714.31,https://next.obudget.org/i/org/company/510202757
+sec-9,קונקסיון ישראל - שירותי ייעוץ לאמריקה הלטינית בע״מ,company,152,44093942.93,1742115.23,https://next.obudget.org/i/org/company/515943389
+sec-9,מודיעין אזרחי בעמ,company,15,41148136.93,10183752.63,https://next.obudget.org/i/org/company/510421027
+sec-9,אוקינוס חברה בעמ,company,13,38904721.17,8158620.61,https://next.obudget.org/i/org/company/510023310
+sec-9,איטיצ'ר בע״מ,company,14,34719844.28,4786459.76,https://next.obudget.org/i/org/company/512944745
+sec-9,אורטל תיירות ונופש בע״מ,company,92,30862887.26,432685.37,https://next.obudget.org/i/org/company/514066331
+sec-9,"משרד רוה""מ/המשרד הראשי",government_office,14,30330476.8,13171807,https://next.obudget.org/i/org/government_office/500100037
+sec-9,אדון שוקו שיווק 2008 בע״מ,company,517,25490829.16,4037073.27,https://next.obudget.org/i/org/company/514133438
+sec-9,החוויה הישראלית- שירותי תיירות חינוכית בע״מ,company,95,23982598.49,561520.32,https://next.obudget.org/i/org/company/512840588
+sec-9,אנרג'י - מערכי אנרגיה לירושלים,partnership,14,23838257.22,3616888.02,https://next.obudget.org/i/org/partnership/550017644
+sec-12,כלנית איי.טי.  בע״מ,company,1,5576833.08,4870541.2,https://next.obudget.org/i/org/company/520038159
+sec-12,חילן בע״מ,company,3,5030227.82,4472237.39,https://next.obudget.org/i/org/company/520039942
+sec-12,מלם שכר בע״מ,company,4,4079255.5,4074255.81,https://next.obudget.org/i/org/company/513027102
+sec-12,בן דוד שלוי קופ ושות' רואי חשבון (בי.די.אס.קי),company,1,2595060,1767632.16,https://next.obudget.org/i/org/company/513464842
+sec-12,קולטק תקשורת בע״מ,company,1,328711.5,149526,https://next.obudget.org/i/org/company/514265099
+sec-12,"שלומית-עמותה להפעלת מתנדבים לשירות לאומי ואזרחי (ע""ר)",association,1,308300,27668.2,https://next.obudget.org/i/org/association/580232411
+sec-12,אלדן הפקות - ארועים וקד״מ בע״מ,company,1,292615.3,292615.3,https://next.obudget.org/i/org/company/513871905
+sec-12,אורטל ולעבודה משאבי אנוש בע״מ,company,1,249999.75,207258.84,https://next.obudget.org/i/org/company/511126518
+sec-12,נבו הוצאה לאור בע״מ,company,1,193752,174710.6,https://next.obudget.org/i/org/company/512539503
+sec-12,יהודיוף אברהם עצמון,,1,156070.4,181671.46,
+sec-12,בינת תקשורת מחשבים בע״מ,company,1,146250,146250,https://next.obudget.org/i/org/company/510713407
+sec-12,אלן פפרמן - שירותים אקטואריים בע״מ,company,1,115724.7,56209.14,https://next.obudget.org/i/org/company/514640846
+sec-12,א.ד. הפצות ועיטוף בע״מ,company,3,92715.11,43331.12,https://next.obudget.org/i/org/company/512104118
+sec-12,ישעיהו אורזיצר ייעוץ אקטוארי בע״מ,company,1,58617,51948,https://next.obudget.org/i/org/company/513362467
+sec-12,תג - נאור בע״מ,company,2,56873.7,23166,https://next.obudget.org/i/org/company/512477845
+sec-13,בנק מרכנתיל דיסקונט בעמ,company,1,36528000,0,https://next.obudget.org/i/org/company/520029281
+sec-13,רשות העתיקות הקריה הלאומית לארכי,law_mandated_organization,1,18700000,0,https://next.obudget.org/i/org/law_mandated_organization/500500491
+sec-13,חברה למפעלי כלכלה ותרבות לעובדי המדינה בעמ,company,1,11250000,0,https://next.obudget.org/i/org/company/520020264
+sec-13,ביטוח לאומי המשרד הראשי,law_mandated_organization,1,9500000,0,https://next.obudget.org/i/org/law_mandated_organization/500500772
+sec-13,קיבוץ עין גדי,cooperative,1,7040000,7040000,https://next.obudget.org/i/org/cooperative/570013755
+sec-13,פז כלכלה והנדסה 1996 בע״מ,company,2,3000001.68,1071682.45,https://next.obudget.org/i/org/company/512358136
+sec-13,"חברת דואר ישראל בע""מ-מס הכנסה שלילי",,1,2106000,0,
+sec-13,סומך חייקין,partnership,2,1926619.3,223942.73,https://next.obudget.org/i/org/partnership/540002383
+sec-13,זיו האפט ייעוץ וניהול בע״מ,company,3,1791288.93,27794.12,https://next.obudget.org/i/org/company/510986011
+sec-13,פילת מקבוצת היי-קפיטל בע״מ,company,2,1707692.72,531306.58,https://next.obudget.org/i/org/company/512766411
+sec-13,קיבוץ מצפה שלם,cooperative,1,1662000,0,https://next.obudget.org/i/org/cooperative/570024307
+sec-13,ענבל חברה לביטוח בע״מ,company,2,1660000,0,https://next.obudget.org/i/org/company/520031030
+sec-13,שלדור בע״מ,company,4,1636000.92,450000,https://next.obudget.org/i/org/company/510922073
+sec-13,תאסק תל אביב ייעוץ אסטרטגי בע״מ,company,4,1487000.02,0,https://next.obudget.org/i/org/company/513596445
+sec-13,סטורנקסט בע״מ,company,2,1454602.5,609394.5,https://next.obudget.org/i/org/company/513166421
+sec-14,סלקום ישראל בע״מ,company,1,4999.46,0,https://next.obudget.org/i/org/company/511930125
+sec-17,רשות העתיקות הקריה הלאומית לארכי,law_mandated_organization,7,46996998,0,https://next.obudget.org/i/org/law_mandated_organization/500500491
+sec-17,רשות הגנים הלאומיים ושמורות הטבע,law_mandated_organization,8,36490549.7,0,https://next.obudget.org/i/org/law_mandated_organization/500500285
+sec-17,א. ט. - שרותים משפטיים בע״מ,company,5,22060809.63,0,https://next.obudget.org/i/org/company/511378143
+sec-17,פילו ובניו (1997) בע״מ,company,47,15816034.99,0,https://next.obudget.org/i/org/company/512426685
+sec-17,א. דינמיקה אחזקות 2002 בע״מ,company,16,11446474.87,0,https://next.obudget.org/i/org/company/513283838
+sec-17,ועדה מוניציפאלית - חברון,local_planning_committee,1,10237500,0,https://next.obudget.org/i/org/local_planning_committee/501501183
+sec-17,חברת סופר שיין בעמ,,8,9017848.64,0,
+sec-17,עוז תוכנה  בע״מ,company,4,8185289.97,0,https://next.obudget.org/i/org/company/514453224
+sec-17,פז קמעונאות ואנרגיה  בע״מ,company,12,6824167.44,0,https://next.obudget.org/i/org/company/510216054
+sec-17,אם גרופ בע״מ,company,5,5022833.23,0,https://next.obudget.org/i/org/company/511464927
+sec-17,חברת דואר ישראל בע״מ,company,10,4549135.8,0,https://next.obudget.org/i/org/company/513467191
+sec-17,פרולוג'יק בע״מ,company,18,3880790.66,0,https://next.obudget.org/i/org/company/513977827
+sec-17,מודיעין אזרחי בעמ,company,4,3814950.27,0,https://next.obudget.org/i/org/company/510421027
+sec-17,קלין אין - ניהול ואחזקת מבנים בע״מ,company,5,3302429.2,0,https://next.obudget.org/i/org/company/514521699
+sec-17,נס א.ט.  בע״מ,company,17,3202544.41,0,https://next.obudget.org/i/org/company/520040122
+sec-18,"אשל חב""ד (ע""ר)",association,1,376000000,0,https://next.obudget.org/i/org/association/580062073
+sec-18,"פתחון לב (ע""ר)",association,1,316330000,0,https://next.obudget.org/i/org/association/580328839
+sec-18,"ידידי ""עתידים"" (ע""ר)",association,3,24720000,0,https://next.obudget.org/i/org/association/580396067
+sec-18,שיתופים - לקידום החברה האזרחית חברה לתועלת הציבור בע״מ (חל״צ),association,2,17200000,0,https://next.obudget.org/i/org/association/513910372
+sec-18,"שותפויות אדמונד דה רוטשילד (ע""ר)",association,4,12193392.5,0,https://next.obudget.org/i/org/association/580399913
+sec-18,"מעוז - סיל (ע""ר)",association,2,11270239.33,0,https://next.obudget.org/i/org/association/580548196
+sec-18,עדליא - ייעוץ כלכלי בע״מ,company,8,10992056.02,0,https://next.obudget.org/i/org/company/513238816
+sec-18,לוטם אסטרטגיות לפיתוח ארגונים  בע״מ,company,1,10047999.99,0,https://next.obudget.org/i/org/company/511585010
+sec-18,או.די. פיתוח ארגוני (2004)  בע״מ,company,4,6262576.24,0,https://next.obudget.org/i/org/company/513593194
+sec-18,סיסטם מעבדות מתקדמות בע״מ,company,1,5749229.84,0,https://next.obudget.org/i/org/company/513368399
+sec-18,אורבניקס בע״מ,company,1,5284964.88,0,https://next.obudget.org/i/org/company/512002130
+sec-18,י.ת.ב. בע״מ,company,1,3771495,0,https://next.obudget.org/i/org/company/510599947
+sec-18,אספקט מהנדסים בע״מ,company,1,3599238.71,0,https://next.obudget.org/i/org/company/512817289
+sec-18,טאו כלכלה ופיננסים בע״מ,company,4,3424285.03,0,https://next.obudget.org/i/org/company/515630937
+sec-18,זיו האפט ייעוץ וניהול בע״מ,company,3,3200908.23,0,https://next.obudget.org/i/org/company/510986011
+sec-19,ניטו טק בע״מ,company,2,66550936.32,35267114.12,https://next.obudget.org/i/org/company/514746437
+sec-19,מכון ויצמן למדע,company,9,62882800,5211400,https://next.obudget.org/i/org/company/520016858
+sec-19,CERN-THE EUROPEAN ORGANIZATION FOR,,5,38482823,157283606.78,
+sec-19,התעשיה האוירית לישראל בע״מ,company,8,32242676.44,13638929.3,https://next.obudget.org/i/org/company/520027194
+sec-19,"מכון ברנקו וייס - חינוך, חשיבה, יוזמה (ע""ר)",association,6,28121172,4926699.86,https://next.obudget.org/i/org/association/580168789
+sec-19,החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ),association,5,27638465.87,3545276.2,https://next.obudget.org/i/org/association/510525348
+sec-19,אלקטרה טרגט בע״מ,company,4,23768731.1,7702726.84,https://next.obudget.org/i/org/company/513105874
+sec-19,מוסד הטכניון למחקר ופתוח בעמ,company,1,19828681,0,https://next.obudget.org/i/org/company/510097918
+sec-19,נס א.ט.  בע״מ,company,10,14252884.25,7350023.86,https://next.obudget.org/i/org/company/520040122
+sec-19,מרמנת אירגון וניהול פרויקטים בע״מ,company,7,12333172.5,1711387.51,https://next.obudget.org/i/org/company/512027129
+sec-19,בנדה הפקות בע״מ,company,8,11804291.61,4557487.4,https://next.obudget.org/i/org/company/512946005
+sec-19,אורטל תיירות ונופש בע״מ,company,9,11316077.67,379424.4,https://next.obudget.org/i/org/company/514066331
+sec-19,מרטנס הופמן יועצים לניהול בע״מ,company,5,11239554.37,2574256.43,https://next.obudget.org/i/org/company/511887655
+sec-19,קבוצת אינטלקט הפקה והוצאה לאור בע״מ,company,10,10938722.28,1507900.7,https://next.obudget.org/i/org/company/512919465
+sec-19,"מועצה לשימור אתרי מורשת בישראל (ע""ר)",association,1,10294246,3803404,https://next.obudget.org/i/org/association/580330058
 education,מילגם בע״מ,company,31,2948617742.99,25580954.17,https://next.obudget.org/i/org/company/510982325
 education,החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ),association,45,1731521603.83,147187766.62,https://next.obudget.org/i/org/association/510525348
 education,אם גרופ בע״מ,company,14,391354976.12,0,https://next.obudget.org/i/org/company/511464927
@@ -29,6 +195,37 @@ education,סייט אנד סאונד חינוך בע״מ,company,5,177359550,0,h
 education,ביקורופא בע״מ,company,4,163971162.45,48644168.6,https://next.obudget.org/i/org/company/511657322
 education,בזק החברה הישראלית לתקשורת   בע״מ,company,21,152641656.26,61192945.96,https://next.obudget.org/i/org/company/520031931
 education,מטריקס אי.טי. אינטגרציה ותשתיות בע״מ,company,69,134241359.29,76184689.28,https://next.obudget.org/i/org/company/511204026
+sec-21,"חברת דואר ישראל בע""מ-עמלות",,1,374400,374400,
+sec-22,"המרכז הארצי לפתוח המקומות הקדושים (ע""ר)",association,12,145998152,494068,https://next.obudget.org/i/org/association/580151637
+sec-22,עזריאל אבישג,,6,21256942.22,790836.46,
+sec-22,"לגעת ברוח (ע""ר)",association,2,18047740,3516347,https://next.obudget.org/i/org/association/580435097
+sec-22,"הדור הבא, צעירים בישראל (ע""ר)",association,3,12033120,1142320,https://next.obudget.org/i/org/association/580513745
+sec-22,מלם מערכות בע״מ,company,12,8175693.68,608531.82,https://next.obudget.org/i/org/company/520044041
+sec-22,"פנים אל פנים - נועם ישראל (ע""ר)",association,3,7906125,276500,https://next.obudget.org/i/org/association/580439248
+sec-22,מודיעין אזרחי בעמ,company,3,7335639.83,3416495.17,https://next.obudget.org/i/org/company/510421027
+sec-22,"חברה קדישא גחש""א ראשון לציון והמרכז (ע""ר)",association,2,6781188.61,4072428,https://next.obudget.org/i/org/association/580033447
+sec-22,"אור תורה סטון (ע""ר)",association,1,5873241.2,0,https://next.obudget.org/i/org/association/580000768
+sec-22,כלכלית ירושלים-כלל ביט,,11,4665148.61,327371.74,
+sec-22,"ארגון השומר החדש (ע""ר)",association,1,4000000,0,https://next.obudget.org/i/org/association/580492981
+sec-22,מטריקס אי. טי. מערכות מידע מתקדמות בע״מ,company,9,3509805.67,244033.73,https://next.obudget.org/i/org/company/511171662
+sec-22,יו-ביטק סולושנס בע״מ,company,14,3462859.8,1131906.38,https://next.obudget.org/i/org/company/514008333
+sec-22,"הקרן למורשת הכותל המערבי (ע""ר)",association,3,2861310.2,0,https://next.obudget.org/i/org/association/580137594
+sec-22,עירית ירושלים,municipality,6,2721377,1160427.56,https://next.obudget.org/i/org/municipality/500230008
+sec-23,משרד העבודה/הרשות לשיקום האסיר,government_office,2,101238000,42000000,https://next.obudget.org/i/org/government_office/500102462
+sec-23,"הקרן לידידות (ע""ר)",association,15,79899000,1950707,https://next.obudget.org/i/org/association/580360238
+sec-23,גוינט ישראל (חל״צ),association,26,71165472.95,1706958,https://next.obudget.org/i/org/association/510681414
+sec-23,דנאל אדיר יהושע בעמ,company,5,58969275.02,23735931.08,https://next.obudget.org/i/org/company/520037565
+sec-23,ג'ון ברייס הדרכה בע״מ,company,220,58761922.64,1012215.31,https://next.obudget.org/i/org/company/511449878
+sec-23,אקרשטיין תעשיות בע״מ,company,1,54180500,0,https://next.obudget.org/i/org/company/520036294
+sec-23,"בעצמי (ע""ר)",association,6,42873649.4,1569549.42,https://next.obudget.org/i/org/association/580265163
+sec-23,"""אותות"" - דלת לחיים חדשים (ע""ר)",association,12,35658821,4946261.28,https://next.obudget.org/i/org/association/580031722
+sec-23,פמי פרימיום בע״מ,company,230,35430483.31,7579332.24,https://next.obudget.org/i/org/company/512676206
+sec-23,מודיעין אזרחי בעמ,company,8,32119110.62,15531179.96,https://next.obudget.org/i/org/company/510421027
+sec-23,ביטוח לאומי המשרד הראשי,law_mandated_organization,6,31781339,0,https://next.obudget.org/i/org/law_mandated_organization/500500772
+sec-23,אגבאריה עדנאן,,66,31518347.16,216442.59,
+sec-23,גורמה ארוחות  בע״מ,company,47,30409235.13,5185597.69,https://next.obudget.org/i/org/company/514300557
+sec-23,טי. אנד. אם סער בטחון בע״מ,company,6,29031829.06,18220132.24,https://next.obudget.org/i/org/company/511635625
+sec-23,עירית תל-אביב-יפו,municipality,21,27979669.18,3411277.85,https://next.obudget.org/i/org/municipality/500250006
 health,שירותי בריאות כללית,ottoman-association,151,246894430.57,4808049.8,https://next.obudget.org/i/org/ottoman-association/589906114
 health,"אותי (ע""ר)",association,5,240354944.5,0,https://next.obudget.org/i/org/association/580183986
 health,פמי פרימיום בע״מ,company,16,203108353.39,85870502.51,https://next.obudget.org/i/org/company/512676206
@@ -44,6 +241,15 @@ health,עמל הולדינגס א.ד.  בע״מ,company,11,76809355.07,1805976.1
 health,עירית ירושלים,municipality,12,76016152.09,38528959.11,https://next.obudget.org/i/org/municipality/500230008
 health,"פרח לצמוח במקום טוב (ע""ר)",association,9,74153975.71,33635481.73,https://next.obudget.org/i/org/association/580344414
 health,קידום פרוייקטים שיקומיים ב.ה. בע״מ,company,15,73398358.89,1452500.74,https://next.obudget.org/i/org/company/513295170
+sec-25,שירותי בריאות כללית,ottoman-association,1,2991000,0,https://next.obudget.org/i/org/ottoman-association/589906114
+sec-25,השטיח המעופף בע״מ,company,1,2808000,0,https://next.obudget.org/i/org/company/520043837
+sec-25,אשת - ארגון שרותי תיירות בע״מ,company,1,2807999.87,0,https://next.obudget.org/i/org/company/511177065
+sec-25,חברת דואר ישראל בע״מ,company,2,1791252.91,1017944.8,https://next.obudget.org/i/org/company/513467191
+sec-25,ברנע יעל,,1,473934.24,350717.48,
+sec-25,רוביצ'ק אודיל יולנדה,,1,364001.04,182458.58,
+sec-25,פישר רונית,,1,49982.4,29052.27,
+sec-25,עמית אורנה,,1,49775.31,10168.82,
+sec-25,PAVAN ILARIA,,2,24041.19,62381.36,
 environment,סנקאר שירותים לוגיסטיים בע״מ,company,3,517064000.23,5798590.42,https://next.obudget.org/i/org/company/511464000
 environment,ל.י. קבוצת פרץ את חדידה  בע״מ,company,1,516739711,0,https://next.obudget.org/i/org/company/516739711
 environment,עמית עידן  בע״מ,company,1,516429917,0,https://next.obudget.org/i/org/company/516429917
@@ -59,6 +265,96 @@ environment,נס אי.אס  בע״מ,company,7,62641239.5,59549032.44,https://ne
 environment,42357093,,1,57390817,0,
 environment,"מרכז השלטון המקומי בישראל (ע""ר)",association,1,56119963,0,https://next.obudget.org/i/org/association/580002244
 environment,פארק אריאל שרון בע״מ (חל״צ),association,6,55601949,14649421.2,https://next.obudget.org/i/org/association/513837724
+sec-29,טי. אנד. אם סער בטחון בע״מ,company,4,140590184.58,0,https://next.obudget.org/i/org/company/511635625
+sec-29,מודיעין אזרחי בעמ,company,5,124122301.41,61306400.76,https://next.obudget.org/i/org/company/510421027
+sec-29,ע.מי.ש.ב. שרותים בע״מ,company,2,34561054.48,0,https://next.obudget.org/i/org/company/510802325
+sec-29,רמות מ.א. ניהול ותחזוקה (1993)  בע״מ,company,18,28404871.49,103486.76,https://next.obudget.org/i/org/company/511845497
+sec-29,טופ סקיי ליין מערכות הנדסה בע״מ,company,3,27180718,0,https://next.obudget.org/i/org/company/512876228
+sec-29,אשד בקרה   בע״מ,company,3,19333707.84,0,https://next.obudget.org/i/org/company/515754281
+sec-29,עירית ירושלים,municipality,1,10017072,0,https://next.obudget.org/i/org/municipality/500230008
+sec-29,חברת קבוצת השומרים שמירה ובטחון בעמ,company,2,8963902.28,0,https://next.obudget.org/i/org/company/510623085
+sec-29,התאחדות הקבלנים והבונים בישראל,ottoman-association,1,6361547.07,0,https://next.obudget.org/i/org/ottoman-association/589902519
+sec-29,אשמורת ניהול נכסים בע״מ,company,2,4492797.43,0,https://next.obudget.org/i/org/company/512620477
+sec-29,נכסי אריאל - פרוייקטים בע״מ,company,1,4036419.26,0,https://next.obudget.org/i/org/company/511515900
+sec-29,ש.מ.ח. שרותי מודיעין ו,,1,3369998.07,0,
+sec-29,סומך חייקין,partnership,2,3229200,0,https://next.obudget.org/i/org/partnership/540002383
+sec-29,אברא יישום אסטרטגיות  בע״מ,company,3,2955193.45,0,https://next.obudget.org/i/org/company/511369548
+sec-29,שיכון ובינוי -סולל בונה נצרת עילית שותפות מוגבלת,partnership,4,2818837.22,0,https://next.obudget.org/i/org/partnership/550278196
+sec-30,סוכנות היהודית,law_mandated_organization,110,441225135.13,126080340.8,https://next.obudget.org/i/org/law_mandated_organization/500500046
+sec-30,"צופים עולמי  (ע""ר)",association,13,38144222.09,15733890.81,https://next.obudget.org/i/org/association/580516938
+sec-30,החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ),association,2,27936000,6582669.4,https://next.obudget.org/i/org/association/510525348
+sec-30,"האגודה לקדום החנוך ירושלים (ע""ר)",association,3,26158468,9687251.68,https://next.obudget.org/i/org/association/580028116
+sec-30,נס א.ט.  בע״מ,company,13,25777899.76,4827990.3,https://next.obudget.org/i/org/company/520040122
+sec-30,עתיד - רשת חינוך ובתי ספר בע״מ (חל״צ),association,2,24356411,19782691.68,https://next.obudget.org/i/org/association/513532333
+sec-30,"העמותה לתפנית בחינוך- מיסודה של קרן רש""י (ע""ר)",association,5,24024862.06,17730535.15,https://next.obudget.org/i/org/association/580418564
+sec-30,מלם מערכות בע״מ,company,5,18242721.9,7125234.51,https://next.obudget.org/i/org/company/520044041
+sec-30,מעוף משאבי אנוש (מקבוצת מעוף) בע״מ,company,6,12726949.12,10264370.65,https://next.obudget.org/i/org/company/512777368
+sec-30,מודיעין אזרחי בעמ,company,2,10738189.18,4018490.88,https://next.obudget.org/i/org/company/510421027
+sec-30,דב הלפרין יועצים בע״מ,company,3,9043351.2,4751283.81,https://next.obudget.org/i/org/company/511672255
+sec-30,חברת א. ברזני הסעות בע״מ,company,2,8899999.76,9076875.1,https://next.obudget.org/i/org/company/511778300
+sec-30,"המרכז לטיפוח יזמות ראשון לציון והסביבה (ע""ר)",association,5,8804254,5031796.02,https://next.obudget.org/i/org/association/580228393
+sec-30,דקל שרותי נקיון ואחזקה בע״מ,company,6,8604075.85,4308657.91,https://next.obudget.org/i/org/company/511635401
+sec-30,תות תקשורת ותוצאות בע״מ,company,5,8021296.6,6602105.11,https://next.obudget.org/i/org/company/513230482
+sec-33,רשות ניקוז גליל מערבי,drainage_authority,2,30840000,768266,https://next.obudget.org/i/org/drainage_authority/501800049
+sec-33,א.ס.ת. תכנון והקמת פרוייקטים בע״מ,company,1,16857247.68,0,https://next.obudget.org/i/org/company/513599142
+sec-33,התאגיד לפיקוח וטרינרי,government_office,1,14000000,0,https://next.obudget.org/i/org/government_office/500107677
+sec-33,מ. א. הערבה התיכונה,municipality,1,14000000,14000000,https://next.obudget.org/i/org/municipality/500262548
+sec-33,קציר ברכת הארץ בע״מ,company,1,11343358.89,0,https://next.obudget.org/i/org/company/515188753
+sec-33,"מילובר - אגודה שיתופית חקלאית בע""מ",cooperative,2,10541072.22,155585.52,https://next.obudget.org/i/org/cooperative/570049403
+sec-33,צוות 5 אבטחה  בע״מ,company,2,10287544.1,4796437.07,https://next.obudget.org/i/org/company/513832394
+sec-33,"אמבר מכון לתערובת אגודה שיתופית חקלאית מרכזית בע""מ",cooperative,1,8977583.16,913319.36,https://next.obudget.org/i/org/cooperative/570015362
+sec-33,מובילי העמקים בע״מ,company,1,7896399.09,0,https://next.obudget.org/i/org/company/512365347
+sec-33,קרן למחקר ולפיתוח חקלאים ארהב-יש,law_mandated_organization,3,7649235,8751568.97,https://next.obudget.org/i/org/law_mandated_organization/500500079
+sec-33,א.ג. איזן - אדריכלים ובוני ערים בע״מ,company,1,6835725,0,https://next.obudget.org/i/org/company/515009116
+sec-33,אוניברסיטת תל-אביב אגודה,ottoman-association,7,6793500,1073206,https://next.obudget.org/i/org/ottoman-association/589931187
+sec-33,מלם מערכות בע״מ,company,1,5613363.99,0,https://next.obudget.org/i/org/company/520044041
+sec-33,עירית ראשון לציון,municipality,1,4743900,4738333.8,https://next.obudget.org/i/org/municipality/500283007
+sec-33,צנציפר חב ליבוא תבואות,,2,4651992.97,139699,
+sec-34,מרימון גז טבעי צפון בע״מ,company,7,346059089.85,51578033.25,https://next.obudget.org/i/org/company/514803907
+sec-34,סופר אנ.ג'י. חדרה והעמקים חברה לחלוקת גז טבעי בע״מ,company,8,266402163.02,52180591.08,https://next.obudget.org/i/org/company/514820869
+sec-34,נגב גז טבעי בע״מ,company,24,175606954.19,42321158.93,https://next.obudget.org/i/org/company/514166636
+sec-34,גז טבעי דרום בע״מ,company,15,115067205.64,13100603.56,https://next.obudget.org/i/org/company/514406024
+sec-34,רתם גז טבעי בע״מ,company,12,100186167.53,1271259.99,https://next.obudget.org/i/org/company/515254118
+sec-34,נתיבי הגז הטבעי לישראל בע״מ,company,2,100000000,50000000,https://next.obudget.org/i/org/company/513436394
+sec-34,סופר אנ.ג'י. חברה לחלוקת גז טבעי בע״מ,company,5,81840799.07,4082816.65,https://next.obudget.org/i/org/company/514127588
+sec-34,אביב - ניהול הנדסה ומערכות מידע בע״מ,company,11,59450190.18,9055280.56,https://next.obudget.org/i/org/company/511301657
+sec-34,חקר ימים ואגמים לישראל בעמ (חל״צ),association,25,54199078.5,40326517.01,https://next.obudget.org/i/org/association/510485204
+sec-34,פרייסווטרהאוסקופרס ייעוץ בע״מ,company,6,46589431.36,8603944.83,https://next.obudget.org/i/org/company/511403636
+sec-34,א.מ.ן מחשבים בעמ,company,49,45045879.25,13390523.33,https://next.obudget.org/i/org/company/510626070
+sec-34,בנק מרכנתיל דיסקונט בעמ,company,1,37500000,0,https://next.obudget.org/i/org/company/520029281
+sec-34,בנק מזרחי טפחות בעמ,company,1,37500000,0,https://next.obudget.org/i/org/company/520000522
+sec-34,הבנק הבינלאומי הראשון לישראל בעמ,company,1,37500000,0,https://next.obudget.org/i/org/company/520029083
+sec-34,בנק הפועלים בע״מ,company,1,37500000,0,https://next.obudget.org/i/org/company/520000118
+sec-36,ביטוח לאומי המשרד הראשי,law_mandated_organization,12,46244193,46244193,https://next.obudget.org/i/org/law_mandated_organization/500500772
+sec-36,"אגודה להתנדבות - שירות לאומי (ע""ר)",association,8,45456642,10385261.67,https://next.obudget.org/i/org/association/580025708
+sec-36,"בת עמי  - אמונה אלומה (ע""ר)",association,8,40146631,9152336.11,https://next.obudget.org/i/org/association/580425247
+sec-36,"עמינדב - אגודה תורנית להתנדבות (ע""ר)",association,7,31901063,8543690.83,https://next.obudget.org/i/org/association/580083111
+sec-36,"שלומית-עמותה להפעלת מתנדבים לשירות לאומי ואזרחי (ע""ר)",association,8,31326353,7286832.11,https://next.obudget.org/i/org/association/580232411
+sec-36,"ש""ל שילה עמותה לשירות לאומי אזרחי (ע""ר)",association,6,30920277,9643852.56,https://next.obudget.org/i/org/association/580354090
+sec-36,"רחשי לב (ע""ר)",association,2,30245117,26702902.32,https://next.obudget.org/i/org/association/580156669
+sec-36,"אופק לקידום מתנדבים צעירים בישראל (ע""ר)",association,11,27324878,11042948.99,https://next.obudget.org/i/org/association/580600138
+sec-36,"עמותה לשוויון חברתי ושרות לאומי במגזר הערבי במדינת ישראל (ע""ר)",association,6,24695834,5486752.83,https://next.obudget.org/i/org/association/580423986
+sec-36,המכללה הארצית להכשרה מקצועית סכנין בע״מ,company,2,19599093.54,14256836.95,https://next.obudget.org/i/org/company/511579252
+sec-36,"חיבור חדש (ע""ר)",association,6,15462089,3612069.97,https://next.obudget.org/i/org/association/580509883
+sec-36,"ידידות טורונטו (ע""ר)",association,1,5000000,0,https://next.obudget.org/i/org/association/580496123
+sec-36,סיסטם מעבדות מתקדמות בע״מ,company,1,4728795.19,4369486.98,https://next.obudget.org/i/org/company/513368399
+sec-36,סוכנות היהודית,law_mandated_organization,2,3576000,0,https://next.obudget.org/i/org/law_mandated_organization/500500046
+sec-36,קבוצת אינטלקט הפקה והוצאה לאור בע״מ,company,1,3492118.16,3492115.82,https://next.obudget.org/i/org/company/512919465
+sec-37,רשות הגנים הלאומיים ושמורות הטבע,law_mandated_organization,3,15003615,0,https://next.obudget.org/i/org/law_mandated_organization/500500285
+sec-37,אלייד - ג'נרי 2  בע״מ,company,18,4116362.31,5390.75,https://next.obudget.org/i/org/company/514961853
+sec-37,אטומי שיווק דיגיטלי בע״מ,company,1,3207478,0,https://next.obudget.org/i/org/company/514734334
+sec-37,עירית ירושלים,municipality,2,2796989.53,2796989.53,https://next.obudget.org/i/org/municipality/500230008
+sec-37,"שפירא, כהן - עורכי דין",company,1,2376831.6,134367.86,https://next.obudget.org/i/org/company/514210616
+sec-37,מעוף משאבי אנוש (מקבוצת מעוף) בע״מ,company,1,2174103.74,333999.01,https://next.obudget.org/i/org/company/512777368
+sec-37,ארטרא בע״מ,company,3,2086603.31,19656,https://next.obudget.org/i/org/company/510936347
+sec-37,מטריקס אי.טי. אינטגרציה ותשתיות בע״מ,company,11,1682753.67,77769.81,https://next.obudget.org/i/org/company/511204026
+sec-37,יו-ביטק סולושנס בע״מ,company,3,1447134.31,725989.56,https://next.obudget.org/i/org/company/514008333
+sec-37,ע.מי.ש.ב. שרותים בע״מ,company,2,1404000,897,https://next.obudget.org/i/org/company/510802325
+sec-37,"טלדור מערכות מחשבים (1986) בע""מ",,1,1199999.97,0,
+sec-37,עזריאל אבישג,,2,1185518.88,0,
+sec-37,סוכנות היהודית,law_mandated_organization,2,1084270,0,https://next.obudget.org/i/org/law_mandated_organization/500500046
+sec-37,אלדן הפקות - ארועים וקד״מ בע״מ,company,1,971667.91,0,https://next.obudget.org/i/org/company/513871905
+sec-37,PRIORITY EXHIBITIONS LTD,,3,815844,581152.2,
 economy,בנק לאומי לישראל בעמ,company,1,135040201,123957680,https://next.obudget.org/i/org/company/520018078
 economy,בנק הפועלים בע״מ,company,1,114917357,103179050,https://next.obudget.org/i/org/company/520000118
 economy,אתנה מעוף  בע״מ,company,2,104476035.37,63501013.21,https://next.obudget.org/i/org/company/516228442
@@ -74,3 +370,92 @@ economy,חושן אס אמ בי שותפות מוגבלת,partnership,1,26000000
 economy,מכון התקנים הישראלי,law_mandated_organization,11,23520051.34,3178404.81,https://next.obudget.org/i/org/law_mandated_organization/500500137
 economy,מכון המזון הלאומי  בע״מ,company,1,20112996.15,0,https://next.obudget.org/i/org/company/516697802
 economy,בידיאו מנהלות  בע״מ,company,1,16121722.5,0,https://next.obudget.org/i/org/company/516991346
+sec-39,ווי-דו איט בע״מ,company,5,8677820.45,6225535.58,https://next.obudget.org/i/org/company/513950204
+sec-39,היולט-פקרד (ישראל) בע״מ,company,5,4543756.69,4243906.72,https://next.obudget.org/i/org/company/511009342
+sec-39,לוג-און תוכנה בע״מ,company,3,4458730.91,3325500.54,https://next.obudget.org/i/org/company/510979511
+sec-39,רודה ושוורץ ישראל  בע״מ,company,2,3976259.22,5998.95,https://next.obudget.org/i/org/company/515905016
+sec-39,אינפוסייט בע״מ,company,6,3647974.38,2273840.93,https://next.obudget.org/i/org/company/513487967
+sec-39,מלם מערכות בע״מ,company,5,3428151.48,2897549.24,https://next.obudget.org/i/org/company/520044041
+sec-39,מודיעין אזרחי בעמ,company,1,3331182.39,3174042.23,https://next.obudget.org/i/org/company/510421027
+sec-39,מגדל שלום מאיר בעמ,company,7,3131027.9,2072144.32,https://next.obudget.org/i/org/company/520027269
+sec-39,קלין אין - ניהול ואחזקת מבנים בע״מ,company,2,2958689.12,2931049.42,https://next.obudget.org/i/org/company/514521699
+sec-39,גילת טלקום בע״מ,company,3,2662459.38,2592376.52,https://next.obudget.org/i/org/company/511784498
+sec-39,מ.מ. בית הרכב בע״מ,company,1,2516407.57,1780829.33,https://next.obudget.org/i/org/company/513353490
+sec-39,בריטמן אלמגור זוהר,,1,2448135.53,1912035.41,
+sec-39,עדן - חברה לפיתוח כלכלי בירושלים  בע״מ,company,2,2039353.29,1798503.37,https://next.obudget.org/i/org/company/513036137
+sec-39,דור טכנולוגיות מידע בע״מ,company,4,1971081.02,952553.96,https://next.obudget.org/i/org/company/513508226
+sec-39,עירית ירושלים,municipality,2,1716764.58,1654347.2,https://next.obudget.org/i/org/municipality/500230008
+transport,אניה-ד״ר ו. ריזה ובנו בע״מ,company,1,20518819.4,0,https://next.obudget.org/i/org/company/510051436
+transport,עירית ירושלים,municipality,7,17451377.45,42698.75,https://next.obudget.org/i/org/municipality/500230008
+transport,GOOGLE CLOUD EMEA LIMITED,,4,16428887.21,0,
+transport,נס אי.אס  בע״מ,company,2,15624918.2,0,https://next.obudget.org/i/org/company/515482198
+transport,אלייד - ג'נרי 2  בע״מ,company,26,15220727.77,70960.54,https://next.obudget.org/i/org/company/514961853
+transport,מודיעין אזרחי בעמ,company,1,10600005.31,1313321.06,https://next.obudget.org/i/org/company/510421027
+transport,י ב מ ישראל בע״מ,company,2,10182156.54,0,https://next.obudget.org/i/org/company/510067333
+transport,נס א.ט.  בע״מ,company,16,9341996.69,85984.43,https://next.obudget.org/i/org/company/520040122
+transport,אלעד מערכות תוכנה בע״מ,company,5,5899335.14,0,https://next.obudget.org/i/org/company/510929177
+transport,הראל טכנולוגיות מידע בע״מ,company,47,5657659.35,1280757.38,https://next.obudget.org/i/org/company/511401002
+transport,בזק החברה הישראלית לתקשורת   בע״מ,company,6,5059061.89,316872.69,https://next.obudget.org/i/org/company/520031931
+transport,קונסיסט מערכות בע״מ,company,10,4896284.29,219620.54,https://next.obudget.org/i/org/company/511277261
+transport,עירית תל-אביב-יפו,municipality,5,4797887.59,3344462.9,https://next.obudget.org/i/org/municipality/500250006
+transport,פז קמעונאות ואנרגיה  בע״מ,company,3,4214021.52,547550.87,https://next.obudget.org/i/org/company/510216054
+transport,יו-ביטק סולושנס בע״מ,company,4,4193958.22,1166720.22,https://next.obudget.org/i/org/company/514008333
+sec-42,אם גרופ בע״מ,company,2,40472708.45,0,https://next.obudget.org/i/org/company/511464927
+sec-42,מילגם בע״מ,company,2,36547341.79,0,https://next.obudget.org/i/org/company/510982325
+sec-42,מעוף משאבי אנוש (מקבוצת מעוף) בע״מ,company,1,23111695.42,0,https://next.obudget.org/i/org/company/512777368
+sec-42,בנק לאומי לישראל בעמ,company,23,15820900,280800,https://next.obudget.org/i/org/company/520018078
+sec-42,"עמידר, החברה הלאומית לשיכון בישראל  בע״מ",company,2,12611841.79,0,https://next.obudget.org/i/org/company/520017393
+sec-42,בנק מזרחי טפחות בעמ,company,2,10230000,0,https://next.obudget.org/i/org/company/520000522
+sec-42,בנק הפועלים בע״מ,company,3,6630800,0,https://next.obudget.org/i/org/company/520000118
+sec-42,בנק דיסקונט לישראל בעמ,company,2,3010000,0,https://next.obudget.org/i/org/company/520007030
+sec-42,הבנק הבינלאומי הראשון לישראל בעמ,company,2,2200000,0,https://next.obudget.org/i/org/company/520029083
+sec-42,בנק ירושלים בע״מ,company,2,1220000,0,https://next.obudget.org/i/org/company/520025636
+sec-42,עמי גור ניהול נכסים בעמ,company,1,1122495,231000,https://next.obudget.org/i/org/company/510531874
+sec-42,בנק מרכנתיל דיסקונט בעמ,company,2,805000,0,https://next.obudget.org/i/org/company/520029281
+sec-42,חברת דואר ישראל בע״מ,company,2,664207.83,354683.6,https://next.obudget.org/i/org/company/513467191
+sec-42,מרכז סליקה בנקאי בע״מ,company,1,819,0,https://next.obudget.org/i/org/company/520033960
+sec-43,וואן פתרונות טכנולוגיים בע״מ,company,13,12071620.67,8035490.49,https://next.obudget.org/i/org/company/520039710
+sec-43,מטריקס אי. טי. מערכות מידע מתקדמות בע״מ,company,12,7602844.18,2659791.83,https://next.obudget.org/i/org/company/511171662
+sec-43,אופק צילומי אויר (1987) בע״מ,company,9,6830310.68,1474751.58,https://next.obudget.org/i/org/company/511173163
+sec-43,חץ הצפון מיפוי והנדסה בע״מ,company,10,6586495.34,4622117.33,https://next.obudget.org/i/org/company/513627034
+sec-43,טלדור יועצים בע״מ,company,6,5994882.63,2955609.56,https://next.obudget.org/i/org/company/511350613
+sec-43,אס. קיו. לינק בע״מ,company,7,5704214.22,2922562.03,https://next.obudget.org/i/org/company/512042045
+sec-43,ווביקס (וואי. או.) בע״מ,company,2,5559660.98,1893447.8,https://next.obudget.org/i/org/company/515302958
+sec-43,אלעד מערכות תוכנה בע״מ,company,3,4551928.65,0,https://next.obudget.org/i/org/company/510929177
+sec-43,קלורן בע״מ,company,2,3652020.99,1580850.4,https://next.obudget.org/i/org/company/515501609
+sec-43,סיון תכנון ד.ש. בע״מ,company,1,3051352.23,859970.41,https://next.obudget.org/i/org/company/512380338
+sec-43,קורל - תל בע״מ,company,3,3005215.2,1510125.02,https://next.obudget.org/i/org/company/512676289
+sec-43,סיסטמטיקס טכנולוגיות ר.ג. בע״מ,company,9,2786364.77,2714848.22,https://next.obudget.org/i/org/company/511257305
+sec-43,פרולוג'יק בע״מ,company,5,2578742.01,998537.63,https://next.obudget.org/i/org/company/513977827
+sec-43,סימפלקס פתרונות מיפוי שב בע״מ,company,3,2495821.47,0,https://next.obudget.org/i/org/company/514920271
+sec-43,לוג-און תוכנה בע״מ,company,4,2370358.38,250472.16,https://next.obudget.org/i/org/company/510979511
+sec-54,רשות הגנים הלאומיים ושמורות הטבע,law_mandated_organization,21,1368048255,669450431,https://next.obudget.org/i/org/law_mandated_organization/500500285
+sec-54,רתם גז טבעי בע״מ,company,4,231999998.76,545561.64,https://next.obudget.org/i/org/company/515254118
+sec-54,עמק איילון ניהול תשתית ופרוייקטים בע״מ,company,5,145888697.32,17097428.91,https://next.obudget.org/i/org/company/511925109
+sec-54,אאורה מחדשים את ישראל בע״מ,company,5,115571236.86,0,https://next.obudget.org/i/org/company/512836206
+sec-54,"עמידר, החברה הלאומית לשיכון בישראל  בע״מ",company,10,112887669.97,0,https://next.obudget.org/i/org/company/520017393
+sec-54,מטרופוליס (פ.א.א) 2011 יזמות אורבנית בע״מ,company,2,79999998.79,0,https://next.obudget.org/i/org/company/514614841
+sec-54,י.ח. דמרי בניה ופיתוח בע״מ,company,3,73047580,0,https://next.obudget.org/i/org/company/511399388
+sec-54,החברה הממשלתית לתיירות,company,1,63850867,0,https://next.obudget.org/i/org/company/510141146
+sec-54,"כוכבי המדבר (ע""ר)",association,9,58465658.9,0,https://next.obudget.org/i/org/association/580569275
+sec-54,"האגודה לתרבות הדיור (ע""ר)",association,2,55929026.01,2780958.24,https://next.obudget.org/i/org/association/580016087
+sec-54,סופר אנ.ג'י. חברה לחלוקת גז טבעי בע״מ,company,4,55506801.84,0,https://next.obudget.org/i/org/company/514127588
+sec-54,יהל מהנדסים - ייזום פרוייקטים בע״מ,company,6,52000398.4,9583648.59,https://next.obudget.org/i/org/company/511776247
+sec-54,קרן קיימת לישראל,association,1,51205174.02,0,https://next.obudget.org/i/org/association/520020314
+sec-54,אדם מזור - אלי פירשט אדריכלים ומתכנני ערים,partnership,25,41467422.44,5963769.3,https://next.obudget.org/i/org/partnership/540265816
+sec-54,רוטשטיין נדל״ן  בע״מ,company,1,40810000,0,https://next.obudget.org/i/org/company/520039959
+sec-68,י ב מ ישראל בע״מ,company,50,528088604.19,8710710.16,https://next.obudget.org/i/org/company/510067333
+sec-68,אלביט מערכות תקשוב וסייבר  בע״מ,company,20,142611765.15,11213064.06,https://next.obudget.org/i/org/company/514046283
+sec-68,ע.מי.ש.ב. שרותים בע״מ,company,17,37571734.98,9864329.74,https://next.obudget.org/i/org/company/510802325
+sec-68,חברת דואר ישראל בע״מ,company,15,35180987.81,9962761.76,https://next.obudget.org/i/org/company/513467191
+sec-68,מודיעין אזרחי בעמ,company,16,31292965.15,9595603.04,https://next.obudget.org/i/org/company/510421027
+sec-68,אלעד מערכות תוכנה בע״מ,company,5,17414759.7,1746035.88,https://next.obudget.org/i/org/company/510929177
+sec-68,משרד האוצר/סוכנות נסיעות ממשלתית,government_office,5,17085000,41290.73,https://next.obudget.org/i/org/government_office/500107321
+sec-68,טלדור יועצים בע״מ,company,9,16548310.35,2201714.71,https://next.obudget.org/i/org/company/511350613
+sec-68,המריץ שליחויות את פלאש לוגיסטיקה,partnership,2,15569999.21,0,https://next.obudget.org/i/org/partnership/540231644
+sec-68,תים נטקום בע״מ,company,5,12942621.9,73711.9,https://next.obudget.org/i/org/company/511489429
+sec-68,אס. קיו. לינק בע״מ,company,7,8381942.01,1588542.82,https://next.obudget.org/i/org/company/512042045
+sec-68,עירית ירושלים,municipality,4,7827292,0,https://next.obudget.org/i/org/municipality/500230008
+sec-68,מלם מערכות בע״מ,company,10,7185636.9,606505.95,https://next.obudget.org/i/org/company/520044041
+sec-68,א.מ.ן מחשבים בעמ,company,4,7148615.76,1154514.47,https://next.obudget.org/i/org/company/510626070
+sec-68,יו-ביטק סולושנס בע״מ,company,7,6830929.15,2713162.68,https://next.obudget.org/i/org/company/514008333

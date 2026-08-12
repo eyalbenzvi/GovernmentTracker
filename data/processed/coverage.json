@@ -1,10 +1,10 @@
 [
   {
-    "ministryId": "transport",
+    "ministryId": "sec-1",
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
-    "sourcesDefined": 5,
-    "sourcesSuccessfullyCollected": 3,
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
     "budgetYearsAvailable": [
       2023,
@@ -12,18 +12,312 @@
       2025,
       2026
     ],
-    "budgetRecordCount": 76,
+    "budgetRecordCount": 28,
     "limitations": [
       "לא נאספו פריטי פעילות פומבית עבור משרד זה."
     ]
+  },
+  {
+    "ministryId": "sec-2",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 96,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-4",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 400,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 181,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-5",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 200,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 72,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-6",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 50,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 56,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-7",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 159,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 88,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-8",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 104,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-9",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 1,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 32,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-10",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 20,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-11",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 108,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-12",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 48,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-13",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 60,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-14",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 50,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-15",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 51,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-16",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 48,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-17",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 84,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-18",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 40,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-19",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 55,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 68,
+    "limitations": []
   },
   {
     "ministryId": "education",
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
     "sourcesDefined": 5,
-    "sourcesSuccessfullyCollected": 1,
-    "activityItemCount": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 1,
     "budgetYearsAvailable": [
       2023,
       2024,
@@ -32,15 +326,15 @@
     ],
     "budgetRecordCount": 137,
     "limitations": [
-      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+      "5 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
   },
   {
-    "ministryId": "health",
+    "ministryId": "sec-21",
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
-    "sourcesDefined": 6,
-    "sourcesSuccessfullyCollected": 1,
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
     "budgetYearsAvailable": [
       2023,
@@ -48,7 +342,75 @@
       2025,
       2026
     ],
+    "budgetRecordCount": 16,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-22",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 15,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 52,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-23",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 63,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 118,
+    "limitations": []
+  },
+  {
+    "ministryId": "health",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 6,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 199,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
     "budgetRecordCount": 123,
+    "limitations": [
+      "6 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  },
+  {
+    "ministryId": "sec-25",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 44,
     "limitations": [
       "לא נאספו פריטי פעילות פומבית עבור משרד זה."
     ]
@@ -58,8 +420,8 @@
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
     "sourcesDefined": 2,
-    "sourcesSuccessfullyCollected": 1,
-    "activityItemCount": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 81,
     "budgetYearsAvailable": [
       2023,
       2024,
@@ -68,14 +430,14 @@
     ],
     "budgetRecordCount": 64,
     "limitations": [
-      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+      "2 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
   },
   {
-    "ministryId": "economy",
+    "ministryId": "sec-27",
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
-    "sourcesDefined": 1,
+    "sourcesDefined": 0,
     "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
     "budgetYearsAvailable": [
@@ -84,10 +446,297 @@
       2025,
       2026
     ],
+    "budgetRecordCount": 37,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-29",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 73,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 32,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-30",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 60,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-31",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 12,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-33",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 118,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 56,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-34",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 200,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 50,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-35",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 12,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-36",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 36,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 100,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-37",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 39,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 52,
+    "limitations": []
+  },
+  {
+    "ministryId": "economy",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 1,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 92,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
     "budgetRecordCount": 64,
     "limitations": [
-      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
       "1 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
+  },
+  {
+    "ministryId": "sec-39",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 200,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 32,
+    "limitations": []
+  },
+  {
+    "ministryId": "transport",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 5,
+    "sourcesSuccessfullyCollected": 1,
+    "activityItemCount": 200,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 76,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-41",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 28,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-42",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 44,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-43",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 4,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 40,
+    "limitations": []
+  },
+  {
+    "ministryId": "sec-46",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 32,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-54",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 158,
+    "limitations": [
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
+    ]
+  },
+  {
+    "ministryId": "sec-68",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 0,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 200,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 52,
+    "limitations": []
   }
 ]

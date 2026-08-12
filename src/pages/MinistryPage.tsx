@@ -606,6 +606,7 @@ function ActivitySection({
   const [topicId, setTopicId] = useState<string>(ALL);
   const [entity, setEntity] = useState<string>(ALL);
   const [query, setQuery] = useState('');
+  const [visible, setVisible] = useState(30);
 
   const entities = uniqueSorted(activities.flatMap((a) => [...a.people, ...a.organizations]));
   const sourceTypes = uniqueSorted(activities.map((a) => a.sourceType));
@@ -714,7 +715,7 @@ function ActivitySection({
           </Card>
 
           <ol className="space-y-3">
-            {filtered.map((activity) => (
+            {filtered.slice(0, visible).map((activity) => (
               <li key={activity.id}>
                 <Card>
                   <div className="flex flex-wrap items-start justify-between gap-3">
@@ -745,6 +746,13 @@ function ActivitySection({
               title="אין פריטים התואמים את הסינון"
               reason="נסו להרחיב את טווח השנים או לאפס את הסינון."
             />
+          )}
+          {filtered.length > visible && (
+            <div className="mt-3 text-center">
+              <button type="button" className="btn" onClick={() => setVisible((v) => v + 30)}>
+                הצג עוד 30 מתוך {formatNumber(filtered.length - visible)} הנותרים
+              </button>
+            </div>
           )}
         </>
       )}

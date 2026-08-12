@@ -1,33 +1,400 @@
 [
   {
-    "id": "transport",
-    "officialName": "משרד התחבורה והבטיחות בדרכים",
-    "displayName": "משרד התחבורה",
+    "id": "sec-1",
+    "officialName": "נשיא המדינה ולשכתו",
+    "displayName": "נשיא המדינה ולשכתו",
+    "sectionKind": "other",
     "aliases": [
-      "משרד התחבורה",
-      "תחבורה",
-      "משרד התחבורה והבטיחות בדרכים"
+      "נשיא המדינה ולשכתו"
     ],
-    "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "description": "סעיף התקציב הרגיל \"נשיא המדינה ולשכתו\" (סעיף 0001). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
     "activeFrom": null,
     "activeTo": null,
     "governmentPeriod": "הממשלה ה-37",
     "budgetCodes": [
-      "0040"
+      "0001"
     ],
-    "budgetBookVolume": "Budget24-Transportation",
-    "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
-    "nameEvidenceTitle": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
-    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0040/2025",
-    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 76 רשומות תקציב · 0 פריטי פעילות"
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0001/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0001 במפתח התקציב: \"נשיא המדינה ולשכתו\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0001/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 28 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-2",
+    "officialName": "הכנסת",
+    "displayName": "הכנסת",
+    "sectionKind": "other",
+    "aliases": [
+      "הכנסת"
+    ],
+    "description": "סעיף התקציב הרגיל \"הכנסת\" (סעיף 0002). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0002"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0002/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0002 במפתח התקציב: \"הכנסת\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0002/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 96 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-4",
+    "officialName": "משרד ראש הממשלה",
+    "displayName": "משרד ראש הממשלה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד ראש הממשלה",
+      "נציבות שירות המדינה"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד ראש הממשלה\" (סעיף 0004). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0004"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0004/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0004 במפתח התקציב: \"משרד ראש הממשלה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0004/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 181 רשומות תקציב · 400 פריטי פעילות"
+  },
+  {
+    "id": "sec-5",
+    "officialName": "משרד האוצר",
+    "displayName": "משרד האוצר",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד האוצר",
+      "רשות המסים בישראל",
+      "רשות שוק ההון, ביטוח וחיסכון"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד האוצר\" (סעיף 0005). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0005"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0005/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0005 במפתח התקציב: \"משרד האוצר\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0005/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 72 רשומות תקציב · 200 פריטי פעילות"
+  },
+  {
+    "id": "sec-6",
+    "officialName": "משרד הפנים",
+    "displayName": "משרד הפנים",
+    "sectionKind": "ministry",
+    "aliases": [
+      "מינהל התכנון",
+      "משרד הפנים"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד הפנים\" (סעיף 0006). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0006"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0006/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0006 במפתח התקציב: \"משרד הפנים\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0006/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 56 רשומות תקציב · 50 פריטי פעילות"
+  },
+  {
+    "id": "sec-7",
+    "officialName": "המשרד לביטחון לאומי",
+    "displayName": "המשרד לביטחון לאומי",
+    "sectionKind": "ministry",
+    "aliases": [
+      "המשרד לביטחון לאומי",
+      "כבאות והצלה לישראל",
+      "משטרת ישראל",
+      "שירות בתי הסוהר"
+    ],
+    "description": "סעיף התקציב הרגיל \"המשרד לביטחון לאומי\" (סעיף 0007). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0007"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0007/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0007 במפתח התקציב: \"המשרד לביטחון לאומי\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0007/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 88 רשומות תקציב · 159 פריטי פעילות"
+  },
+  {
+    "id": "sec-8",
+    "officialName": "משרד המשפטים",
+    "displayName": "משרד המשפטים",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד המשפטים"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד המשפטים\" (סעיף 0008). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0008"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0008/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0008 במפתח התקציב: \"משרד המשפטים\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0008/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 104 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-9",
+    "officialName": "משרד החוץ",
+    "displayName": "משרד החוץ",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד החוץ"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד החוץ\" (סעיף 0009). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0009"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0009/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0009 במפתח התקציב: \"משרד החוץ\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0009/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 32 רשומות תקציב · 1 פריטי פעילות"
+  },
+  {
+    "id": "sec-10",
+    "officialName": "מטה לביטחון לאומי",
+    "displayName": "מטה לביטחון לאומי",
+    "sectionKind": "other",
+    "aliases": [
+      "מטה לביטחון לאומי"
+    ],
+    "description": "סעיף התקציב הרגיל \"מטה לביטחון לאומי\" (סעיף 0010). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0010"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0010/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0010 במפתח התקציב: \"מטה לביטחון לאומי\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0010/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 20 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-11",
+    "officialName": "מבקר המדינה",
+    "displayName": "מבקר המדינה",
+    "sectionKind": "other",
+    "aliases": [
+      "מבקר המדינה"
+    ],
+    "description": "סעיף התקציב הרגיל \"מבקר המדינה\" (סעיף 0011). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0011"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0011/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0011 במפתח התקציב: \"מבקר המדינה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0011/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 108 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-12",
+    "officialName": "גמלאות ופיצויים",
+    "displayName": "גמלאות ופיצויים",
+    "sectionKind": "other",
+    "aliases": [
+      "גמלאות ופיצויים"
+    ],
+    "description": "סעיף התקציב הרגיל \"גמלאות ופיצויים\" (סעיף 0012). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0012"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0012/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0012 במפתח התקציב: \"גמלאות ופיצויים\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0012/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 48 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-13",
+    "officialName": "הוצאות שונות",
+    "displayName": "הוצאות שונות",
+    "sectionKind": "other",
+    "aliases": [
+      "הוצאות שונות"
+    ],
+    "description": "סעיף התקציב הרגיל \"הוצאות שונות\" (סעיף 0013). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0013"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0013/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0013 במפתח התקציב: \"הוצאות שונות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0013/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 60 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-14",
+    "officialName": "בחירות ומימון מפלגות",
+    "displayName": "בחירות ומימון מפלגות",
+    "sectionKind": "other",
+    "aliases": [
+      "בחירות ומימון מפלגות"
+    ],
+    "description": "סעיף התקציב הרגיל \"בחירות ומימון מפלגות\" (סעיף 0014). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0014"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0014/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0014 במפתח התקציב: \"בחירות ומימון מפלגות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0014/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 50 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-15",
+    "officialName": "משרד הביטחון",
+    "displayName": "משרד הביטחון",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד הביטחון"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד הביטחון\" (סעיף 0015). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0015"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0015/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0015 במפתח התקציב: \"משרד הביטחון\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0015/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 51 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-16",
+    "officialName": "הוצאות חירום אזרחיות",
+    "displayName": "הוצאות חירום אזרחיות",
+    "sectionKind": "other",
+    "aliases": [
+      "הוצאות חירום אזרחיות"
+    ],
+    "description": "סעיף התקציב הרגיל \"הוצאות חירום אזרחיות\" (סעיף 0016). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0016"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0016/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0016 במפתח התקציב: \"הוצאות חירום אזרחיות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0016/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 48 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-17",
+    "officialName": "תאום הפעולות בשטחים",
+    "displayName": "תאום הפעולות בשטחים",
+    "sectionKind": "other",
+    "aliases": [
+      "תאום הפעולות בשטחים"
+    ],
+    "description": "סעיף התקציב הרגיל \"תאום הפעולות בשטחים\" (סעיף 0017). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0017"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0017/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0017 במפתח התקציב: \"תאום הפעולות בשטחים\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0017/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 84 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-18",
+    "officialName": "הרשויות המקומיות",
+    "displayName": "הרשויות המקומיות",
+    "sectionKind": "other",
+    "aliases": [
+      "הרשויות המקומיות"
+    ],
+    "description": "סעיף התקציב הרגיל \"הרשויות המקומיות\" (סעיף 0018). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0018"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0018/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0018 במפתח התקציב: \"הרשויות המקומיות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0018/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 40 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-19",
+    "officialName": "מדע, תרבות וספורט",
+    "displayName": "מדע, תרבות וספורט",
+    "sectionKind": "ministry",
+    "aliases": [
+      "מדע, תרבות וספורט",
+      "משרד המדע",
+      "משרד המדע והטכנולוגיה",
+      "משרד התרבות והספורט"
+    ],
+    "description": "סעיף התקציב הרגיל \"מדע, תרבות וספורט\" (סעיף 0019). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0019"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0019/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0019 במפתח התקציב: \"מדע, תרבות וספורט\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0019/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 68 רשומות תקציב · 55 פריטי פעילות"
   },
   {
     "id": "education",
     "officialName": "משרד החינוך",
     "displayName": "משרד החינוך",
+    "sectionKind": "ministry",
     "aliases": [
-      "משרד החינוך",
-      "חינוך"
+      "חינוך",
+      "משרד החינוך"
     ],
     "description": "משרד האחראי על מערכת החינוך הציבורית בישראל. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
     "activeFrom": null,
@@ -40,15 +407,80 @@
     "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
     "nameEvidenceTitle": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
     "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0020/2025",
-    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 137 רשומות תקציב · 0 פריטי פעילות"
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 137 רשומות תקציב · 1 פריטי פעילות"
+  },
+  {
+    "id": "sec-21",
+    "officialName": "ההשכלה הגבוהה",
+    "displayName": "ההשכלה הגבוהה",
+    "sectionKind": "other",
+    "aliases": [
+      "ההשכלה הגבוהה"
+    ],
+    "description": "סעיף התקציב הרגיל \"ההשכלה הגבוהה\" (סעיף 0021). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0021"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0021/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0021 במפתח התקציב: \"ההשכלה הגבוהה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0021/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 16 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-22",
+    "officialName": "המשרד לשירותי דת",
+    "displayName": "המשרד לשירותי דת",
+    "sectionKind": "ministry",
+    "aliases": [
+      "המשרד לשירותי דת"
+    ],
+    "description": "סעיף התקציב הרגיל \"המשרד לשירותי דת\" (סעיף 0022). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0022"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0022/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0022 במפתח התקציב: \"המשרד לשירותי דת\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0022/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 52 רשומות תקציב · 15 פריטי פעילות"
+  },
+  {
+    "id": "sec-23",
+    "officialName": "משרד הרווחה",
+    "displayName": "משרד הרווחה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד הרווחה",
+      "משרד הרווחה והביטחון החברתי"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד הרווחה\" (סעיף 0023). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0023"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0023/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0023 במפתח התקציב: \"משרד הרווחה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0023/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 118 רשומות תקציב · 63 פריטי פעילות"
   },
   {
     "id": "health",
     "officialName": "משרד הבריאות",
     "displayName": "משרד הבריאות",
+    "sectionKind": "ministry",
     "aliases": [
-      "משרד הבריאות",
-      "בריאות"
+      "בריאות",
+      "משרד הבריאות"
     ],
     "description": "משרד האחראי על מערכת הבריאות, רגולציה רפואית ובריאות הציבור. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
     "activeFrom": null,
@@ -61,16 +493,38 @@
     "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
     "nameEvidenceTitle": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
     "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0024/2025",
-    "dataCoverageSummary": "6 מקורות רשמיים מקוטלגים · 123 רשומות תקציב · 0 פריטי פעילות"
+    "dataCoverageSummary": "6 מקורות רשמיים מקוטלגים · 123 רשומות תקציב · 199 פריטי פעילות"
+  },
+  {
+    "id": "sec-25",
+    "officialName": "הרשות לניצולי השואה",
+    "displayName": "הרשות לניצולי השואה",
+    "sectionKind": "other",
+    "aliases": [
+      "הרשות לניצולי השואה"
+    ],
+    "description": "סעיף התקציב הרגיל \"הרשות לניצולי השואה\" (סעיף 0025). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0025"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0025/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0025 במפתח התקציב: \"הרשות לניצולי השואה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0025/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 44 רשומות תקציב · 0 פריטי פעילות"
   },
   {
     "id": "environment",
     "officialName": "המשרד להגנת הסביבה",
     "displayName": "הגנת הסביבה",
+    "sectionKind": "ministry",
     "aliases": [
-      "המשרד להגנת הסביבה",
+      "איכות הסביבה",
       "הגנת הסביבה",
-      "איכות הסביבה"
+      "המשרד להגנת הסביבה"
     ],
     "description": "משרד האחראי על רגולציה סביבתית, איכות אוויר, פסולת ושמירת טבע. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
     "activeFrom": null,
@@ -83,16 +537,212 @@
     "nameEvidenceUrl": "https://next.obudget.org/i/budget/0026/2025",
     "nameEvidenceTitle": "כותרת סעיף התקציב 0026 היא \"המשרד להגנת הסביבה\" — התאמה מדויקת לשם הרשמי. בנוסף: שם קובץ ספר התקציב הרשמי באתר הכנסת, Budget9-Environment.pdf.",
     "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0026/2025",
-    "dataCoverageSummary": "2 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 0 פריטי פעילות"
+    "dataCoverageSummary": "2 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 81 פריטי פעילות"
+  },
+  {
+    "id": "sec-27",
+    "officialName": "הקצבות לביטוח לאומי",
+    "displayName": "הקצבות לביטוח לאומי",
+    "sectionKind": "other",
+    "aliases": [
+      "הקצבות לביטוח לאומי"
+    ],
+    "description": "סעיף התקציב הרגיל \"הקצבות לביטוח לאומי\" (סעיף 0027). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0027"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0027/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0027 במפתח התקציב: \"הקצבות לביטוח לאומי\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0027/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 37 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-29",
+    "officialName": "משרד הבינוי והשיכון",
+    "displayName": "משרד הבינוי והשיכון",
+    "sectionKind": "ministry",
+    "aliases": [
+      "הרשות הממשלתית להתחדשות עירונית",
+      "משרד הבינוי והשיכון"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד הבינוי והשיכון\" (סעיף 0029). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0029"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0029/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0029 במפתח התקציב: \"משרד הבינוי והשיכון\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0029/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 32 רשומות תקציב · 73 פריטי פעילות"
+  },
+  {
+    "id": "sec-30",
+    "officialName": "משרד העלייה והקליטה",
+    "displayName": "משרד העלייה והקליטה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד העלייה והקליטה"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד העלייה והקליטה\" (סעיף 0030). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0030"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0030/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0030 במפתח התקציב: \"משרד העלייה והקליטה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0030/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 60 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-31",
+    "officialName": "הוצאות ביטחוניות שונות",
+    "displayName": "הוצאות ביטחוניות שונות",
+    "sectionKind": "other",
+    "aliases": [
+      "הוצאות ביטחוניות שונות"
+    ],
+    "description": "סעיף התקציב הרגיל \"הוצאות ביטחוניות שונות\" (סעיף 0031). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0031"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0031/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0031 במפתח התקציב: \"הוצאות ביטחוניות שונות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0031/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 12 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-33",
+    "officialName": "משרד החקלאות",
+    "displayName": "משרד החקלאות",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד החקלאות",
+      "משרד החקלאות וביטחון המזון"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד החקלאות\" (סעיף 0033). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0033"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0033/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0033 במפתח התקציב: \"משרד החקלאות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0033/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 56 רשומות תקציב · 118 פריטי פעילות"
+  },
+  {
+    "id": "sec-34",
+    "officialName": "משרד האנרגיה",
+    "displayName": "משרד האנרגיה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד האנרגיה",
+      "משרד האנרגיה והתשתיות",
+      "רשות החשמל"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד האנרגיה\" (סעיף 0034). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0034"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0034/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0034 במפתח התקציב: \"משרד האנרגיה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0034/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 50 רשומות תקציב · 200 פריטי פעילות"
+  },
+  {
+    "id": "sec-35",
+    "officialName": "הועדה לאנרגיה אטומית",
+    "displayName": "הועדה לאנרגיה אטומית",
+    "sectionKind": "other",
+    "aliases": [
+      "הועדה לאנרגיה אטומית"
+    ],
+    "description": "סעיף התקציב הרגיל \"הועדה לאנרגיה אטומית\" (סעיף 0035). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0035"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0035/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0035 במפתח התקציב: \"הועדה לאנרגיה אטומית\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0035/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 12 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-36",
+    "officialName": "תעסוקה",
+    "displayName": "תעסוקה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "זרוע העבודה",
+      "משרד העבודה",
+      "תעסוקה"
+    ],
+    "description": "סעיף התקציב הרגיל \"תעסוקה\" (סעיף 0036). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0036"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0036/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0036 במפתח התקציב: \"תעסוקה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0036/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 100 רשומות תקציב · 36 פריטי פעילות"
+  },
+  {
+    "id": "sec-37",
+    "officialName": "משרד התיירות",
+    "displayName": "משרד התיירות",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד התיירות"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד התיירות\" (סעיף 0037). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0037"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0037/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0037 במפתח התקציב: \"משרד התיירות\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0037/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 52 רשומות תקציב · 39 פריטי פעילות"
   },
   {
     "id": "economy",
     "officialName": "משרד הכלכלה והתעשייה",
     "displayName": "משרד הכלכלה",
+    "sectionKind": "ministry",
     "aliases": [
-      "משרד הכלכלה והתעשייה",
+      "כלכלה ותעשייה",
       "משרד הכלכלה",
-      "כלכלה ותעשייה"
+      "משרד הכלכלה והתעשייה"
     ],
     "description": "משרד האחראי על תעשייה, מסחר, תעסוקה ורגולציה כלכלית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
     "activeFrom": null,
@@ -105,6 +755,179 @@
     "nameEvidenceUrl": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
     "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf. בנוסף: כותרת סעיף התקציב 0038 היא \"כלכלה ותעשייה\".",
     "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0038/2025",
-    "dataCoverageSummary": "1 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 0 פריטי פעילות"
+    "dataCoverageSummary": "1 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 92 פריטי פעילות"
+  },
+  {
+    "id": "sec-39",
+    "officialName": "משרד התקשורת",
+    "displayName": "משרד התקשורת",
+    "sectionKind": "ministry",
+    "aliases": [
+      "משרד התקשורת"
+    ],
+    "description": "סעיף התקציב הרגיל \"משרד התקשורת\" (סעיף 0039). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0039"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0039/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0039 במפתח התקציב: \"משרד התקשורת\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0039/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 32 רשומות תקציב · 200 פריטי פעילות"
+  },
+  {
+    "id": "transport",
+    "officialName": "משרד התחבורה והבטיחות בדרכים",
+    "displayName": "משרד התחבורה",
+    "sectionKind": "ministry",
+    "aliases": [
+      "הרשות הארצית לתחבורה ציבורית",
+      "משרד התחבורה",
+      "משרד התחבורה והבטיחות בדרכים",
+      "רשות הספנות והנמלים",
+      "תחבורה"
+    ],
+    "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0040"
+    ],
+    "budgetBookVolume": "Budget24-Transportation",
+    "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+    "nameEvidenceTitle": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0040/2025",
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 76 רשומות תקציב · 200 פריטי פעילות"
+  },
+  {
+    "id": "sec-41",
+    "officialName": "רשות ממשלתית למים וביוב",
+    "displayName": "רשות ממשלתית למים וביוב",
+    "sectionKind": "other",
+    "aliases": [
+      "רשות ממשלתית למים וביוב"
+    ],
+    "description": "סעיף התקציב הרגיל \"רשות ממשלתית למים וביוב\" (סעיף 0041). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0041"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0041/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0041 במפתח התקציב: \"רשות ממשלתית למים וביוב\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0041/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 28 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-42",
+    "officialName": "מענקי בינוי ושיכון",
+    "displayName": "מענקי בינוי ושיכון",
+    "sectionKind": "other",
+    "aliases": [
+      "מענקי בינוי ושיכון"
+    ],
+    "description": "סעיף התקציב הרגיל \"מענקי בינוי ושיכון\" (סעיף 0042). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0042"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0042/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0042 במפתח התקציב: \"מענקי בינוי ושיכון\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0042/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 44 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-43",
+    "officialName": "המרכז למיפוי ישראל",
+    "displayName": "המרכז למיפוי ישראל",
+    "sectionKind": "other",
+    "aliases": [
+      "המרכז למיפוי ישראל"
+    ],
+    "description": "סעיף התקציב הרגיל \"המרכז למיפוי ישראל\" (סעיף 0043). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0043"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0043/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0043 במפתח התקציב: \"המרכז למיפוי ישראל\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0043/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 40 רשומות תקציב · 4 פריטי פעילות"
+  },
+  {
+    "id": "sec-46",
+    "officialName": "חוק חיילים משוחררים",
+    "displayName": "חוק חיילים משוחררים",
+    "sectionKind": "other",
+    "aliases": [
+      "חוק חיילים משוחררים"
+    ],
+    "description": "סעיף התקציב הרגיל \"חוק חיילים משוחררים\" (סעיף 0046). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0046"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0046/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0046 במפתח התקציב: \"חוק חיילים משוחררים\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0046/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 32 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-54",
+    "officialName": "רשויות פיקוח",
+    "displayName": "רשויות פיקוח",
+    "sectionKind": "other",
+    "aliases": [
+      "רשויות פיקוח"
+    ],
+    "description": "סעיף התקציב הרגיל \"רשויות פיקוח\" (סעיף 0054). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0054"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0054/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0054 במפתח התקציב: \"רשויות פיקוח\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0054/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 158 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "sec-68",
+    "officialName": "רשות האוכלוסין",
+    "displayName": "רשות האוכלוסין",
+    "sectionKind": "other",
+    "aliases": [
+      "רשות האוכלוסין",
+      "רשות האוכלוסין וההגירה"
+    ],
+    "description": "סעיף התקציב הרגיל \"רשות האוכלוסין\" (סעיף 0068). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0068"
+    ],
+    "budgetBookVolume": null,
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0068/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0068 במפתח התקציב: \"רשות האוכלוסין\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0068/2025",
+    "dataCoverageSummary": "0 מקורות רשמיים מקוטלגים · 52 רשומות תקציב · 200 פריטי פעילות"
   }
 ]

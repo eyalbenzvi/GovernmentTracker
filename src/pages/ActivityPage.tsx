@@ -19,6 +19,7 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
   const [topicId, setTopicId] = useState(ALL);
   const [sourceType, setSourceType] = useState(ALL);
   const [query, setQuery] = useState('');
+  const [visible, setVisible] = useState(50);
 
   const topics = dataBackedTopics(data);
   const sourceTypes = uniqueSorted(data.activities.map((a) => a.sourceType));
@@ -147,7 +148,7 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
             />
           ) : (
             <ol className="space-y-3">
-              {filtered.map((activity) => {
+              {filtered.slice(0, visible).map((activity) => {
                 const ministry = data.ministries.find((m) => m.id === activity.ministryId);
                 return (
                   <li key={activity.id}>
@@ -185,6 +186,13 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
                 );
               })}
             </ol>
+          )}
+          {filtered.length > visible && (
+            <div className="text-center">
+              <button type="button" className="btn" onClick={() => setVisible((v) => v + 50)}>
+                הצג עוד 50 מתוך {formatNumber(filtered.length - visible)} הנותרים
+              </button>
+            </div>
           )}
         </>
       )}

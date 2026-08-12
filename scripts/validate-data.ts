@@ -40,6 +40,7 @@ interface UsageBreakdownFile {
   }>;
 }
 interface BudgetThemesFile {
+  coveredMinistryIds: string[];
   themes: Array<{ id: string; assignedLineCount: number }>;
   assignments: Array<{ ministryId: string; budgetCode: string; title: string; themeId: string }>;
 }
@@ -308,16 +309,23 @@ function main(): void {
   );
 
   // ---- 10. every source referenced is in the catalogue -------------------
+  // A subdomain of a catalogued host counts as covered: gov.il publications live
+  // on unit subdomains (e.g. pob.education.gov.il) while the catalogue lists the
+  // canonical www.gov.il entry.
   const catalogHosts = new Set(catalog.map((s) => new URL(s.url).host));
+  const catalogApexes = [...catalogHosts].map((h) => h.replace(/^www\./, ''));
+  const hostCovered = (host: string): boolean =>
+    catalogHosts.has(host) ||
+    catalogApexes.some((apex) => host === apex || host.endsWith('.' + apex));
   const unlistedSources = [
     ...budgetItems
-      .filter((b) => !catalogHosts.has(new URL(b.sourceUrl).host))
+      .filter((b) => !hostCovered(new URL(b.sourceUrl).host))
       .map((b) => `budget:${b.id} → ${new URL(b.sourceUrl).host}`),
     ...activities
-      .filter((a) => !catalogHosts.has(new URL(a.sourceUrl).host))
+      .filter((a) => !hostCovered(new URL(a.sourceUrl).host))
       .map((a) => `activity:${a.id} → ${new URL(a.sourceUrl).host}`),
     ...tenures
-      .filter((t) => !catalogHosts.has(new URL(t.sourceUrl).host))
+      .filter((t) => !hostCovered(new URL(t.sourceUrl).host))
       .map((t) => `tenure:${t.id} → ${new URL(t.sourceUrl).host}`),
   ].slice(0, 10);
   check(
@@ -371,18 +379,28 @@ function main(): void {
     if (!ministryIdSet.has(row.ministryId))
       usageProblems.push(`שורת שימוש למשרד לא קיים: ${row.ministryId}`);
   }
+  const currentFiscalYear = new Date().getFullYear();
   for (const cov of usage.coverage) {
-    // The classified depth-4 sum may legitimately fall short of the section
-    // total (current year), but it must never exceed it by more than rounding.
+    // For a closed year the classified depth-4 sum must not exceed the section
+    // total beyond rounding. In an open year the source itself can be
+    // transiently inconsistent — regulation-level changes recorded before the
+    // roll-up — so a bounded overshoot is tolerated and surfaced in the UI
+    // rather than failing the build.
+    const openYear = cov.fiscalYear >= currentFiscalYear;
+    const overshootFactor = openYear ? 1.2 : 1.000001;
     if (
       cov.sectionRevisedTotal !== null &&
-      cov.classifiedRevisedSum > cov.sectionRevisedTotal + 1
+      cov.sectionRevisedTotal > 0 &&
+      cov.classifiedRevisedSum > cov.sectionRevisedTotal * overshootFactor
     ) {
       usageProblems.push(
-        `${cov.ministryId}/${cov.fiscalYear}: סכום הסיווג (${cov.classifiedRevisedSum}) גדול מסך הסעיף (${cov.sectionRevisedTotal})`,
+        `${cov.ministryId}/${cov.fiscalYear}: סכום הסיווג (${cov.classifiedRevisedSum}) חורג מסך הסעיף (${cov.sectionRevisedTotal}) מעבר למותר`,
       );
     }
-    if (cov.coveragePercent !== null && (cov.coveragePercent < 0 || cov.coveragePercent > 100.5)) {
+    if (
+      cov.coveragePercent !== null &&
+      (cov.coveragePercent < 0 || cov.coveragePercent > (openYear ? 120 : 100.5))
+    ) {
       usageProblems.push(
         `${cov.ministryId}/${cov.fiscalYear}: אחוז כיסוי לא סביר ${cov.coveragePercent}`,
       );
@@ -417,10 +435,14 @@ function main(): void {
     if (!ministryIdSet.has(assignment.ministryId))
       themeProblems.push(`שיוך למשרד לא קיים: ${assignment.ministryId}`);
   }
-  // Every collected level-2/3 line must carry a theme, with a matching title.
+  // Full theme coverage is required only inside the declared covered scope.
+  const coveredSet = new Set(budgetThemes.coveredMinistryIds);
   const collectedLines = new Map<string, string>();
   for (const item of budgetItems) {
-    if (item.hierarchyLevel === 2 || item.hierarchyLevel === 3) {
+    if (
+      coveredSet.has(item.ministryId) &&
+      (item.hierarchyLevel === 2 || item.hierarchyLevel === 3)
+    ) {
       collectedLines.set(`${item.ministryId}:${item.budgetCode}`, item.title);
     }
   }

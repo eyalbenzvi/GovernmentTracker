@@ -25,6 +25,8 @@
  *     examples — set aside in the open, not hidden.
  */
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+
 import { PROCESSED_DIR, RAW_DIR, readJson, writeJson, writeText } from './lib/paths.js';
 import { Logger } from './lib/log.js';
 import { politeFetch } from './lib/http.js';
@@ -392,7 +394,13 @@ async function main(): Promise<void> {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Run only when invoked directly (tsx scripts/...): test files import helpers
+// from this module, and importing must never trigger network collection.
+const invokedDirectly =
+  process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (invokedDirectly) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

@@ -197,19 +197,18 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
       </section>
 
       <section aria-labelledby="not-collected-heading">
-        <SectionHeading id="not-collected-heading" title="משרדים שטרם נאספו" />
+        <SectionHeading id="not-collected-heading" title="מה נכלל ומה לא" />
         <Callout tone="caution">
           <p>
-            במאגר נאספו {formatNumber(ministries.length)} משרדים — אלה שנמצא עבורם לפחות מקור רשמי
-            אחד בשלב הגילוי, ושמם מבוסס על כותרת מקור או על שם קובץ ספר התקציב הרשמי.
+            המאגר מכסה את כל {formatNumber(ministries.length)} סעיפי התקציב הרגיל של תקציב המדינה:{' '}
+            {formatNumber(ministries.filter((m) => m.sectionKind === 'ministry').length)} משרדי
+            ממשלה והיתר מוסדות, רשויות וסעיפים טכניים (מסומנים בהתאם). זיהוי כל סעיף מבוסס על כותרתו
+            הרשמית במקור, המקושרת מעמוד הסעיף.
           </p>
           <p>
-            יתר משרדי הממשלה מסומנים כ״טרם נאסף״. במכוון לא נבנתה עבורם רשימה משוערת: רשימת המשרדים
-            הרשמית המלאה זמינה בעמוד חברי הממשלה, שמקוטלג ב
-            <Link className="link" to="/sources">
-              קטלוג המקורות
-            </Link>
-            . הוספת משרד למאגר מחייבת מקור, לא השערה.
+            לא נכללים: תקציב הפיתוח (סעיפים תחומיים שאינם נושאים שם משרד), משרדים ללא סעיף תקציב
+            עצמאי (מתוקצבים בתוך סעיף משרד ראש הממשלה), והשכבה התמטית קיימת בשלב זה עבור חמשת משרדי
+            העומק בלבד — היתר מסומנים "טרם סווג".
           </p>
         </Callout>
       </section>

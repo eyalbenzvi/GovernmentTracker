@@ -10,7 +10,7 @@
 import path from 'node:path';
 import { PROCESSED_DIR, RAW_DIR, readJson, writeJson, writeText } from './lib/paths.js';
 import { Logger } from './lib/log.js';
-import { politeFetch } from './lib/http.js';
+import { queryAllPages } from './lib/obudget.js';
 import { toCsv } from './lib/csv.js';
 import {
   ANOMALY_RULES,
@@ -42,13 +42,13 @@ interface RawRow {
   net_executed?: unknown;
 }
 
-function queryUrl(sectionCode: string): string {
-  const sql =
+function sectionSql(sectionCode: string): string {
+  return (
     `select code, title, year, econ_cls_title_2, net_allocated, net_revised, net_executed ` +
     `from raw_budget where code like '${sectionCode}%' and depth = 4 ` +
     `and year >= ${ANALYSIS_YEARS[0]} and year <= ${ANALYSIS_YEARS[ANALYSIS_YEARS.length - 1]} ` +
-    `and is_proposal = false and budget_kind_code = '1' order by code, year limit 4000`;
-  return `https://next.obudget.org/api/query?query=${encodeURIComponent(sql)}`;
+    `and is_proposal = false and budget_kind_code = '1' order by code, year limit 60000`
+  );
 }
 
 function readNumber(value: unknown): number | null {
@@ -71,21 +71,11 @@ async function main(): Promise<void> {
 
   for (const ministry of seed.ministries) {
     for (const sectionCode of ministry.budgetCodes) {
-      const result = await politeFetch(queryUrl(sectionCode), {
-        purpose: `regulation-level rows for anomaly scan (${ministry.id})`,
+      const raw = (await queryAllPages(
         logger,
-      });
-      if (!result.ok || !result.body) continue;
-
-      let raw: RawRow[] = [];
-      try {
-        const parsed = JSON.parse(result.body) as { rows?: RawRow[]; success?: boolean };
-        if (parsed.success === false) throw new Error('API reported success: false');
-        raw = parsed.rows ?? [];
-      } catch (err) {
-        console.error(`  parse failure for ${ministry.id}: ${String(err)}`);
-        continue;
-      }
+        `regulation-level rows for anomaly scan (${ministry.id})`,
+        sectionSql(sectionCode),
+      )) as RawRow[];
 
       const rows: RegulationRow[] = [];
       for (const r of raw) {

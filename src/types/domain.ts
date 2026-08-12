@@ -13,6 +13,7 @@ export interface Ministry {
   id: string;
   officialName: string;
   displayName: string;
+  sectionKind: 'ministry' | 'other';
   aliases: string[];
   description: string;
   activeFrom: string | null;
@@ -226,6 +227,7 @@ export interface ThemeAssignment {
 
 export interface BudgetThemes {
   method: 'llm_build_time';
+  coveredMinistryIds: string[];
   methodNote: string;
   confidenceNote: string;
   themes: BudgetTheme[];

@@ -28,6 +28,7 @@ import path from 'node:path';
 import { PROCESSED_DIR, RAW_DIR, readJson, writeJson } from './lib/paths.js';
 import { Logger } from './lib/log.js';
 import { politeFetch } from './lib/http.js';
+import { queryAllPages } from './lib/obudget.js';
 import type { BudgetItem } from './lib/schema.js';
 
 const ANALYSIS_YEARS = [2023, 2024, 2025, 2026] as const;
@@ -85,8 +86,8 @@ function obudgetQueryUrl(sectionCode: string): string {
     `where code like '${sectionCode}%' and depth <= ${MAX_DEPTH} ` +
     `and year >= ${ANALYSIS_YEARS[0]} and year <= ${ANALYSIS_YEARS[ANALYSIS_YEARS.length - 1]} ` +
     `and is_proposal = false and budget_kind_code = '${REGULAR_BUDGET_KIND}' ` +
-    `order by year, code limit 2000`;
-  return `https://next.obudget.org/api/query?query=${encodeURIComponent(sql)}`;
+    `order by year, code limit 20000`;
+  return sql;
 }
 
 /** Reads a numeric field defensively: only finite numbers pass; anything else is absent. */
@@ -183,32 +184,23 @@ async function main(): Promise<void> {
   // ---- Priority 3: Budget Key (secondary helper layer) --------------------
   for (const ministry of seed.ministries) {
     for (const sectionCode of ministry.budgetCodes) {
-      const url = obudgetQueryUrl(sectionCode);
-      const result = await politeFetch(url, {
-        purpose: `budget hierarchy for ${ministry.id} section ${sectionCode}`,
-        logger,
-      });
-      if (!result.ok || !result.body) {
-        skipped.push({
-          source: url,
-          reason: `שכבת העזר התקציבית אינה נגישה (${result.outcome}).`,
-        });
-        continue;
-      }
-
+      const sql = obudgetQueryUrl(sectionCode);
       let rows: RawBudgetRow[] = [];
       try {
-        const parsed = JSON.parse(result.body) as { rows?: RawBudgetRow[]; success?: boolean };
-        if (parsed.success === false) throw new Error('the API reported success: false');
-        rows = parsed.rows ?? [];
+        rows = (await queryAllPages(
+          logger,
+          `budget hierarchy for ${ministry.id} section ${sectionCode}`,
+          sql,
+        )) as RawBudgetRow[];
       } catch (err) {
-        skipped.push({ source: url, reason: `תשובת ה-API לא נותחה: ${String(err)}` });
+        skipped.push({ source: sql, reason: `שכבת העזר התקציבית אינה נגישה: ${String(err)}` });
         continue;
       }
       if (rows.length === 0) {
-        skipped.push({ source: url, reason: 'התשובה לא הכילה שורות.' });
+        skipped.push({ source: sql, reason: 'התשובה לא הכילה שורות.' });
         continue;
       }
+      const url = sql;
 
       // Group by fiscal year: hierarchy and leaf-ness are per-year properties.
       const byYear = new Map<number, RawBudgetRow[]>();

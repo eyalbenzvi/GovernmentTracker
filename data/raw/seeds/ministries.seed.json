@@ -1,8 +1,9 @@
 {
   "seedId": "ministries-seed",
   "declaredAt": "2026-08-12",
-  "purpose": "רשימת המשרדים שנכללים במאגר. משרד נכנס לרשימה רק אם קיים לפחות מקור רשמי אחד שנמצא בפועל בשלב הגילוי (data/raw/search-discovery) ושמו של המשרד מופיע בכותרת המקור או בשם קובץ ספר התקציב הרשמי. שדה nameEvidence מתעד עבור כל משרד מה בדיוק מבסס את השם.",
-  "notCollectedNote": "משרדים שאינם ברשימה זו מסומנים באתר כ\"טרם נאסף\". לא נבנתה רשימת משרדים ספקולטיבית: הרשימה הרשמית המלאה מופיעה במקור הרשמי שמקוטלג תחת gov-il-cabinet.",
+  "purpose": "רשימת המשרדים שנכללים במאגר. משרד נכנס לרשימה רק אם קיים לפחות מקור רשמי אחד שנמצא בפועל בשלב הגילוי (data/raw/search-discovery) ושמו של המשרד מופיע בכותרת המקור או בשם קובץ ספר התקציב הרשמי. שדה nameEvidence מתעד עבור כל משרד מה בדיוק מבסס את השם. בגרסה המורחבת נכללים כל 43 סעיפי התקציב הרגיל: זיהוי כל סעיף מבוסס על כותרתו הרשמית כפי שהיא מוחזרת מהמקור, ושדה sectionKind מבחין בין משרד ממשלתי ובין מוסד/רשות/סעיף טכני.",
+  "sectionKindNote": "sectionKind=ministry — משרד ממשלתי שסעיף התקציב נושא את שמו; sectionKind=other — מוסד שלטוני (נשיא, כנסת, מבקר), רשות, או סעיף טכני (גמלאות, הוצאות שונות, רזרבות). הסיווג ידני ומתועד כאן, וניתן לתיקון ב-Issue. משרדים ללא סעיף תקציב עצמאי (למשל משרד ירושלים ומסורת ישראל, משרד המורשת) מתוקצבים בתוך סעיף 04 ואינם מופיעים כרשומות נפרדות.",
+  "notCollectedNote": "כל סעיפי התקציב הרגיל נכללים. פרסומים של יחידות שלא ניתן לשייך לסעיף באופן חד-משמעי נשארים בלתי-משויכים ונרשמים ביומן האיסוף.",
   "budgetSectionPolicy": {
     "includedBudgetKind": "1 — תקציב רגיל",
     "rationale": "נכללים רק סעיפי התקציב הרגיל, מפני שהם הסעיפים שנושאים במפורש את שם המשרד (למשל \"משרד התחבורה\" לסעיף 0040). זו ראיה חד-משמעית לשיוך הסעיף למשרד.",
@@ -13,32 +14,477 @@
   },
   "ministries": [
     {
-      "id": "transport",
-      "officialName": "משרד התחבורה והבטיחות בדרכים",
-      "displayName": "משרד התחבורה",
-      "aliases": ["משרד התחבורה", "תחבורה", "משרד התחבורה והבטיחות בדרכים"],
-      "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": ["0040"],
+      "id": "sec-1",
+      "officialName": "נשיא המדינה ולשכתו",
+      "displayName": "נשיא המדינה ולשכתו",
+      "aliases": [
+        "נשיא המדינה ולשכתו"
+      ],
+      "description": "סעיף התקציב הרגיל \"נשיא המדינה ולשכתו\" (סעיף 0001). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0001"
+      ],
       "budgetCodeEvidence": {
-        "url": "https://next.obudget.org/i/budget/0040/2025",
-        "titleEvidence": "סעיף 0040 מוחזר ממפתח התקציב עם הכותרת \"משרד התחבורה\", depth=1, budget_kind_title=\"תקציב רגיל\". כותרת תוצאת החיפוש שבה זוהה הסעיף לראשונה: \"מפתח התקציב - תקציב משרד התחבורה (40)\".",
-        "queryId": "q01-transport-budget",
-        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר, ולא מקור רשמי ראשוני."
+        "url": "https://next.obudget.org/i/budget/0001/2025",
+        "titleEvidence": "סעיף 0001 מוחזר ממפתח התקציב עם הכותרת \"נשיא המדינה ולשכתו\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
       },
-      "budgetBookVolume": "Budget24-Transportation",
+      "budgetBookVolume": null,
       "nameEvidence": {
-        "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
-        "titleEvidence": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
-        "queryId": "q03-transport-multiyear"
+        "url": "https://next.obudget.org/i/budget/0001/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0001 במפתח התקציב: \"נשיא המדינה ולשכתו\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-2",
+      "officialName": "הכנסת",
+      "displayName": "הכנסת",
+      "aliases": [
+        "הכנסת"
+      ],
+      "description": "סעיף התקציב הרגיל \"הכנסת\" (סעיף 0002). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0002"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0002/2025",
+        "titleEvidence": "סעיף 0002 מוחזר ממפתח התקציב עם הכותרת \"הכנסת\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0002/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0002 במפתח התקציב: \"הכנסת\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-4",
+      "officialName": "משרד ראש הממשלה",
+      "displayName": "משרד ראש הממשלה",
+      "aliases": [
+        "משרד ראש הממשלה",
+        "נציבות שירות המדינה"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד ראש הממשלה\" (סעיף 0004). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0004"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0004/2025",
+        "titleEvidence": "סעיף 0004 מוחזר ממפתח התקציב עם הכותרת \"משרד ראש הממשלה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0004/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0004 במפתח התקציב: \"משרד ראש הממשלה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-5",
+      "officialName": "משרד האוצר",
+      "displayName": "משרד האוצר",
+      "aliases": [
+        "משרד האוצר",
+        "רשות המסים בישראל",
+        "רשות שוק ההון, ביטוח וחיסכון"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד האוצר\" (סעיף 0005). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0005"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0005/2025",
+        "titleEvidence": "סעיף 0005 מוחזר ממפתח התקציב עם הכותרת \"משרד האוצר\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0005/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0005 במפתח התקציב: \"משרד האוצר\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-6",
+      "officialName": "משרד הפנים",
+      "displayName": "משרד הפנים",
+      "aliases": [
+        "מינהל התכנון",
+        "משרד הפנים"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד הפנים\" (סעיף 0006). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0006"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0006/2025",
+        "titleEvidence": "סעיף 0006 מוחזר ממפתח התקציב עם הכותרת \"משרד הפנים\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0006/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0006 במפתח התקציב: \"משרד הפנים\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-7",
+      "officialName": "המשרד לביטחון לאומי",
+      "displayName": "המשרד לביטחון לאומי",
+      "aliases": [
+        "המשרד לביטחון לאומי",
+        "כבאות והצלה לישראל",
+        "משטרת ישראל",
+        "שירות בתי הסוהר"
+      ],
+      "description": "סעיף התקציב הרגיל \"המשרד לביטחון לאומי\" (סעיף 0007). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0007"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0007/2025",
+        "titleEvidence": "סעיף 0007 מוחזר ממפתח התקציב עם הכותרת \"המשרד לביטחון לאומי\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0007/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0007 במפתח התקציב: \"המשרד לביטחון לאומי\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-8",
+      "officialName": "משרד המשפטים",
+      "displayName": "משרד המשפטים",
+      "aliases": [
+        "משרד המשפטים"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד המשפטים\" (סעיף 0008). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0008"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0008/2025",
+        "titleEvidence": "סעיף 0008 מוחזר ממפתח התקציב עם הכותרת \"משרד המשפטים\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0008/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0008 במפתח התקציב: \"משרד המשפטים\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-9",
+      "officialName": "משרד החוץ",
+      "displayName": "משרד החוץ",
+      "aliases": [
+        "משרד החוץ"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד החוץ\" (סעיף 0009). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0009"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0009/2025",
+        "titleEvidence": "סעיף 0009 מוחזר ממפתח התקציב עם הכותרת \"משרד החוץ\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0009/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0009 במפתח התקציב: \"משרד החוץ\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-10",
+      "officialName": "מטה לביטחון לאומי",
+      "displayName": "מטה לביטחון לאומי",
+      "aliases": [
+        "מטה לביטחון לאומי"
+      ],
+      "description": "סעיף התקציב הרגיל \"מטה לביטחון לאומי\" (סעיף 0010). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0010"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0010/2025",
+        "titleEvidence": "סעיף 0010 מוחזר ממפתח התקציב עם הכותרת \"מטה לביטחון לאומי\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0010/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0010 במפתח התקציב: \"מטה לביטחון לאומי\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-11",
+      "officialName": "מבקר המדינה",
+      "displayName": "מבקר המדינה",
+      "aliases": [
+        "מבקר המדינה"
+      ],
+      "description": "סעיף התקציב הרגיל \"מבקר המדינה\" (סעיף 0011). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0011"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0011/2025",
+        "titleEvidence": "סעיף 0011 מוחזר ממפתח התקציב עם הכותרת \"מבקר המדינה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0011/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0011 במפתח התקציב: \"מבקר המדינה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-12",
+      "officialName": "גמלאות ופיצויים",
+      "displayName": "גמלאות ופיצויים",
+      "aliases": [
+        "גמלאות ופיצויים"
+      ],
+      "description": "סעיף התקציב הרגיל \"גמלאות ופיצויים\" (סעיף 0012). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0012"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0012/2025",
+        "titleEvidence": "סעיף 0012 מוחזר ממפתח התקציב עם הכותרת \"גמלאות ופיצויים\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0012/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0012 במפתח התקציב: \"גמלאות ופיצויים\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-13",
+      "officialName": "הוצאות שונות",
+      "displayName": "הוצאות שונות",
+      "aliases": [
+        "הוצאות שונות"
+      ],
+      "description": "סעיף התקציב הרגיל \"הוצאות שונות\" (סעיף 0013). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0013"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0013/2025",
+        "titleEvidence": "סעיף 0013 מוחזר ממפתח התקציב עם הכותרת \"הוצאות שונות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0013/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0013 במפתח התקציב: \"הוצאות שונות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-14",
+      "officialName": "בחירות ומימון מפלגות",
+      "displayName": "בחירות ומימון מפלגות",
+      "aliases": [
+        "בחירות ומימון מפלגות"
+      ],
+      "description": "סעיף התקציב הרגיל \"בחירות ומימון מפלגות\" (סעיף 0014). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0014"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0014/2025",
+        "titleEvidence": "סעיף 0014 מוחזר ממפתח התקציב עם הכותרת \"בחירות ומימון מפלגות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0014/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0014 במפתח התקציב: \"בחירות ומימון מפלגות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-15",
+      "officialName": "משרד הביטחון",
+      "displayName": "משרד הביטחון",
+      "aliases": [
+        "משרד הביטחון"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד הביטחון\" (סעיף 0015). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0015"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0015/2025",
+        "titleEvidence": "סעיף 0015 מוחזר ממפתח התקציב עם הכותרת \"משרד הביטחון\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0015/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0015 במפתח התקציב: \"משרד הביטחון\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-16",
+      "officialName": "הוצאות חירום אזרחיות",
+      "displayName": "הוצאות חירום אזרחיות",
+      "aliases": [
+        "הוצאות חירום אזרחיות"
+      ],
+      "description": "סעיף התקציב הרגיל \"הוצאות חירום אזרחיות\" (סעיף 0016). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0016"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0016/2025",
+        "titleEvidence": "סעיף 0016 מוחזר ממפתח התקציב עם הכותרת \"הוצאות חירום אזרחיות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0016/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0016 במפתח התקציב: \"הוצאות חירום אזרחיות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-17",
+      "officialName": "תאום הפעולות בשטחים",
+      "displayName": "תאום הפעולות בשטחים",
+      "aliases": [
+        "תאום הפעולות בשטחים"
+      ],
+      "description": "סעיף התקציב הרגיל \"תאום הפעולות בשטחים\" (סעיף 0017). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0017"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0017/2025",
+        "titleEvidence": "סעיף 0017 מוחזר ממפתח התקציב עם הכותרת \"תאום הפעולות בשטחים\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0017/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0017 במפתח התקציב: \"תאום הפעולות בשטחים\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-18",
+      "officialName": "הרשויות המקומיות",
+      "displayName": "הרשויות המקומיות",
+      "aliases": [
+        "הרשויות המקומיות"
+      ],
+      "description": "סעיף התקציב הרגיל \"הרשויות המקומיות\" (סעיף 0018). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0018"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0018/2025",
+        "titleEvidence": "סעיף 0018 מוחזר ממפתח התקציב עם הכותרת \"הרשויות המקומיות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0018/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0018 במפתח התקציב: \"הרשויות המקומיות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-19",
+      "officialName": "מדע, תרבות וספורט",
+      "displayName": "מדע, תרבות וספורט",
+      "aliases": [
+        "מדע, תרבות וספורט",
+        "משרד המדע",
+        "משרד המדע והטכנולוגיה",
+        "משרד התרבות והספורט"
+      ],
+      "description": "סעיף התקציב הרגיל \"מדע, תרבות וספורט\" (סעיף 0019). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0019"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0019/2025",
+        "titleEvidence": "סעיף 0019 מוחזר ממפתח התקציב עם הכותרת \"מדע, תרבות וספורט\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0019/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0019 במפתח התקציב: \"מדע, תרבות וספורט\".",
+        "queryId": "obudget-section-lookup"
       }
     },
     {
       "id": "education",
       "officialName": "משרד החינוך",
       "displayName": "משרד החינוך",
-      "aliases": ["משרד החינוך", "חינוך"],
+      "aliases": [
+        "חינוך",
+        "משרד החינוך"
+      ],
       "description": "משרד האחראי על מערכת החינוך הציבורית בישראל. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": ["0020"],
+      "budgetCodes": [
+        "0020"
+      ],
       "budgetCodeEvidence": {
         "url": "https://next.obudget.org/i/budget/0020/2025",
         "titleEvidence": "סעיף 0020 מוחזר ממפתח התקציב עם הכותרת \"משרד החינוך\", depth=1, budget_kind_title=\"תקציב רגיל\".",
@@ -50,15 +496,97 @@
         "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
         "titleEvidence": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
         "queryId": "q04-education-budget"
+      },
+      "sectionKind": "ministry"
+    },
+    {
+      "id": "sec-21",
+      "officialName": "ההשכלה הגבוהה",
+      "displayName": "ההשכלה הגבוהה",
+      "aliases": [
+        "ההשכלה הגבוהה"
+      ],
+      "description": "סעיף התקציב הרגיל \"ההשכלה הגבוהה\" (סעיף 0021). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0021"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0021/2025",
+        "titleEvidence": "סעיף 0021 מוחזר ממפתח התקציב עם הכותרת \"ההשכלה הגבוהה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0021/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0021 במפתח התקציב: \"ההשכלה הגבוהה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-22",
+      "officialName": "המשרד לשירותי דת",
+      "displayName": "המשרד לשירותי דת",
+      "aliases": [
+        "המשרד לשירותי דת"
+      ],
+      "description": "סעיף התקציב הרגיל \"המשרד לשירותי דת\" (סעיף 0022). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0022"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0022/2025",
+        "titleEvidence": "סעיף 0022 מוחזר ממפתח התקציב עם הכותרת \"המשרד לשירותי דת\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0022/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0022 במפתח התקציב: \"המשרד לשירותי דת\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-23",
+      "officialName": "משרד הרווחה",
+      "displayName": "משרד הרווחה",
+      "aliases": [
+        "משרד הרווחה",
+        "משרד הרווחה והביטחון החברתי"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד הרווחה\" (סעיף 0023). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0023"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0023/2025",
+        "titleEvidence": "סעיף 0023 מוחזר ממפתח התקציב עם הכותרת \"משרד הרווחה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0023/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0023 במפתח התקציב: \"משרד הרווחה\".",
+        "queryId": "obudget-section-lookup"
       }
     },
     {
       "id": "health",
       "officialName": "משרד הבריאות",
       "displayName": "משרד הבריאות",
-      "aliases": ["משרד הבריאות", "בריאות"],
+      "aliases": [
+        "בריאות",
+        "משרד הבריאות"
+      ],
       "description": "משרד האחראי על מערכת הבריאות, רגולציה רפואית ובריאות הציבור. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": ["0024"],
+      "budgetCodes": [
+        "0024"
+      ],
       "budgetCodeEvidence": {
         "url": "https://next.obudget.org/i/budget/0024/2025",
         "titleEvidence": "סעיף 0024 מוחזר ממפתח התקציב עם הכותרת \"משרד הבריאות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
@@ -70,15 +598,47 @@
         "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
         "titleEvidence": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
         "queryId": "q05-health-budget"
+      },
+      "sectionKind": "ministry"
+    },
+    {
+      "id": "sec-25",
+      "officialName": "הרשות לניצולי השואה",
+      "displayName": "הרשות לניצולי השואה",
+      "aliases": [
+        "הרשות לניצולי השואה"
+      ],
+      "description": "סעיף התקציב הרגיל \"הרשות לניצולי השואה\" (סעיף 0025). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0025"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0025/2025",
+        "titleEvidence": "סעיף 0025 מוחזר ממפתח התקציב עם הכותרת \"הרשות לניצולי השואה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0025/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0025 במפתח התקציב: \"הרשות לניצולי השואה\".",
+        "queryId": "obudget-section-lookup"
       }
     },
     {
       "id": "environment",
       "officialName": "המשרד להגנת הסביבה",
       "displayName": "הגנת הסביבה",
-      "aliases": ["המשרד להגנת הסביבה", "הגנת הסביבה", "איכות הסביבה"],
+      "aliases": [
+        "איכות הסביבה",
+        "הגנת הסביבה",
+        "המשרד להגנת הסביבה"
+      ],
       "description": "משרד האחראי על רגולציה סביבתית, איכות אוויר, פסולת ושמירת טבע. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": ["0026"],
+      "budgetCodes": [
+        "0026"
+      ],
       "budgetCodeEvidence": {
         "url": "https://next.obudget.org/i/budget/0026/2025",
         "titleEvidence": "סעיף 0026 מוחזר ממפתח התקציב עם הכותרת \"המשרד להגנת הסביבה\", depth=1, budget_kind_title=\"תקציב רגיל\" — התאמה מדויקת לשם הרשמי.",
@@ -91,15 +651,253 @@
         "titleEvidence": "כותרת סעיף התקציב 0026 היא \"המשרד להגנת הסביבה\" — התאמה מדויקת לשם הרשמי. בנוסף: שם קובץ ספר התקציב הרשמי באתר הכנסת, Budget9-Environment.pdf.",
         "queryId": "obudget-section-lookup",
         "note": "בגרסה קודמת הזיהוי נשען על שם קובץ ספר התקציב בלבד. כעת הוא מגובה גם בכותרת סעיף התקציב עצמו."
+      },
+      "sectionKind": "ministry"
+    },
+    {
+      "id": "sec-27",
+      "officialName": "הקצבות לביטוח לאומי",
+      "displayName": "הקצבות לביטוח לאומי",
+      "aliases": [
+        "הקצבות לביטוח לאומי"
+      ],
+      "description": "סעיף התקציב הרגיל \"הקצבות לביטוח לאומי\" (סעיף 0027). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0027"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0027/2025",
+        "titleEvidence": "סעיף 0027 מוחזר ממפתח התקציב עם הכותרת \"הקצבות לביטוח לאומי\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0027/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0027 במפתח התקציב: \"הקצבות לביטוח לאומי\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-29",
+      "officialName": "משרד הבינוי והשיכון",
+      "displayName": "משרד הבינוי והשיכון",
+      "aliases": [
+        "הרשות הממשלתית להתחדשות עירונית",
+        "משרד הבינוי והשיכון"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד הבינוי והשיכון\" (סעיף 0029). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0029"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0029/2025",
+        "titleEvidence": "סעיף 0029 מוחזר ממפתח התקציב עם הכותרת \"משרד הבינוי והשיכון\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0029/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0029 במפתח התקציב: \"משרד הבינוי והשיכון\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-30",
+      "officialName": "משרד העלייה והקליטה",
+      "displayName": "משרד העלייה והקליטה",
+      "aliases": [
+        "משרד העלייה והקליטה"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד העלייה והקליטה\" (סעיף 0030). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0030"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0030/2025",
+        "titleEvidence": "סעיף 0030 מוחזר ממפתח התקציב עם הכותרת \"משרד העלייה והקליטה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0030/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0030 במפתח התקציב: \"משרד העלייה והקליטה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-31",
+      "officialName": "הוצאות ביטחוניות שונות",
+      "displayName": "הוצאות ביטחוניות שונות",
+      "aliases": [
+        "הוצאות ביטחוניות שונות"
+      ],
+      "description": "סעיף התקציב הרגיל \"הוצאות ביטחוניות שונות\" (סעיף 0031). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0031"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0031/2025",
+        "titleEvidence": "סעיף 0031 מוחזר ממפתח התקציב עם הכותרת \"הוצאות ביטחוניות שונות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0031/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0031 במפתח התקציב: \"הוצאות ביטחוניות שונות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-33",
+      "officialName": "משרד החקלאות",
+      "displayName": "משרד החקלאות",
+      "aliases": [
+        "משרד החקלאות",
+        "משרד החקלאות וביטחון המזון"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד החקלאות\" (סעיף 0033). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0033"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0033/2025",
+        "titleEvidence": "סעיף 0033 מוחזר ממפתח התקציב עם הכותרת \"משרד החקלאות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0033/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0033 במפתח התקציב: \"משרד החקלאות\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-34",
+      "officialName": "משרד האנרגיה",
+      "displayName": "משרד האנרגיה",
+      "aliases": [
+        "משרד האנרגיה",
+        "משרד האנרגיה והתשתיות",
+        "רשות החשמל"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד האנרגיה\" (סעיף 0034). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0034"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0034/2025",
+        "titleEvidence": "סעיף 0034 מוחזר ממפתח התקציב עם הכותרת \"משרד האנרגיה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0034/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0034 במפתח התקציב: \"משרד האנרגיה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-35",
+      "officialName": "הועדה לאנרגיה אטומית",
+      "displayName": "הועדה לאנרגיה אטומית",
+      "aliases": [
+        "הועדה לאנרגיה אטומית"
+      ],
+      "description": "סעיף התקציב הרגיל \"הועדה לאנרגיה אטומית\" (סעיף 0035). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0035"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0035/2025",
+        "titleEvidence": "סעיף 0035 מוחזר ממפתח התקציב עם הכותרת \"הועדה לאנרגיה אטומית\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0035/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0035 במפתח התקציב: \"הועדה לאנרגיה אטומית\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-36",
+      "officialName": "תעסוקה",
+      "displayName": "תעסוקה",
+      "aliases": [
+        "זרוע העבודה",
+        "משרד העבודה",
+        "תעסוקה"
+      ],
+      "description": "סעיף התקציב הרגיל \"תעסוקה\" (סעיף 0036). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0036"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0036/2025",
+        "titleEvidence": "סעיף 0036 מוחזר ממפתח התקציב עם הכותרת \"תעסוקה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0036/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0036 במפתח התקציב: \"תעסוקה\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-37",
+      "officialName": "משרד התיירות",
+      "displayName": "משרד התיירות",
+      "aliases": [
+        "משרד התיירות"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד התיירות\" (סעיף 0037). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0037"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0037/2025",
+        "titleEvidence": "סעיף 0037 מוחזר ממפתח התקציב עם הכותרת \"משרד התיירות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0037/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0037 במפתח התקציב: \"משרד התיירות\".",
+        "queryId": "obudget-section-lookup"
       }
     },
     {
       "id": "economy",
       "officialName": "משרד הכלכלה והתעשייה",
       "displayName": "משרד הכלכלה",
-      "aliases": ["משרד הכלכלה והתעשייה", "משרד הכלכלה", "כלכלה ותעשייה"],
+      "aliases": [
+        "כלכלה ותעשייה",
+        "משרד הכלכלה",
+        "משרד הכלכלה והתעשייה"
+      ],
       "description": "משרד האחראי על תעשייה, מסחר, תעסוקה ורגולציה כלכלית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": ["0038"],
+      "budgetCodes": [
+        "0038"
+      ],
       "budgetCodeEvidence": {
         "url": "https://next.obudget.org/i/budget/0038/2025",
         "titleEvidence": "סעיף 0038 מוחזר ממפתח התקציב עם הכותרת \"כלכלה ותעשייה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
@@ -112,6 +910,212 @@
         "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf. בנוסף: כותרת סעיף התקציב 0038 היא \"כלכלה ותעשייה\".",
         "queryId": "q03-transport-multiyear",
         "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב ועל כותרת סעיף התקציב, ולא על כותרת מסמך מלאה."
+      },
+      "sectionKind": "ministry"
+    },
+    {
+      "id": "sec-39",
+      "officialName": "משרד התקשורת",
+      "displayName": "משרד התקשורת",
+      "aliases": [
+        "משרד התקשורת"
+      ],
+      "description": "סעיף התקציב הרגיל \"משרד התקשורת\" (סעיף 0039). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "ministry",
+      "budgetCodes": [
+        "0039"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0039/2025",
+        "titleEvidence": "סעיף 0039 מוחזר ממפתח התקציב עם הכותרת \"משרד התקשורת\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0039/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0039 במפתח התקציב: \"משרד התקשורת\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "transport",
+      "officialName": "משרד התחבורה והבטיחות בדרכים",
+      "displayName": "משרד התחבורה",
+      "aliases": [
+        "הרשות הארצית לתחבורה ציבורית",
+        "משרד התחבורה",
+        "משרד התחבורה והבטיחות בדרכים",
+        "רשות הספנות והנמלים",
+        "תחבורה"
+      ],
+      "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": [
+        "0040"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0040/2025",
+        "titleEvidence": "סעיף 0040 מוחזר ממפתח התקציב עם הכותרת \"משרד התחבורה\", depth=1, budget_kind_title=\"תקציב רגיל\". כותרת תוצאת החיפוש שבה זוהה הסעיף לראשונה: \"מפתח התקציב - תקציב משרד התחבורה (40)\".",
+        "queryId": "q01-transport-budget",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר, ולא מקור רשמי ראשוני."
+      },
+      "budgetBookVolume": "Budget24-Transportation",
+      "nameEvidence": {
+        "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+        "titleEvidence": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+        "queryId": "q03-transport-multiyear"
+      },
+      "sectionKind": "ministry"
+    },
+    {
+      "id": "sec-41",
+      "officialName": "רשות ממשלתית למים וביוב",
+      "displayName": "רשות ממשלתית למים וביוב",
+      "aliases": [
+        "רשות ממשלתית למים וביוב"
+      ],
+      "description": "סעיף התקציב הרגיל \"רשות ממשלתית למים וביוב\" (סעיף 0041). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0041"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0041/2025",
+        "titleEvidence": "סעיף 0041 מוחזר ממפתח התקציב עם הכותרת \"רשות ממשלתית למים וביוב\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0041/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0041 במפתח התקציב: \"רשות ממשלתית למים וביוב\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-42",
+      "officialName": "מענקי בינוי ושיכון",
+      "displayName": "מענקי בינוי ושיכון",
+      "aliases": [
+        "מענקי בינוי ושיכון"
+      ],
+      "description": "סעיף התקציב הרגיל \"מענקי בינוי ושיכון\" (סעיף 0042). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0042"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0042/2025",
+        "titleEvidence": "סעיף 0042 מוחזר ממפתח התקציב עם הכותרת \"מענקי בינוי ושיכון\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0042/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0042 במפתח התקציב: \"מענקי בינוי ושיכון\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-43",
+      "officialName": "המרכז למיפוי ישראל",
+      "displayName": "המרכז למיפוי ישראל",
+      "aliases": [
+        "המרכז למיפוי ישראל"
+      ],
+      "description": "סעיף התקציב הרגיל \"המרכז למיפוי ישראל\" (סעיף 0043). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0043"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0043/2025",
+        "titleEvidence": "סעיף 0043 מוחזר ממפתח התקציב עם הכותרת \"המרכז למיפוי ישראל\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0043/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0043 במפתח התקציב: \"המרכז למיפוי ישראל\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-46",
+      "officialName": "חוק חיילים משוחררים",
+      "displayName": "חוק חיילים משוחררים",
+      "aliases": [
+        "חוק חיילים משוחררים"
+      ],
+      "description": "סעיף התקציב הרגיל \"חוק חיילים משוחררים\" (סעיף 0046). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0046"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0046/2025",
+        "titleEvidence": "סעיף 0046 מוחזר ממפתח התקציב עם הכותרת \"חוק חיילים משוחררים\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0046/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0046 במפתח התקציב: \"חוק חיילים משוחררים\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-54",
+      "officialName": "רשויות פיקוח",
+      "displayName": "רשויות פיקוח",
+      "aliases": [
+        "רשויות פיקוח"
+      ],
+      "description": "סעיף התקציב הרגיל \"רשויות פיקוח\" (סעיף 0054). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0054"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0054/2025",
+        "titleEvidence": "סעיף 0054 מוחזר ממפתח התקציב עם הכותרת \"רשויות פיקוח\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0054/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0054 במפתח התקציב: \"רשויות פיקוח\".",
+        "queryId": "obudget-section-lookup"
+      }
+    },
+    {
+      "id": "sec-68",
+      "officialName": "רשות האוכלוסין",
+      "displayName": "רשות האוכלוסין",
+      "aliases": [
+        "רשות האוכלוסין",
+        "רשות האוכלוסין וההגירה"
+      ],
+      "description": "סעיף התקציב הרגיל \"רשות האוכלוסין\" (סעיף 0068). התיאור טרם נוסח בהרחבה; זיהוי הסעיף מבוסס על כותרתו הרשמית במקור המקושר.",
+      "sectionKind": "other",
+      "budgetCodes": [
+        "0068"
+      ],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0068/2025",
+        "titleEvidence": "סעיף 0068 מוחזר ממפתח התקציב עם הכותרת \"רשות האוכלוסין\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
+      "budgetBookVolume": null,
+      "nameEvidence": {
+        "url": "https://next.obudget.org/i/budget/0068/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0068 במפתח התקציב: \"רשות האוכלוסין\".",
+        "queryId": "obudget-section-lookup"
       }
     }
   ]

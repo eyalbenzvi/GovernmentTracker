@@ -1,7 +1,7 @@
 {
   "collectorId": "normalize-budget",
-  "startedAt": "2026-08-12T18:15:34.851Z",
-  "finishedAt": "2026-08-12T18:15:36.489Z",
+  "startedAt": "2026-08-12T19:09:21.814Z",
+  "finishedAt": "2026-08-12T19:10:16.010Z",
   "environmentNote": "ניסיונות איסוף התקציב בוצעו מול המקורות הרשמיים ומול שכבת העזר בפועל. כישלונות אחזור מתועדים כאן ובקובץ budget-collection-notes.json.",
   "attempts": [
     {
@@ -11,8 +11,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:35.196Z",
-      "durationMs": 344
+      "attemptedAt": "2026-08-12T19:09:22.735Z",
+      "durationMs": 920
     },
     {
       "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
@@ -21,8 +21,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T18:15:36.464Z",
-      "durationMs": 1268
+      "attemptedAt": "2026-08-12T19:09:24.271Z",
+      "durationMs": 1536
     },
     {
       "url": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
@@ -31,63 +31,443 @@
       "httpStatus": 200,
       "bytes": 152905,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.467Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:25.047Z",
+      "durationMs": 776
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
-      "purpose": "budget hierarchy for transport section 0040",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0001%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-1 section 0001 (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 24272,
+      "bytes": 8955,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.468Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:25.865Z",
+      "durationMs": 816
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
-      "purpose": "budget hierarchy for education section 0020",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0002%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-2 section 0002 (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 45220,
+      "bytes": 30422,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.470Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:26.712Z",
+      "durationMs": 845
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
-      "purpose": "budget hierarchy for health section 0024",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0004%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-4 section 0004 (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 39855,
+      "bytes": 59334,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.473Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:28.035Z",
+      "durationMs": 1322
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
-      "purpose": "budget hierarchy for environment section 0026",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0005%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-5 section 0005 (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 20131,
+      "bytes": 23408,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.474Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:29.089Z",
+      "durationMs": 1050
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
-      "purpose": "budget hierarchy for economy section 0038",
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0006%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-6 section 0006 (page 0)",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 20910,
+      "bytes": 17770,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T18:15:36.475Z",
-      "durationMs": 0
+      "attemptedAt": "2026-08-12T19:09:30.294Z",
+      "durationMs": 1205
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0007%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-7 section 0007 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 26348,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:31.509Z",
+      "durationMs": 1214
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0008%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-8 section 0008 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 34098,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:32.698Z",
+      "durationMs": 1188
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0009%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-9 section 0009 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 10062,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:33.779Z",
+      "durationMs": 1080
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0010%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-10 section 0010 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 6747,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:34.978Z",
+      "durationMs": 1199
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0011%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-11 section 0011 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 34416,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:36.294Z",
+      "durationMs": 1316
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0012%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-12 section 0012 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 15689,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:37.492Z",
+      "durationMs": 1197
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0013%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-13 section 0013 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 20063,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:38.700Z",
+      "durationMs": 1208
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0014%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-14 section 0014 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 16759,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:39.893Z",
+      "durationMs": 1192
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0015%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-15 section 0015 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 16687,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:41.083Z",
+      "durationMs": 1189
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0016%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-16 section 0016 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 15794,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:42.300Z",
+      "durationMs": 1217
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0017%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-17 section 0017 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 25271,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:43.512Z",
+      "durationMs": 1212
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0018%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-18 section 0018 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 13467,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:44.696Z",
+      "durationMs": 1183
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0019%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-19 section 0019 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 21342,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:45.905Z",
+      "durationMs": 1208
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for education section 0020 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 45218,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:47.248Z",
+      "durationMs": 1342
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0021%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-21 section 0021 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 5428,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:48.178Z",
+      "durationMs": 929
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0022%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-22 section 0022 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 16655,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:49.500Z",
+      "durationMs": 1322
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0023%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-23 section 0023 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 39088,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:50.726Z",
+      "durationMs": 1225
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for health section 0024 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 39853,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:51.916Z",
+      "durationMs": 1189
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0025%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-25 section 0025 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 14343,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:53.093Z",
+      "durationMs": 1176
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for environment section 0026 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 20129,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:54.315Z",
+      "durationMs": 1222
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0027%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-27 section 0027 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 13021,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:55.402Z",
+      "durationMs": 1086
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0029%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-29 section 0029 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9933,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:56.577Z",
+      "durationMs": 1174
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0030%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-30 section 0030 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 18572,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:57.896Z",
+      "durationMs": 1318
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0031%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-31 section 0031 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4908,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:09:58.990Z",
+      "durationMs": 1093
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0033%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-33 section 0033 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 18637,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:00.311Z",
+      "durationMs": 1321
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0034%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-34 section 0034 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 15700,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:01.516Z",
+      "durationMs": 1205
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0035%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-35 section 0035 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4894,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:02.606Z",
+      "durationMs": 1090
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0036%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-36 section 0036 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 32272,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:03.928Z",
+      "durationMs": 1322
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0037%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-37 section 0037 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 16960,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:05.110Z",
+      "durationMs": 1181
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for economy section 0038 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 20908,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:06.326Z",
+      "durationMs": 1215
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0039%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-39 section 0039 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 10239,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:07.373Z",
+      "durationMs": 1047
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for transport section 0040 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 24270,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:08.701Z",
+      "durationMs": 1328
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0041%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-41 section 0041 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 8848,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:09.791Z",
+      "durationMs": 1089
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0042%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-42 section 0042 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 14995,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:11.117Z",
+      "durationMs": 1325
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0043%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-43 section 0043 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 12830,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:12.312Z",
+      "durationMs": 1194
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0046%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-46 section 0046 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11241,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:13.398Z",
+      "durationMs": 1085
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0054%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-54 section 0054 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 49517,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:14.846Z",
+      "durationMs": 1448
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0068%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%2020000",
+      "purpose": "budget hierarchy for sec-68 section 0068 (page 0)",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 16914,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T19:10:15.921Z",
+      "durationMs": 1074
     }
   ],
   "summary": {
-    "total": 8,
-    "ok": 6,
+    "total": 46,
+    "ok": 44,
     "blocked": 0,
     "failed": 2
   }
