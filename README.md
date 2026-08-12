@@ -12,11 +12,34 @@
 האתר **אינו** מתיימר לתאר במה עוסקים עובדי המשרדים. יומן פומבי או הודעה לעיתונות מלמדים על מה
 שפורסם — לא על היקף עבודה, לא על סדרי עדיפויות פנימיים ולא על תוצאה.
 
-## האתר החי
+## האתר החי — נדרשת הפעלה חד-פעמית של GitHub Pages
 
-**https://eyalbenzvi.github.io/GovernmentTracker/**
+הבנייה, הבדיקות והוולידציה עוברות ב-CI, אבל **הפריסה חסומה** עד שמפעילים Pages על ה-repository
+פעם אחת. שלב `Configure GitHub Pages` נכשל עם:
 
-הפריסה מתבצעת אוטומטית מ-GitHub Actions בכל push (ראו [פריסה](#פריסה)).
+```
+Create Pages site failed. Error: Resource not accessible by integration
+```
+
+הסיבה: יצירת אתר Pages דורשת הרשאת **admin** על ה-repository. ל-`GITHUB_TOKEN` של Actions יש
+`pages: write` — שמאפשר לפרוס לאתר קיים, אבל לא ליצור אותו.
+
+**הפעולה הנדרשת — אחת, על ידי בעל ה-repository:**
+
+`Settings → Pages → Build and deployment → Source: GitHub Actions`
+
+(או, עם טוקן שיש לו הרשאת admin:
+`gh api -X POST repos/eyalbenzvi/GovernmentTracker/pages -f build_type=workflow`)
+
+לאחר מכן הריצו את ה-workflow שוב — `Actions → Build and deploy to GitHub Pages → Run workflow`,
+או בכל push הבא. `enablement: true` שכבר מוגדר ב-workflow ימצא את האתר הקיים ויעבור בהצלחה, ואז
+האתר יהיה זמין בכתובת:
+
+```
+https://eyalbenzvi.github.io/GovernmentTracker/
+```
+
+הכתובת נגזרת אוטומטית ב-`vite.config.ts` מתוך `GITHUB_REPOSITORY`, ולכן אין צורך לשנות קוד.
 
 ## מצב הנתונים בגרסה הנוכחית — קראו לפני שימוש
 
@@ -148,6 +171,9 @@ npm run data:refresh
 3. **deploy** — פריסה עם ה-Actions הרשמיים של GitHub Pages, והחזרת ה-URL כ-output.
 
 `build` תלוי ב-`verify`, ולכן **כשל בדיקה או כשל ולידציית נתונים מונע פרסום**.
+
+בהרצה הראשונה `verify` עבר במלואו ו-`build` נעצר ב-`Configure GitHub Pages`, מפני ש-Pages טרם
+הופעל על ה-repository. ראו [האתר החי](#האתר-החי--נדרשת-הפעלה-חד-פעמית-של-github-pages).
 
 `.github/workflows/data-refresh.yml` הוא ידני בלבד. אין הרצה מתוזמנת: מקורות ציבוריים הם
 תשתית משותפת, וספרי תקציב ודוחות ביצוע מתעדכנים מספר פעמים בשנה, לא שעה-שעה. הוא מריץ את
