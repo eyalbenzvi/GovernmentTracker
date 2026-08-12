@@ -56,6 +56,8 @@ interface DiariesIndexLite {
   windowStart: string;
   totals: {
     entries: number;
+    duplicateRowsRemoved: number;
+    datasetsWithoutIdentifier: number;
     byExtractionMethod: {
       datastore: number;
       spreadsheet: number;
@@ -521,7 +523,12 @@ function main(): void {
 
   // ---- 16. diaries integrity (index + shards) -----------------------------
   const diariesIndex = readJson<DiariesIndexLite>(p('diaries-index.json'));
-  check('סכמה תקינה: diaries-index.json', schemas.diariesIndex.safeParse(diariesIndex).success);
+  const indexParse = schemas.diariesIndex.safeParse(diariesIndex);
+  check(
+    'סכמה תקינה: diaries-index.json',
+    indexParse.success,
+    indexParse.success ? '' : JSON.stringify(indexParse.error.issues.slice(0, 4)),
+  );
 
   const diaryProblems: string[] = [];
   const datasetIds = new Set(diariesIndex.datasets.map((d) => d.datasetId));
@@ -618,11 +625,18 @@ function main(): void {
   // ---- 17. diary categories + insights integrity ---------------------------
   const diaryCategories = readJson<DiaryCategoriesLite>(p('diary-categories.json'));
   const diaryInsights = readJson<DiaryInsightsLite>(p('diary-insights.json'));
+  const categoriesParse = schemas.diaryCategories.safeParse(diaryCategories);
   check(
     'סכמה תקינה: diary-categories.json',
-    schemas.diaryCategories.safeParse(diaryCategories).success,
+    categoriesParse.success,
+    categoriesParse.success ? '' : JSON.stringify(categoriesParse.error.issues.slice(0, 4)),
   );
-  check('סכמה תקינה: diary-insights.json', schemas.diaryInsights.safeParse(diaryInsights).success);
+  const insightsParse = schemas.diaryInsights.safeParse(diaryInsights);
+  check(
+    'סכמה תקינה: diary-insights.json',
+    insightsParse.success,
+    insightsParse.success ? '' : JSON.stringify(insightsParse.error.issues.slice(0, 4)),
+  );
 
   const analysisProblems: string[] = [];
   const categoryIds = new Set(diaryCategories.categories.map((c) => c.id));

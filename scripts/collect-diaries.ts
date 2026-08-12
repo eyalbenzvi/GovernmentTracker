@@ -868,6 +868,7 @@ interface CkanResource {
 }
 
 interface CkanDataset {
+  id?: string;
   name?: string;
   title?: string;
   organization?: { title?: string } | null;
@@ -1228,9 +1229,17 @@ async function collect(): Promise<void> {
   const entries: DiaryEntry[] = [];
   const coverage: DiaryDatasetCoverage[] = [];
   const unmatchedTitles: string[] = [];
+  let datasetsWithoutId = 0;
 
   for (const ds of relevant) {
-    const datasetId = ds.name ?? '';
+    // CKAN gives every package a slug (`name`) and a uuid (`id`); either
+    // identifies the dataset, but an empty string would silently produce a
+    // dataset entry with no identity and no working link.
+    const datasetId = (ds.name ?? '').trim() !== '' ? (ds.name as string).trim() : (ds.id ?? '');
+    if (datasetId === '') {
+      datasetsWithoutId += 1;
+      continue;
+    }
     const title = (ds.title ?? '').trim() !== '' ? (ds.title as string).trim() : datasetId;
     const datasetUrl = `${ODATA_HOST}/dataset/${datasetId}`;
     const parsedTitle = parseDiaryTitle(title);
@@ -1408,6 +1417,17 @@ async function collect(): Promise<void> {
     deduped.push(entry);
   }
 
+  // Per-dataset counters were incremented while reading, i.e. before the
+  // de-duplication above. Recount from what actually ships, or the index would
+  // over-declare every dataset that was published twice.
+  const keptPerDataset = new Map<string, number>();
+  for (const entry of deduped) {
+    keptPerDataset.set(entry.datasetId, (keptPerDataset.get(entry.datasetId) ?? 0) + 1);
+  }
+  for (const cov of coverage) {
+    cov.machineReadableEntries = keptPerDataset.get(cov.datasetId) ?? 0;
+  }
+
   // ---- shard by ministry ---------------------------------------------------
   // ~190k rows is far too much for one payload, so entries ship as one file per
   // budget section, loaded only when a reader opens that section. Fields that
@@ -1475,6 +1495,7 @@ async function collect(): Promise<void> {
       unattributedDatasets: coverage.filter((c) => c.ministryId === null).length,
       unparsedResources: coverage.reduce((sum, c) => sum + c.unparsedResources.length, 0),
       duplicateRowsRemoved: duplicateRows,
+      datasetsWithoutIdentifier: datasetsWithoutId,
       byExtractionMethod: {
         datastore: deduped.filter((e) => e.extractionMethod === 'datastore').length,
         spreadsheet: deduped.filter((e) => e.extractionMethod === 'spreadsheet').length,

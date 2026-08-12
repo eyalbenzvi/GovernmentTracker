@@ -517,6 +517,7 @@ export interface DiariesIndex {
     unattributedDatasets: number;
     unparsedResources: number;
     duplicateRowsRemoved: number;
+    datasetsWithoutIdentifier: number;
     byExtractionMethod: Record<DiaryExtractionMethod, number>;
   };
   unmatchedTitles: string[];

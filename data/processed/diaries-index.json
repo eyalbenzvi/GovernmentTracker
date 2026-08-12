@@ -19,7 +19,8 @@
       "spreadsheet": 0,
       "pdf_text": 0,
       "pdf_ocr": 0
-    }
+    },
+    "datasetsWithoutIdentifier": 0
   },
   "unmatchedTitles": [],
   "shards": [],

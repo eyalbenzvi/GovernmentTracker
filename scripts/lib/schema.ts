@@ -522,6 +522,7 @@ export const diariesIndexSchema = z.object({
     unattributedDatasets: z.number().int().min(0),
     unparsedResources: z.number().int().min(0),
     duplicateRowsRemoved: z.number().int().min(0),
+    datasetsWithoutIdentifier: z.number().int().min(0),
     byExtractionMethod: z.object({
       datastore: z.number().int().min(0),
       spreadsheet: z.number().int().min(0),
