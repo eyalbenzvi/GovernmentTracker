@@ -162,6 +162,8 @@ export const dataVersionSchema = z.object({
     sourcesRetrieved: z.number().int().min(0),
     topicsDefined: z.number().int().min(0),
     topicsWithActivity: z.number().int().min(0),
+    diaryEntries: z.number().int().min(0),
+    diaryDatasets: z.number().int().min(0),
   }),
   changelog: z.array(z.object({ date: isoDate, note: z.string().min(1) })).min(1),
 });
@@ -362,6 +364,72 @@ export const anomaliesSchema = z.object({
   ),
 });
 
+export const diaryEntrySchema = z.object({
+  id: z.string().min(1),
+  ministryId: z.string().min(1).nullable(),
+  personLabel: z.string().min(1).nullable(),
+  personRole: z.enum(['minister', 'deputy_minister', 'director_general', 'other_senior']),
+  roleLabelHe: z.string().min(1),
+  subject: z.string().min(1),
+  date: isoDate.nullable(),
+  startTime: z
+    .string()
+    .regex(/^\d{2}:\d{2}$/)
+    .nullable(),
+  endTime: z
+    .string()
+    .regex(/^\d{2}:\d{2}$/)
+    .nullable(),
+  location: z.string().nullable(),
+  participants: z.string().nullable(),
+  datasetId: z.string().min(1),
+  sourceUrl: httpUrl,
+  sourceTitle: z.string().min(1),
+  collectedAt: isoDate,
+});
+
+export const diariesCoverageSchema = z.object({
+  generatedAt: isoDate,
+  source: z.object({
+    name: z.string().min(1),
+    url: httpUrl,
+    trustTier: z.literal('civic_helper'),
+    note: z.string().min(1),
+  }),
+  windowStart: isoDate,
+  totals: z.object({
+    datasets: z.number().int().min(0),
+    entries: z.number().int().min(0),
+    datasetsWithEntries: z.number().int().min(0),
+    unattributedDatasets: z.number().int().min(0),
+    unparsedResources: z.number().int().min(0),
+  }),
+  unmatchedTitles: z.array(z.string()),
+  datasets: z.array(
+    z.object({
+      datasetId: z.string().min(1),
+      title: z.string().min(1),
+      url: httpUrl,
+      ministryId: z.string().min(1).nullable(),
+      personLabel: z.string().min(1).nullable(),
+      personRole: z.enum(['minister', 'deputy_minister', 'director_general', 'other_senior']),
+      roleLabelHe: z.string().min(1),
+      periodLabel: z.string().min(1).nullable(),
+      machineReadableEntries: z.number().int().min(0),
+      skippedEmptyRows: z.number().int().min(0),
+      outOfWindowRows: z.number().int().min(0),
+      truncated: z.boolean(),
+      unparsedResources: z.array(
+        z.object({
+          name: z.string().min(1),
+          format: z.string().min(1),
+          note: z.string().min(1),
+        }),
+      ),
+    }),
+  ),
+});
+
 export const schemas = {
   ministries: z.array(ministrySchema),
   ministerTenures: z.array(ministerTenureSchema),
@@ -376,6 +444,8 @@ export const schemas = {
   budgetThemes: budgetThemesSchema,
   findings: findingsSchema,
   anomalies: anomaliesSchema,
+  diaries: z.array(diaryEntrySchema),
+  diariesCoverage: diariesCoverageSchema,
 };
 
 export type Ministry = z.infer<typeof ministrySchema>;

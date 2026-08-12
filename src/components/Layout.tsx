@@ -10,6 +10,7 @@ const NAV = [
   { to: '/budget', label: 'תקציב' },
   { to: '/analysis', label: 'ניתוח' },
   { to: '/findings', label: 'ממצאים' },
+  { to: '/diaries', label: 'יומנים' },
   { to: '/activity', label: 'פעילות' },
   { to: '/sources', label: 'מקורות' },
   { to: '/methodology', label: 'מתודולוגיה ומגבלות' },

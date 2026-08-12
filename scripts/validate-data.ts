@@ -44,6 +44,18 @@ interface BudgetThemesFile {
   themes: Array<{ id: string; assignedLineCount: number }>;
   assignments: Array<{ ministryId: string; budgetCode: string; title: string; themeId: string }>;
 }
+interface DiaryEntryLite {
+  id: string;
+  ministryId: string | null;
+  date: string | null;
+  datasetId: string;
+  sourceUrl: string;
+}
+interface DiariesCoverageLite {
+  windowStart: string;
+  totals: { entries: number };
+  datasets: Array<{ datasetId: string; machineReadableEntries: number }>;
+}
 
 interface Check {
   name: string;
@@ -485,6 +497,67 @@ function main(): void {
     'ממצאי האנומליות מפנים לכללים ולמשרדים קיימים',
     anomalyProblems.length === 0,
     anomalyProblems.slice(0, 5).join(' | '),
+  );
+
+  // ---- 16. diaries integrity ------------------------------------------------
+  const diaries = readJson<DiaryEntryLite[]>(p('diaries.json'));
+  const diariesCoverage = readJson<DiariesCoverageLite>(p('diaries-coverage.json'));
+  check('סכמה תקינה: diaries.json', schemas.diaries.safeParse(diaries).success, '');
+  check(
+    'סכמה תקינה: diaries-coverage.json',
+    schemas.diariesCoverage.safeParse(diariesCoverage).success,
+    '',
+  );
+  const diaryProblems: string[] = [];
+  const diaryDupes = duplicates(diaries.map((d) => d.id));
+  if (diaryDupes.length > 0)
+    diaryProblems.push(`מזהים כפולים: ${diaryDupes.slice(0, 3).join(', ')}`);
+  const datasetIds = new Set(diariesCoverage.datasets.map((d) => d.datasetId));
+  for (const entry of diaries) {
+    if (entry.ministryId !== null && !ministryIdSet.has(entry.ministryId)) {
+      diaryProblems.push(`רשומת יומן למשרד לא קיים: ${entry.ministryId}`);
+      break;
+    }
+    if (!datasetIds.has(entry.datasetId)) {
+      diaryProblems.push(`רשומת יומן למאגר לא מתועד: ${entry.datasetId}`);
+      break;
+    }
+    if (entry.date !== null && !isValidIsoDate(entry.date)) {
+      diaryProblems.push(`תאריך לא תקין: ${entry.id}`);
+      break;
+    }
+    if (entry.date !== null && entry.date < diariesCoverage.windowStart) {
+      diaryProblems.push(`רשומת יומן מחוץ לחלון הניתוח: ${entry.id} (${entry.date})`);
+      break;
+    }
+  }
+  // Coverage counters must agree with the entries actually shipped.
+  const perDataset = new Map<string, number>();
+  for (const entry of diaries) {
+    perDataset.set(entry.datasetId, (perDataset.get(entry.datasetId) ?? 0) + 1);
+  }
+  for (const ds of diariesCoverage.datasets) {
+    if (ds.machineReadableEntries !== (perDataset.get(ds.datasetId) ?? 0)) {
+      diaryProblems.push(
+        `מונה שגוי למאגר ${ds.datasetId}: ${ds.machineReadableEntries} מוצהר מול ${perDataset.get(ds.datasetId) ?? 0} בפועל`,
+      );
+    }
+  }
+  if (diariesCoverage.totals.entries !== diaries.length) {
+    diaryProblems.push(
+      `סך הרשומות המוצהר (${diariesCoverage.totals.entries}) שונה מהקובץ (${diaries.length})`,
+    );
+  }
+  if (diaries.length > 0) {
+    const catalogHasOdata = catalog.some((s) => new URL(s.url).host.endsWith('odata.org.il'));
+    if (!catalogHasOdata) {
+      diaryProblems.push('יש רשומות יומן אך מקור odata.org.il אינו מקוטלג');
+    }
+  }
+  check(
+    'רשומות היומן עקביות, בחלון הניתוח ומגובות בקטלוג המקורות',
+    diaryProblems.length === 0,
+    diaryProblems.slice(0, 5).join(' | '),
   );
 
   // ---- report -------------------------------------------------------------

@@ -328,3 +328,16 @@ test('a ministry with a corrupt contracts feed shows a data-quality banner inste
   // …and no supplier ranking may be presented as fact.
   await expect(page.getByRole('heading', { name: /הספקים המרכזיים/ })).toHaveCount(0);
 });
+
+test('the diaries screen states its source honestly in both empty and populated states', async ({
+  page,
+}) => {
+  await page.goto('/#/diaries');
+  await expect(page.getByRole('heading', { name: /יומני שרים, סגני שרים ומנכ"לים/ })).toBeVisible();
+  // The provenance caveat is non-negotiable in every state.
+  await expect(page.getByText(/היעדר יומן אינו היעדר פעילות/)).toBeVisible();
+  // Either real entries with their counter, or an explicit not-collected notice.
+  const counter = page.getByText(/רשומות מתוך/);
+  const emptyState = page.getByText(/טרם נאספו רשומות יומן/);
+  await expect(counter.or(emptyState).first()).toBeVisible();
+});

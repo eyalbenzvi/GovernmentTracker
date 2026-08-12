@@ -1,39 +1,58 @@
 /**
- * Ministers'/senior-officials' diaries collector — stage 1: PROBE.
+ * Ministers'/senior-officials' diaries collector.
  *
  * Israeli ministers, deputy ministers and director-generals must publish
- * their meeting diaries quarterly (Attorney-General directive 3.1102 and
- * government FOI procedures). The diaries are published as files on:
+ * their meeting diaries quarterly (Attorney-General directive and government
+ * FOI procedures). The diaries are published as files on:
  *
  *  1. foi.gov.il — the Government FOI Unit's central diaries page
- *     (https://foi.gov.il/he/node/6747), official source.
- *  2. www.gov.il — per-ministry FOI pages. Refuses identified automated
- *     clients (HTTP 403); we do not impersonate a browser.
+ *     (https://foi.gov.il/he/node/6747), official source. Answers HTTP 403
+ *     to identified automated clients; we do not impersonate a browser.
+ *  2. www.gov.il — per-ministry FOI pages. Same refusal, same rule.
  *  3. odata.org.il ("מידע לעם") — the Freedom of Information Movement's
  *     public CKAN repository of documents obtained under FOI. Civic helper
  *     layer, same trust tier as the Budget Key: never marked `final`.
+ *     The CKAN API answers normally; direct file downloads answer 403, so
+ *     collection reads structured rows through the datastore API only.
  *
  * This session's build environment cannot reach hosts 1 and 3 (network
  * egress policy), so this script is designed to run in GitHub Actions
  * (.github/workflows/collect-diaries.yml), where outbound access is the
  * runner's own.
  *
- * `--probe` performs a read-only reconnaissance: it inventories what each
- * source actually offers (page structure, file links, dataset resources)
- * and prints a JSON inventory to stdout between marker lines, so the
- * structure can be reviewed from the workflow log BEFORE any parser is
- * written. It writes nothing under data/processed and never commits.
- * The honesty rule applies to reconnaissance too: what a source refuses is
- * recorded as refused, not worked around.
+ * Modes:
+ *  `--probe`   read-only reconnaissance: inventories what each source offers
+ *              and prints a compact summary to the log. Writes nothing under
+ *              data/processed.
+ *  `--collect` full collection from the odata.org.il datastore: every diary
+ *              dataset relevant to the 37th government window is enumerated,
+ *              structured rows are normalised into diary entries, and
+ *              everything that could NOT be processed (PDF scans, image
+ *              files, spreadsheets that were never loaded into the
+ *              datastore) is disclosed per dataset in the coverage file —
+ *              never silently dropped and never OCR-guessed.
+ *
+ * The honesty rule applies throughout: what a source refuses is recorded as
+ * refused, not worked around; what cannot be attributed to a ministry is
+ * listed as unattributed, not guessed.
  */
 import path from 'node:path';
 import { politeFetch, USER_AGENT } from './lib/http.js';
 import { Logger } from './lib/log.js';
-import { COLLECTION_LOG_DIR, writeJson } from './lib/paths.js';
+import {
+  COLLECTION_LOG_DIR,
+  PROCESSED_DIR,
+  RAW_DIR,
+  readJson,
+  writeJson,
+  writeText,
+} from './lib/paths.js';
+import { toCsv } from './lib/csv.js';
 
 const FOI_DIARIES_PAGE = 'https://foi.gov.il/he/node/6747';
 const GOVIL_DIARIES_PAGE = 'https://www.gov.il/he/pages/minister_diary';
-const ODATA_API = 'https://www.odata.org.il/api/3/action/package_search';
+const ODATA_HOST = 'https://www.odata.org.il';
+const ODATA_API = `${ODATA_HOST}/api/3/action/package_search`;
 
 interface LinkInventory {
   href: string;
@@ -414,16 +433,587 @@ async function probe(): Promise<void> {
   console.log('===END===');
 }
 
+// ---------------------------------------------------------------------------
+// Collect stage
+// ---------------------------------------------------------------------------
+
+const WINDOW_START = '2022-12-29';
+const MAX_SEARCH_PAGES = 25; // 25 × 100 datasets is far above the diary population
+const MAX_ROWS_PER_RESOURCE = 6_000; // a quarter has ~90 days; thousands of rows is already generous
+const DIARY_YEARS = /202[3-6]|\b[01]?\d\.2[3-6]\b|-2[3-6]\b/;
+const ROLE_WORDS =
+  /(?:^|\s|")(?:יומן|יומני)\s|(?:שר[הת]?|השר[ה]?|סגן|סגנית|מנכ["״]?ל|מנכ["״]?לית|מזכיר הממשלה|החשב הכללי|ראש הממשלה)/;
+const MUNICIPAL_WORDS = /עיריי?ת|עירייה|מועצה (?:מקומית|אזורית|דתית)|ראש העיר|רשות מקומית/;
+
+interface SeedMinistry {
+  id: string;
+  officialName: string;
+  displayName: string;
+  aliases: string[];
+}
+
+interface MinistriesSeedFile {
+  ministries: SeedMinistry[];
+}
+
+export interface DiaryEntry {
+  id: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  personRole: 'minister' | 'deputy_minister' | 'director_general' | 'other_senior';
+  roleLabelHe: string;
+  subject: string;
+  date: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  location: string | null;
+  participants: string | null;
+  datasetId: string;
+  sourceUrl: string;
+  sourceTitle: string;
+  collectedAt: string;
+}
+
+interface UnparsedResource {
+  name: string;
+  format: string;
+  note: string;
+}
+
+interface DiaryDatasetCoverage {
+  datasetId: string;
+  title: string;
+  url: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  personRole: DiaryEntry['personRole'];
+  roleLabelHe: string;
+  periodLabel: string | null;
+  machineReadableEntries: number;
+  skippedEmptyRows: number;
+  outOfWindowRows: number;
+  truncated: boolean;
+  unparsedResources: UnparsedResource[];
+}
+
+/**
+ * The odata datastore stores column names either as the original Hebrew
+ * header or as a per-letter transliteration produced by its ingestion
+ * pipeline (נושא→nvsh, תאריך התחלה→tryk htkhlh, שעת→sh`t, מיקום→myqvm).
+ * Matching is done on a normalised form: lowercase, punctuation stripped,
+ * underscores as spaces.
+ */
+function normalizeFieldId(id: string): string {
+  return id
+    .toLowerCase()
+    .replace(/[_׳״"'`׳״]/g, (m) => (m === '_' ? ' ' : ''))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const FIELD_TARGETS: Record<string, keyof DiaryFieldRow> = {
+  נושא: 'subject',
+  'נושא הפגישה': 'subject',
+  nvsh: 'subject',
+  'תאריך התחלה': 'startDate',
+  תאריך: 'startDate',
+  'tryk htkhlh': 'startDate',
+  tryk: 'startDate',
+  'שעת התחלה': 'startTime',
+  שעה: 'startTime',
+  'sht htkhlh': 'startTime',
+  'תאריך סיום': 'endDate',
+  'tryk syvm': 'endDate',
+  'שעת סיום': 'endTime',
+  'sht syvm': 'endTime',
+  מיקום: 'location',
+  myqvm: 'location',
+  משתתפים: 'participants',
+  mshttpym: 'participants',
+};
+
+interface DiaryFieldRow {
+  subject: string | null;
+  startDate: string | null;
+  startTime: string | null;
+  endDate: string | null;
+  endTime: string | null;
+  location: string | null;
+  participants: string | null;
+}
+
+/** Maps datastore field ids to normalized diary columns; unknown ids are reported back. */
+export function mapDiaryFields(fieldIds: readonly string[]): {
+  mapping: Map<string, keyof DiaryFieldRow>;
+  unknown: string[];
+} {
+  const mapping = new Map<string, keyof DiaryFieldRow>();
+  const unknown: string[] = [];
+  for (const id of fieldIds) {
+    if (id === '_id' || id === '_full_text') continue;
+    const norm = normalizeFieldId(id);
+    let target = FIELD_TARGETS[norm];
+    if (target === undefined && !norm.includes(',')) {
+      // Second chance: transliterated ids sometimes glue a stray letter to a
+      // known token ("nvsh'"), so allow a prefix match — but only when the
+      // lengths are close. A whole CSV header line glued into one field id
+      // must stay unknown, or every row would ship as a fake "subject".
+      const hit = Object.keys(FIELD_TARGETS).find(
+        (k) =>
+          k.length >= 4 &&
+          ((norm.startsWith(k) && norm.length <= k.length + 2) ||
+            (k.startsWith(norm) && k.length <= norm.length + 2)),
+      );
+      if (hit !== undefined) target = FIELD_TARGETS[hit];
+    }
+    if (target === undefined) {
+      unknown.push(id);
+    } else if (![...mapping.values()].includes(target)) {
+      mapping.set(id, target);
+    }
+  }
+  return { mapping, unknown };
+}
+
+/**
+ * Diary date cells arrive as ISO dates, ISO datetimes, day-first dates with
+ * `/` or `.` separators, or Excel serial numbers that survived conversion.
+ * Anything else stays null — never guessed.
+ */
+export function parseDiaryDate(value: unknown): string | null {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    if (value < 40_000 || value > 50_000) return null; // Excel serials for ~2009–2036
+    const ms = (value - 25_569) * 86_400_000; // days since 1970-01-01
+    return new Date(ms).toISOString().slice(0, 10);
+  }
+  if (typeof value !== 'string') return null;
+  const text = value.trim();
+  if (text === '') return null;
+  const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(text);
+  if (iso !== null) return `${iso[1]}-${iso[2]}-${iso[3]}`;
+  const dayFirst = /^(\d{1,2})[./](\d{1,2})[./](\d{2,4})/.exec(text);
+  if (dayFirst !== null) {
+    const dd = dayFirst[1]?.padStart(2, '0');
+    const mm = dayFirst[2]?.padStart(2, '0');
+    let yyyy = dayFirst[3] ?? '';
+    if (yyyy.length === 2) yyyy = `20${yyyy}`;
+    const candidate = `${yyyy}-${mm}-${dd}`;
+    return Number.isNaN(Date.parse(candidate)) ? null : candidate;
+  }
+  return null;
+}
+
+/** "13:30", "13:30:00", ISO datetimes and Excel day-fractions → HH:MM. */
+export function parseDiaryTime(value: unknown): string | null {
+  if (typeof value === 'number' && Number.isFinite(value) && value >= 0 && value < 1) {
+    const totalMinutes = Math.round(value * 24 * 60);
+    const hh = String(Math.floor(totalMinutes / 60) % 24).padStart(2, '0');
+    const mm = String(totalMinutes % 60).padStart(2, '0');
+    return `${hh}:${mm}`;
+  }
+  if (typeof value !== 'string') return null;
+  const text = value.trim();
+  const m = /(?:^|T| )(\d{1,2}):(\d{2})/.exec(text);
+  if (m === null) return null;
+  const hh = Number(m[1]);
+  if (hh > 23) return null;
+  return `${String(hh).padStart(2, '0')}:${m[2]}`;
+}
+
+export interface ParsedDiaryTitle {
+  personRole: DiaryEntry['personRole'];
+  roleLabelHe: string;
+  personLabel: string | null;
+  periodLabel: string | null;
+}
+
+/**
+ * Dataset titles follow (loosely) "יומן {role and office}, {name}, לשנת YYYY
+ * (רבעון N)". Only what the title states explicitly is extracted; a title
+ * that names two office-holders keeps the combined label as-is.
+ */
+export function parseDiaryTitle(title: string): ParsedDiaryTitle {
+  const roleLabel =
+    title
+      .replace(/^\s*יומ(?:ן|ני)\s+/, '')
+      .split(',')[0]
+      ?.trim() ?? title.trim();
+  let personRole: DiaryEntry['personRole'] = 'other_senior';
+  if (/סגן|סגנית/.test(roleLabel)) personRole = 'deputy_minister';
+  else if (/מנכ["״]?ל/.test(roleLabel)) personRole = 'director_general';
+  else if (/(?:^|\s)(?:שר|שרה|שרת|השר|השרה)(?:\s|$)|^שר[הת]?\s|שרת?\s/.test(roleLabel))
+    personRole = 'minister';
+
+  let personLabel: string | null = null;
+  const nameMatch = /,\s*([^,]+?)\s*,?\s*לשנ(?:ת|ים)\s/.exec(title);
+  if (nameMatch !== undefined && nameMatch !== null && nameMatch[1] !== undefined) {
+    const candidate = nameMatch[1].trim();
+    // A segment that still contains a role word is a combined label, kept raw.
+    personLabel = candidate.length > 1 ? candidate : null;
+  }
+
+  let periodLabel: string | null = null;
+  const period = /לשנ(?:ת|ים)\s+(.+)$/.exec(title);
+  if (period !== null && period[1] !== undefined) periodLabel = period[1].trim();
+  else {
+    const range = /(\d{1,2}\.\d{1,2}\.\d{2,4}\s*[-–]\s*\d{1,2}\.\d{1,2}\.\d{2,4})/.exec(title);
+    if (range !== null && range[1] !== undefined) periodLabel = range[1];
+  }
+  return { personRole, roleLabelHe: roleLabel, personLabel, periodLabel };
+}
+
+function normalizeName(name: string): string {
+  return name
+    .replace(/\s+/g, ' ')
+    .replace(/["'״׳]/g, '')
+    .trim();
+}
+
+/**
+ * Attributes a diary dataset to a budget section by matching the seed's
+ * declared aliases against the dataset title. Aliases are tried longest
+ * first so "המשרד לביטחון לאומי" wins over "משרד הביטחון" in titles that
+ * contain both words. Titles that match nothing stay unattributed and are
+ * listed as such — a person's name is never used to infer their ministry.
+ */
+export function matchMinistryByTitle(
+  title: string,
+  ministries: readonly SeedMinistry[],
+): string | null {
+  const normalizedTitle = normalizeName(title);
+  const candidates: { id: string; alias: string }[] = [];
+  for (const ministry of ministries) {
+    for (const alias of ministry.aliases) {
+      const normalizedAlias = normalizeName(alias);
+      if (normalizedAlias.length < 4) continue;
+      // Also try the alias without a leading "משרד ה"/"המשרד ל" so titles
+      // like "שר האוצר" (no "משרד") still match "משרד האוצר".
+      const variants = new Set([normalizedAlias]);
+      const stripped = normalizedAlias.replace(/^(?:המשרד ל|משרד ה|משרד )/, '');
+      if (stripped.length >= 4) variants.add(stripped);
+      for (const variant of variants) {
+        if (normalizedTitle.includes(variant)) {
+          candidates.push({ id: ministry.id, alias: variant });
+        }
+      }
+    }
+  }
+  if (candidates.length === 0) return null;
+  candidates.sort((a, b) => b.alias.length - a.alias.length);
+  const best = candidates[0];
+  return best === undefined ? null : best.id;
+}
+
+interface CkanResource {
+  id?: string;
+  name?: string;
+  format?: string;
+  url?: string;
+  datastore_active?: boolean;
+}
+
+interface CkanDataset {
+  name?: string;
+  title?: string;
+  organization?: { title?: string } | null;
+  resources?: CkanResource[];
+}
+
+async function ckanJson<T>(logger: Logger, purpose: string, url: string): Promise<T | null> {
+  const result = await politeFetch(url, {
+    purpose,
+    logger,
+    useCache: true,
+    accept: 'application/json',
+  });
+  if (!result.ok || result.body === null) return null;
+  try {
+    return JSON.parse(result.body) as T;
+  } catch {
+    return null;
+  }
+}
+
+/** Enumerate every CKAN dataset matching the diary search, page by page. */
+async function enumerateDiaryDatasets(logger: Logger): Promise<CkanDataset[]> {
+  const seen = new Map<string, CkanDataset>();
+  for (let page = 0; page < MAX_SEARCH_PAGES; page += 1) {
+    const url = `${ODATA_API}?q=${encodeURIComponent('יומן')}&rows=100&start=${page * 100}&sort=metadata_created+desc`;
+    const parsed = await ckanJson<{ result?: { count?: number; results?: CkanDataset[] } }>(
+      logger,
+      `collect: dataset search page ${page}`,
+      url,
+    );
+    const results = parsed?.result?.results ?? [];
+    for (const ds of results) {
+      if (ds.name !== undefined) seen.set(ds.name, ds);
+    }
+    const total = parsed?.result?.count ?? 0;
+    if ((page + 1) * 100 >= total || results.length === 0) break;
+  }
+  return [...seen.values()];
+}
+
+export function isRelevantDiaryDataset(title: string): boolean {
+  if (!/יומן|יומני/.test(title)) return false;
+  if (MUNICIPAL_WORDS.test(title)) return false;
+  if (!ROLE_WORDS.test(title)) return false;
+  return DIARY_YEARS.test(title);
+}
+
+async function fetchDatastoreRows(
+  logger: Logger,
+  resourceId: string,
+  datasetName: string,
+): Promise<{ fields: string[]; rows: Record<string, unknown>[]; truncated: boolean } | null> {
+  const rows: Record<string, unknown>[] = [];
+  let fields: string[] = [];
+  let offset = 0;
+  let truncated = false;
+  for (;;) {
+    const url = `${ODATA_HOST}/api/3/action/datastore_search?resource_id=${encodeURIComponent(resourceId)}&limit=1000&offset=${offset}`;
+    const parsed = await ckanJson<{
+      success?: boolean;
+      result?: { total?: number; fields?: { id: string }[]; records?: Record<string, unknown>[] };
+    }>(logger, `collect: datastore rows ${datasetName}`, url);
+    if (parsed?.success !== true || parsed.result === undefined) {
+      return rows.length > 0 ? { fields, rows, truncated } : null;
+    }
+    if (fields.length === 0) fields = (parsed.result.fields ?? []).map((f) => f.id);
+    const batch = parsed.result.records ?? [];
+    rows.push(...batch);
+    offset += batch.length;
+    const total = parsed.result.total ?? 0;
+    if (rows.length >= MAX_ROWS_PER_RESOURCE) {
+      truncated = rows.length < total;
+      rows.length = Math.min(rows.length, MAX_ROWS_PER_RESOURCE);
+      break;
+    }
+    if (batch.length === 0 || offset >= total) break;
+  }
+  return { fields, rows, truncated };
+}
+
+function readCell(row: Record<string, unknown>, key: string): unknown {
+  return Object.prototype.hasOwnProperty.call(row, key) ? row[key] : undefined;
+}
+
+async function collect(): Promise<void> {
+  const logger = new Logger('collect-diaries');
+  const collectedAt = new Date().toISOString().slice(0, 10);
+  const seed = readJson<MinistriesSeedFile>(path.join(RAW_DIR, 'seeds', 'ministries.seed.json'));
+
+  console.log('Collecting published diaries from the odata.org.il datastore…\n');
+  const allDatasets = await enumerateDiaryDatasets(logger);
+  const relevant = allDatasets
+    .filter((ds) => isRelevantDiaryDataset(ds.title ?? ''))
+    .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
+  console.log(`datasets: ${allDatasets.length} matched the search, ${relevant.length} relevant`);
+
+  const entries: DiaryEntry[] = [];
+  const coverage: DiaryDatasetCoverage[] = [];
+  const unmatchedTitles: string[] = [];
+
+  for (const ds of relevant) {
+    const datasetId = ds.name ?? '';
+    const title = ds.title ?? datasetId;
+    const datasetUrl = `${ODATA_HOST}/dataset/${datasetId}`;
+    const parsedTitle = parseDiaryTitle(title);
+    const ministryId = matchMinistryByTitle(title, seed.ministries);
+    if (ministryId === null) unmatchedTitles.push(title);
+
+    const detail = await ckanJson<{ result?: CkanDataset }>(
+      logger,
+      `collect: package_show ${datasetId}`,
+      `${ODATA_HOST}/api/3/action/package_show?id=${encodeURIComponent(datasetId)}`,
+    );
+    const resources = detail?.result?.resources ?? [];
+
+    const cov: DiaryDatasetCoverage = {
+      datasetId,
+      title,
+      url: datasetUrl,
+      ministryId,
+      personLabel: parsedTitle.personLabel,
+      personRole: parsedTitle.personRole,
+      roleLabelHe: parsedTitle.roleLabelHe,
+      periodLabel: parsedTitle.periodLabel,
+      machineReadableEntries: 0,
+      skippedEmptyRows: 0,
+      outOfWindowRows: 0,
+      truncated: false,
+      unparsedResources: [],
+    };
+
+    for (const resource of resources) {
+      const format = (resource.format ?? '?').toUpperCase();
+      const resourceName = resource.name ?? resource.id ?? '?';
+      if (resource.datastore_active !== true) {
+        // Images embedded in the FOI response letter are not diary content.
+        if (format === 'PNG' || format === 'JPEG' || format === 'GIF') continue;
+        cov.unparsedResources.push({
+          name: resourceName,
+          format,
+          note:
+            format === 'PDF'
+              ? 'פורסם כ-PDF (לרוב סריקה) — לא עובד אוטומטית ולא שוחזר בניחוש'
+              : 'קובץ טבלאי שלא נטען ל-datastore של המאגר — לא הורד ישירות (המאגר מחזיר 403 להורדות אוטומטיות)',
+        });
+        continue;
+      }
+      if (resource.id === undefined) continue;
+      const table = await fetchDatastoreRows(logger, resource.id, datasetId);
+      if (table === null) {
+        cov.unparsedResources.push({
+          name: resourceName,
+          format,
+          note: 'ה-datastore לא החזיר רשומות עבור המשאב',
+        });
+        continue;
+      }
+      const { mapping, unknown } = mapDiaryFields(table.fields);
+      const mapped = new Set(mapping.values());
+      if (!mapped.has('subject') && !mapped.has('startDate')) {
+        cov.unparsedResources.push({
+          name: resourceName,
+          format,
+          note: `מבנה העמודות לא זוהה (עמודות: ${table.fields.slice(0, 8).join(' | ').slice(0, 160)})`,
+        });
+        continue;
+      }
+      if (unknown.length > 0) {
+        // Unknown columns are dropped, but their existence is disclosed.
+        cov.unparsedResources.push({
+          name: resourceName,
+          format,
+          note: `עמודות שלא מופו ולכן אינן מוצגות: ${unknown.join(', ').slice(0, 160)}`,
+        });
+      }
+      cov.truncated = cov.truncated || table.truncated;
+
+      for (const row of table.rows) {
+        const valueOf = (target: keyof DiaryFieldRow): unknown => {
+          for (const [fieldId, mappedTarget] of mapping) {
+            if (mappedTarget === target) return readCell(row, fieldId);
+          }
+          return undefined;
+        };
+        const subjectRaw = valueOf('subject');
+        const subject =
+          typeof subjectRaw === 'string' && subjectRaw.trim() !== '' ? subjectRaw.trim() : null;
+        const date = parseDiaryDate(valueOf('startDate'));
+        if (subject === null && date === null) {
+          cov.skippedEmptyRows += 1;
+          continue;
+        }
+        if (date !== null && (date < WINDOW_START || date > collectedAt)) {
+          cov.outOfWindowRows += 1;
+          continue;
+        }
+        const rowId = readCell(row, '_id');
+        entries.push({
+          id: `diary-${datasetId}-${resource.id.slice(0, 8)}-${String(rowId ?? entries.length)}`,
+          ministryId,
+          personLabel: parsedTitle.personLabel,
+          personRole: parsedTitle.personRole,
+          roleLabelHe: parsedTitle.roleLabelHe,
+          subject: subject ?? 'ללא נושא רשום',
+          date,
+          startTime: parseDiaryTime(valueOf('startTime')),
+          endTime: parseDiaryTime(valueOf('endTime')),
+          location: ((): string | null => {
+            const v = valueOf('location');
+            return typeof v === 'string' && v.trim() !== '' ? v.trim().slice(0, 200) : null;
+          })(),
+          participants: ((): string | null => {
+            const v = valueOf('participants');
+            return typeof v === 'string' && v.trim() !== '' ? v.trim().slice(0, 400) : null;
+          })(),
+          datasetId,
+          sourceUrl: datasetUrl,
+          sourceTitle: title,
+          collectedAt,
+        });
+        cov.machineReadableEntries += 1;
+      }
+    }
+    coverage.push(cov);
+    console.log(
+      `  ${datasetId}: ${cov.machineReadableEntries} entries, ${cov.unparsedResources.length} unparsed resources` +
+        (ministryId === null ? ' (ללא שיוך משרד)' : ` → ${ministryId}`),
+    );
+  }
+
+  entries.sort((a, b) =>
+    `${a.ministryId ?? 'zz'}|${a.date ?? '9999'}|${a.id}`.localeCompare(
+      `${b.ministryId ?? 'zz'}|${b.date ?? '9999'}|${b.id}`,
+    ),
+  );
+
+  const output = {
+    generatedAt: collectedAt,
+    source: {
+      name: 'מידע לעם — מאגר התנועה לחופש המידע',
+      url: `${ODATA_HOST}/`,
+      trustTier: 'civic_helper',
+      note:
+        'היומנים פורסמו על ידי המשרדים מכוח נוהל היומנים והועלו למאגר "מידע לעם" של התנועה לחופש המידע. ' +
+        'gov.il ו-foi.gov.il דוחים לקוחות אוטומטיים מזוהים (HTTP 403) ולכן האיסוף נעשה מהמאגר האזרחי; ' +
+        'ההורדה הישירה של קבצים מהמאגר חסומה אף היא, ולכן נקראו רק משאבים שנטענו ל-datastore. ' +
+        'שום קובץ סרוק לא פוענח ושום רשומה לא שוחזרה בניחוש.',
+    },
+    windowStart: WINDOW_START,
+    totals: {
+      datasets: coverage.length,
+      entries: entries.length,
+      datasetsWithEntries: coverage.filter((c) => c.machineReadableEntries > 0).length,
+      unattributedDatasets: coverage.filter((c) => c.ministryId === null).length,
+      unparsedResources: coverage.reduce((sum, c) => sum + c.unparsedResources.length, 0),
+    },
+    unmatchedTitles: unmatchedTitles.sort((a, b) => a.localeCompare(b)),
+    datasets: coverage,
+  };
+
+  writeJson(path.join(PROCESSED_DIR, 'diaries.json'), entries);
+  writeJson(path.join(PROCESSED_DIR, 'diaries-coverage.json'), output);
+  writeText(
+    path.join(PROCESSED_DIR, 'csv', 'diaries.csv'),
+    toCsv(
+      ['id', 'משרד', 'תפקיד', 'בעל התפקיד', 'תאריך', 'שעה', 'נושא', 'מיקום', 'מקור'],
+      entries.map((e) => [
+        e.id,
+        e.ministryId ?? '',
+        e.roleLabelHe,
+        e.personLabel ?? '',
+        e.date ?? '',
+        e.startTime ?? '',
+        e.subject,
+        e.location ?? '',
+        e.sourceUrl,
+      ]),
+    ),
+  );
+
+  logger.flush(
+    'הרצה בסביבת GitHub Actions. gov.il ו-foi.gov.il מחזירים 403 ללקוח מזוהה; odata.org.il נקרא דרך ה-API בלבד.',
+  );
+  console.log(
+    `\ndiaries: ${entries.length} entries from ${output.totals.datasetsWithEntries}/${coverage.length} datasets; ` +
+      `${output.totals.unparsedResources} resources disclosed as unparsed`,
+  );
+}
+
 async function main(): Promise<void> {
   const mode = process.argv[2] ?? '--probe';
   if (mode === '--probe') {
     await probe();
     return;
   }
-  console.error(
-    `Unknown mode "${mode}". Only --probe is implemented; the collect stage is added ` +
-      'after the probe confirms what the sources actually publish.',
-  );
+  if (mode === '--collect') {
+    await collect();
+    return;
+  }
+  console.error(`Unknown mode "${mode}". Use --probe or --collect.`);
   process.exitCode = 1;
 }
 

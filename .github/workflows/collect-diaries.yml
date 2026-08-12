@@ -71,6 +71,17 @@ jobs:
       - name: Run the diaries collector
         run: npx tsx scripts/collect-diaries.ts --${{ steps.request.outputs.mode }}
 
+      # Collection changes downstream artifacts (source catalog gains the
+      # diaries hosts, data-version counts change, methodology text changes),
+      # so the full build + validation gate runs before anything is committed.
+      - name: Rebuild catalog and derived datasets, then validate
+        if: steps.request.outputs.mode == 'collect'
+        run: |
+          npm run data:collect-sources
+          npm run data:build
+          npm run data:validate
+          npm run data:report
+
       - name: Upload the collection log as an artifact
         if: always()
         uses: actions/upload-artifact@v4

@@ -176,6 +176,8 @@ export interface DataVersion {
     sourcesRetrieved: number;
     topicsDefined: number;
     topicsWithActivity: number;
+    diaryEntries: number;
+    diaryDatasets: number;
   };
   changelog: Array<{ date: string; note: string }>;
 }
@@ -347,6 +349,68 @@ export interface Anomalies {
   findings: AnomalyFinding[];
 }
 
+export type DiaryPersonRole = 'minister' | 'deputy_minister' | 'director_general' | 'other_senior';
+
+export interface DiaryEntry {
+  id: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  personRole: DiaryPersonRole;
+  roleLabelHe: string;
+  subject: string;
+  date: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  location: string | null;
+  participants: string | null;
+  datasetId: string;
+  sourceUrl: string;
+  sourceTitle: string;
+  collectedAt: string;
+}
+
+export interface DiaryUnparsedResource {
+  name: string;
+  format: string;
+  note: string;
+}
+
+export interface DiaryDatasetCoverage {
+  datasetId: string;
+  title: string;
+  url: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  personRole: DiaryPersonRole;
+  roleLabelHe: string;
+  periodLabel: string | null;
+  machineReadableEntries: number;
+  skippedEmptyRows: number;
+  outOfWindowRows: number;
+  truncated: boolean;
+  unparsedResources: DiaryUnparsedResource[];
+}
+
+export interface DiariesCoverage {
+  generatedAt: string;
+  source: {
+    name: string;
+    url: string;
+    trustTier: 'civic_helper';
+    note: string;
+  };
+  windowStart: string;
+  totals: {
+    datasets: number;
+    entries: number;
+    datasetsWithEntries: number;
+    unattributedDatasets: number;
+    unparsedResources: number;
+  };
+  unmatchedTitles: string[];
+  datasets: DiaryDatasetCoverage[];
+}
+
 export interface Dataset {
   ministries: Ministry[];
   ministerTenures: MinisterTenure[];
@@ -362,4 +426,6 @@ export interface Dataset {
   budgetThemes: BudgetThemes;
   findings: Findings;
   anomalies: Anomalies;
+  diaries: DiaryEntry[];
+  diariesCoverage: DiariesCoverage;
 }

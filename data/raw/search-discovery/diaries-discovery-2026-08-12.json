@@ -1,0 +1,39 @@
+{
+  "$schema": "./README.md",
+  "captureId": "diaries-discovery-2026-08-12",
+  "capturedAt": "2026-08-12",
+  "collectionTool": "Claude Code WebSearch tool (search index)",
+  "important": "תוצאות חיפוש גולמיות: כותרת + URL בלבד. עמודי gov.il ו-foi.gov.il מחזירים HTTP 403 ללקוחות אוטומטיים מזוהים; קבצי היומן עצמם נקראים דרך ה-API הציבורי של מאגר \"מידע לעם\" (odata.org.il) בסביבת GitHub Actions בלבד. אין בקובץ זה נתוני יומן.",
+  "queries": [
+    {
+      "queryId": "q-diaries-central",
+      "query": "יומני שרים ומנכ\"לים פרסום רבעוני חופש המידע gov.il מאגר מרוכז",
+      "domainFilter": null,
+      "results": [
+        {
+          "title": "יומני שרים, סגני שרים ומנכ\"לים | חוק חופש המידע — היחידה הממשלתית לחופש המידע",
+          "url": "https://foi.gov.il/he/node/6747"
+        },
+        {
+          "title": "יומני שרים — עמוד הריכוז ב-gov.il",
+          "url": "https://www.gov.il/he/pages/minister_diary"
+        },
+        {
+          "title": "יומני שרי ממשלת ישראל שנת 2023 — מסמכים — מידע לעם",
+          "url": "https://www.odata.org.il/dataset/2023"
+        }
+      ]
+    },
+    {
+      "queryId": "q-diaries-odata",
+      "query": "\"יומנים פתוחים\" יומני שרים התנועה לחופש המידע מאגר",
+      "domainFilter": null,
+      "results": [
+        {
+          "title": "מידע לעם — מאגר המסמכים של התנועה לחופש המידע (מאגר היומנים)",
+          "url": "https://www.odata.org.il/dataset"
+        }
+      ]
+    }
+  ]
+}

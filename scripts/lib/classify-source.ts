@@ -28,6 +28,8 @@ const PUBLISHER_BY_HOST: ReadonlyArray<[string, string]> = [
   ['data.gov.il', 'data.gov.il — מאגרי מידע ממשלתיים'],
   ['www.gov.il', 'מדינת ישראל — Gov.il'],
   ['next.obudget.org', 'מפתח התקציב — הסדנא לידע ציבורי'],
+  ['foi.gov.il', 'היחידה הממשלתית לחופש המידע'],
+  ['odata.org.il', 'מידע לעם — התנועה לחופש המידע'],
 ];
 
 interface TypeRule {
@@ -83,6 +85,16 @@ const TYPE_RULES: readonly TypeRule[] = [
     test: (u) => /obudget\.org/i.test(u),
     type: 'secondary_budget_layer',
     labelHe: 'שכבת עזר תקציבית (לא מקור רשמי)',
+  },
+  {
+    test: (u) => /foi\.gov\.il\/he\/node/i.test(u),
+    type: 'diaries_portal',
+    labelHe: 'עמוד היומנים המרוכז — היחידה הממשלתית לחופש המידע',
+  },
+  {
+    test: (u) => /odata\.org\.il/i.test(u),
+    type: 'foi_repository',
+    labelHe: 'מאגר מסמכי חופש מידע (שכבת עזר אזרחית)',
   },
   {
     test: (u) => /\/mk\/government\//i.test(u) || /GovtByNumber/i.test(u),
@@ -169,7 +181,10 @@ export function classifySource(url: string, title: string): SourceClassification
     publisher,
     sourceType: typeRule?.type ?? 'other_official',
     sourceTypeLabelHe: typeRule?.labelHe ?? 'מקור רשמי אחר',
-    reliabilityLevel: host.includes('obudget.org') ? 'secondary_helper' : 'primary_official',
+    reliabilityLevel:
+      host.includes('obudget.org') || host.includes('odata.org.il')
+        ? 'secondary_helper'
+        : 'primary_official',
     ministryIds: [...ministryIds].sort(),
     fiscalYears,
     mappingRule: rules.join(' | '),

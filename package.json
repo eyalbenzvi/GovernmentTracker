@@ -26,7 +26,8 @@
     "data:usage-breakdown": "tsx scripts/collect-usage-breakdown.ts",
     "data:classify-themes": "tsx scripts/classify-budget-themes.ts",
     "data:findings": "tsx scripts/collect-findings.ts",
-    "data:anomalies": "tsx scripts/scan-anomalies.ts"
+    "data:anomalies": "tsx scripts/scan-anomalies.ts",
+    "data:diaries": "tsx scripts/collect-diaries.ts --collect"
   },
   "dependencies": {
     "lucide-react": "^0.451.0",
