@@ -1,0 +1,90 @@
+{
+  "seedId": "ministries-seed",
+  "declaredAt": "2026-08-12",
+  "purpose": "רשימת המשרדים שנכללים במאגר. משרד נכנס לרשימה רק אם קיים לפחות מקור רשמי אחד שנמצא בפועל בשלב הגילוי (data/raw/search-discovery) ושמו של המשרד מופיע בכותרת המקור או בשם קובץ ספר התקציב הרשמי. שדה nameEvidence מתעד עבור כל משרד מה בדיוק מבסס את השם.",
+  "notCollectedNote": "משרדים שאינם ברשימה זו מסומנים באתר כ\"טרם נאסף\". לא נבנתה רשימת משרדים ספקולטיבית: הרשימה הרשמית המלאה מופיעה במקור הרשמי שמקוטלג תחת gov-il-cabinet.",
+  "ministries": [
+    {
+      "id": "transport",
+      "officialName": "משרד התחבורה והבטיחות בדרכים",
+      "displayName": "משרד התחבורה",
+      "aliases": ["משרד התחבורה", "תחבורה", "משרד התחבורה והבטיחות בדרכים"],
+      "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": ["0040"],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0040/2025",
+        "titleEvidence": "מפתח התקציב - תקציב משרד התחבורה (40)",
+        "queryId": "q01-transport-budget",
+        "note": "קוד הסעיף 40 מופיע במפורש בכותרת המקור ובנתיב ה-URL. מפתח התקציב שימש כאן כשכבת עזר לזיהוי הקוד בלבד, לא כמקור לנתון כספי."
+      },
+      "budgetBookVolume": "Budget24-Transportation",
+      "nameEvidence": {
+        "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+        "titleEvidence": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+        "queryId": "q03-transport-multiyear"
+      }
+    },
+    {
+      "id": "education",
+      "officialName": "משרד החינוך",
+      "displayName": "משרד החינוך",
+      "aliases": ["משרד החינוך", "חינוך"],
+      "description": "משרד האחראי על מערכת החינוך הציבורית בישראל. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": [],
+      "budgetCodeEvidence": null,
+      "budgetBookVolume": "Budget11-Education",
+      "nameEvidence": {
+        "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
+        "titleEvidence": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
+        "queryId": "q04-education-budget"
+      }
+    },
+    {
+      "id": "health",
+      "officialName": "משרד הבריאות",
+      "displayName": "משרד הבריאות",
+      "aliases": ["משרד הבריאות", "בריאות"],
+      "description": "משרד האחראי על מערכת הבריאות, רגולציה רפואית ובריאות הציבור. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": [],
+      "budgetCodeEvidence": null,
+      "budgetBookVolume": "Budget15-Health",
+      "nameEvidence": {
+        "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
+        "titleEvidence": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
+        "queryId": "q05-health-budget"
+      }
+    },
+    {
+      "id": "environment",
+      "officialName": "המשרד להגנת הסביבה",
+      "displayName": "הגנת הסביבה",
+      "aliases": ["המשרד להגנת הסביבה", "הגנת הסביבה", "איכות הסביבה"],
+      "description": "משרד האחראי על רגולציה סביבתית, איכות אוויר, פסולת ושמירת טבע. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": [],
+      "budgetCodeEvidence": null,
+      "budgetBookVolume": "Budget9-Environment",
+      "nameEvidence": {
+        "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
+        "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget9-Environment.pdf (כותרת המקור בתוצאת החיפוש הייתה \"הצעת תקציב\" בלבד)",
+        "queryId": "q07-environment-budget",
+        "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב הרשמי באתר הכנסת, ולא על כותרת מלאה. זו ראיה חלשה יותר, ולכן היא מסומנת במפורש."
+      }
+    },
+    {
+      "id": "economy",
+      "officialName": "משרד הכלכלה והתעשייה",
+      "displayName": "משרד הכלכלה",
+      "aliases": ["משרד הכלכלה והתעשייה", "משרד הכלכלה", "כלכלה ותעשייה"],
+      "description": "משרד האחראי על תעשייה, מסחר, תעסוקה ורגולציה כלכלית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+      "budgetCodes": [],
+      "budgetCodeEvidence": null,
+      "budgetBookVolume": "Budget22-Economics-Industry",
+      "nameEvidence": {
+        "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
+        "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf",
+        "queryId": "q03-transport-multiyear",
+        "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב הרשמי באתר הכנסת. ראיה חלשה יותר, מסומנת במפורש."
+      }
+    }
+  ]
+}

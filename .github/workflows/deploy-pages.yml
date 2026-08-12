@@ -1,0 +1,93 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deployments race; a newer commit supersedes an in-flight run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # Quality gate. The build job depends on this one, so nothing is published when
+  # a check fails — including a data-validation failure.
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Unit and data-integrity tests
+        run: npm test
+
+      - name: Validate the published datasets
+        run: npm run data:validate
+
+  build:
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # vite.config.ts derives `base` from GITHUB_REPOSITORY, so the bundle works
+      # both at a project sub-path and at the root of a <user>.github.io site.
+      - name: Build
+        run: npm run build
+
+      - name: Upload the built site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Report the deployment URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"

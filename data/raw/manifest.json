@@ -1,0 +1,457 @@
+{
+  "manifestVersion": 1,
+  "generatedAt": "2026-08-12",
+  "note": "קובצי מקור לא הורדו לתוך ה-repository. עבור כל מקור נשמרים כותרת, URL, מסלול הגילוי, סטטוס אחזור ו-checksum (כאשר האחזור הצליח). הסיבה מתועדת בשדה retrievalNote של כל פריט בקטלוג.",
+  "sources": [
+    {
+      "id": "src-0071cdeaa0ed",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf",
+      "title": "תקציב הצעת",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-01438d30e367",
+      "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf",
+      "title": "ירושלים - ניסן התש פ\"ג - מרץ 2023 הצעה לשנ ות תקציב המדינה עיקרי התקציב",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-066345128e9d",
+      "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp",
+      "title": "ממשלות ישראל לפי מספר",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-06f36509720d",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf",
+      "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש רשויות פיקוח",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-0b0eb2257952",
+      "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
+      "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-13d9d511dd5b",
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetinfo8.aspx",
+      "title": "תקציב המדינה במספרים",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-187fbd6d3d31",
+      "url": "https://m.knesset.gov.il/mk/government/pages/governments.aspx",
+      "title": "ממשלות ישראל",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-1bf27634fd25",
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf",
+      "title": "ד ו ח מ ב ק ר ה מ ד י נ ה ▪ תשרי \"התשפ ו ▪ אוקטובר 2025 ▪",
+      "publisher": "מבקר המדינה",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-2274762789d4",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf",
+      "title": "· הצעת תקציב לשנת הכספים 2025 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-3a41d9408a0c",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/73dd82e9-5671-ed11-8155-005056aa4246/2_73dd82e9-5671-ed11-8155-005056aa4246_11_19906.pdf",
+      "title": "רפורמת גפ\"ן (גמישות פדגוגית-ניהולית) במערכת החינוך",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-46be88e4fbd5",
+      "url": "https://data.gov.il/dataset?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91+%D7%95%D7%91%D7%99%D7%A6%D7%95%D7%A2",
+      "title": "מאגרי מידע — Government Data (חיפוש: תקציב וביצוע)",
+      "publisher": "data.gov.il — מאגרי מידע ממשלתיים",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-4d0ee52fefb0",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf",
+      "title": "תקציב הצעת",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-52af0e09d6fd",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf",
+      "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-58b1c6740f30",
+      "url": "https://main.knesset.gov.il/News/PressReleases/pages/press24032025a.aspx",
+      "title": "4.8 מיליארד ₪ נוספו לתקציב משרד הבריאות",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-5e65ac55974d",
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2023-2024.aspx",
+      "title": "תקציב המדינה - הצעה לשנות 2024-2023",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-62c69041604b",
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2025.aspx",
+      "title": "תקציב המדינה - הצעה לשנת 2025",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-681776e25e1e",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/fa35dfcc-1fbd-ef11-a855-005056aa1f91/2_fa35dfcc-1fbd-ef11-a855-005056aa1f91_11_20901.pdf",
+      "title": "מבט על תקציב החינוך",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-6d5495952ed9",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/6745f598-afce-ef11-a856-005056aa1f91/2_6745f598-afce-ef11-a856-005056aa1f91_11_20780.pdf",
+      "title": "ניתוח הכנסות המדינה בשנת 2024 והצעת התקציב לשנת 2025.",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-6fde5e83d453",
+      "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
+      "title": "דוחות על ביצוע התקציב לשנת 2024 — משרד האוצר",
+      "publisher": "מדינת ישראל — Gov.il",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-6fef18de462c",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/d3985043-afce-ef11-a856-005056aa1f91/2_d3985043-afce-ef11-a856-005056aa1f91_11_20781.pdf",
+      "title": "תיאור וניתוח הצעת תקציב המדינה לשנת 2025 וההנחות המקרו",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-735ab79375b8",
+      "url": "https://main.knesset.gov.il/About/documents/budget/BudgetExtra2024.pdf",
+      "title": "הצעת התקציב הנוסף לשנת הכספים 2024 ודברי הסבר",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-7f6eed9268db",
+      "url": "https://main.knesset.gov.il/about/documents/budget/Budget15-Health.pdf",
+      "title": "· הצעת תקציב לש ו ת הכספים 2022-2021 ודברי הסבר סת מוגשים לכ ה עשרים וארבע",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-870d2dbf620c",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/1abb8d55-f7f7-e411-80c8-00155d010977/2_1abb8d55-f7f7-e411-80c8-00155d010977_11_10594.pdf",
+      "title": "אוגדן מסמכים בנושאי איכות הסביבה",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-8a97a2e9dea2",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+      "title": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-90a246ec46c8",
+      "url": "https://fs.knesset.gov.il/globaldocs/FINANCE/17d4808b-426e-f111-a13e-005056aa7c52/4_17d4808b-426e-f111-a13e-005056aa7c52_13_21634.pdf",
+      "title": "מדינת ישראל האוצר- אגף התקציבים תקציב פיתוח, ירושלים",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-9533d35163fe",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health.pdf",
+      "title": "הצעת תקציב",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-98a7770ab0fc",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/c06946d2-f784-ec11-8147-00155d0401c3/2_c06946d2-f784-ec11-8147-00155d0401c3_11_19424.pdf",
+      "title": "כתיבה: נעם בוטוש ונתנאל קופראק, כלכלנים",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-9be0019edf77",
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx",
+      "title": "רזרבות והוצאות שונות בתקציב המדינה — תקצוב, ניצול ושקיפות",
+      "publisher": "מבקר המדינה",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-a21d2a262103",
+      "url": "https://main.knesset.gov.il/Activity/Info/MMMSummaries19/Health.pdf",
+      "title": "סוגיות מרכזיות בתחום הבריאות מוגש לחברי הכנסת — מרכז המחקר והמידע",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-a49d621b041b",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/2ea0559c-53fb-f011-a13e-005056aa7c52/2_2ea0559c-53fb-f011-a13e-005056aa7c52_11_21418.pdf",
+      "title": "מבט על תקציב המדינה לשנת 2026",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-aa4df8193f29",
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
+      "title": "הצעת תקציב",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-ab1ac9214213",
+      "url": "https://next.obudget.org/i/budget/0040/2025",
+      "title": "מפתח התקציב - תקציב משרד התחבורה (40)",
+      "publisher": "מפתח התקציב — הסדנא לידע ציבורי",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-af04be72da8f",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
+      "title": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-b0ded4ca1192",
+      "url": "https://main.knesset.gov.il/News/PressReleases/pages/press11.02.25b.aspx",
+      "title": "שר הבריאות הציג את תקציב משרדו לשנת 2025",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-b2dcdcf9661e",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/180b7347-20bd-ef11-a855-005056aa1f91/2_180b7347-20bd-ef11-a855-005056aa1f91_11_20782.pdf",
+      "title": "מבט על תקציב המדינה לשנת 2025",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-c4ecbf16dbbc",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/9640aea7-d051-f011-a85f-005056aa9911/2_9640aea7-d051-f011-a85f-005056aa9911_11_21007.pdf",
+      "title": "ניתוח התפתחות הגירעון התקציבי והסביבה המקרו-כלכלית",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-c7b0d46f072d",
+      "url": "https://main.knesset.gov.il/about/documents/budget/Budget24-Transportation.pdf",
+      "title": "הצעת תקציב",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-cb4b98f60368",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/fc793c1b-6855-eb11-811a-00155d0af32a/2_fc793c1b-6855-eb11-811a-00155d0af32a_11_18149.pdf",
+      "title": "מונחון לביאור תקציב מערכת החינוך",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-cf25861a77c8",
+      "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf",
+      "title": "דוח ביצוע התקציב לשנת 2024",
+      "publisher": "מדינת ישראל — Gov.il",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-cf643ae7b490",
+      "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf",
+      "title": "דוח ביצוע תקציב 2024 לשנת הכספים — מבקר המדינה",
+      "publisher": "מבקר המדינה",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-d3128608710e",
+      "url": "https://main.knesset.gov.il/mk/government/pages/coalitionagreements.aspx",
+      "title": "קווי יסוד והסכמים קואליציוניים",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-d5abed2a82c5",
+      "url": "https://main.knesset.gov.il/About/documents/budget/Budget10-Science-Culture-Sport2026.pdf",
+      "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-d6924a43194c",
+      "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
+      "title": "ביצוע התקציב — החשב הכללי, משרד האוצר",
+      "publisher": "משרד האוצר",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-e32604c3f881",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
+      "title": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-e5324937ada4",
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/3a4d2e74-99fa-f011-a13e-005056aa7c52/2_3a4d2e74-99fa-f011-a13e-005056aa7c52_11_21438.pdf",
+      "title": "ניתוח הכנסות המדינה בשנת 2025 והצעת התקציב לשנת 2026",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-f8343e3c3fcb",
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf",
+      "title": "מבקר המדינה — ביצוע תקציב המלחמה, נובמבר 2025",
+      "publisher": "מבקר המדינה",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-f83d653f28ea",
+      "url": "https://main.knesset.gov.il/mk/government/Pages/governments.aspx",
+      "title": "כל ממשלות ישראל",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-f89f42d6aa0b",
+      "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
+      "title": "חברי הממשלה — Gov.il",
+      "publisher": "מדינת ישראל — Gov.il",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-f8d8c52ef5a4",
+      "url": "https://fs.knesset.gov.il/25/SecondaryLaw/25_scl_r_10361229.pdf",
+      "title": "1 הצעת תקציב לשנת2026 (באלפי ₪) מס' סעיף שם הסעיף ביצוע תקציבי משוער לשנת 2025",
+      "publisher": "הכנסת",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    },
+    {
+      "id": "src-fb40521cfbc1",
+      "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
+      "title": "תקציב המדינה",
+      "publisher": "מדינת ישראל — Gov.il",
+      "downloadedAt": null,
+      "checksumSha256": null,
+      "retrievalStatus": "not_retrieved_egress_blocked"
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "collectorId": "collect-sources",
+  "startedAt": "2026-08-12T15:14:34.055Z",
+  "finishedAt": "2026-08-12T15:15:23.455Z",
+  "environmentNote": "לסביבת הבנייה יש allowlist לתעבורה יוצאת. מתחמי המקורות הרשמיים (gov.il, knesset.gov.il, mevaker.gov.il, data.gov.il, obudget.org) אינם ב-allowlist, והבקשות אליהם נענות ב-HTTP 403 עם ההודעה \"Host not in allowlist\". זו מגבלת סביבה ולא מגבלה של המקורות עצמם.",
+  "attempts": [
+    {
+      "url": "https://data.gov.il/dataset?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91+%D7%95%D7%91%D7%99%D7%A6%D7%95%D7%A2",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 98,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: data.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:34.512Z",
+      "durationMs": 448
+    },
+    {
+      "url": "https://fs.knesset.gov.il/25/SecondaryLaw/25_scl_r_10361229.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:34.750Z",
+      "durationMs": 238
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/FINANCE/17d4808b-426e-f111-a13e-005056aa7c52/4_17d4808b-426e-f111-a13e-005056aa7c52_13_21634.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:35.722Z",
+      "durationMs": 972
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/180b7347-20bd-ef11-a855-005056aa1f91/2_180b7347-20bd-ef11-a855-005056aa1f91_11_20782.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:36.922Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/1abb8d55-f7f7-e411-80c8-00155d010977/2_1abb8d55-f7f7-e411-80c8-00155d010977_11_10594.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:38.127Z",
+      "durationMs": 1205
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/2ea0559c-53fb-f011-a13e-005056aa7c52/2_2ea0559c-53fb-f011-a13e-005056aa7c52_11_21418.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:39.322Z",
+      "durationMs": 1194
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/3a4d2e74-99fa-f011-a13e-005056aa7c52/2_3a4d2e74-99fa-f011-a13e-005056aa7c52_11_21438.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:40.524Z",
+      "durationMs": 1201
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:41.724Z",
+      "durationMs": 1199
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:42.926Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/6745f598-afce-ef11-a856-005056aa1f91/2_6745f598-afce-ef11-a856-005056aa1f91_11_20780.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:44.125Z",
+      "durationMs": 1198
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/73dd82e9-5671-ed11-8155-005056aa4246/2_73dd82e9-5671-ed11-8155-005056aa4246_11_19906.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:45.327Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/9640aea7-d051-f011-a85f-005056aa9911/2_9640aea7-d051-f011-a85f-005056aa9911_11_21007.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:46.527Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:47.729Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/c06946d2-f784-ec11-8147-00155d0401c3/2_c06946d2-f784-ec11-8147-00155d0401c3_11_19424.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:48.928Z",
+      "durationMs": 1199
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/d3985043-afce-ef11-a856-005056aa1f91/2_d3985043-afce-ef11-a856-005056aa1f91_11_20781.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:50.127Z",
+      "durationMs": 1198
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/fa35dfcc-1fbd-ef11-a855-005056aa1f91/2_fa35dfcc-1fbd-ef11-a855-005056aa1f91_11_20901.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:51.331Z",
+      "durationMs": 1204
+    },
+    {
+      "url": "https://fs.knesset.gov.il/globaldocs/MMM/fc793c1b-6855-eb11-811a-00155d0af32a/2_fc793c1b-6855-eb11-811a-00155d0af32a_11_18149.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 104,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: fs.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:52.532Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 101,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:52.738Z",
+      "durationMs": 205
+    },
+    {
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 109,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: library.mevaker.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:52.879Z",
+      "durationMs": 141
+    },
+    {
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 109,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: library.mevaker.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:53.947Z",
+      "durationMs": 1068
+    },
+    {
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 109,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: library.mevaker.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:55.149Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:55.631Z",
+      "durationMs": 482
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:56.356Z",
+      "durationMs": 725
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:57.567Z",
+      "durationMs": 1210
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:58.760Z",
+      "durationMs": 1193
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:14:59.958Z",
+      "durationMs": 1198
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:01.162Z",
+      "durationMs": 1203
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:02.362Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:03.562Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://m.knesset.gov.il/mk/government/pages/governments.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: m.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:04.764Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/documents/budget/Budget10-Science-Culture-Sport2026.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:05.116Z",
+      "durationMs": 352
+    },
+    {
+      "url": "https://main.knesset.gov.il/about/documents/budget/Budget15-Health.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:05.971Z",
+      "durationMs": 855
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:07.176Z",
+      "durationMs": 1205
+    },
+    {
+      "url": "https://main.knesset.gov.il/about/documents/budget/Budget24-Transportation.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:08.374Z",
+      "durationMs": 1197
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/documents/budget/BudgetExtra2024.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:09.574Z",
+      "durationMs": 1200
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2023-2024.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:10.781Z",
+      "durationMs": 1207
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2025.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:12.009Z",
+      "durationMs": 1228
+    },
+    {
+      "url": "https://main.knesset.gov.il/About/pages/budget/budgetinfo8.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:13.179Z",
+      "durationMs": 1169
+    },
+    {
+      "url": "https://main.knesset.gov.il/Activity/Info/MMMSummaries19/Health.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:14.383Z",
+      "durationMs": 1204
+    },
+    {
+      "url": "https://main.knesset.gov.il/mk/government/pages/coalitionagreements.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:15.579Z",
+      "durationMs": 1195
+    },
+    {
+      "url": "https://main.knesset.gov.il/mk/government/Pages/governments.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:16.788Z",
+      "durationMs": 1209
+    },
+    {
+      "url": "https://main.knesset.gov.il/News/PressReleases/pages/press11.02.25b.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:17.979Z",
+      "durationMs": 1191
+    },
+    {
+      "url": "https://main.knesset.gov.il/News/PressReleases/pages/press24032025a.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 106,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: main.knesset.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:19.182Z",
+      "durationMs": 1202
+    },
+    {
+      "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 107,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: media.mevaker.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:19.377Z",
+      "durationMs": 195
+    },
+    {
+      "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: mof.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:19.739Z",
+      "durationMs": 362
+    },
+    {
+      "url": "https://next.obudget.org/i/budget/0040/2025",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: next.obudget.org. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:19.844Z",
+      "durationMs": 104
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:20.056Z",
+      "durationMs": 211
+    },
+    {
+      "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:21.053Z",
+      "durationMs": 997
+    },
+    {
+      "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:22.252Z",
+      "durationMs": 1198
+    },
+    {
+      "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:23.453Z",
+      "durationMs": 1200
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "ok": 0,
+    "blocked": 50,
+    "failed": 0
+  }
+}

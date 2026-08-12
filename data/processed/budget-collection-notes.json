@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-08-12",
+  "emitted": 0,
+  "skipped": [
+    {
+      "source": "https://www.gov.il/he/pages/budget-execution-reports-2024",
+      "reason": "לא ניתן לאחזר את העמוד (blocked). לא נגזרו ממנו נתונים."
+    },
+    {
+      "source": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
+      "reason": "לא ניתן לאחזר את העמוד (blocked). לא נגזרו ממנו נתונים."
+    },
+    {
+      "source": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
+      "reason": "לא ניתן לאחזר את קטלוג data.gov.il (blocked)."
+    },
+    {
+      "source": "https://next.obudget.org/api/query?query=select%20year%2C%20code%2C%20title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20year%20%3E%3D%202023%20order%20by%20year%2C%20code%20limit%20500",
+      "reason": "שכבת העזר התקציבית אינה נגישה (blocked)."
+    }
+  ],
+  "policy": "לא נוצרו רשומות תקציב ללא מקור שאוחזר בפועל. ערך חסר נשמר כ-null ולא כאפס. חילוץ מ-PDF לא בוצע."
+}

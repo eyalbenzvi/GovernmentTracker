@@ -1,0 +1,272 @@
+{
+  "$schema": "./README.md",
+  "captureId": "websearch-2026-08-12",
+  "capturedAt": "2026-08-12",
+  "collectionTool": "Claude Code WebSearch tool (search index)",
+  "important": "קובץ זה מכיל את תוצאות החיפוש הגולמיות בדיוק כפי שהוחזרו: כותרת + URL בלבד. גוף המסמכים עצמם לא הורד, מפני שכל מתחמי gov.il / knesset.gov.il / mevaker.gov.il / data.gov.il / obudget חסומים על ידי מדיניות ה-egress של סביבת הבנייה (403 ל-CONNECT). לכן אין בקובץ זה שום נתון כספי. אין לגזור מכאן מספרים.",
+  "queries": [
+    {
+      "queryId": "q01-transport-budget",
+      "query": "ספר התקציב 2025 משרד התחבורה תקציב מקורי מעודכן ביצוע",
+      "domainFilter": null,
+      "results": [
+        {
+          "title": "ד ו ח מ ב ק ר ה מ ד י נ ה ▪ תשרי \"התשפ ו ▪ אוקטובר 2025 ▪",
+          "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf"
+        },
+        {
+          "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf"
+        },
+        {
+          "title": "· הצעת תקציב לשנת הכספים 2025 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf"
+        },
+        {
+          "title": "מפתח התקציב - תקציב משרד התחבורה (40)",
+          "url": "https://next.obudget.org/i/budget/0040/2025"
+        },
+        {
+          "title": "ניתוח הכנסות המדינה בשנת 2024 והצעת התקציב לשנת 2025.",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/6745f598-afce-ef11-a856-005056aa1f91/2_6745f598-afce-ef11-a856-005056aa1f91_11_20780.pdf"
+        },
+        {
+          "title": "תקציב המדינה - הצעה לשנת 2025",
+          "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2025.aspx"
+        }
+      ]
+    },
+    {
+      "queryId": "q02-budget2024-education-health",
+      "query": "הצעת תקציב 2024 דברי הסבר משרד החינוך משרד הבריאות knesset.gov.il budget documents",
+      "domainFilter": ["knesset.gov.il"],
+      "results": [
+        {
+          "title": "הצעת התקציב הנוסף לשנת הכספים 2024 ודברי הסבר",
+          "url": "https://main.knesset.gov.il/About/documents/budget/BudgetExtra2024.pdf"
+        },
+        {
+          "title": "ירושלים - ניסן התש פ\"ג - מרץ 2023 הצעה לשנ ות תקציב המדינה עיקרי התקציב",
+          "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf"
+        },
+        {
+          "title": "תקציב המדינה - הצעה לשנות 2024-2023",
+          "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2023-2024.aspx"
+        },
+        {
+          "title": "מבט על תקציב החינוך",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/fa35dfcc-1fbd-ef11-a855-005056aa1f91/2_fa35dfcc-1fbd-ef11-a855-005056aa1f91_11_20901.pdf"
+        },
+        {
+          "title": "רפורמת גפ\"ן (גמישות פדגוגית-ניהולית) במערכת החינוך",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/73dd82e9-5671-ed11-8155-005056aa4246/2_73dd82e9-5671-ed11-8155-005056aa4246_11_19906.pdf"
+        },
+        {
+          "title": "תקציב המדינה במספרים",
+          "url": "https://main.knesset.gov.il/About/pages/budget/budgetinfo8.aspx"
+        }
+      ]
+    },
+    {
+      "queryId": "q03-transport-multiyear",
+      "query": "הצעת תקציב משרד התחבורה 2023 2024 2025 2026 דברי הסבר PDF",
+      "domainFilter": ["knesset.gov.il"],
+      "results": [
+        {
+          "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+          "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf"
+        },
+        {
+          "title": "מבט על תקציב המדינה לשנת 2025",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/180b7347-20bd-ef11-a855-005056aa1f91/2_180b7347-20bd-ef11-a855-005056aa1f91_11_20782.pdf"
+        },
+        {
+          "title": "הצעת תקציב",
+          "url": "https://main.knesset.gov.il/about/documents/budget/Budget24-Transportation.pdf"
+        },
+        {
+          "title": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf"
+        },
+        {
+          "title": "ניתוח התפתחות הגירעון התקציבי והסביבה המקרו-כלכלית",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/9640aea7-d051-f011-a85f-005056aa9911/2_9640aea7-d051-f011-a85f-005056aa9911_11_21007.pdf"
+        }
+      ]
+    },
+    {
+      "queryId": "q04-education-budget",
+      "query": "הצעת תקציב משרד החינוך דברי הסבר 2025 2026 PDF תקציב המדינה",
+      "domainFilter": ["knesset.gov.il"],
+      "results": [
+        {
+          "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
+          "url": "https://main.knesset.gov.il/About/documents/budget/Budget10-Science-Culture-Sport2026.pdf"
+        },
+        {
+          "title": "תיאור וניתוח הצעת תקציב המדינה לשנת 2025 וההנחות המקרו",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/d3985043-afce-ef11-a856-005056aa1f91/2_d3985043-afce-ef11-a856-005056aa1f91_11_20781.pdf"
+        },
+        {
+          "title": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf"
+        },
+        {
+          "title": "מונחון לביאור תקציב מערכת החינוך",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/fc793c1b-6855-eb11-811a-00155d0af32a/2_fc793c1b-6855-eb11-811a-00155d0af32a_11_18149.pdf"
+        },
+        {
+          "title": "תקציב הצעת",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf"
+        },
+        {
+          "title": "מבט על תקציב המדינה לשנת 2026",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/2ea0559c-53fb-f011-a13e-005056aa7c52/2_2ea0559c-53fb-f011-a13e-005056aa7c52_11_21418.pdf"
+        }
+      ]
+    },
+    {
+      "queryId": "q05-health-budget",
+      "query": "הצעת תקציב משרד הבריאות דברי הסבר 2025 2026 PDF תקציב המדינה",
+      "domainFilter": ["knesset.gov.il"],
+      "results": [
+        {
+          "title": "שר הבריאות הציג את תקציב משרדו לשנת 2025",
+          "url": "https://main.knesset.gov.il/News/PressReleases/pages/press11.02.25b.aspx"
+        },
+        {
+          "title": "מדינת ישראל האוצר- אגף התקציבים תקציב פיתוח, ירושלים",
+          "url": "https://fs.knesset.gov.il/globaldocs/FINANCE/17d4808b-426e-f111-a13e-005056aa7c52/4_17d4808b-426e-f111-a13e-005056aa7c52_13_21634.pdf"
+        },
+        {
+          "title": "ניתוח הכנסות המדינה בשנת 2025 והצעת התקציב לשנת 2026",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/3a4d2e74-99fa-f011-a13e-005056aa7c52/2_3a4d2e74-99fa-f011-a13e-005056aa7c52_11_21438.pdf"
+        },
+        {
+          "title": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf"
+        }
+      ]
+    },
+    {
+      "queryId": "q06-health-budget-books",
+      "query": "Budget Health 2026 2025 הצעת תקציב משרד הבריאות ודברי הסבר documents budget PDF",
+      "domainFilter": ["m.knesset.gov.il", "main.knesset.gov.il"],
+      "results": [
+        {
+          "title": "הצעת תקציב",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health.pdf"
+        },
+        {
+          "title": "· הצעת תקציב לש ו ת הכספים 2022-2021 ודברי הסבר סת מוגשים לכ ה עשרים וארבע",
+          "url": "https://main.knesset.gov.il/about/documents/budget/Budget15-Health.pdf"
+        },
+        {
+          "title": "תקציב הצעת",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf"
+        },
+        {
+          "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש רשויות פיקוח",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf"
+        },
+        {
+          "title": "סוגיות מרכזיות בתחום הבריאות מוגש לחברי הכנסת — מרכז המחקר והמידע",
+          "url": "https://main.knesset.gov.il/Activity/Info/MMMSummaries19/Health.pdf"
+        },
+        {
+          "title": "4.8 מיליארד ₪ נוספו לתקציב משרד הבריאות",
+          "url": "https://main.knesset.gov.il/News/PressReleases/pages/press24032025a.aspx"
+        }
+      ]
+    },
+    {
+      "queryId": "q07-environment-budget",
+      "query": "הצעת תקציב המשרד להגנת הסביבה 2025 2026 דברי הסבר PDF",
+      "domainFilter": ["knesset.gov.il"],
+      "results": [
+        {
+          "title": "הצעת תקציב",
+          "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf"
+        },
+        {
+          "title": "1 הצעת תקציב לשנת2026 (באלפי ₪) מס' סעיף שם הסעיף ביצוע תקציבי משוער לשנת 2025",
+          "url": "https://fs.knesset.gov.il/25/SecondaryLaw/25_scl_r_10361229.pdf"
+        },
+        {
+          "title": "אוגדן מסמכים בנושאי איכות הסביבה",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/1abb8d55-f7f7-e411-80c8-00155d010977/2_1abb8d55-f7f7-e411-80c8-00155d010977_11_10594.pdf"
+        },
+        {
+          "title": "כתיבה: נעם בוטוש ונתנאל קופראק, כלכלנים",
+          "url": "https://fs.knesset.gov.il/globaldocs/MMM/c06946d2-f784-ec11-8147-00155d0401c3/2_c06946d2-f784-ec11-8147-00155d0401c3_11_19424.pdf"
+        }
+      ]
+    },
+    {
+      "queryId": "q08-budget-execution",
+      "query": "אגף התקציבים דוח ביצוע תקציב המדינה 2024 2025 נתוני ביצוע לפי משרדים אוצר",
+      "domainFilter": ["gov.il", "mof.gov.il"],
+      "results": [
+        {
+          "title": "ביצוע התקציב — החשב הכללי, משרד האוצר",
+          "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx"
+        },
+        {
+          "title": "מבקר המדינה — ביצוע תקציב המלחמה, נובמבר 2025",
+          "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf"
+        },
+        {
+          "title": "דוח ביצוע התקציב לשנת 2024",
+          "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf"
+        },
+        {
+          "title": "תקציב המדינה",
+          "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page"
+        },
+        {
+          "title": "מאגרי מידע — Government Data (חיפוש: תקציב וביצוע)",
+          "url": "https://data.gov.il/dataset?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91+%D7%95%D7%91%D7%99%D7%A6%D7%95%D7%A2"
+        },
+        {
+          "title": "דוח ביצוע תקציב 2024 לשנת הכספים — מבקר המדינה",
+          "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf"
+        },
+        {
+          "title": "דוחות על ביצוע התקציב לשנת 2024 — משרד האוצר",
+          "url": "https://www.gov.il/he/pages/budget-execution-reports-2024"
+        },
+        {
+          "title": "רזרבות והוצאות שונות בתקציב המדינה — תקצוב, ניצול ושקיפות",
+          "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx"
+        }
+      ]
+    },
+    {
+      "queryId": "q09-government-37",
+      "query": "הממשלה ה-37 הרכב הממשלה שרים 29 בדצמבר 2022 רשימת השרים אתר הממשלה",
+      "domainFilter": ["gov.il", "knesset.gov.il"],
+      "results": [
+        {
+          "title": "חברי הממשלה — Gov.il",
+          "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet"
+        },
+        {
+          "title": "ממשלות ישראל",
+          "url": "https://m.knesset.gov.il/mk/government/pages/governments.aspx"
+        },
+        {
+          "title": "כל ממשלות ישראל",
+          "url": "https://main.knesset.gov.il/mk/government/Pages/governments.aspx"
+        },
+        {
+          "title": "ממשלות ישראל לפי מספר",
+          "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp"
+        },
+        {
+          "title": "קווי יסוד והסכמים קואליציוניים",
+          "url": "https://main.knesset.gov.il/mk/government/pages/coalitionagreements.aspx"
+        }
+      ]
+    }
+  ]
+}

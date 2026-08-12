@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="מפת הממשלה">
+  <title>מפת הממשלה</title>
+  <rect width="64" height="64" rx="10" fill="#154b6f" />
+  <!-- Three ascending bars: budget, execution, coverage. Original geometric mark. -->
+  <rect x="14" y="36" width="8" height="16" rx="2" fill="#ffffff" />
+  <rect x="28" y="26" width="8" height="26" rx="2" fill="#ffffff" opacity="0.85" />
+  <rect x="42" y="16" width="8" height="36" rx="2" fill="#ffffff" opacity="0.7" />
+</svg>

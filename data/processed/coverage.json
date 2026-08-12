@@ -1,0 +1,77 @@
+[
+  {
+    "ministryId": "transport",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 5,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [],
+    "budgetRecordCount": 0,
+    "limitations": [
+      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
+      "5 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  },
+  {
+    "ministryId": "education",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 5,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [],
+    "budgetRecordCount": 0,
+    "limitations": [
+      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
+      "5 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  },
+  {
+    "ministryId": "health",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 6,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [],
+    "budgetRecordCount": 0,
+    "limitations": [
+      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
+      "6 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  },
+  {
+    "ministryId": "environment",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 2,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [],
+    "budgetRecordCount": 0,
+    "limitations": [
+      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
+      "2 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  },
+  {
+    "ministryId": "economy",
+    "dateRangeStart": "2022-12-29",
+    "dateRangeEnd": "2026-08-12",
+    "sourcesDefined": 1,
+    "sourcesSuccessfullyCollected": 0,
+    "activityItemCount": 0,
+    "budgetYearsAvailable": [],
+    "budgetRecordCount": 0,
+    "limitations": [
+      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
+      "1 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+    ]
+  }
+]

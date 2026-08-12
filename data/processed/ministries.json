@@ -1,0 +1,102 @@
+[
+  {
+    "id": "transport",
+    "officialName": "משרד התחבורה והבטיחות בדרכים",
+    "displayName": "משרד התחבורה",
+    "aliases": [
+      "משרד התחבורה",
+      "תחבורה",
+      "משרד התחבורה והבטיחות בדרכים"
+    ],
+    "description": "משרד האחראי על תחבורה ציבורית, תשתיות תחבורה, בטיחות בדרכים ורגולציה תחבורתית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [
+      "0040"
+    ],
+    "budgetBookVolume": "Budget24-Transportation",
+    "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
+    "nameEvidenceTitle": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0040/2025",
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "education",
+    "officialName": "משרד החינוך",
+    "displayName": "משרד החינוך",
+    "aliases": [
+      "משרד החינוך",
+      "חינוך"
+    ],
+    "description": "משרד האחראי על מערכת החינוך הציבורית בישראל. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [],
+    "budgetBookVolume": "Budget11-Education",
+    "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
+    "nameEvidenceTitle": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
+    "budgetCodeEvidenceUrl": null,
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "health",
+    "officialName": "משרד הבריאות",
+    "displayName": "משרד הבריאות",
+    "aliases": [
+      "משרד הבריאות",
+      "בריאות"
+    ],
+    "description": "משרד האחראי על מערכת הבריאות, רגולציה רפואית ובריאות הציבור. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [],
+    "budgetBookVolume": "Budget15-Health",
+    "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
+    "nameEvidenceTitle": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
+    "budgetCodeEvidenceUrl": null,
+    "dataCoverageSummary": "6 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "environment",
+    "officialName": "המשרד להגנת הסביבה",
+    "displayName": "הגנת הסביבה",
+    "aliases": [
+      "המשרד להגנת הסביבה",
+      "הגנת הסביבה",
+      "איכות הסביבה"
+    ],
+    "description": "משרד האחראי על רגולציה סביבתית, איכות אוויר, פסולת ושמירת טבע. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [],
+    "budgetBookVolume": "Budget9-Environment",
+    "nameEvidenceUrl": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
+    "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget9-Environment.pdf (כותרת המקור בתוצאת החיפוש הייתה \"הצעת תקציב\" בלבד)",
+    "budgetCodeEvidenceUrl": null,
+    "dataCoverageSummary": "2 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+  },
+  {
+    "id": "economy",
+    "officialName": "משרד הכלכלה והתעשייה",
+    "displayName": "משרד הכלכלה",
+    "aliases": [
+      "משרד הכלכלה והתעשייה",
+      "משרד הכלכלה",
+      "כלכלה ותעשייה"
+    ],
+    "description": "משרד האחראי על תעשייה, מסחר, תעסוקה ורגולציה כלכלית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
+    "activeFrom": null,
+    "activeTo": null,
+    "governmentPeriod": "הממשלה ה-37",
+    "budgetCodes": [],
+    "budgetBookVolume": "Budget22-Economics-Industry",
+    "nameEvidenceUrl": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
+    "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf",
+    "budgetCodeEvidenceUrl": null,
+    "dataCoverageSummary": "1 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+  }
+]

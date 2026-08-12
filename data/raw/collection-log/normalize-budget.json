@@ -1,0 +1,54 @@
+{
+  "collectorId": "normalize-budget",
+  "startedAt": "2026-08-12T15:15:23.964Z",
+  "finishedAt": "2026-08-12T15:15:24.328Z",
+  "environmentNote": "ניסיונות איסוף התקציב בוצעו מול המקורות הרשמיים בפועל. כישלונות אחזור מתועדים כאן ובקובץ budget-collection-notes.json.",
+  "attempts": [
+    {
+      "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
+      "purpose": "official budget execution figures",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:24.043Z",
+      "durationMs": 79
+    },
+    {
+      "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
+      "purpose": "official budget execution figures",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 97,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: mof.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:24.058Z",
+      "durationMs": 14
+    },
+    {
+      "url": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
+      "purpose": "discover official budget datasets on data.gov.il",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 98,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: data.gov.il. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:24.151Z",
+      "durationMs": 93
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20code%2C%20title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20year%20%3E%3D%202023%20order%20by%20year%2C%20code%20limit%20500",
+      "purpose": "secondary budget layer for transport code 0040",
+      "outcome": "blocked",
+      "httpStatus": 403,
+      "bytes": 103,
+      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: next.obudget.org. Add this host to your network egress settings to allow access.",
+      "attemptedAt": "2026-08-12T15:15:24.327Z",
+      "durationMs": 176
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "ok": 0,
+    "blocked": 4,
+    "failed": 0
+  }
+}

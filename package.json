@@ -1,0 +1,60 @@
+{
+  "name": "government-transparency-map-il",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "מפת הממשלה — פעילות, תקציב וביצוע. דשבורד שקיפות סטטי לממשלה ה-37.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json,md,css}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md,css}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "data:collect-sources": "tsx scripts/collect-sources.ts",
+    "data:normalize-budget": "tsx scripts/normalize-budget.ts",
+    "data:collect-activities": "tsx scripts/collect-activities.ts",
+    "data:classify-topics": "tsx scripts/classify-topics.ts",
+    "data:validate": "tsx scripts/validate-data.ts",
+    "data:build": "tsx scripts/build-data.ts",
+    "data:report": "tsx scripts/generate-data-report.ts",
+    "data:refresh": "npm run data:collect-sources && npm run data:normalize-budget && npm run data:collect-activities && npm run data:classify-topics && npm run data:build && npm run data:validate && npm run data:report"
+  },
+  "dependencies": {
+    "lucide-react": "^0.451.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@testing-library/react": "^16.0.1",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

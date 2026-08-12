@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Typography: no webfont is loaded from a CDN, because the published site must
+ * make no external runtime request. Heebo/Assistant are used when the reader has
+ * them installed; otherwise the stack falls back to a system Hebrew face.
+ */
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family:
+      'Heebo',
+      'Assistant',
+      'Segoe UI',
+      Arial,
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold tracking-tight text-slate-900;
+  }
+
+  /* A visible, high-contrast focus ring on every interactive element. */
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-brand-600;
+  }
+
+  /* Numeric cells read better aligned left-to-right even inside an RTL page. */
+  .num {
+    direction: ltr;
+    unicode-bidi: embed;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+  }
+
+  .card-pad {
+    @apply p-4 sm:p-5;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2
+      text-sm font-medium text-slate-700 transition hover:bg-slate-50
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply border-brand-700 bg-brand-700 text-white hover:bg-brand-800;
+  }
+
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+
+  .field {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
+      focus:border-brand-600;
+  }
+
+  .link {
+    @apply text-brand-700 underline decoration-brand-700/40 underline-offset-2 hover:decoration-brand-700;
+  }
+
+  .table-wrap {
+    @apply overflow-x-auto rounded-lg border border-slate-200 bg-white;
+  }
+
+  .data-table {
+    @apply w-full border-collapse text-right text-sm;
+  }
+
+  .data-table thead th {
+    @apply sticky top-0 z-10 whitespace-nowrap border-b border-slate-200 bg-slate-100 px-3 py-2
+      text-right text-xs font-semibold uppercase tracking-wide text-slate-600;
+  }
+
+  .data-table tbody td {
+    @apply border-b border-slate-100 px-3 py-2 align-top text-slate-800;
+  }
+
+  .data-table tbody tr:hover {
+    @apply bg-slate-50;
+  }
+
+  .skip-link {
+    @apply absolute right-2 top-2 z-50 -translate-y-16 rounded bg-brand-700 px-4 py-2 text-white
+      transition focus:translate-y-0;
+  }
+}

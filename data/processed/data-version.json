@@ -1,0 +1,25 @@
+{
+  "version": "2026-08-12.1",
+  "builtAt": "2026-08-12T15:15:33.112Z",
+  "collectionWindowStart": "2022-12-29",
+  "collectionWindowEnd": "2026-08-12",
+  "governmentPeriod": "הממשלה ה-37",
+  "counts": {
+    "ministries": 5,
+    "ministriesWithBudgetData": 0,
+    "ministriesWithActivityData": 0,
+    "budgetItems": 0,
+    "activityItems": 0,
+    "ministerTenures": 0,
+    "sources": 50,
+    "sourcesRetrieved": 0,
+    "topicsDefined": 12,
+    "topicsWithActivity": 0
+  },
+  "changelog": [
+    {
+      "date": "2026-08-12",
+      "note": "גרסת נתונים ראשונה. 50 מקורות רשמיים קוטלגו עבור 5 משרדים. נתוני תקציב ופעילות לא נאספו: מתחמי המקורות הרשמיים חסומים על ידי מדיניות ה-egress של סביבת הבנייה, והוחלט לא להציג מספרים שאינם ניתנים לאימות."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+name: Refresh public data (manual only)
+
+# Deliberately manual. Public data sources are shared infrastructure, and there is
+# no reason to hit them on a schedule: budget books and execution reports change a
+# handful of times a year, not hourly. Run this when a new publication is out.
+on:
+  workflow_dispatch:
+    inputs:
+      commit_changes:
+        description: 'Commit the refreshed data if it changed'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # The collectors respect timeouts, moderate retries and a per-host delay.
+      # NODE_USE_ENV_PROXY lets them honour HTTPS_PROXY when a runner uses one.
+      - name: Run the collection pipeline
+        env:
+          NODE_USE_ENV_PROXY: '1'
+        run: npm run data:refresh
+
+      - name: Show what changed
+        run: git --no-pager diff --stat -- data/
+
+      - name: Upload the collection log as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-log
+          path: |
+            data/raw/collection-log/
+            data/processed/DATA-REPORT.md
+          if-no-files-found: warn
+
+      # Only commit when the data actually changed. The collectors write
+      # deterministically, so an unchanged source produces no diff and no commit.
+      - name: Commit refreshed data
+        if: inputs.commit_changes
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No data changes; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: refresh public datasets from official sources"
+          git push
+          echo "Committed refreshed data. The Pages workflow will redeploy."
