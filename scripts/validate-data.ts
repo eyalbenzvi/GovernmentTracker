@@ -85,6 +85,11 @@ function main(): void {
   const dataVersion = readJson<unknown>(p('data-version.json'));
   const usage = readJson<UsageBreakdownFile>(p('usage-breakdown.json'));
   const budgetThemes = readJson<BudgetThemesFile>(p('budget-themes.json'));
+  const findings = readJson<unknown>(p('findings.json'));
+  const anomalies = readJson<{
+    rules: Array<{ id: string }>;
+    findings: Array<{ ruleId: string; ministryId: string; sourceUrl: string }>;
+  }>(p('anomalies.json'));
 
   // ---- 1. schema validation ----------------------------------------------
   // Structural result type, so parse results for differently-shaped schemas can
@@ -104,6 +109,8 @@ function main(): void {
     ['data-version.json', schemas.dataVersion.safeParse(dataVersion)],
     ['usage-breakdown.json', schemas.usageBreakdown.safeParse(usage)],
     ['budget-themes.json', schemas.budgetThemes.safeParse(budgetThemes)],
+    ['findings.json', schemas.findings.safeParse(findings)],
+    ['anomalies.json', schemas.anomalies.safeParse(anomalies)],
   ];
   for (const [file, result] of schemaTargets) {
     check(
@@ -440,6 +447,22 @@ function main(): void {
     'הסיווג התמטי שלם, עקבי ותואם כותרות',
     themeProblems.length === 0,
     themeProblems.slice(0, 5).join(' | '),
+  );
+
+  // ---- 15. anomaly findings integrity --------------------------------------
+  const anomalyProblems: string[] = [];
+  const ruleIds = new Set(anomalies.rules.map((r) => r.id));
+  for (const finding of anomalies.findings) {
+    if (!ruleIds.has(finding.ruleId))
+      anomalyProblems.push(`ממצא עם כלל לא קיים: ${finding.ruleId}`);
+    if (!ministryIdSet.has(finding.ministryId)) {
+      anomalyProblems.push(`ממצא למשרד לא קיים: ${finding.ministryId}`);
+    }
+  }
+  check(
+    'ממצאי האנומליות מפנים לכללים ולמשרדים קיימים',
+    anomalyProblems.length === 0,
+    anomalyProblems.slice(0, 5).join(' | '),
   );
 
   // ---- report -------------------------------------------------------------

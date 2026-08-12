@@ -59,12 +59,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (584 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "7f461becd63a8779d62c37616760325a3e6585729460f5cef9c87c6a4a4e6f0b"
   },
   {
     "id": "src-06f36509720d",

@@ -232,6 +232,104 @@ export interface BudgetThemes {
   assignments: ThemeAssignment[];
 }
 
+export interface TopSupplier {
+  name: string;
+  entityId: string | null;
+  entityKind: string | null;
+  contractCount: number;
+  totalVolume: number | null;
+  totalExecuted: number | null;
+  entityUrl: string | null;
+}
+
+export interface ProcurementMethodShare {
+  method: string;
+  contractCount: number;
+  totalVolume: number;
+  sharePercent: number | null;
+}
+
+export interface NotableContract {
+  supplier: string | null;
+  entityUrl: string | null;
+  purpose: string | null;
+  volume: number | null;
+  executed: number | null;
+  orderDate: string | null;
+  method: string;
+  budgetCode: string | null;
+  budgetTitle: string | null;
+  isActive: boolean | null;
+}
+
+export interface SupportRecipient {
+  name: string;
+  entityId: string | null;
+  entityKind: string | null;
+  requestCount: number;
+  totalApproved: number | null;
+  totalPaid: number | null;
+  exampleTitle: string | null;
+  entityUrl: string | null;
+}
+
+export interface BudgetChangeRequest {
+  year: number | null;
+  date: string | null;
+  reqTitle: string | null;
+  changeTypeName: string | null;
+  netExpenseDiff: number | null;
+  transactionId: string | null;
+  explanation: string;
+  sourceUrl: string;
+}
+
+export interface Findings {
+  generatedAt: string;
+  fromYear: number;
+  method: string;
+  volumeNote: string;
+  suppliers: Record<string, TopSupplier[]>;
+  contractTotals: Record<
+    string,
+    { contractCount: number; totalVolume: number; top5SharePercent: number | null }
+  >;
+  procurementMethods: Record<string, ProcurementMethodShare[]>;
+  notableContracts: Record<string, NotableContract[]>;
+  supportRecipients: Record<string, SupportRecipient[]>;
+  budgetChanges: Record<string, BudgetChangeRequest[]>;
+}
+
+export interface AnomalyRule {
+  id: string;
+  labelHe: string;
+  formulaHe: string;
+  whyInterestingHe: string;
+  appliesToClosedYearsOnly: boolean;
+}
+
+export interface AnomalyFinding {
+  ruleId: string;
+  ministryId: string;
+  code: string;
+  title: string;
+  year: number;
+  allocated: number | null;
+  revised: number | null;
+  executed: number | null;
+  evidenceHe: string;
+  sourceUrl: string;
+}
+
+export interface Anomalies {
+  generatedAt: string;
+  closedYearMax: number;
+  method: string;
+  rules: AnomalyRule[];
+  scannedCounts: Record<string, number>;
+  findings: AnomalyFinding[];
+}
+
 export interface Dataset {
   ministries: Ministry[];
   ministerTenures: MinisterTenure[];
@@ -245,4 +343,6 @@ export interface Dataset {
   dataVersion: DataVersion;
   usageBreakdown: UsageBreakdown;
   budgetThemes: BudgetThemes;
+  findings: Findings;
+  anomalies: Anomalies;
 }

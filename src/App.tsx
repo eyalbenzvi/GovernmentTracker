@@ -32,6 +32,9 @@ const SourcesPage = lazy(() =>
 const AnalysisPage = lazy(() =>
   import('./pages/AnalysisPage').then((m) => ({ default: m.AnalysisPage })),
 );
+const FindingsPage = lazy(() =>
+  import('./pages/FindingsPage').then((m) => ({ default: m.FindingsPage })),
+);
 const MethodologyPage = lazy(() =>
   import('./pages/MethodologyPage').then((m) => ({ default: m.MethodologyPage })),
 );
@@ -70,6 +73,10 @@ export default function App(): JSX.Element {
               <Route
                 path="/analysis"
                 element={<WithData render={(data) => <AnalysisPage data={data} />} />}
+              />
+              <Route
+                path="/findings"
+                element={<WithData render={(data) => <FindingsPage data={data} />} />}
               />
               <Route
                 path="/sources"

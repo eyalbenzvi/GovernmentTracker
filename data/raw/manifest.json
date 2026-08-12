@@ -26,9 +26,9 @@
       "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp",
       "title": "ממשלות ישראל לפי מספר",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "7f461becd63a8779d62c37616760325a3e6585729460f5cef9c87c6a4a4e6f0b",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-06f36509720d",

@@ -1,7 +1,7 @@
 {
   "collectorId": "collect-activities",
-  "startedAt": "2026-08-12T17:13:24.953Z",
-  "finishedAt": "2026-08-12T17:13:32.238Z",
+  "startedAt": "2026-08-12T18:15:38.891Z",
+  "finishedAt": "2026-08-12T18:15:46.162Z",
   "environmentNote": "ניסיונות איסוף הפעילות בוצעו מול gov.il בפועל. כישלונות מתועדים כאן ובקובץ activity-collection-notes.json.",
   "attempts": [
     {
@@ -11,8 +11,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:25.970Z",
-      "durationMs": 1017
+      "attemptedAt": "2026-08-12T18:15:39.672Z",
+      "durationMs": 781
     },
     {
       "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
@@ -21,8 +21,8 @@
       "httpStatus": 403,
       "bytes": 5792,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:27.366Z",
-      "durationMs": 1396
+      "attemptedAt": "2026-08-12T18:15:40.819Z",
+      "durationMs": 1147
     },
     {
       "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%AA%D7%97%D7%91%D7%95%D7%A8%D7%94%20%D7%95%D7%94%D7%91%D7%98%D7%99%D7%97%D7%95%D7%AA%20%D7%91%D7%93%D7%A8%D7%9B%D7%99%D7%9D",
@@ -31,8 +31,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:27.435Z",
-      "durationMs": 69
+      "attemptedAt": "2026-08-12T18:15:41.360Z",
+      "durationMs": 541
     },
     {
       "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A",
@@ -41,8 +41,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:28.632Z",
-      "durationMs": 1197
+      "attemptedAt": "2026-08-12T18:15:42.558Z",
+      "durationMs": 1198
     },
     {
       "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA",
@@ -51,8 +51,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:29.834Z",
-      "durationMs": 1202
+      "attemptedAt": "2026-08-12T18:15:43.761Z",
+      "durationMs": 1203
     },
     {
       "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%94%D7%9E%D7%A9%D7%A8%D7%93%20%D7%9C%D7%94%D7%92%D7%A0%D7%AA%20%D7%94%D7%A1%D7%91%D7%99%D7%91%D7%94",
@@ -61,8 +61,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:31.041Z",
-      "durationMs": 1207
+      "attemptedAt": "2026-08-12T18:15:44.962Z",
+      "durationMs": 1201
     },
     {
       "url": "https://www.gov.il/api/PublicationApi/Index?limit=50&skip=0&query=%D7%9E%D7%A9%D7%A8%D7%93%20%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%94%20%D7%95%D7%94%D7%AA%D7%A2%D7%A9%D7%99%D7%99%D7%94",
@@ -71,8 +71,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T17:13:32.237Z",
-      "durationMs": 1196
+      "attemptedAt": "2026-08-12T18:15:46.161Z",
+      "durationMs": 1199
     }
   ],
   "summary": {

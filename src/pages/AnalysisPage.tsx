@@ -498,6 +498,19 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
         </p>
       </section>
 
+      <Card className="flex flex-wrap items-center justify-between gap-4 bg-brand-50">
+        <div>
+          <h2 className="text-base font-semibold">רוצים שמות? מסך הממצאים</h2>
+          <p className="mt-1 max-w-2xl text-sm text-slate-700">
+            הספקים המרכזיים של כל משרד, מקבלי התמיכות הגדולים, ההעברות שאושרו באמצע השנה עם ההסבר
+            הרשמי, וסריקת חריגים בכל התקנות.
+          </p>
+        </div>
+        <Link className="btn btn-primary" to="/findings">
+          למסך הממצאים
+        </Link>
+      </Card>
+
       <Callout tone="caution" title="גבולות הניתוח">
         <p>
           הניתוח חל על סעיפי התקציב הרגיל של חמשת המשרדים שנאספו בלבד, ואינו כולל את תקציב הפיתוח.

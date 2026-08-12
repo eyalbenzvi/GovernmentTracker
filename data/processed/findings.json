@@ -1,0 +1,3088 @@
+{
+  "generatedAt": "2026-08-12",
+  "fromYear": 2023,
+  "method": "הנתונים ממפתח התקציב — מראה ציבורית של דוחות ההתקשרויות של החשב הכללי, מסד התמיכות והעברות התקציב שאושרו בוועדת הכספים. זו שכבת עזר: כל שורה מקושרת חזרה לאימות, ואף נתון אינו מסומן כסופי. שמות הספקים והמקבלים הם רשומות תאגידיות פומביות (חברות, עמותות, רשויות).",
+  "volumeNote": "היקף התקשרות (volume) הוא הסכום הרב-שנתי המחויב של ההסכם, לא הוצאה שנתית. \"שולם\" (executed) הוא התשלום המצטבר עד מועד העדכון.",
+  "suppliers": {
+    "transport": [
+      {
+        "name": "אניה-ד״ר ו. ריזה ובנו בע״מ",
+        "entityId": "510051436",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 20518819.4,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/510051436"
+      },
+      {
+        "name": "עירית ירושלים",
+        "entityId": "500230008",
+        "entityKind": "municipality",
+        "contractCount": 7,
+        "totalVolume": 17451377.45,
+        "totalExecuted": 42698.75,
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008"
+      },
+      {
+        "name": "GOOGLE CLOUD EMEA LIMITED",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 4,
+        "totalVolume": 16428887.21,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "נס אי.אס  בע״מ",
+        "entityId": "515482198",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 15624918.2,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/515482198"
+      },
+      {
+        "name": "אלייד - ג'נרי 2  בע״מ",
+        "entityId": "514961853",
+        "entityKind": "company",
+        "contractCount": 26,
+        "totalVolume": 15220727.77,
+        "totalExecuted": 70960.54,
+        "entityUrl": "https://next.obudget.org/i/org/company/514961853"
+      },
+      {
+        "name": "מודיעין אזרחי בעמ",
+        "entityId": "510421027",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 10600005.31,
+        "totalExecuted": 1313321.06,
+        "entityUrl": "https://next.obudget.org/i/org/company/510421027"
+      },
+      {
+        "name": "י ב מ ישראל בע״מ",
+        "entityId": "510067333",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 10182156.54,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/510067333"
+      },
+      {
+        "name": "נס א.ט.  בע״מ",
+        "entityId": "520040122",
+        "entityKind": "company",
+        "contractCount": 16,
+        "totalVolume": 9341996.69,
+        "totalExecuted": 85984.43,
+        "entityUrl": "https://next.obudget.org/i/org/company/520040122"
+      },
+      {
+        "name": "אלעד מערכות תוכנה בע״מ",
+        "entityId": "510929177",
+        "entityKind": "company",
+        "contractCount": 5,
+        "totalVolume": 5899335.14,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/510929177"
+      },
+      {
+        "name": "הראל טכנולוגיות מידע בע״מ",
+        "entityId": "511401002",
+        "entityKind": "company",
+        "contractCount": 47,
+        "totalVolume": 5657659.35,
+        "totalExecuted": 1280757.38,
+        "entityUrl": "https://next.obudget.org/i/org/company/511401002"
+      },
+      {
+        "name": "בזק החברה הישראלית לתקשורת   בע״מ",
+        "entityId": "520031931",
+        "entityKind": "company",
+        "contractCount": 6,
+        "totalVolume": 5059061.89,
+        "totalExecuted": 316872.69,
+        "entityUrl": "https://next.obudget.org/i/org/company/520031931"
+      },
+      {
+        "name": "קונסיסט מערכות בע״מ",
+        "entityId": "511277261",
+        "entityKind": "company",
+        "contractCount": 10,
+        "totalVolume": 4896284.29,
+        "totalExecuted": 219620.54,
+        "entityUrl": "https://next.obudget.org/i/org/company/511277261"
+      },
+      {
+        "name": "עירית תל-אביב-יפו",
+        "entityId": "500250006",
+        "entityKind": "municipality",
+        "contractCount": 5,
+        "totalVolume": 4797887.59,
+        "totalExecuted": 3344462.9,
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500250006"
+      },
+      {
+        "name": "פז קמעונאות ואנרגיה  בע״מ",
+        "entityId": "510216054",
+        "entityKind": "company",
+        "contractCount": 3,
+        "totalVolume": 4214021.52,
+        "totalExecuted": 547550.87,
+        "entityUrl": "https://next.obudget.org/i/org/company/510216054"
+      },
+      {
+        "name": "יו-ביטק סולושנס בע״מ",
+        "entityId": "514008333",
+        "entityKind": "company",
+        "contractCount": 4,
+        "totalVolume": 4193958.22,
+        "totalExecuted": 1166720.22,
+        "entityUrl": "https://next.obudget.org/i/org/company/514008333"
+      }
+    ],
+    "education": [
+      {
+        "name": "מילגם בע״מ",
+        "entityId": "510982325",
+        "entityKind": "company",
+        "contractCount": 31,
+        "totalVolume": 2948617742.99,
+        "totalExecuted": 25580954.17,
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325"
+      },
+      {
+        "name": "החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ)",
+        "entityId": "510525348",
+        "entityKind": "association",
+        "contractCount": 45,
+        "totalVolume": 1731521603.83,
+        "totalExecuted": 147187766.62,
+        "entityUrl": "https://next.obudget.org/i/org/association/510525348"
+      },
+      {
+        "name": "אם גרופ בע״מ",
+        "entityId": "511464927",
+        "entityKind": "company",
+        "contractCount": 14,
+        "totalVolume": 391354976.12,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/511464927"
+      },
+      {
+        "name": "גוינט ישראל (חל״צ)",
+        "entityId": "510681414",
+        "entityKind": "association",
+        "contractCount": 9,
+        "totalVolume": 294753365.42,
+        "totalExecuted": 681995.63,
+        "entityUrl": "https://next.obudget.org/i/org/association/510681414"
+      },
+      {
+        "name": "מסע ישראלי בע״מ",
+        "entityId": "513918961",
+        "entityKind": "company",
+        "contractCount": 7,
+        "totalVolume": 293513278.2,
+        "totalExecuted": 7340752.46,
+        "entityUrl": "https://next.obudget.org/i/org/company/513918961"
+      },
+      {
+        "name": "וואן פתרונות טכנולוגיים בע״מ",
+        "entityId": "520039710",
+        "entityKind": "company",
+        "contractCount": 81,
+        "totalVolume": 287675357.91,
+        "totalExecuted": 217807.2,
+        "entityUrl": "https://next.obudget.org/i/org/company/520039710"
+      },
+      {
+        "name": "אקסיומה - הישגים בהשכלה בע״מ",
+        "entityId": "512693987",
+        "entityKind": "company",
+        "contractCount": 20,
+        "totalVolume": 280539525.05,
+        "totalExecuted": 78664802.29,
+        "entityUrl": "https://next.obudget.org/i/org/company/512693987"
+      },
+      {
+        "name": "מלם הדרכה  בע״מ",
+        "entityId": "512201187",
+        "entityKind": "company",
+        "contractCount": 23,
+        "totalVolume": 264447536.5,
+        "totalExecuted": 2160168.42,
+        "entityUrl": "https://next.obudget.org/i/org/company/512201187"
+      },
+      {
+        "name": "מרמנת אירגון וניהול פרויקטים בע״מ",
+        "entityId": "512027129",
+        "entityKind": "company",
+        "contractCount": 79,
+        "totalVolume": 255578747.59,
+        "totalExecuted": 32431218.62,
+        "entityUrl": "https://next.obudget.org/i/org/company/512027129"
+      },
+      {
+        "name": "המרכז לטכנולוגיה חינוכית (חל״צ)",
+        "entityId": "510557705",
+        "entityKind": "association",
+        "contractCount": 66,
+        "totalVolume": 225357277.65,
+        "totalExecuted": 93701380.92,
+        "entityUrl": "https://next.obudget.org/i/org/association/510557705"
+      },
+      {
+        "name": "טלדור מערכות מחשבים (1986) בע\"מ",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 57,
+        "totalVolume": 221030211.79,
+        "totalExecuted": 203321619.09,
+        "entityUrl": null
+      },
+      {
+        "name": "סייט אנד סאונד חינוך בע״מ",
+        "entityId": "510526106",
+        "entityKind": "company",
+        "contractCount": 5,
+        "totalVolume": 177359550,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/510526106"
+      },
+      {
+        "name": "ביקורופא בע״מ",
+        "entityId": "511657322",
+        "entityKind": "company",
+        "contractCount": 4,
+        "totalVolume": 163971162.45,
+        "totalExecuted": 48644168.6,
+        "entityUrl": "https://next.obudget.org/i/org/company/511657322"
+      },
+      {
+        "name": "בזק החברה הישראלית לתקשורת   בע״מ",
+        "entityId": "520031931",
+        "entityKind": "company",
+        "contractCount": 21,
+        "totalVolume": 152641656.26,
+        "totalExecuted": 61192945.96,
+        "entityUrl": "https://next.obudget.org/i/org/company/520031931"
+      },
+      {
+        "name": "מטריקס אי.טי. אינטגרציה ותשתיות בע״מ",
+        "entityId": "511204026",
+        "entityKind": "company",
+        "contractCount": 69,
+        "totalVolume": 134241359.29,
+        "totalExecuted": 76184689.28,
+        "entityUrl": "https://next.obudget.org/i/org/company/511204026"
+      }
+    ],
+    "health": [
+      {
+        "name": "שירותי בריאות כללית",
+        "entityId": "589906114",
+        "entityKind": "ottoman-association",
+        "contractCount": 151,
+        "totalVolume": 246894430.57,
+        "totalExecuted": 4808049.8,
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589906114"
+      },
+      {
+        "name": "אותי (ע\"ר)",
+        "entityId": "580183986",
+        "entityKind": "association",
+        "contractCount": 5,
+        "totalVolume": 240354944.5,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/association/580183986"
+      },
+      {
+        "name": "פמי פרימיום בע״מ",
+        "entityId": "512676206",
+        "entityKind": "company",
+        "contractCount": 16,
+        "totalVolume": 203108353.39,
+        "totalExecuted": 85870502.51,
+        "entityUrl": "https://next.obudget.org/i/org/company/512676206"
+      },
+      {
+        "name": "אלו\"ט - אגודה לאומית לילדים ובוגרים עם אוטיזם (ע''ר)",
+        "entityId": "580064335",
+        "entityKind": "association",
+        "contractCount": 4,
+        "totalVolume": 192353411.7,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/association/580064335"
+      },
+      {
+        "name": "טיפול לי עד הבית  בע״מ",
+        "entityId": "515795292",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 155049262.78,
+        "totalExecuted": 68588321.37,
+        "entityUrl": "https://next.obudget.org/i/org/company/515795292"
+      },
+      {
+        "name": "טיפול רפואי מידי (טר״מ) בע״מ",
+        "entityId": "511290967",
+        "entityKind": "company",
+        "contractCount": 8,
+        "totalVolume": 153395724.99,
+        "totalExecuted": 92480585.98,
+        "entityUrl": "https://next.obudget.org/i/org/company/511290967"
+      },
+      {
+        "name": "שראל - פתרונות לוגיסטיים ומוצרים לרפואה מתקדמת בע״מ",
+        "entityId": "511900805",
+        "entityKind": "company",
+        "contractCount": 1156,
+        "totalVolume": 139515594.91,
+        "totalExecuted": 72841835.74,
+        "entityUrl": "https://next.obudget.org/i/org/company/511900805"
+      },
+      {
+        "name": "מכבי שירותי בריאות",
+        "entityId": "589902279",
+        "entityKind": "ottoman-association",
+        "contractCount": 14,
+        "totalVolume": 110609853,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589902279"
+      },
+      {
+        "name": "קופת חולים מאוחדת מרכזית עממי",
+        "entityId": "589958495",
+        "entityKind": "ottoman-association",
+        "contractCount": 14,
+        "totalVolume": 95957908,
+        "totalExecuted": 67200,
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589958495"
+      },
+      {
+        "name": "מלם מערכות בע״מ",
+        "entityId": "520044041",
+        "entityKind": "company",
+        "contractCount": 73,
+        "totalVolume": 89350744.98,
+        "totalExecuted": 21016865.53,
+        "entityUrl": "https://next.obudget.org/i/org/company/520044041"
+      },
+      {
+        "name": "גוינט ישראל (חל״צ)",
+        "entityId": "510681414",
+        "entityKind": "association",
+        "contractCount": 23,
+        "totalVolume": 83176726.92,
+        "totalExecuted": 11485695.8,
+        "entityUrl": "https://next.obudget.org/i/org/association/510681414"
+      },
+      {
+        "name": "עמל הולדינגס א.ד.  בע״מ",
+        "entityId": "511295412",
+        "entityKind": "company",
+        "contractCount": 11,
+        "totalVolume": 76809355.07,
+        "totalExecuted": 1805976.17,
+        "entityUrl": "https://next.obudget.org/i/org/company/511295412"
+      },
+      {
+        "name": "עירית ירושלים",
+        "entityId": "500230008",
+        "entityKind": "municipality",
+        "contractCount": 12,
+        "totalVolume": 76016152.09,
+        "totalExecuted": 38528959.11,
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008"
+      },
+      {
+        "name": "פרח לצמוח במקום טוב (ע\"ר)",
+        "entityId": "580344414",
+        "entityKind": "association",
+        "contractCount": 9,
+        "totalVolume": 74153975.71,
+        "totalExecuted": 33635481.73,
+        "entityUrl": "https://next.obudget.org/i/org/association/580344414"
+      },
+      {
+        "name": "קידום פרוייקטים שיקומיים ב.ה. בע״מ",
+        "entityId": "513295170",
+        "entityKind": "company",
+        "contractCount": 15,
+        "totalVolume": 73398358.89,
+        "totalExecuted": 1452500.74,
+        "entityUrl": "https://next.obudget.org/i/org/company/513295170"
+      }
+    ],
+    "environment": [
+      {
+        "name": "מסיעי אריה שאשא בע״מ",
+        "entityId": "510840028",
+        "entityKind": "company",
+        "contractCount": 10,
+        "totalVolume": 2555575840.01,
+        "totalExecuted": 1255345.7,
+        "entityUrl": "https://next.obudget.org/i/org/company/510840028"
+      },
+      {
+        "name": "חוכמת הבורקס גבינז",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 18,
+        "totalVolume": 1116296664.46,
+        "totalExecuted": 85560.46,
+        "entityUrl": null
+      },
+      {
+        "name": "40823287",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 2,
+        "totalVolume": 1116207104,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "הסעות מוני סיטון בע״מ",
+        "entityId": "511011140",
+        "entityKind": "company",
+        "contractCount": 3,
+        "totalVolume": 1022057280,
+        "totalExecuted": 11076.91,
+        "entityUrl": "https://next.obudget.org/i/org/company/511011140"
+      },
+      {
+        "name": "תיירות צובה - אגודה שיתופית חקלאית בע\"מ",
+        "entityId": "570043984",
+        "entityKind": "cooperative",
+        "contractCount": 2,
+        "totalVolume": 570049951,
+        "totalExecuted": 5967,
+        "entityUrl": "https://next.obudget.org/i/org/cooperative/570043984"
+      },
+      {
+        "name": "42836764",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 558535944,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "42807246",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 558370045,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "בזק החברה הישראלית לתקשורת   בע״מ",
+        "entityId": "520031931",
+        "entityKind": "company",
+        "contractCount": 12,
+        "totalVolume": 520523853.04,
+        "totalExecuted": 259440.48,
+        "entityUrl": "https://next.obudget.org/i/org/company/520031931"
+      },
+      {
+        "name": "ישרוטל בע״מ",
+        "entityId": "520042482",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 520042482,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/520042482"
+      },
+      {
+        "name": "סנקאר שירותים לוגיסטיים בע״מ",
+        "entityId": "511464000",
+        "entityKind": "company",
+        "contractCount": 3,
+        "totalVolume": 517064000.23,
+        "totalExecuted": 5798590.42,
+        "entityUrl": "https://next.obudget.org/i/org/company/511464000"
+      },
+      {
+        "name": "ל.י. קבוצת פרץ את חדידה  בע״מ",
+        "entityId": "516739711",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 516739711,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/516739711"
+      },
+      {
+        "name": "42444526",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 516664893,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "שי גורדון  בע״מ",
+        "entityId": "516641107",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 516641807,
+        "totalExecuted": 699.66,
+        "entityUrl": "https://next.obudget.org/i/org/company/516641107"
+      },
+      {
+        "name": "42496752",
+        "entityId": null,
+        "entityKind": null,
+        "contractCount": 1,
+        "totalVolume": 516633021,
+        "totalExecuted": 0,
+        "entityUrl": null
+      },
+      {
+        "name": "עמית עידן  בע״מ",
+        "entityId": "516429917",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 516429917,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/516429917"
+      }
+    ],
+    "economy": [
+      {
+        "name": "בנק לאומי לישראל בעמ",
+        "entityId": "520018078",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 135040201,
+        "totalExecuted": 123957680,
+        "entityUrl": "https://next.obudget.org/i/org/company/520018078"
+      },
+      {
+        "name": "בנק הפועלים בע״מ",
+        "entityId": "520000118",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 114917357,
+        "totalExecuted": 103179050,
+        "entityUrl": "https://next.obudget.org/i/org/company/520000118"
+      },
+      {
+        "name": "אתנה מעוף  בע״מ",
+        "entityId": "516228442",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 104476035.37,
+        "totalExecuted": 63501013.21,
+        "entityUrl": "https://next.obudget.org/i/org/company/516228442"
+      },
+      {
+        "name": "בידיאו מעוף בע״מ",
+        "entityId": "514752450",
+        "entityKind": "company",
+        "contractCount": 4,
+        "totalVolume": 98231554.58,
+        "totalExecuted": 50221120.57,
+        "entityUrl": "https://next.obudget.org/i/org/company/514752450"
+      },
+      {
+        "name": "בנק מזרחי טפחות בעמ",
+        "entityId": "520000522",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 92925141,
+        "totalExecuted": 80356616,
+        "entityUrl": "https://next.obudget.org/i/org/company/520000522"
+      },
+      {
+        "name": "אביב אלנתן  בע״מ",
+        "entityId": "516227022",
+        "entityKind": "company",
+        "contractCount": 3,
+        "totalVolume": 81015528.49,
+        "totalExecuted": 36102217.98,
+        "entityUrl": "https://next.obudget.org/i/org/company/516227022"
+      },
+      {
+        "name": "טימי לעסקים   בע״מ",
+        "entityId": "516227097",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 75135841.79,
+        "totalExecuted": 37557368.47,
+        "entityUrl": "https://next.obudget.org/i/org/company/516227097"
+      },
+      {
+        "name": "מרכז הגליל לחדשנות ויצור מתקדם בישראל  בע״מ",
+        "entityId": "516093895",
+        "entityKind": "company",
+        "contractCount": 3,
+        "totalVolume": 72987461.71,
+        "totalExecuted": 16546855.32,
+        "entityUrl": "https://next.obudget.org/i/org/company/516093895"
+      },
+      {
+        "name": "ישראכרט   בע״מ",
+        "entityId": "510706153",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 54999999.58,
+        "totalExecuted": 2956206.87,
+        "entityUrl": "https://next.obudget.org/i/org/company/510706153"
+      },
+      {
+        "name": "מכון יעיל לתעשייה בע״מ",
+        "entityId": "516087947",
+        "entityKind": "company",
+        "contractCount": 2,
+        "totalVolume": 47283039.07,
+        "totalExecuted": 7820091.75,
+        "entityUrl": "https://next.obudget.org/i/org/company/516087947"
+      },
+      {
+        "name": "ענבל חברה לביטוח בע״מ",
+        "entityId": "520031030",
+        "entityKind": "company",
+        "contractCount": 21,
+        "totalVolume": 30218249.04,
+        "totalExecuted": 24880561.07,
+        "entityUrl": "https://next.obudget.org/i/org/company/520031030"
+      },
+      {
+        "name": "חושן אס אמ בי שותפות מוגבלת",
+        "entityId": "540292570",
+        "entityKind": "partnership",
+        "contractCount": 1,
+        "totalVolume": 26000000,
+        "totalExecuted": 1904320,
+        "entityUrl": "https://next.obudget.org/i/org/partnership/540292570"
+      },
+      {
+        "name": "מכון התקנים הישראלי",
+        "entityId": "500500137",
+        "entityKind": "law_mandated_organization",
+        "contractCount": 11,
+        "totalVolume": 23520051.34,
+        "totalExecuted": 3178404.81,
+        "entityUrl": "https://next.obudget.org/i/org/law_mandated_organization/500500137"
+      },
+      {
+        "name": "מכון המזון הלאומי  בע״מ",
+        "entityId": "516697802",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 20112996.15,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/516697802"
+      },
+      {
+        "name": "בידיאו מנהלות  בע״מ",
+        "entityId": "516991346",
+        "entityKind": "company",
+        "contractCount": 1,
+        "totalVolume": 16121722.5,
+        "totalExecuted": 0,
+        "entityUrl": "https://next.obudget.org/i/org/company/516991346"
+      }
+    ]
+  },
+  "contractTotals": {
+    "transport": {
+      "contractCount": 3240,
+      "totalVolume": 301373988.3,
+      "top5SharePercent": 28.3
+    },
+    "education": {
+      "contractCount": 11550,
+      "totalVolume": 12624527088.77,
+      "top5SharePercent": 44.8
+    },
+    "health": {
+      "contractCount": 18085,
+      "totalVolume": 5791387678.74,
+      "top5SharePercent": 17.9
+    },
+    "environment": {
+      "contractCount": 1758,
+      "totalVolume": 20416436659.39,
+      "top5SharePercent": 31.3
+    },
+    "economy": {
+      "contractCount": 1868,
+      "totalVolume": 1282898735.08,
+      "top5SharePercent": 42.5
+    }
+  },
+  "procurementMethods": {
+    "transport": [
+      {
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "contractCount": 471,
+        "totalVolume": 95470620.4,
+        "sharePercent": 31.7
+      },
+      {
+        "method": "פטור ממכרז",
+        "contractCount": 2194,
+        "totalVolume": 82809042.95,
+        "sharePercent": 27.5
+      },
+      {
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "contractCount": 80,
+        "totalVolume": 68955015.29,
+        "sharePercent": 22.9
+      },
+      {
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "contractCount": 56,
+        "totalVolume": 28792861.22,
+        "sharePercent": 9.6
+      },
+      {
+        "method": "תקנה 17ו - מכרז מסגרת",
+        "contractCount": 84,
+        "totalVolume": 10468619.13,
+        "sharePercent": 3.5
+      },
+      {
+        "method": "העברות לגופים בינלאומיים/אמנות בינלאומיות",
+        "contractCount": 27,
+        "totalVolume": 4017688.11,
+        "sharePercent": 1.3
+      },
+      {
+        "method": "מכרז פומבי רגיל ממוכן",
+        "contractCount": 5,
+        "totalVolume": 3922477.49,
+        "sharePercent": 1.3
+      },
+      {
+        "method": "תשלומים לועד עובדים",
+        "contractCount": 9,
+        "totalVolume": 2065875,
+        "sharePercent": 0.7
+      },
+      {
+        "method": "לא דווח / אחר",
+        "contractCount": 155,
+        "totalVolume": 1633534.57,
+        "sharePercent": 0.5
+      },
+      {
+        "method": "התקשרות עם גופים ממשלתיים",
+        "contractCount": 63,
+        "totalVolume": 1246582.2,
+        "sharePercent": 0.4
+      },
+      {
+        "method": "מינוי חברים בועדות",
+        "contractCount": 84,
+        "totalVolume": 582432.71,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "תקנה 3ג - מימוש זכות ברירה",
+        "contractCount": 2,
+        "totalVolume": 505349.63,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "תקנה 23(ב) - לא הוגשה כל הצעה במכרז/ועדת המכרזים לא המליצה ע",
+        "contractCount": 3,
+        "totalVolume": 455832,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "תקנה 5(ג)(2) - התקשרות עם מומחה - בדיקת מס' הצעות",
+        "contractCount": 2,
+        "totalVolume": 323178.36,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תקנה 5א(ב)(2) - התקשרות עם מתכננים",
+        "contractCount": 1,
+        "totalVolume": 63180,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז מרכזי ממוכן",
+        "contractCount": 1,
+        "totalVolume": 44833.47,
+        "sharePercent": 0
+      },
+      {
+        "method": "תשלום פסקי דין ובוררויות",
+        "contractCount": 2,
+        "totalVolume": 10465.77,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור - תקנה 4(7) - חברה ממשלתית",
+        "contractCount": 1,
+        "totalVolume": 6400,
+        "sharePercent": 0
+      }
+    ],
+    "education": [
+      {
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "contractCount": 2038,
+        "totalVolume": 8313906029.51,
+        "sharePercent": 65.9
+      },
+      {
+        "method": "פטור ממכרז",
+        "contractCount": 5807,
+        "totalVolume": 2502747679.77,
+        "sharePercent": 19.8
+      },
+      {
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "contractCount": 1370,
+        "totalVolume": 1368182606.88,
+        "sharePercent": 10.8
+      },
+      {
+        "method": "לא דווח / אחר",
+        "contractCount": 54,
+        "totalVolume": 130737085.68,
+        "sharePercent": 1
+      },
+      {
+        "method": "תקנה 7 - מכרז פומבי עם מו\"מ",
+        "contractCount": 73,
+        "totalVolume": 113624608.64,
+        "sharePercent": 0.9
+      },
+      {
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "contractCount": 149,
+        "totalVolume": 81011819.08,
+        "sharePercent": 0.6
+      },
+      {
+        "method": "תקנה 3ג - מימוש זכות ברירה",
+        "contractCount": 45,
+        "totalVolume": 44339491.38,
+        "sharePercent": 0.4
+      },
+      {
+        "method": "תקנה 17ו - מכרז מסגרת",
+        "contractCount": 4,
+        "totalVolume": 18036333.89,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תקנה 5(ג)(4) - התקשרות עם מומחה - מינוי לועדה ציבורית/בורר/מ",
+        "contractCount": 460,
+        "totalVolume": 16412653.14,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תשלומים לועד עובדים",
+        "contractCount": 38,
+        "totalVolume": 8849067.67,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מינוי חברים בועדות",
+        "contractCount": 905,
+        "totalVolume": 8320819.22,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תקנה 23(א2) - הצעה יחידה במכרז סגור",
+        "contractCount": 8,
+        "totalVolume": 7974251.7,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מכרז מרכזי ממוכן",
+        "contractCount": 13,
+        "totalVolume": 3468183.45,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5(ג)(2) - התקשרות עם מומחה - בדיקת מס' הצעות",
+        "contractCount": 477,
+        "totalVolume": 1860591.17,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור ממוכן מהיר",
+        "contractCount": 19,
+        "totalVolume": 1560609.1,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור ממוכן - תקנה 4(2) - טובין בעל תכונות מיוחדות",
+        "contractCount": 1,
+        "totalVolume": 1490370.9,
+        "sharePercent": 0
+      },
+      {
+        "method": "התקשרות עם גופים ממשלתיים",
+        "contractCount": 78,
+        "totalVolume": 743399.47,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור - תקנה 4(2) - טובין בעל תכונות מיוחדות",
+        "contractCount": 4,
+        "totalVolume": 691591.49,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור עד 400,000 ש\"ח-הוראת שעה",
+        "contractCount": 2,
+        "totalVolume": 391716,
+        "sharePercent": 0
+      },
+      {
+        "method": "מענקים אחרים שאינם תמיכות",
+        "contractCount": 1,
+        "totalVolume": 82362,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5א(ב)(2) - התקשרות עם מתכננים",
+        "contractCount": 1,
+        "totalVolume": 42338.4,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז מסגרת ממוכן",
+        "contractCount": 1,
+        "totalVolume": 22418.37,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 23(ב) - לא הוגשה כל הצעה במכרז/ועדת המכרזים לא המליצה ע",
+        "contractCount": 1,
+        "totalVolume": 18449.26,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז סגור ממוכן - תקנה 4(8) - פרסום פומבי עלול לפגוע באינטרס",
+        "contractCount": 1,
+        "totalVolume": 12612.6,
+        "sharePercent": 0
+      }
+    ],
+    "health": [
+      {
+        "method": "לא דווח / אחר",
+        "contractCount": 1244,
+        "totalVolume": 2171097383.29,
+        "sharePercent": 37.5
+      },
+      {
+        "method": "פטור ממכרז",
+        "contractCount": 11498,
+        "totalVolume": 1287860635.39,
+        "sharePercent": 22.2
+      },
+      {
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "contractCount": 1167,
+        "totalVolume": 1074969172.75,
+        "sharePercent": 18.6
+      },
+      {
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "contractCount": 2531,
+        "totalVolume": 487029056.35,
+        "sharePercent": 8.4
+      },
+      {
+        "method": "תקנה 3ג - מימוש זכות ברירה",
+        "contractCount": 166,
+        "totalVolume": 166352591.05,
+        "sharePercent": 2.9
+      },
+      {
+        "method": "מכרז פומבי רגיל ממוכן",
+        "contractCount": 32,
+        "totalVolume": 133155074.34,
+        "sharePercent": 2.3
+      },
+      {
+        "method": "תקנה 17ו - מכרז מסגרת",
+        "contractCount": 39,
+        "totalVolume": 131050707.07,
+        "sharePercent": 2.3
+      },
+      {
+        "method": "מענקים אחרים שאינם תמיכות",
+        "contractCount": 36,
+        "totalVolume": 105377271.17,
+        "sharePercent": 1.8
+      },
+      {
+        "method": "מכרז פומבי דו שלבי ממוכן",
+        "contractCount": 15,
+        "totalVolume": 62539414.52,
+        "sharePercent": 1.1
+      },
+      {
+        "method": "מכרז פומבי מיון מוקדם ממוכן",
+        "contractCount": 2,
+        "totalVolume": 55905785.73,
+        "sharePercent": 1
+      },
+      {
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "contractCount": 714,
+        "totalVolume": 48274834.87,
+        "sharePercent": 0.8
+      },
+      {
+        "method": "מענקים לרשויות מקומיות",
+        "contractCount": 3,
+        "totalVolume": 13898936,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "התקשרות עם גופים ממשלתיים",
+        "contractCount": 51,
+        "totalVolume": 12686975.03,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "תקנה 5(ג)(2) - התקשרות עם מומחה - בדיקת מס' הצעות",
+        "contractCount": 68,
+        "totalVolume": 9240654.67,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "מינוי חברים בועדות",
+        "contractCount": 360,
+        "totalVolume": 7972558.31,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מכרז סגור ממוכן מהיר",
+        "contractCount": 5,
+        "totalVolume": 4675845.56,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מכרז סגור - תקנה 4(2) - טובין בעל תכונות מיוחדות",
+        "contractCount": 3,
+        "totalVolume": 4300987,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תקנה 5א(ב)(2) - התקשרות עם מתכננים",
+        "contractCount": 48,
+        "totalVolume": 3052893.47,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מכרז מרכזי ממוכן",
+        "contractCount": 9,
+        "totalVolume": 2157340.77,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5(ג)(1) - התקשרות עם מומחה - פניה תחרותית להצעות",
+        "contractCount": 12,
+        "totalVolume": 2085275,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 17ד - מכרז פומבי דו שלבי",
+        "contractCount": 2,
+        "totalVolume": 1625685.75,
+        "sharePercent": 0
+      },
+      {
+        "method": "לא בשימוש",
+        "contractCount": 6,
+        "totalVolume": 1464815.14,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5א(ב)(1) - התקשרות עם מתכננים",
+        "contractCount": 6,
+        "totalVolume": 1036198.1,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 17ג - מכרז פומבי מיון מוקדם",
+        "contractCount": 1,
+        "totalVolume": 1017213.7,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז מסגרת ממוכן",
+        "contractCount": 14,
+        "totalVolume": 767475.62,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5(ג)(4) - התקשרות עם מומחה - מינוי לועדה ציבורית/בורר/מ",
+        "contractCount": 31,
+        "totalVolume": 690588.12,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 7 - מכרז פומבי עם מו\"מ",
+        "contractCount": 13,
+        "totalVolume": 620773.43,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 23(א2) - הצעה יחידה במכרז סגור",
+        "contractCount": 3,
+        "totalVolume": 260039.75,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז פומבי עם מו\"מ ממוכן",
+        "contractCount": 2,
+        "totalVolume": 117240.79,
+        "sharePercent": 0
+      },
+      {
+        "method": "מכרז פומבי עם הליך תחרותי נוסף ממוכן",
+        "contractCount": 1,
+        "totalVolume": 54756,
+        "sharePercent": 0
+      }
+    ],
+    "environment": [
+      {
+        "method": "לא דווח / אחר",
+        "contractCount": 31,
+        "totalVolume": 13066138201.9,
+        "sharePercent": 64
+      },
+      {
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "contractCount": 275,
+        "totalVolume": 3732322946.91,
+        "sharePercent": 18.3
+      },
+      {
+        "method": "פטור ממכרז",
+        "contractCount": 1068,
+        "totalVolume": 2670340180.7,
+        "sharePercent": 13.1
+      },
+      {
+        "method": "מכרז מרכזי ממוכן",
+        "contractCount": 2,
+        "totalVolume": 410391000.05,
+        "sharePercent": 2
+      },
+      {
+        "method": "התקשרות עם גופים ממשלתיים",
+        "contractCount": 68,
+        "totalVolume": 287758171.83,
+        "sharePercent": 1.4
+      },
+      {
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "contractCount": 208,
+        "totalVolume": 220320366.66,
+        "sharePercent": 1.1
+      },
+      {
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "contractCount": 74,
+        "totalVolume": 22288485.43,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "תקנה 5(ג)(4) - התקשרות עם מומחה - מינוי לועדה ציבורית/בורר/מ",
+        "contractCount": 1,
+        "totalVolume": 2395575,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 3ג - מימוש זכות ברירה",
+        "contractCount": 2,
+        "totalVolume": 2065645.28,
+        "sharePercent": 0
+      },
+      {
+        "method": "העברות לגופים בינלאומיים/אמנות בינלאומיות",
+        "contractCount": 25,
+        "totalVolume": 1784235.96,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 19ה - מכרז ממוכן מהיר",
+        "contractCount": 2,
+        "totalVolume": 334299.67,
+        "sharePercent": 0
+      },
+      {
+        "method": "תשלומים לועד עובדים",
+        "contractCount": 1,
+        "totalVolume": 212550,
+        "sharePercent": 0
+      },
+      {
+        "method": "תקנה 5א(ב)(1) - התקשרות עם מתכננים",
+        "contractCount": 1,
+        "totalVolume": 85000,
+        "sharePercent": 0
+      }
+    ],
+    "economy": [
+      {
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "contractCount": 245,
+        "totalVolume": 694108562.4,
+        "sharePercent": 54.1
+      },
+      {
+        "method": "לא דווח / אחר",
+        "contractCount": 13,
+        "totalVolume": 343323110.09,
+        "sharePercent": 26.8
+      },
+      {
+        "method": "פטור ממכרז",
+        "contractCount": 711,
+        "totalVolume": 110232886.81,
+        "sharePercent": 8.6
+      },
+      {
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "contractCount": 353,
+        "totalVolume": 103317142.13,
+        "sharePercent": 8.1
+      },
+      {
+        "method": "התקשרות עם גופים ממשלתיים",
+        "contractCount": 452,
+        "totalVolume": 19746392.37,
+        "sharePercent": 1.5
+      },
+      {
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "contractCount": 30,
+        "totalVolume": 9170130.08,
+        "sharePercent": 0.7
+      },
+      {
+        "method": "העברות לגופים בינלאומיים/אמנות בינלאומיות",
+        "contractCount": 4,
+        "totalVolume": 2001024,
+        "sharePercent": 0.2
+      },
+      {
+        "method": "תשלומים לועד עובדים",
+        "contractCount": 4,
+        "totalVolume": 831060,
+        "sharePercent": 0.1
+      },
+      {
+        "method": "מכרז פומבי רגיל ממוכן",
+        "contractCount": 1,
+        "totalVolume": 104130,
+        "sharePercent": 0
+      },
+      {
+        "method": "מינוי חברים בועדות",
+        "contractCount": 55,
+        "totalVolume": 64297.2,
+        "sharePercent": 0
+      }
+    ]
+  },
+  "notableContracts": {
+    "transport": [
+      {
+        "supplier": "אניה-ד״ר ו. ריזה ובנו בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510051436",
+        "purpose": "אספקה, הדפסה, מגנוט ומשלוח של רישיונות וטפסים",
+        "volume": 20518819.4,
+        "executed": 0,
+        "orderDate": "2024-12-04",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0040500122",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "נס אי.אס  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/515482198",
+        "purpose": "מכרז לוט\"ם",
+        "volume": 15093003.51,
+        "executed": 0,
+        "orderDate": "2023-10-24",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0040500150",
+        "budgetTitle": "פיתוח משרד התחבורה",
+        "isActive": true
+      },
+      {
+        "supplier": "GOOGLE CLOUD EMEA LIMITED",
+        "entityUrl": null,
+        "purpose": "צריכת שרותי ענן ושרותי מומחה PSO  על פי מכרז נימבוס",
+        "volume": 15075383.26,
+        "executed": 0,
+        "orderDate": "2023-12-13",
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "budgetCode": "0040500150",
+        "budgetTitle": "פיתוח משרד התחבורה",
+        "isActive": true
+      },
+      {
+        "supplier": "מודיעין אזרחי בעמ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510421027",
+        "purpose": "מתן שירותי אבטחה",
+        "volume": 10600005.31,
+        "executed": 1313321.06,
+        "orderDate": "2022-02-01",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0040500122",
+        "budgetTitle": "תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "י ב מ ישראל בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510067333",
+        "purpose": "תחזוקת ציוד יבמ 2024-2025",
+        "volume": 7526029.68,
+        "executed": 0,
+        "orderDate": "2023-12-12",
+        "method": "פטור ממכרז",
+        "budgetCode": "0040500150",
+        "budgetTitle": "פיתוח משרד התחבורה",
+        "isActive": false
+      },
+      {
+        "supplier": "עירית ירושלים",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008",
+        "purpose": "ארנונה עיריית ירושלים 2025",
+        "volume": 6312332,
+        "executed": 0,
+        "orderDate": "2024-12-30",
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "budgetCode": "0040500122",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "עירית ירושלים",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008",
+        "purpose": "ארנונה עיריית ירושלים 2024",
+        "volume": 5295349.5,
+        "executed": 0,
+        "orderDate": "2023-12-11",
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "budgetCode": "0040500122",
+        "budgetTitle": "תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "עירית ירושלים",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008",
+        "purpose": "ארנונה ירושלים 2023",
+        "volume": 4980972.2,
+        "executed": 0,
+        "orderDate": "2022-12-01",
+        "method": "תשלומי חשמל/מים/ארנונה/כבישי אגרה",
+        "budgetCode": "0040510112",
+        "budgetTitle": "תקורות למשרד התחבורה",
+        "isActive": false
+      },
+      {
+        "supplier": "נס א.ט.  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520040122",
+        "purpose": "אישור דרוג איכות-פיתוח תשתית ליישום תפיסת ניהול המידע -ניקוד איכות",
+        "volume": 4698289.8,
+        "executed": 0,
+        "orderDate": "2022-12-15",
+        "method": "תקנה 14ב - מכרז מרכזי",
+        "budgetCode": "0040500150",
+        "budgetTitle": "פיתוח משרד התחבורה",
+        "isActive": false
+      },
+      {
+        "supplier": "אלייד - ג'נרי 2  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/514961853",
+        "purpose": "דמי ניהול בניין גנרי",
+        "volume": 4580918.59,
+        "executed": 0,
+        "orderDate": "2024-12-11",
+        "method": "פטור ממכרז",
+        "budgetCode": "0040500122",
+        "budgetTitle": null,
+        "isActive": false
+      }
+    ],
+    "education": [
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ.7/7.2020 -מתן שירותים מנהליים להפעלת תוכנית הזנה יוח\"א תשפ\"ד",
+        "volume": 654547036.04,
+        "executed": 0,
+        "orderDate": "2023-10-09",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670202",
+        "budgetTitle": "הזנה במערכת החינוך",
+        "isActive": false
+      },
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ.7/7.2020 - מתן שירותים מנהליים להפעלת תוכנית הזנה ניצנים תשפד",
+        "volume": 625220980.61,
+        "executed": 0,
+        "orderDate": "2023-09-26",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670205",
+        "budgetTitle": "הזנה בתכנית מסגרות",
+        "isActive": false
+      },
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ7/7.2020 מתן שירותיים מנהלתיים להפעלת תוכנית הזנה ואורח חיים בריא - הזנה בניצנים תשפה",
+        "volume": 409961432.74,
+        "executed": 0,
+        "orderDate": "2024-12-04",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670205",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ. 7/7.2020 מתן שירותים מינהלתיים להפעלת תכנית הזנה ואורח חיים בריא - הזנה ביוחא תשפה",
+        "volume": 375152369.66,
+        "executed": 0,
+        "orderDate": "2024-11-20",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670202",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ. 7/7.2020 - מתן שירותים מינהליים להפעלת תכנית הזנה ואורח חיים בריא - הזנה יוח\"א",
+        "volume": 341503159.26,
+        "executed": 0,
+        "orderDate": "2022-12-27",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670202",
+        "budgetTitle": "הזנה במערכת החינוך",
+        "isActive": false
+      },
+      {
+        "supplier": "מילגם בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510982325",
+        "purpose": "מ. 7/7.2020 - מתן שירותים מינהליים להפעלת תכנית הזנה ואורח חיים בריא - הזנה בניצנים",
+        "volume": 326741484.34,
+        "executed": 0,
+        "orderDate": "2022-12-27",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670205",
+        "budgetTitle": "הזנה בתכנית מסגרות",
+        "isActive": false
+      },
+      {
+        "supplier": "אם גרופ בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/511464927",
+        "purpose": "מ. 16/6.2024 הפעלה וניהול מערך הסעות תלמידי הפזורה הבדואית בנגב שנה\"ל תשפ\"ה",
+        "volume": 226653505.87,
+        "executed": 0,
+        "orderDate": "2024-11-18",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020650109",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "מלם הדרכה  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/512201187",
+        "purpose": "מ. 21/7.2017 אספקת שירותי מומחים בתחומים שונים בנושאי  שפ\"י",
+        "volume": 170956949.49,
+        "executed": 0,
+        "orderDate": "2018-10-16",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020670111",
+        "budgetTitle": "פעולות לקידום מערכת",
+        "isActive": false
+      },
+      {
+        "supplier": "החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ)",
+        "entityUrl": "https://next.obudget.org/i/org/association/510525348",
+        "purpose": "מכרז  2/1.2019 מתן שירותי ניהול ותפעול ש תכניות העשרה במסגרת יום לימודים ארוך - תכנית קרב",
+        "volume": 170216145,
+        "executed": 0,
+        "orderDate": "2022-09-13",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020630110",
+        "budgetTitle": "סל תקצוב תלמיד",
+        "isActive": false
+      },
+      {
+        "supplier": "החברה למתנ״סים - מרכזים קהילתיים בישראל בע״מ (חל״צ)",
+        "entityUrl": "https://next.obudget.org/i/org/association/510525348",
+        "purpose": "מכרז  2/1.2019 מתן שירותי ניהול ותפעול תכניות העשרה במסגרת יום לימודים ארוך - תכנית קרב",
+        "volume": 167409568,
+        "executed": 0,
+        "orderDate": "2023-09-19",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0020630110",
+        "budgetTitle": "סל תקצוב תלמיד",
+        "isActive": false
+      }
+    ],
+    "health": [
+      {
+        "supplier": "אותי (ע\"ר)",
+        "entityUrl": "https://next.obudget.org/i/org/association/580183986",
+        "purpose": "רכש שירותים",
+        "volume": 176840198.46,
+        "executed": 0,
+        "orderDate": "2023-12-31",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024071453",
+        "budgetTitle": "טיפול בריאותי מקדם",
+        "isActive": false
+      },
+      {
+        "supplier": "אלו\"ט - אגודה לאומית לילדים ובוגרים עם אוטיזם (ע''ר)",
+        "entityUrl": "https://next.obudget.org/i/org/association/580064335",
+        "purpose": "רכש שירותים",
+        "volume": 156733958.5,
+        "executed": 0,
+        "orderDate": "2024-01-08",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024071453",
+        "budgetTitle": "טיפול בריאותי מקדם",
+        "isActive": false
+      },
+      {
+        "supplier": "טיפול לי עד הבית  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/515795292",
+        "purpose": "רכש שירותים",
+        "volume": 85242692.87,
+        "executed": 0,
+        "orderDate": "2024-01-08",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024071453",
+        "budgetTitle": "טיפול בריאותי מקדם",
+        "isActive": false
+      },
+      {
+        "supplier": "שירותי בריאות כללית",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589906114",
+        "purpose": "פעילות קורונה - בדיקות וחיסונים - קופת חולים כללית",
+        "volume": 75563500,
+        "executed": 0,
+        "orderDate": "2023-12-25",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024020582",
+        "budgetTitle": "קורונה - בדיקות",
+        "isActive": false
+      },
+      {
+        "supplier": "טיפול לי עד הבית  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/515795292",
+        "purpose": "רכש שירותים",
+        "volume": 69806569.91,
+        "executed": 68588321.37,
+        "orderDate": "2023-01-11",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024071453",
+        "budgetTitle": "טיפול בריאותי מקדם",
+        "isActive": false
+      },
+      {
+        "supplier": "פמי פרימיום בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/512676206",
+        "purpose": "מסד 668 + 701 שירותי דיגום- פמי",
+        "volume": 66466473.07,
+        "executed": 66422742.87,
+        "orderDate": "2020-11-11",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0024020589",
+        "budgetTitle": "קניות קורונה",
+        "isActive": false
+      },
+      {
+        "supplier": "טיפול רפואי מידי (טר״מ) בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/511290967",
+        "purpose": "מסד 625 + מ 23 + מ 28 שירותי דיגום- טרם",
+        "volume": 65517495.3,
+        "executed": 64914786.49,
+        "orderDate": "2020-11-11",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0024020589",
+        "budgetTitle": "קניות קורונה",
+        "isActive": false
+      },
+      {
+        "supplier": "פמי פרימיום בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/512676206",
+        "purpose": "מכרז פומבי 107/2023 לאספקת שירותי בריאות התלמיד עבור משרד הבריאות",
+        "volume": 63694981.96,
+        "executed": 0,
+        "orderDate": "2024-07-11",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0024160331",
+        "budgetTitle": null,
+        "isActive": true
+      },
+      {
+        "supplier": "אותי (ע\"ר)",
+        "entityUrl": "https://next.obudget.org/i/org/association/580183986",
+        "purpose": "רכש שירותים",
+        "volume": 62766111.04,
+        "executed": 0,
+        "orderDate": "2023-01-16",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0024071453",
+        "budgetTitle": "טיפול בריאותי מקדם",
+        "isActive": false
+      },
+      {
+        "supplier": "פייזר פרמצבטיקה ישראל בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/512092115",
+        "purpose": "חיסוני שיגרה 2022",
+        "volume": 60563466.46,
+        "executed": 0,
+        "orderDate": "2020-12-31",
+        "method": "פטור ממכרז",
+        "budgetCode": "0024160335",
+        "budgetTitle": "חיסונים",
+        "isActive": false
+      }
+    ],
+    "environment": [
+      {
+        "supplier": "תיירות צובה - אגודה שיתופית חקלאית בע\"מ",
+        "entityUrl": "https://next.obudget.org/i/org/cooperative/570043984",
+        "purpose": "11/6/23 אולם וכיבוד למשתתפי אשכול שלטון מקומי ביום עיון - סדנא מדדי תוצאה",
+        "volume": 570043984,
+        "executed": 0,
+        "orderDate": "2023-06-11",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": "הוצאות תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "42836764",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 558535944,
+        "executed": 0,
+        "orderDate": "2024-09-08",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "42807246",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 558370045,
+        "executed": 0,
+        "orderDate": "2024-05-05",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": "הוצאות תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "40823287",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 558103552,
+        "executed": 0,
+        "orderDate": "2024-07-22",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026120111",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "חוכמת הבורקס גבינז",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 558103552,
+        "executed": 0,
+        "orderDate": "2024-05-28",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": "הוצאות תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "40823287",
+        "entityUrl": null,
+        "purpose": null,
+        "volume": 558103552,
+        "executed": 0,
+        "orderDate": "2024-07-07",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": null,
+        "isActive": false
+      },
+      {
+        "supplier": "חוכמת הבורקס גבינז",
+        "entityUrl": null,
+        "purpose": "31.05.23 - כיבוד למשתתפי כנס השקת דוח ביצועים סביבתיים של ה- OECD - מסיבת עיתונאים",
+        "volume": 558103552,
+        "executed": 0,
+        "orderDate": "2023-05-31",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026120114",
+        "budgetTitle": "פעולות אשכול תכנון",
+        "isActive": false
+      },
+      {
+        "supplier": "ישרוטל בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520042482",
+        "purpose": null,
+        "volume": 520042482,
+        "executed": 0,
+        "orderDate": "2005-03-02",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110110",
+        "budgetTitle": "הוצאות תפעול",
+        "isActive": false
+      },
+      {
+        "supplier": "בזק החברה הישראלית לתקשורת   בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520031931",
+        "purpose": "תשלומי הו\"ק בדיעבד עבור תקופה 1.4.21-31.12.22",
+        "volume": 520031931,
+        "executed": 0,
+        "orderDate": "2001-04-21",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026110112",
+        "budgetTitle": "הוצאות מחשוב",
+        "isActive": false
+      },
+      {
+        "supplier": "ל.י. קבוצת פרץ את חדידה  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516739711",
+        "purpose": null,
+        "volume": 516739711,
+        "executed": 0,
+        "orderDate": "2024-05-28",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0026130207",
+        "budgetTitle": "פעולות מקצועיות",
+        "isActive": false
+      }
+    ],
+    "economy": [
+      {
+        "supplier": "בנק לאומי לישראל בעמ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520018078",
+        "purpose": "תשלום ריבית להלוואות בערבות המדינה",
+        "volume": 135040201,
+        "executed": 123957680,
+        "orderDate": "2021-12-20",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0038400486",
+        "budgetTitle": "קרן הלוואות בערבות",
+        "isActive": false
+      },
+      {
+        "supplier": "בנק הפועלים בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520000118",
+        "purpose": "תשלום ריבית להלוואות בערבות המדינה",
+        "volume": 114917357,
+        "executed": 103179050,
+        "orderDate": "2021-12-21",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0038400486",
+        "budgetTitle": "קרן הלוואות בערבות",
+        "isActive": false
+      },
+      {
+        "supplier": "בנק מזרחי טפחות בעמ",
+        "entityUrl": "https://next.obudget.org/i/org/company/520000522",
+        "purpose": "תשלום ריבית להלוואות בערבות המדינה",
+        "volume": 92925141,
+        "executed": 80356616,
+        "orderDate": "2021-12-20",
+        "method": "לא דווח / אחר",
+        "budgetCode": "0038400486",
+        "budgetTitle": "קרן הלוואות בערבות",
+        "isActive": false
+      },
+      {
+        "supplier": "אתנה מעוף  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516228442",
+        "purpose": "הקמה והפעלת מערך המעוף",
+        "volume": 84810807.35,
+        "executed": 50166276.99,
+        "orderDate": "2020-08-03",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400490",
+        "budgetTitle": "פעילות לעידוד עסקים",
+        "isActive": false
+      },
+      {
+        "supplier": "בידיאו מעוף בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/514752450",
+        "purpose": "הקמה והפעלת מערך המעוף",
+        "volume": 84809095.64,
+        "executed": 43133913.93,
+        "orderDate": "2020-07-28",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400490",
+        "budgetTitle": "פעילות לעידוד עסקים",
+        "isActive": false
+      },
+      {
+        "supplier": "אביב אלנתן  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516227022",
+        "purpose": "הקמה והפעלת מערך המעוף",
+        "volume": 70147471.97,
+        "executed": 25313427.11,
+        "orderDate": "2020-08-03",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400490",
+        "budgetTitle": "פעילות לעידוד עסקים",
+        "isActive": false
+      },
+      {
+        "supplier": "טימי לעסקים   בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516227097",
+        "purpose": "הקמה והפעלת מערך המעוף",
+        "volume": 63173899.62,
+        "executed": 25595426.3,
+        "orderDate": "2020-08-03",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400490",
+        "budgetTitle": "פעילות לעידוד עסקים",
+        "isActive": false
+      },
+      {
+        "supplier": "ישראכרט   בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/510706153",
+        "purpose": "אספקת אמצעי תשלום הטעונים בערך צבור עבור צוותי הרפואה",
+        "volume": 44999999.58,
+        "executed": 2956206.87,
+        "orderDate": "2021-12-20",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400487",
+        "budgetTitle": "סיוע לעסקים שנפגעו",
+        "isActive": true
+      },
+      {
+        "supplier": "מכון יעיל לתעשייה בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516087947",
+        "purpose": "הקמת והפעלת מרכז להתייעלות במשאבים",
+        "volume": 42504039.05,
+        "executed": 5608522.18,
+        "orderDate": "2019-12-05",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400930",
+        "budgetTitle": "פעולות מינהל תעשיות",
+        "isActive": false
+      },
+      {
+        "supplier": "מרכז הגליל לחדשנות ויצור מתקדם בישראל  בע״מ",
+        "entityUrl": "https://next.obudget.org/i/org/company/516093895",
+        "purpose": "הקמת והפעלת המכון לייצור מתקדם",
+        "volume": 40119000.01,
+        "executed": 1401131.94,
+        "orderDate": "2019-12-05",
+        "method": "תקנה 1ב - מכרז פומבי רגיל",
+        "budgetCode": "0038400931",
+        "budgetTitle": "מכונים לתעשייה",
+        "isActive": false
+      }
+    ]
+  },
+  "supportRecipients": {
+    "transport": [
+      {
+        "name": "ארקיע קווי תעופה ישראליים בע״מ",
+        "entityId": "511123051",
+        "entityKind": "company",
+        "requestCount": 3,
+        "totalApproved": 9010000,
+        "totalPaid": 8782896,
+        "exampleTitle": "תפעול",
+        "entityUrl": "https://next.obudget.org/i/org/company/511123051"
+      },
+      {
+        "name": "איגוד ערים אשכול רשויות המפרץ",
+        "entityId": "501400675",
+        "entityKind": "conurbation",
+        "requestCount": 2,
+        "totalApproved": 19929816,
+        "totalPaid": 4870325,
+        "exampleTitle": "פיילוט אשכולות",
+        "entityUrl": "https://next.obudget.org/i/org/conurbation/501400675"
+      },
+      {
+        "name": "ישראייר תעופה ותיירות בע״מ",
+        "entityId": "511483133",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 5200000,
+        "totalPaid": 4841334,
+        "exampleTitle": "תפעול",
+        "entityUrl": "https://next.obudget.org/i/org/company/511483133"
+      },
+      {
+        "name": "עירית ירושלים",
+        "entityId": "500230008",
+        "entityKind": "municipality",
+        "requestCount": 10,
+        "totalApproved": 2556001,
+        "totalPaid": 2013164,
+        "exampleTitle": "פעילות ברשויות המקומיות",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008"
+      },
+      {
+        "name": "עירית תל-אביב-יפו",
+        "entityId": "500250006",
+        "entityKind": "municipality",
+        "requestCount": 10,
+        "totalApproved": 2533500,
+        "totalPaid": 1937285,
+        "exampleTitle": "פעילות ברשויות המקומיות",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500250006"
+      },
+      {
+        "name": "עיריית נתניה",
+        "entityId": "500274006",
+        "entityKind": "municipality",
+        "requestCount": 10,
+        "totalApproved": 1978000,
+        "totalPaid": 1534878,
+        "exampleTitle": "פעילות ברשויות המקומיות",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500274006"
+      },
+      {
+        "name": "אחר",
+        "entityId": null,
+        "entityKind": null,
+        "requestCount": 4,
+        "totalApproved": 2477560,
+        "totalPaid": 1468789.89,
+        "exampleTitle": "תפעול",
+        "entityUrl": null
+      },
+      {
+        "name": "עירית חיפה",
+        "entityId": "500240007",
+        "entityKind": "municipality",
+        "requestCount": 13,
+        "totalApproved": 1906000,
+        "totalPaid": 1456122,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500240007"
+      },
+      {
+        "name": "עירית אשדוד",
+        "entityId": "500200704",
+        "entityKind": "municipality",
+        "requestCount": 13,
+        "totalApproved": 1776000,
+        "totalPaid": 1365088,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500200704"
+      },
+      {
+        "name": "עירית אשקלון",
+        "entityId": "500271002",
+        "entityKind": "municipality",
+        "requestCount": 14,
+        "totalApproved": 1662000,
+        "totalPaid": 1278646,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500271002"
+      },
+      {
+        "name": "עירית באר שבע",
+        "entityId": "500290002",
+        "entityKind": "municipality",
+        "requestCount": 14,
+        "totalApproved": 1956000,
+        "totalPaid": 1156153,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500290002"
+      },
+      {
+        "name": "עירית ראשון לציון",
+        "entityId": "500283007",
+        "entityKind": "municipality",
+        "requestCount": 14,
+        "totalApproved": 1445500,
+        "totalPaid": 1144736,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500283007"
+      },
+      {
+        "name": "עירית בת-ים",
+        "entityId": "500262001",
+        "entityKind": "municipality",
+        "requestCount": 14,
+        "totalApproved": 1562000,
+        "totalPaid": 951973,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500262001"
+      },
+      {
+        "name": "עירית קרית מלאכי",
+        "entityId": "500210349",
+        "entityKind": "municipality",
+        "requestCount": 14,
+        "totalApproved": 1097000,
+        "totalPaid": 930666,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500210349"
+      },
+      {
+        "name": "עירית אום-אל-פחם",
+        "entityId": "500227103",
+        "entityKind": "municipality",
+        "requestCount": 13,
+        "totalApproved": 1467000,
+        "totalPaid": 835442,
+        "exampleTitle": "רשויות מקומיות - רב שנתי",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500227103"
+      }
+    ],
+    "education": [
+      {
+        "name": "האגודה השיתופית מיסודה של הסתדרות המורים בע\"מ",
+        "entityId": "570008516",
+        "entityKind": "cooperative",
+        "requestCount": 26,
+        "totalApproved": 1125749571.08,
+        "totalPaid": 1065144471.08,
+        "exampleTitle": "תמיכה בהשתלמויות של עובדי הוראה",
+        "entityUrl": "https://next.obudget.org/i/org/cooperative/570008516"
+      },
+      {
+        "name": "מורי בתי הספר העל יסודיים בישראל-אר",
+        "entityId": "589922772",
+        "entityKind": "ottoman-association",
+        "requestCount": 26,
+        "totalApproved": 896542190.37,
+        "totalPaid": 686548790.37,
+        "exampleTitle": "תמיכה בהשתלמויות של עובדי הוראה",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589922772"
+      },
+      {
+        "name": "עירית ירושלים",
+        "entityId": "500230008",
+        "entityKind": "municipality",
+        "requestCount": 120,
+        "totalApproved": 752000482.87,
+        "totalPaid": 686545246.94,
+        "exampleTitle": "תמיכה בהשתלמויות של עובדי הוראה",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500230008"
+      },
+      {
+        "name": "ישיבת \"מיר\" ירושלים (ע\"ר)",
+        "entityId": "580037638",
+        "entityKind": "association",
+        "requestCount": 9,
+        "totalApproved": 307295900.96,
+        "totalPaid": 299012354.21,
+        "exampleTitle": "תמיכה במוסדות תורניים",
+        "entityUrl": "https://next.obudget.org/i/org/association/580037638"
+      },
+      {
+        "name": "עמותת המורים לקידום ההוראה והחינוך",
+        "entityId": null,
+        "entityKind": null,
+        "requestCount": 6,
+        "totalApproved": 273698000,
+        "totalPaid": 249933000,
+        "exampleTitle": "השתתפות בארגוני המורים: קרן קידום מקצוע",
+        "entityUrl": null
+      },
+      {
+        "name": "הסתדרות הנוער עובד והלומד ליד הסתדרות העובדים הכללית החדשה (ע\"ר)",
+        "entityId": "580297075",
+        "entityKind": "association",
+        "requestCount": 18,
+        "totalApproved": 237994705,
+        "totalPaid": 228231404,
+        "exampleTitle": "תמיכה בתנועות נוער",
+        "entityUrl": "https://next.obudget.org/i/org/association/580297075"
+      },
+      {
+        "name": "הספרייה הלאומית בע\"מ )חל\"צ(",
+        "entityId": null,
+        "entityKind": null,
+        "requestCount": 4,
+        "totalApproved": 201705770,
+        "totalPaid": 197478770,
+        "exampleTitle": "הספרייה הלאומית",
+        "entityUrl": null
+      },
+      {
+        "name": "תנועת הצופים העבריים בישראל (ע\"ר)",
+        "entityId": "580028454",
+        "entityKind": "association",
+        "requestCount": 14,
+        "totalApproved": 205696599,
+        "totalPaid": 190783167,
+        "exampleTitle": "תמיכה בתנועות נוער",
+        "entityUrl": "https://next.obudget.org/i/org/association/580028454"
+      },
+      {
+        "name": "תנועת בני עקיבא בישראל (ע\"ר)",
+        "entityId": "580040343",
+        "entityKind": "association",
+        "requestCount": 18,
+        "totalApproved": 183874677,
+        "totalPaid": 174928511,
+        "exampleTitle": "תמיכה בתנועות נוער",
+        "entityUrl": "https://next.obudget.org/i/org/association/580040343"
+      },
+      {
+        "name": "עמותה פדגוגית לקידום החינוך העל יסודי והעל תיכוני בישראל מיסודם של חברי ארגון המ",
+        "entityId": "580529410",
+        "entityKind": "association",
+        "requestCount": 10,
+        "totalApproved": 195188000,
+        "totalPaid": 169985700,
+        "exampleTitle": "השתתפות בארגוני המורים: קרן קידום מקצוע",
+        "entityUrl": "https://next.obudget.org/i/org/association/580529410"
+      },
+      {
+        "name": "עמותת המורים לקידום ההוראה והחינוך מיסודה של הסתדרות המורים (ע\"ר)",
+        "entityId": "580150886",
+        "entityKind": "association",
+        "requestCount": 4,
+        "totalApproved": 170174000,
+        "totalPaid": 169439000,
+        "exampleTitle": "השתתפות בארגוני המורים: קרן קידום מקצוע",
+        "entityUrl": "https://next.obudget.org/i/org/association/580150886"
+      },
+      {
+        "name": "תנועת בנות בית יעקב - בתיה (ע\"ר)",
+        "entityId": "580051555",
+        "entityKind": "association",
+        "requestCount": 6,
+        "totalApproved": 164396444,
+        "totalPaid": 150758585,
+        "exampleTitle": "תמיכה בארגוני נוער",
+        "entityUrl": "https://next.obudget.org/i/org/association/580051555"
+      },
+      {
+        "name": "אל המעיין קרן חנוך למורשת יהדות ספרד (ע\"ר)",
+        "entityId": "580090405",
+        "entityKind": "association",
+        "requestCount": 8,
+        "totalApproved": 193386535,
+        "totalPaid": 143134491,
+        "exampleTitle": "תרבות יהודית חרדית",
+        "entityUrl": "https://next.obudget.org/i/org/association/580090405"
+      },
+      {
+        "name": "החברה להגנת הטבע (ע\"ר)",
+        "entityId": "580017499",
+        "entityKind": "association",
+        "requestCount": 28,
+        "totalApproved": 157123539,
+        "totalPaid": 141135476.2,
+        "exampleTitle": "תמיכות בפעילויות שונות בהתאם למדיניות ה",
+        "entityUrl": "https://next.obudget.org/i/org/association/580017499"
+      },
+      {
+        "name": "ישיבת עטרת שלמה בארה\"ק ע\"ש מרן הגרש\"ז אויערבאך זצוק\"ל (ע\"ר)",
+        "entityId": "580256527",
+        "entityKind": "association",
+        "requestCount": 9,
+        "totalApproved": 125985321.9,
+        "totalPaid": 123281359.63,
+        "exampleTitle": "תמיכה במוסדות תורניים",
+        "entityUrl": "https://next.obudget.org/i/org/association/580256527"
+      }
+    ],
+    "health": [
+      {
+        "name": "שירותי בריאות כללית",
+        "entityId": "589906114",
+        "entityKind": "ottoman-association",
+        "requestCount": 70,
+        "totalApproved": 11921845446.97,
+        "totalPaid": 9037491560.17,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589906114"
+      },
+      {
+        "name": "מכבי שירותי בריאות",
+        "entityId": "589902279",
+        "entityKind": "ottoman-association",
+        "requestCount": 56,
+        "totalApproved": 6630849356,
+        "totalPaid": 4230053293,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589902279"
+      },
+      {
+        "name": "קופת חולים לעובדים לאומיים",
+        "entityId": "589916006",
+        "entityKind": "ottoman-association",
+        "requestCount": 54,
+        "totalApproved": 4264863520,
+        "totalPaid": 3278673104,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589916006"
+      },
+      {
+        "name": "קופת חולים מאוחדת",
+        "entityId": null,
+        "entityKind": null,
+        "requestCount": 39,
+        "totalApproved": 2255344955,
+        "totalPaid": 1620501649,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": null
+      },
+      {
+        "name": "קופת חולים מאוחדת מרכזית עממי",
+        "entityId": "589958495",
+        "entityKind": "ottoman-association",
+        "requestCount": 18,
+        "totalApproved": 1272596479,
+        "totalPaid": 839484453,
+        "exampleTitle": "תמיכות בבתי חולים ציבוריים",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589958495"
+      },
+      {
+        "name": "מגן דוד אדום בישראל",
+        "entityId": "500502059",
+        "entityKind": "law_mandated_organization",
+        "requestCount": 2,
+        "totalApproved": 393356000,
+        "totalPaid": 393356000,
+        "exampleTitle": "מד\"א",
+        "entityUrl": "https://next.obudget.org/i/org/law_mandated_organization/500502059"
+      },
+      {
+        "name": "מרכז השלטון המקומי בישראל (ע\"ר)",
+        "entityId": "580002244",
+        "entityKind": "association",
+        "requestCount": 8,
+        "totalApproved": 311045952,
+        "totalPaid": 302837084,
+        "exampleTitle": "בריאות השן ברשויות המקומיות",
+        "entityUrl": "https://next.obudget.org/i/org/association/580002244"
+      },
+      {
+        "name": "מגן דוד אדם",
+        "entityId": "589104751",
+        "entityKind": "ottoman-association",
+        "requestCount": 1,
+        "totalApproved": 320278982,
+        "totalPaid": 296001997,
+        "exampleTitle": "מד\"א",
+        "entityUrl": "https://next.obudget.org/i/org/ottoman-association/589104751"
+      },
+      {
+        "name": "אגודת מגן דוד אדום ירושלים",
+        "entityId": null,
+        "entityKind": null,
+        "requestCount": 1,
+        "totalApproved": 320278982,
+        "totalPaid": 296001997,
+        "exampleTitle": "מד\"א",
+        "entityUrl": null
+      },
+      {
+        "name": "הסתדרות מדיצינית הדסה (חל״צ)",
+        "entityId": "520008095",
+        "entityKind": "association",
+        "requestCount": 27,
+        "totalApproved": 213106646,
+        "totalPaid": 209957084,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": "https://next.obudget.org/i/org/association/520008095"
+      },
+      {
+        "name": "מרכז רפואי שערי צדק (ע\"ר)",
+        "entityId": "580007557",
+        "entityKind": "association",
+        "requestCount": 28,
+        "totalApproved": 100380795.87,
+        "totalPaid": 92755750.37,
+        "exampleTitle": "תמרוץ דימות",
+        "entityUrl": "https://next.obudget.org/i/org/association/580007557"
+      },
+      {
+        "name": "אסותא אשדוד בע״מ",
+        "entityId": "514525591",
+        "entityKind": "company",
+        "requestCount": 15,
+        "totalApproved": 67146192,
+        "totalPaid": 65575751,
+        "exampleTitle": "תמיכות בבתי חולים ציבוריים",
+        "entityUrl": "https://next.obudget.org/i/org/company/514525591"
+      },
+      {
+        "name": "יד שרה (ע\"ר)",
+        "entityId": "580030104",
+        "entityKind": "association",
+        "requestCount": 12,
+        "totalApproved": 66266771,
+        "totalPaid": 56673467.5,
+        "exampleTitle": "תמיכה באירגונים רפואיים אחרים",
+        "entityUrl": "https://next.obudget.org/i/org/association/580030104"
+      },
+      {
+        "name": "עזר מציון (ע\"ר)",
+        "entityId": "580079978",
+        "entityKind": "association",
+        "requestCount": 10,
+        "totalApproved": 43802442.58,
+        "totalPaid": 55578411.66,
+        "exampleTitle": "תמיכה באירגונים רפואיים אחרים",
+        "entityUrl": "https://next.obudget.org/i/org/association/580079978"
+      },
+      {
+        "name": "איחוד הצלה ישראל 1221 (ע\"ר)",
+        "entityId": "580465979",
+        "entityKind": "association",
+        "requestCount": 7,
+        "totalApproved": 46164970,
+        "totalPaid": 44432680,
+        "exampleTitle": "תמיכה באירגונים רפואיים אחרים",
+        "entityUrl": "https://next.obudget.org/i/org/association/580465979"
+      }
+    ],
+    "environment": [
+      {
+        "name": "ורידיס - איכות הסביבה אר.די.אפ. בע״מ",
+        "entityId": "514862416",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 292500000,
+        "totalPaid": 165357202,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514862416"
+      },
+      {
+        "name": "גרין נט מחזור וטיפול בפסולת בע״מ",
+        "entityId": "514438977",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 226395000,
+        "totalPaid": 142926060,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514438977"
+      },
+      {
+        "name": "אמניר תעשיות ושרותי סביבה בע״מ",
+        "entityId": "510673924",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 472387500,
+        "totalPaid": 121713333,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/510673924"
+      },
+      {
+        "name": "איגוד ערים אשכול רשויות נגב מערב",
+        "entityId": "501400634",
+        "entityKind": "conurbation",
+        "requestCount": 9,
+        "totalApproved": 130842559,
+        "totalPaid": 83807801.57,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/conurbation/501400634"
+      },
+      {
+        "name": "החברה הכלכלית למ.א. בני שמעון בע״מ",
+        "entityId": "511486227",
+        "entityKind": "company",
+        "requestCount": 3,
+        "totalApproved": 271631940,
+        "totalPaid": 73898547,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/511486227"
+      },
+      {
+        "name": "בר-עידן טוהר 2009 בע״מ",
+        "entityId": "514302470",
+        "entityKind": "company",
+        "requestCount": 3,
+        "totalApproved": 191378768,
+        "totalPaid": 56536936,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514302470"
+      },
+      {
+        "name": "יוניברב טכנולוגיות סביבה בע״מ",
+        "entityId": "514603679",
+        "entityKind": "company",
+        "requestCount": 4,
+        "totalApproved": 322121403,
+        "totalPaid": 56070479,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514603679"
+      },
+      {
+        "name": "מתקן מחזור עברון, שותפות מוגבלת",
+        "entityId": "540284650",
+        "entityKind": "partnership",
+        "requestCount": 1,
+        "totalApproved": 210793500,
+        "totalPaid": 32955573,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/partnership/540284650"
+      },
+      {
+        "name": "קלר פתרונות מיחזור  בע״מ",
+        "entityId": "516752466",
+        "entityKind": "company",
+        "requestCount": 3,
+        "totalApproved": 12800000,
+        "totalPaid": 12800000,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/516752466"
+      },
+      {
+        "name": "אלגזאל תחנת מעבר לגריסה ומיחזור בע״מ",
+        "entityId": "514150556",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 15560000,
+        "totalPaid": 11281000,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514150556"
+      },
+      {
+        "name": "מ.ע.ל.ה מיחזור בע״מ",
+        "entityId": "513898833",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 56511000,
+        "totalPaid": 11099139,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/513898833"
+      },
+      {
+        "name": "א.מ.צ תעשיות מחזור פסולת בע״מ",
+        "entityId": "515739563",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 14400000,
+        "totalPaid": 10920000,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/515739563"
+      },
+      {
+        "name": "עיריית נתניה",
+        "entityId": "500274006",
+        "entityKind": "municipality",
+        "requestCount": 13,
+        "totalApproved": 18024383,
+        "totalPaid": 10227405,
+        "exampleTitle": "תמיכות על פי חוק השקיות",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500274006"
+      },
+      {
+        "name": "אורי - יאיר בע״מ",
+        "entityId": "513614461",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 11200000,
+        "totalPaid": 8120000,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/513614461"
+      },
+      {
+        "name": "זרעיני חברה להובלות בע״מ",
+        "entityId": "514021161",
+        "entityKind": "company",
+        "requestCount": 1,
+        "totalApproved": 7780000,
+        "totalPaid": 7780000,
+        "exampleTitle": "תמיכות",
+        "entityUrl": "https://next.obudget.org/i/org/company/514021161"
+      }
+    ],
+    "economy": [
+      {
+        "name": "סמיקונדקטור דיבייסז  בע״מ",
+        "entityId": "516498250",
+        "entityKind": "company",
+        "requestCount": 4,
+        "totalApproved": 47953424,
+        "totalPaid": 23880100,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/516498250"
+      },
+      {
+        "name": "גידולי שדה חולות  בע״מ",
+        "entityId": "516091386",
+        "entityKind": "company",
+        "requestCount": 4,
+        "totalApproved": 22830600,
+        "totalPaid": 19672043,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/516091386"
+      },
+      {
+        "name": "עירית פתח תקוה",
+        "entityId": "500279005",
+        "entityKind": "municipality",
+        "requestCount": 3,
+        "totalApproved": 21032398.02,
+        "totalPaid": 19145761.65,
+        "exampleTitle": "החזר ארנונה לעסקים שנפגעו בקורונה",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500279005"
+      },
+      {
+        "name": "הקרן לעידוד ופיתוח ענף הבניה בישראל (ע\"ר)",
+        "entityId": "580175776",
+        "entityKind": "association",
+        "requestCount": 6,
+        "totalApproved": 60592390,
+        "totalPaid": 15546107,
+        "exampleTitle": "חרבות ברזל פעולות",
+        "entityUrl": "https://next.obudget.org/i/org/association/580175776"
+      },
+      {
+        "name": "עירית באר שבע",
+        "entityId": "500290002",
+        "entityKind": "municipality",
+        "requestCount": 5,
+        "totalApproved": 17244390.03,
+        "totalPaid": 14707051.23,
+        "exampleTitle": "פעילות לעידוד עסקים",
+        "entityUrl": "https://next.obudget.org/i/org/municipality/500290002"
+      },
+      {
+        "name": "מכון היהלומים הישראלי (חל״צ)",
+        "entityId": "520027764",
+        "entityKind": "association",
+        "requestCount": 4,
+        "totalApproved": 46000000,
+        "totalPaid": 13342854,
+        "exampleTitle": "פעולות מכון היהלומים",
+        "entityUrl": "https://next.obudget.org/i/org/association/520027764"
+      },
+      {
+        "name": "ת.א.ג. כלים רפואיים  בע״מ",
+        "entityId": "516423753",
+        "entityKind": "company",
+        "requestCount": 2,
+        "totalApproved": 12527472,
+        "totalPaid": 12072624,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/516423753"
+      },
+      {
+        "name": "רב בריח מוצרי נעילה  בע״מ",
+        "entityId": "516279239",
+        "entityKind": "company",
+        "requestCount": 5,
+        "totalApproved": 34553739,
+        "totalPaid": 11087760,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/516279239"
+      },
+      {
+        "name": "נירלט צבעים בע״מ",
+        "entityId": "520037532",
+        "entityKind": "company",
+        "requestCount": 7,
+        "totalApproved": 10200000,
+        "totalPaid": 9370514,
+        "exampleTitle": "מסלול להגדלת הפיריון בתעשייה",
+        "entityUrl": "https://next.obudget.org/i/org/company/520037532"
+      },
+      {
+        "name": "מובילק - בע״מ",
+        "entityId": "511320160",
+        "entityKind": "company",
+        "requestCount": 6,
+        "totalApproved": 23873544,
+        "totalPaid": 6193207,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/511320160"
+      },
+      {
+        "name": "חיפה נגב טכנולוגיות  בע״מ",
+        "entityId": "511010589",
+        "entityKind": "company",
+        "requestCount": 8,
+        "totalApproved": 45751913,
+        "totalPaid": 6059290,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/511010589"
+      },
+      {
+        "name": "בתי זקוק לנפט בע״מ",
+        "entityId": "520036658",
+        "entityKind": "company",
+        "requestCount": 1,
+        "totalApproved": 192998812,
+        "totalPaid": 5973126,
+        "exampleTitle": "מס פחמן מענקים",
+        "entityUrl": "https://next.obudget.org/i/org/company/520036658"
+      },
+      {
+        "name": "המשבב אייץ'.אם.טי.אס  בע״מ",
+        "entityId": "514415181",
+        "entityKind": "company",
+        "requestCount": 4,
+        "totalApproved": 40000000,
+        "totalPaid": 5543886,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/514415181"
+      },
+      {
+        "name": "קוולי-טסט בע״מ",
+        "entityId": "512694613",
+        "entityKind": "company",
+        "requestCount": 11,
+        "totalApproved": 21007140,
+        "totalPaid": 5437196,
+        "exampleTitle": "מסלול תעסוקה כללי",
+        "entityUrl": "https://next.obudget.org/i/org/company/512694613"
+      },
+      {
+        "name": "אקווהשילד מדיקל בע״מ",
+        "entityId": "514262021",
+        "entityKind": "company",
+        "requestCount": 4,
+        "totalApproved": 75563512,
+        "totalPaid": 5072181,
+        "exampleTitle": "מענקים לפי החוק לעידוד השקעות הון",
+        "entityUrl": "https://next.obudget.org/i/org/company/514262021"
+      }
+    ]
+  },
+  "budgetChanges": {
+    "transport": [
+      {
+        "year": 2023,
+        "date": "2023-07-19",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 196373000,
+        "transactionId": "2023/40-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 196,373 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 40 - תחבורה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשנת התקציב 2023 בסך של 196,373אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, וזאת כפי שמפורט להלן: 1 . תכנית 40-50-01: משרד התחבורה ראשי – 100,275 אלפי ש\"ח א. תיאור התכנית: תכנית זו מיועדת לתקצוב פעילות הלשכה המרכזית של המשרד הכול",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2023"
+      },
+      {
+        "year": 2026,
+        "date": "2026-07-08",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 188858000,
+        "transactionId": "2026/40-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2026 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 188,858 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2025, כעודף לשימוש בשנת הכספים 2026, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 40 - משרד התחבורה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2025 לשנת התקציב 2026 בסך של 188,858 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, וזאת כפי שמפורט להלן: תכנית 40-50-01: משרד התחבורה ראשי –103,726 אלפי ש\"ח בהוצאה תיאור התכנית: בתוכנית זו מתוקצבת פעילות הלשכה המרכזית של המשרד הכ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2026"
+      },
+      {
+        "year": 2025,
+        "date": "2025-05-14",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 188440000,
+        "transactionId": "2025/40-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2025 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 188,440 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2024, כעודף לשימוש בשנת הכספים 2025, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 40 – משרד התחבורה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2024 לשנת התקציב 2025 בסך של 188,440 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, וזאת כפי שמפורט להלן: תכנית 40-50-01 - משרד התחבורה ראשי –97,641 אלפי ש\"ח בהוצאה תיאור התכנית: בתוכנית זו מתוקצבת פעילות הלשכה המרכזית של המשרד הכ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2025"
+      },
+      {
+        "year": 2024,
+        "date": "2024-04-16",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 157694000,
+        "transactionId": "2024/40-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 157,694 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 40 תחבורה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת 75% מכלל העודפים משנת התקציב 2023 לשנת התקציב 2024 בסך של 157,694 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, וזאת כפי שמפורט להלן: 1 . תכנית 40-50-01: משרד התחבורה ראשי – 85,053 אלפי ש\"ח א. תיאור התכנית: בתכנית זו מתוקצבת פעילות הלשכה הראשית של המשרד הכ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2024"
+      },
+      {
+        "year": 2024,
+        "date": "2024-09-30",
+        "reqTitle": "פניית מקור סיכום תקציבי משרד התחבורה",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 48400000,
+        "transactionId": "2024/40-004",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2024 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 48,400 אלפי שקלים חדשים מסעיף 47 - רזרבה כללית, לסעיף 40 - משרד התחבורה , בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-11-15",
+        "reqTitle": "פנייה 2 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 34038000,
+        "transactionId": "2023/40-004",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 34,038 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 40 תחבורה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשנת התקציב 2023 בסך של 34,038 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, וזאת כפי שמפורט להלן: 1 . תכנית 40-50-01: משרד התחבורה ראשי – 34,038 אלפי ש\"ח א. תיאור התכנית: תכנית זו מיועדת לתקצוב פעילות הלשכה המרכזית של המשרד הכוללת א",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-11-15",
+        "reqTitle": "פנייה 3 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 31420000,
+        "transactionId": "2023/40-005",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 31,420 אלפי שקלים חדשים מסעיף 40 - משרד התחבורה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. האישור ייכנס לתקפו, אם לא יעוכב ע\"י ועדת הכספים של הכנסת, לאחר 21 יום מתאריך מכתב זה.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-11-15",
+        "reqTitle": "יתרת עודפים פנייה 1",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": -31420000,
+        "transactionId": "2023/40-007",
+        "explanation": "הנדון: הפחתה מספר 3 בתקציב לשנת 2023 רצ\"ב מועבר אליך פירוט סעיפי הפחתה בתקציב לשנת 2023, בהתאם להחלטת הממשלה.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0040/2023"
+      }
+    ],
+    "education": [
+      {
+        "year": 2024,
+        "date": "2024-12-31",
+        "reqTitle": "פניית סוף שנה חינוך",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 4460321000,
+        "transactionId": "2024/20-028",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2024 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 4,460,321 אלפי שקלים חדשים מסעיפי המשרדים השונים לסעיף 47 – רזרבה כללית, בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של 4,460,321 אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף 20 – משרד החינוך, בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 20 – משרד החינוך עיקרי הפנייה: הפניה נועדה לתקצוב סך של 4,460,321 אלפי ש\"ח בתקציב ההוצאה, 16,812 אלפי ש\"ח בתקציב ההוצאה המותנ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2024"
+      },
+      {
+        "year": 2026,
+        "date": "2026-07-30",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 4045475000,
+        "transactionId": "2026/20-206",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2026 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 4,045,475 אלפי שקלים חדשים מסעיף 20 - משרד החינוך משנת הכספים 2025, כעודף לשימוש בשנת הכספים 2026, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 20 – משרד החינוך עיקרי הפנייה: הפניה התקציבית נועדה להעברת עודפים משנת התקציב 2025 לשימוש בשנת התקציב 2026 בסך של 4,045,705 אלפי ש\"ח, בהתאם לפירוט המובא מטה. עיקרי הפנייה התקציבית בחלוקה לתכניות מובאים להלן: 206001 - פעילויות מטה מרכזיות –פעולות ושכר – 350,106 אלפי ש\"ח תיאור התוכנית: התקציב בתכנית מ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2026"
+      },
+      {
+        "year": 2023,
+        "date": "2023-07-10",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 2876893000,
+        "transactionId": "2023/20-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,876,893 אלפי שקלים חדשים מסעיף 20 - משרד החינוך משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 20 – חינוך שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,876,893 אלפי שקלים חדשים מסעיף 20 -חינוך משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. עיקרי הפנייה: הפניה התקציבית נועדה להעברת עודפים משנת הת",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2023"
+      },
+      {
+        "year": 2025,
+        "date": "2025-07-09",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 2840865000,
+        "transactionId": "2025/20-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2025 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,840,865 אלפי שקלים חדשים מסעיף 20 - משרד החינוך משנת הכספים 2024, כעודף לשימוש בשנת הכספים 2025, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 20 – משרד החינוך עיקרי הפנייה: הפניה התקציבית נועדה להעברת עודפים משנת התקציב 2024 לשימוש בשנת התקציב 2025 בסך של 2,840,865 אלפי ש\"ח, בהתאם לפירוט המובא מטה. עיקרי הפניה בחלוקה לתוכניות מובאים להלן: 206001 פעילויות מטה מרכזיות –פעולות ושכר – 322,816 אלפי ש\"ח תיאור התוכנית: התקציב בתכנית מיועד עבור מ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2025"
+      },
+      {
+        "year": 2025,
+        "date": "2025-12-27",
+        "reqTitle": "מקור לסוף שנה 5",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 2541716000,
+        "transactionId": "2025/20-023",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2025 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 2,658,376 אלפי שקלים חדשים מהסעיפים הבאים: 04 - משרד ראש הממשלה, 05 - משרד האוצר, 09 – משרד החוץ, 19 – מדע, תרבות וספורט, 20 – משרד החיוך, 24 – משרד הבריאות, 29 - משרד הבינוי והשיכון, 30 – משרד העלייה והקליטה, 33 – משרד החקלאות, 42 – מענקי בינוי ושיכון, 60 - חינוך, 67 - בריאות, 23 – משרד הרווחה, 40 – משרד התחבורה, 70 – שיכון, 78 – תיירות לסעיף 47 - רזרבה כללית, בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של 2,658,376 אל",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2025"
+      },
+      {
+        "year": 2024,
+        "date": "2024-11-18",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 2329332000,
+        "transactionId": "2024/20-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,329,332 אלפי שקלים חדשים מסעיף 20 - משרד החינוך משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 20 – חינוך שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,329,332 אלפי שקלים חדשים מסעיף 20 -חינוך משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. עיקרי הפנייה: הפניה התקציבית נועדה להעברת עודפים משנת הת",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-14",
+        "reqTitle": "גגות חרבות ברזל 2023 – הסטות",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 1381798000,
+        "transactionId": "2023/20-023",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2023 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 1,381,798 אלפי שקלים חדשים מסעיף 47 - רזרבה כללית, לסעיף 20 - משרד החינוך , בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-27",
+        "reqTitle": "פניית חוסר שכר 1 - חינוך",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 1327685000,
+        "transactionId": "2023/20-025",
+        "explanation": "",
+        "sourceUrl": "https://next.obudget.org/i/budget/0020/2023"
+      }
+    ],
+    "health": [
+      {
+        "year": 2024,
+        "date": "2024-12-29",
+        "reqTitle": "פניה 5 להעברת עודפים משנת 2023",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 3286419000,
+        "transactionId": "2024/24-007",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 3,286,419 אלפי שקלים חדשים מסעיף 24 - משרד הבריאות משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה – 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 24 - משרד הבריאות עיקרי הפנייה: הפניה נועדה להעברת עודפי תקציב בסך של 3,286,419 אלפי ש\"ח משנת 2023 לשימוש בשנת 2024 למטרות הבאות: 240205 - תפעול מטה 1,153,060 אלפי ש\"ח תיאור התכנית: תכנית זו מכילה את תקציבי תפעול מטה משרד הבריאות לרבות בטחון, דיור, טכנולוגיות, מחשוב, איכות ושירות. כמו כן, בתכנית זו",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-08-16",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 3255877000,
+        "transactionId": "2023/24-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 3,255,877 אלפי שקלים חדשים מסעיף 24 - משרד הבריאות משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 24 - משרד הבריאות הפניה נועדה להעברת עודפי תקציב בסך של 3,255,877 אלפי ש\"ח משנת 2022 לשימוש בשנת 2023 למטרות הבאות: תכנית מספר 240205: תפעול מטה 1,900,183 אלפי ש\"ח תיאור התכנית: תכנית זו מכילה את תקציבי תפעול מטה משרד הבריאות לרבות בטחון, דיור, טכנולוגיות, מחשוב, איכות ושירות. כמו כן, בתכנית זו מתו",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2023"
+      },
+      {
+        "year": 2025,
+        "date": "2025-06-10",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 2654435000,
+        "transactionId": "2025/24-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2025 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 2,654,435 אלפי שקלים חדשים מסעיף 24 - משרד הבריאות משנת הכספים 2024, כעודף לשימוש בשנת הכספים 2025, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 24 - משרד הבריאות עיקרי הפנייה: הפניה נועדה להעברת עודפים משנת התקציב 2024 לשנת התקציב 2025 בסך של 2,654,435 אלפי ש\"ח בהוצאה לתוכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: תכנית 240205: תפעול מטה 855,313 אלפי ש\"ח תיאור התכנית: תכנית זו מכילה את תקציבי תפעול מטה משרד הבריאות לרבות בטחון, דיור, טכנול",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2025"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-27",
+        "reqTitle": "תקצוב קורונה במשרד הבריאות (עודפים)",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 2191368000,
+        "transactionId": "2023/24-016",
+        "explanation": "",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-31",
+        "reqTitle": "פניית סוף שנה - משרד הבריאות",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 1930399000,
+        "transactionId": "2023/24-017",
+        "explanation": "",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2023"
+      },
+      {
+        "year": 2026,
+        "date": "2026-06-08",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 1621147000,
+        "transactionId": "2026/24-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2026 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 1,621,147 אלפי שקלים חדשים מסעיף 24 - משרד הבריאות משנת הכספים 2025, כעודף לשימוש בשנת הכספים 2026, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 24 - משרד הבריאות עיקרי הפנייה: הפניה נועדה להעברת עודפים משנת התקציב 2025 לשנת התקציב 2026 בסך של 1,621,147 אלפי ש\"ח בהוצאה לתוכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: תכנית 240205: תפעול מטה 341,077 אלפי ש\"ח תיאור התכנית: תכנית זו מכילה את תקציבי תפעול מטה משרד הבריאות לרבות בטחון, דיור, טכנול",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2026"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-19",
+        "reqTitle": "פנייה 2 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 946415000,
+        "transactionId": "2023/24-006",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 946,415 אלפי שקלים חדשים מסעיף 24 - משרד הבריאות משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הפניה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשימוש בשנת התקציב 2023 בסך של 946,415 אלפי ש\"ח, מתוכם עודפים בסך של 795,964 אלפי ש\"ח מתוך המסגרת התקציבית המיועדת להתמודדות עם התפשטות נגיף הקורונה, ועודפים בסך 150,541 אלפי ש\"ח מתוך התקציב השוטף של משרד הבריאות, בהתאם לפירוט המובא מטה. הבקשה דנה בסעיף תקציבי: 24 - משרד ה",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-14",
+        "reqTitle": "גגות חרבות ברזל 2023 – קופסא",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 882000000,
+        "transactionId": "2023/24-013",
+        "explanation": "הנדון: תקציב מספר 1 לשנת 2023 רצ\"ב מועבר אליך פירוט סעיפי תקציב מספר 1 לשנת 2023, שאושר בכנסת.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0024/2023"
+      }
+    ],
+    "environment": [
+      {
+        "year": 2024,
+        "date": "2024-07-03",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 1402414000,
+        "transactionId": "2024/26-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 1,402,414 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 – הגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2023 לשנת התקציב 2024 בסך של 1,402,414 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: תכנית 261101: תפעול ושכר – 14,049 אלפי ש\"ח בתכנית זו מתוקצבים מרכיבי השכר והתפעול של המשרד הכוללים מחשוב, הוצאות ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-08-01",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 1213780000,
+        "transactionId": "2023/26-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 1,213,780 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 - הגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשנת התקציב 2023 בסך של 1,213,780 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: תכנית 261101: תפעול ושכר – 18,442 אלפי ש\"ח בתכנית זו מתוקצבים מרכיבי השכר והתפעול של המשרד הכוללים מחשוב, הוצאות ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2023"
+      },
+      {
+        "year": 2024,
+        "date": "2024-12-29",
+        "reqTitle": "פניית מקור המשרד להגנת הסביבה",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": -820000000,
+        "transactionId": "2024/26-023",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2024 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 2,159,347 אלפי שקלים חדשים מסעיפים 26 – המשרד להגנת הסביבה, 31 – הוצאות ביטחוניות שונות, 38 – כלכלה ותעשייה לסעיף 47 - רזרבה כללית, בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של 2,159,347 אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף 15 - משרד הביטחון, בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הפניה דנה בסעיף תקציבי: 15 – משרד הביטחון עיקרי הפנייה: הפנייה נועדה לתקצוב סך של 2,159,3",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-11-21",
+        "reqTitle": "פנייה 2 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 737841000,
+        "transactionId": "2023/26-004",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 737,841 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 – הגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשנת התקציב 2023 בסך של 737,841 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: תכנית 261101: תפעול ושכר – 3,022 אלפי ש\"ח בתכנית זו מתוקצבים מרכיבי השכר והתפעול של המשרד הכוללים מחשוב, הוצאות שכ\"ד ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2023"
+      },
+      {
+        "year": 2025,
+        "date": "2025-05-19",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 703604000,
+        "transactionId": "2025/26-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2025 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 703,604 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2024, כעודף לשימוש בשנת הכספים 2025, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 – המשרד להגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2024 לשנת התקציב 2025 בסך של 703,604 אלפי ש\"ח בהוצאה לתוכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: 261101 - תפעול ושכר – 14,177 אלפי ש\"ח תיאור התוכנית: בתוכנית זו מתוקצבים מרכיבי השכר והתפעול של המשרד הכוללים",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2025"
+      },
+      {
+        "year": 2026,
+        "date": "2026-07-08",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 677661000,
+        "transactionId": "2026/26-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2026 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 677,661 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2025, כעודף לשימוש בשנת הכספים 2026, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 - המשרד להגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2025 לשנת התקציב 2026 בסך של 677,661 אלפי ש\"ח בהוצאה לתוכניות התקציב הבאות, שעיקרן כפי שמפורט להלן: 261101 - שכר ותפעול – 21,365 אלפי ש\"ח תיאור התוכנית: בתוכנית זו מתוקצבים מרכיבי השכר והתפעול של המשרד הכוללים",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2026"
+      },
+      {
+        "year": 2024,
+        "date": "2024-12-22",
+        "reqTitle": "פניה 2 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 649828000,
+        "transactionId": "2024/26-011",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 649,828 אלפי שקלים חדשים מסעיף 26 - המשרד להגנת הסביבה משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 26 – המשרד להגנת הסביבה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2023 לשנת התקציב 2024 בסך של 649,828 אלפי ש\"ח בהוצאה לתוכניות התקציב הבאות, שעיקרן כפי שמפורט להלן. עיקרי הפניה בחלוקה לתוכניות מובאים להלן: 261101 - תפעול ושכר – 2,433 אלפי ש\"ח בתכנית זו מתוקצבים מרכיבי השכר ",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2024"
+      },
+      {
+        "year": 2024,
+        "date": "2025-01-01",
+        "reqTitle": "פניית מקור מקרן הניקיון",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": -600000000,
+        "transactionId": "2024/26-027",
+        "explanation": "הנדון: שינויים בין סעיפים לשנת 2024 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של -600,000 אלפי שקלים חדשים מסעיף - המשרד להגנת הסביבה , לסעיף 47 - רזרבה כללית, בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. בשינוי זה אין שימוש ברזרבה כללית.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0026/2024"
+      }
+    ],
+    "economy": [
+      {
+        "year": 2024,
+        "date": "2024-08-15",
+        "reqTitle": "עודפים משנת 2023- פעימה ראשונה",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 527982000,
+        "transactionId": "2024/38-002",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2024 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 527,982 אלפי שקלים חדשים מסעיף 38 - כלכלה ותעשייה משנת הכספים 2023, כעודף לשימוש בשנת הכספים 2024, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 38 - כלכלה ותעשייה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2023 לשנת התקציב 2024 בסך של 527,982 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות: עיקרי החלוקה לפי תכניות: תכנית 38-30-01 : הפעלת הרשות לחדשנות – 32,296 אלפי ש\"ח תיאור התכנית: רשות החדשנות היא הגוף האמון על ייזום, תכלול וביצוע",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2024"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-14",
+        "reqTitle": "גגות חרבות ברזל 2023 – הסטות",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 511653000,
+        "transactionId": "2023/38-013",
+        "explanation": "הנדון: שימוש ברזרבה הכללית לשנת 2023 שר האוצר מבקש את אישורה של ועדת הכספים של הכנסת להעברת סכום של 511,653 אלפי שקלים חדשים מסעיף 47 - רזרבה כללית, לסעיף 38 - כלכלה ותעשייה , בהתאם לסעיף 11 (ה) לחוק יסודות התקציב התשמ\"ה - 1985. כמו כן, מבקש שר האוצר את אישורה של ועדת הכספים של הכנסת להעברת סכום של אלפי שקלים חדשים מסעיף 47 - רזרבה כללית לסעיף בהתאם לסעיף 12 (א) לחוק יסודות התקציב, התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-14",
+        "reqTitle": "גגות חרבות ברזל 2023 – קופסא",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 503000000,
+        "transactionId": "2023/38-012",
+        "explanation": "הנדון: תקציב מספר 1 לשנת 2023 רצ\"ב מועבר אליך פירוט סעיפי תקציב מספר 1 לשנת 2023, שאושר בכנסת.",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2023"
+      },
+      {
+        "year": 2023,
+        "date": "2023-07-13",
+        "reqTitle": "פנייה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 477346000,
+        "transactionId": "2023/38-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2023 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 477,346 אלפי שקלים חדשים מסעיף 38 - כלכלה ותעשייה משנת הכספים 2022, כעודף לשימוש בשנת הכספים 2023, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 38 - כלכלה ותעשייה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2022 לשנת התקציב 2023 בסך של 477,346 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות: עיקרי החלוקה לפי תוכניות תכנית 38-30-01 : הפעלת הרשות לחדשנות - 40,601 אלפי ש\"ח תיאור התכנית: התכנית היא תכנית התפעול של הרשות הכוללת את ההוצאות",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2023"
+      },
+      {
+        "year": 2025,
+        "date": "2025-06-10",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 364910000,
+        "transactionId": "2025/38-001",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2025 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 364,910 אלפי שקלים חדשים מסעיף 38 - כלכלה ותעשייה משנת הכספים 2024, כעודף לשימוש בשנת הכספים 2025, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 38 - כלכלה ותעשייה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2024 לשנת התקציב 2025 בסך של 364,910 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות. עיקרי הפנייה בחלוקה לתכניות מובאים להלן: תכנית 38-30-01 : הפעלת הרשות לחדשנות – 26,596 אלפי ש\"ח תיאור התכנית: רשות החדשנות היא הגוף האמון על ייז",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2025"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-27",
+        "reqTitle": "תקצוב קרן הלוואות לעסקים במילואים",
+        "changeTypeName": "אישור ועדה",
+        "netExpenseDiff": 360000000,
+        "transactionId": "2023/38-019",
+        "explanation": "",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2023"
+      },
+      {
+        "year": 2026,
+        "date": "2026-07-08",
+        "reqTitle": "פניה 1 להעברת עודפים",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 359527000,
+        "transactionId": "2026/38-201",
+        "explanation": "הנדון: שימוש בעודפי תקציב לשנת 2026 שר האוצר מתכבד להודיע לוועדת הכספים של הכנסת על העברת סכום של 359,527 אלפי שקלים חדשים מסעיף 38 - כלכלה ותעשייה משנת הכספים 2025, כעודף לשימוש בשנת הכספים 2026, בהתאם לסעיף 13 (א) לחוק יסודות התקציב התשמ\"ה - 1985, כמפורט בתדפיס המצורף בזה. הבקשה דנה בסעיף תקציבי: 38 - כלכלה ותעשייה עיקרי הפנייה: הפנייה התקציבית נועדה להעברת עודפים משנת התקציב 2025 לשנת התקציב 2026 בסך של 359,526 אלפי ש\"ח בהוצאה לתכניות התקציב הבאות: עיקרי החלוקה לפי תכניות: תכנית 38-30-01 : הפעלת הרשות לחדשנות – 32,186 אלפי ש\"ח תיאור התכנית: רשות החדשנות היא הגוף האמון על ייזום, תכלול וביצוע",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2026"
+      },
+      {
+        "year": 2023,
+        "date": "2023-12-27",
+        "reqTitle": "עודפי קורונה סופי סעיף 38",
+        "changeTypeName": "הודעה לועדה",
+        "netExpenseDiff": 313059000,
+        "transactionId": "2023/38-014",
+        "explanation": "",
+        "sourceUrl": "https://next.obudget.org/i/budget/0038/2023"
+      }
+    ]
+  }
+}

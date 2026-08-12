@@ -256,3 +256,53 @@ test('switching ministry updates the analysis screen', async ({ page }) => {
   // Environment has earmarked funds — its theme list must include them.
   await expect(page.getByText('קרנות ומקורות ייעודיים').first()).toBeVisible();
 });
+
+test('the findings screen shows suppliers with entity links', async ({ page }) => {
+  await page.goto('/#/findings');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('ממצאים');
+
+  // The framing note must precede the data.
+  await expect(page.getByText(/אינם טענה לאי-סדרים/)).toBeVisible();
+
+  const rows = page.locator('table.data-table tbody tr');
+  await expect(rows.first()).toBeVisible();
+  // Supplier rows link to the entity page at the source.
+  await expect(page.locator('a[href*="next.obudget.org/i/org/"]').first()).toBeVisible();
+});
+
+test('procurement methods disclose the tender-exemption share', async ({ page }) => {
+  await page.goto('/#/findings');
+  await expect(page.getByRole('heading', { name: /שיטות הרכש/ })).toBeVisible();
+  await expect(page.getByText('פטור ממכרז').first()).toBeVisible();
+});
+
+test('a budget transfer opens to reveal the official explanation', async ({ page }) => {
+  await page.goto('/#/findings');
+  const expander = page.getByRole('button', { name: /ההסבר הרשמי שצורף לפנייה/ }).first();
+  await expect(expander).toBeVisible();
+  await expander.click();
+  await expect(page.getByText(/ועדת הכספים|שר האוצר/).first()).toBeVisible();
+});
+
+test('the anomaly scan filters by rule and shows the formula', async ({ page }) => {
+  await page.goto('/#/findings');
+  await expect(page.getByRole('heading', { name: /סריקת חריגים בתקנות/ })).toBeVisible();
+
+  const status = page.getByRole('status').filter({ hasText: 'ממצאים מתוך' });
+  const before = await status.textContent();
+
+  await page.getByLabel('כלל', { exact: true }).selectOption('overspend');
+  await expect(status).not.toHaveText(before ?? '');
+  // Selecting a rule must expose its exact formula.
+  await expect(page.getByText(/ביצוע > תקציב מעודכן × 1.25/)).toBeVisible();
+  // Findings link back to the regulation page at the source.
+  await expect(page.locator('a[href*="next.obudget.org/i/budget/"]').first()).toBeVisible();
+});
+
+test('switching ministry on findings swaps the supplier list', async ({ page }) => {
+  await page.goto('/#/findings');
+  const heading = page.getByRole('heading', { name: /הספקים המרכזיים/ });
+  await expect(heading).toContainText('משרד התחבורה');
+  await page.getByLabel('משרד', { exact: true }).first().selectOption('education');
+  await expect(heading).toContainText('משרד החינוך');
+});

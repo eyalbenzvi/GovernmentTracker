@@ -1,0 +1,106 @@
+import { describe, expect, it } from 'vitest';
+import { ANOMALY_RULES, scanRegulations, type RegulationRow } from '../scripts/lib/anomaly-rules';
+import { normalizeMethod } from '../scripts/collect-findings';
+
+function row(overrides: Partial<RegulationRow>): RegulationRow {
+  return {
+    code: '0040500101',
+    title: 'תקנה לדוגמה',
+    year: 2024,
+    econLevel2: 'קניות בארץ',
+    allocated: 10_000_000,
+    revised: 10_000_000,
+    executed: 9_000_000,
+    ...overrides,
+  };
+}
+
+describe('scanRegulations', () => {
+  it('flags execution from a zero revised budget above the threshold', () => {
+    const findings = scanRegulations([row({ revised: 0, executed: 2_000_000 })], 'transport', 2025);
+    expect(findings.map((f) => f.ruleId)).toContain('executed_without_budget');
+  });
+
+  it('ignores sub-threshold execution from a zero budget', () => {
+    const findings = scanRegulations([row({ revised: 0, executed: 900_000 })], 'transport', 2025);
+    expect(findings).toHaveLength(0);
+  });
+
+  it('flags overspend only when both the ratio and the absolute gap are exceeded', () => {
+    // Ratio exceeded but gap below 5M — not flagged.
+    expect(
+      scanRegulations([row({ revised: 3_000_000, executed: 4_000_000 })], 'transport', 2025),
+    ).toHaveLength(0);
+    // Both exceeded — flagged.
+    expect(
+      scanRegulations([row({ revised: 20_000_000, executed: 40_000_000 })], 'transport', 2025).map(
+        (f) => f.ruleId,
+      ),
+    ).toContain('overspend');
+  });
+
+  it('flags a sizeable budget with zero execution, but never a null execution', () => {
+    expect(
+      scanRegulations([row({ revised: 20_000_000, executed: 0 })], 'transport', 2025).map(
+        (f) => f.ruleId,
+      ),
+    ).toContain('unexecuted_budget');
+    // null = no data collected; absence of data is never treated as zero spending.
+    expect(
+      scanRegulations([row({ revised: 20_000_000, executed: null })], 'transport', 2025),
+    ).toHaveLength(0);
+  });
+
+  it('does not apply closed-year rules to an open fiscal year', () => {
+    const findings = scanRegulations(
+      [row({ year: 2026, revised: 20_000_000, executed: 0 })],
+      'transport',
+      2025,
+    );
+    expect(findings).toHaveLength(0);
+  });
+
+  it('flags a year-over-year jump using the prior-year row', () => {
+    const findings = scanRegulations(
+      [row({ year: 2023, revised: 5_000_000 }), row({ year: 2024, revised: 40_000_000 })],
+      'transport',
+      2025,
+    );
+    expect(findings.map((f) => f.ruleId)).toContain('yoy_jump');
+  });
+
+  it('flags direct execution from a reserve regulation', () => {
+    const findings = scanRegulations(
+      [row({ econLevel2: 'רזרבה', revised: 10_000_000, executed: 2_000_000 })],
+      'transport',
+      2025,
+    );
+    expect(findings.map((f) => f.ruleId)).toContain('reserve_executed');
+  });
+
+  it('produces evidence text and a source link for every finding', () => {
+    const findings = scanRegulations([row({ revised: 0, executed: 2_000_000 })], 'transport', 2025);
+    for (const f of findings) {
+      expect(f.evidenceHe.length).toBeGreaterThan(5);
+      expect(f.sourceUrl).toMatch(/^https:\/\/next\.obudget\.org\/i\/budget\//);
+      expect(ANOMALY_RULES.some((r) => r.id === f.ruleId)).toBe(true);
+    }
+  });
+});
+
+describe('normalizeMethod', () => {
+  it('buckets unreported values honestly', () => {
+    expect(normalizeMethod(null)).toBe('לא דווח / אחר');
+    expect(normalizeMethod('ILS')).toBe('לא דווח / אחר');
+    expect(normalizeMethod('אחר')).toBe('לא דווח / אחר');
+  });
+
+  it('groups every exemption variant under one label', () => {
+    expect(normalizeMethod('פטור ממכרז')).toBe('פטור ממכרז');
+    expect(normalizeMethod('פטור בוועדת חריגים')).toBe('פטור ממכרז');
+  });
+
+  it('keeps real tender types distinct', () => {
+    expect(normalizeMethod('תקנה 1ב - מכרז פומבי רגיל')).toBe('תקנה 1ב - מכרז פומבי רגיל');
+  });
+});

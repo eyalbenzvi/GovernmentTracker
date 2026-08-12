@@ -1,7 +1,7 @@
 {
   "collectorId": "collect-usage-breakdown",
-  "startedAt": "2026-08-12T17:13:24.127Z",
-  "finishedAt": "2026-08-12T17:13:24.165Z",
+  "startedAt": "2026-08-12T18:15:37.085Z",
+  "finishedAt": "2026-08-12T18:15:37.108Z",
   "environmentNote": "אגרגציית הסיווג הכלכלי בוצעה בצד המקור (group by), כדי לא למשוך אלפי שורות תקנות בודדות.",
   "attempts": [
     {
@@ -11,7 +11,7 @@
       "httpStatus": 200,
       "bytes": 9822,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T17:13:24.137Z",
+      "attemptedAt": "2026-08-12T18:15:37.092Z",
       "durationMs": 0
     },
     {
@@ -21,7 +21,7 @@
       "httpStatus": 200,
       "bytes": 14195,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T17:13:24.138Z",
+      "attemptedAt": "2026-08-12T18:15:37.093Z",
       "durationMs": 0
     },
     {
@@ -31,7 +31,7 @@
       "httpStatus": 200,
       "bytes": 12303,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T17:13:24.139Z",
+      "attemptedAt": "2026-08-12T18:15:37.094Z",
       "durationMs": 0
     },
     {
@@ -41,7 +41,7 @@
       "httpStatus": 200,
       "bytes": 10001,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T17:13:24.140Z",
+      "attemptedAt": "2026-08-12T18:15:37.094Z",
       "durationMs": 0
     },
     {
@@ -51,7 +51,7 @@
       "httpStatus": 200,
       "bytes": 11781,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T17:13:24.140Z",
+      "attemptedAt": "2026-08-12T18:15:37.095Z",
       "durationMs": 0
     }
   ],

@@ -27,6 +27,8 @@ async function loadAll(): Promise<Dataset> {
     dataVersion,
     usageBreakdown,
     budgetThemes,
+    findings,
+    anomalies,
   ] = await Promise.all([
     import('../../data/processed/ministries.json'),
     import('../../data/processed/minister-tenures.json'),
@@ -40,6 +42,8 @@ async function loadAll(): Promise<Dataset> {
     import('../../data/processed/data-version.json'),
     import('../../data/processed/usage-breakdown.json'),
     import('../../data/processed/budget-themes.json'),
+    import('../../data/processed/findings.json'),
+    import('../../data/processed/anomalies.json'),
   ]);
 
   return {
@@ -55,6 +59,8 @@ async function loadAll(): Promise<Dataset> {
     dataVersion: dataVersion.default as Dataset['dataVersion'],
     usageBreakdown: usageBreakdown.default as unknown as Dataset['usageBreakdown'],
     budgetThemes: budgetThemes.default as unknown as Dataset['budgetThemes'],
+    findings: findings.default as unknown as Dataset['findings'],
+    anomalies: anomalies.default as unknown as Dataset['anomalies'],
   };
 }
 

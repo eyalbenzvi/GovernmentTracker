@@ -232,6 +232,117 @@ export const budgetThemesSchema = z.object({
     .min(1),
 });
 
+const findingsSupplierSchema = z.object({
+  name: z.string().min(1),
+  entityId: z.string().nullable(),
+  entityKind: z.string().nullable(),
+  contractCount: z.number().int().min(0),
+  totalVolume: z.number().finite().nullable(),
+  totalExecuted: z.number().finite().nullable(),
+  entityUrl: httpUrl.nullable(),
+});
+
+export const findingsSchema = z.object({
+  generatedAt: isoDate,
+  fromYear: z.number().int(),
+  method: z.string().min(1),
+  volumeNote: z.string().min(1),
+  suppliers: z.record(z.array(findingsSupplierSchema)),
+  contractTotals: z.record(
+    z.object({
+      contractCount: z.number().int().min(0),
+      totalVolume: z.number().finite(),
+      top5SharePercent: z.number().finite().nullable(),
+    }),
+  ),
+  procurementMethods: z.record(
+    z.array(
+      z.object({
+        method: z.string().min(1),
+        contractCount: z.number().int().min(0),
+        totalVolume: z.number().finite(),
+        sharePercent: z.number().finite().nullable(),
+      }),
+    ),
+  ),
+  notableContracts: z.record(
+    z.array(
+      z.object({
+        supplier: z.string().nullable(),
+        entityUrl: httpUrl.nullable(),
+        purpose: z.string().nullable(),
+        volume: z.number().finite().nullable(),
+        executed: z.number().finite().nullable(),
+        orderDate: z.string().nullable(),
+        method: z.string().min(1),
+        budgetCode: z.string().nullable(),
+        budgetTitle: z.string().nullable(),
+        isActive: z.boolean().nullable(),
+      }),
+    ),
+  ),
+  supportRecipients: z.record(
+    z.array(
+      z.object({
+        name: z.string().min(1),
+        entityId: z.string().nullable(),
+        entityKind: z.string().nullable(),
+        requestCount: z.number().int().min(0),
+        totalApproved: z.number().finite().nullable(),
+        totalPaid: z.number().finite().nullable(),
+        exampleTitle: z.string().nullable(),
+        entityUrl: httpUrl.nullable(),
+      }),
+    ),
+  ),
+  budgetChanges: z.record(
+    z.array(
+      z.object({
+        year: z.number().int().nullable(),
+        date: z.string().nullable(),
+        reqTitle: z.string().nullable(),
+        changeTypeName: z.string().nullable(),
+        netExpenseDiff: z.number().finite().nullable(),
+        transactionId: z.string().nullable(),
+        explanation: z.string(),
+        sourceUrl: httpUrl,
+      }),
+    ),
+  ),
+});
+
+export const anomaliesSchema = z.object({
+  generatedAt: isoDate,
+  closedYearMax: z.number().int(),
+  method: z.string().min(1),
+  rules: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        labelHe: z.string().min(1),
+        formulaHe: z.string().min(1),
+        whyInterestingHe: z.string().min(1),
+        appliesToClosedYearsOnly: z.boolean(),
+      }),
+    )
+    .min(1),
+  scannedCounts: z.record(z.number().int().min(0)),
+  findings: z.array(
+    z.object({
+      ruleId: z.string().min(1),
+      ministryId: z.string().min(1),
+      code: z.string().min(1),
+      title: z.string().min(1),
+      year: z.number().int(),
+      allocated: z.number().finite().nullable(),
+      revised: z.number().finite().nullable(),
+      executed: z.number().finite().nullable(),
+      evidenceHe: z.string().min(1),
+      sourceUrl: httpUrl,
+    }),
+  ),
+});
+
 export const schemas = {
   ministries: z.array(ministrySchema),
   ministerTenures: z.array(ministerTenureSchema),
@@ -244,6 +355,8 @@ export const schemas = {
   activityBudgetLinks: z.array(activityBudgetLinkSchema),
   usageBreakdown: usageBreakdownSchema,
   budgetThemes: budgetThemesSchema,
+  findings: findingsSchema,
+  anomalies: anomaliesSchema,
 };
 
 export type Ministry = z.infer<typeof ministrySchema>;
