@@ -24,6 +24,26 @@ import type {
   Topic,
 } from './lib/schema.js';
 
+interface UsageBreakdownFile {
+  rows: Array<{
+    ministryId: string;
+    fiscalYear: number;
+    econLevel1: string;
+    revised: number | null;
+  }>;
+  coverage: Array<{
+    ministryId: string;
+    fiscalYear: number;
+    classifiedRevisedSum: number;
+    sectionRevisedTotal: number | null;
+    coveragePercent: number | null;
+  }>;
+}
+interface BudgetThemesFile {
+  themes: Array<{ id: string; assignedLineCount: number }>;
+  assignments: Array<{ ministryId: string; budgetCode: string; title: string; themeId: string }>;
+}
+
 interface Check {
   name: string;
   passed: boolean;
@@ -63,6 +83,8 @@ function main(): void {
   const coverage = readJson<Coverage[]>(p('coverage.json'));
   const links = readJson<ActivityBudgetLink[]>(p('activity-budget-links.json'));
   const dataVersion = readJson<unknown>(p('data-version.json'));
+  const usage = readJson<UsageBreakdownFile>(p('usage-breakdown.json'));
+  const budgetThemes = readJson<BudgetThemesFile>(p('budget-themes.json'));
 
   // ---- 1. schema validation ----------------------------------------------
   // Structural result type, so parse results for differently-shaped schemas can
@@ -80,6 +102,8 @@ function main(): void {
     ['coverage.json', schemas.coverage.safeParse(coverage)],
     ['activity-budget-links.json', schemas.activityBudgetLinks.safeParse(links)],
     ['data-version.json', schemas.dataVersion.safeParse(dataVersion)],
+    ['usage-breakdown.json', schemas.usageBreakdown.safeParse(usage)],
+    ['budget-themes.json', schemas.budgetThemes.safeParse(budgetThemes)],
   ];
   for (const [file, result] of schemaTargets) {
     check(
@@ -332,6 +356,91 @@ function main(): void {
     .filter((m) => !coverage.some((c) => c.ministryId === m.id))
     .map((m) => m.id);
   check('לכל משרד יש שורת כיסוי', missingCoverage.length === 0, missingCoverage.join(', '));
+
+  // ---- 13. usage breakdown consistency ------------------------------------
+  const ministryIdSet = new Set(ministries.map((m) => m.id));
+  const usageProblems: string[] = [];
+  for (const row of usage.rows) {
+    if (!ministryIdSet.has(row.ministryId))
+      usageProblems.push(`שורת שימוש למשרד לא קיים: ${row.ministryId}`);
+  }
+  for (const cov of usage.coverage) {
+    // The classified depth-4 sum may legitimately fall short of the section
+    // total (current year), but it must never exceed it by more than rounding.
+    if (
+      cov.sectionRevisedTotal !== null &&
+      cov.classifiedRevisedSum > cov.sectionRevisedTotal + 1
+    ) {
+      usageProblems.push(
+        `${cov.ministryId}/${cov.fiscalYear}: סכום הסיווג (${cov.classifiedRevisedSum}) גדול מסך הסעיף (${cov.sectionRevisedTotal})`,
+      );
+    }
+    if (cov.coveragePercent !== null && (cov.coveragePercent < 0 || cov.coveragePercent > 100.5)) {
+      usageProblems.push(
+        `${cov.ministryId}/${cov.fiscalYear}: אחוז כיסוי לא סביר ${cov.coveragePercent}`,
+      );
+    }
+  }
+  // Cross-check: per ministry-year, the usage rows must sum to the recorded classified sum.
+  for (const cov of usage.coverage) {
+    const sum = usage.rows
+      .filter((r) => r.ministryId === cov.ministryId && r.fiscalYear === cov.fiscalYear)
+      .reduce((acc, r) => acc + (r.revised ?? 0), 0);
+    if (Math.abs(sum - cov.classifiedRevisedSum) > 1) {
+      usageProblems.push(
+        `${cov.ministryId}/${cov.fiscalYear}: סכום שורות השימוש (${sum}) שונה מסכום הכיסוי (${cov.classifiedRevisedSum})`,
+      );
+    }
+  }
+  check(
+    'פירוט השימוש הרשמי עקבי ובגבולות הסעיף',
+    usageProblems.length === 0,
+    usageProblems.slice(0, 5).join(' | '),
+  );
+
+  // ---- 14. thematic classification integrity ------------------------------
+  const themeProblems: string[] = [];
+  const themeIdSet = new Set(budgetThemes.themes.map((t) => t.id));
+  const assignmentKeys = new Set(
+    budgetThemes.assignments.map((a) => `${a.ministryId}:${a.budgetCode}`),
+  );
+  for (const assignment of budgetThemes.assignments) {
+    if (!themeIdSet.has(assignment.themeId))
+      themeProblems.push(`שיוך לתמה לא קיימת: ${assignment.themeId}`);
+    if (!ministryIdSet.has(assignment.ministryId))
+      themeProblems.push(`שיוך למשרד לא קיים: ${assignment.ministryId}`);
+  }
+  // Every collected level-2/3 line must carry a theme, with a matching title.
+  const collectedLines = new Map<string, string>();
+  for (const item of budgetItems) {
+    if (item.hierarchyLevel === 2 || item.hierarchyLevel === 3) {
+      collectedLines.set(`${item.ministryId}:${item.budgetCode}`, item.title);
+    }
+  }
+  for (const [key, title] of collectedLines) {
+    if (!assignmentKeys.has(key)) themeProblems.push(`שורה ללא שיוך תמטי: ${key} (${title})`);
+  }
+  for (const assignment of budgetThemes.assignments) {
+    const collectedTitle = collectedLines.get(`${assignment.ministryId}:${assignment.budgetCode}`);
+    if (collectedTitle !== undefined && collectedTitle !== assignment.title) {
+      themeProblems.push(`אי-התאמת כותרת בשיוך ${assignment.budgetCode}`);
+    }
+  }
+  // Stored per-theme counts must equal the real assignment counts.
+  const actualThemeCounts = new Map<string, number>();
+  for (const assignment of budgetThemes.assignments) {
+    actualThemeCounts.set(assignment.themeId, (actualThemeCounts.get(assignment.themeId) ?? 0) + 1);
+  }
+  for (const theme of budgetThemes.themes) {
+    if (theme.assignedLineCount !== (actualThemeCounts.get(theme.id) ?? 0)) {
+      themeProblems.push(`מונה שגוי לתמה ${theme.id}`);
+    }
+  }
+  check(
+    'הסיווג התמטי שלם, עקבי ותואם כותרות',
+    themeProblems.length === 0,
+    themeProblems.slice(0, 5).join(' | '),
+  );
 
   // ---- report -------------------------------------------------------------
   console.log('\n=== ולידציית נתונים ===\n');

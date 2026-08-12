@@ -1,0 +1,1025 @@
+{
+  "method": "llm_build_time",
+  "methodNote": "השיוכים בקובץ זה נוצרו על ידי מודל שפה שהופעל בזמן בניית המאגר — לא בזמן ריצת האתר. הקלט היחיד לכל שיוך הוא כותרת הסעיף ומיקומו בהיררכיה התקציבית; המודל לא קרא מסמכי מדיניות ולא הסיק מעבר לטקסט הכותרת. כל שיוך נושא נימוק ורמת ודאות, וניתן לתקנו בעריכת קובץ זה ופתיחת Issue. שיוך תמטי הוא פרשנות של שם הסעיף — הוא אינו קביעה רשמית של משרד האוצר, בשונה מהסיווג הכלכלי (סוגי שימוש) שמקורו רשמי.",
+  "confidenceNote": "high = הכותרת חד-משמעית (למשל \"רזרבה\", \"שכר ותפעול\"); medium = הכותרת מאפשרת יותר מקריאה סבירה אחת, והנימוק מפרט את ההתלבטות.",
+  "themes": [
+    {
+      "id": "core_services",
+      "labelHe": "שירותים ופעולות לציבור",
+      "description": "מימון ישיר של שירות או פעילות שהמשרד מספק לציבור: בתי חולים ממשלתיים, מערכת החינוך הרשמית, לשכות בריאות, פעולות סביבתיות.",
+      "color": "#1b5e8a",
+      "assignedLineCount": 42
+    },
+    {
+      "id": "transfers_support",
+      "labelHe": "העברות, תמיכות ומענקים",
+      "description": "כסף שהמשרד מעביר לגורם אחר שמספק את השירות או מקבל את התמיכה: קופות חולים, רשתות חינוך מוכרות, תמיכות במוסדות, תמריצים לעסקים.",
+      "color": "#2f7d54",
+      "assignedLineCount": 13
+    },
+    {
+      "id": "authorities_regulation",
+      "labelHe": "רשויות סטטוטוריות ורגולציה",
+      "description": "מימון רשויות ייעודיות וגופי אסדרה הפועלים מכוח חוק: רשות הספנות, רשות התעופה האזרחית, רשות הרגולציה.",
+      "color": "#7a5c9e",
+      "assignedLineCount": 14
+    },
+    {
+      "id": "research_innovation",
+      "labelHe": "מחקר, פיתוח וחדשנות",
+      "description": "מענקי מו\"פ, רשות החדשנות ושיתופי פעולה מדעיים.",
+      "color": "#1b7a8a",
+      "assignedLineCount": 4
+    },
+    {
+      "id": "workforce_training",
+      "labelHe": "הכשרת כוח אדם מקצועי",
+      "description": "הכשרה והדרכה של אנשי מקצוע שהמערכת תלויה בהם: רופאים, אחיות, עובדי הוראה.",
+      "color": "#8a6a1b",
+      "assignedLineCount": 7
+    },
+    {
+      "id": "admin_hq",
+      "labelHe": "מטה, שכר ותפעול",
+      "description": "הנהלת המשרד: שכר עובדי המטה, תפעול, יחידות מטה.",
+      "color": "#5b6d7a",
+      "assignedLineCount": 13
+    },
+    {
+      "id": "earmarked_funds",
+      "labelHe": "קרנות ומקורות ייעודיים",
+      "description": "כספים בעלי ייעוד חוקי נפרד: קרנות סביבתיות, כספי עזבונות, פרויקטים במימון חיצוני.",
+      "color": "#9e6a7a",
+      "assignedLineCount": 9
+    },
+    {
+      "id": "technical_reserves",
+      "labelHe": "רזרבות וסעיפים טכניים",
+      "description": "רזרבות להתייקרויות, חשבונות מעבר וסעיפים חשבונאיים שאינם פעילות מהותית. הפרדתם מונעת ניפוח מלאכותי של קטגוריות תוכן.",
+      "color": "#8a8a8a",
+      "assignedLineCount": 18
+    }
+  ],
+  "assignments": [
+    {
+      "ministryId": "economy",
+      "budgetCode": "003830",
+      "title": "המדען הראשי",
+      "themeId": "research_innovation",
+      "confidence": "high",
+      "reasoning": "לשכת המדען הראשי היא זרוע המו\"פ של המשרד; סעיפי הבנים שלה (רשות החדשנות, מענקי מחקר ופיתוח) מאשרים זאת."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00383001",
+      "title": "הפעלת הרשות לחדשנות",
+      "themeId": "research_innovation",
+      "confidence": "high",
+      "reasoning": "הכותרת נוקבת ברשות החדשנות — גוף המו\"פ הממשלתי המרכזי."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00383002",
+      "title": "מענקי מחקר ופיתוח",
+      "themeId": "research_innovation",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: מענקי מחקר ופיתוח."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00383004",
+      "title": "מו\"פ בין-לאומי",
+      "themeId": "research_innovation",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: מחקר ופיתוח בין-לאומי."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "003840",
+      "title": "עידוד המגזר העסקי",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "\"עידוד\" בהקשר תקציבי הוא תמריצים ומענקים לעסקים — כסף שמועבר לגורם חיצוני."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00384001",
+      "title": "קידום השקעות ועידוד",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "קידום השקעות ועידוד הם מסלולי מענקים ותמריצים למשקיעים."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00384004",
+      "title": "קידום הייצוא ועידוד",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "תמריצים ותמיכות ליצואנים — העברה לגורם חיצוני."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00384009",
+      "title": "פעולות כלליות לקידום",
+      "themeId": "transfers_support",
+      "confidence": "medium",
+      "reasoning": "הכותרת עמומה: \"פעולות\" יכול להיות גם פעילות ישירה של המשרד. שויך לתמיכות מפני שהסעיף יושב תחת \"עידוד המגזר העסקי\"; ייתכן שחלקו פעילות ישירה."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "003870",
+      "title": "שכר ותפעול המשרד",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: שכר ותפעול."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00387001",
+      "title": "שכר",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "שכר עובדי המשרד, תחת \"שכר ותפעול המשרד\"."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00387002",
+      "title": "תפעול",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "תפעול המשרד, תחת \"שכר ותפעול המשרד\"."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "003890",
+      "title": "רשות הרגולציה",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "הכותרת נוקבת ברשות אסדרה."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00389001",
+      "title": "שכר ופעולות",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "שכר ופעולות של רשות הרגולציה (סעיף האב 003890); התמה נגזרת מהגוף הממומן, לא מסוג ההוצאה."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "003899",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "economy",
+      "budgetCode": "00389999",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002060",
+      "title": "יחידות מטה",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: יחידות מטה."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206001",
+      "title": "פעילויות מטה מרכזיות -",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "פעילויות מטה, תחת \"יחידות מטה\"."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206002",
+      "title": "המשרד להשכלה גבוהה",
+      "themeId": "admin_hq",
+      "confidence": "medium",
+      "reasoning": "יחידה שמופיעה תחת \"יחידות מטה\" ולכן שויכה למטה; ייתכן שמדובר בתקצוב ייעודי להשכלה גבוהה שראוי לתמה נפרדת. עיקר תקצוב ההשכלה הגבוהה נמצא בסעיף נפרד (ות\"ת, סעיף 21) שאינו במאגר זה."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002061",
+      "title": "חינוך מיוחד",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירות חינוך ישיר לתלמידים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206101",
+      "title": "חינוך מיוחד",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירות חינוך ישיר לתלמידים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002062",
+      "title": "קדם יסודי",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שלב חינוך במערכת הרשמית — שירות ישיר."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206201",
+      "title": "קדם יסודי",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שלב חינוך במערכת הרשמית — שירות ישיר."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206202",
+      "title": "הגיל הרך",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירות חינוך לגיל הרך."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002063",
+      "title": "יסודי וחטיבות ביניים",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שלבי חינוך במערכת הרשמית. חלק מסעיפי הבנים הם העברות לרשתות מוכרות, והם מסווגים בנפרד."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206301",
+      "title": "יסודי וחטיבת ביניים",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "החינוך הרשמי בשלבי היסודי וחטיבות הביניים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206302",
+      "title": "החינוך העצמאי",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "רשת חינוך מוכרת שאינה רשמית; המדינה מממנת אותה בהעברה תקציבית ואינה מפעילה אותה ישירות."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206303",
+      "title": "מעין החינוך התורני",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "רשת חינוך מוכרת שאינה רשמית הממומנת בהעברה."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206304",
+      "title": "מוכר שאינו רשמי",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "הכותרת עצמה מציינת מוסדות מוכרים שאינם רשמיים — מימון בהעברה למוסדות חיצוניים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206305",
+      "title": "מוסדות הפטור",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "מוסדות פטור הם מוסדות חיצוניים למערכת הרשמית הממומנים בהעברה."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002064",
+      "title": "חטיבה עליונה",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שלב חינוך במערכת הרשמית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206401",
+      "title": "חטיבה עליונה",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שלב חינוך במערכת הרשמית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002065",
+      "title": "שירותי עזר, הסעות",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירותי תמך ישירים לתלמידים (הסעות, עזר)."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206501",
+      "title": "שירותי עזר, הסעות",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירותי תמך ישירים לתלמידים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002066",
+      "title": "חינוך התיישבותי",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "זרם חינוך המנוהל על ידי מינהל ייעודי במשרד — שירות ישיר."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206601",
+      "title": "המינהל חינוך התיישבותי",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מינהל המפעיל את החינוך ההתיישבותי."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002067",
+      "title": "פעולות משלימות לקידום",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "\"פעולות משלימות\" הן תוכניות חינוכיות (למשל הארכת יום הלימודים בסעיף הבן) — שירות ישיר. הכותרת עמומה ולכן הוודאות בינונית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206701",
+      "title": "פעילויות ופרוייקטים",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "כותרת גנרית תחת \"פעולות משלימות לקידום\"; שויך לשירותים על סמך ההקשר, ייתכן שכולל גם תמיכות."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206702",
+      "title": "הארכת יום הלימודים",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "תוכנית חינוכית ישירה לתלמידים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206703",
+      "title": "מינהל החינוך הדתי",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "מינהל המפעיל את זרם החינוך הממלכתי-דתי. אפשר לקרוא אותו גם כמטה; שויך לשירותים מפני שהחינוך הממלכתי-דתי הוא חלק מהמערכת הרשמית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002068",
+      "title": "מינהל עובדי הוראה",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "המינהל אחראי להכשרה ותנאי שירות של עובדי הוראה (ראו סעיף הבן)."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206801",
+      "title": "תנאי שירות והכשרת",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: תנאי שירות והכשרת עובדי הוראה."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002069",
+      "title": "תמיכה בנושאי יהדות",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "הכותרת פותחת ב\"תמיכה\" — תמיכות במוסדות (תרבות יהודית, מוסדות תורניים בסעיפי הבנים)."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206901",
+      "title": "תרבות יהודית",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "תמיכות בתחום התרבות היהודית, תחת סעיף \"תמיכה בנושאי יהדות\"."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00206902",
+      "title": "מוסדות תורניים",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "תמיכות במוסדות תורניים — העברה למוסדות חיצוניים."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002070",
+      "title": "רזרבות",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבות."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00207001",
+      "title": "רזרבה להתייקרויות",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "רזרבה חשבונאית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00207002",
+      "title": "רזרבה לעמידה במגבלה",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "רזרבה פיסקלית טכנית."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "002099",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "education",
+      "budgetCode": "00209999",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002611",
+      "title": "שכר ותפעול",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: שכר ותפעול."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261101",
+      "title": "שכר ותפעול",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: שכר ותפעול."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002612",
+      "title": "פעולות",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "\"פעולות יחידות המשרד\" (סעיף הבן) — פעילות סביבתית ישירה. הכותרת גנרית ולכן הוודאות בינונית."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261201",
+      "title": "פעולות יחידות המשרד",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "פעילות היחידות המקצועיות של המשרד; עשוי לכלול גם רכיבי מטה."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002613",
+      "title": "קרנות",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: קרנות (שמירת ניקיון, מניעת זיהום ים — ראו סעיפי הבנים)."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261301",
+      "title": "הטמנה - הקרן לשמירת",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "היטל הטמנה של הקרן לשמירת הניקיון — מקור ייעודי בחוק."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261302",
+      "title": "חשבון כללי - הקרן",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "חשבון של הקרן לשמירת הניקיון."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261303",
+      "title": "חשבון פקדון - הקרן",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "חשבון פיקדון של קרן ייעודית (חוק הפיקדון)."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261304",
+      "title": "קרן למניעת זיהום ים,",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "קרן ייעודית בחוק למניעת זיהום ים."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002614",
+      "title": "פרוייקטים מקק\"ל",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "פרויקטים סביבתיים במימון ייעודי מקק\"ל — מקור חיצוני מיועד."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00261401",
+      "title": "פרוייקטים סביבתיים",
+      "themeId": "earmarked_funds",
+      "confidence": "medium",
+      "reasoning": "פרויקטים סביבתיים תחת סעיף המימון מקק\"ל; מהות הפעילות היא שירות סביבתי, אך מקור המימון הייעודי הוא המאפיין המבני ולכן שויך לקרנות."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002626",
+      "title": "רזרבות",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבות."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00262601",
+      "title": "רזרבות",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבות."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "002699",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "environment",
+      "budgetCode": "00269999",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002402",
+      "title": "משרד ראשי",
+      "themeId": "admin_hq",
+      "confidence": "medium",
+      "reasoning": "\"משרד ראשי\" הוא סעיף המטה, אך חלק מסעיפי הבנים שלו (מכונים רפואיים) הם שירות ישיר ומסווגים בנפרד."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240201",
+      "title": "שכר מטה",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: שכר מטה."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240205",
+      "title": "תפעול מטה",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: תפעול מטה."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240218",
+      "title": "מכונים",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "\"מכונים\" בהקשר משרד הבריאות הם מכונים רפואיים ממשלתיים המספקים שירות; הכותרת קצרה מכדי ודאות גבוהה."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240262",
+      "title": "המכון הרפואי לבטיחות",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "המכון הרפואי לבטיחות בדרכים מבצע בדיקות רפואיות לציבור הנהגים — שירות ממשלתי ישיר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240270",
+      "title": "מכון לרעלים תל השומר",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מכון רפואי ממשלתי (מרכז המידע והייעוץ בהרעלות)."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002404",
+      "title": "הכשרה והדרכה",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: הכשרה והדרכה (רופאים, אחיות — ראו סעיפי הבנים)."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240409",
+      "title": "הכשרת רופאים",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240420",
+      "title": "הכשרת אחיות",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240480",
+      "title": "הכשרת מקצועות רפואיים",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002407",
+      "title": "רכש שירותי בריאות",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "המשרד קונה שירותי בריאות (גריאטריה, בריאות הנפש) עבור הציבור. זו אספקת שירות שמנגנון הביצוע שלה הוא רכש; אפשר היה לסווג גם כהעברות. הסיווג הכלכלי הרשמי מפרט את מנגנון ההוצאה בנפרד."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240701",
+      "title": "הכשרות צוותים רפואיים",
+      "themeId": "workforce_training",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: הכשרות צוותים רפואיים, גם אם היא יושבת תחת סעיף הרכש."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240703",
+      "title": "רפואה מונעת",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירות בריאות ציבורי ישיר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240709",
+      "title": "פעולות מרכזיות",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "כותרת גנרית תחת \"רכש שירותי בריאות\"; שויך לשירותים לפי ההקשר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240710",
+      "title": "גריאטריה",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מימון אשפוז וטיפול גריאטרי — שירות בריאות."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00240714",
+      "title": "בריאות הנפש",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מימון שירותי בריאות הנפש."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002416",
+      "title": "שירותי בריאות הציבור",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: שירותי בריאות הציבור (לשכות, מעבדות — ראו סעיפי הבנים)."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00241603",
+      "title": "רפואה מונעת",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "שירות בריאות ציבורי ישיר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00241605",
+      "title": "שיקום שכונות",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "תוכנית חברתית-בריאותית ותיקה; הכותרת אינה מפרטת את מנגנון הביצוע, ייתכן שמדובר בתמיכות."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00241606",
+      "title": "פעולות מרכזיות",
+      "themeId": "core_services",
+      "confidence": "medium",
+      "reasoning": "כותרת גנרית תחת \"שירותי בריאות הציבור\"; שויך לשירותים לפי ההקשר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00241689",
+      "title": "מעבדות בריאות הציבור",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מעבדות ממשלתיות — שירות ישיר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00241690",
+      "title": "לשכות הבריאות",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "לשכות הבריאות המחוזיות — שירות ממשלתי ישיר."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002420",
+      "title": "קופות חולים ובתי חולים",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "מימון סל הבריאות המועבר לקופות החולים ולבתי החולים — ההעברה הגדולה במערכת הבריאות: הכסף עובר לגופים שמספקים את השירות."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00242003",
+      "title": "קופות ובתי חולים –",
+      "themeId": "transfers_support",
+      "confidence": "high",
+      "reasoning": "העברת מימון לקופות ולבתי החולים."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00242004",
+      "title": "רזרבה",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבה."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002422",
+      "title": "כספי עזבונות",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "כספי עזבונות הם מקור ייעודי שאינו תקציב שוטף."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00242210",
+      "title": "כספי עזבונות",
+      "themeId": "earmarked_funds",
+      "confidence": "high",
+      "reasoning": "מקור ייעודי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002440",
+      "title": "מרכזים לבריאות הנפש",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "בתי החולים הממשלתיים לבריאות הנפש — שירות ישיר שהמשרד מפעיל."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00244009",
+      "title": "מרכז קהילתי יפו",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מרכז בריאות נפש קהילתי ממשלתי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002450",
+      "title": "מרכזים רפואיים",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מרכזים רפואיים ממשלתיים (גריאטריים — ראו סעיפי הבנים)."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00245001",
+      "title": "מרכז גריאטרי נתניה",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מוסד רפואי ממשלתי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00245002",
+      "title": "מרכז גריאטרי פלימן",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מוסד רפואי ממשלתי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00245003",
+      "title": "מרכז גריאטרי פרדס חנה",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מוסד רפואי ממשלתי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00245004",
+      "title": "מרכז גריאטרי שמואל",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מוסד רפואי ממשלתי (שמואל הרופא)."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00245005",
+      "title": "מרכז גריאטרי ראשון",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "מוסד רפואי ממשלתי."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "002499",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "health",
+      "budgetCode": "00249999",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004050",
+      "title": "משרד ראשי",
+      "themeId": "admin_hq",
+      "confidence": "medium",
+      "reasoning": "סעיף המטה של המשרד; סעיף הבן \"השירות המטאורולוגי\" הוא שירות ישיר ומסווג בנפרד."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405001",
+      "title": "משרד התחבורה - ראשי",
+      "themeId": "admin_hq",
+      "confidence": "high",
+      "reasoning": "סעיף המטה הראשי."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405002",
+      "title": "השירות המטאורולוגי",
+      "themeId": "core_services",
+      "confidence": "high",
+      "reasoning": "השירות המטאורולוגי מספק שירות תחזיות לציבור — שירות ישיר."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004051",
+      "title": "תחבורה ימית",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "סעיף הבן היחיד הוא רשות הספנות והנמלים — גוף אסדרה סטטוטורי."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405101",
+      "title": "רשות הספנות והנמלים",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "רשות אסדרה סטטוטורית."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004052",
+      "title": "תעופה",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "סעיף הבן הוא רשות התעופה האזרחית — גוף אסדרה."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405201",
+      "title": "רשות התעופה האזרחית",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "רשות אסדרה סטטוטורית."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004053",
+      "title": "בטיחות בדרכים",
+      "themeId": "authorities_regulation",
+      "confidence": "medium",
+      "reasoning": "סעיף הבן הוא הרשות הלאומית לבטיחות בדרכים — רשות סטטוטורית, אך פעילותה (חינוך, הסברה, מחקר) קרובה לשירות ציבורי ישיר. שויך לרשויות לפי הזהות המוסדית שבכותרת."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405301",
+      "title": "הרשות לבטיחות בדרכים",
+      "themeId": "authorities_regulation",
+      "confidence": "medium",
+      "reasoning": "רשות סטטוטורית שפעילותה הסברתית-חינוכית; שויך לרשויות לפי הזהות המוסדית."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004054",
+      "title": "תחבורה ציבורית",
+      "themeId": "authorities_regulation",
+      "confidence": "medium",
+      "reasoning": "סעיף הבן הוא רשות התחבורה הציבורית — הגוף המאסדר והמארגן. סבסוד ההפעלה של התחבורה הציבורית עצמו יושב בסעיפי פיתוח ותמיכות שאינם בתקציב הרגיל הזה, ולכן הסעיף כאן קטן יחסית."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405401",
+      "title": "רשות תחבורה ציבורית",
+      "themeId": "authorities_regulation",
+      "confidence": "medium",
+      "reasoning": "הרשות המאסדרת של התחבורה הציבורית; אינה סבסוד ההפעלה עצמו."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004055",
+      "title": "רשות המטרו",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "רשות ייעודית לפרויקט המטרו — גוף סטטוטורי."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405501",
+      "title": "רשות המטרו",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "רשות ייעודית לפרויקט המטרו."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004056",
+      "title": "חקירה בטיחותית בתעופה",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "גוף חקירה בטיחותית סטטוטורי."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405601",
+      "title": "הרשות לחקירה בטיחותית",
+      "themeId": "authorities_regulation",
+      "confidence": "high",
+      "reasoning": "גוף חקירה בטיחותית סטטוטורי."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004059",
+      "title": "רזרבה",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבה."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00405901",
+      "title": "רזרבה",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "הכותרת מפורשת: רזרבה."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "004099",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    },
+    {
+      "ministryId": "transport",
+      "budgetCode": "00409999",
+      "title": "חשבון מעבר",
+      "themeId": "technical_reserves",
+      "confidence": "high",
+      "reasoning": "חשבון מעבר הוא סעיף חשבונאי טכני."
+    }
+  ]
+}

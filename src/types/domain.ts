@@ -179,6 +179,59 @@ export interface DataVersion {
   changelog: Array<{ date: string; note: string }>;
 }
 
+export interface UsageRow {
+  ministryId: string;
+  fiscalYear: number;
+  econLevel1: string;
+  econLevel2: string;
+  allocated: number | null;
+  revised: number | null;
+  executed: number | null;
+  lineCount: number;
+  sourceUrl: string;
+}
+
+export interface UsageCoverageRow {
+  ministryId: string;
+  fiscalYear: number;
+  classifiedRevisedSum: number;
+  sectionRevisedTotal: number | null;
+  coveragePercent: number | null;
+}
+
+export interface UsageBreakdown {
+  generatedAt: string;
+  method: string;
+  rows: UsageRow[];
+  coverage: UsageCoverageRow[];
+  rejected: Array<{ ministryId: string; reason: string }>;
+}
+
+export interface BudgetTheme {
+  id: string;
+  labelHe: string;
+  description: string;
+  color: string;
+  assignedLineCount: number;
+}
+
+export interface ThemeAssignment {
+  ministryId: string;
+  budgetCode: string;
+  title: string;
+  themeId: string;
+  confidence: 'high' | 'medium';
+  reasoning: string;
+}
+
+export interface BudgetThemes {
+  method: 'llm_build_time';
+  methodNote: string;
+  confidenceNote: string;
+  themes: BudgetTheme[];
+  assignments: ThemeAssignment[];
+}
+
 export interface Dataset {
   ministries: Ministry[];
   ministerTenures: MinisterTenure[];
@@ -190,4 +243,6 @@ export interface Dataset {
   links: ActivityBudgetLink[];
   methodology: Methodology;
   dataVersion: DataVersion;
+  usageBreakdown: UsageBreakdown;
+  budgetThemes: BudgetThemes;
 }

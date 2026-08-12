@@ -22,7 +22,9 @@
     "data:validate": "tsx scripts/validate-data.ts",
     "data:build": "tsx scripts/build-data.ts",
     "data:report": "tsx scripts/generate-data-report.ts",
-    "data:refresh": "npm run data:collect-sources && npm run data:normalize-budget && npm run data:collect-activities && npm run data:classify-topics && npm run data:build && npm run data:validate && npm run data:report"
+    "data:refresh": "npm run data:collect-sources && npm run data:normalize-budget && npm run data:usage-breakdown && npm run data:collect-activities && npm run data:classify-topics && npm run data:classify-themes && npm run data:build && npm run data:validate && npm run data:report",
+    "data:usage-breakdown": "tsx scripts/collect-usage-breakdown.ts",
+    "data:classify-themes": "tsx scripts/classify-budget-themes.ts"
   },
   "dependencies": {
     "lucide-react": "^0.451.0",

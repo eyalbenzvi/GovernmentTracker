@@ -14,8 +14,10 @@ npm run data:refresh          # כל השלבים, בסדר הנכון
 ```bash
 npm run data:collect-sources    # קטלוג המקורות + ניסיון אחזור בפועל
 npm run data:normalize-budget   # נתוני תקציב וביצוע
+npm run data:usage-breakdown    # סיווג כלכלי רשמי (סוגי שימוש) ברמת התקנות
 npm run data:collect-activities # פריטי פעילות פומבית
 npm run data:classify-topics    # סיווג נושאים דטרמיניסטי
+npm run data:classify-themes    # החלת הסיווג התמטי (LLM בזמן בנייה, קובץ מבוקר)
 npm run data:build              # הרכבת ministries / coverage / methodology / CSV
 npm run data:validate           # שער איכות — נכשל = לא מפרסמים
 npm run data:report             # data/processed/DATA-REPORT.md

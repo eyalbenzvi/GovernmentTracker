@@ -1,7 +1,7 @@
 {
   "collectorId": "normalize-budget",
-  "startedAt": "2026-08-12T16:42:03.231Z",
-  "finishedAt": "2026-08-12T16:42:11.082Z",
+  "startedAt": "2026-08-12T17:13:21.615Z",
+  "finishedAt": "2026-08-12T17:13:23.270Z",
   "environmentNote": "ניסיונות איסוף התקציב בוצעו מול המקורות הרשמיים ומול שכבת העזר בפועל. כישלונות אחזור מתועדים כאן ובקובץ budget-collection-notes.json.",
   "attempts": [
     {
@@ -11,8 +11,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:42:03.920Z",
-      "durationMs": 689
+      "attemptedAt": "2026-08-12T17:13:22.141Z",
+      "durationMs": 525
     },
     {
       "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
@@ -21,8 +21,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:42:05.210Z",
-      "durationMs": 1290
+      "attemptedAt": "2026-08-12T17:13:23.237Z",
+      "durationMs": 1095
     },
     {
       "url": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
@@ -31,8 +31,8 @@
       "httpStatus": 200,
       "bytes": 152905,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:05.942Z",
-      "durationMs": 732
+      "attemptedAt": "2026-08-12T17:13:23.239Z",
+      "durationMs": 0
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
@@ -41,8 +41,8 @@
       "httpStatus": 200,
       "bytes": 24272,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:06.811Z",
-      "durationMs": 868
+      "attemptedAt": "2026-08-12T17:13:23.241Z",
+      "durationMs": 0
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
@@ -51,8 +51,8 @@
       "httpStatus": 200,
       "bytes": 45220,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:07.458Z",
-      "durationMs": 645
+      "attemptedAt": "2026-08-12T17:13:23.243Z",
+      "durationMs": 0
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
@@ -61,8 +61,8 @@
       "httpStatus": 200,
       "bytes": 39855,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:08.670Z",
-      "durationMs": 1211
+      "attemptedAt": "2026-08-12T17:13:23.247Z",
+      "durationMs": 0
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
@@ -71,8 +71,8 @@
       "httpStatus": 200,
       "bytes": 20131,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:09.857Z",
-      "durationMs": 1186
+      "attemptedAt": "2026-08-12T17:13:23.248Z",
+      "durationMs": 0
     },
     {
       "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
@@ -81,8 +81,8 @@
       "httpStatus": 200,
       "bytes": 20910,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:42:11.061Z",
-      "durationMs": 1203
+      "attemptedAt": "2026-08-12T17:13:23.248Z",
+      "durationMs": 0
     }
   ],
   "summary": {

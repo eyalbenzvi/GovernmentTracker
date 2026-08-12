@@ -16,12 +16,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Education → education | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (1260423 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "47e94121868757d072f4a1bc44cc76a23ebf6e4b2c7fdd5cc3b577ecbce7556c"
   },
   {
     "id": "src-01438d30e367",
@@ -39,12 +39,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2023, 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (11676698 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "64b7a42e18393558683097c0606fdd044ec4b96fcf366eb51e286e296ce2804d"
   },
   {
     "id": "src-066345128e9d",
@@ -81,12 +81,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (2876932 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "82311f2921e4cbf2afeb71e632f86afbd5b26a6c0020f40d638b804382215e18"
   },
   {
     "id": "src-0b0eb2257952",
@@ -191,12 +191,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Transportation → transport | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (1443616 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "c4f39dc08ecc3ca7b716f58674243255ace47ef4d2fd3261b0ceb740f475ab84"
   },
   {
     "id": "src-3a41d9408a0c",
@@ -281,12 +281,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Transportation → transport | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (1916257 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "4751db080f4ede00d9752124bdde231d8a5d8c6ae8b8be0376e614320e994295"
   },
   {
     "id": "src-58b1c6740f30",
@@ -675,12 +675,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q07-environment-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Environment → environment | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_error",
-    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (385812 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "425772fc004295158219e5fadbfa52c522183a48ee4207f1cb2f2839a5e8102e"
   },
   {
     "id": "src-ab1ac9214213",

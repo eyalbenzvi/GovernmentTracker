@@ -8,18 +8,18 @@
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf",
       "title": "תקציב הצעת",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "47e94121868757d072f4a1bc44cc76a23ebf6e4b2c7fdd5cc3b577ecbce7556c",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-01438d30e367",
       "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf",
       "title": "ירושלים - ניסן התש פ\"ג - מרץ 2023 הצעה לשנ ות תקציב המדינה עיקרי התקציב",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "64b7a42e18393558683097c0606fdd044ec4b96fcf366eb51e286e296ce2804d",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-066345128e9d",
@@ -35,9 +35,9 @@
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf",
       "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש רשויות פיקוח",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "82311f2921e4cbf2afeb71e632f86afbd5b26a6c0020f40d638b804382215e18",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-0b0eb2257952",
@@ -80,9 +80,9 @@
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf",
       "title": "· הצעת תקציב לשנת הכספים 2025 ודברי הסבר מוגשים לכנסת העשרים וחמש",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "c4f39dc08ecc3ca7b716f58674243255ace47ef4d2fd3261b0ceb740f475ab84",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-3a41d9408a0c",
@@ -116,9 +116,9 @@
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf",
       "title": "· הצעת תקציב לשנת הכספים2026 ודברי הסבר מוגשים לכנסת העשרים וחמש",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "4751db080f4ede00d9752124bdde231d8a5d8c6ae8b8be0376e614320e994295",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-58b1c6740f30",
@@ -278,9 +278,9 @@
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
       "title": "הצעת תקציב",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_error"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "425772fc004295158219e5fadbfa52c522183a48ee4207f1cb2f2839a5e8102e",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-ab1ac9214213",

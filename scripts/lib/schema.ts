@@ -175,6 +175,63 @@ export const activityBudgetLinkSchema = z.object({
   caveat: z.string().min(1),
 });
 
+export const usageRowSchema = z.object({
+  ministryId: z.string().min(1),
+  fiscalYear: z.number().int().min(2023).max(2026),
+  econLevel1: z.string().min(1),
+  econLevel2: z.string().min(1),
+  allocated: z.number().finite().nullable(),
+  revised: z.number().finite().nullable(),
+  executed: z.number().finite().nullable(),
+  lineCount: z.number().int().min(1),
+  sourceUrl: httpUrl,
+});
+
+export const usageBreakdownSchema = z.object({
+  generatedAt: isoDate,
+  method: z.string().min(1),
+  rows: z.array(usageRowSchema),
+  coverage: z.array(
+    z.object({
+      ministryId: z.string().min(1),
+      fiscalYear: z.number().int(),
+      classifiedRevisedSum: z.number().finite(),
+      sectionRevisedTotal: z.number().finite().nullable(),
+      coveragePercent: z.number().finite().nullable(),
+    }),
+  ),
+  rejected: z.array(z.object({ ministryId: z.string(), reason: z.string() })),
+});
+
+export const budgetThemesSchema = z.object({
+  method: z.literal('llm_build_time'),
+  methodNote: z.string().min(1),
+  confidenceNote: z.string().min(1),
+  themes: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        labelHe: z.string().min(1),
+        description: z.string().min(1),
+        color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+        assignedLineCount: z.number().int().min(0),
+      }),
+    )
+    .min(1),
+  assignments: z
+    .array(
+      z.object({
+        ministryId: z.string().min(1),
+        budgetCode: z.string().min(1),
+        title: z.string().min(1),
+        themeId: z.string().min(1),
+        confidence: z.enum(['high', 'medium']),
+        reasoning: z.string().min(10),
+      }),
+    )
+    .min(1),
+});
+
 export const schemas = {
   ministries: z.array(ministrySchema),
   ministerTenures: z.array(ministerTenureSchema),
@@ -185,6 +242,8 @@ export const schemas = {
   coverage: z.array(coverageSchema),
   dataVersion: dataVersionSchema,
   activityBudgetLinks: z.array(activityBudgetLinkSchema),
+  usageBreakdown: usageBreakdownSchema,
+  budgetThemes: budgetThemesSchema,
 };
 
 export type Ministry = z.infer<typeof ministrySchema>;

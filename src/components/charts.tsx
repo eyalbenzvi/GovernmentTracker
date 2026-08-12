@@ -90,6 +90,7 @@ export function ChartWithTable({
   points,
   series,
   kind = 'bar',
+  stacked = false,
   emptyReason,
 }: {
   title: string;
@@ -97,6 +98,8 @@ export function ChartWithTable({
   points: readonly SeriesPoint[];
   series: readonly SeriesDefinition[];
   kind?: 'bar' | 'line';
+  /** Stack the bar series (e.g. usage categories composing one total). */
+  stacked?: boolean;
   emptyReason: string;
 }): JSX.Element {
   const [showTable, setShowTable] = useState(false);
@@ -156,7 +159,13 @@ export function ChartWithTable({
                   />
                   <Legend wrapperStyle={{ direction: 'rtl', fontSize: 13 }} />
                   {series.map((s) => (
-                    <Bar key={s.key} dataKey={s.key} name={s.label} fill={s.color} />
+                    <Bar
+                      key={s.key}
+                      dataKey={s.key}
+                      name={s.label}
+                      fill={s.color}
+                      stackId={stacked ? 'stack' : undefined}
+                    />
                   ))}
                 </BarChart>
               ) : (

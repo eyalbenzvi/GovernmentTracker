@@ -215,3 +215,44 @@ test('keyboard navigation reaches the skip link and the main nav', async ({ page
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'דלג לתוכן הראשי' })).toBeFocused();
 });
+
+test('the analysis screen shows official usage breakdown with provenance', async ({ page }) => {
+  await page.goto('/#/analysis');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('לאן הולך הכסף');
+
+  // Both provenance layers must be declared before any figures.
+  await expect(page.getByText(/שכבה רשמית — סיווג כלכלי/)).toBeVisible();
+  await expect(page.getByText(/סיווג תמטי בסיוע מודל שפה/)).toBeVisible();
+
+  // The 100-shekel strip renders with real categories.
+  await expect(page.getByText(/מכל 100 ₪/)).toBeVisible();
+  await expect(page.getByText('שכר:', { exact: false }).first()).toBeVisible();
+});
+
+test('a theme card opens to reveal members with reasoning', async ({ page }) => {
+  await page.goto('/#/analysis');
+  const expander = page.getByRole('button', { name: /אילו סעיפים נכללים/ }).first();
+  await expect(expander).toBeVisible();
+  await expander.click();
+  await expect(page.getByText(/נימוק השיוך:/).first()).toBeVisible();
+  await expect(page.getByText(/ודאות (גבוהה|בינונית)/).first()).toBeVisible();
+});
+
+test('the analysis screen lists budget shifts and the volatility index', async ({ page }) => {
+  await page.goto('/#/analysis');
+  await expect(page.getByRole('heading', { name: /ההסטות הגדולות/ })).toBeVisible();
+  const rows = page.locator('table.data-table tbody tr');
+  await expect(rows.first()).toBeVisible();
+
+  await expect(page.getByRole('heading', { name: /מדד אי-יציבות תקציבית/ })).toBeVisible();
+  // The formula must be stated where the index is displayed.
+  await expect(page.getByText(/מעודכן − מקורי/).first()).toBeVisible();
+});
+
+test('switching ministry updates the analysis screen', async ({ page }) => {
+  await page.goto('/#/analysis');
+  await expect(page.getByText(/מכל 100 ₪/)).toBeVisible();
+  await page.getByLabel('משרד', { exact: true }).selectOption('environment');
+  // Environment has earmarked funds — its theme list must include them.
+  await expect(page.getByText('קרנות ומקורות ייעודיים').first()).toBeVisible();
+});

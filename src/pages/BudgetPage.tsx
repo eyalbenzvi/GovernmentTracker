@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import type { BudgetItem, Dataset } from '../types/domain';
 import {
   Callout,
@@ -383,6 +384,19 @@ export function BudgetPage({ data }: { data: Dataset }): JSX.Element {
           </>
         )}
       </section>
+
+      <Card className="flex flex-wrap items-center justify-between gap-4 bg-brand-50">
+        <div>
+          <h2 className="text-base font-semibold">לאן הולך הכסף? ניתוח לפי סוגי שימוש ותמות</h2>
+          <p className="mt-1 max-w-2xl text-sm text-slate-700">
+            פירוק התקציב לפי הסיווג הכלכלי הרשמי (שכר, קניות, העברות), קיבוץ תמטי של תוכניות, ההסטות
+            הגדולות של השנה ומדד אי-היציבות התקציבית.
+          </p>
+        </div>
+        <Link className="btn btn-primary" to="/analysis">
+          למסך הניתוח
+        </Link>
+      </Card>
 
       <Callout tone="caution" title="על דיוק ועיגול">
         <p>

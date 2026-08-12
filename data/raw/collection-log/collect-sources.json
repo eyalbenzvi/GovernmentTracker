@@ -1,7 +1,7 @@
 {
   "collectorId": "collect-sources",
-  "startedAt": "2026-08-12T16:40:53.178Z",
-  "finishedAt": "2026-08-12T16:42:02.439Z",
+  "startedAt": "2026-08-12T17:12:31.355Z",
+  "finishedAt": "2026-08-12T17:13:20.804Z",
   "environmentNote": "לסביבת הבנייה יש allowlist לתעבורה יוצאת. מתחמי המקורות הרשמיים (gov.il, knesset.gov.il, mevaker.gov.il, data.gov.il, obudget.org) אינם ב-allowlist, והבקשות אליהם נענות ב-HTTP 403 עם ההודעה \"Host not in allowlist\". זו מגבלת סביבה ולא מגבלה של המקורות עצמם.",
   "attempts": [
     {
@@ -11,8 +11,8 @@
       "httpStatus": 200,
       "bytes": 42786,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:40:54.081Z",
-      "durationMs": 890
+      "attemptedAt": "2026-08-12T17:12:31.370Z",
+      "durationMs": 0
     },
     {
       "url": "https://fs.knesset.gov.il/25/SecondaryLaw/25_scl_r_10361229.pdf",
@@ -21,8 +21,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:40:55.447Z",
-      "durationMs": 1365
+      "attemptedAt": "2026-08-12T17:12:32.481Z",
+      "durationMs": 1110
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/FINANCE/17d4808b-426e-f111-a13e-005056aa7c52/4_17d4808b-426e-f111-a13e-005056aa7c52_13_21634.pdf",
@@ -31,8 +31,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:40:56.784Z",
-      "durationMs": 1337
+      "attemptedAt": "2026-08-12T17:12:32.708Z",
+      "durationMs": 226
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/180b7347-20bd-ef11-a855-005056aa1f91/2_180b7347-20bd-ef11-a855-005056aa1f91_11_20782.pdf",
@@ -41,8 +41,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:40:56.923Z",
-      "durationMs": 138
+      "attemptedAt": "2026-08-12T17:12:34.006Z",
+      "durationMs": 1298
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/1abb8d55-f7f7-e411-80c8-00155d010977/2_1abb8d55-f7f7-e411-80c8-00155d010977_11_10594.pdf",
@@ -51,8 +51,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:40:58.124Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:35.111Z",
+      "durationMs": 1105
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/2ea0559c-53fb-f011-a13e-005056aa7c52/2_2ea0559c-53fb-f011-a13e-005056aa7c52_11_21418.pdf",
@@ -61,8 +61,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:40:59.325Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:36.313Z",
+      "durationMs": 1202
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/3a4d2e74-99fa-f011-a13e-005056aa7c52/2_3a4d2e74-99fa-f011-a13e-005056aa7c52_11_21438.pdf",
@@ -71,8 +71,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:00.529Z",
-      "durationMs": 1204
+      "attemptedAt": "2026-08-12T17:12:37.516Z",
+      "durationMs": 1203
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
@@ -81,8 +81,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:01.730Z",
-      "durationMs": 1200
+      "attemptedAt": "2026-08-12T17:12:38.714Z",
+      "durationMs": 1198
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
@@ -91,8 +91,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:02.930Z",
-      "durationMs": 1200
+      "attemptedAt": "2026-08-12T17:12:39.925Z",
+      "durationMs": 1211
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/6745f598-afce-ef11-a856-005056aa1f91/2_6745f598-afce-ef11-a856-005056aa1f91_11_20780.pdf",
@@ -101,8 +101,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:04.129Z",
-      "durationMs": 1198
+      "attemptedAt": "2026-08-12T17:12:41.115Z",
+      "durationMs": 1190
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/73dd82e9-5671-ed11-8155-005056aa4246/2_73dd82e9-5671-ed11-8155-005056aa4246_11_19906.pdf",
@@ -111,8 +111,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:05.330Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:42.314Z",
+      "durationMs": 1198
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/9640aea7-d051-f011-a85f-005056aa9911/2_9640aea7-d051-f011-a85f-005056aa9911_11_21007.pdf",
@@ -121,8 +121,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:06.530Z",
-      "durationMs": 1199
+      "attemptedAt": "2026-08-12T17:12:43.515Z",
+      "durationMs": 1200
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
@@ -131,7 +131,7 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:07.731Z",
+      "attemptedAt": "2026-08-12T17:12:44.716Z",
       "durationMs": 1201
     },
     {
@@ -141,8 +141,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:08.933Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:45.917Z",
+      "durationMs": 1200
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/d3985043-afce-ef11-a856-005056aa1f91/2_d3985043-afce-ef11-a856-005056aa1f91_11_20781.pdf",
@@ -151,8 +151,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:10.134Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:47.121Z",
+      "durationMs": 1203
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/fa35dfcc-1fbd-ef11-a855-005056aa1f91/2_fa35dfcc-1fbd-ef11-a855-005056aa1f91_11_20901.pdf",
@@ -161,8 +161,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:11.334Z",
-      "durationMs": 1200
+      "attemptedAt": "2026-08-12T17:12:48.324Z",
+      "durationMs": 1203
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/fc793c1b-6855-eb11-811a-00155d0af32a/2_fc793c1b-6855-eb11-811a-00155d0af32a_11_18149.pdf",
@@ -171,8 +171,8 @@
       "httpStatus": 474,
       "bytes": 296,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:12.536Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:12:49.520Z",
+      "durationMs": 1196
     },
     {
       "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp",
@@ -181,8 +181,8 @@
       "httpStatus": 474,
       "bytes": 293,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:13.574Z",
-      "durationMs": 1037
+      "attemptedAt": "2026-08-12T17:12:50.409Z",
+      "durationMs": 888
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf",
@@ -191,8 +191,8 @@
       "httpStatus": 200,
       "bytes": 4279409,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:17.763Z",
-      "durationMs": 4189
+      "attemptedAt": "2026-08-12T17:12:50.488Z",
+      "durationMs": 0
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf",
@@ -201,8 +201,8 @@
       "httpStatus": 200,
       "bytes": 2183930,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:19.832Z",
-      "durationMs": 2043
+      "attemptedAt": "2026-08-12T17:12:50.543Z",
+      "durationMs": 0
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx",
@@ -211,18 +211,18 @@
       "httpStatus": 200,
       "bytes": 84768,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:20.193Z",
-      "durationMs": 347
+      "attemptedAt": "2026-08-12T17:12:50.557Z",
+      "durationMs": 0
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:21.986Z",
-      "durationMs": 1793
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1260423,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:52.461Z",
+      "durationMs": 1904
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health.pdf",
@@ -231,8 +231,8 @@
       "httpStatus": 474,
       "bytes": 295,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:23.114Z",
-      "durationMs": 1127
+      "attemptedAt": "2026-08-12T17:12:53.769Z",
+      "durationMs": 1298
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf",
@@ -241,58 +241,58 @@
       "httpStatus": 200,
       "bytes": 3630871,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:23.999Z",
-      "durationMs": 885
+      "attemptedAt": "2026-08-12T17:12:53.822Z",
+      "durationMs": 0
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:24.534Z",
-      "durationMs": 515
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1443616,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:54.657Z",
+      "durationMs": 815
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:25.729Z",
-      "durationMs": 1195
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1916257,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:55.953Z",
+      "durationMs": 1287
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:26.931Z",
-      "durationMs": 1202
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2876932,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:57.077Z",
+      "durationMs": 1114
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:28.134Z",
-      "durationMs": 1203
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 385812,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:57.886Z",
+      "durationMs": 795
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:29.333Z",
-      "durationMs": 1199
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11676698,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T17:12:59.822Z",
+      "durationMs": 1934
     },
     {
       "url": "https://m.knesset.gov.il/mk/government/pages/governments.aspx",
@@ -301,8 +301,8 @@
       "httpStatus": 474,
       "bytes": 295,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:30.536Z",
-      "durationMs": 1203
+      "attemptedAt": "2026-08-12T17:13:00.967Z",
+      "durationMs": 1075
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/Budget10-Science-Culture-Sport2026.pdf",
@@ -311,8 +311,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:31.419Z",
-      "durationMs": 883
+      "attemptedAt": "2026-08-12T17:13:02.093Z",
+      "durationMs": 1126
     },
     {
       "url": "https://main.knesset.gov.il/about/documents/budget/Budget15-Health.pdf",
@@ -321,8 +321,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:31.871Z",
-      "durationMs": 451
+      "attemptedAt": "2026-08-12T17:13:02.303Z",
+      "durationMs": 210
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
@@ -331,8 +331,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:33.075Z",
-      "durationMs": 1204
+      "attemptedAt": "2026-08-12T17:13:03.510Z",
+      "durationMs": 1207
     },
     {
       "url": "https://main.knesset.gov.il/about/documents/budget/Budget24-Transportation.pdf",
@@ -341,8 +341,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:34.283Z",
-      "durationMs": 1208
+      "attemptedAt": "2026-08-12T17:13:04.718Z",
+      "durationMs": 1207
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/BudgetExtra2024.pdf",
@@ -351,8 +351,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:35.474Z",
-      "durationMs": 1190
+      "attemptedAt": "2026-08-12T17:13:05.922Z",
+      "durationMs": 1204
     },
     {
       "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2023-2024.aspx",
@@ -361,8 +361,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:36.675Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:13:07.109Z",
+      "durationMs": 1186
     },
     {
       "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2025.aspx",
@@ -371,7 +371,7 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:37.878Z",
+      "attemptedAt": "2026-08-12T17:13:08.312Z",
       "durationMs": 1203
     },
     {
@@ -381,8 +381,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:39.076Z",
-      "durationMs": 1198
+      "attemptedAt": "2026-08-12T17:13:09.510Z",
+      "durationMs": 1197
     },
     {
       "url": "https://main.knesset.gov.il/Activity/Info/MMMSummaries19/Health.pdf",
@@ -391,8 +391,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:40.281Z",
-      "durationMs": 1204
+      "attemptedAt": "2026-08-12T17:13:10.710Z",
+      "durationMs": 1200
     },
     {
       "url": "https://main.knesset.gov.il/mk/government/pages/coalitionagreements.aspx",
@@ -401,8 +401,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:41.479Z",
-      "durationMs": 1198
+      "attemptedAt": "2026-08-12T17:13:11.912Z",
+      "durationMs": 1201
     },
     {
       "url": "https://main.knesset.gov.il/mk/government/Pages/governments.aspx",
@@ -411,7 +411,7 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:42.681Z",
+      "attemptedAt": "2026-08-12T17:13:13.114Z",
       "durationMs": 1202
     },
     {
@@ -421,8 +421,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:43.882Z",
-      "durationMs": 1201
+      "attemptedAt": "2026-08-12T17:13:14.312Z",
+      "durationMs": 1198
     },
     {
       "url": "https://main.knesset.gov.il/News/PressReleases/pages/press24032025a.aspx",
@@ -431,8 +431,8 @@
       "httpStatus": 474,
       "bytes": 298,
       "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T16:41:45.086Z",
-      "durationMs": 1204
+      "attemptedAt": "2026-08-12T17:13:15.514Z",
+      "durationMs": 1201
     },
     {
       "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf",
@@ -441,8 +441,8 @@
       "httpStatus": 200,
       "bytes": 1078641,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:46.351Z",
-      "durationMs": 1265
+      "attemptedAt": "2026-08-12T17:13:15.538Z",
+      "durationMs": 0
     },
     {
       "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
@@ -451,8 +451,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:41:48.447Z",
-      "durationMs": 2091
+      "attemptedAt": "2026-08-12T17:13:17.993Z",
+      "durationMs": 2448
     },
     {
       "url": "https://next.obudget.org/i/budget/0040/2025",
@@ -461,8 +461,8 @@
       "httpStatus": 200,
       "bytes": 138350,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:51.965Z",
-      "durationMs": 3518
+      "attemptedAt": "2026-08-12T17:13:17.995Z",
+      "durationMs": 0
     },
     {
       "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf",
@@ -471,18 +471,18 @@
       "httpStatus": 200,
       "bytes": 13782662,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T16:41:59.887Z",
-      "durationMs": 7921
+      "attemptedAt": "2026-08-12T17:13:18.219Z",
+      "durationMs": 0
     },
     {
       "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
       "purpose": "retrieve source document body for extraction",
       "outcome": "http_error",
       "httpStatus": 403,
-      "bytes": 5484,
+      "bytes": 5792,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:42:00.613Z",
-      "durationMs": 641
+      "attemptedAt": "2026-08-12T17:13:19.159Z",
+      "durationMs": 824
     },
     {
       "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
@@ -491,8 +491,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:42:01.239Z",
-      "durationMs": 625
+      "attemptedAt": "2026-08-12T17:13:19.605Z",
+      "durationMs": 446
     },
     {
       "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
@@ -501,14 +501,14 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T16:42:02.438Z",
-      "durationMs": 1198
+      "attemptedAt": "2026-08-12T17:13:20.802Z",
+      "durationMs": 1197
     }
   ],
   "summary": {
     "total": 50,
-    "ok": 8,
+    "ok": 14,
     "blocked": 0,
-    "failed": 42
+    "failed": 36
   }
 }
