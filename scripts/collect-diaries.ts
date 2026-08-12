@@ -26,8 +26,10 @@
  * The honesty rule applies to reconnaissance too: what a source refuses is
  * recorded as refused, not worked around.
  */
+import path from 'node:path';
 import { politeFetch, USER_AGENT } from './lib/http.js';
 import { Logger } from './lib/log.js';
+import { COLLECTION_LOG_DIR, writeJson } from './lib/paths.js';
 
 const FOI_DIARIES_PAGE = 'https://foi.gov.il/he/node/6747';
 const GOVIL_DIARIES_PAGE = 'https://www.gov.il/he/pages/minister_diary';
@@ -196,7 +198,7 @@ async function probeOdata(logger: Logger): Promise<ProbeReport['odata']> {
   const queries = ['יומן', 'יומני שרים', 'יומן מנכ"ל'];
   const out: ProbeReport['odata'] = { queries: [] };
   for (const q of queries) {
-    const url = `${ODATA_API}?q=${encodeURIComponent(q)}&rows=100`;
+    const url = `${ODATA_API}?q=${encodeURIComponent(q)}&rows=100&sort=metadata_created+desc`;
     const result = await politeFetch(url, {
       purpose: `probe: odata.org.il dataset search "${q}"`,
       logger,
@@ -243,11 +245,84 @@ async function probeOdata(logger: Logger): Promise<ProbeReport['odata']> {
   return out;
 }
 
+/**
+ * Fetch full details of one CKAN dataset, plus a peek at the first rows of its
+ * first machine-readable resource, so the collect-stage column mapping is
+ * designed against real data rather than guessed.
+ */
+async function inspectOdataDataset(
+  logger: Logger,
+  datasetIdOrName: string,
+): Promise<Record<string, unknown>> {
+  const showUrl = `https://www.odata.org.il/api/3/action/package_show?id=${encodeURIComponent(datasetIdOrName)}`;
+  const result = await politeFetch(showUrl, {
+    purpose: `probe: odata.org.il package_show ${datasetIdOrName}`,
+    logger,
+    useCache: false,
+    accept: 'application/json',
+  });
+  if (!result.ok || result.body === null) {
+    return { dataset: datasetIdOrName, outcome: result.outcome, status: result.status };
+  }
+  try {
+    const parsed = JSON.parse(result.body) as {
+      result?: {
+        title?: string;
+        notes?: string;
+        metadata_created?: string;
+        organization?: { title?: string } | null;
+        tags?: { name?: string }[];
+        resources?: { name?: string; format?: string; url?: string; created?: string }[];
+      };
+    };
+    const ds = parsed.result ?? {};
+    const resources = (ds.resources ?? []).map((r) => ({
+      name: r.name ?? null,
+      format: r.format ?? null,
+      url: r.url ?? '',
+      created: r.created ?? null,
+    }));
+    // Peek at the first CSV resource: header + a few rows tell us the diary
+    // file's column structure without downloading everything.
+    let csvPeek: string[] = [];
+    const firstCsv = resources.find((r) => (r.format ?? '').toUpperCase() === 'CSV');
+    if (firstCsv !== undefined) {
+      const csv = await politeFetch(firstCsv.url, {
+        purpose: `probe: peek CSV of ${datasetIdOrName}`,
+        logger,
+        useCache: false,
+        accept: 'text/csv,*/*',
+      });
+      if (csv.ok && csv.body !== null) {
+        csvPeek = csv.body
+          .split(/\r?\n/)
+          .slice(0, 8)
+          .map((l) => l.slice(0, 400));
+      }
+    }
+    return {
+      dataset: datasetIdOrName,
+      title: ds.title ?? null,
+      created: ds.metadata_created ?? null,
+      organization: ds.organization?.title ?? null,
+      notes: (ds.notes ?? '').slice(0, 500),
+      tags: (ds.tags ?? []).map((t) => t.name ?? ''),
+      resources,
+      csvPeek,
+    };
+  } catch (err) {
+    return {
+      dataset: datasetIdOrName,
+      outcome: `parse_error: ${err instanceof Error ? err.message : String(err)}`,
+    };
+  }
+}
+
 async function probe(): Promise<void> {
   const logger = new Logger('collect-diaries-probe');
   console.log('Diaries probe — read-only reconnaissance of diary sources.\n');
 
-  const report: ProbeReport = {
+  const report: ProbeReport & { odataInspections?: Record<string, unknown>[] } = {
     probedAt: new Date().toISOString(),
     userAgent: USER_AGENT,
     foi: await probeFoi(logger),
@@ -255,15 +330,45 @@ async function probe(): Promise<void> {
     odata: await probeOdata(logger),
   };
 
-  console.log('\n===DIARIES-PROBE-BEGIN===');
-  console.log(JSON.stringify(report, null, 1));
-  console.log('===DIARIES-PROBE-END===');
-  console.log(
-    `\nSummary: foi=${report.foi.outcome} (${report.foi.fileLinks.length} file links), ` +
-      `govil=${report.govil.outcome}, odata datasets=${report.odata.queries
-        .map((q) => q.totalDatasets ?? 'n/a')
-        .join('/')}`,
-  );
+  // Deep-inspect the datasets most relevant to the 37th government: the
+  // aggregated ministers-diaries dataset for 2023 spotted in search results,
+  // plus the newest diary-titled datasets from the search above.
+  const inspectIds = new Set<string>(['2023']);
+  for (const q of report.odata.queries) {
+    for (const ds of q.datasets.slice(0, 8)) {
+      if (/יומן|יומני/.test(ds.title)) inspectIds.add(ds.name);
+      if (inspectIds.size >= 10) break;
+    }
+  }
+  report.odataInspections = [];
+  for (const id of inspectIds) {
+    report.odataInspections.push(await inspectOdataDataset(logger, id));
+  }
+
+  // Full report goes into the collection-log directory, which the workflow
+  // uploads as an artifact — the job log only gets a compact summary, because
+  // GitHub truncates long log lines and a truncated JSON is unreadable.
+  writeJson(path.join(COLLECTION_LOG_DIR, 'collect-diaries-probe-report.json'), report);
+
+  console.log('\n===DIARIES-PROBE-COMPACT===');
+  console.log(`foi: status=${report.foi.status} outcome=${report.foi.outcome}`);
+  console.log(`govil: status=${report.govil.status} outcome=${report.govil.outcome}`);
+  for (const q of report.odata.queries) {
+    console.log(`odata "${q.query}": total=${q.totalDatasets}`);
+    for (const ds of q.datasets.slice(0, 25)) {
+      const formats = [...new Set(ds.resources.map((r) => r.format ?? '?'))].join(',');
+      console.log(`  - ${ds.name} | ${ds.title.slice(0, 90)} | ${formats}`);
+    }
+  }
+  for (const insp of report.odataInspections) {
+    console.log(`inspected ${String(insp.dataset)}: title=${String(insp.title ?? 'n/a')}`);
+    const peek = insp.csvPeek;
+    if (Array.isArray(peek) && peek.length > 0) {
+      console.log(`  csv header: ${String(peek[0]).slice(0, 300)}`);
+      console.log(`  csv row 1: ${String(peek[1] ?? '').slice(0, 300)}`);
+    }
+  }
+  console.log('===END===');
 }
 
 async function main(): Promise<void> {
