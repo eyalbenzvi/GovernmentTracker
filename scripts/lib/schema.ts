@@ -364,12 +364,14 @@ export const anomaliesSchema = z.object({
   ),
 });
 
+/**
+ * One row inside a per-section diary shard. Fields that are constant for a
+ * whole publication (person, role, source URL, title) live once in the index,
+ * so ~190k rows do not repeat them.
+ */
 export const diaryEntrySchema = z.object({
   id: z.string().min(1),
-  ministryId: z.string().min(1).nullable(),
-  personLabel: z.string().min(1).nullable(),
-  personRole: z.enum(['minister', 'deputy_minister', 'director_general', 'other_senior']),
-  roleLabelHe: z.string().min(1),
+  datasetId: z.string().min(1),
   subject: z.string().min(1),
   date: isoDate.nullable(),
   startTime: z
@@ -382,13 +384,129 @@ export const diaryEntrySchema = z.object({
     .nullable(),
   location: z.string().nullable(),
   participants: z.string().nullable(),
-  datasetId: z.string().min(1),
-  sourceUrl: httpUrl,
-  sourceTitle: z.string().min(1),
-  collectedAt: isoDate,
+  extractionMethod: z.enum(['datastore', 'spreadsheet', 'pdf_text', 'pdf_ocr']),
+  /** Added by classify-diary-categories; absent before classification runs. */
+  categoryId: z.string().min(1).optional(),
+  matchedKeyword: z.string().nullable().optional(),
 });
 
-export const diariesCoverageSchema = z.object({
+export const diaryCategoriesSchema = z.object({
+  generatedAt: isoDate,
+  method: z.literal('llm_authored_rules_build_time'),
+  methodNote: z.string().min(1),
+  classifierRule: z.string().min(1),
+  limitations: z.array(z.string().min(1)).min(1),
+  categories: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        labelHe: z.string().min(1),
+        description: z.string().min(1),
+        color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+        reasoning: z.string().min(1),
+        keywordCount: z.number().int().min(0),
+        entryCount: z.number().int().min(0),
+      }),
+    )
+    .min(1),
+  totals: z.object({ classifiedEntries: z.number().int().min(0) }),
+});
+
+const diaryPeriodBucket = z.object({
+  period: z.string().min(1),
+  count: z.number().int().min(0),
+  byCategory: z.record(z.number().int().min(0)),
+});
+
+export const diaryInsightsSchema = z.object({
+  generatedAt: isoDate,
+  method: z.string().min(1),
+  caveats: z.array(z.string().min(1)).min(1),
+  rules: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        labelHe: z.string().min(1),
+        formulaHe: z.string().min(1),
+        whyInterestingHe: z.string().min(1),
+      }),
+    )
+    .min(1),
+  thresholds: z.record(z.number()),
+  totals: z.object({
+    entries: z.number().int().min(0),
+    people: z.number().int().min(0),
+    ministries: z.number().int().min(0),
+    findings: z.number().int().min(0),
+    crossMatches: z.number().int().min(0),
+    unspecifiedPercent: z.number().nullable(),
+  }),
+  categoryTotals: z.record(z.number().int().min(0)),
+  monthlyAll: z.array(z.object({ period: z.string().min(1), count: z.number().int().min(0) })),
+  profiles: z.array(
+    z.object({
+      key: z.string().min(1),
+      ministryId: z.string().min(1).nullable(),
+      personLabel: z.string().min(1).nullable(),
+      personRole: z.enum(['minister', 'deputy_minister', 'director_general', 'other_senior']),
+      roleLabelHe: z.string().min(1),
+      entryCount: z.number().int().min(0),
+      datedEntryCount: z.number().int().min(0),
+      timedEntryCount: z.number().int().min(0),
+      firstDate: isoDate.nullable(),
+      lastDate: isoDate.nullable(),
+      datasetIds: z.array(z.string().min(1)),
+      sourceUrl: httpUrl,
+      sourceTitle: z.string().min(1),
+      unspecifiedCount: z.number().int().min(0),
+      opacityPercent: z.number().nullable(),
+      categoryCounts: z.record(z.number().int().min(0)),
+      monthly: z.array(diaryPeriodBucket),
+      quarterly: z.array(diaryPeriodBucket),
+      weekendCount: z.number().int().min(0),
+      lateNightCount: z.number().int().min(0),
+      longMeetingCount: z.number().int().min(0),
+      marathonDays: z.array(isoDate),
+      doubleBookedCount: z.number().int().min(0),
+      busiestDay: z.object({ date: isoDate, count: z.number().int().min(1) }).nullable(),
+      repeatedSubjects: z.array(
+        z.object({ subject: z.string().min(1), count: z.number().int().min(1) }),
+      ),
+    }),
+  ),
+  findings: z.array(
+    z.object({
+      ruleId: z.string().min(1),
+      personKey: z.string().min(1),
+      ministryId: z.string().min(1).nullable(),
+      personLabel: z.string().min(1).nullable(),
+      roleLabelHe: z.string().min(1),
+      evidenceHe: z.string().min(1),
+      value: z.number().nullable(),
+      sourceUrl: httpUrl,
+      sourceTitle: z.string().min(1),
+    }),
+  ),
+  crossMatches: z.array(
+    z.object({
+      ruleId: z.enum(['supplier_meeting', 'support_recipient_meeting']),
+      entryId: z.string().min(1),
+      ministryId: z.string().min(1),
+      personLabel: z.string().min(1).nullable(),
+      roleLabelHe: z.string().min(1),
+      date: isoDate.nullable(),
+      subject: z.string().min(1),
+      matchedName: z.string().min(1),
+      entityUrl: httpUrl,
+      amount: z.number().finite(),
+      amountLabelHe: z.string().min(1),
+      diarySourceUrl: httpUrl,
+    }),
+  ),
+});
+
+/** The diaries index: what was published, who published it, and what shard holds it. */
+export const diariesIndexSchema = z.object({
   generatedAt: isoDate,
   source: z.object({
     name: z.string().min(1),
@@ -403,8 +521,23 @@ export const diariesCoverageSchema = z.object({
     datasetsWithEntries: z.number().int().min(0),
     unattributedDatasets: z.number().int().min(0),
     unparsedResources: z.number().int().min(0),
+    duplicateRowsRemoved: z.number().int().min(0),
+    byExtractionMethod: z.object({
+      datastore: z.number().int().min(0),
+      spreadsheet: z.number().int().min(0),
+      pdf_text: z.number().int().min(0),
+      pdf_ocr: z.number().int().min(0),
+    }),
   }),
   unmatchedTitles: z.array(z.string()),
+  shards: z.array(
+    z.object({
+      shardKey: z.string().min(1),
+      ministryId: z.string().min(1).nullable(),
+      file: z.string().min(1),
+      entryCount: z.number().int().min(0),
+    }),
+  ),
   datasets: z.array(
     z.object({
       datasetId: z.string().min(1),
@@ -444,8 +577,10 @@ export const schemas = {
   budgetThemes: budgetThemesSchema,
   findings: findingsSchema,
   anomalies: anomaliesSchema,
-  diaries: z.array(diaryEntrySchema),
-  diariesCoverage: diariesCoverageSchema,
+  diaryShard: z.array(diaryEntrySchema),
+  diariesIndex: diariesIndexSchema,
+  diaryCategories: diaryCategoriesSchema,
+  diaryInsights: diaryInsightsSchema,
 };
 
 export type Ministry = z.infer<typeof ministrySchema>;

@@ -69,15 +69,29 @@ jobs:
             echo "commit=$(jq -r '.commit_changes' .github/collect-diaries-request.json)" >> "$GITHUB_OUTPUT"
           fi
 
+      # Diaries are published as spreadsheets, text PDFs and image-only scans.
+      # poppler-utils extracts a real text layer where one exists; tesseract
+      # with the Hebrew model reads the scans that have none. Both run only at
+      # collection time, and every row records which of them produced it.
+      - name: Install PDF and OCR tooling
+        if: steps.request.outputs.mode == 'collect'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-heb
+          pdftotext -v || true
+          tesseract --list-langs || true
+
       - name: Run the diaries collector
         run: npx tsx scripts/collect-diaries.ts --${{ steps.request.outputs.mode }}
 
       # Collection changes downstream artifacts (source catalog gains the
       # diaries hosts, data-version counts change, methodology text changes),
-      # so the full build + validation gate runs before anything is committed.
-      - name: Rebuild catalog and derived datasets, then validate
+      # so classification, analysis, build and the full validation gate all run
+      # before anything is committed.
+      - name: Classify, analyse, rebuild and validate
         if: steps.request.outputs.mode == 'collect'
         run: |
+          npm run data:diary-analysis
           npm run data:collect-sources
           npm run data:build
           npm run data:validate

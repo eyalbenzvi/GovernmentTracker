@@ -36,8 +36,17 @@
  * refused, not worked around; what cannot be attributed to a ministry is
  * listed as unattributed, not guessed.
  */
+import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { politeFetch, USER_AGENT } from './lib/http.js';
+import {
+  extractFromGrid,
+  extractFromText,
+  type ExtractionMethod,
+  type ExtractionResult,
+} from './lib/diary-extract.js';
+import { parseCsvGrid, readXlsxGrid, type CellValue } from './lib/xlsx-lite.js';
 import { Logger } from './lib/log.js';
 import {
   COLLECTION_LOG_DIR,
@@ -584,6 +593,9 @@ export interface DiaryEntry {
   location: string | null;
   participants: string | null;
   datasetId: string;
+  /** How this row reached the dataset — decides how much it can be trusted. */
+  extractionMethod: ExtractionMethod;
+  extractionNote: string;
   sourceUrl: string;
   sourceTitle: string;
   collectedAt: string;
@@ -594,6 +606,9 @@ interface UnparsedResource {
   format: string;
   note: string;
 }
+
+const MAX_OCR_PAGES = 40;
+const OCR_CAVEAT = 'פוענח בזיהוי תווים אוטומטי (OCR) מסריקה — ייתכנו שגיאות תעתיק';
 
 interface DiaryDatasetCoverage {
   datasetId: string;
@@ -774,7 +789,14 @@ export function parseDiaryTitle(title: string): ParsedDiaryTitle {
     const range = /(\d{1,2}\.\d{1,2}\.\d{2,4}\s*[-–]\s*\d{1,2}\.\d{1,2}\.\d{2,4})/.exec(title);
     if (range !== null && range[1] !== undefined) periodLabel = range[1];
   }
-  return { personRole, roleLabelHe: roleLabel, personLabel, periodLabel };
+  // Labels reach the screen as-is, so an empty extraction becomes an explicit
+  // "not stated" (or null) — never an empty string pretending to be a value.
+  return {
+    personRole,
+    roleLabelHe: roleLabel.trim() !== '' ? roleLabel.trim() : 'תפקיד לא צוין בכותרת',
+    personLabel: personLabel !== null && personLabel.trim() !== '' ? personLabel.trim() : null,
+    periodLabel: periodLabel !== null && periodLabel.trim() !== '' ? periodLabel.trim() : null,
+  };
 }
 
 function normalizeName(name: string): string {
@@ -913,6 +935,234 @@ function readCell(row: Record<string, unknown>, key: string): unknown {
   return Object.prototype.hasOwnProperty.call(row, key) ? row[key] : undefined;
 }
 
+/**
+ * Downloads one resource, trying the access paths in the order the file probe
+ * verified. The first path that returns bytes wins; if all refuse, the caller
+ * discloses the file as undownloadable rather than pretending it was empty.
+ */
+async function downloadResource(
+  logger: Logger,
+  datasetId: string,
+  resource: CkanResource,
+): Promise<{ bytes: Uint8Array; via: string } | null> {
+  const datasetPage = `${ODATA_HOST}/dataset/${datasetId}`;
+  const rid = resource.id ?? '';
+  const candidates: Array<[string, string]> = [
+    ['as-published', resource.url ?? ''],
+    ['ckan download path', rid === '' ? '' : `${datasetPage}/resource/${rid}/download`],
+  ];
+  for (const [via, url] of candidates) {
+    if (url === '') continue;
+    const result = await fetchBinary(logger, url, `collect: download ${via}`, datasetPage);
+    if (result.bytes !== null && result.bytes.byteLength > 0) {
+      return { bytes: result.bytes, via };
+    }
+  }
+  return null;
+}
+
+/**
+ * PDF text extraction with an OCR fallback.
+ *
+ * Most "scanned" diary PDFs are actually digital prints that carry a text
+ * layer; pdftotext returns their exact characters. Only when almost no text
+ * comes back is the file a true image scan, and only then is OCR used — with
+ * the result labelled as a machine reading, never as the source's own text.
+ *
+ * Both binaries live in the CI image (poppler-utils, tesseract-ocr with the
+ * Hebrew model). When they are absent — as in the local dev container — this
+ * returns a note saying so instead of failing the run.
+ */
+function extractPdf(
+  bytes: Uint8Array,
+  workDir: string,
+  label: string,
+): { result: ExtractionResult; method: 'pdf_text' | 'pdf_ocr' } | { unavailable: string } {
+  const pdfPath = path.join(workDir, `${label}.pdf`);
+  fs.mkdirSync(workDir, { recursive: true });
+  fs.writeFileSync(pdfPath, bytes);
+
+  const run = (command: string, args: string[]): string | null => {
+    try {
+      return execFileSync(command, args, {
+        encoding: 'utf8',
+        maxBuffer: 64 * 1024 * 1024,
+        stdio: ['ignore', 'pipe', 'pipe'],
+      });
+    } catch {
+      return null;
+    }
+  };
+
+  const layoutText = run('pdftotext', ['-layout', '-enc', 'UTF-8', pdfPath, '-']);
+  if (layoutText === null) {
+    return { unavailable: 'pdftotext (poppler-utils) אינו מותקן בסביבה שבה רץ האיסוף' };
+  }
+  // A text layer worth trusting has real words, not a handful of stray glyphs.
+  const meaningful = layoutText.replace(/\s+/g, '').length;
+  if (meaningful >= 200) {
+    return { result: extractFromText(layoutText, 'pdf_text'), method: 'pdf_text' };
+  }
+
+  const pngPrefix = path.join(workDir, `${label}-page`);
+  if (run('pdftoppm', ['-r', '300', '-png', pdfPath, pngPrefix]) === null) {
+    return { unavailable: 'pdftoppm אינו מותקן; לא ניתן להריץ OCR על סריקה' };
+  }
+  const pages = fs
+    .readdirSync(workDir)
+    .filter((f) => f.startsWith(`${label}-page`) && f.endsWith('.png'))
+    .sort();
+  if (pages.length === 0) {
+    return { unavailable: 'לא נוצרו עמודי תמונה מה-PDF' };
+  }
+  const ocrParts: string[] = [];
+  for (const page of pages.slice(0, MAX_OCR_PAGES)) {
+    const text = run('tesseract', [
+      path.join(workDir, page),
+      'stdout',
+      '-l',
+      'heb+eng',
+      '--psm',
+      '6',
+    ]);
+    if (text === null) {
+      return { unavailable: 'tesseract עם מודל עברית אינו מותקן; הסריקה לא פוענחה' };
+    }
+    ocrParts.push(text);
+  }
+  const ocrText = ocrParts.join('\n');
+  const truncationNote =
+    pages.length > MAX_OCR_PAGES ? ` (פוענחו ${MAX_OCR_PAGES} מתוך ${pages.length} עמודים)` : '';
+  const result = extractFromText(ocrText, 'pdf_ocr');
+  return {
+    result: { ...result, note: `${result.note ?? ''}${truncationNote}` },
+    method: 'pdf_ocr',
+  };
+}
+
+/**
+ * Downloads one non-datastore resource and turns it into diary entries.
+ *
+ * Every outcome is recorded on the dataset's coverage entry: a refused
+ * download, a spreadsheet whose header could not be identified, a scan that
+ * OCR could not turn into rows, a partially-read file. Nothing fails silently,
+ * because an unexplained absence on a transparency site is itself a false
+ * statement.
+ */
+async function extractFileResource(
+  logger: Logger,
+  ctx: {
+    datasetId: string;
+    datasetUrl: string;
+    title: string;
+    resource: CkanResource;
+    format: string;
+    resourceName: string;
+    ministryId: string | null;
+    parsedTitle: ParsedDiaryTitle;
+    collectedAt: string;
+    cov: DiaryDatasetCoverage;
+  },
+): Promise<DiaryEntry[]> {
+  const { datasetId, datasetUrl, title, resource, format, resourceName, cov } = ctx;
+
+  const disclose = (note: string): DiaryEntry[] => {
+    cov.unparsedResources.push({ name: resourceName, format, note });
+    return [];
+  };
+
+  if (format === 'XLS') {
+    return disclose('פורמט XLS בינארי מדור קודם — אינו נקרא; הקובץ פתוח לעיון אנושי בקישור');
+  }
+  if (format === 'DOC' || format === 'DOCX' || format === 'ZIP') {
+    return disclose(`פורמט ${format} — אינו מפוענח; הקובץ פתוח לעיון אנושי בקישור`);
+  }
+
+  const download = await downloadResource(logger, datasetId, resource);
+  if (download === null) {
+    return disclose('הורדת הקובץ נדחתה על ידי המאגר (403) — הקובץ פתוח לעיון אנושי בקישור');
+  }
+
+  let extraction: ExtractionResult;
+  let method: ExtractionMethod;
+  let extractionNote: string;
+
+  if (format === 'PDF') {
+    const workDir = path.join(RAW_DIR, '.diary-work');
+    const pdfResult = extractPdf(download.bytes, workDir, `${datasetId}-${resource.id ?? 'r'}`);
+    if ('unavailable' in pdfResult) return disclose(pdfResult.unavailable);
+    extraction = pdfResult.result;
+    method = pdfResult.method;
+    extractionNote = method === 'pdf_ocr' ? OCR_CAVEAT : 'חולץ משכבת הטקסט של קובץ ה-PDF שפורסם';
+  } else {
+    let grid: CellValue[][];
+    try {
+      grid =
+        format === 'CSV'
+          ? parseCsvGrid(Buffer.from(download.bytes).toString('utf8'))
+          : readXlsxGrid(Buffer.from(download.bytes));
+    } catch (err) {
+      return disclose(
+        `הקובץ הורד אך לא נקרא: ${err instanceof Error ? err.message : String(err)}`.slice(0, 200),
+      );
+    }
+    extraction = extractFromGrid(grid);
+    method = 'spreadsheet';
+    extractionNote = 'חולץ מגיליון הנתונים שפורסם';
+  }
+
+  if (extraction.rows.length === 0) {
+    return disclose(
+      extraction.note ??
+        `לא חולצו שורות מהקובץ (${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן)`,
+    );
+  }
+  if (extraction.unparsedLineCount > 0) {
+    cov.unparsedResources.push({
+      name: resourceName,
+      format,
+      note: `חולצו ${extraction.rows.length} רשומות; ${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן ולא נכללו`,
+    });
+  }
+
+  const entries: DiaryEntry[] = [];
+  let index = 0;
+  for (const row of extraction.rows) {
+    index += 1;
+    const subject = row.subject === null ? null : row.subject.trim().slice(0, 400);
+    const date = parseDiaryDate(row.startDate);
+    if ((subject === null || subject === '') && date === null) {
+      cov.skippedEmptyRows += 1;
+      continue;
+    }
+    if (date !== null && (date < WINDOW_START || date > ctx.collectedAt)) {
+      cov.outOfWindowRows += 1;
+      continue;
+    }
+    entries.push({
+      id: `diary-${datasetId}-${(resource.id ?? 'file').slice(0, 8)}-${method}-${index}`,
+      ministryId: ctx.ministryId,
+      personLabel: ctx.parsedTitle.personLabel,
+      personRole: ctx.parsedTitle.personRole,
+      roleLabelHe: ctx.parsedTitle.roleLabelHe,
+      subject: subject === null || subject === '' ? 'ללא נושא רשום' : subject,
+      date,
+      startTime: parseDiaryTime(row.startTime),
+      endTime: parseDiaryTime(row.endTime),
+      location: row.location === null ? null : row.location.slice(0, 200),
+      participants: row.participants === null ? null : row.participants.slice(0, 400),
+      datasetId,
+      extractionMethod: method,
+      extractionNote,
+      sourceUrl: datasetUrl,
+      sourceTitle: title,
+      collectedAt: ctx.collectedAt,
+    });
+  }
+  cov.machineReadableEntries += entries.length;
+  return entries;
+}
+
 async function collect(): Promise<void> {
   const logger = new Logger('collect-diaries');
   const collectedAt = new Date().toISOString().slice(0, 10);
@@ -931,7 +1181,7 @@ async function collect(): Promise<void> {
 
   for (const ds of relevant) {
     const datasetId = ds.name ?? '';
-    const title = ds.title ?? datasetId;
+    const title = (ds.title ?? '').trim() !== '' ? (ds.title as string).trim() : datasetId;
     const datasetUrl = `${ODATA_HOST}/dataset/${datasetId}`;
     const parsedTitle = parseDiaryTitle(title);
     const ministryId = matchMinistryByTitle(title, seed.ministries);
@@ -962,18 +1212,34 @@ async function collect(): Promise<void> {
 
     for (const resource of resources) {
       const format = (resource.format ?? '?').toUpperCase();
-      const resourceName = resource.name ?? resource.id ?? '?';
+      const resourceName =
+        (resource.name ?? '').trim() !== ''
+          ? (resource.name as string).trim()
+          : (resource.id ?? 'משאב ללא שם');
       if (resource.datastore_active !== true) {
         // Images embedded in the FOI response letter are not diary content.
         if (format === 'PNG' || format === 'JPEG' || format === 'GIF') continue;
-        cov.unparsedResources.push({
-          name: resourceName,
+        if (!['PDF', 'XLSX', 'CSV', 'XLS', 'DOC', 'DOCX', 'ZIP'].includes(format)) {
+          cov.unparsedResources.push({
+            name: resourceName,
+            format,
+            note: 'סוג קובץ שאינו נתמך לחילוץ',
+          });
+          continue;
+        }
+        const fileEntries = await extractFileResource(logger, {
+          datasetId,
+          datasetUrl,
+          title,
+          resource,
           format,
-          note:
-            format === 'PDF'
-              ? 'פורסם כ-PDF (לרוב סריקה) — לא עובד אוטומטית ולא שוחזר בניחוש'
-              : 'קובץ טבלאי שלא נטען ל-datastore של המאגר — לא הורד ישירות (המאגר מחזיר 403 להורדות אוטומטיות)',
+          resourceName,
+          ministryId,
+          parsedTitle,
+          collectedAt,
+          cov,
         });
+        entries.push(...fileEntries);
         continue;
       }
       if (resource.id === undefined) continue;
@@ -1045,6 +1311,8 @@ async function collect(): Promise<void> {
             return typeof v === 'string' && v.trim() !== '' ? v.trim().slice(0, 400) : null;
           })(),
           datasetId,
+          extractionMethod: 'datastore',
+          extractionNote: 'רשומה מובנית ממסד הנתונים של המאגר (הנאמנה ביותר למקור)',
           sourceUrl: datasetUrl,
           sourceTitle: title,
           collectedAt,
@@ -1065,6 +1333,77 @@ async function collect(): Promise<void> {
     ),
   );
 
+  // ---- de-duplication ------------------------------------------------------
+  // The same diary is often published twice: once in a quarterly dataset and
+  // again inside a yearly aggregate. Counting both would inflate every measure
+  // on the screen, so identical (person, date, time, subject) rows collapse to
+  // one and the number removed is published.
+  const seenRows = new Set<string>();
+  const deduped: DiaryEntry[] = [];
+  let duplicateRows = 0;
+  for (const entry of entries) {
+    const fingerprint = [
+      entry.ministryId ?? '—',
+      entry.roleLabelHe,
+      entry.personLabel ?? '—',
+      entry.date ?? '—',
+      entry.startTime ?? '—',
+      entry.subject,
+    ].join('|');
+    if (seenRows.has(fingerprint)) {
+      duplicateRows += 1;
+      continue;
+    }
+    seenRows.add(fingerprint);
+    deduped.push(entry);
+  }
+
+  // ---- shard by ministry ---------------------------------------------------
+  // ~190k rows is far too much for one payload, so entries ship as one file per
+  // budget section, loaded only when a reader opens that section. Fields that
+  // are constant per publication (person, role, titles, source URL) live once
+  // in the index instead of on every row.
+  const shardOf = (entry: DiaryEntry): string => entry.ministryId ?? 'unattributed';
+  const shards = new Map<string, DiaryEntry[]>();
+  for (const entry of deduped) {
+    const key = shardOf(entry);
+    const bucket = shards.get(key) ?? [];
+    bucket.push(entry);
+    shards.set(key, bucket);
+  }
+
+  const diariesDir = path.join(PROCESSED_DIR, 'diaries');
+  fs.rmSync(diariesDir, { recursive: true, force: true });
+  const shardIndex: Array<{
+    shardKey: string;
+    ministryId: string | null;
+    file: string;
+    entryCount: number;
+  }> = [];
+  for (const [key, shardEntries] of [...shards.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+    const file = `diaries/${key}.json`;
+    writeJson(
+      path.join(PROCESSED_DIR, file),
+      shardEntries.map((entry) => ({
+        id: entry.id,
+        datasetId: entry.datasetId,
+        subject: entry.subject,
+        date: entry.date,
+        startTime: entry.startTime,
+        endTime: entry.endTime,
+        location: entry.location,
+        participants: entry.participants,
+        extractionMethod: entry.extractionMethod,
+      })),
+    );
+    shardIndex.push({
+      shardKey: key,
+      ministryId: key === 'unattributed' ? null : key,
+      file,
+      entryCount: shardEntries.length,
+    });
+  }
+
   const output = {
     generatedAt: collectedAt,
     source: {
@@ -1073,49 +1412,76 @@ async function collect(): Promise<void> {
       trustTier: 'civic_helper',
       note:
         'היומנים פורסמו על ידי המשרדים מכוח נוהל היומנים והועלו למאגר "מידע לעם" של התנועה לחופש המידע. ' +
-        'gov.il ו-foi.gov.il דוחים לקוחות אוטומטיים מזוהים (HTTP 403) ולכן האיסוף נעשה מהמאגר האזרחי; ' +
-        'ההורדה הישירה של קבצים מהמאגר חסומה אף היא, ולכן נקראו רק משאבים שנטענו ל-datastore. ' +
-        'שום קובץ סרוק לא פוענח ושום רשומה לא שוחזרה בניחוש.',
+        'gov.il ו-foi.gov.il דוחים לקוחות אוטומטיים מזוהים (HTTP 403) ולכן האיסוף נעשה מהמאגר האזרחי. ' +
+        'נקראו רשומות מובנות ממסד הנתונים של המאגר, וכן קבצים שהורדו במידה שהמאגר איפשר: גיליונות, ' +
+        'קובצי PDF עם שכבת טקסט, וסריקות שפוענחו ב-OCR. לכל רשומה מצוינת שיטת החילוץ, ורשומת OCR ' +
+        'מסומנת במפורש כקריאה אוטומטית שעשויה לשגות. שום רשומה לא שוחזרה בניחוש.',
     },
     windowStart: WINDOW_START,
     totals: {
       datasets: coverage.length,
-      entries: entries.length,
+      entries: deduped.length,
       datasetsWithEntries: coverage.filter((c) => c.machineReadableEntries > 0).length,
       unattributedDatasets: coverage.filter((c) => c.ministryId === null).length,
       unparsedResources: coverage.reduce((sum, c) => sum + c.unparsedResources.length, 0),
+      duplicateRowsRemoved: duplicateRows,
+      byExtractionMethod: {
+        datastore: deduped.filter((e) => e.extractionMethod === 'datastore').length,
+        spreadsheet: deduped.filter((e) => e.extractionMethod === 'spreadsheet').length,
+        pdf_text: deduped.filter((e) => e.extractionMethod === 'pdf_text').length,
+        pdf_ocr: deduped.filter((e) => e.extractionMethod === 'pdf_ocr').length,
+      },
     },
     unmatchedTitles: unmatchedTitles.sort((a, b) => a.localeCompare(b)),
+    shards: shardIndex,
     datasets: coverage,
   };
 
-  writeJson(path.join(PROCESSED_DIR, 'diaries.json'), entries);
-  writeJson(path.join(PROCESSED_DIR, 'diaries-coverage.json'), output);
-  writeText(
-    path.join(PROCESSED_DIR, 'csv', 'diaries.csv'),
-    toCsv(
-      ['id', 'משרד', 'תפקיד', 'בעל התפקיד', 'תאריך', 'שעה', 'נושא', 'מיקום', 'מקור'],
-      entries.map((e) => [
-        e.id,
-        e.ministryId ?? '',
-        e.roleLabelHe,
-        e.personLabel ?? '',
-        e.date ?? '',
-        e.startTime ?? '',
-        e.subject,
-        e.location ?? '',
-        e.sourceUrl,
-      ]),
-    ),
-  );
+  writeJson(path.join(PROCESSED_DIR, 'diaries-index.json'), output);
+
+  // One CSV per section keeps every download openable in a spreadsheet; a
+  // single 190k-row file would not be.
+  for (const [key, shardEntries] of shards) {
+    writeText(
+      path.join(PROCESSED_DIR, 'csv', 'diaries', `${key}.csv`),
+      toCsv(
+        [
+          'id',
+          'משרד',
+          'תפקיד',
+          'בעל התפקיד',
+          'תאריך',
+          'שעה',
+          'נושא',
+          'מיקום',
+          'שיטת חילוץ',
+          'מקור',
+        ],
+        shardEntries.map((e) => [
+          e.id,
+          e.ministryId ?? '',
+          e.roleLabelHe,
+          e.personLabel ?? '',
+          e.date ?? '',
+          e.startTime ?? '',
+          e.subject,
+          e.location ?? '',
+          e.extractionMethod,
+          e.sourceUrl,
+        ]),
+      ),
+    );
+  }
 
   logger.flush(
     'הרצה בסביבת GitHub Actions. gov.il ו-foi.gov.il מחזירים 403 ללקוח מזוהה; odata.org.il נקרא דרך ה-API בלבד.',
   );
   console.log(
-    `\ndiaries: ${entries.length} entries from ${output.totals.datasetsWithEntries}/${coverage.length} datasets; ` +
+    `\ndiaries: ${deduped.length} entries (${duplicateRows} duplicates removed) from ` +
+      `${output.totals.datasetsWithEntries}/${coverage.length} datasets in ${shardIndex.length} shards; ` +
       `${output.totals.unparsedResources} resources disclosed as unparsed`,
   );
+  console.log(`  by extraction: ${JSON.stringify(output.totals.byExtractionMethod)}`);
 }
 
 async function main(): Promise<void> {

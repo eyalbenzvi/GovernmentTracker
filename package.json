@@ -27,7 +27,10 @@
     "data:classify-themes": "tsx scripts/classify-budget-themes.ts",
     "data:findings": "tsx scripts/collect-findings.ts",
     "data:anomalies": "tsx scripts/scan-anomalies.ts",
-    "data:diaries": "tsx scripts/collect-diaries.ts --collect"
+    "data:diaries": "tsx scripts/collect-diaries.ts --collect",
+    "data:diary-categories": "tsx scripts/classify-diary-categories.ts",
+    "data:diary-insights": "tsx scripts/analyze-diaries.ts",
+    "data:diary-analysis": "npm run data:diary-categories && npm run data:diary-insights"
   },
   "dependencies": {
     "lucide-react": "^0.451.0",

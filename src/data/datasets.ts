@@ -9,7 +9,7 @@
  * the data chunks can be cached independently — which also keeps the site fast
  * if the datasets grow to thousands of records.
  */
-import type { Dataset } from '../types/domain';
+import type { Dataset, DiaryEntry } from '../types/domain';
 
 let cached: Promise<Dataset> | null = null;
 
@@ -29,8 +29,9 @@ async function loadAll(): Promise<Dataset> {
     budgetThemes,
     findings,
     anomalies,
-    diaries,
-    diariesCoverage,
+    diariesIndex,
+    diaryCategories,
+    diaryInsights,
   ] = await Promise.all([
     import('../../data/processed/ministries.json'),
     import('../../data/processed/minister-tenures.json'),
@@ -46,8 +47,9 @@ async function loadAll(): Promise<Dataset> {
     import('../../data/processed/budget-themes.json'),
     import('../../data/processed/findings.json'),
     import('../../data/processed/anomalies.json'),
-    import('../../data/processed/diaries.json'),
-    import('../../data/processed/diaries-coverage.json'),
+    import('../../data/processed/diaries-index.json'),
+    import('../../data/processed/diary-categories.json'),
+    import('../../data/processed/diary-insights.json'),
   ]);
 
   return {
@@ -65,9 +67,33 @@ async function loadAll(): Promise<Dataset> {
     budgetThemes: budgetThemes.default as unknown as Dataset['budgetThemes'],
     findings: findings.default as unknown as Dataset['findings'],
     anomalies: anomalies.default as unknown as Dataset['anomalies'],
-    diaries: diaries.default as unknown as Dataset['diaries'],
-    diariesCoverage: diariesCoverage.default as unknown as Dataset['diariesCoverage'],
+    diariesIndex: diariesIndex.default as unknown as Dataset['diariesIndex'],
+    diaryCategories: diaryCategories.default as unknown as Dataset['diaryCategories'],
+    diaryInsights: diaryInsights.default as unknown as Dataset['diaryInsights'],
   };
+}
+
+/**
+ * Diary rows are sharded per budget section (~190k rows in total), so a shard is
+ * fetched only when a reader opens that section. import.meta.glob keeps the
+ * mapping static, which is what lets Vite emit one cacheable chunk per shard
+ * instead of bundling them all into the initial payload.
+ */
+const diaryShardLoaders = import.meta.glob<{ default: DiaryEntry[] }>(
+  '../../data/processed/diaries/*.json',
+);
+
+const shardCache = new Map<string, Promise<DiaryEntry[]>>();
+
+export function loadDiaryShard(shardKey: string): Promise<DiaryEntry[]> {
+  const cached = shardCache.get(shardKey);
+  if (cached !== undefined) return cached;
+  const loaderKey = Object.keys(diaryShardLoaders).find((k) => k.endsWith(`/${shardKey}.json`));
+  const loader = loaderKey === undefined ? undefined : diaryShardLoaders[loaderKey];
+  const promise =
+    loader === undefined ? Promise.resolve<DiaryEntry[]>([]) : loader().then((m) => m.default);
+  shardCache.set(shardKey, promise);
+  return promise;
 }
 
 /** Memoised so navigating between screens never re-parses the datasets. */

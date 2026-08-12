@@ -351,22 +351,132 @@ export interface Anomalies {
 
 export type DiaryPersonRole = 'minister' | 'deputy_minister' | 'director_general' | 'other_senior';
 
+export type DiaryExtractionMethod = 'datastore' | 'spreadsheet' | 'pdf_text' | 'pdf_ocr';
+
+/**
+ * A single diary row as shipped inside a per-section shard. Publication-level
+ * facts (who, which role, source URL) live once in DiariesIndex.datasets and are
+ * joined by datasetId, so ~190k rows stay small enough to load a section at a time.
+ */
 export interface DiaryEntry {
   id: string;
-  ministryId: string | null;
-  personLabel: string | null;
-  personRole: DiaryPersonRole;
-  roleLabelHe: string;
+  datasetId: string;
   subject: string;
   date: string | null;
   startTime: string | null;
   endTime: string | null;
   location: string | null;
   participants: string | null;
-  datasetId: string;
+  extractionMethod: DiaryExtractionMethod;
+  categoryId?: string;
+  matchedKeyword?: string | null;
+}
+
+export interface DiaryCategory {
+  id: string;
+  labelHe: string;
+  description: string;
+  color: string;
+  reasoning: string;
+  keywordCount: number;
+  entryCount: number;
+}
+
+export interface DiaryCategories {
+  generatedAt: string;
+  method: 'llm_authored_rules_build_time';
+  methodNote: string;
+  classifierRule: string;
+  limitations: string[];
+  categories: DiaryCategory[];
+  totals: { classifiedEntries: number };
+}
+
+export interface DiaryPeriodBucket {
+  period: string;
+  count: number;
+  byCategory: Record<string, number>;
+}
+
+export interface DiaryProfile {
+  key: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  personRole: DiaryPersonRole;
+  roleLabelHe: string;
+  entryCount: number;
+  datedEntryCount: number;
+  timedEntryCount: number;
+  firstDate: string | null;
+  lastDate: string | null;
+  datasetIds: string[];
   sourceUrl: string;
   sourceTitle: string;
-  collectedAt: string;
+  unspecifiedCount: number;
+  opacityPercent: number | null;
+  categoryCounts: Record<string, number>;
+  monthly: DiaryPeriodBucket[];
+  quarterly: DiaryPeriodBucket[];
+  weekendCount: number;
+  lateNightCount: number;
+  longMeetingCount: number;
+  marathonDays: string[];
+  doubleBookedCount: number;
+  busiestDay: { date: string; count: number } | null;
+  repeatedSubjects: Array<{ subject: string; count: number }>;
+}
+
+export interface DiaryFinding {
+  ruleId: string;
+  personKey: string;
+  ministryId: string | null;
+  personLabel: string | null;
+  roleLabelHe: string;
+  evidenceHe: string;
+  value: number | null;
+  sourceUrl: string;
+  sourceTitle: string;
+}
+
+export interface DiaryCrossMatch {
+  ruleId: 'supplier_meeting' | 'support_recipient_meeting';
+  entryId: string;
+  ministryId: string;
+  personLabel: string | null;
+  roleLabelHe: string;
+  date: string | null;
+  subject: string;
+  matchedName: string;
+  entityUrl: string;
+  amount: number;
+  amountLabelHe: string;
+  diarySourceUrl: string;
+}
+
+export interface DiaryInsights {
+  generatedAt: string;
+  method: string;
+  caveats: string[];
+  rules: Array<{
+    id: string;
+    labelHe: string;
+    formulaHe: string;
+    whyInterestingHe: string;
+  }>;
+  thresholds: Record<string, number>;
+  totals: {
+    entries: number;
+    people: number;
+    ministries: number;
+    findings: number;
+    crossMatches: number;
+    unspecifiedPercent: number | null;
+  };
+  categoryTotals: Record<string, number>;
+  monthlyAll: Array<{ period: string; count: number }>;
+  profiles: DiaryProfile[];
+  findings: DiaryFinding[];
+  crossMatches: DiaryCrossMatch[];
 }
 
 export interface DiaryUnparsedResource {
@@ -375,7 +485,7 @@ export interface DiaryUnparsedResource {
   note: string;
 }
 
-export interface DiaryDatasetCoverage {
+export interface DiaryDatasetMeta {
   datasetId: string;
   title: string;
   url: string;
@@ -391,7 +501,7 @@ export interface DiaryDatasetCoverage {
   unparsedResources: DiaryUnparsedResource[];
 }
 
-export interface DiariesCoverage {
+export interface DiariesIndex {
   generatedAt: string;
   source: {
     name: string;
@@ -406,9 +516,17 @@ export interface DiariesCoverage {
     datasetsWithEntries: number;
     unattributedDatasets: number;
     unparsedResources: number;
+    duplicateRowsRemoved: number;
+    byExtractionMethod: Record<DiaryExtractionMethod, number>;
   };
   unmatchedTitles: string[];
-  datasets: DiaryDatasetCoverage[];
+  shards: Array<{
+    shardKey: string;
+    ministryId: string | null;
+    file: string;
+    entryCount: number;
+  }>;
+  datasets: DiaryDatasetMeta[];
 }
 
 export interface Dataset {
@@ -426,6 +544,7 @@ export interface Dataset {
   budgetThemes: BudgetThemes;
   findings: Findings;
   anomalies: Anomalies;
-  diaries: DiaryEntry[];
-  diariesCoverage: DiariesCoverage;
+  diariesIndex: DiariesIndex;
+  diaryCategories: DiaryCategories;
+  diaryInsights: DiaryInsights;
 }

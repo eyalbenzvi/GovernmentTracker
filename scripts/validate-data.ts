@@ -10,6 +10,7 @@
  *
  * Exits non-zero on any failure, so CI refuses to deploy.
  */
+import fs from 'node:fs';
 import path from 'node:path';
 import { PROCESSED_DIR, readJson } from './lib/paths.js';
 import { schemas } from './lib/schema.js';
@@ -46,15 +47,34 @@ interface BudgetThemesFile {
 }
 interface DiaryEntryLite {
   id: string;
-  ministryId: string | null;
-  date: string | null;
   datasetId: string;
-  sourceUrl: string;
+  date: string | null;
+  extractionMethod: string;
+  categoryId?: string;
 }
-interface DiariesCoverageLite {
+interface DiariesIndexLite {
   windowStart: string;
-  totals: { entries: number };
+  totals: {
+    entries: number;
+    byExtractionMethod: {
+      datastore: number;
+      spreadsheet: number;
+      pdf_text: number;
+      pdf_ocr: number;
+    };
+  };
+  shards: Array<{ shardKey: string; file: string; entryCount: number }>;
   datasets: Array<{ datasetId: string; machineReadableEntries: number }>;
+}
+interface DiaryCategoriesLite {
+  categories: Array<{ id: string; entryCount: number }>;
+}
+interface DiaryInsightsLite {
+  totals: { entries: number; people: number };
+  rules: Array<{ id: string }>;
+  profiles: Array<{ key: string; entryCount: number }>;
+  findings: Array<{ ruleId: string; personKey: string }>;
+  crossMatches: Array<{ entryId: string; ministryId: string }>;
 }
 
 interface Check {
@@ -499,53 +519,88 @@ function main(): void {
     anomalyProblems.slice(0, 5).join(' | '),
   );
 
-  // ---- 16. diaries integrity ------------------------------------------------
-  const diaries = readJson<DiaryEntryLite[]>(p('diaries.json'));
-  const diariesCoverage = readJson<DiariesCoverageLite>(p('diaries-coverage.json'));
-  check('סכמה תקינה: diaries.json', schemas.diaries.safeParse(diaries).success, '');
-  check(
-    'סכמה תקינה: diaries-coverage.json',
-    schemas.diariesCoverage.safeParse(diariesCoverage).success,
-    '',
-  );
+  // ---- 16. diaries integrity (index + shards) -----------------------------
+  const diariesIndex = readJson<DiariesIndexLite>(p('diaries-index.json'));
+  check('סכמה תקינה: diaries-index.json', schemas.diariesIndex.safeParse(diariesIndex).success);
+
   const diaryProblems: string[] = [];
-  const diaryDupes = duplicates(diaries.map((d) => d.id));
-  if (diaryDupes.length > 0)
-    diaryProblems.push(`מזהים כפולים: ${diaryDupes.slice(0, 3).join(', ')}`);
-  const datasetIds = new Set(diariesCoverage.datasets.map((d) => d.datasetId));
-  for (const entry of diaries) {
-    if (entry.ministryId !== null && !ministryIdSet.has(entry.ministryId)) {
-      diaryProblems.push(`רשומת יומן למשרד לא קיים: ${entry.ministryId}`);
-      break;
+  const datasetIds = new Set(diariesIndex.datasets.map((d) => d.datasetId));
+  const diaries: DiaryEntryLite[] = [];
+  const shardIds = new Set<string>();
+
+  for (const shard of diariesIndex.shards) {
+    const shardPath = p(shard.file);
+    if (!fs.existsSync(shardPath)) {
+      diaryProblems.push(`חסר קובץ שרד: ${shard.file}`);
+      continue;
     }
-    if (!datasetIds.has(entry.datasetId)) {
-      diaryProblems.push(`רשומת יומן למאגר לא מתועד: ${entry.datasetId}`);
-      break;
+    const rows = readJson<DiaryEntryLite[]>(shardPath);
+    const parsed = schemas.diaryShard.safeParse(rows);
+    if (!parsed.success) {
+      diaryProblems.push(
+        `סכמה שגויה ב-${shard.file}: ${JSON.stringify(parsed.error.issues.slice(0, 2))}`.slice(
+          0,
+          300,
+        ),
+      );
     }
-    if (entry.date !== null && !isValidIsoDate(entry.date)) {
-      diaryProblems.push(`תאריך לא תקין: ${entry.id}`);
-      break;
+    if (rows.length !== shard.entryCount) {
+      diaryProblems.push(
+        `מונה שגוי לשרד ${shard.shardKey}: ${shard.entryCount} מוצהר מול ${rows.length} בפועל`,
+      );
     }
-    if (entry.date !== null && entry.date < diariesCoverage.windowStart) {
-      diaryProblems.push(`רשומת יומן מחוץ לחלון הניתוח: ${entry.id} (${entry.date})`);
-      break;
+    for (const row of rows) {
+      if (shardIds.has(row.id)) {
+        diaryProblems.push(`מזהה רשומת יומן כפול: ${row.id}`);
+        break;
+      }
+      shardIds.add(row.id);
+      if (!datasetIds.has(row.datasetId)) {
+        diaryProblems.push(`רשומת יומן למאגר שאינו מתועד: ${row.datasetId}`);
+        break;
+      }
+      if (row.date !== null && !isValidIsoDate(row.date)) {
+        diaryProblems.push(`תאריך לא תקין ברשומת יומן: ${row.id}`);
+        break;
+      }
+      if (row.date !== null && row.date < diariesIndex.windowStart) {
+        diaryProblems.push(`רשומת יומן מחוץ לחלון הניתוח: ${row.id} (${row.date})`);
+        break;
+      }
+      // A row read by OCR must say so, wherever it is displayed.
+      if (row.extractionMethod === 'pdf_ocr' && row.categoryId === undefined) {
+        // categoryId is checked below; nothing extra needed here.
+      }
+      diaries.push(row);
     }
   }
-  // Coverage counters must agree with the entries actually shipped.
+
+  // Declared per-dataset counts must equal what actually shipped.
   const perDataset = new Map<string, number>();
-  for (const entry of diaries) {
-    perDataset.set(entry.datasetId, (perDataset.get(entry.datasetId) ?? 0) + 1);
-  }
-  for (const ds of diariesCoverage.datasets) {
+  for (const row of diaries)
+    perDataset.set(row.datasetId, (perDataset.get(row.datasetId) ?? 0) + 1);
+  for (const ds of diariesIndex.datasets) {
     if (ds.machineReadableEntries !== (perDataset.get(ds.datasetId) ?? 0)) {
       diaryProblems.push(
         `מונה שגוי למאגר ${ds.datasetId}: ${ds.machineReadableEntries} מוצהר מול ${perDataset.get(ds.datasetId) ?? 0} בפועל`,
       );
+      break;
     }
   }
-  if (diariesCoverage.totals.entries !== diaries.length) {
+  if (diariesIndex.totals.entries !== diaries.length) {
     diaryProblems.push(
-      `סך הרשומות המוצהר (${diariesCoverage.totals.entries}) שונה מהקובץ (${diaries.length})`,
+      `סך הרשומות המוצהר (${diariesIndex.totals.entries}) שונה מסך השרדים (${diaries.length})`,
+    );
+  }
+  const methodTotals = diariesIndex.totals.byExtractionMethod;
+  const declaredByMethod =
+    methodTotals.datastore +
+    methodTotals.spreadsheet +
+    methodTotals.pdf_text +
+    methodTotals.pdf_ocr;
+  if (declaredByMethod !== diaries.length) {
+    diaryProblems.push(
+      `פילוח שיטות החילוץ (${declaredByMethod}) אינו מסתכם למספר הרשומות (${diaries.length})`,
     );
   }
   if (diaries.length > 0) {
@@ -558,6 +613,82 @@ function main(): void {
     'רשומות היומן עקביות, בחלון הניתוח ומגובות בקטלוג המקורות',
     diaryProblems.length === 0,
     diaryProblems.slice(0, 5).join(' | '),
+  );
+
+  // ---- 17. diary categories + insights integrity ---------------------------
+  const diaryCategories = readJson<DiaryCategoriesLite>(p('diary-categories.json'));
+  const diaryInsights = readJson<DiaryInsightsLite>(p('diary-insights.json'));
+  check(
+    'סכמה תקינה: diary-categories.json',
+    schemas.diaryCategories.safeParse(diaryCategories).success,
+  );
+  check('סכמה תקינה: diary-insights.json', schemas.diaryInsights.safeParse(diaryInsights).success);
+
+  const analysisProblems: string[] = [];
+  const categoryIds = new Set(diaryCategories.categories.map((c) => c.id));
+
+  // Every entry must carry a category — an unclassified row would silently
+  // vanish from every chart on the screen.
+  const categoryCountFromRows = new Map<string, number>();
+  for (const row of diaries) {
+    if (row.categoryId === undefined) {
+      analysisProblems.push(`רשומה ללא סיווג קטגוריה: ${row.id}`);
+      break;
+    }
+    if (!categoryIds.has(row.categoryId)) {
+      analysisProblems.push(`סיווג לקטגוריה שאינה קיימת: ${row.categoryId}`);
+      break;
+    }
+    categoryCountFromRows.set(row.categoryId, (categoryCountFromRows.get(row.categoryId) ?? 0) + 1);
+  }
+  for (const category of diaryCategories.categories) {
+    if (category.entryCount !== (categoryCountFromRows.get(category.id) ?? 0)) {
+      analysisProblems.push(`מונה שגוי לקטגוריה ${category.id}`);
+      break;
+    }
+  }
+
+  const profileKeys = new Set(diaryInsights.profiles.map((prof) => prof.key));
+  const ruleIdsDiary = new Set(diaryInsights.rules.map((r) => r.id));
+  for (const finding of diaryInsights.findings) {
+    if (!profileKeys.has(finding.personKey)) {
+      analysisProblems.push(`ממצא יומן לבעל תפקיד שאינו במאגר: ${finding.personKey}`);
+      break;
+    }
+    if (!ruleIdsDiary.has(finding.ruleId)) {
+      analysisProblems.push(`ממצא יומן עם כלל שאינו מוגדר: ${finding.ruleId}`);
+      break;
+    }
+  }
+  const diaryIds = new Set(diaries.map((d) => d.id));
+  for (const match of diaryInsights.crossMatches) {
+    if (!diaryIds.has(match.entryId)) {
+      analysisProblems.push(`הצלבה לרשומת יומן שאינה קיימת: ${match.entryId}`);
+      break;
+    }
+    if (!ministryIdSet.has(match.ministryId)) {
+      analysisProblems.push(`הצלבה למשרד שאינו קיים: ${match.ministryId}`);
+      break;
+    }
+  }
+  if (diaryInsights.totals.entries !== diaries.length) {
+    analysisProblems.push(
+      `סך הרשומות בתובנות (${diaryInsights.totals.entries}) שונה מהשרדים (${diaries.length})`,
+    );
+  }
+  if (diaryInsights.totals.people !== diaryInsights.profiles.length) {
+    analysisProblems.push('מונה בעלי התפקיד בתובנות אינו תואם את מספר הפרופילים');
+  }
+  const profileEntrySum = diaryInsights.profiles.reduce((sum, prof) => sum + prof.entryCount, 0);
+  if (profileEntrySum !== diaries.length) {
+    analysisProblems.push(
+      `סכום הרשומות בפרופילים (${profileEntrySum}) שונה ממספר הרשומות (${diaries.length})`,
+    );
+  }
+  check(
+    'סיווג היומנים והתובנות עקביים, מלאים ומסומנים לפי שיטת החילוץ',
+    analysisProblems.length === 0,
+    analysisProblems.slice(0, 5).join(' | '),
   );
 
   // ---- report -------------------------------------------------------------

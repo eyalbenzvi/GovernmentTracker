@@ -69,10 +69,20 @@ function main(): void {
     path.join(PROCESSED_DIR, 'activity-evidence.json'),
   );
   const topics = readJson<Topic[]>(path.join(PROCESSED_DIR, 'topics.json'));
-  const diaries = readJson<{ id: string }[]>(path.join(PROCESSED_DIR, 'diaries.json'));
-  const diariesCoverage = readJson<{
-    totals: { datasets: number; datasetsWithEntries: number; unparsedResources: number };
-  }>(path.join(PROCESSED_DIR, 'diaries-coverage.json'));
+  const diariesIndex = readJson<{
+    totals: {
+      datasets: number;
+      entries: number;
+      datasetsWithEntries: number;
+      unparsedResources: number;
+      byExtractionMethod: {
+        datastore: number;
+        spreadsheet: number;
+        pdf_text: number;
+        pdf_ocr: number;
+      };
+    };
+  }>(path.join(PROCESSED_DIR, 'diaries-index.json'));
 
   const logs = listFiles(COLLECTION_LOG_DIR, '.json').map((f) => readJson<CollectionLog>(f));
   const attempts = logs.flatMap((l) => l.attempts);
@@ -225,8 +235,8 @@ function main(): void {
           'לפי נוהל היומנים (הנחיית היועץ המשפטי לממשלה ונהלי היחידה הממשלתית לחופש המידע), שרים, סגני שרים ומנכ"לים מפרסמים אחת לרבעון את יומן פגישותיהם, לאחר בדיקה והשחרות.',
           'העמוד המרוכז ב-foi.gov.il ועמודי gov.il דוחים לקוחות אוטומטיים מזוהים (HTTP 403), ולא נעשה ניסיון להתחזות לדפדפן. האיסוף נעשה מהמאגר הציבורי "מידע לעם" של התנועה לחופש המידע (odata.org.il) — שכבת עזר אזרחית שבה מפורסמים הקבצים שנמסרו מכוח הנוהל ובקשות חופש מידע.',
           'נקלטות רק רשומות מקבצים שנטענו למסד הנתונים של המאגר (datastore). קבצים שפורסמו כסריקות PDF או כתמונות אינם מפוענחים — הם מוצגים ברשימת "מה פורסם אך לא ניתן לפענוח", עם קישור לעיון אנושי. שום רשומה לא שוחזרה בניחוש ושום OCR לא הופעל.',
-          diaries.length > 0
-            ? `בגרסה זו: ${diaries.length} רשומות יומן מתוך ${diariesCoverage.totals.datasetsWithEntries} פרסומים שפוענחו (מתוך ${diariesCoverage.totals.datasets} פרסומים רלוונטיים במאגר); ${diariesCoverage.totals.unparsedResources} קבצים מדווחים כבלתי ניתנים לפענוח אוטומטי.`
+          diariesIndex.totals.entries > 0
+            ? `בגרסה זו: ${diariesIndex.totals.entries} רשומות יומן מתוך ${diariesIndex.totals.datasetsWithEntries} פרסומים שפוענחו (מתוך ${diariesIndex.totals.datasets} פרסומים רלוונטיים במאגר); ${diariesIndex.totals.unparsedResources} קבצים מדווחים כבלתי ניתנים לפענוח אוטומטי. פילוח שיטות החילוץ: ${diariesIndex.totals.byExtractionMethod.datastore} מובנות, ${diariesIndex.totals.byExtractionMethod.spreadsheet} מגיליונות, ${diariesIndex.totals.byExtractionMethod.pdf_text} מטקסט PDF, ${diariesIndex.totals.byExtractionMethod.pdf_ocr} מפענוח OCR של סריקות.`
             : 'בגרסה זו טרם נאספו רשומות: האיסוף רץ ב-GitHub Actions (סביבת הפיתוח חסומה לרשת מול המאגר), והמסך יתעדכן עם ההרצה הבאה.',
           'שיוך פרסום למשרד נעשה לפי הופעת שם המשרד בכותרת הפרסום מול רשימת הכינויים המוצהרת. פרסום שכותרתו נוקבת בשם אדם בלבד נשאר "ללא שיוך" ונספר בגלוי — שיוך לפי שם אדם היה ניחוש.',
           'היעדר יומן אינו היעדר פעילות; קיומו של יומן אינו תמונה מלאה. חלק מבעלי התפקידים אינם מוסרים יומנים כלל, וחלק מוסרים סריקות בלבד — שני המצבים גלויים במסך היומנים.',
@@ -332,8 +342,8 @@ function main(): void {
       sourcesRetrieved: catalog.filter((s) => s.retrievalStatus === 'retrieved').length,
       topicsDefined: topics.length,
       topicsWithActivity: topics.filter((t) => t.activityItemCount > 0).length,
-      diaryEntries: diaries.length,
-      diaryDatasets: diariesCoverage.totals.datasets,
+      diaryEntries: diariesIndex.totals.entries,
+      diaryDatasets: diariesIndex.totals.datasets,
     },
     changelog: [
       {
@@ -346,8 +356,8 @@ function main(): void {
           (activities.length > 0
             ? `נאספו ${activities.length} פריטי פעילות פומבית (החלטות ממשלה, פרסומי משרדים ומכרזים) דרך השיקוף הציבורי של מפתח התקציב. `
             : `פריטי פעילות פומבית לא נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות מזוהות ב-HTTP 403, ולא נעשה ניסיון לעקוף זאת. `) +
-          (diaries.length > 0
-            ? `נאספו ${diaries.length} רשומות יומן של שרים, סגני שרים ומנכ"לים מתוך ${diariesCoverage.totals.datasetsWithEntries} פרסומי יומן במאגר "מידע לעם"; ${diariesCoverage.totals.unparsedResources} קבצים שפורסמו כסריקות או ללא טעינה למסד מדווחים ככאלה. `
+          (diariesIndex.totals.entries > 0
+            ? `נאספו ${diariesIndex.totals.entries} רשומות יומן של שרים, סגני שרים ומנכ"לים מתוך ${diariesIndex.totals.datasetsWithEntries} פרסומי יומן במאגר "מידע לעם"; ${diariesIndex.totals.unparsedResources} קבצים שלא הניבו רשומות מדווחים ככאלה. `
             : `רשומות יומן טרם נאספו בהרצה זו (האיסוף מתבצע ב-GitHub Actions, ראו מסך היומנים). `) +
           `לא הוזן שום מספר ממקור עקיף או משוער.`,
       },
