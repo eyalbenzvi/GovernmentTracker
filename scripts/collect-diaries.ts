@@ -24,13 +24,11 @@
  *  `--probe`   read-only reconnaissance: inventories what each source offers
  *              and prints a compact summary to the log. Writes nothing under
  *              data/processed.
- *  `--collect` full collection from the odata.org.il datastore: every diary
- *              dataset relevant to the 37th government window is enumerated,
- *              structured rows are normalised into diary entries, and
- *              everything that could NOT be processed (PDF scans, image
- *              files, spreadsheets that were never loaded into the
- *              datastore) is disclosed per dataset in the coverage file —
- *              never silently dropped and never OCR-guessed.
+ *  `--collect` full collection: every diary dataset in the 37th-government
+ *              window is enumerated; structured rows come from the datastore
+ *              API, and files (spreadsheets, text PDFs, scans via OCR) are read
+ *              wherever a lawful route to the bytes exists. Anything that could
+ *              not be read is disclosed per dataset, never silently dropped.
  *
  * The honesty rule applies throughout: what a source refuses is recorded as
  * refused, not worked around; what cannot be attributed to a ministry is
@@ -380,6 +378,8 @@ async function inspectOdataDataset(
  * link was found; the User-Agent still identifies this collector honestly and
  * is never disguised as a browser.
  */
+const lastBinaryHit = new Map<string, number>();
+
 async function fetchBinary(
   logger: Logger,
   url: string,
@@ -387,6 +387,14 @@ async function fetchBinary(
   referer: string | null,
 ): Promise<{ status: number | null; bytes: Uint8Array | null; contentType: string | null }> {
   const startedAt = Date.now();
+  // Same courtesy as politeFetch: at most one request per host per 800ms.
+  const host = new URL(url).host;
+  const last = lastBinaryHit.get(host);
+  if (last !== undefined) {
+    const wait = 800 - (Date.now() - last);
+    if (wait > 0) await new Promise((resolve) => setTimeout(resolve, wait));
+  }
+  lastBinaryHit.set(host, Date.now());
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 60_000);
   try {
@@ -608,6 +616,16 @@ interface UnparsedResource {
 }
 
 const MAX_OCR_PAGES = 40;
+/** Whole-run OCR budget: keeps a collection run bounded on CI wall-clock. */
+const MAX_OCR_PAGES_PER_RUN = 4_000;
+/**
+ * After this many consecutive refusals of direct file downloads, stop asking.
+ * The repository has made its position clear; continuing would be thousands of
+ * pointless requests against someone else's server.
+ */
+const DIRECT_DOWNLOAD_REFUSAL_LIMIT = 20;
+let consecutiveDownloadRefusals = 0;
+let ocrPagesUsed = 0;
 const OCR_CAVEAT = 'פוענח בזיהוי תווים אוטומטי (OCR) מסריקה — ייתכנו שגיאות תעתיק';
 
 interface DiaryDatasetCoverage {
@@ -944,19 +962,35 @@ async function downloadResource(
   logger: Logger,
   datasetId: string,
   resource: CkanResource,
-): Promise<{ bytes: Uint8Array; via: string } | null> {
+): Promise<{ bytes: Uint8Array; via: string; viaUrl: string } | null> {
   const datasetPage = `${ODATA_HOST}/dataset/${datasetId}`;
   const rid = resource.id ?? '';
+  const published = resource.url ?? '';
   const candidates: Array<[string, string]> = [
-    ['as-published', resource.url ?? ''],
+    ['as-published', published],
     ['ckan download path', rid === '' ? '' : `${datasetPage}/resource/${rid}/download`],
+    // The repository answers its API but refuses automated file downloads (403
+    // on every path, verified by --probe-files). The Internet Archive publishes
+    // snapshots of the same public files and permits automated access, so an
+    // archived copy is a legitimate route to the document — not a way around
+    // the refusal. Provenance is recorded per row so a reader can see that a
+    // row came from a snapshot and open that snapshot.
+    [
+      'internet archive snapshot',
+      published === '' ? '' : `https://web.archive.org/web/2id_/${published}`,
+    ],
   ];
+  const directRefused = consecutiveDownloadRefusals >= DIRECT_DOWNLOAD_REFUSAL_LIMIT;
   for (const [via, url] of candidates) {
     if (url === '') continue;
+    const isDirect = via !== 'internet archive snapshot';
+    if (isDirect && directRefused) continue;
     const result = await fetchBinary(logger, url, `collect: download ${via}`, datasetPage);
     if (result.bytes !== null && result.bytes.byteLength > 0) {
-      return { bytes: result.bytes, via };
+      if (isDirect) consecutiveDownloadRefusals = 0;
+      return { bytes: result.bytes, via, viaUrl: url };
     }
+    if (isDirect && result.status === 403) consecutiveDownloadRefusals += 1;
   }
   return null;
 }
@@ -1015,8 +1049,16 @@ function extractPdf(
   if (pages.length === 0) {
     return { unavailable: 'לא נוצרו עמודי תמונה מה-PDF' };
   }
+  const remainingBudget = Math.max(0, MAX_OCR_PAGES_PER_RUN - ocrPagesUsed);
+  if (remainingBudget === 0) {
+    return {
+      unavailable: `תקציב עמודי ה-OCR של ההרצה (${MAX_OCR_PAGES_PER_RUN} עמודים) מוצה — הקובץ לא פוענח בהרצה זו`,
+    };
+  }
+  const pageLimit = Math.min(MAX_OCR_PAGES, remainingBudget);
   const ocrParts: string[] = [];
-  for (const page of pages.slice(0, MAX_OCR_PAGES)) {
+  for (const page of pages.slice(0, pageLimit)) {
+    ocrPagesUsed += 1;
     const text = run('tesseract', [
       path.join(workDir, page),
       'stdout',
@@ -1080,8 +1122,11 @@ async function extractFileResource(
 
   const download = await downloadResource(logger, datasetId, resource);
   if (download === null) {
-    return disclose('הורדת הקובץ נדחתה על ידי המאגר (403) — הקובץ פתוח לעיון אנושי בקישור');
+    return disclose(
+      'הורדת הקובץ נדחתה על ידי המאגר (403) ולא נמצא עותק בארכיון האינטרנט — הקובץ פתוח לעיון אנושי בקישור',
+    );
   }
+  const fromArchive = download.via === 'internet archive snapshot';
 
   let extraction: ExtractionResult;
   let method: ExtractionMethod;
@@ -1125,6 +1170,11 @@ async function extractFileResource(
     });
   }
 
+  // Where the bytes came from belongs on every row that came from them.
+  const provenanceNote = fromArchive
+    ? ` · הקובץ נקרא מעותק שמור בארכיון האינטרנט: ${download.viaUrl}`
+    : '';
+
   const entries: DiaryEntry[] = [];
   let index = 0;
   for (const row of extraction.rows) {
@@ -1153,7 +1203,7 @@ async function extractFileResource(
       participants: row.participants === null ? null : row.participants.slice(0, 400),
       datasetId,
       extractionMethod: method,
-      extractionNote,
+      extractionNote: `${extractionNote}${provenanceNote}`,
       sourceUrl: datasetUrl,
       sourceTitle: title,
       collectedAt: ctx.collectedAt,

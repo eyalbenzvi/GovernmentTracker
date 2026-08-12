@@ -1,6 +1,6 @@
 {
-  "comment": "Touching this file triggers .github/workflows/collect-diaries.yml — the dispatch API is not available to the automation token, so a manual run is expressed as an explicit, reviewable commit.",
+  "comment": "Touching this file triggers .github/workflows/collect-diaries.yml — the dispatch API is not available to the automation token, so a manual run is expressed as an explicit, reviewable commit. Bump requestedAt to re-run.",
   "mode": "collect",
   "commit_changes": true,
-  "requestedAt": "2026-08-12T21:25:00Z"
+  "requestedAt": "2026-08-12T21:35:00Z"
 }
