@@ -341,3 +341,26 @@ test('the diaries screen states its source honestly in both empty and populated 
   const emptyState = page.getByText(/טרם נאספו רשומות יומן/);
   await expect(counter.or(emptyState).first()).toBeVisible();
 });
+
+test('the diaries screen labels how every row was extracted', async ({ page }) => {
+  await page.goto('/#/diaries');
+  const emptyState = page.getByText(/טרם נאספו רשומות יומן/);
+  if (await emptyState.isVisible().catch(() => false)) return; // pre-collection build
+  // The extraction-method breakdown is what tells a reader whether a row is a
+  // structured value or a machine's reading of a scan.
+  await expect(page.getByRole('heading', { name: /איך הגיעו הרשומות/ })).toBeVisible();
+  await expect(page.getByText(/נתון מובנה מהמאגר/)).toBeVisible();
+  // The transparency measure and the published-formula findings must both be present.
+  await expect(page.getByRole('heading', { name: /שקיפות היומן/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /ממצאים מחושבים/ })).toBeVisible();
+  await expect(page.getByText(/שם דומה אינו הוכחה/)).toBeVisible();
+});
+
+test('the diaries screen switches category mix between quarters and months', async ({ page }) => {
+  await page.goto('/#/diaries');
+  const emptyState = page.getByText(/טרם נאספו רשומות יומן/);
+  if (await emptyState.isVisible().catch(() => false)) return;
+  await expect(page.getByRole('heading', { name: /במה עסקו/ })).toBeVisible();
+  await page.getByRole('button', { name: 'חודשים' }).click();
+  await expect(page.getByRole('button', { name: 'חודשים' })).toHaveClass(/btn-primary/);
+});
