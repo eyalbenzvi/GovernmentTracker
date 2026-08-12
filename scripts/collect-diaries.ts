@@ -272,32 +272,57 @@ async function inspectOdataDataset(
         metadata_created?: string;
         organization?: { title?: string } | null;
         tags?: { name?: string }[];
-        resources?: { name?: string; format?: string; url?: string; created?: string }[];
+        resources?: {
+          id?: string;
+          name?: string;
+          format?: string;
+          url?: string;
+          created?: string;
+          datastore_active?: boolean;
+        }[];
       };
     };
     const ds = parsed.result ?? {};
     const resources = (ds.resources ?? []).map((r) => ({
+      id: r.id ?? null,
       name: r.name ?? null,
       format: r.format ?? null,
       url: r.url ?? '',
       created: r.created ?? null,
+      datastoreActive: r.datastore_active ?? null,
     }));
-    // Peek at the first CSV resource: header + a few rows tell us the diary
-    // file's column structure without downloading everything.
-    let csvPeek: string[] = [];
-    const firstCsv = resources.find((r) => (r.format ?? '').toUpperCase() === 'CSV');
-    if (firstCsv !== undefined) {
-      const csv = await politeFetch(firstCsv.url, {
-        purpose: `probe: peek CSV of ${datasetIdOrName}`,
+    // Direct /download/ URLs returned 403 on the first probe, so the peek
+    // goes through the CKAN datastore API instead: datapusher-converted
+    // resources are queryable as JSON records over the same API host that
+    // already answers package_search.
+    let datastorePeek: Record<string, unknown> | null = null;
+    for (const r of resources) {
+      if (r.id === null || r.datastoreActive !== true) continue;
+      const dsUrl = `https://www.odata.org.il/api/3/action/datastore_search?resource_id=${encodeURIComponent(r.id)}&limit=3`;
+      const peek = await politeFetch(dsUrl, {
+        purpose: `probe: datastore peek ${datasetIdOrName}`,
         logger,
         useCache: false,
-        accept: 'text/csv,*/*',
+        accept: 'application/json',
       });
-      if (csv.ok && csv.body !== null) {
-        csvPeek = csv.body
-          .split(/\r?\n/)
-          .slice(0, 8)
-          .map((l) => l.slice(0, 400));
+      if (!peek.ok || peek.body === null) continue;
+      try {
+        const parsedPeek = JSON.parse(peek.body) as {
+          success?: boolean;
+          result?: { total?: number; fields?: unknown[]; records?: unknown[] };
+        };
+        if (parsedPeek.success === true) {
+          datastorePeek = {
+            resourceId: r.id,
+            resourceName: r.name,
+            total: parsedPeek.result?.total ?? null,
+            fields: parsedPeek.result?.fields ?? [],
+            records: parsedPeek.result?.records ?? [],
+          };
+          break;
+        }
+      } catch {
+        // not datastore-backed — try the next resource
       }
     }
     return {
@@ -308,7 +333,7 @@ async function inspectOdataDataset(
       notes: (ds.notes ?? '').slice(0, 500),
       tags: (ds.tags ?? []).map((t) => t.name ?? ''),
       resources,
-      csvPeek,
+      datastorePeek,
     };
   } catch (err) {
     return {
@@ -362,10 +387,28 @@ async function probe(): Promise<void> {
   }
   for (const insp of report.odataInspections) {
     console.log(`inspected ${String(insp.dataset)}: title=${String(insp.title ?? 'n/a')}`);
-    const peek = insp.csvPeek;
-    if (Array.isArray(peek) && peek.length > 0) {
-      console.log(`  csv header: ${String(peek[0]).slice(0, 300)}`);
-      console.log(`  csv row 1: ${String(peek[1] ?? '').slice(0, 300)}`);
+    const resources = insp.resources;
+    if (Array.isArray(resources)) {
+      for (const r of resources as {
+        name: string | null;
+        format: string | null;
+        datastoreActive: boolean | null;
+      }[]) {
+        console.log(
+          `  resource: ${String(r.name).slice(0, 80)} | ${String(r.format)} | datastore=${String(r.datastoreActive)}`,
+        );
+      }
+    }
+    const peek = insp.datastorePeek as {
+      resourceName?: unknown;
+      total?: unknown;
+      fields?: unknown;
+      records?: unknown;
+    } | null;
+    if (peek !== null && peek !== undefined) {
+      console.log(`  datastore peek of ${String(peek.resourceName)} (total=${String(peek.total)})`);
+      console.log(`  fields: ${JSON.stringify(peek.fields)}`);
+      console.log(`  records: ${JSON.stringify(peek.records)}`);
     }
   }
   console.log('===END===');

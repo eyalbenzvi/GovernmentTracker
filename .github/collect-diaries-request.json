@@ -2,5 +2,5 @@
   "comment": "Touching this file triggers .github/workflows/collect-diaries.yml — the dispatch API is not available to the automation token, so a manual run is expressed as an explicit, reviewable commit.",
   "mode": "probe",
   "commit_changes": false,
-  "requestedAt": "2026-08-12T20:25:00Z"
+  "requestedAt": "2026-08-12T20:40:00Z"
 }
