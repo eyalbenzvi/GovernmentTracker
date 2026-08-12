@@ -362,6 +362,121 @@ async function inspectOdataDataset(
   }
 }
 
+/**
+ * Byte-level fetch for binary resources (PDF/XLSX). politeFetch decodes to
+ * text, which destroys binary payloads, so this keeps the same courtesy rules
+ * (identifying UA, timeout, single attempt) and returns the raw buffer.
+ *
+ * A `Referer` of the dataset page is sent because that is factually where the
+ * link was found; the User-Agent still identifies this collector honestly and
+ * is never disguised as a browser.
+ */
+async function fetchBinary(
+  logger: Logger,
+  url: string,
+  purpose: string,
+  referer: string | null,
+): Promise<{ status: number | null; bytes: Uint8Array | null; contentType: string | null }> {
+  const startedAt = Date.now();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 60_000);
+  try {
+    const headers: Record<string, string> = { 'User-Agent': USER_AGENT, Accept: '*/*' };
+    if (referer !== null) headers.Referer = referer;
+    const response = await fetch(url, { signal: controller.signal, redirect: 'follow', headers });
+    const buffer = response.ok ? new Uint8Array(await response.arrayBuffer()) : null;
+    logger.record({
+      url,
+      purpose,
+      outcome: response.ok ? 'ok' : 'http_error',
+      httpStatus: response.status,
+      bytes: buffer?.byteLength ?? 0,
+      errorMessage: response.ok ? null : `HTTP ${response.status}`,
+      attemptedAt: new Date().toISOString(),
+      durationMs: Date.now() - startedAt,
+    });
+    return {
+      status: response.status,
+      bytes: buffer,
+      contentType: response.headers.get('content-type'),
+    };
+  } catch (err) {
+    logger.record({
+      url,
+      purpose,
+      outcome: 'network_error',
+      httpStatus: null,
+      bytes: 0,
+      errorMessage: err instanceof Error ? err.message : String(err),
+      attemptedAt: new Date().toISOString(),
+      durationMs: Date.now() - startedAt,
+    });
+    return { status: null, bytes: null, contentType: null };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function magicOf(bytes: Uint8Array | null): string {
+  if (bytes === null || bytes.byteLength < 4) return 'none';
+  const head = Buffer.from(bytes.slice(0, 4)).toString('latin1');
+  if (head.startsWith('%PDF')) return 'pdf';
+  if (head.startsWith('PK')) return 'zip/xlsx/docx';
+  if (head.startsWith('\xD0\xCF\x11\xE0')) return 'ole/xls';
+  return `other(${Buffer.from(bytes.slice(0, 8)).toString('hex')})`;
+}
+
+/**
+ * Can the runner actually download diary files? Four access paths are tried on
+ * real PDF/XLSX resources so the OCR/spreadsheet stage is built on a verified
+ * path rather than an assumption. Read-only, a handful of requests.
+ */
+async function probeFiles(): Promise<void> {
+  const logger = new Logger('collect-diaries-file-probe');
+  const targets = [
+    '2023',
+    '13793fcb-a8a8-4826-87bd-cd6862c37770',
+    'b714f3bd-2e52-4351-9b53-707c0e79c792',
+  ];
+  console.log('File-access probe — can diary PDFs/spreadsheets be downloaded?\n');
+
+  for (const datasetId of targets) {
+    const detail = await ckanJson<{ result?: CkanDataset }>(
+      logger,
+      `file-probe: package_show ${datasetId}`,
+      `${ODATA_HOST}/api/3/action/package_show?id=${encodeURIComponent(datasetId)}`,
+    );
+    const resources = (detail?.result?.resources ?? []).filter((r) =>
+      ['PDF', 'XLSX', 'XLS', 'CSV'].includes((r.format ?? '').toUpperCase()),
+    );
+    console.log(`\n=== ${datasetId}: ${resources.length} file resources`);
+    for (const resource of resources.slice(0, 3)) {
+      const rid = resource.id ?? '';
+      const datasetPage = `${ODATA_HOST}/dataset/${datasetId}`;
+      const attempts: Array<[string, string, string | null]> = [
+        ['as-published', resource.url ?? '', null],
+        ['as-published + referer', resource.url ?? '', datasetPage],
+        [
+          'ckan download path',
+          `${ODATA_HOST}/dataset/${datasetId}/resource/${rid}/download`,
+          datasetPage,
+        ],
+        ['datastore dump', `${ODATA_HOST}/datastore/dump/${rid}`, datasetPage],
+      ];
+      console.log(`  resource ${String(resource.name).slice(0, 60)} [${resource.format}]`);
+      for (const [label, url, referer] of attempts) {
+        if (url === '') continue;
+        const res = await fetchBinary(logger, url, `file-probe: ${label}`, referer);
+        console.log(
+          `    ${label}: status=${String(res.status)} type=${String(res.contentType)} bytes=${res.bytes?.byteLength ?? 0} magic=${magicOf(res.bytes)}`,
+        );
+        if (res.bytes !== null) break; // one working path per resource is enough
+      }
+    }
+  }
+  logger.flush('בדיקת נגישות קבצים בסביבת GitHub Actions.');
+}
+
 async function probe(): Promise<void> {
   const logger = new Logger('collect-diaries-probe');
   console.log('Diaries probe — read-only reconnaissance of diary sources.\n');
@@ -1009,11 +1124,15 @@ async function main(): Promise<void> {
     await probe();
     return;
   }
+  if (mode === '--probe-files') {
+    await probeFiles();
+    return;
+  }
   if (mode === '--collect') {
     await collect();
     return;
   }
-  console.error(`Unknown mode "${mode}". Use --probe or --collect.`);
+  console.error(`Unknown mode "${mode}". Use --probe, --probe-files or --collect.`);
   process.exitCode = 1;
 }
 

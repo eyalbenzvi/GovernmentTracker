@@ -22,10 +22,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'probe = read-only reconnaissance; collect = full collection'
+        description: 'probe = reconnaissance; probe-files = file-access test; collect = full collection'
         type: choice
         options:
           - probe
+          - probe-files
           - collect
         default: probe
       commit_changes:
