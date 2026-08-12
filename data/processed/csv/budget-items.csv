@@ -1,1 +1,465 @@
 ﻿id,משרד,שנת תקציב,קוד תקציבי,כותרת,תקציב מקורי,תקציב מעודכן,ביצוע,אומדן ביצוע,שיעור ביצוע,סטטוס נתון,מקור
+budget-economy-2023-0038,economy,2023,0038,כלכלה ותעשייה,2720667000,4541713000,3759507233,,82.8,partial,https://next.obudget.org/i/budget/0038/2023
+budget-economy-2023-003830,economy,2023,003830,המדען הראשי,1544853000,1798226000,1535536772,,85.4,partial,https://next.obudget.org/i/budget/003830/2023
+budget-economy-2023-00383001,economy,2023,00383001,הפעלת הרשות לחדשנות,142054000,182796000,139410647,,76.3,partial,https://next.obudget.org/i/budget/00383001/2023
+budget-economy-2023-00383002,economy,2023,00383002,מענקי מחקר ופיתוח,885961000,983716000,764411894,,77.7,partial,https://next.obudget.org/i/budget/00383002/2023
+budget-economy-2023-00383004,economy,2023,00383004,"מו""פ בין-לאומי",516838000,631714000,631714231,,100,partial,https://next.obudget.org/i/budget/00383004/2023
+budget-economy-2023-003840,economy,2023,003840,עידוד המגזר העסקי,832332000,2336804000,1894136794,,81.1,partial,https://next.obudget.org/i/budget/003840/2023
+budget-economy-2023-00384001,economy,2023,00384001,קידום השקעות ועידוד,290491000,854275000,786168535,,92,partial,https://next.obudget.org/i/budget/00384001/2023
+budget-economy-2023-00384004,economy,2023,00384004,קידום הייצוא ועידוד,443242000,1203099000,1053238670,,87.5,partial,https://next.obudget.org/i/budget/00384004/2023
+budget-economy-2023-00384009,economy,2023,00384009,פעולות כלליות לקידום,98599000,279430000,54729589,,19.6,partial,https://next.obudget.org/i/budget/00384009/2023
+budget-economy-2023-003870,economy,2023,003870,שכר ותפעול המשרד,323808000,397639000,327585946,,82.4,partial,https://next.obudget.org/i/budget/003870/2023
+budget-economy-2023-00387001,economy,2023,00387001,שכר,206618000,212628000,210516260,,99,partial,https://next.obudget.org/i/budget/00387001/2023
+budget-economy-2023-00387002,economy,2023,00387002,תפעול,117190000,185011000,117069686,,63.3,partial,https://next.obudget.org/i/budget/00387002/2023
+budget-economy-2023-003890,economy,2023,003890,רשות הרגולציה,19674000,9044000,2247721,,24.9,partial,https://next.obudget.org/i/budget/003890/2023
+budget-economy-2023-00389001,economy,2023,00389001,שכר ופעולות,19674000,9044000,2247721,,24.9,partial,https://next.obudget.org/i/budget/00389001/2023
+budget-economy-2023-003899,economy,2023,003899,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/003899/2023
+budget-economy-2023-00389999,economy,2023,00389999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00389999/2023
+budget-economy-2024-0038,economy,2024,0038,כלכלה ותעשייה,4539043000,5321423000,4888077362,,91.9,partial,https://next.obudget.org/i/budget/0038/2024
+budget-economy-2024-003830,economy,2024,003830,המדען הראשי,1511448000,1909271000,1839223734,,96.3,partial,https://next.obudget.org/i/budget/003830/2024
+budget-economy-2024-00383001,economy,2024,00383001,הפעלת הרשות לחדשנות,137470000,175075000,144971276,,82.8,partial,https://next.obudget.org/i/budget/00383001/2024
+budget-economy-2024-00383002,economy,2024,00383002,מענקי מחקר ופיתוח,704762000,1064980000,1023481456,,96.1,partial,https://next.obudget.org/i/budget/00383002/2024
+budget-economy-2024-00383004,economy,2024,00383004,"מו""פ בין-לאומי",669216000,669216000,670771002,,100.2,partial,https://next.obudget.org/i/budget/00383004/2024
+budget-economy-2024-003840,economy,2024,003840,עידוד המגזר העסקי,2695825000,2988426000,2715040252,,90.9,partial,https://next.obudget.org/i/budget/003840/2024
+budget-economy-2024-00384001,economy,2024,00384001,קידום השקעות ועידוד,1939920000,1992162000,1955758695,,98.2,partial,https://next.obudget.org/i/budget/00384001/2024
+budget-economy-2024-00384004,economy,2024,00384004,קידום הייצוא ועידוד,686180000,752908000,645484007,,85.7,partial,https://next.obudget.org/i/budget/00384004/2024
+budget-economy-2024-00384009,economy,2024,00384009,פעולות כלליות לקידום,69725000,243356000,113797550,,46.8,partial,https://next.obudget.org/i/budget/00384009/2024
+budget-economy-2024-003870,economy,2024,003870,שכר ותפעול המשרד,315023000,404355000,326931848,,80.9,partial,https://next.obudget.org/i/budget/003870/2024
+budget-economy-2024-00387001,economy,2024,00387001,שכר,210425000,222658000,220108383,,98.9,partial,https://next.obudget.org/i/budget/00387001/2024
+budget-economy-2024-00387002,economy,2024,00387002,תפעול,104598000,181697000,106823465,,58.8,partial,https://next.obudget.org/i/budget/00387002/2024
+budget-economy-2024-003890,economy,2024,003890,רשות הרגולציה,16747000,19371000,6688535,,34.5,partial,https://next.obudget.org/i/budget/003890/2024
+budget-economy-2024-00389001,economy,2024,00389001,שכר ופעולות,16747000,19371000,6688535,,34.5,partial,https://next.obudget.org/i/budget/00389001/2024
+budget-economy-2024-003899,economy,2024,003899,חשבון מעבר,0,0,192993,,,partial,https://next.obudget.org/i/budget/003899/2024
+budget-economy-2024-00389999,economy,2024,00389999,חשבון מעבר,0,0,192993,,,partial,https://next.obudget.org/i/budget/00389999/2024
+budget-economy-2025-0038,economy,2025,0038,כלכלה ותעשייה,4590913000,3181652000,2713230682,,85.3,partial,https://next.obudget.org/i/budget/0038/2025
+budget-economy-2025-003830,economy,2025,003830,המדען הראשי,1956660000,1744255000,1577505075,,90.4,partial,https://next.obudget.org/i/budget/003830/2025
+budget-economy-2025-00383001,economy,2025,00383001,הפעלת הרשות לחדשנות,150000000,181956000,145238062,,79.8,partial,https://next.obudget.org/i/budget/00383001/2025
+budget-economy-2025-00383002,economy,2025,00383002,מענקי מחקר ופיתוח,1176517000,983312000,853281982,,86.8,partial,https://next.obudget.org/i/budget/00383002/2025
+budget-economy-2025-00383004,economy,2025,00383004,"מו""פ בין-לאומי",630143000,578987000,578985031,,100,partial,https://next.obudget.org/i/budget/00383004/2025
+budget-economy-2025-003840,economy,2025,003840,עידוד המגזר העסקי,2287857000,986262000,748065453,,75.8,partial,https://next.obudget.org/i/budget/003840/2025
+budget-economy-2025-00384001,economy,2025,00384001,קידום השקעות ועידוד,1860238000,376117000,284825601,,75.7,partial,https://next.obudget.org/i/budget/00384001/2025
+budget-economy-2025-00384004,economy,2025,00384004,קידום הייצוא ועידוד,356240000,417184000,352756588,,84.6,partial,https://next.obudget.org/i/budget/00384004/2025
+budget-economy-2025-00384009,economy,2025,00384009,פעולות כלליות לקידום,71379000,192961000,110483264,,57.3,partial,https://next.obudget.org/i/budget/00384009/2025
+budget-economy-2025-003870,economy,2025,003870,שכר ותפעול המשרד,328738000,431236000,378524341,,87.8,partial,https://next.obudget.org/i/budget/003870/2025
+budget-economy-2025-00387001,economy,2025,00387001,שכר,218206000,226339000,220726744,,97.5,partial,https://next.obudget.org/i/budget/00387001/2025
+budget-economy-2025-00387002,economy,2025,00387002,תפעול,110532000,204897000,157797597,,77,partial,https://next.obudget.org/i/budget/00387002/2025
+budget-economy-2025-003890,economy,2025,003890,רשות הרגולציה,17658000,19899000,9135813,,45.9,partial,https://next.obudget.org/i/budget/003890/2025
+budget-economy-2025-00389001,economy,2025,00389001,שכר ופעולות,17658000,19899000,9135813,,45.9,partial,https://next.obudget.org/i/budget/00389001/2025
+budget-economy-2025-003899,economy,2025,003899,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/003899/2025
+budget-economy-2025-00389999,economy,2025,00389999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00389999/2025
+budget-economy-2026-0038,economy,2026,0038,כלכלה ותעשייה,4475149000,4663407000,,,,estimate,https://next.obudget.org/i/budget/0038/2026
+budget-economy-2026-003830,economy,2026,003830,המדען הראשי,2107756000,2120250000,,,,estimate,https://next.obudget.org/i/budget/003830/2026
+budget-economy-2026-00383001,economy,2026,00383001,הפעלת הרשות לחדשנות,166100000,206286000,,,,estimate,https://next.obudget.org/i/budget/00383001/2026
+budget-economy-2026-00383002,economy,2026,00383002,מענקי מחקר ופיתוח,1334269000,1306577000,,,,estimate,https://next.obudget.org/i/budget/00383002/2026
+budget-economy-2026-00383004,economy,2026,00383004,"מו""פ בין-לאומי",607387000,607387000,,,,estimate,https://next.obudget.org/i/budget/00383004/2026
+budget-economy-2026-003840,economy,2026,003840,עידוד המגזר העסקי,1979708000,2090281000,,,,estimate,https://next.obudget.org/i/budget/003840/2026
+budget-economy-2026-00384001,economy,2026,00384001,קידום השקעות ועידוד,1539969000,1588521000,,,,estimate,https://next.obudget.org/i/budget/00384001/2026
+budget-economy-2026-00384004,economy,2026,00384004,קידום הייצוא ועידוד,366761000,428782000,,,,estimate,https://next.obudget.org/i/budget/00384004/2026
+budget-economy-2026-00384009,economy,2026,00384009,פעולות כלליות לקידום,72978000,72978000,,,,estimate,https://next.obudget.org/i/budget/00384009/2026
+budget-economy-2026-003870,economy,2026,003870,שכר ותפעול המשרד,369044000,427398000,,,,estimate,https://next.obudget.org/i/budget/003870/2026
+budget-economy-2026-00387001,economy,2026,00387001,שכר,223031000,229061000,,,,estimate,https://next.obudget.org/i/budget/00387001/2026
+budget-economy-2026-00387002,economy,2026,00387002,תפעול,146013000,198337000,,,,estimate,https://next.obudget.org/i/budget/00387002/2026
+budget-economy-2026-003890,economy,2026,003890,רשות הרגולציה,18641000,25478000,,,,estimate,https://next.obudget.org/i/budget/003890/2026
+budget-economy-2026-00389001,economy,2026,00389001,שכר ופעולות,18641000,25478000,,,,estimate,https://next.obudget.org/i/budget/00389001/2026
+budget-economy-2026-003899,economy,2026,003899,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/003899/2026
+budget-economy-2026-00389999,economy,2026,00389999,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/00389999/2026
+budget-education-2023-0020,education,2023,0020,משרד החינוך,77776056000,84897801000,81536410981,,96,partial,https://next.obudget.org/i/budget/0020/2023
+budget-education-2023-002060,education,2023,002060,יחידות מטה,1806141000,2448802000,1940086038,,79.2,partial,https://next.obudget.org/i/budget/002060/2023
+budget-education-2023-00206001,education,2023,00206001,פעילויות מטה מרכזיות -,1806141000,2448802000,1940086038,,79.2,partial,https://next.obudget.org/i/budget/00206001/2023
+budget-education-2023-00206002,education,2023,00206002,המשרד להשכלה גבוהה,0,0,0,,,partial,https://next.obudget.org/i/budget/00206002/2023
+budget-education-2023-002061,education,2023,002061,חינוך מיוחד,12593210000,14120186000,14034615443,,99.4,partial,https://next.obudget.org/i/budget/002061/2023
+budget-education-2023-00206101,education,2023,00206101,חינוך מיוחד,12593210000,14120186000,14034615443,,99.4,partial,https://next.obudget.org/i/budget/00206101/2023
+budget-education-2023-002062,education,2023,002062,קדם יסודי,8151298000,9935779000,9784784718,,98.5,partial,https://next.obudget.org/i/budget/002062/2023
+budget-education-2023-00206201,education,2023,00206201,קדם יסודי,7960820000,9610077000,9571051166,,99.6,partial,https://next.obudget.org/i/budget/00206201/2023
+budget-education-2023-00206202,education,2023,00206202,הגיל הרך,190478000,325702000,213733552,,65.6,partial,https://next.obudget.org/i/budget/00206202/2023
+budget-education-2023-002063,education,2023,002063,יסודי וחטיבת ביניים,21556346000,25403842000,25099694283,,98.8,partial,https://next.obudget.org/i/budget/002063/2023
+budget-education-2023-00206301,education,2023,00206301,יסודי וחטיבת ביניים,18104056000,21236394000,21045157141,,99.1,partial,https://next.obudget.org/i/budget/00206301/2023
+budget-education-2023-00206302,education,2023,00206302,החינוך העצמאי,1802063000,2010755000,2034195356,,101.2,partial,https://next.obudget.org/i/budget/00206302/2023
+budget-education-2023-00206303,education,2023,00206303,מעין החינוך התורני,980112000,1245818000,1218660795,,97.8,partial,https://next.obudget.org/i/budget/00206303/2023
+budget-education-2023-00206304,education,2023,00206304,מוכר שאינו רשמי,394012000,580875000,495843727,,85.4,partial,https://next.obudget.org/i/budget/00206304/2023
+budget-education-2023-00206305,education,2023,00206305,מוסדות הפטור,276103000,330000000,305837264,,92.7,partial,https://next.obudget.org/i/budget/00206305/2023
+budget-education-2023-002064,education,2023,002064,חטיבה עליונה,12385822000,12570157000,12547065911,,99.8,partial,https://next.obudget.org/i/budget/002064/2023
+budget-education-2023-00206401,education,2023,00206401,חטיבה עליונה,12385822000,12570157000,12547065911,,99.8,partial,https://next.obudget.org/i/budget/00206401/2023
+budget-education-2023-002065,education,2023,002065,"שירותי עזר, הסעות",4149620000,4315987000,4198713245,,97.3,partial,https://next.obudget.org/i/budget/002065/2023
+budget-education-2023-00206501,education,2023,00206501,"שירותי עזר, הסעות",4149620000,4315987000,4198713245,,97.3,partial,https://next.obudget.org/i/budget/00206501/2023
+budget-education-2023-002066,education,2023,002066,חינוך התיישבותי,4407573000,5045631000,4733348301,,93.8,partial,https://next.obudget.org/i/budget/002066/2023
+budget-education-2023-00206601,education,2023,00206601,המינהל חינוך התיישבותי,4407573000,5045631000,4733348301,,93.8,partial,https://next.obudget.org/i/budget/00206601/2023
+budget-education-2023-002067,education,2023,002067,פעולות משלימות לקידום,4652113000,7236554000,5585381172,,77.2,partial,https://next.obudget.org/i/budget/002067/2023
+budget-education-2023-00206701,education,2023,00206701,פעילויות ופרוייקטים,2675779000,4894908000,3443170258,,70.3,partial,https://next.obudget.org/i/budget/00206701/2023
+budget-education-2023-00206702,education,2023,00206702,הארכת יום הלימודים,1807962000,2079360000,1996750240,,96,partial,https://next.obudget.org/i/budget/00206702/2023
+budget-education-2023-00206703,education,2023,00206703,מינהל החינוך הדתי,168372000,262286000,145460674,,55.5,partial,https://next.obudget.org/i/budget/00206703/2023
+budget-education-2023-002068,education,2023,002068,מינהל עובדי הוראה,1762511000,1858231000,1703723322,,91.7,partial,https://next.obudget.org/i/budget/002068/2023
+budget-education-2023-00206801,education,2023,00206801,תנאי שירות והכשרת,1762511000,1858231000,1703723322,,91.7,partial,https://next.obudget.org/i/budget/00206801/2023
+budget-education-2023-002069,education,2023,002069,תמיכה בנושאי יהדות,1573566000,1962632000,1908998547,,97.3,partial,https://next.obudget.org/i/budget/002069/2023
+budget-education-2023-00206901,education,2023,00206901,תרבות יהודית,19432000,243900000,203230082,,83.3,partial,https://next.obudget.org/i/budget/00206901/2023
+budget-education-2023-00206902,education,2023,00206902,מוסדות תורניים,1554134000,1718732000,1705768465,,99.2,partial,https://next.obudget.org/i/budget/00206902/2023
+budget-education-2023-002070,education,2023,002070,רזרבות,4737856000,0,0,,,partial,https://next.obudget.org/i/budget/002070/2023
+budget-education-2023-00207001,education,2023,00207001,רזרבה להתייקרויות,3686094000,0,0,,,partial,https://next.obudget.org/i/budget/00207001/2023
+budget-education-2023-00207002,education,2023,00207002,רזרבה לעמידה במגבלה,1051762000,0,0,,,partial,https://next.obudget.org/i/budget/00207002/2023
+budget-education-2023-002099,education,2023,002099,חשבון מעבר,0,0,1,,,partial,https://next.obudget.org/i/budget/002099/2023
+budget-education-2023-00209999,education,2023,00209999,חשבון מעבר,0,0,1,,,partial,https://next.obudget.org/i/budget/00209999/2023
+budget-education-2024-0020,education,2024,0020,משרד החינוך,84071785000,91078799000,86646546328,,95.1,partial,https://next.obudget.org/i/budget/0020/2024
+budget-education-2024-002060,education,2024,002060,יחידות מטה,1990024000,2596785000,2205908533,,84.9,partial,https://next.obudget.org/i/budget/002060/2024
+budget-education-2024-00206001,education,2024,00206001,פעילויות מטה מרכזיות -,1990024000,2596785000,2205908533,,84.9,partial,https://next.obudget.org/i/budget/00206001/2024
+budget-education-2024-002061,education,2024,002061,חינוך מיוחד,13882639000,16274848000,16110786045,,99,partial,https://next.obudget.org/i/budget/002061/2024
+budget-education-2024-00206101,education,2024,00206101,חינוך מיוחד,13882639000,16274848000,16110786045,,99,partial,https://next.obudget.org/i/budget/00206101/2024
+budget-education-2024-002062,education,2024,002062,קדם יסודי,8792392000,9777068000,9573142534,,97.9,partial,https://next.obudget.org/i/budget/002062/2024
+budget-education-2024-00206201,education,2024,00206201,קדם יסודי,8608128000,9538512000,9506449250,,99.7,partial,https://next.obudget.org/i/budget/00206201/2024
+budget-education-2024-00206202,education,2024,00206202,הגיל הרך,184264000,238556000,66693284,,28,partial,https://next.obudget.org/i/budget/00206202/2024
+budget-education-2024-002063,education,2024,002063,יסודי וחטיבות ביניים,23174660000,26551260000,25998967980,,97.9,partial,https://next.obudget.org/i/budget/002063/2024
+budget-education-2024-00206301,education,2024,00206301,יסודי וחטיבת ביניים,19658414000,22384941000,22142870988,,98.9,partial,https://next.obudget.org/i/budget/00206301/2024
+budget-education-2024-00206302,education,2024,00206302,החינוך העצמאי,1825885000,2006558000,1974554708,,98.4,partial,https://next.obudget.org/i/budget/00206302/2024
+budget-education-2024-00206303,education,2024,00206303,מעין החינוך התורני,999372000,1141466000,1073730646,,94.1,partial,https://next.obudget.org/i/budget/00206303/2024
+budget-education-2024-00206304,education,2024,00206304,מוכר שאינו רשמי,398035000,595744000,507015164,,85.1,partial,https://next.obudget.org/i/budget/00206304/2024
+budget-education-2024-00206305,education,2024,00206305,מוסדות הפטור,292954000,422551000,300796474,,71.2,partial,https://next.obudget.org/i/budget/00206305/2024
+budget-education-2024-002064,education,2024,002064,חטיבה עליונה,13311138000,13804946000,13785409257,,99.9,partial,https://next.obudget.org/i/budget/002064/2024
+budget-education-2024-00206401,education,2024,00206401,חטיבה עליונה,13311138000,13804946000,13785409257,,99.9,partial,https://next.obudget.org/i/budget/00206401/2024
+budget-education-2024-002065,education,2024,002065,"שירותי עזר, הסעות",4194076000,4581104000,4445351613,,97,partial,https://next.obudget.org/i/budget/002065/2024
+budget-education-2024-00206501,education,2024,00206501,"שירותי עזר, הסעות",4194076000,4581104000,4445351613,,97,partial,https://next.obudget.org/i/budget/00206501/2024
+budget-education-2024-002066,education,2024,002066,חינוך התיישבותי,4648710000,5392363000,4916926890,,91.2,partial,https://next.obudget.org/i/budget/002066/2024
+budget-education-2024-00206601,education,2024,00206601,המינהל חינוך התיישבותי,4648710000,5392363000,4916926890,,91.2,partial,https://next.obudget.org/i/budget/00206601/2024
+budget-education-2024-002067,education,2024,002067,פעולות משלימות לקידום,5622983000,7886323000,5965504842,,75.6,partial,https://next.obudget.org/i/budget/002067/2024
+budget-education-2024-00206701,education,2024,00206701,פעילויות ופרוייקטים,3691164000,5368928000,3745186596,,69.8,partial,https://next.obudget.org/i/budget/00206701/2024
+budget-education-2024-00206702,education,2024,00206702,הארכת יום הלימודים,1789762000,2285045000,2080858672,,91.1,partial,https://next.obudget.org/i/budget/00206702/2024
+budget-education-2024-00206703,education,2024,00206703,מינהל החינוך הדתי,142057000,232350000,139459574,,60,partial,https://next.obudget.org/i/budget/00206703/2024
+budget-education-2024-002068,education,2024,002068,מינהל עובדי הוראה,1743055000,2279033000,2107134440,,92.5,partial,https://next.obudget.org/i/budget/002068/2024
+budget-education-2024-00206801,education,2024,00206801,תנאי שירות והכשרת,1743055000,2279033000,2107134440,,92.5,partial,https://next.obudget.org/i/budget/00206801/2024
+budget-education-2024-002069,education,2024,002069,תמיכה בנושאי יהדות,1863628000,1931030000,1537414194,,79.6,partial,https://next.obudget.org/i/budget/002069/2024
+budget-education-2024-00206901,education,2024,00206901,תרבות יהודית,149995000,212057000,156830553,,74,partial,https://next.obudget.org/i/budget/00206901/2024
+budget-education-2024-00206902,education,2024,00206902,מוסדות תורניים,1713633000,1718973000,1380583641,,80.3,partial,https://next.obudget.org/i/budget/00206902/2024
+budget-education-2024-002070,education,2024,002070,רזרבות,4848480000,4039000,0,,0,partial,https://next.obudget.org/i/budget/002070/2024
+budget-education-2024-00207001,education,2024,00207001,רזרבה להתייקרויות,3673068000,0,0,,,partial,https://next.obudget.org/i/budget/00207001/2024
+budget-education-2024-00207002,education,2024,00207002,רזרבה לעמידה במגבלה,1175412000,4039000,0,,0,partial,https://next.obudget.org/i/budget/00207002/2024
+budget-education-2024-002099,education,2024,002099,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/002099/2024
+budget-education-2024-00209999,education,2024,00209999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00209999/2024
+budget-education-2025-0020,education,2025,0020,משרד החינוך,89799197000,96301140000,90705472024,,94.2,partial,https://next.obudget.org/i/budget/0020/2025
+budget-education-2025-002060,education,2025,002060,יחידות מטה,2016786000,2607912000,2163404313,,83,partial,https://next.obudget.org/i/budget/002060/2025
+budget-education-2025-00206001,education,2025,00206001,פעילויות מטה מרכזיות -,2016786000,2607912000,2163404313,,83,partial,https://next.obudget.org/i/budget/00206001/2025
+budget-education-2025-002061,education,2025,002061,חינוך מיוחד,17546862000,16997821000,16657126599,,98,partial,https://next.obudget.org/i/budget/002061/2025
+budget-education-2025-00206101,education,2025,00206101,חינוך מיוחד,17546862000,16997821000,16657126599,,98,partial,https://next.obudget.org/i/budget/00206101/2025
+budget-education-2025-002062,education,2025,002062,קדם יסודי,9004994000,9561068000,9360871313,,97.9,partial,https://next.obudget.org/i/budget/002062/2025
+budget-education-2025-00206201,education,2025,00206201,קדם יסודי,8944241000,9350854000,9287130053,,99.3,partial,https://next.obudget.org/i/budget/00206201/2025
+budget-education-2025-00206202,education,2025,00206202,הגיל הרך,60753000,210214000,73741260,,35.1,partial,https://next.obudget.org/i/budget/00206202/2025
+budget-education-2025-002063,education,2025,002063,יסודי וחטיבות ביניים,23825041000,28690226000,28075310420,,97.9,partial,https://next.obudget.org/i/budget/002063/2025
+budget-education-2025-00206301,education,2025,00206301,יסודי וחטיבת ביניים,20629610000,24202965000,23696325881,,97.9,partial,https://next.obudget.org/i/budget/00206301/2025
+budget-education-2025-00206302,education,2025,00206302,החינוך העצמאי,1641678000,2126695000,2123826949,,99.9,partial,https://next.obudget.org/i/budget/00206302/2025
+budget-education-2025-00206303,education,2025,00206303,מעין החינוך התורני,863147000,1273455000,1251576995,,98.3,partial,https://next.obudget.org/i/budget/00206303/2025
+budget-education-2025-00206304,education,2025,00206304,מוכר שאינו רשמי,396564000,602737000,577201742,,95.8,partial,https://next.obudget.org/i/budget/00206304/2025
+budget-education-2025-00206305,education,2025,00206305,מוסדות הפטור,294042000,484374000,426378853,,88,partial,https://next.obudget.org/i/budget/00206305/2025
+budget-education-2025-002064,education,2025,002064,חטיבה עליונה,14660340000,15044573000,14616293240,,97.2,partial,https://next.obudget.org/i/budget/002064/2025
+budget-education-2025-00206401,education,2025,00206401,חטיבה עליונה,14660340000,15044573000,14616293240,,97.2,partial,https://next.obudget.org/i/budget/00206401/2025
+budget-education-2025-002065,education,2025,002065,"שירותי עזר, הסעות",4490593000,5112931000,4927386026,,96.4,partial,https://next.obudget.org/i/budget/002065/2025
+budget-education-2025-00206501,education,2025,00206501,"שירותי עזר, הסעות",4490593000,5112931000,4927386026,,96.4,partial,https://next.obudget.org/i/budget/00206501/2025
+budget-education-2025-002066,education,2025,002066,חינוך התיישבותי,5046629000,5670152000,5121160483,,90.3,partial,https://next.obudget.org/i/budget/002066/2025
+budget-education-2025-00206601,education,2025,00206601,המינהל חינוך התיישבותי,5046629000,5670152000,5121160483,,90.3,partial,https://next.obudget.org/i/budget/00206601/2025
+budget-education-2025-002067,education,2025,002067,פעולות משלימות לקידום,5269479000,8561005000,6515582391,,76.1,partial,https://next.obudget.org/i/budget/002067/2025
+budget-education-2025-00206701,education,2025,00206701,פעילויות ופרוייקטים,3332255000,6239381000,4333990953,,69.5,partial,https://next.obudget.org/i/budget/00206701/2025
+budget-education-2025-00206702,education,2025,00206702,הארכת יום הלימודים,1799539000,2116596000,2039272384,,96.3,partial,https://next.obudget.org/i/budget/00206702/2025
+budget-education-2025-00206703,education,2025,00206703,מינהל החינוך הדתי,137685000,205028000,142319054,,69.4,partial,https://next.obudget.org/i/budget/00206703/2025
+budget-education-2025-002068,education,2025,002068,מינהל עובדי הוראה,1850322000,2260507000,2064989175,,91.4,partial,https://next.obudget.org/i/budget/002068/2025
+budget-education-2025-00206801,education,2025,00206801,תנאי שירות והכשרת,1850322000,2260507000,2064989175,,91.4,partial,https://next.obudget.org/i/budget/00206801/2025
+budget-education-2025-002069,education,2025,002069,תמיכה בנושאי יהדות,1178297000,1267061000,1203343063,,95,partial,https://next.obudget.org/i/budget/002069/2025
+budget-education-2025-00206901,education,2025,00206901,תרבות יהודית,75980000,121160000,119382052,,98.5,partial,https://next.obudget.org/i/budget/00206901/2025
+budget-education-2025-00206902,education,2025,00206902,מוסדות תורניים,1102317000,1145901000,1083961011,,94.6,partial,https://next.obudget.org/i/budget/00206902/2025
+budget-education-2025-002070,education,2025,002070,רזרבות,4909854000,527884000,0,,0,partial,https://next.obudget.org/i/budget/002070/2025
+budget-education-2025-00207001,education,2025,00207001,רזרבה להתייקרויות,3922535000,0,0,,,partial,https://next.obudget.org/i/budget/00207001/2025
+budget-education-2025-00207002,education,2025,00207002,רזרבה לעמידה במגבלה,987319000,527884000,0,,0,partial,https://next.obudget.org/i/budget/00207002/2025
+budget-education-2025-002099,education,2025,002099,חשבון מעבר,0,0,5001,,,partial,https://next.obudget.org/i/budget/002099/2025
+budget-education-2025-00209999,education,2025,00209999,חשבון מעבר,0,0,5001,,,partial,https://next.obudget.org/i/budget/00209999/2025
+budget-education-2026-0020,education,2026,0020,משרד החינוך,96893085000,99207378000,,,,estimate,https://next.obudget.org/i/budget/0020/2026
+budget-education-2026-002060,education,2026,002060,יחידות מטה,2078455000,2401258000,,,,estimate,https://next.obudget.org/i/budget/002060/2026
+budget-education-2026-00206001,education,2026,00206001,פעילויות מטה מרכזיות -,2078455000,2401258000,,,,estimate,https://next.obudget.org/i/budget/00206001/2026
+budget-education-2026-002061,education,2026,002061,חינוך מיוחד,19822642000,20084996000,,,,estimate,https://next.obudget.org/i/budget/002061/2026
+budget-education-2026-00206101,education,2026,00206101,חינוך מיוחד,19822642000,20084996000,,,,estimate,https://next.obudget.org/i/budget/00206101/2026
+budget-education-2026-002062,education,2026,002062,קדם יסודי,9289508000,9406625000,,,,estimate,https://next.obudget.org/i/budget/002062/2026
+budget-education-2026-00206201,education,2026,00206201,קדם יסודי,9243282000,9244052000,,,,estimate,https://next.obudget.org/i/budget/00206201/2026
+budget-education-2026-00206202,education,2026,00206202,הגיל הרך,46226000,162573000,,,,estimate,https://next.obudget.org/i/budget/00206202/2026
+budget-education-2026-002063,education,2026,002063,יסודי וחטיבות ביניים,26623758000,27069011000,,,,estimate,https://next.obudget.org/i/budget/002063/2026
+budget-education-2026-00206301,education,2026,00206301,יסודי וחטיבת ביניים,22458269000,22900224000,,,,estimate,https://next.obudget.org/i/budget/00206301/2026
+budget-education-2026-00206302,education,2026,00206302,החינוך העצמאי,2101027000,2101027000,,,,estimate,https://next.obudget.org/i/budget/00206302/2026
+budget-education-2026-00206303,education,2026,00206303,מעין החינוך התורני,1234201000,1234063000,,,,estimate,https://next.obudget.org/i/budget/00206303/2026
+budget-education-2026-00206304,education,2026,00206304,מוכר שאינו רשמי,508843000,512279000,,,,estimate,https://next.obudget.org/i/budget/00206304/2026
+budget-education-2026-00206305,education,2026,00206305,מוסדות הפטור,321418000,321418000,,,,estimate,https://next.obudget.org/i/budget/00206305/2026
+budget-education-2026-002064,education,2026,002064,חטיבה עליונה,15311852000,15620494000,,,,estimate,https://next.obudget.org/i/budget/002064/2026
+budget-education-2026-00206401,education,2026,00206401,חטיבה עליונה,15311852000,15620494000,,,,estimate,https://next.obudget.org/i/budget/00206401/2026
+budget-education-2026-002065,education,2026,002065,"שירותי עזר, הסעות",4955017000,5093229000,,,,estimate,https://next.obudget.org/i/budget/002065/2026
+budget-education-2026-00206501,education,2026,00206501,"שירותי עזר, הסעות",4955017000,5093229000,,,,estimate,https://next.obudget.org/i/budget/00206501/2026
+budget-education-2026-002066,education,2026,002066,חינוך התיישבותי,5534625000,5984894000,,,,estimate,https://next.obudget.org/i/budget/002066/2026
+budget-education-2026-00206601,education,2026,00206601,המינהל חינוך התיישבותי,5534625000,5984894000,,,,estimate,https://next.obudget.org/i/budget/00206601/2026
+budget-education-2026-002067,education,2026,002067,פעולות משלימות לקידום,5938409000,6058034000,,,,estimate,https://next.obudget.org/i/budget/002067/2026
+budget-education-2026-00206701,education,2026,00206701,פעילויות ופרוייקטים,4067951000,4067951000,,,,estimate,https://next.obudget.org/i/budget/00206701/2026
+budget-education-2026-00206702,education,2026,00206702,הארכת יום הלימודים,1740346000,1808391000,,,,estimate,https://next.obudget.org/i/budget/00206702/2026
+budget-education-2026-00206703,education,2026,00206703,מינהל החינוך הדתי,130112000,181692000,,,,estimate,https://next.obudget.org/i/budget/00206703/2026
+budget-education-2026-002068,education,2026,002068,מינהל עובדי הוראה,1837651000,2002636000,,,,estimate,https://next.obudget.org/i/budget/002068/2026
+budget-education-2026-00206801,education,2026,00206801,תנאי שירות והכשרת,1837651000,2002636000,,,,estimate,https://next.obudget.org/i/budget/00206801/2026
+budget-education-2026-002069,education,2026,002069,תמיכה בנושאי יהדות,1366976000,1352009000,,,,estimate,https://next.obudget.org/i/budget/002069/2026
+budget-education-2026-00206901,education,2026,00206901,תרבות יהודית,67552000,67552000,,,,estimate,https://next.obudget.org/i/budget/00206901/2026
+budget-education-2026-00206902,education,2026,00206902,מוסדות תורניים,1299424000,1284457000,,,,estimate,https://next.obudget.org/i/budget/00206902/2026
+budget-education-2026-002070,education,2026,002070,רזרבות,4134192000,4134192000,,,,estimate,https://next.obudget.org/i/budget/002070/2026
+budget-education-2026-00207001,education,2026,00207001,רזרבה להתייקרויות,3795523000,3795523000,,,,estimate,https://next.obudget.org/i/budget/00207001/2026
+budget-education-2026-00207002,education,2026,00207002,רזרבה לעמידה במגבלה,338669000,338669000,,,,estimate,https://next.obudget.org/i/budget/00207002/2026
+budget-education-2026-002099,education,2026,002099,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/002099/2026
+budget-education-2026-00209999,education,2026,00209999,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/00209999/2026
+budget-environment-2023-0026,environment,2023,0026,המשרד להגנת הסביבה,384025000,2322898000,241747992,,10.4,partial,https://next.obudget.org/i/budget/0026/2023
+budget-environment-2023-002611,environment,2023,002611,שכר ותפעול,248092000,275120000,255843172,,93,partial,https://next.obudget.org/i/budget/002611/2023
+budget-environment-2023-00261101,environment,2023,00261101,שכר ותפעול,248092000,275120000,255843172,,93,partial,https://next.obudget.org/i/budget/00261101/2023
+budget-environment-2023-002612,environment,2023,002612,פעולות,111239000,193000000,99629430,,51.6,partial,https://next.obudget.org/i/budget/002612/2023
+budget-environment-2023-00261201,environment,2023,00261201,פעולות יחידות המשרד,111239000,193000000,99629430,,51.6,partial,https://next.obudget.org/i/budget/00261201/2023
+budget-environment-2023-002613,environment,2023,002613,קרנות,0,1838420000,-129360741,,-7,partial,https://next.obudget.org/i/budget/002613/2023
+budget-environment-2023-00261301,environment,2023,00261301,הטמנה - הקרן לשמירת,0,1494554000,-74862519,,-5,partial,https://next.obudget.org/i/budget/00261301/2023
+budget-environment-2023-00261302,environment,2023,00261302,חשבון כללי - הקרן,0,219178000,-9873804,,-4.5,partial,https://next.obudget.org/i/budget/00261302/2023
+budget-environment-2023-00261303,environment,2023,00261303,חשבון פקדון - הקרן,0,27924000,-37879121,,-135.7,partial,https://next.obudget.org/i/budget/00261303/2023
+budget-environment-2023-00261304,environment,2023,00261304,"קרן למניעת זיהום ים,",0,96764000,-6745297,,-7,partial,https://next.obudget.org/i/budget/00261304/2023
+budget-environment-2023-002614,environment,2023,002614,"פרוייקטים מקק""ל",9563000,16358000,15636131,,95.6,partial,https://next.obudget.org/i/budget/002614/2023
+budget-environment-2023-00261401,environment,2023,00261401,פרוייקטים סביבתיים,9563000,16358000,15636131,,95.6,partial,https://next.obudget.org/i/budget/00261401/2023
+budget-environment-2023-002626,environment,2023,002626,רזרבות,15131000,0,0,,,partial,https://next.obudget.org/i/budget/002626/2023
+budget-environment-2023-00262601,environment,2023,00262601,רזרבות,15131000,0,0,,,partial,https://next.obudget.org/i/budget/00262601/2023
+budget-environment-2023-002699,environment,2023,002699,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/002699/2023
+budget-environment-2023-00269999,environment,2023,00269999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00269999/2023
+budget-environment-2024-0026,environment,2024,0026,המשרד להגנת הסביבה,394999000,978559000,261930617,,26.8,partial,https://next.obudget.org/i/budget/0026/2024
+budget-environment-2024-002611,environment,2024,002611,שכר ותפעול,253473000,267815000,258965077,,96.7,partial,https://next.obudget.org/i/budget/002611/2024
+budget-environment-2024-00261101,environment,2024,00261101,שכר ותפעול,253473000,267815000,258965077,,96.7,partial,https://next.obudget.org/i/budget/00261101/2024
+budget-environment-2024-002612,environment,2024,002612,פעולות,128039000,203512000,103524767,,50.9,partial,https://next.obudget.org/i/budget/002612/2024
+budget-environment-2024-00261201,environment,2024,00261201,פעולות יחידות המשרד,128039000,203512000,103524767,,50.9,partial,https://next.obudget.org/i/budget/00261201/2024
+budget-environment-2024-002613,environment,2024,002613,קרנות,0,506596000,-103981622,,-20.5,partial,https://next.obudget.org/i/budget/002613/2024
+budget-environment-2024-00261301,environment,2024,00261301,הטמנה - הקרן לשמירת,0,108232000,-114035066,,-105.4,partial,https://next.obudget.org/i/budget/00261301/2024
+budget-environment-2024-00261302,environment,2024,00261302,חשבון כללי - הקרן,0,229052000,11622262,,5.1,partial,https://next.obudget.org/i/budget/00261302/2024
+budget-environment-2024-00261303,environment,2024,00261303,חשבון פקדון - הקרן,0,65803000,49708,,0.1,partial,https://next.obudget.org/i/budget/00261303/2024
+budget-environment-2024-00261304,environment,2024,00261304,"קרן למניעת זיהום ים,",0,103509000,-1618526,,-1.6,partial,https://next.obudget.org/i/budget/00261304/2024
+budget-environment-2024-002614,environment,2024,002614,"פרוייקטים מקק""ל",0,636000,3422395,,538.1,partial,https://next.obudget.org/i/budget/002614/2024
+budget-environment-2024-00261401,environment,2024,00261401,פרוייקטים סביבתיים,0,636000,3422395,,538.1,partial,https://next.obudget.org/i/budget/00261401/2024
+budget-environment-2024-002626,environment,2024,002626,רזרבות,13487000,0,0,,,partial,https://next.obudget.org/i/budget/002626/2024
+budget-environment-2024-00262601,environment,2024,00262601,רזרבות,13487000,0,0,,,partial,https://next.obudget.org/i/budget/00262601/2024
+budget-environment-2024-002699,environment,2024,002699,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/002699/2024
+budget-environment-2024-00269999,environment,2024,00269999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00269999/2024
+budget-environment-2025-0026,environment,2025,0026,המשרד להגנת הסביבה,367416000,1194811000,506818151,,42.4,partial,https://next.obudget.org/i/budget/0026/2025
+budget-environment-2025-002611,environment,2025,002611,שכר ותפעול,256378000,317964000,281609753,,88.6,partial,https://next.obudget.org/i/budget/002611/2025
+budget-environment-2025-00261101,environment,2025,00261101,שכר ותפעול,256378000,317964000,281609753,,88.6,partial,https://next.obudget.org/i/budget/00261101/2025
+budget-environment-2025-002612,environment,2025,002612,פעולות,97446000,186241000,135276234,,72.6,partial,https://next.obudget.org/i/budget/002612/2025
+budget-environment-2025-00261201,environment,2025,00261201,פעולות יחידות המשרד,97446000,186241000,135276234,,72.6,partial,https://next.obudget.org/i/budget/00261201/2025
+budget-environment-2025-002613,environment,2025,002613,קרנות,0,690606000,78237767,,11.3,partial,https://next.obudget.org/i/budget/002613/2025
+budget-environment-2025-00261301,environment,2025,00261301,הטמנה - הקרן לשמירת,0,302267000,66395020,,22,partial,https://next.obudget.org/i/budget/00261301/2025
+budget-environment-2025-00261302,environment,2025,00261302,חשבון כללי - הקרן,0,217429000,3283996,,1.5,partial,https://next.obudget.org/i/budget/00261302/2025
+budget-environment-2025-00261303,environment,2025,00261303,חשבון פקדון - הקרן,0,65754000,-21349,,0,partial,https://next.obudget.org/i/budget/00261303/2025
+budget-environment-2025-00261304,environment,2025,00261304,"קרן למניעת זיהום ים,",0,105156000,8580100,,8.2,partial,https://next.obudget.org/i/budget/00261304/2025
+budget-environment-2025-002614,environment,2025,002614,"פרוייקטים מקק""ל",0,0,11694397,,,partial,https://next.obudget.org/i/budget/002614/2025
+budget-environment-2025-00261401,environment,2025,00261401,פרוייקטים סביבתיים,0,0,11694397,,,partial,https://next.obudget.org/i/budget/00261401/2025
+budget-environment-2025-002626,environment,2025,002626,רזרבות,13592000,0,0,,,partial,https://next.obudget.org/i/budget/002626/2025
+budget-environment-2025-00262601,environment,2025,00262601,רזרבות,13592000,0,0,,,partial,https://next.obudget.org/i/budget/00262601/2025
+budget-environment-2025-002699,environment,2025,002699,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/002699/2025
+budget-environment-2025-00269999,environment,2025,00269999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00269999/2025
+budget-environment-2026-0026,environment,2026,0026,המשרד להגנת הסביבה,534664000,586535000,,,,estimate,https://next.obudget.org/i/budget/0026/2026
+budget-environment-2026-002611,environment,2026,002611,שכר ותפעול,263640000,323332000,,,,estimate,https://next.obudget.org/i/budget/002611/2026
+budget-environment-2026-00261101,environment,2026,00261101,שכר ותפעול,263640000,323332000,,,,estimate,https://next.obudget.org/i/budget/00261101/2026
+budget-environment-2026-002612,environment,2026,002612,פעולות,255637000,255637000,,,,estimate,https://next.obudget.org/i/budget/002612/2026
+budget-environment-2026-00261201,environment,2026,00261201,פעולות יחידות המשרד,255637000,255637000,,,,estimate,https://next.obudget.org/i/budget/00261201/2026
+budget-environment-2026-002613,environment,2026,002613,קרנות,0,0,,,,estimate,https://next.obudget.org/i/budget/002613/2026
+budget-environment-2026-00261301,environment,2026,00261301,הטמנה - הקרן לשמירת,0,0,,,,estimate,https://next.obudget.org/i/budget/00261301/2026
+budget-environment-2026-00261302,environment,2026,00261302,חשבון כללי - הקרן,0,0,,,,estimate,https://next.obudget.org/i/budget/00261302/2026
+budget-environment-2026-00261303,environment,2026,00261303,חשבון פקדון - הקרן,0,0,,,,estimate,https://next.obudget.org/i/budget/00261303/2026
+budget-environment-2026-00261304,environment,2026,00261304,"קרן למניעת זיהום ים,",0,0,,,,estimate,https://next.obudget.org/i/budget/00261304/2026
+budget-environment-2026-002614,environment,2026,002614,"פרוייקטים מקק""ל",0,0,,,,estimate,https://next.obudget.org/i/budget/002614/2026
+budget-environment-2026-00261401,environment,2026,00261401,פרוייקטים סביבתיים,0,0,,,,estimate,https://next.obudget.org/i/budget/00261401/2026
+budget-environment-2026-002626,environment,2026,002626,רזרבות,15387000,7566000,,,,estimate,https://next.obudget.org/i/budget/002626/2026
+budget-environment-2026-00262601,environment,2026,00262601,רזרבות,15387000,7566000,,,,estimate,https://next.obudget.org/i/budget/00262601/2026
+budget-environment-2026-002699,environment,2026,002699,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/002699/2026
+budget-environment-2026-00269999,environment,2026,00269999,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/00269999/2026
+budget-health-2023-0024,health,2023,0024,משרד הבריאות,44624255000,53625858000,50307642571,,93.8,partial,https://next.obudget.org/i/budget/0024/2023
+budget-health-2023-002402,health,2023,002402,משרד ראשי,1476153000,4981625000,2540622531,,51,partial,https://next.obudget.org/i/budget/002402/2023
+budget-health-2023-00240201,health,2023,00240201,שכר מטה,484767000,426995000,430404341,,100.8,partial,https://next.obudget.org/i/budget/00240201/2023
+budget-health-2023-00240205,health,2023,00240205,תפעול מטה,950439000,4505900000,2067651819,,45.9,partial,https://next.obudget.org/i/budget/00240205/2023
+budget-health-2023-00240218,health,2023,00240218,מכונים,40947000,48730000,42566371,,87.4,partial,https://next.obudget.org/i/budget/00240218/2023
+budget-health-2023-00240262,health,2023,00240262,המכון הרפואי לבטיחות,0,0,0,,,partial,https://next.obudget.org/i/budget/00240262/2023
+budget-health-2023-00240270,health,2023,00240270,מכון לרעלים תל השומר,0,0,0,,,partial,https://next.obudget.org/i/budget/00240270/2023
+budget-health-2023-002404,health,2023,002404,הכשרה והדרכה,0,0,0,,,partial,https://next.obudget.org/i/budget/002404/2023
+budget-health-2023-00240409,health,2023,00240409,הכשרת רופאים,0,0,0,,,partial,https://next.obudget.org/i/budget/00240409/2023
+budget-health-2023-00240420,health,2023,00240420,הכשרת אחיות,0,0,0,,,partial,https://next.obudget.org/i/budget/00240420/2023
+budget-health-2023-00240480,health,2023,00240480,הכשרת מקצועות רפואיים,0,0,0,,,partial,https://next.obudget.org/i/budget/00240480/2023
+budget-health-2023-002407,health,2023,002407,רכש שירותי בריאות,6160022000,6071517000,5500149793,,90.6,partial,https://next.obudget.org/i/budget/002407/2023
+budget-health-2023-00240701,health,2023,00240701,הכשרות צוותים רפואיים,406171000,469121000,402418614,,85.8,partial,https://next.obudget.org/i/budget/00240701/2023
+budget-health-2023-00240703,health,2023,00240703,רפואה מונעת,0,0,0,,,partial,https://next.obudget.org/i/budget/00240703/2023
+budget-health-2023-00240709,health,2023,00240709,פעולות מרכזיות,1032145000,684627000,484070602,,70.7,partial,https://next.obudget.org/i/budget/00240709/2023
+budget-health-2023-00240710,health,2023,00240710,גריאטריה,1785343000,1814196000,1767266943,,97.4,partial,https://next.obudget.org/i/budget/00240710/2023
+budget-health-2023-00240714,health,2023,00240714,בריאות הנפש,2936363000,3103573000,2846393634,,91.7,partial,https://next.obudget.org/i/budget/00240714/2023
+budget-health-2023-002416,health,2023,002416,שירותי בריאות הציבור,1571947000,1804041000,1566937810,,86.9,partial,https://next.obudget.org/i/budget/002416/2023
+budget-health-2023-00241603,health,2023,00241603,רפואה מונעת,840682000,1039669000,845433408,,81.3,partial,https://next.obudget.org/i/budget/00241603/2023
+budget-health-2023-00241605,health,2023,00241605,שיקום שכונות,0,0,0,,,partial,https://next.obudget.org/i/budget/00241605/2023
+budget-health-2023-00241606,health,2023,00241606,פעולות מרכזיות,0,0,0,,,partial,https://next.obudget.org/i/budget/00241606/2023
+budget-health-2023-00241689,health,2023,00241689,מעבדות בריאות הציבור,47989000,47564000,39025127,,82,partial,https://next.obudget.org/i/budget/00241689/2023
+budget-health-2023-00241690,health,2023,00241690,לשכות הבריאות,683276000,716808000,682479275,,95.2,partial,https://next.obudget.org/i/budget/00241690/2023
+budget-health-2023-002420,health,2023,002420,קופות חולים ובתי חולים,35054621000,40380717000,40317999803,,99.8,partial,https://next.obudget.org/i/budget/002420/2023
+budget-health-2023-00242003,health,2023,00242003,קופות ובתי חולים –,35054621000,40380717000,40317999803,,99.8,partial,https://next.obudget.org/i/budget/00242003/2023
+budget-health-2023-00242004,health,2023,00242004,רזרבה,0,0,0,,,partial,https://next.obudget.org/i/budget/00242004/2023
+budget-health-2023-002422,health,2023,002422,כספי עזבונות,0,0,-1551232,,,partial,https://next.obudget.org/i/budget/002422/2023
+budget-health-2023-00242210,health,2023,00242210,כספי עזבונות,0,0,-1551232,,,partial,https://next.obudget.org/i/budget/00242210/2023
+budget-health-2023-002440,health,2023,002440,מרכזים לבריאות הנפש,24515000,28153000,24888185,,88.4,partial,https://next.obudget.org/i/budget/002440/2023
+budget-health-2023-00244009,health,2023,00244009,מרכז קהילתי יפו,24515000,28153000,24888185,,88.4,partial,https://next.obudget.org/i/budget/00244009/2023
+budget-health-2023-002450,health,2023,002450,מרכזים רפואיים,336997000,359805000,358595681,,99.7,partial,https://next.obudget.org/i/budget/002450/2023
+budget-health-2023-00245001,health,2023,00245001,מרכז גריאטרי נתניה,91828000,76196000,75449741,,99,partial,https://next.obudget.org/i/budget/00245001/2023
+budget-health-2023-00245002,health,2023,00245002,מרכז גריאטרי פלימן,44348000,42824000,42342347,,98.9,partial,https://next.obudget.org/i/budget/00245002/2023
+budget-health-2023-00245003,health,2023,00245003,מרכז גריאטרי פרדס חנה,92846000,86082000,86650503,,100.7,partial,https://next.obudget.org/i/budget/00245003/2023
+budget-health-2023-00245004,health,2023,00245004,מרכז גריאטרי שמואל,69219000,106758000,106682047,,99.9,partial,https://next.obudget.org/i/budget/00245004/2023
+budget-health-2023-00245005,health,2023,00245005,מרכז גריאטרי ראשון,38756000,47945000,47471043,,99,partial,https://next.obudget.org/i/budget/00245005/2023
+budget-health-2023-002499,health,2023,002499,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/002499/2023
+budget-health-2023-00249999,health,2023,00249999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00249999/2023
+budget-health-2024-0024,health,2024,0024,משרד הבריאות,54346794000,57520864000,53774782102,,93.5,partial,https://next.obudget.org/i/budget/0024/2024
+budget-health-2024-002402,health,2024,002402,משרד ראשי,1498370000,3195116000,1789139820,,56,partial,https://next.obudget.org/i/budget/002402/2024
+budget-health-2024-00240201,health,2024,00240201,שכר מטה,469483000,450602000,453419037,,100.6,partial,https://next.obudget.org/i/budget/00240201/2024
+budget-health-2024-00240205,health,2024,00240205,תפעול מטה,982414000,2695692000,1294570073,,48,partial,https://next.obudget.org/i/budget/00240205/2024
+budget-health-2024-00240218,health,2024,00240218,מכונים,46473000,48822000,41150710,,84.3,partial,https://next.obudget.org/i/budget/00240218/2024
+budget-health-2024-002407,health,2024,002407,רכש שירותי בריאות,6779623000,6960795000,6141574771,,88.2,partial,https://next.obudget.org/i/budget/002407/2024
+budget-health-2024-00240701,health,2024,00240701,הכשרות צוותים רפואיים,500399000,613400000,538956903,,87.9,partial,https://next.obudget.org/i/budget/00240701/2024
+budget-health-2024-00240709,health,2024,00240709,פעולות מרכזיות,804345000,754467000,519368988,,68.8,partial,https://next.obudget.org/i/budget/00240709/2024
+budget-health-2024-00240710,health,2024,00240710,גריאטריה,1836743000,1898144000,1869031303,,98.5,partial,https://next.obudget.org/i/budget/00240710/2024
+budget-health-2024-00240714,health,2024,00240714,בריאות הנפש,3638136000,3694784000,3214217577,,87,partial,https://next.obudget.org/i/budget/00240714/2024
+budget-health-2024-002416,health,2024,002416,שירותי בריאות הציבור,1624264000,1779730000,1477933977,,83,partial,https://next.obudget.org/i/budget/002416/2024
+budget-health-2024-00241603,health,2024,00241603,רפואה מונעת,861443000,1030134000,748849027,,72.7,partial,https://next.obudget.org/i/budget/00241603/2024
+budget-health-2024-00241689,health,2024,00241689,מעבדות בריאות הציבור,37614000,48585000,42589949,,87.7,partial,https://next.obudget.org/i/budget/00241689/2024
+budget-health-2024-00241690,health,2024,00241690,לשכות הבריאות,725207000,701011000,686495001,,97.9,partial,https://next.obudget.org/i/budget/00241690/2024
+budget-health-2024-002420,health,2024,002420,קופות חולים ובתי חולים,44101175000,45189999000,43979972434,,97.3,partial,https://next.obudget.org/i/budget/002420/2024
+budget-health-2024-00242003,health,2024,00242003,קופות ובתי חולים –,44101175000,45189999000,43979972434,,97.3,partial,https://next.obudget.org/i/budget/00242003/2024
+budget-health-2024-00242004,health,2024,00242004,רזרבה,0,0,0,,,partial,https://next.obudget.org/i/budget/00242004/2024
+budget-health-2024-002422,health,2024,002422,כספי עזבונות,0,2262000,-1754950,,-77.6,partial,https://next.obudget.org/i/budget/002422/2024
+budget-health-2024-00242210,health,2024,00242210,כספי עזבונות,0,2262000,-1754950,,-77.6,partial,https://next.obudget.org/i/budget/00242210/2024
+budget-health-2024-002440,health,2024,002440,מרכזים לבריאות הנפש,21215000,31618000,25918616,,82,partial,https://next.obudget.org/i/budget/002440/2024
+budget-health-2024-00244009,health,2024,00244009,מרכז קהילתי יפו,21215000,31618000,25918616,,82,partial,https://next.obudget.org/i/budget/00244009/2024
+budget-health-2024-002450,health,2024,002450,מרכזים רפואיים,322147000,361344000,362003523,,100.2,partial,https://next.obudget.org/i/budget/002450/2024
+budget-health-2024-00245001,health,2024,00245001,מרכז גריאטרי נתניה,88528000,73327000,73248328,,99.9,partial,https://next.obudget.org/i/budget/00245001/2024
+budget-health-2024-00245002,health,2024,00245002,מרכז גריאטרי פלימן,42098000,54682000,54202132,,99.1,partial,https://next.obudget.org/i/budget/00245002/2024
+budget-health-2024-00245003,health,2024,00245003,מרכז גריאטרי פרדס חנה,89546000,91876000,92585231,,100.8,partial,https://next.obudget.org/i/budget/00245003/2024
+budget-health-2024-00245004,health,2024,00245004,מרכז גריאטרי שמואל,65919000,98447000,98920953,,100.5,partial,https://next.obudget.org/i/budget/00245004/2024
+budget-health-2024-00245005,health,2024,00245005,מרכז גריאטרי ראשון,36056000,43012000,43046879,,100.1,partial,https://next.obudget.org/i/budget/00245005/2024
+budget-health-2024-002499,health,2024,002499,חשבון מעבר,0,0,-6089,,,partial,https://next.obudget.org/i/budget/002499/2024
+budget-health-2024-00249999,health,2024,00249999,חשבון מעבר,0,0,-6089,,,partial,https://next.obudget.org/i/budget/00249999/2024
+budget-health-2025-0024,health,2025,0024,משרד הבריאות,59148419000,61389153000,58810581973,,95.8,partial,https://next.obudget.org/i/budget/0024/2025
+budget-health-2025-002402,health,2025,002402,משרד ראשי,1621393000,1993702000,1506493831,,75.6,partial,https://next.obudget.org/i/budget/002402/2025
+budget-health-2025-00240201,health,2025,00240201,שכר מטה,609512000,491360000,493346945,,100.4,partial,https://next.obudget.org/i/budget/00240201/2025
+budget-health-2025-00240205,health,2025,00240205,תפעול מטה,962022000,1450796000,970080956,,66.9,partial,https://next.obudget.org/i/budget/00240205/2025
+budget-health-2025-00240218,health,2025,00240218,מכונים,49859000,51546000,43065930,,83.5,partial,https://next.obudget.org/i/budget/00240218/2025
+budget-health-2025-002407,health,2025,002407,רכש שירותי בריאות,6829669000,7492753000,6694107796,,89.3,partial,https://next.obudget.org/i/budget/002407/2025
+budget-health-2025-00240701,health,2025,00240701,הכשרות צוותים רפואיים,484025000,669824000,534923177,,79.9,partial,https://next.obudget.org/i/budget/00240701/2025
+budget-health-2025-00240709,health,2025,00240709,פעולות מרכזיות,568187000,717563000,577870245,,80.5,partial,https://next.obudget.org/i/budget/00240709/2025
+budget-health-2025-00240710,health,2025,00240710,גריאטריה,1948893000,2231568000,2199974851,,98.6,partial,https://next.obudget.org/i/budget/00240710/2025
+budget-health-2025-00240714,health,2025,00240714,בריאות הנפש,3828564000,3873798000,3381339523,,87.3,partial,https://next.obudget.org/i/budget/00240714/2025
+budget-health-2025-002416,health,2025,002416,שירותי בריאות הציבור,1747255000,2159067000,1703876051,,78.9,partial,https://next.obudget.org/i/budget/002416/2025
+budget-health-2025-00241603,health,2025,00241603,רפואה מונעת,933893000,1344199000,932008680,,69.3,partial,https://next.obudget.org/i/budget/00241603/2025
+budget-health-2025-00241689,health,2025,00241689,מעבדות בריאות הציבור,39913000,55097000,44280142,,80.4,partial,https://next.obudget.org/i/budget/00241689/2025
+budget-health-2025-00241690,health,2025,00241690,לשכות הבריאות,773449000,759771000,727587229,,95.8,partial,https://next.obudget.org/i/budget/00241690/2025
+budget-health-2025-002420,health,2025,002420,קופות חולים ובתי חולים,48591091000,49298311000,48481899051,,98.3,partial,https://next.obudget.org/i/budget/002420/2025
+budget-health-2025-00242003,health,2025,00242003,קופות ובתי חולים –,48591091000,49298311000,48481899051,,98.3,partial,https://next.obudget.org/i/budget/00242003/2025
+budget-health-2025-002422,health,2025,002422,כספי עזבונות,0,3391000,3442157,,101.5,partial,https://next.obudget.org/i/budget/002422/2025
+budget-health-2025-00242210,health,2025,00242210,כספי עזבונות,0,3391000,3442157,,101.5,partial,https://next.obudget.org/i/budget/00242210/2025
+budget-health-2025-002440,health,2025,002440,מרכזים לבריאות הנפש,35414000,51233000,34729296,,67.8,partial,https://next.obudget.org/i/budget/002440/2025
+budget-health-2025-00244009,health,2025,00244009,מרכז קהילתי יפו,35414000,51233000,34729296,,67.8,partial,https://next.obudget.org/i/budget/00244009/2025
+budget-health-2025-002450,health,2025,002450,מרכזים רפואיים,323597000,390696000,386006407,,98.8,partial,https://next.obudget.org/i/budget/002450/2025
+budget-health-2025-00245001,health,2025,00245001,מרכז גריאטרי נתניה,88978000,82602000,80870673,,97.9,partial,https://next.obudget.org/i/budget/00245001/2025
+budget-health-2025-00245002,health,2025,00245002,מרכז גריאטרי פלימן,42098000,57569000,56496362,,98.1,partial,https://next.obudget.org/i/budget/00245002/2025
+budget-health-2025-00245003,health,2025,00245003,מרכז גריאטרי פרדס חנה,90146000,93488000,95756950,,102.4,partial,https://next.obudget.org/i/budget/00245003/2025
+budget-health-2025-00245004,health,2025,00245004,מרכז גריאטרי שמואל,66319000,101237000,103575511,,102.3,partial,https://next.obudget.org/i/budget/00245004/2025
+budget-health-2025-00245005,health,2025,00245005,מרכז גריאטרי ראשון,36056000,55800000,49306911,,88.4,partial,https://next.obudget.org/i/budget/00245005/2025
+budget-health-2025-002499,health,2025,002499,חשבון מעבר,0,0,27384,,,partial,https://next.obudget.org/i/budget/002499/2025
+budget-health-2025-00249999,health,2025,00249999,חשבון מעבר,0,0,27384,,,partial,https://next.obudget.org/i/budget/00249999/2025
+budget-health-2026-0024,health,2026,0024,משרד הבריאות,63344897000,63741610000,,,,estimate,https://next.obudget.org/i/budget/0024/2026
+budget-health-2026-002402,health,2026,002402,משרד ראשי,1443558000,2046845000,,,,estimate,https://next.obudget.org/i/budget/002402/2026
+budget-health-2026-00240201,health,2026,00240201,שכר מטה,634699000,634486000,,,,estimate,https://next.obudget.org/i/budget/00240201/2026
+budget-health-2026-00240205,health,2026,00240205,תפעול מטה,757556000,1356474000,,,,estimate,https://next.obudget.org/i/budget/00240205/2026
+budget-health-2026-00240218,health,2026,00240218,מכונים,51303000,55885000,,,,estimate,https://next.obudget.org/i/budget/00240218/2026
+budget-health-2026-002407,health,2026,002407,רכש שירותי בריאות,7017609000,7653168000,,,,estimate,https://next.obudget.org/i/budget/002407/2026
+budget-health-2026-00240701,health,2026,00240701,הכשרות צוותים רפואיים,710943000,782150000,,,,estimate,https://next.obudget.org/i/budget/00240701/2026
+budget-health-2026-00240709,health,2026,00240709,פעולות מרכזיות,444762000,444762000,,,,estimate,https://next.obudget.org/i/budget/00240709/2026
+budget-health-2026-00240710,health,2026,00240710,גריאטריה,1706253000,1706253000,,,,estimate,https://next.obudget.org/i/budget/00240710/2026
+budget-health-2026-00240714,health,2026,00240714,בריאות הנפש,4155651000,4720003000,,,,estimate,https://next.obudget.org/i/budget/00240714/2026
+budget-health-2026-002416,health,2026,002416,שירותי בריאות הציבור,1971862000,1979267000,,,,estimate,https://next.obudget.org/i/budget/002416/2026
+budget-health-2026-00241603,health,2026,00241603,רפואה מונעת,1125307000,1125307000,,,,estimate,https://next.obudget.org/i/budget/00241603/2026
+budget-health-2026-00241689,health,2026,00241689,מעבדות בריאות הציבור,47065000,54470000,,,,estimate,https://next.obudget.org/i/budget/00241689/2026
+budget-health-2026-00241690,health,2026,00241690,לשכות הבריאות,799490000,799490000,,,,estimate,https://next.obudget.org/i/budget/00241690/2026
+budget-health-2026-002420,health,2026,002420,קופות חולים ובתי חולים,52875987000,52021472000,,,,estimate,https://next.obudget.org/i/budget/002420/2026
+budget-health-2026-00242003,health,2026,00242003,קופות ובתי חולים –,52875987000,52021472000,,,,estimate,https://next.obudget.org/i/budget/00242003/2026
+budget-health-2026-002422,health,2026,002422,כספי עזבונות,0,0,,,,estimate,https://next.obudget.org/i/budget/002422/2026
+budget-health-2026-00242210,health,2026,00242210,כספי עזבונות,0,0,,,,estimate,https://next.obudget.org/i/budget/00242210/2026
+budget-health-2026-002440,health,2026,002440,מרכזים לבריאות הנפש,35881000,40858000,,,,estimate,https://next.obudget.org/i/budget/002440/2026
+budget-health-2026-00244009,health,2026,00244009,מרכז קהילתי יפו,35881000,40858000,,,,estimate,https://next.obudget.org/i/budget/00244009/2026
+budget-health-2026-002450,health,2026,002450,מרכזים רפואיים,0,0,,,,estimate,https://next.obudget.org/i/budget/002450/2026
+budget-health-2026-00245001,health,2026,00245001,מרכז גריאטרי נתניה,0,0,,,,estimate,https://next.obudget.org/i/budget/00245001/2026
+budget-health-2026-00245002,health,2026,00245002,מרכז גריאטרי פלימן,0,0,,,,estimate,https://next.obudget.org/i/budget/00245002/2026
+budget-health-2026-00245003,health,2026,00245003,מרכז גריאטרי פרדס חנה,0,0,,,,estimate,https://next.obudget.org/i/budget/00245003/2026
+budget-health-2026-00245004,health,2026,00245004,מרכז גריאטרי שמואל,0,0,,,,estimate,https://next.obudget.org/i/budget/00245004/2026
+budget-health-2026-00245005,health,2026,00245005,מרכז גריאטרי ראשון,0,0,,,,estimate,https://next.obudget.org/i/budget/00245005/2026
+budget-health-2026-002499,health,2026,002499,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/002499/2026
+budget-health-2026-00249999,health,2026,00249999,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/00249999/2026
+budget-transport-2023-0040,transport,2023,0040,משרד התחבורה,540279000,761947000,535612591,,70.3,partial,https://next.obudget.org/i/budget/0040/2023
+budget-transport-2023-004050,transport,2023,004050,משרד ראשי,358112000,493713000,361826658,,73.3,partial,https://next.obudget.org/i/budget/004050/2023
+budget-transport-2023-00405001,transport,2023,00405001,משרד התחבורה - ראשי,327610000,454435000,328071431,,72.2,partial,https://next.obudget.org/i/budget/00405001/2023
+budget-transport-2023-00405002,transport,2023,00405002,השירות המטאורולוגי,30502000,39278000,33755227,,85.9,partial,https://next.obudget.org/i/budget/00405002/2023
+budget-transport-2023-004051,transport,2023,004051,תחבורה ימית,23161000,59439000,23580728,,39.7,partial,https://next.obudget.org/i/budget/004051/2023
+budget-transport-2023-00405101,transport,2023,00405101,רשות הספנות והנמלים,23161000,59439000,23580728,,39.7,partial,https://next.obudget.org/i/budget/00405101/2023
+budget-transport-2023-004052,transport,2023,004052,תעופה,38610000,52767000,31642065,,60,partial,https://next.obudget.org/i/budget/004052/2023
+budget-transport-2023-00405201,transport,2023,00405201,רשות התעופה האזרחית,38610000,52767000,31642065,,60,partial,https://next.obudget.org/i/budget/00405201/2023
+budget-transport-2023-004053,transport,2023,004053,בטיחות בדרכים,70000000,126457000,91196269,,72.1,partial,https://next.obudget.org/i/budget/004053/2023
+budget-transport-2023-00405301,transport,2023,00405301,הרשות לבטיחות בדרכים,70000000,126457000,91196269,,72.1,partial,https://next.obudget.org/i/budget/00405301/2023
+budget-transport-2023-004054,transport,2023,004054,תחבורה ציבורית,25320000,27914000,25765116,,92.3,partial,https://next.obudget.org/i/budget/004054/2023
+budget-transport-2023-00405401,transport,2023,00405401,רשות תחבורה ציבורית,25320000,27914000,25765116,,92.3,partial,https://next.obudget.org/i/budget/00405401/2023
+budget-transport-2023-004055,transport,2023,004055,רשות המטרו,4582000,1657000,1601755,,96.7,partial,https://next.obudget.org/i/budget/004055/2023
+budget-transport-2023-00405501,transport,2023,00405501,רשות המטרו,4582000,1657000,1601755,,96.7,partial,https://next.obudget.org/i/budget/00405501/2023
+budget-transport-2023-004059,transport,2023,004059,רזרבה,20494000,0,0,,,partial,https://next.obudget.org/i/budget/004059/2023
+budget-transport-2023-00405901,transport,2023,00405901,רזרבה,20494000,0,0,,,partial,https://next.obudget.org/i/budget/00405901/2023
+budget-transport-2023-004099,transport,2023,004099,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/004099/2023
+budget-transport-2023-00409999,transport,2023,00409999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00409999/2023
+budget-transport-2024-0040,transport,2024,0040,משרד התחבורה,515506000,739860000,524272201,,70.9,partial,https://next.obudget.org/i/budget/0040/2024
+budget-transport-2024-004050,transport,2024,004050,משרד ראשי,341076000,480835000,360816631,,75,partial,https://next.obudget.org/i/budget/004050/2024
+budget-transport-2024-00405001,transport,2024,00405001,משרד התחבורה - ראשי,311870000,442015000,329883263,,74.6,partial,https://next.obudget.org/i/budget/00405001/2024
+budget-transport-2024-00405002,transport,2024,00405002,השירות המטאורולוגי,29206000,38820000,30933368,,79.7,partial,https://next.obudget.org/i/budget/00405002/2024
+budget-transport-2024-004051,transport,2024,004051,תחבורה ימית,23048000,53957000,20918620,,38.8,partial,https://next.obudget.org/i/budget/004051/2024
+budget-transport-2024-00405101,transport,2024,00405101,רשות הספנות והנמלים,23048000,53957000,20918620,,38.8,partial,https://next.obudget.org/i/budget/00405101/2024
+budget-transport-2024-004052,transport,2024,004052,תעופה,37350000,65019000,39105723,,60.1,partial,https://next.obudget.org/i/budget/004052/2024
+budget-transport-2024-00405201,transport,2024,00405201,רשות התעופה האזרחית,37350000,65019000,39105723,,60.1,partial,https://next.obudget.org/i/budget/00405201/2024
+budget-transport-2024-004053,transport,2024,004053,בטיחות בדרכים,62774000,109863000,73704405,,67.1,partial,https://next.obudget.org/i/budget/004053/2024
+budget-transport-2024-00405301,transport,2024,00405301,הרשות לבטיחות בדרכים,62774000,109863000,73704405,,67.1,partial,https://next.obudget.org/i/budget/00405301/2024
+budget-transport-2024-004054,transport,2024,004054,תחבורה ציבורית,27432000,28664000,28216103,,98.4,partial,https://next.obudget.org/i/budget/004054/2024
+budget-transport-2024-00405401,transport,2024,00405401,רשות תחבורה ציבורית,27432000,28664000,28216103,,98.4,partial,https://next.obudget.org/i/budget/00405401/2024
+budget-transport-2024-004055,transport,2024,004055,רשות המטרו,4423000,1518000,1510718,,99.5,partial,https://next.obudget.org/i/budget/004055/2024
+budget-transport-2024-00405501,transport,2024,00405501,רשות המטרו,4423000,1518000,1510718,,99.5,partial,https://next.obudget.org/i/budget/00405501/2024
+budget-transport-2024-004059,transport,2024,004059,רזרבה,19403000,4000,0,,0,partial,https://next.obudget.org/i/budget/004059/2024
+budget-transport-2024-00405901,transport,2024,00405901,רזרבה,19403000,4000,0,,0,partial,https://next.obudget.org/i/budget/00405901/2024
+budget-transport-2024-004099,transport,2024,004099,חשבון מעבר,0,0,1,,,partial,https://next.obudget.org/i/budget/004099/2024
+budget-transport-2024-00409999,transport,2024,00409999,חשבון מעבר,0,0,1,,,partial,https://next.obudget.org/i/budget/00409999/2024
+budget-transport-2025-0040,transport,2025,0040,משרד התחבורה,617993000,844790000,624081949,,73.9,partial,https://next.obudget.org/i/budget/0040/2025
+budget-transport-2025-004050,transport,2025,004050,משרד ראשי,419230000,549469000,424473537,,77.3,partial,https://next.obudget.org/i/budget/004050/2025
+budget-transport-2025-00405001,transport,2025,00405001,משרד התחבורה - ראשי,387517000,507358000,395408158,,77.9,partial,https://next.obudget.org/i/budget/00405001/2025
+budget-transport-2025-00405002,transport,2025,00405002,השירות המטאורולוגי,31713000,42111000,29065379,,69,partial,https://next.obudget.org/i/budget/00405002/2025
+budget-transport-2025-004051,transport,2025,004051,תחבורה ימית,24421000,68445000,55033316,,80.4,partial,https://next.obudget.org/i/budget/004051/2025
+budget-transport-2025-00405101,transport,2025,00405101,רשות הספנות והנמלים,24421000,68445000,55033316,,80.4,partial,https://next.obudget.org/i/budget/00405101/2025
+budget-transport-2025-004052,transport,2025,004052,תעופה,42644000,70569000,45833950,,64.9,partial,https://next.obudget.org/i/budget/004052/2025
+budget-transport-2025-00405201,transport,2025,00405201,רשות התעופה האזרחית,42644000,70569000,45833950,,64.9,partial,https://next.obudget.org/i/budget/00405201/2025
+budget-transport-2025-004053,transport,2025,004053,בטיחות בדרכים,60415000,111812000,66382046,,59.4,partial,https://next.obudget.org/i/budget/004053/2025
+budget-transport-2025-00405301,transport,2025,00405301,הרשות לבטיחות בדרכים,60415000,111812000,66382046,,59.4,partial,https://next.obudget.org/i/budget/00405301/2025
+budget-transport-2025-004054,transport,2025,004054,תחבורה ציבורית,35206000,34294000,24402112,,71.2,partial,https://next.obudget.org/i/budget/004054/2025
+budget-transport-2025-00405401,transport,2025,00405401,רשות תחבורה ציבורית,35206000,34294000,24402112,,71.2,partial,https://next.obudget.org/i/budget/00405401/2025
+budget-transport-2025-004055,transport,2025,004055,רשות המטרו,4436000,3682000,3530531,,95.9,partial,https://next.obudget.org/i/budget/004055/2025
+budget-transport-2025-00405501,transport,2025,00405501,רשות המטרו,4436000,3682000,3530531,,95.9,partial,https://next.obudget.org/i/budget/00405501/2025
+budget-transport-2025-004056,transport,2025,004056,חקירה בטיחותית בתעופה,7940000,6519000,4426457,,67.9,partial,https://next.obudget.org/i/budget/004056/2025
+budget-transport-2025-00405601,transport,2025,00405601,הרשות לחקירה בטיחותית,7940000,6519000,4426457,,67.9,partial,https://next.obudget.org/i/budget/00405601/2025
+budget-transport-2025-004059,transport,2025,004059,רזרבה,23701000,0,0,,,partial,https://next.obudget.org/i/budget/004059/2025
+budget-transport-2025-00405901,transport,2025,00405901,רזרבה,23701000,0,0,,,partial,https://next.obudget.org/i/budget/00405901/2025
+budget-transport-2025-004099,transport,2025,004099,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/004099/2025
+budget-transport-2025-00409999,transport,2025,00409999,חשבון מעבר,0,0,0,,,partial,https://next.obudget.org/i/budget/00409999/2025
+budget-transport-2026-0040,transport,2026,0040,משרד התחבורה,659873000,840214000,,,,estimate,https://next.obudget.org/i/budget/0040/2026
+budget-transport-2026-004050,transport,2026,004050,משרד ראשי,454752000,563981000,,,,estimate,https://next.obudget.org/i/budget/004050/2026
+budget-transport-2026-00405001,transport,2026,00405001,משרד התחבורה - ראשי,422021000,520187000,,,,estimate,https://next.obudget.org/i/budget/00405001/2026
+budget-transport-2026-00405002,transport,2026,00405002,השירות המטאורולוגי,32731000,43794000,,,,estimate,https://next.obudget.org/i/budget/00405002/2026
+budget-transport-2026-004051,transport,2026,004051,תחבורה ימית,25601000,36982000,,,,estimate,https://next.obudget.org/i/budget/004051/2026
+budget-transport-2026-00405101,transport,2026,00405101,רשות הספנות והנמלים,25601000,36982000,,,,estimate,https://next.obudget.org/i/budget/00405101/2026
+budget-transport-2026-004052,transport,2026,004052,תעופה,32712000,52904000,,,,estimate,https://next.obudget.org/i/budget/004052/2026
+budget-transport-2026-00405201,transport,2026,00405201,רשות התעופה האזרחית,32712000,52904000,,,,estimate,https://next.obudget.org/i/budget/00405201/2026
+budget-transport-2026-004053,transport,2026,004053,בטיחות בדרכים,60415000,99647000,,,,estimate,https://next.obudget.org/i/budget/004053/2026
+budget-transport-2026-00405301,transport,2026,00405301,הרשות לבטיחות בדרכים,60415000,99647000,,,,estimate,https://next.obudget.org/i/budget/00405301/2026
+budget-transport-2026-004054,transport,2026,004054,תחבורה ציבורית,48832000,47886000,,,,estimate,https://next.obudget.org/i/budget/004054/2026
+budget-transport-2026-00405401,transport,2026,00405401,רשות תחבורה ציבורית,48832000,47886000,,,,estimate,https://next.obudget.org/i/budget/00405401/2026
+budget-transport-2026-004055,transport,2026,004055,רשות המטרו,5121000,5092000,,,,estimate,https://next.obudget.org/i/budget/004055/2026
+budget-transport-2026-00405501,transport,2026,00405501,רשות המטרו,5121000,5092000,,,,estimate,https://next.obudget.org/i/budget/00405501/2026
+budget-transport-2026-004056,transport,2026,004056,חקירה בטיחותית בתעופה,6044000,7326000,,,,estimate,https://next.obudget.org/i/budget/004056/2026
+budget-transport-2026-00405601,transport,2026,00405601,הרשות לחקירה בטיחותית,6044000,7326000,,,,estimate,https://next.obudget.org/i/budget/00405601/2026
+budget-transport-2026-004059,transport,2026,004059,רזרבה,26396000,26396000,,,,estimate,https://next.obudget.org/i/budget/004059/2026
+budget-transport-2026-00405901,transport,2026,00405901,רזרבה,26396000,26396000,,,,estimate,https://next.obudget.org/i/budget/00405901/2026
+budget-transport-2026-004099,transport,2026,004099,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/004099/2026
+budget-transport-2026-00409999,transport,2026,00409999,חשבון מעבר,0,0,,,,estimate,https://next.obudget.org/i/budget/00409999/2026

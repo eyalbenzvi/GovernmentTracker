@@ -19,7 +19,7 @@
     "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
     "nameEvidenceTitle": "תקציב משרד התחבורה והבטיחות בדרכים בדגש על תקציבי התחבורה הציבורית",
     "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0040/2025",
-    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 76 רשומות תקציב · 0 פריטי פעילות"
   },
   {
     "id": "education",
@@ -33,12 +33,14 @@
     "activeFrom": null,
     "activeTo": null,
     "governmentPeriod": "הממשלה ה-37",
-    "budgetCodes": [],
+    "budgetCodes": [
+      "0020"
+    ],
     "budgetBookVolume": "Budget11-Education",
     "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
     "nameEvidenceTitle": "תיאור וניתוח הצעת תקציב משרד החינוך לשנים 2021 ו-2022",
-    "budgetCodeEvidenceUrl": null,
-    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0020/2025",
+    "dataCoverageSummary": "5 מקורות רשמיים מקוטלגים · 137 רשומות תקציב · 0 פריטי פעילות"
   },
   {
     "id": "health",
@@ -52,12 +54,14 @@
     "activeFrom": null,
     "activeTo": null,
     "governmentPeriod": "הממשלה ה-37",
-    "budgetCodes": [],
+    "budgetCodes": [
+      "0024"
+    ],
     "budgetBookVolume": "Budget15-Health",
     "nameEvidenceUrl": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
     "nameEvidenceTitle": "תקצוב מערכת הבריאות בישראל וניתוח הצעת תקציב משרד הבריאות",
-    "budgetCodeEvidenceUrl": null,
-    "dataCoverageSummary": "6 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0024/2025",
+    "dataCoverageSummary": "6 מקורות רשמיים מקוטלגים · 123 רשומות תקציב · 0 פריטי פעילות"
   },
   {
     "id": "environment",
@@ -72,12 +76,14 @@
     "activeFrom": null,
     "activeTo": null,
     "governmentPeriod": "הממשלה ה-37",
-    "budgetCodes": [],
+    "budgetCodes": [
+      "0026"
+    ],
     "budgetBookVolume": "Budget9-Environment",
-    "nameEvidenceUrl": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
-    "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget9-Environment.pdf (כותרת המקור בתוצאת החיפוש הייתה \"הצעת תקציב\" בלבד)",
-    "budgetCodeEvidenceUrl": null,
-    "dataCoverageSummary": "2 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+    "nameEvidenceUrl": "https://next.obudget.org/i/budget/0026/2025",
+    "nameEvidenceTitle": "כותרת סעיף התקציב 0026 היא \"המשרד להגנת הסביבה\" — התאמה מדויקת לשם הרשמי. בנוסף: שם קובץ ספר התקציב הרשמי באתר הכנסת, Budget9-Environment.pdf.",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0026/2025",
+    "dataCoverageSummary": "2 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 0 פריטי פעילות"
   },
   {
     "id": "economy",
@@ -92,11 +98,13 @@
     "activeFrom": null,
     "activeTo": null,
     "governmentPeriod": "הממשלה ה-37",
-    "budgetCodes": [],
+    "budgetCodes": [
+      "0038"
+    ],
     "budgetBookVolume": "Budget22-Economics-Industry",
     "nameEvidenceUrl": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
-    "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf",
-    "budgetCodeEvidenceUrl": null,
-    "dataCoverageSummary": "1 מקורות רשמיים מקוטלגים · 0 רשומות תקציב · 0 פריטי פעילות"
+    "nameEvidenceTitle": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf. בנוסף: כותרת סעיף התקציב 0038 היא \"כלכלה ותעשייה\".",
+    "budgetCodeEvidenceUrl": "https://next.obudget.org/i/budget/0038/2025",
+    "dataCoverageSummary": "1 מקורות רשמיים מקוטלגים · 64 רשומות תקציב · 0 פריטי פעילות"
   }
 ]

@@ -16,6 +16,8 @@ import {
   budgetChangeAbsolute,
   budgetChangePercent,
   executionRate,
+  EXECUTION_RATE_OUTLIER_HINT,
+  isExecutionRateOutlier,
   isLargeChange,
   LARGE_CHANGE_ABSOLUTE_THRESHOLD,
   LARGE_CHANGE_PERCENT_THRESHOLD,
@@ -81,7 +83,7 @@ export function BudgetPage({ data }: { data: Dataset }): JSX.Element {
   const levels = uniqueSorted(scoped.map((i) => String(i.hierarchyLevel)));
 
   const noDataReason =
-    'לא נאספו רשומות תקציב בגרסת נתונים זו. מתחמי המקורות הרשמיים — ובהם ספר התקציב באתר הכנסת, דוחות ביצוע התקציב של משרד האוצר ו-data.gov.il — חסומים על ידי רשימת ההיתר של סביבת הבנייה. מקורות אלה מקוטלגים באתר עם קישור ישיר, אך לא חולצו מהם מספרים, ולא הוזנו נתונים ממקור עקיף או משוער.';
+    'אין רשומות תקציב התואמות את הבחירה הנוכחית. נתוני התקציב באתר מכסים את סעיפי התקציב הרגיל של המשרדים שנאספו, לשנים 2023–2026. ספר התקציב ודוחות הביצוע הרשמיים מקוטלגים במסך המקורות עם קישור ישיר.';
 
   const columns: Column<BudgetItem>[] = [
     {
@@ -167,17 +169,26 @@ export function BudgetPage({ data }: { data: Dataset }): JSX.Element {
     {
       key: 'executionRate',
       header: 'שיעור ביצוע',
-      render: (item) => (
-        <span
-          title={
-            executionRate(item) === null
-              ? 'לא ניתן לחשב: נדרשים ביצוע ותקציב מעודכן גדול מאפס'
-              : 'ביצוע ÷ תקציב מעודכן × 100'
-          }
-        >
-          {formatPercent(executionRate(item))}
-        </span>
-      ),
+      render: (item) => {
+        const rate = executionRate(item);
+        const outlier = isExecutionRateOutlier(rate);
+        return (
+          <span
+            title={
+              rate === null
+                ? 'לא ניתן לחשב: נדרשים ביצוע ותקציב מעודכן גדול מאפס'
+                : outlier
+                  ? EXECUTION_RATE_OUTLIER_HINT
+                  : 'ביצוע ÷ תקציב מעודכן × 100'
+            }
+          >
+            {formatPercent(rate)}
+            {outlier && (
+              <span className="ms-1 rounded bg-amber-100 px-1 text-xs text-amber-800">חריגה</span>
+            )}
+          </span>
+        );
+      },
       sortValue: (item) => executionRate(item),
       align: 'end',
     },

@@ -259,3 +259,63 @@ describe('methodology', () => {
     }
   });
 });
+
+describe('aggregation safety', () => {
+  it('sums leaves to exactly the section total, per ministry and year', () => {
+    for (const ministry of ministryList) {
+      const years = [...new Set(budgetList.map((b) => b.fiscalYear))];
+      for (const year of years) {
+        const rows = budgetList.filter(
+          (b) => b.ministryId === ministry.id && b.fiscalYear === year,
+        );
+        if (rows.length === 0) continue;
+        const roots = rows.filter((b) => b.hierarchyLevel === 1);
+        const leaves = rows.filter((b) => b.isLeaf);
+        if (roots.length === 0 || leaves.length === 0) continue;
+        const rootTotal = roots.reduce((sum, b) => sum + (b.updatedBudget ?? 0), 0);
+        const leafTotal = leaves.reduce((sum, b) => sum + (b.updatedBudget ?? 0), 0);
+        // Any drift here means the hierarchy is inconsistent and every aggregate
+        // on the site would be wrong.
+        expect(Math.abs(rootTotal - leafTotal)).toBeLessThan(1);
+      }
+    }
+  });
+
+  it('never marks a record as a leaf when another record declares it a parent', () => {
+    for (const year of new Set(budgetList.map((b) => b.fiscalYear))) {
+      const rows = budgetList.filter((b) => b.fiscalYear === year);
+      const declaredParents = new Set(
+        rows.map((b) => b.parentBudgetCode).filter((c): c is string => c !== null),
+      );
+      for (const row of rows.filter((b) => b.isLeaf)) {
+        expect(declaredParents.has(row.budgetCode)).toBe(false);
+      }
+    }
+  });
+});
+
+describe('execution-figure honesty', () => {
+  it('flags every out-of-band execution rate with an explicit outlier note', () => {
+    const outliers = budgetList.filter(
+      (b) => b.executionRate !== null && (b.executionRate < 0 || b.executionRate > 150),
+    );
+    for (const item of outliers) {
+      expect(item.notes).toContain('חריגה:');
+    }
+  });
+
+  it('never labels a figure from the secondary budget layer as final', () => {
+    for (const item of budgetList) {
+      if (new URL(item.sourceUrl).host.includes('obudget.org')) {
+        expect(item.dataStatus).not.toBe('final');
+      }
+    }
+  });
+
+  it('records the unit and currency on every figure', () => {
+    for (const item of budgetList) {
+      expect(item.currency).toBe('ILS');
+      expect(['ILS', 'ILS_thousands']).toContain(item.unit);
+    }
+  });
+});

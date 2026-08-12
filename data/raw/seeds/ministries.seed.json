@@ -3,6 +3,14 @@
   "declaredAt": "2026-08-12",
   "purpose": "רשימת המשרדים שנכללים במאגר. משרד נכנס לרשימה רק אם קיים לפחות מקור רשמי אחד שנמצא בפועל בשלב הגילוי (data/raw/search-discovery) ושמו של המשרד מופיע בכותרת המקור או בשם קובץ ספר התקציב הרשמי. שדה nameEvidence מתעד עבור כל משרד מה בדיוק מבסס את השם.",
   "notCollectedNote": "משרדים שאינם ברשימה זו מסומנים באתר כ\"טרם נאסף\". לא נבנתה רשימת משרדים ספקולטיבית: הרשימה הרשמית המלאה מופיעה במקור הרשמי שמקוטלג תחת gov-il-cabinet.",
+  "budgetSectionPolicy": {
+    "includedBudgetKind": "1 — תקציב רגיל",
+    "rationale": "נכללים רק סעיפי התקציב הרגיל, מפני שהם הסעיפים שנושאים במפורש את שם המשרד (למשל \"משרד התחבורה\" לסעיף 0040). זו ראיה חד-משמעית לשיוך הסעיף למשרד.",
+    "excludedBudgetKinds": "סעיפי תקציב הפיתוח (budget_kind_code = 2) הם סעיפים נפרדים ששמם תחומי ולא משרדי — 0060 חינוך, 0067 בריאות, 0079 תחבורה, 0076 תעשייה. שיוכם למשרד מסוים הוא הסקה שלא ניתן לבסס על שם הסעיף, ולכן הם אינם נכללים בגרסה זו. כן נכללים גם סעיפי הכנסות המדינה (4), מפעלים עסקיים (5), החזר חובות (6) ורזרבות (7).",
+    "consequence": "המספרים באתר הם התקציב הרגיל של המשרד — לא סך ההוצאה הציבורית בתחום. עבור התחבורה בפרט, תקציב הפיתוח גדול משמעותית מהתקציב הרגיל ואינו מוצג כאן.",
+    "maxDepth": 3,
+    "depthRationale": "נאספות רמות ההיררכיה 1–3 (סעיף, תחום, תוכנית). רמות עמוקות יותר (תקנות בודדות) לא נאספו, כדי לשמור על נפח נתונים סביר; ההיררכיה שנאספת מסתכמת בדיוק לסעיף האב."
+  },
   "ministries": [
     {
       "id": "transport",
@@ -13,9 +21,9 @@
       "budgetCodes": ["0040"],
       "budgetCodeEvidence": {
         "url": "https://next.obudget.org/i/budget/0040/2025",
-        "titleEvidence": "מפתח התקציב - תקציב משרד התחבורה (40)",
+        "titleEvidence": "סעיף 0040 מוחזר ממפתח התקציב עם הכותרת \"משרד התחבורה\", depth=1, budget_kind_title=\"תקציב רגיל\". כותרת תוצאת החיפוש שבה זוהה הסעיף לראשונה: \"מפתח התקציב - תקציב משרד התחבורה (40)\".",
         "queryId": "q01-transport-budget",
-        "note": "קוד הסעיף 40 מופיע במפורש בכותרת המקור ובנתיב ה-URL. מפתח התקציב שימש כאן כשכבת עזר לזיהוי הקוד בלבד, לא כמקור לנתון כספי."
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר, ולא מקור רשמי ראשוני."
       },
       "budgetBookVolume": "Budget24-Transportation",
       "nameEvidence": {
@@ -30,8 +38,13 @@
       "displayName": "משרד החינוך",
       "aliases": ["משרד החינוך", "חינוך"],
       "description": "משרד האחראי על מערכת החינוך הציבורית בישראל. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": [],
-      "budgetCodeEvidence": null,
+      "budgetCodes": ["0020"],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0020/2025",
+        "titleEvidence": "סעיף 0020 מוחזר ממפתח התקציב עם הכותרת \"משרד החינוך\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
       "budgetBookVolume": "Budget11-Education",
       "nameEvidence": {
         "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
@@ -45,8 +58,13 @@
       "displayName": "משרד הבריאות",
       "aliases": ["משרד הבריאות", "בריאות"],
       "description": "משרד האחראי על מערכת הבריאות, רגולציה רפואית ובריאות הציבור. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": [],
-      "budgetCodeEvidence": null,
+      "budgetCodes": ["0024"],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0024/2025",
+        "titleEvidence": "סעיף 0024 מוחזר ממפתח התקציב עם הכותרת \"משרד הבריאות\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
       "budgetBookVolume": "Budget15-Health",
       "nameEvidence": {
         "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
@@ -60,14 +78,19 @@
       "displayName": "הגנת הסביבה",
       "aliases": ["המשרד להגנת הסביבה", "הגנת הסביבה", "איכות הסביבה"],
       "description": "משרד האחראי על רגולציה סביבתית, איכות אוויר, פסולת ושמירת טבע. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": [],
-      "budgetCodeEvidence": null,
+      "budgetCodes": ["0026"],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0026/2025",
+        "titleEvidence": "סעיף 0026 מוחזר ממפתח התקציב עם הכותרת \"המשרד להגנת הסביבה\", depth=1, budget_kind_title=\"תקציב רגיל\" — התאמה מדויקת לשם הרשמי.",
+        "queryId": "obudget-section-lookup",
+        "note": "הקוד אומת בשאילתה ישירה לטבלת raw_budget. מפתח התקציב הוא שכבת עזר המבוססת על נתוני משרד האוצר."
+      },
       "budgetBookVolume": "Budget9-Environment",
       "nameEvidence": {
-        "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
-        "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget9-Environment.pdf (כותרת המקור בתוצאת החיפוש הייתה \"הצעת תקציב\" בלבד)",
-        "queryId": "q07-environment-budget",
-        "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב הרשמי באתר הכנסת, ולא על כותרת מלאה. זו ראיה חלשה יותר, ולכן היא מסומנת במפורש."
+        "url": "https://next.obudget.org/i/budget/0026/2025",
+        "titleEvidence": "כותרת סעיף התקציב 0026 היא \"המשרד להגנת הסביבה\" — התאמה מדויקת לשם הרשמי. בנוסף: שם קובץ ספר התקציב הרשמי באתר הכנסת, Budget9-Environment.pdf.",
+        "queryId": "obudget-section-lookup",
+        "note": "בגרסה קודמת הזיהוי נשען על שם קובץ ספר התקציב בלבד. כעת הוא מגובה גם בכותרת סעיף התקציב עצמו."
       }
     },
     {
@@ -76,14 +99,19 @@
       "displayName": "משרד הכלכלה",
       "aliases": ["משרד הכלכלה והתעשייה", "משרד הכלכלה", "כלכלה ותעשייה"],
       "description": "משרד האחראי על תעשייה, מסחר, תעסוקה ורגולציה כלכלית. התיאור נוסח לצורכי ניווט באתר ואינו ציטוט ממקור רשמי.",
-      "budgetCodes": [],
-      "budgetCodeEvidence": null,
+      "budgetCodes": ["0038"],
+      "budgetCodeEvidence": {
+        "url": "https://next.obudget.org/i/budget/0038/2025",
+        "titleEvidence": "סעיף 0038 מוחזר ממפתח התקציב עם הכותרת \"כלכלה ותעשייה\", depth=1, budget_kind_title=\"תקציב רגיל\".",
+        "queryId": "obudget-section-lookup",
+        "note": "כותרת הסעיף היא \"כלכלה ותעשייה\" ולא שם המשרד המלא. השיוך נשען על התאמת התחום, ובנוסף על שם קובץ ספר התקציב Budget22-Economics-Industry. סעיף תקציב הפיתוח 0076 \"תעשייה\" לא שויך למשרד, מפני ששיוך כזה אינו נגזר משם הסעיף."
+      },
       "budgetBookVolume": "Budget22-Economics-Industry",
       "nameEvidence": {
         "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
-        "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf",
+        "titleEvidence": "שם קובץ ספר התקציב הרשמי: Budget22-Economics-Industry2026.pdf. בנוסף: כותרת סעיף התקציב 0038 היא \"כלכלה ותעשייה\".",
         "queryId": "q03-transport-multiyear",
-        "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב הרשמי באתר הכנסת. ראיה חלשה יותר, מסומנת במפורש."
+        "note": "זיהוי המשרד נשען על שם קובץ ספר התקציב ועל כותרת סעיף התקציב, ולא על כותרת מסמך מלאה."
       }
     }
   ]

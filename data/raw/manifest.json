@@ -10,7 +10,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-01438d30e367",
@@ -19,7 +19,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-066345128e9d",
@@ -28,7 +28,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-06f36509720d",
@@ -37,7 +37,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-0b0eb2257952",
@@ -46,7 +46,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-13d9d511dd5b",
@@ -55,7 +55,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-187fbd6d3d31",
@@ -64,16 +64,16 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-1bf27634fd25",
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf",
       "title": "ד ו ח מ ב ק ר ה מ ד י נ ה ▪ תשרי \"התשפ ו ▪ אוקטובר 2025 ▪",
       "publisher": "מבקר המדינה",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "ee00ebb62d5909540e8693119a1bd9b3f9d823637f603630359052db0d2ca35e",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-2274762789d4",
@@ -82,7 +82,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-3a41d9408a0c",
@@ -91,25 +91,25 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-46be88e4fbd5",
       "url": "https://data.gov.il/dataset?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91+%D7%95%D7%91%D7%99%D7%A6%D7%95%D7%A2",
       "title": "מאגרי מידע — Government Data (חיפוש: תקציב וביצוע)",
       "publisher": "data.gov.il — מאגרי מידע ממשלתיים",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "afe2d3d899f21dbed8ddc3a01979779527ac5cf92aaba91383d2478f203159bd",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-4d0ee52fefb0",
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf",
       "title": "תקציב הצעת",
       "publisher": "הכנסת",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "0e9881a7c4a091510f809e8d2f3882b18b80b0b7e630ba37a64620a85a4ba05c",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-52af0e09d6fd",
@@ -118,7 +118,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-58b1c6740f30",
@@ -127,7 +127,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-5e65ac55974d",
@@ -136,7 +136,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-62c69041604b",
@@ -145,7 +145,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-681776e25e1e",
@@ -154,7 +154,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-6d5495952ed9",
@@ -163,7 +163,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-6fde5e83d453",
@@ -172,7 +172,7 @@
       "publisher": "מדינת ישראל — Gov.il",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-6fef18de462c",
@@ -181,7 +181,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-735ab79375b8",
@@ -190,7 +190,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-7f6eed9268db",
@@ -199,7 +199,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-870d2dbf620c",
@@ -208,7 +208,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-8a97a2e9dea2",
@@ -217,7 +217,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-90a246ec46c8",
@@ -226,7 +226,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-9533d35163fe",
@@ -235,7 +235,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-98a7770ab0fc",
@@ -244,16 +244,16 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-9be0019edf77",
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx",
       "title": "רזרבות והוצאות שונות בתקציב המדינה — תקצוב, ניצול ושקיפות",
       "publisher": "מבקר המדינה",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "d1bc007360c54197fbcc7403ccf55fe08975582de4581d87da18db4d629d3d71",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-a21d2a262103",
@@ -262,7 +262,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-a49d621b041b",
@@ -271,7 +271,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-aa4df8193f29",
@@ -280,16 +280,16 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-ab1ac9214213",
       "url": "https://next.obudget.org/i/budget/0040/2025",
       "title": "מפתח התקציב - תקציב משרד התחבורה (40)",
       "publisher": "מפתח התקציב — הסדנא לידע ציבורי",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "71d530410fd2c880af12759507a76513695f9dcc6fb192274da0fe477b341f2f",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-af04be72da8f",
@@ -298,7 +298,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-b0ded4ca1192",
@@ -307,7 +307,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-b2dcdcf9661e",
@@ -316,7 +316,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-c4ecbf16dbbc",
@@ -325,7 +325,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-c7b0d46f072d",
@@ -334,7 +334,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-cb4b98f60368",
@@ -343,25 +343,25 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-cf25861a77c8",
       "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf",
       "title": "דוח ביצוע התקציב לשנת 2024",
       "publisher": "מדינת ישראל — Gov.il",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "d6649eb9595c68f68bd12495de2a50e8dc3ec648f4d25c92e8599b02cc331b25",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-cf643ae7b490",
       "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf",
       "title": "דוח ביצוע תקציב 2024 לשנת הכספים — מבקר המדינה",
       "publisher": "מבקר המדינה",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "1fe79c0f2a432a55a5e4dced1d901ff4f03f08edfe960b56308f39219b130873",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-d3128608710e",
@@ -370,7 +370,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-d5abed2a82c5",
@@ -379,7 +379,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-d6924a43194c",
@@ -388,7 +388,7 @@
       "publisher": "משרד האוצר",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-e32604c3f881",
@@ -397,7 +397,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-e5324937ada4",
@@ -406,16 +406,16 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-f8343e3c3fcb",
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf",
       "title": "מבקר המדינה — ביצוע תקציב המלחמה, נובמבר 2025",
       "publisher": "מבקר המדינה",
-      "downloadedAt": null,
-      "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "downloadedAt": "2026-08-12",
+      "checksumSha256": "7dd65997cd9f38c890d24254b0e848c9e482b0801221a2cc969bda9661795d30",
+      "retrievalStatus": "retrieved"
     },
     {
       "id": "src-f83d653f28ea",
@@ -424,7 +424,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-f89f42d6aa0b",
@@ -433,7 +433,7 @@
       "publisher": "מדינת ישראל — Gov.il",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-f8d8c52ef5a4",
@@ -442,7 +442,7 @@
       "publisher": "הכנסת",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     },
     {
       "id": "src-fb40521cfbc1",
@@ -451,7 +451,7 @@
       "publisher": "מדינת ישראל — Gov.il",
       "downloadedAt": null,
       "checksumSha256": null,
-      "retrievalStatus": "not_retrieved_egress_blocked"
+      "retrievalStatus": "not_retrieved_error"
     }
   ]
 }

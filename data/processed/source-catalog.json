@@ -19,8 +19,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Education → education | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -42,8 +42,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2023, 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -62,8 +62,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -84,8 +84,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -108,8 +108,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q03-transport-multiyear",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Economics-Industry → economy | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -128,8 +128,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -148,8 +148,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -167,12 +167,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם library.mevaker.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (4279409 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "ee00ebb62d5909540e8693119a1bd9b3f9d823637f603630359052db0d2ca35e"
   },
   {
     "id": "src-2274762789d4",
@@ -194,8 +194,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Transportation → transport | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -216,8 +216,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "כותרת המקור מכילה \"מערכת החינוך\" → education | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -233,12 +233,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם data.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (42786 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "afe2d3d899f21dbed8ddc3a01979779527ac5cf92aaba91383d2478f203159bd"
   },
   {
     "id": "src-4d0ee52fefb0",
@@ -257,12 +257,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Health → health | שנות תקציב זוהו מהופעת המספרים 2023 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (3630871 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "0e9881a7c4a091510f809e8d2f3882b18b80b0b7e630ba37a64620a85a4ba05c"
   },
   {
     "id": "src-52af0e09d6fd",
@@ -284,8 +284,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Transportation → transport | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -308,8 +308,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "כותרת המקור מכילה \"משרד הבריאות\" → health | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -331,8 +331,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2023, 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -353,8 +353,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -375,8 +375,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "כותרת המקור מכילה \"תקציב החינוך\" → education | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -398,8 +398,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2024, 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -420,8 +420,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם www.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 403.",
     "checksumSha256": null
   },
   {
@@ -442,8 +442,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -464,8 +464,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q02-budget2024-education-health",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -486,8 +486,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Health → health | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -508,8 +508,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q07-environment-budget",
     "mappingRule": "כותרת המקור מכילה \"איכות הסביבה\" → environment | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -530,8 +530,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q03-transport-multiyear",
     "mappingRule": "כותרת המקור מכילה \"משרד התחבורה\" → transport | כותרת המקור מכילה \"תקציבי? התחבורה הציבורית\" → transport | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -550,8 +550,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q05-health-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -572,8 +572,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Health → health | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -592,8 +592,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q07-environment-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -609,12 +609,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם library.mevaker.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (84768 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "d1bc007360c54197fbcc7403ccf55fe08975582de4581d87da18db4d629d3d71"
   },
   {
     "id": "src-a21d2a262103",
@@ -634,8 +634,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q06-health-budget-books",
     "mappingRule": "כותרת המקור מכילה \"בתחום הבריאות\" → health | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -656,8 +656,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -678,8 +678,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q07-environment-budget",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Environment → environment | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם m.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -699,12 +699,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "secondary_helper",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q01-transport-budget",
     "mappingRule": "כותרת המקור מכילה \"משרד התחבורה\" → transport | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם next.obudget.org חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (138350 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "71d530410fd2c880af12759507a76513695f9dcc6fb192274da0fe477b341f2f"
   },
   {
     "id": "src-af04be72da8f",
@@ -724,8 +724,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q05-health-budget",
     "mappingRule": "כותרת המקור מכילה \"משרד הבריאות\" → health | כותרת המקור מכילה \"מערכת הבריאות\" → health | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -746,8 +746,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q05-health-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -768,8 +768,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q03-transport-multiyear",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -788,8 +788,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q03-transport-multiyear",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -810,8 +810,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q03-transport-multiyear",
     "mappingRule": "שם קובץ ספר התקציב תואם Budget\\d+-Transportation → transport | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -832,8 +832,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "כותרת המקור מכילה \"מערכת החינוך\" → education | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -851,12 +851,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם www.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (13782662 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "d6649eb9595c68f68bd12495de2a50e8dc3ec648f4d25c92e8599b02cc331b25"
   },
   {
     "id": "src-cf643ae7b490",
@@ -873,12 +873,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2024 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם media.mevaker.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (1078641 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "1fe79c0f2a432a55a5e4dced1d901ff4f03f08edfe960b56308f39219b130873"
   },
   {
     "id": "src-d3128608710e",
@@ -896,8 +896,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -918,8 +918,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -938,8 +938,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם mof.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 403.",
     "checksumSha256": null
   },
   {
@@ -960,8 +960,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q04-education-budget",
     "mappingRule": "כותרת המקור מכילה \"משרד החינוך\" → education | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -983,8 +983,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q05-health-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025, 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -1002,12 +1002,12 @@
     "collectedAt": "2026-08-12",
     "licenseOrUsageNote": "פרסום ממשלתי/פרלמנטרי פומבי. באתר זה נשמרים כותרת וקישור בלבד; גוף המסמך אינו משוכפל. השימוש הוא לצורכי הפניה ואימות.",
     "reliabilityLevel": "primary_official",
-    "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
+    "extractionMethod": "גילוי דרך אינדקס חיפוש + אחזור גוף המסמך בזמן בנייה",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם library.mevaker.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
-    "checksumSha256": null
+    "retrievalStatus": "retrieved",
+    "retrievalNote": "גוף המסמך אוחזר בהצלחה (2183930 בתים) ונשמר checksum לאימות.",
+    "checksumSha256": "7dd65997cd9f38c890d24254b0e848c9e482b0801221a2cc969bda9661795d30"
   },
   {
     "id": "src-f83d653f28ea",
@@ -1025,8 +1025,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם main.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -1045,8 +1045,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q09-government-37",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם www.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 403.",
     "checksumSha256": null
   },
   {
@@ -1068,8 +1068,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q07-environment-budget",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | שנות תקציב זוהו מהופעת המספרים 2025, 2026 ב-URL או בכותרת",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם fs.knesset.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 474.",
     "checksumSha256": null
   },
   {
@@ -1088,8 +1088,8 @@
     "extractionMethod": "גילוי דרך אינדקס חיפוש (כותרת + URL בלבד); גוף המסמך לא אוחזר",
     "discoveryQueryId": "q08-budget-execution",
     "mappingRule": "לא נמצאה התאמה חד-משמעית למשרד; המקור מסומן כרוחבי (כל המשרדים) | לא זוהתה שנת תקציב בטווח 2023–2026",
-    "retrievalStatus": "not_retrieved_egress_blocked",
-    "retrievalNote": "גוף המסמך לא אוחזר: המתחם www.gov.il חסום על ידי מדיניות ה-egress של סביבת הבנייה. הקישור עצמו תקף ומפנה למקור הרשמי.",
+    "retrievalStatus": "not_retrieved_error",
+    "retrievalNote": "גוף המסמך לא אוחזר: HTTP 403.",
     "checksumSha256": null
   }
 ]

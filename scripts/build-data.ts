@@ -70,14 +70,21 @@ function main(): void {
   const topics = readJson<Topic[]>(path.join(PROCESSED_DIR, 'topics.json'));
 
   const logs = listFiles(COLLECTION_LOG_DIR, '.json').map((f) => readJson<CollectionLog>(f));
+  const attempts = logs.flatMap((l) => l.attempts);
+  // Two distinct failure classes, reported separately because they mean different
+  // things: an egress denial is a limitation of the build environment, while an
+  // HTTP rejection is the source itself refusing an automated client.
   const blockedHosts = [
+    ...new Set(attempts.filter((a) => a.outcome === 'blocked').map((a) => new URL(a.url).host)),
+  ].sort();
+  const refusedHosts = [
     ...new Set(
-      logs
-        .flatMap((l) => l.attempts)
-        .filter((a) => a.outcome === 'blocked')
+      attempts
+        .filter((a) => a.outcome === 'http_error' && a.httpStatus !== null && a.httpStatus >= 400)
         .map((a) => new URL(a.url).host),
     ),
   ].sort();
+  const retrievedCount = attempts.filter((a) => a.outcome === 'ok').length;
 
   // ---- coverage -----------------------------------------------------------
   const coverage: Coverage[] = seed.ministries.map((ministry) => {
@@ -158,8 +165,7 @@ function main(): void {
 
   // ---- activity ↔ budget links -------------------------------------------
   // A link is emitted only when both sides exist AND a documented mapping basis
-  // exists. With no activity records and no budget records there is nothing to
-  // link, and no correlation is manufactured.
+  // exists. No correlation is manufactured from one side alone.
   const links: ActivityBudgetLink[] = [];
 
   // ---- methodology --------------------------------------------------------
@@ -192,15 +198,28 @@ function main(): void {
         ],
       },
       {
-        id: 'environment-limitation',
-        title: 'מגבלת סביבת הבנייה בגרסה זו',
+        id: 'collection-limits',
+        title: 'מה לא נאסף, ולמה',
         paragraphs: [
-          'לסביבת הבנייה שבה נוצרה גרסת נתונים זו יש רשימת היתר (allowlist) לתעבורה יוצאת, ומתחמי המקורות הרשמיים אינם כלולים בה. כל בקשה אליהם נענתה ב-HTTP 403 עם ההודעה "Host not in allowlist".',
+          `בבנייה זו הצליחו ${retrievedCount} ניסיוני אחזור. שני סוגי כישלון נרשמו, והם שונים במשמעותם.`,
           blockedHosts.length > 0
-            ? `המתחמים שנחסמו בפועל, לפי יומן האיסוף: ${blockedHosts.join(', ')}.`
-            : 'בבנייה זו לא נרשמו חסימות.',
-          'המשמעות המעשית: הקטלוג מזהה את המסמכים הרשמיים ומקשר אליהם, אבל אף נתון כספי או פריט פעילות לא חולץ מהם. לכן אין באתר מספרי תקציב או ביצוע. לא הוזנו מספרים ממקור עקיף, מזיכרון או משוער — העדפנו דשבורד ריק על נתון שאינו ניתן לאימות.',
-          'הרצת `npm run data:refresh` מסביבה עם גישה רגילה לאינטרנט תפעיל בדיוק את אותם אוספים מול אותם מקורות ותאכלס את הנתונים.',
+            ? `מתחמים שנחסמו על ידי רשימת ההיתר של סביבת הבנייה (מגבלת סביבה, לא מגבלת מקור): ${blockedHosts.join(', ')}.`
+            : 'לא נרשמו חסימות של רשימת ההיתר בסביבת הבנייה.',
+          refusedHosts.length > 0
+            ? `מתחמים שהחזירו דחייה ברמת ה-HTTP לבקשה אוטומטית מזוהה: ${refusedHosts.join(', ')}. אתר gov.il ואתר הכנסת מפעילים הגנת bot שדוחה לקוחות שאינם דפדפן. לא נעשה ניסיון להתחזות לדפדפן כדי לעקוף אותה — זו הייתה עקיפה של סירוב מפורש של המקור, בניגוד לכללי האיסוף של הפרויקט.`
+            : 'לא נרשמו דחיות HTTP מצד המקורות.',
+          'ההשלכה המעשית: נתוני התקציב והביצוע נאספו במלואם דרך מפתח התקציב, בעוד שפריטי הפעילות הפומבית — שמקורם ב-API הפרסומים של gov.il — לא נאספו. גם תאריכי כהונת שרים לא נאספו, מפני שעמוד הרכב הממשלה לא היה נגיש ותאריכים אינם נגזרים בהסקה.',
+        ],
+      },
+      {
+        id: 'budget-source',
+        title: 'מאיפה מגיעים נתוני התקציב',
+        paragraphs: [
+          'נתוני התקציב והביצוע באתר מגיעים ממפתח התקציב — מסד נתונים ציבורי המשקף את נתוני אגף התקציבים במשרד האוצר. זו שכבת עזר, ולא מקור רשמי ראשוני.',
+          'לכן אף רשומה באתר אינה מסומנת כ"ביצוע סופי". שנים שהסתיימו מסומנות כ"נתון חלקי" והשנה השוטפת מסומנת כ"אומדן". מי שנדרש לנתון סופי — ספר התקציב ודוחות ביצוע התקציב הרשמיים מקוטלגים באתר עם קישור ישיר.',
+          'נאספים רק סעיפי התקציב הרגיל, שנושאים את שם המשרד עצמו (למשל סעיף 0040 — "משרד התחבורה"). סעיפי תקציב הפיתוח נקראים על שם התחום ולא על שם המשרד (0060 חינוך, 0067 בריאות, 0079 תחבורה, 0076 תעשייה), ושיוכם למשרד מסוים אינו נגזר משם הסעיף — ולכן הם אינם נכללים.',
+          'המשמעות: המספרים באתר הם התקציב הרגיל של המשרד, ולא סך ההוצאה הציבורית בתחום. עבור התחבורה בפרט, תקציב הפיתוח גדול משמעותית מהתקציב הרגיל ואינו מוצג כאן.',
+          'נאספות רמות ההיררכיה 1–3. סכום סעיפי העלים שנאספו זהה בדיוק לסכום סעיף האב בכל משרד ובכל שנה — נבדק אוטומטית בוולידציה.',
         ],
       },
       {
@@ -239,7 +258,7 @@ function main(): void {
         paragraphs: [
           'האתר אינו טוען טענה סיבתית. מתאם בין נושא פעילות ובין סעיף תקציבי אינו מלמד שהפעילות גרמה להקצאה, או שההקצאה גרמה לפעילות.',
           'קשר מוצג רק כאשר קיים מיפוי מתועד בין נושא, פריטי פעילות מזוהים וסעיפי תקציב מזוהים — ותמיד עם הראיות והסבר המיפוי.',
-          'בגרסת נתונים זו לא נאספו לא פריטי פעילות ולא רשומות תקציב, ולכן לא הוצג אף קשר. זו הצגה כנה של מצב הנתונים, לא כשל בתצוגה.',
+          'קשר דורש שני צדדים. בגרסה זו נאספו רשומות תקציב אך לא נאספו פריטי פעילות, ולכן לא ניתן לבסס אף קשר ולא הוצג אף קשר. זו הצגה כנה של מצב הנתונים, לא כשל בתצוגה.',
         ],
       },
       {
@@ -275,7 +294,13 @@ function main(): void {
     changelog: [
       {
         date: buildDate,
-        note: `גרסת נתונים ראשונה. ${catalog.length} מקורות רשמיים קוטלגו עבור ${ministries.length} משרדים. נתוני תקציב ופעילות לא נאספו: מתחמי המקורות הרשמיים חסומים על ידי מדיניות ה-egress של סביבת הבנייה, והוחלט לא להציג מספרים שאינם ניתנים לאימות.`,
+        note:
+          `גרסת נתונים. ${catalog.length} מקורות רשמיים קוטלגו עבור ${ministries.length} משרדים, ` +
+          `ומתוכם ${catalog.filter((s) => s.retrievalStatus === 'retrieved').length} אוחזרו עם checksum. ` +
+          `נאספו ${budgetItems.length} רשומות תקציב וביצוע לשנים ${ANALYSIS_YEARS[0]}–${ANALYSIS_YEARS[ANALYSIS_YEARS.length - 1]} ` +
+          `עבור ${coverage.filter((c) => c.budgetRecordCount > 0).length} משרדים, מסעיפי התקציב הרגיל, דרך מפתח התקציב. ` +
+          `פריטי פעילות פומבית לא נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות מזוהות ב-HTTP 403, ולא נעשה ניסיון לעקוף זאת. ` +
+          `לא הוזן שום מספר ממקור עקיף או משוער.`,
       },
     ],
   };

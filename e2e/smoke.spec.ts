@@ -46,11 +46,45 @@ test('the KPI cards render with an explicit data status', async ({ page }) => {
   await expect(page.getByText('אין נתון', { exact: true }).first()).toBeVisible();
 });
 
-test('a chart with no data shows an explanation instead of empty axes', async ({ page }) => {
+test('the multi-year chart renders real figures and offers an accessible table', async ({
+  page,
+}) => {
   await page.goto('/');
-  const panel = page.getByText(/אין נתון זמין במקור שנאסף/).first();
-  await expect(panel).toBeVisible();
-  await expect(page.getByText(/חסומים|לא נאספו/).first()).toBeVisible();
+  const chart = page.locator('section[aria-label="תקציב וביצוע לפי שנה"]');
+  await expect(chart).toBeVisible();
+
+  // The table alternative must exist for every chart, and carry the same figures.
+  await chart.getByRole('button', { name: /הצג כטבלה/ }).click();
+  const table = chart.locator('table');
+  await expect(table).toBeVisible();
+  await expect(table).toContainText('תקציב מעודכן');
+  await expect(table).toContainText('2025');
+  // A real shekel figure, not a dash.
+  await expect(table).toContainText(/מיליארד|מיליון/);
+});
+
+test('the budget screen shows real records with statuses and sources', async ({ page }) => {
+  await page.goto('/#/budget');
+  const rows = page.locator('table.data-table tbody tr');
+  await expect(rows.first()).toBeVisible();
+  expect(await rows.count()).toBeGreaterThan(10);
+
+  // No figure may be presented without a data status.
+  await expect(page.getByText(/נתון חלקי|אומדן/).first()).toBeVisible();
+  // Every row links to its source.
+  await expect(page.locator('table.data-table tbody a[target="_blank"]').first()).toBeVisible();
+});
+
+test('filtering the budget table by ministry narrows it', async ({ page }) => {
+  await page.goto('/#/budget');
+  const rows = page.locator('table.data-table tbody tr');
+  await expect(rows.first()).toBeVisible();
+  const status = page.getByRole('status').filter({ hasText: 'שורות מתוך' });
+  const before = await status.textContent();
+
+  await page.getByLabel('משרד', { exact: true }).selectOption('environment');
+  await expect(status).not.toHaveText(before ?? '');
+  await expect(rows.first()).toBeVisible();
 });
 
 test('navigating to a ministry page works and shows coverage', async ({ page }) => {

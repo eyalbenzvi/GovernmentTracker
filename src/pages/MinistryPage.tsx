@@ -19,6 +19,8 @@ import {
   budgetChangeAbsolute,
   budgetChangePercent,
   executionRate,
+  EXECUTION_RATE_OUTLIER_HINT,
+  isExecutionRateOutlier,
   isLargeChange,
   LARGE_CHANGE_RULE_HE,
 } from '../lib/calc';
@@ -70,7 +72,6 @@ export function MinistryPage({
   const latest = [...aggregates].reverse().find((a) => a.updatedBudget !== null) ?? null;
   const latestOriginal = latest?.originalBudget ?? null;
   const latestUpdated = latest?.updatedBudget ?? null;
-  const latestExecution = latest?.execution ?? null;
 
   const noBudgetReason =
     `לא נאספו רשומות תקציב עבור ${ministry.displayName}. ${coverage?.limitations[0] ?? ''}`.trim();
@@ -176,7 +177,7 @@ export function MinistryPage({
         {tenures.length === 0 ? (
           <DataUnavailable
             title="לא נאספו נתוני כהונה"
-            reason="עמוד הרכב הממשלה הרשמי מקוטלג באתר, אך גופו לא אוחזר בסביבת הבנייה. תאריכי כהונה אינם נגזרים בהסקה, ולכן לא הוצגו שמות או תאריכים כלל."
+            reason="עמוד הרכב הממשלה הרשמי מקוטלג באתר, אך gov.il דוחה בקשות אוטומטיות ולכן גופו לא אוחזר. תאריכי כהונה אינם נגזרים בהסקה, ולכן לא הוצגו שמות או תאריכים כלל."
           />
         ) : (
           <div className="table-wrap">
@@ -242,13 +243,7 @@ export function MinistryPage({
                     }),
                   )
             }
-            status={
-              latestExecution === null
-                ? 'unavailable'
-                : latest?.executionIsEstimate === true
-                  ? 'estimate'
-                  : 'final'
-            }
+            status={latest?.executionStatus ?? 'unavailable'}
             note="שיעור ביצוע = ביצוע ÷ תקציב מעודכן × 100. מחושב רק כאשר שני הערכים תקינים והתקציב המעודכן גדול מאפס."
           />
         </div>
@@ -472,17 +467,26 @@ function BudgetItemsSection({
     {
       key: 'executionRate',
       header: 'שיעור ביצוע',
-      render: (item) => (
-        <span
-          title={
-            executionRate(item) === null
-              ? 'לא ניתן לחשב: נדרש ביצוע ותקציב מעודכן גדול מאפס'
-              : 'ביצוע ÷ תקציב מעודכן × 100'
-          }
-        >
-          {formatPercent(executionRate(item))}
-        </span>
-      ),
+      render: (item) => {
+        const rate = executionRate(item);
+        const outlier = isExecutionRateOutlier(rate);
+        return (
+          <span
+            title={
+              rate === null
+                ? 'לא ניתן לחשב: נדרשים ביצוע ותקציב מעודכן גדול מאפס'
+                : outlier
+                  ? EXECUTION_RATE_OUTLIER_HINT
+                  : 'ביצוע ÷ תקציב מעודכן × 100'
+            }
+          >
+            {formatPercent(rate)}
+            {outlier && (
+              <span className="ms-1 rounded bg-amber-100 px-1 text-xs text-amber-800">חריגה</span>
+            )}
+          </span>
+        );
+      },
       sortValue: (item) => executionRate(item),
       align: 'end',
     },

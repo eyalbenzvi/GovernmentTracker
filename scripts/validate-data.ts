@@ -173,12 +173,14 @@ function main(): void {
         rateProblems.push(`${item.id}: מאוחסן ${item.executionRate}, מחושב ${expected}`);
       }
     }
+    // An out-of-band rate must carry the explicit outlier marker, not merely *some*
+    // note — otherwise the check passes trivially on boilerplate.
     if (
       item.executionRate !== null &&
       (item.executionRate < 0 || item.executionRate > 150) &&
-      item.notes.trim() === ''
+      !item.notes.includes('חריגה:')
     ) {
-      rateProblems.push(`${item.id}: שיעור ביצוע ${item.executionRate}% ללא הערת חריגה`);
+      rateProblems.push(`${item.id}: שיעור ביצוע ${item.executionRate}% ללא הערת חריגה מפורשת`);
     }
   }
   check(

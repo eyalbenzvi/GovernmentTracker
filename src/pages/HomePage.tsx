@@ -68,7 +68,7 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
   ];
 
   const noBudgetReason =
-    'לא נאספו רשומות תקציב בגרסת נתונים זו. מתחמי המקורות הרשמיים חסומים בסביבת הבנייה, ולא הוזנו מספרים ממקור עקיף או משוער. פירוט מלא במסך המתודולוגיה.';
+    'אין רשומות תקציב התואמות את הבחירה הנוכחית. נסו טווח שנים אחר או משרד אחר. פירוט מה נאסף ומה לא — במסך המתודולוגיה.';
 
   return (
     <div className="space-y-8">
@@ -132,7 +132,7 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
             status={scopedSources.length > 0 ? 'partial' : 'unavailable'}
             note={
               scopedActivities.length === 0
-                ? 'המקורות זוהו וקוטלגו עם קישור ישיר. פריטי פעילות טרם נאספו — ראו מסך המתודולוגיה.'
+                ? 'המקורות זוהו וקוטלגו עם קישור ישיר. פריטי פעילות טרם נאספו: API הפרסומים של gov.il דוחה בקשות אוטומטיות. ראו מסך המתודולוגיה.'
                 : 'פריטי פעילות הם פרסומים פומביים בלבד, ולא תמונה מלאה של פעילות המשרד.'
             }
           />
@@ -151,19 +151,15 @@ export function HomePage({ data }: { data: Dataset }): JSX.Element {
             label={focus === null ? 'ביצוע / אומדן ביצוע' : `ביצוע / אומדן ${focus.fiscalYear}`}
             display={formatCurrencyShort(focusExecution)}
             fullValue={formatCurrencyFull(focusExecution)}
-            status={
-              focusExecution === null
-                ? 'unavailable'
-                : focus?.executionIsEstimate === true
-                  ? 'estimate'
-                  : 'final'
-            }
+            status={focus?.executionStatus ?? 'unavailable'}
             note={
               focusExecution === null
                 ? 'אין נתון זמין במקור שנאסף.'
-                : focus?.executionIsEstimate === true
-                  ? 'הנתון הוא אומדן ביצוע, ולא ביצוע סופי.'
-                  : 'ביצוע לפי מקור רשמי סופי ומזוהה.'
+                : focus?.executionStatus === 'estimate'
+                  ? 'אומדן לשנה שוטפת, ולא ביצוע סופי.'
+                  : focus?.executionStatus === 'partial'
+                    ? 'נתון חלקי: מקורו בשכבת עזר תקציבית ולא בדוח ביצוע רשמי סופי. טעון אימות מול המקור הרשמי.'
+                    : 'ביצוע לפי מקור רשמי סופי ומזוהה.'
             }
           />
         </div>

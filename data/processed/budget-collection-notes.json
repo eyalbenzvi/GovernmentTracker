@@ -1,23 +1,22 @@
 {
   "generatedAt": "2026-08-12",
-  "emitted": 0,
+  "emitted": 464,
+  "includedBudgetKind": "1 — תקציב רגיל",
+  "excludedBudgetKinds": "סעיפי תקציב הפיתוח (budget_kind_code = 2) הם סעיפים נפרדים ששמם תחומי ולא משרדי — 0060 חינוך, 0067 בריאות, 0079 תחבורה, 0076 תעשייה. שיוכם למשרד מסוים הוא הסקה שלא ניתן לבסס על שם הסעיף, ולכן הם אינם נכללים בגרסה זו. כן נכללים גם סעיפי הכנסות המדינה (4), מפעלים עסקיים (5), החזר חובות (6) ורזרבות (7).",
+  "maxDepth": 3,
   "skipped": [
     {
       "source": "https://www.gov.il/he/pages/budget-execution-reports-2024",
-      "reason": "לא ניתן לאחזר את העמוד (blocked). לא נגזרו ממנו נתונים."
+      "reason": "לא ניתן לאחזר את העמוד (http_error). לא נגזרו ממנו נתונים."
     },
     {
       "source": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
-      "reason": "לא ניתן לאחזר את העמוד (blocked). לא נגזרו ממנו נתונים."
+      "reason": "לא ניתן לאחזר את העמוד (http_error). לא נגזרו ממנו נתונים."
     },
     {
       "source": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
-      "reason": "לא ניתן לאחזר את קטלוג data.gov.il (blocked)."
-    },
-    {
-      "source": "https://next.obudget.org/api/query?query=select%20year%2C%20code%2C%20title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20year%20%3E%3D%202023%20order%20by%20year%2C%20code%20limit%20500",
-      "reason": "שכבת העזר התקציבית אינה נגישה (blocked)."
+      "reason": "נמצאו 68 מאגרים בחיפוש \"תקציב\". הם עוסקים בעיקר בתקציבי רשויות מקומיות ובנושאים אחרים, ומיפוי עמודות לסכמת BudgetItem טרם הוגדר עבורם. לכן לא נגזרו מהם נתונים אוטומטית."
     }
   ],
-  "policy": "לא נוצרו רשומות תקציב ללא מקור שאוחזר בפועל. ערך חסר נשמר כ-null ולא כאפס. חילוץ מ-PDF לא בוצע."
+  "policy": "לא נוצרו רשומות תקציב ללא מקור שאוחזר בפועל. ערך חסר נשמר כ-null ולא כאפס. חילוץ מ-PDF לא בוצע. אף רשומה אינה מסומנת כביצוע סופי, מפני שהמקור הוא שכבת עזר ולא דוח רשמי סופי."
 }

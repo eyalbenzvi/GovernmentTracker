@@ -1,54 +1,94 @@
 {
   "collectorId": "normalize-budget",
-  "startedAt": "2026-08-12T15:15:23.964Z",
-  "finishedAt": "2026-08-12T15:15:24.328Z",
-  "environmentNote": "ניסיונות איסוף התקציב בוצעו מול המקורות הרשמיים בפועל. כישלונות אחזור מתועדים כאן ובקובץ budget-collection-notes.json.",
+  "startedAt": "2026-08-12T16:42:03.231Z",
+  "finishedAt": "2026-08-12T16:42:11.082Z",
+  "environmentNote": "ניסיונות איסוף התקציב בוצעו מול המקורות הרשמיים ומול שכבת העזר בפועל. כישלונות אחזור מתועדים כאן ובקובץ budget-collection-notes.json.",
   "attempts": [
     {
       "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
       "purpose": "official budget execution figures",
-      "outcome": "blocked",
+      "outcome": "http_error",
       "httpStatus": 403,
-      "bytes": 97,
-      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: www.gov.il. Add this host to your network egress settings to allow access.",
-      "attemptedAt": "2026-08-12T15:15:24.043Z",
-      "durationMs": 79
+      "bytes": 5484,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-12T16:42:03.920Z",
+      "durationMs": 689
     },
     {
       "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
       "purpose": "official budget execution figures",
-      "outcome": "blocked",
+      "outcome": "http_error",
       "httpStatus": 403,
-      "bytes": 97,
-      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: mof.gov.il. Add this host to your network egress settings to allow access.",
-      "attemptedAt": "2026-08-12T15:15:24.058Z",
-      "durationMs": 14
+      "bytes": 5484,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-12T16:42:05.210Z",
+      "durationMs": 1290
     },
     {
       "url": "https://data.gov.il/api/3/action/package_search?q=%D7%AA%D7%A7%D7%A6%D7%99%D7%91&rows=25",
       "purpose": "discover official budget datasets on data.gov.il",
-      "outcome": "blocked",
-      "httpStatus": 403,
-      "bytes": 98,
-      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: data.gov.il. Add this host to your network egress settings to allow access.",
-      "attemptedAt": "2026-08-12T15:15:24.151Z",
-      "durationMs": 93
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 152905,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:05.942Z",
+      "durationMs": 732
     },
     {
-      "url": "https://next.obudget.org/api/query?query=select%20year%2C%20code%2C%20title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20year%20%3E%3D%202023%20order%20by%20year%2C%20code%20limit%20500",
-      "purpose": "secondary budget layer for transport code 0040",
-      "outcome": "blocked",
-      "httpStatus": 403,
-      "bytes": 103,
-      "errorMessage": "egress allowlist denial (HTTP 403): Host not in allowlist: next.obudget.org. Add this host to your network egress settings to allow access.",
-      "attemptedAt": "2026-08-12T15:15:24.327Z",
-      "durationMs": 176
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0040%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
+      "purpose": "budget hierarchy for transport section 0040",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 24272,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:06.811Z",
+      "durationMs": 868
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0020%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
+      "purpose": "budget hierarchy for education section 0020",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 45220,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:07.458Z",
+      "durationMs": 645
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0024%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
+      "purpose": "budget hierarchy for health section 0024",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 39855,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:08.670Z",
+      "durationMs": 1211
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0026%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
+      "purpose": "budget hierarchy for environment section 0026",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 20131,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:09.857Z",
+      "durationMs": 1186
+    },
+    {
+      "url": "https://next.obudget.org/api/query?query=select%20code%2C%20title%2C%20parent%2C%20depth%2C%20year%2C%20budget_kind_title%2C%20net_allocated%2C%20net_revised%2C%20net_executed%20from%20raw_budget%20where%20code%20like%20'0038%25'%20and%20depth%20%3C%3D%203%20and%20year%20%3E%3D%202023%20and%20year%20%3C%3D%202026%20and%20is_proposal%20%3D%20false%20and%20budget_kind_code%20%3D%20'1'%20order%20by%20year%2C%20code%20limit%202000",
+      "purpose": "budget hierarchy for economy section 0038",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 20910,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-12T16:42:11.061Z",
+      "durationMs": 1203
     }
   ],
   "summary": {
-    "total": 4,
-    "ok": 0,
-    "blocked": 4,
-    "failed": 0
+    "total": 8,
+    "ok": 6,
+    "blocked": 0,
+    "failed": 2
   }
 }

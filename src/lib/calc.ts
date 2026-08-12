@@ -116,3 +116,20 @@ export function isLargeChange(item: Pick<BudgetItem, 'originalBudget' | 'updated
     Math.abs(abs) >= LARGE_CHANGE_ABSOLUTE_THRESHOLD
   );
 }
+
+/**
+ * An execution rate outside 0–150% is a real source value, not a calculation
+ * error: it appears on small lines, income/refund lines, and lines whose budget
+ * changed materially mid-year. The UI must flag it rather than present it as an
+ * ordinary utilisation percentage. The build-time validator requires every such
+ * record to carry an explicit outlier note.
+ */
+export const EXECUTION_RATE_OUTLIER_MAX = 150;
+
+export function isExecutionRateOutlier(rate: number | null): boolean {
+  if (rate === null || !Number.isFinite(rate)) return false;
+  return rate < 0 || rate > EXECUTION_RATE_OUTLIER_MAX;
+}
+
+export const EXECUTION_RATE_OUTLIER_HINT =
+  'שיעור ביצוע מחוץ לטווח 0–150%. הערך נגזר מהמקור ואינו שגיאת חישוב — הוא נובע מסעיף קטן, מסעיף הכנסה/החזר, או מסעיף שתקציבו שונה מהותית במהלך השנה. אין לקרוא אותו כשיעור ניצול רגיל.';

@@ -4,14 +4,17 @@
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
     "sourcesDefined": 5,
-    "sourcesSuccessfullyCollected": 0,
+    "sourcesSuccessfullyCollected": 1,
     "activityItemCount": 0,
-    "budgetYearsAvailable": [],
-    "budgetRecordCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 76,
     "limitations": [
-      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
-      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
-      "5 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
     ]
   },
   {
@@ -21,10 +24,14 @@
     "sourcesDefined": 5,
     "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
-    "budgetYearsAvailable": [],
-    "budgetRecordCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 137,
     "limitations": [
-      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
       "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
       "5 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
@@ -34,14 +41,17 @@
     "dateRangeStart": "2022-12-29",
     "dateRangeEnd": "2026-08-12",
     "sourcesDefined": 6,
-    "sourcesSuccessfullyCollected": 0,
+    "sourcesSuccessfullyCollected": 1,
     "activityItemCount": 0,
-    "budgetYearsAvailable": [],
-    "budgetRecordCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 123,
     "limitations": [
-      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
-      "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
-      "6 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
+      "לא נאספו פריטי פעילות פומבית עבור משרד זה."
     ]
   },
   {
@@ -51,10 +61,14 @@
     "sourcesDefined": 2,
     "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
-    "budgetYearsAvailable": [],
-    "budgetRecordCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 64,
     "limitations": [
-      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
       "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
       "2 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
@@ -66,10 +80,14 @@
     "sourcesDefined": 1,
     "sourcesSuccessfullyCollected": 0,
     "activityItemCount": 0,
-    "budgetYearsAvailable": [],
-    "budgetRecordCount": 0,
+    "budgetYearsAvailable": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "budgetRecordCount": 64,
     "limitations": [
-      "לא נאספו רשומות תקציב עבור משרד זה. אין באתר תקציב מקורי, תקציב מעודכן, ביצוע או אומדן ביצוע.",
       "לא נאספו פריטי פעילות פומבית עבור משרד זה.",
       "1 מקורות רשמיים זוהו וקוטלגו, אך גוף אף מסמך לא אוחזר בסביבת הבנייה. הקישורים מפנים ישירות למקור."
     ]
