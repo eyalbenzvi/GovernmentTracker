@@ -1,7 +1,7 @@
 {
   "collectorId": "collect-sources",
-  "startedAt": "2026-08-12T19:08:07.045Z",
-  "finishedAt": "2026-08-12T19:09:19.994Z",
+  "startedAt": "2026-08-13T19:02:51.495Z",
+  "finishedAt": "2026-08-13T19:03:56.216Z",
   "environmentNote": "לסביבת הבנייה יש allowlist לתעבורה יוצאת. מתחמי המקורות הרשמיים (gov.il, knesset.gov.il, mevaker.gov.il, data.gov.il, obudget.org) אינם ב-allowlist, והבקשות אליהם נענות ב-HTTP 403 עם ההודעה \"Host not in allowlist\". זו מגבלת סביבה ולא מגבלה של המקורות עצמם.",
   "attempts": [
     {
@@ -11,178 +11,188 @@
       "httpStatus": 200,
       "bytes": 42786,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:08:08.215Z",
-      "durationMs": 1144
+      "attemptedAt": "2026-08-13T19:02:51.727Z",
+      "durationMs": 222
+    },
+    {
+      "url": "https://foi.gov.il/he/node/6747",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "http_error",
+      "httpStatus": 403,
+      "bytes": 5484,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-13T19:02:52.459Z",
+      "durationMs": 731
     },
     {
       "url": "https://fs.knesset.gov.il/25/SecondaryLaw/25_scl_r_10361229.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:09.463Z",
-      "durationMs": 1247
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 768744,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:53.441Z",
+      "durationMs": 982
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/FINANCE/17d4808b-426e-f111-a13e-005056aa7c52/4_17d4808b-426e-f111-a13e-005056aa7c52_13_21634.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:10.431Z",
-      "durationMs": 968
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 13166221,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:54.564Z",
+      "durationMs": 1121
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/180b7347-20bd-ef11-a855-005056aa1f91/2_180b7347-20bd-ef11-a855-005056aa1f91_11_20782.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:10.803Z",
-      "durationMs": 372
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 355554,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:55.116Z",
+      "durationMs": 522
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/1abb8d55-f7f7-e411-80c8-00155d010977/2_1abb8d55-f7f7-e411-80c8-00155d010977_11_10594.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:12.004Z",
-      "durationMs": 1201
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 9070247,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:56.718Z",
+      "durationMs": 1601
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/2ea0559c-53fb-f011-a13e-005056aa7c52/2_2ea0559c-53fb-f011-a13e-005056aa7c52_11_21418.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:13.202Z",
-      "durationMs": 1198
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 388682,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:57.553Z",
+      "durationMs": 809
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/3a4d2e74-99fa-f011-a13e-005056aa7c52/2_3a4d2e74-99fa-f011-a13e-005056aa7c52_11_21438.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:14.407Z",
-      "durationMs": 1204
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1200910,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:02:58.863Z",
+      "durationMs": 1308
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/48c50edd-6c2a-ec11-8138-00155d0403e7/2_48c50edd-6c2a-ec11-8138-00155d0403e7_11_18228.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:15.606Z",
-      "durationMs": 1199
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1890537,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:00.088Z",
+      "durationMs": 1221
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/5b0f90fb-bf21-ec11-813f-00155d0401c3/2_5b0f90fb-bf21-ec11-813f-00155d0401c3_11_18185.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:16.808Z",
-      "durationMs": 1202
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1150203,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:01.516Z",
+      "durationMs": 1423
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/6745f598-afce-ef11-a856-005056aa1f91/2_6745f598-afce-ef11-a856-005056aa1f91_11_20780.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:18.009Z",
-      "durationMs": 1200
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1719854,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:02.414Z",
+      "durationMs": 895
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/73dd82e9-5671-ed11-8155-005056aa4246/2_73dd82e9-5671-ed11-8155-005056aa4246_11_19906.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:19.208Z",
-      "durationMs": 1198
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1069117,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:04.083Z",
+      "durationMs": 1664
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/9640aea7-d051-f011-a85f-005056aa9911/2_9640aea7-d051-f011-a85f-005056aa9911_11_21007.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:20.411Z",
-      "durationMs": 1202
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 983044,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:04.742Z",
+      "durationMs": 656
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/9d1207dc-1277-e511-80d1-00155d0ad6b2/2_9d1207dc-1277-e511-80d1-00155d0ad6b2_11_8892.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:21.608Z",
-      "durationMs": 1197
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 863891,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:05.994Z",
+      "durationMs": 1249
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/c06946d2-f784-ec11-8147-00155d0401c3/2_c06946d2-f784-ec11-8147-00155d0401c3_11_19424.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:22.830Z",
-      "durationMs": 1222
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1229507,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:07.258Z",
+      "durationMs": 1262
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/d3985043-afce-ef11-a856-005056aa1f91/2_d3985043-afce-ef11-a856-005056aa1f91_11_20781.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:24.010Z",
-      "durationMs": 1179
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2508936,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:08.496Z",
+      "durationMs": 1235
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/fa35dfcc-1fbd-ef11-a855-005056aa1f91/2_fa35dfcc-1fbd-ef11-a855-005056aa1f91_11_20901.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:25.210Z",
-      "durationMs": 1199
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 939365,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:09.530Z",
+      "durationMs": 1027
     },
     {
       "url": "https://fs.knesset.gov.il/globaldocs/MMM/fc793c1b-6855-eb11-811a-00155d0af32a/2_fc793c1b-6855-eb11-811a-00155d0af32a_11_18149.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 296,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:26.409Z",
-      "durationMs": 1198
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1521068,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:10.857Z",
+      "durationMs": 1324
     },
     {
       "url": "https://knesset.gov.il/govt/heb/GovtByNumber.asp",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 293,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:27.797Z",
-      "durationMs": 1388
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 584,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:11.218Z",
+      "durationMs": 356
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-10/2025.10-203-Transportation.pdf",
@@ -191,8 +201,8 @@
       "httpStatus": 200,
       "bytes": 4279409,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:08:30.234Z",
-      "durationMs": 2436
+      "attemptedAt": "2026-08-13T19:03:12.560Z",
+      "durationMs": 1342
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2025/2025-Financial-and-Budgetary/2025-Financial-and-Budgetary-102-C.pdf",
@@ -201,8 +211,8 @@
       "httpStatus": 200,
       "bytes": 2183930,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:08:32.405Z",
-      "durationMs": 2144
+      "attemptedAt": "2026-08-13T19:03:13.847Z",
+      "durationMs": 1276
     },
     {
       "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Pages/Reports/133-8.aspx",
@@ -211,228 +221,228 @@
       "httpStatus": 200,
       "bytes": 84768,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:08:33.128Z",
-      "durationMs": 710
+      "attemptedAt": "2026-08-13T19:03:14.588Z",
+      "durationMs": 735
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget11-Education2025.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:34.678Z",
-      "durationMs": 1549
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1260423,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:15.719Z",
+      "durationMs": 1131
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:35.603Z",
-      "durationMs": 925
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1221943,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:16.140Z",
+      "durationMs": 417
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget15-Health2023.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:36.013Z",
-      "durationMs": 410
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 3630871,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:17.615Z",
+      "durationMs": 1471
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2025.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:37.230Z",
-      "durationMs": 1217
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1443616,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:18.518Z",
+      "durationMs": 894
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget24-Transportation2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:38.415Z",
-      "durationMs": 1185
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1916257,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:20.163Z",
+      "durationMs": 1641
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget28-Supervision2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:39.620Z",
-      "durationMs": 1205
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2876932,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:21.088Z",
+      "durationMs": 921
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/Budget9-Environment.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:40.816Z",
-      "durationMs": 1195
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 385812,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:21.992Z",
+      "durationMs": 897
     },
     {
       "url": "https://m.knesset.gov.il/About/documents/budget/BudgetMain-2023-2024.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:42.295Z",
-      "durationMs": 1479
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 11676698,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:24.078Z",
+      "durationMs": 2085
     },
     {
       "url": "https://m.knesset.gov.il/mk/government/pages/governments.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 295,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:43.244Z",
-      "durationMs": 949
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 586,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:24.279Z",
+      "durationMs": 171
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/Budget10-Science-Culture-Sport2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:44.620Z",
-      "durationMs": 1376
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1661058,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:25.723Z",
+      "durationMs": 1444
     },
     {
       "url": "https://main.knesset.gov.il/about/documents/budget/Budget15-Health.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:45.689Z",
-      "durationMs": 1068
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1221943,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:26.555Z",
+      "durationMs": 828
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/Budget22-Economics-Industry2026.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:45.958Z",
-      "durationMs": 269
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2804395,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:27.699Z",
+      "durationMs": 1141
     },
     {
       "url": "https://main.knesset.gov.il/about/documents/budget/Budget24-Transportation.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:47.162Z",
-      "durationMs": 1201
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 621541,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:28.385Z",
+      "durationMs": 680
     },
     {
       "url": "https://main.knesset.gov.il/About/documents/budget/BudgetExtra2024.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:48.366Z",
-      "durationMs": 1204
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 1538474,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:29.910Z",
+      "durationMs": 1523
     },
     {
       "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2023-2024.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:49.562Z",
-      "durationMs": 1195
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:30.617Z",
+      "durationMs": 702
     },
     {
       "url": "https://main.knesset.gov.il/About/pages/budget/budgetdocs2025.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:50.776Z",
-      "durationMs": 1214
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:31.817Z",
+      "durationMs": 1200
     },
     {
       "url": "https://main.knesset.gov.il/About/pages/budget/budgetinfo8.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:51.960Z",
-      "durationMs": 1183
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:33.017Z",
+      "durationMs": 1200
     },
     {
       "url": "https://main.knesset.gov.il/Activity/Info/MMMSummaries19/Health.pdf",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:53.269Z",
-      "durationMs": 1308
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 3022973,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:34.900Z",
+      "durationMs": 1883
     },
     {
       "url": "https://main.knesset.gov.il/mk/government/pages/coalitionagreements.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:54.365Z",
-      "durationMs": 1096
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:35.417Z",
+      "durationMs": 508
     },
     {
       "url": "https://main.knesset.gov.il/mk/government/Pages/governments.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:55.562Z",
-      "durationMs": 1197
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:36.619Z",
+      "durationMs": 1201
     },
     {
       "url": "https://main.knesset.gov.il/News/PressReleases/pages/press11.02.25b.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:56.765Z",
-      "durationMs": 1202
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:37.818Z",
+      "durationMs": 1199
     },
     {
       "url": "https://main.knesset.gov.il/News/PressReleases/pages/press24032025a.aspx",
       "purpose": "retrieve source document body for extraction",
-      "outcome": "http_error",
-      "httpStatus": 474,
-      "bytes": 298,
-      "errorMessage": "HTTP 474",
-      "attemptedAt": "2026-08-12T19:08:57.970Z",
-      "durationMs": 1205
+      "outcome": "ok",
+      "httpStatus": 247,
+      "bytes": 589,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-13T19:03:39.017Z",
+      "durationMs": 1199
     },
     {
       "url": "https://media.mevaker.gov.il/mevaker/media/ewgceczh/budgetexecution2024.pdf",
@@ -441,8 +451,8 @@
       "httpStatus": 200,
       "bytes": 1078641,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:08:59.240Z",
-      "durationMs": 1269
+      "attemptedAt": "2026-08-13T19:03:40.099Z",
+      "durationMs": 1082
     },
     {
       "url": "https://mof.gov.il/AG/BudgetExecution/Pages/default.aspx",
@@ -451,18 +461,18 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T19:09:01.325Z",
-      "durationMs": 2079
+      "attemptedAt": "2026-08-13T19:03:40.668Z",
+      "durationMs": 567
     },
     {
       "url": "https://next.obudget.org/i/budget/0040/2025",
       "purpose": "retrieve source document body for extraction",
       "outcome": "ok",
       "httpStatus": 200,
-      "bytes": 138350,
+      "bytes": 138352,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:09:06.014Z",
-      "durationMs": 4689
+      "attemptedAt": "2026-08-13T19:03:41.433Z",
+      "durationMs": 765
     },
     {
       "url": "https://www.gov.il/BlobFolder/reports/budget-execution-reports-2024/he/files_budget-execution-reports_budget-execution-reports-2024-report-accessible-file.pdf",
@@ -471,8 +481,8 @@
       "httpStatus": 200,
       "bytes": 13782662,
       "errorMessage": null,
-      "attemptedAt": "2026-08-12T19:09:17.429Z",
-      "durationMs": 11415
+      "attemptedAt": "2026-08-13T19:03:51.343Z",
+      "durationMs": 9909
     },
     {
       "url": "https://www.gov.il/he/Departments/General/members_of_the_cabinet",
@@ -481,8 +491,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T19:09:18.416Z",
-      "durationMs": 894
+      "attemptedAt": "2026-08-13T19:03:51.416Z",
+      "durationMs": 34
     },
     {
       "url": "https://www.gov.il/he/departments/topics/subject-state-budget/govil-landing-page",
@@ -491,8 +501,8 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T19:09:18.787Z",
-      "durationMs": 371
+      "attemptedAt": "2026-08-13T19:03:52.589Z",
+      "durationMs": 1173
     },
     {
       "url": "https://www.gov.il/he/pages/budget-execution-reports-2024",
@@ -501,14 +511,44 @@
       "httpStatus": 403,
       "bytes": 5484,
       "errorMessage": "HTTP 403",
-      "attemptedAt": "2026-08-12T19:09:19.992Z",
-      "durationMs": 1205
+      "attemptedAt": "2026-08-13T19:03:53.790Z",
+      "durationMs": 1201
+    },
+    {
+      "url": "https://www.gov.il/he/pages/minister_diary",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "http_error",
+      "httpStatus": 403,
+      "bytes": 5484,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-13T19:03:54.989Z",
+      "durationMs": 1199
+    },
+    {
+      "url": "https://www.odata.org.il/dataset",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "http_error",
+      "httpStatus": 403,
+      "bytes": 5769,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-13T19:03:55.159Z",
+      "durationMs": 170
+    },
+    {
+      "url": "https://www.odata.org.il/dataset/2023",
+      "purpose": "retrieve source document body for extraction",
+      "outcome": "http_error",
+      "httpStatus": 403,
+      "bytes": 5784,
+      "errorMessage": "HTTP 403",
+      "attemptedAt": "2026-08-13T19:03:56.214Z",
+      "durationMs": 1055
     }
   ],
   "summary": {
-    "total": 50,
-    "ok": 7,
+    "total": 54,
+    "ok": 46,
     "blocked": 0,
-    "failed": 43
+    "failed": 8
   }
 }
