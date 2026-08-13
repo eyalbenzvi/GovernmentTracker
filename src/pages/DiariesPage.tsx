@@ -242,13 +242,19 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">רשומות ללא נושא מפורט</p>
+              <p className="text-xs text-slate-500">נושא גנרי או מושחר</p>
               <p className="num mt-1 text-xl font-semibold">
                 {insights.totals.unspecifiedPercent === null
                   ? 'אין נתון'
                   : `${insights.totals.unspecifiedPercent}%`}
               </p>
-              <p className="mt-1 text-xs text-slate-500">מדד שקיפות, לא מדד עומס</p>
+              <p className="mt-1 text-xs text-slate-500">
+                בנוסף,{' '}
+                {insights.totals.noSubjectPercent === null
+                  ? 'אין נתון'
+                  : `${insights.totals.noSubjectPercent}%`}{' '}
+                פורסמו ללא טקסט נושא כלל
+              </p>
             </Card>
             <Card>
               <p className="text-xs text-slate-500">פרסומים שלא פוענחו</p>
@@ -290,6 +296,10 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               {formatNumber(insights.thresholds.OPACITY_MIN_ENTRIES ?? 20)} רשומות ומעלה. שיעור גבוה
               אינו עבירה — הוא אומר שהפרסום מקיים את הנוהל בצורתו ולא בתכליתו.
             </p>
+            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+              העמודה "ללא טקסט נושא" נספרת בנפרד ואינה חלק ממדד השקיפות: שורה בלי נושא יכולה לנבוע
+              מתא ריק במקור, אך גם מעמודה שהאתר לא זיהה בקובץ שפורסם — כלומר ממגבלת החילוץ שלנו.
+            </p>
             <div className="mt-3 overflow-x-auto">
               <table className="w-full min-w-[620px] text-sm">
                 <thead>
@@ -297,7 +307,8 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                     <th className="py-1 pl-3">בעל תפקיד</th>
                     <th className="py-1 pl-3">משרד</th>
                     <th className="py-1 pl-3">רשומות</th>
-                    <th className="py-1 pl-3">ללא נושא</th>
+                    <th className="py-1 pl-3">נושא גנרי/מושחר</th>
+                    <th className="py-1 pl-3">ללא טקסט נושא</th>
                     <th className="py-1">מקור</th>
                   </tr>
                 </thead>
@@ -416,11 +427,19 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">ללא נושא מפורט</dt>
+                  <dt className="text-xs text-slate-500">נושא גנרי או מושחר</dt>
                   <dd className="num font-semibold">
                     {activeProfile.opacityPercent === null
                       ? 'אין נתון'
                       : `${activeProfile.opacityPercent}%`}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs text-slate-500">ללא טקסט נושא</dt>
+                  <dd className="num">
+                    {activeProfile.noSubjectPercent === null
+                      ? 'אין נתון'
+                      : `${activeProfile.noSubjectPercent}%`}
                   </dd>
                 </div>
                 <div>

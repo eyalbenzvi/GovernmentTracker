@@ -414,6 +414,8 @@ export interface DiaryProfile {
   sourceTitle: string;
   unspecifiedCount: number;
   opacityPercent: number | null;
+  noSubjectCount: number;
+  noSubjectPercent: number | null;
   categoryCounts: Record<string, number>;
   monthly: DiaryPeriodBucket[];
   quarterly: DiaryPeriodBucket[];
@@ -471,6 +473,7 @@ export interface DiaryInsights {
     findings: number;
     crossMatches: number;
     unspecifiedPercent: number | null;
+    noSubjectPercent: number | null;
   };
   categoryTotals: Record<string, number>;
   monthlyAll: Array<{ period: string; count: number }>;

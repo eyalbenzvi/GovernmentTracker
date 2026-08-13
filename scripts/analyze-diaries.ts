@@ -171,6 +171,8 @@ interface PersonProfile {
   sourceTitle: string;
   unspecifiedCount: number;
   opacityPercent: number | null;
+  noSubjectCount: number;
+  noSubjectPercent: number | null;
   categoryCounts: Record<string, number>;
   monthly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
   quarterly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
@@ -402,6 +404,11 @@ function main(): void {
     }
 
     const unspecifiedCount = categoryCounts.unspecified ?? 0;
+    // Kept apart from the opacity measure on purpose: a row with no subject text
+    // may be the source's empty cell, but it may equally be a subject column
+    // this site failed to identify, and a transparency score must not absorb our
+    // own extraction gaps.
+    const noSubjectCount = categoryCounts.no_subject_recorded ?? 0;
     const profile: PersonProfile = {
       key,
       ministryId: first.ministryId,
@@ -421,6 +428,11 @@ function main(): void {
         personEntries.length === 0
           ? null
           : Math.round((unspecifiedCount / personEntries.length) * 1000) / 10,
+      noSubjectCount,
+      noSubjectPercent:
+        personEntries.length === 0
+          ? null
+          : Math.round((noSubjectCount / personEntries.length) * 1000) / 10,
       categoryCounts,
       monthly: periodSeries((d) => d.slice(0, 7)),
       quarterly: periodSeries(quarterOf),
@@ -635,6 +647,7 @@ function main(): void {
       'חישוב אריתמטי על רשומות היומן שנאספו. הסיווג לקטגוריות דטרמיניסטי לפי מילון מוצהר; אין מודל שפה בזמן ריצה ואין מודל שפה בזיהוי החריגים. כל כלל מוצג עם הנוסחה והסף שלו.',
     caveats: [
       'מדד מחושב רק מול מה שאותו בעל תפקיד פרסם. יומן דל אינו עדות לעומס עבודה נמוך, אלא לפרסום חלקי.',
+      'מדד השקיפות סופר רק רשומות שבהן נכתב טקסט גנרי או מושחר. רשומות שפורסמו בלי טקסט נושא כלל נספרות בנפרד ("נושא לא נרשם כלל"), מפני שהיעדר טקסט יכול לנבוע גם מעמודה שהאתר לא זיהה בקובץ — ולא רק מהמקור.',
       'קטגוריה נקבעת לפי מילות הנושא כפי שנרשמו ביומן, ואינה קביעה על מהות הפגישה.',
       'ההצלבה עם ספקים ומקבלי תמיכות מבוססת על התאמת שם כטקסט. שם דומה אינו הוכחה לזהות, ופגישה עם ספק אינה טענה לפגם. כל התאמה מוצגת עם השם שהותאם ועם קישור לשתי הישויות, לבדיקה עצמאית.',
       'שעות ומשכים מופיעים רק כאשר היומן פרסם אותם. חפיפות זמן מלמדות שהרישום גולמי.',
@@ -666,6 +679,10 @@ function main(): void {
         entries.length === 0
           ? null
           : Math.round(((categoryTotals.unspecified ?? 0) / entries.length) * 1000) / 10,
+      noSubjectPercent:
+        entries.length === 0
+          ? null
+          : Math.round(((categoryTotals.no_subject_recorded ?? 0) / entries.length) * 1000) / 10,
     },
     categoryTotals,
     monthlyAll: [...monthlyAll.entries()]

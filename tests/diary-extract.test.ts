@@ -277,11 +277,27 @@ describe('subject classification', () => {
   });
 
   it('treats a bare generic subject as unspecified, which is the transparency measure', () => {
-    for (const subject of ['פגישה', 'שיחה', 'חסוי', '  ישיבה  ', '']) {
+    for (const subject of ['פגישה', 'שיחה', 'חסוי', '  ישיבה  ']) {
       expect(isGenericSubject(subject, GENERIC)).toBe(true);
       expect(classifySubject(subject, CATEGORIES, GENERIC).categoryId).toBe('unspecified');
     }
     expect(classifySubject('פגישה עם ראש העיר', CATEGORIES, GENERIC).rule).toBe('no_match');
+  });
+
+  it('keeps "no subject text at all" apart from "text that says nothing"', () => {
+    // The distinction matters: an absent subject can come from a column this
+    // site failed to identify, so it must never inflate an opacity measure that
+    // is presented as a choice made by the office.
+    const sentinels = ['ללא נושא רשום'];
+    const absent = classifySubject('ללא נושא רשום', CATEGORIES, GENERIC, sentinels);
+    expect(absent.categoryId).toBe('no_subject_recorded');
+    expect(absent.rule).toBe('no_subject_recorded');
+    // An empty string is also absence of text, not a generic phrase.
+    expect(classifySubject('', CATEGORIES, GENERIC, sentinels).categoryId).toBe(
+      'no_subject_recorded',
+    );
+    // A generic phrase stays in the opacity bucket.
+    expect(classifySubject('פגישה', CATEGORIES, GENERIC, sentinels).categoryId).toBe('unspecified');
   });
 
   it('normalises quote variants so the same subject classifies identically', () => {

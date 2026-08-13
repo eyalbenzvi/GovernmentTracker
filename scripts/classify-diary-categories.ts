@@ -40,6 +40,8 @@ interface CategoriesSeedFile {
   classifierRule: string;
   limitations: string[];
   genericSubjects: string[];
+  /** Subjects the collector writes when the source recorded no subject text. */
+  noSubjectSentinels: string[];
   categories: CategorySeed[];
 }
 
@@ -72,7 +74,7 @@ export function isGenericSubject(subject: string, genericSubjects: readonly stri
 export interface CategoryMatch {
   categoryId: string;
   matchedKeyword: string | null;
-  rule: 'generic_subject' | 'keyword_match' | 'no_match';
+  rule: 'no_subject_recorded' | 'generic_subject' | 'keyword_match' | 'no_match';
 }
 
 /**
@@ -84,7 +86,16 @@ export function classifySubject(
   subject: string,
   categories: readonly CategorySeed[],
   genericSubjects: readonly string[],
+  noSubjectSentinels: readonly string[] = [],
 ): CategoryMatch {
+  // "The office wrote nothing" and "the office wrote something uninformative"
+  // are different facts, and only the second is a choice by the office: an
+  // absent subject can also come from a column this site failed to identify.
+  // Conflating them would let our own extraction gaps inflate a transparency
+  // measure, so the sentinel is checked first and kept in its own category.
+  if (isGenericSubject(subject, noSubjectSentinels)) {
+    return { categoryId: 'no_subject_recorded', matchedKeyword: null, rule: 'no_subject_recorded' };
+  }
   if (isGenericSubject(subject, genericSubjects)) {
     return { categoryId: 'unspecified', matchedKeyword: null, rule: 'generic_subject' };
   }
@@ -136,7 +147,12 @@ function main(): void {
     const shardPath = path.join(PROCESSED_DIR, shard.file);
     const entries = readJson<ShardEntry[]>(shardPath);
     const updated = entries.map((entry) => {
-      const match = classifySubject(entry.subject, seed.categories, seed.genericSubjects);
+      const match = classifySubject(
+        entry.subject,
+        seed.categories,
+        seed.genericSubjects,
+        seed.noSubjectSentinels,
+      );
       counts.set(match.categoryId, (counts.get(match.categoryId) ?? 0) + 1);
       classified += 1;
       return { ...entry, categoryId: match.categoryId, matchedKeyword: match.matchedKeyword };
