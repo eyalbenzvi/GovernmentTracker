@@ -396,7 +396,7 @@ async function fetchBinary(
   }
   lastBinaryHit.set(host, Date.now());
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 60_000);
+  const timer = setTimeout(() => controller.abort(), 25_000);
   try {
     const headers: Record<string, string> = { 'User-Agent': USER_AGENT, Accept: '*/*' };
     if (referer !== null) headers.Referer = referer;
@@ -959,6 +959,37 @@ function readCell(row: Record<string, unknown>, key: string): unknown {
  * verified. The first path that returns bytes wins; if all refuse, the caller
  * discloses the file as undownloadable rather than pretending it was empty.
  */
+/**
+ * Asks the Wayback availability API whether a snapshot exists at all.
+ *
+ * Without this check the collector spent hours on ~1,000 fetches for files the
+ * archive never captured, many of them timing out. One cheap JSON lookup per
+ * file replaces that: no snapshot, no fetch.
+ */
+async function archiveSnapshotUrl(logger: Logger, originalUrl: string): Promise<string | null> {
+  const result = await politeFetch(
+    `https://archive.org/wayback/available?url=${encodeURIComponent(originalUrl)}`,
+    {
+      purpose: 'collect: wayback availability',
+      logger,
+      useCache: true,
+      accept: 'application/json',
+    },
+  );
+  if (!result.ok || result.body === null) return null;
+  try {
+    const parsed = JSON.parse(result.body) as {
+      archived_snapshots?: { closest?: { available?: boolean; url?: string } };
+    };
+    const closest = parsed.archived_snapshots?.closest;
+    if (closest?.available !== true || closest.url === undefined) return null;
+    // The `id_` modifier asks for the original bytes rather than a rewritten page.
+    return closest.url.replace(/\/web\/(\d+)\//, '/web/$1id_/');
+  } catch {
+    return null;
+  }
+}
+
 async function downloadResource(
   logger: Logger,
   datasetId: string,
@@ -967,33 +998,40 @@ async function downloadResource(
   const datasetPage = `${ODATA_HOST}/dataset/${datasetId}`;
   const rid = resource.id ?? '';
   const published = resource.url ?? '';
-  const candidates: Array<[string, string]> = [
+  const directRefused = consecutiveDownloadRefusals >= DIRECT_DOWNLOAD_REFUSAL_LIMIT;
+  const directCandidates: Array<[string, string]> = [
     ['as-published', published],
     ['ckan download path', rid === '' ? '' : `${datasetPage}/resource/${rid}/download`],
-    // The repository answers its API but refuses automated file downloads (403
-    // on every path, verified by --probe-files). The Internet Archive publishes
-    // snapshots of the same public files and permits automated access, so an
-    // archived copy is a legitimate route to the document — not a way around
-    // the refusal. Provenance is recorded per row so a reader can see that a
-    // row came from a snapshot and open that snapshot.
-    [
-      'internet archive snapshot',
-      published === '' ? '' : `https://web.archive.org/web/2id_/${published}`,
-    ],
   ];
-  const directRefused = consecutiveDownloadRefusals >= DIRECT_DOWNLOAD_REFUSAL_LIMIT;
-  for (const [via, url] of candidates) {
-    if (url === '') continue;
-    const isDirect = via !== 'internet archive snapshot';
-    if (isDirect && directRefused) continue;
-    const result = await fetchBinary(logger, url, `collect: download ${via}`, datasetPage);
-    if (result.bytes !== null && result.bytes.byteLength > 0) {
-      if (isDirect) consecutiveDownloadRefusals = 0;
-      return { bytes: result.bytes, via, viaUrl: url };
+  if (!directRefused) {
+    for (const [via, url] of directCandidates) {
+      if (url === '') continue;
+      const result = await fetchBinary(logger, url, `collect: download ${via}`, datasetPage);
+      if (result.bytes !== null && result.bytes.byteLength > 0) {
+        consecutiveDownloadRefusals = 0;
+        return { bytes: result.bytes, via, viaUrl: url };
+      }
+      if (result.status === 403) consecutiveDownloadRefusals += 1;
     }
-    if (isDirect && result.status === 403) consecutiveDownloadRefusals += 1;
   }
-  return null;
+
+  // The repository answers its API but refuses automated file downloads (403 on
+  // every path, verified by --probe-files). The Internet Archive publishes
+  // snapshots of the same public files and permits automated access, so an
+  // archived copy is a legitimate route to the document — not a way around the
+  // refusal. Provenance is recorded per row so a reader can see that a row came
+  // from a snapshot and open that snapshot.
+  if (published === '') return null;
+  const snapshot = await archiveSnapshotUrl(logger, published);
+  if (snapshot === null) return null;
+  const archived = await fetchBinary(
+    logger,
+    snapshot,
+    'collect: download internet archive snapshot',
+    null,
+  );
+  if (archived.bytes === null || archived.bytes.byteLength === 0) return null;
+  return { bytes: archived.bytes, via: 'internet archive snapshot', viaUrl: snapshot };
 }
 
 /**
