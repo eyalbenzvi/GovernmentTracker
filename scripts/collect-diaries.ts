@@ -1079,6 +1079,7 @@ function extractPdf(
   // A text layer worth trusting has real words, not a handful of stray glyphs.
   const meaningful = layoutText.replace(/\s+/g, '').length;
   if (meaningful >= 200) {
+    fs.rmSync(pdfPath, { force: true });
     return { result: extractFromText(layoutText, 'pdf_text'), method: 'pdf_text' };
   }
 
@@ -1117,6 +1118,11 @@ function extractPdf(
     ocrParts.push(text);
   }
   const ocrText = ocrParts.join('\n');
+  // Rendered pages are worth megabytes each and are of no use once read.
+  for (const page of pages) {
+    fs.rmSync(path.join(workDir, page), { force: true });
+  }
+  fs.rmSync(pdfPath, { force: true });
   const truncationNote =
     pages.length > MAX_OCR_PAGES ? ` (פוענחו ${MAX_OCR_PAGES} מתוך ${pages.length} עמודים)` : '';
   const result = extractFromText(ocrText, 'pdf_ocr');
@@ -1568,6 +1574,11 @@ async function collect(): Promise<void> {
   // downloadable form. A CSV directory left by an earlier version is removed so
   // the repository never carries a stale copy alongside fresh data.
   fs.rmSync(path.join(PROCESSED_DIR, 'csv', 'diaries'), { recursive: true, force: true });
+
+  // The scratch directory holds downloaded originals and rendered page images.
+  // It is rebuilt on every run and must never reach a commit: a previous run
+  // swept hundreds of 300-DPI PNGs into git and the push was rejected outright.
+  fs.rmSync(path.join(RAW_DIR, '.diary-work'), { recursive: true, force: true });
 
   logger.flush(
     'הרצה בסביבת GitHub Actions. gov.il ו-foi.gov.il מחזירים 403 ללקוח מזוהה; odata.org.il נקרא דרך ה-API בלבד.',

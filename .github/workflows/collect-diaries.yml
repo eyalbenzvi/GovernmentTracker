@@ -129,21 +129,42 @@ jobs:
           npm run data:validate
           npm run data:report
 
-      # A collection run takes hours, and the gate can reject it over something
-      # trivial. Publication stays gated — nothing unvalidated reaches the site
-      # — but the collected data is preserved on its own branch so the defect
-      # can be fixed against the real data instead of by re-collecting.
-      - name: Preserve unvalidated data on a staging branch
-        if: steps.request.outputs.mode == 'collect' && steps.gate.outcome == 'failure'
+      # Preserve the collection before anything else can go wrong with it.
+      #
+      # Three runs in a row produced good data that was then lost: twice the gate
+      # rejected it and the runner was discarded, once the push to the work
+      # branch failed. The data now goes to its own branch first, unconditionally
+      # — that branch is not published and not built, so this preserves work
+      # without publishing anything unvalidated.
+      - name: Preserve the collection on its own branch
+        if: always() && steps.request.outputs.mode == 'collect'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Scratch files (OCR page renders, downloaded originals) are ignored,
+          # but be explicit: a previous run swept hundreds of PNGs into a commit
+          # and GitHub rejected the push outright.
+          rm -rf data/raw/.diary-work
           git checkout -B diaries-staging
           git add -A data/
-          git commit -m "data(staging): unvalidated diary collection from run ${{ github.run_id }}" || {
-            echo "nothing to preserve"; exit 1;
-          }
-          git push -f origin diaries-staging
+          if git diff --cached --quiet; then
+            echo "no collected data to preserve"
+          else
+            git commit -m "data(staging): diary collection from run ${{ github.run_id }} (gate: ${{ steps.gate.outcome }})"
+            for attempt in 1 2 3; do
+              git push -f origin HEAD:diaries-staging && break
+              echo "staging push attempt ${attempt} failed"
+              sleep $((attempt * 10))
+            done
+          fi
+          # Back to the work branch; the collection is safe on the remote now,
+          # and the publish step below takes it from there.
+          git fetch origin "${GITHUB_REF_NAME}"
+          git checkout -B "${GITHUB_REF_NAME}" "origin/${GITHUB_REF_NAME}"
+
+      - name: Report a rejected collection
+        if: steps.request.outputs.mode == 'collect' && steps.gate.outcome == 'failure'
+        run: |
           echo "::error::Validation rejected this collection. The data is preserved on branch diaries-staging (run ${{ github.run_id }}) so it can be repaired without collecting again."
           exit 1
 
@@ -160,37 +181,33 @@ jobs:
         run: git --no-pager diff --stat -- data/
 
       # A collection run takes a while, so the branch has usually moved on by the
-      # time it finishes. Rebase onto the remote before pushing, and retry, or
-      # the whole run's data would be dropped on a non-fast-forward.
-      - name: Commit collected data
+      # time it finishes. The data is taken from the staging branch (already
+      # pushed above), applied on top of the current remote head, and pushed.
+      - name: Publish the validated data to the work branch
         if: |
           steps.request.outputs.mode == 'collect' &&
           steps.request.outputs.commit == 'true' &&
           steps.gate.outcome == 'success'
         run: |
-          if git diff --quiet -- data/; then
-            echo "No data changes; nothing to commit."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "data: collect published diaries of ministers and senior officials"
           for attempt in 1 2 3 4; do
-            git fetch origin "${GITHUB_REF_NAME}"
-            # The collected data is authoritative for data/; keep it over any
-            # concurrent edit to the same generated files.
-            git rebase -X ours "origin/${GITHUB_REF_NAME}" || {
-              git rebase --abort || true
-              echo "rebase failed on attempt ${attempt}"
-              sleep $((attempt * 5))
-              continue
-            }
-            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
-              echo "pushed on attempt ${attempt}"
+            git fetch origin "${GITHUB_REF_NAME}" diaries-staging
+            git checkout -B publish-attempt "origin/${GITHUB_REF_NAME}"
+            git checkout origin/diaries-staging -- data/
+            rm -rf data/raw/.diary-work
+            git add -A data/
+            if git diff --cached --quiet; then
+              echo "No data changes; nothing to publish."
               exit 0
             fi
-            sleep $((attempt * 5))
+            git commit -m "data: collect published diaries of ministers and senior officials"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "published on attempt ${attempt}"
+              exit 0
+            fi
+            echo "publish attempt ${attempt} failed"
+            sleep $((attempt * 15))
           done
-          echo "::error::could not push collected data after 4 attempts"
+          echo "::error::Validated data could not be pushed to ${GITHUB_REF_NAME}. It is on diaries-staging and can be merged from there."
           exit 1

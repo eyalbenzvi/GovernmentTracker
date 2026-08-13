@@ -7,3 +7,5 @@ playwright-report/
 test-results/
 .cache/
 data/.cache/
+# OCR scratch: rendered page images and downloaded originals, recreated per run
+data/raw/.diary-work/
