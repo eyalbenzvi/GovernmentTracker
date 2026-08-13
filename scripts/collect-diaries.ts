@@ -46,15 +46,7 @@ import {
 } from './lib/diary-extract.js';
 import { parseCsvGrid, readXlsxGrid, type CellValue } from './lib/xlsx-lite.js';
 import { Logger } from './lib/log.js';
-import {
-  COLLECTION_LOG_DIR,
-  PROCESSED_DIR,
-  RAW_DIR,
-  readJson,
-  writeJson,
-  writeText,
-} from './lib/paths.js';
-import { toCsv } from './lib/csv.js';
+import { COLLECTION_LOG_DIR, PROCESSED_DIR, RAW_DIR, readJson, writeJson } from './lib/paths.js';
 
 const FOI_DIARIES_PAGE = 'https://foi.gov.il/he/node/6747';
 const GOVIL_DIARIES_PAGE = 'https://www.gov.il/he/pages/minister_diary';
@@ -1548,39 +1540,14 @@ async function collect(): Promise<void> {
 
   writeJson(path.join(PROCESSED_DIR, 'diaries-index.json'), output);
 
-  // One CSV per section keeps every download openable in a spreadsheet; a
-  // single 190k-row file would not be.
-  for (const [key, shardEntries] of shards) {
-    writeText(
-      path.join(PROCESSED_DIR, 'csv', 'diaries', `${key}.csv`),
-      toCsv(
-        [
-          'id',
-          'משרד',
-          'תפקיד',
-          'בעל התפקיד',
-          'תאריך',
-          'שעה',
-          'נושא',
-          'מיקום',
-          'שיטת חילוץ',
-          'מקור',
-        ],
-        shardEntries.map((e) => [
-          e.id,
-          e.ministryId ?? '',
-          e.roleLabelHe,
-          e.personLabel ?? '',
-          e.date ?? '',
-          e.startTime ?? '',
-          e.subject,
-          e.location ?? '',
-          e.extractionMethod,
-          e.sourceUrl,
-        ]),
-      ),
-    );
-  }
+  // No CSV is written for the diary rows, deliberately. At ~190k rows a full
+  // CSV export adds roughly 47MB per refresh on top of the ~92MB of JSON — a
+  // byte-for-byte duplicate of the same content in the repository's history —
+  // while the screen already exports exactly the rows a reader is looking at,
+  // filtered, from the shard it loaded. The JSON shards stay the canonical
+  // downloadable form. A CSV directory left by an earlier version is removed so
+  // the repository never carries a stale copy alongside fresh data.
+  fs.rmSync(path.join(PROCESSED_DIR, 'csv', 'diaries'), { recursive: true, force: true });
 
   logger.flush(
     'הרצה בסביבת GitHub Actions. gov.il ו-foi.gov.il מחזירים 403 ללקוח מזוהה; odata.org.il נקרא דרך ה-API בלבד.',
