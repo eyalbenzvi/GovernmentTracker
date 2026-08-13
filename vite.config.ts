@@ -23,6 +23,13 @@ function resolveBase(): string {
 export default defineConfig({
   base: resolveBase(),
   plugins: [react()],
+  // The diary shards are large (the biggest section runs to tens of thousands of
+  // rows). Emitting them as JSON.parse of a string literal, rather than as a
+  // JavaScript object literal, keeps both the build and the browser's parse fast
+  // at that size. Only default imports are used, which is what this mode allows.
+  json: {
+    stringify: true,
+  },
   build: {
     outDir: 'dist',
     sourcemap: false,
