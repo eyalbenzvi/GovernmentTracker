@@ -111,6 +111,30 @@ export function personKeyOf(entry: {
   );
 }
 
+/**
+ * Whether one published file holds the diaries of more than one person.
+ *
+ * Offices routinely publish a minister's and their director-general's diaries
+ * as a single file, and one file covers "the diaries of the ministers of the
+ * government" outright. Every row in such a file gets the publication's single
+ * identity, which produces two wrongs: one named person is credited with
+ * another's meetings, and the behavioural rules — overlapping meetings, marathon
+ * days, night meetings — fire on what is really several people's calendars laid
+ * on top of each other. The largest "874 overlapping meetings" finding in the
+ * first run was of exactly this kind.
+ *
+ * Detected on strong signals only. The plural "יומני" is deliberately NOT one:
+ * offices use it for a single person's several quarters ("יומני שר החוץ, אלי
+ * כהן"), so treating it as multi-person would suppress real profiles.
+ */
+export function coversMultiplePeople(title: string): boolean {
+  const t = title.replace(/[״”“]/g, '"').replace(/\s+/g, ' ');
+  const secondDiary = /ויומן|ו יומן/.test(t) || (t.match(/יומן/g) ?? []).length >= 2;
+  const pluralOffice = /(^|\s)שרי\s|(^|\s)סגני\s|מנכ"לים/.test(t);
+  const joinedRole = /\sו(מנכ"ל|מנכ"לית|סמנכ"ל|יו"ר|סגן|ראש)/.test(t);
+  return secondDiary || pluralOffice || joinedRole;
+}
+
 function minutesOf(time: string | null): number | null {
   if (time === null) return null;
   const m = /^(\d{2}):(\d{2})$/.exec(time);
@@ -173,6 +197,9 @@ interface PersonProfile {
   opacityPercent: number | null;
   noSubjectCount: number;
   noSubjectPercent: number | null;
+  unclassifiedCount: number;
+  unclassifiedPercent: number | null;
+  coversMultiplePeople: boolean;
   categoryCounts: Record<string, number>;
   monthly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
   quarterly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
@@ -318,6 +345,7 @@ function main(): void {
 
   const profiles: PersonProfile[] = [];
   const diaryFindings: DiaryFinding[] = [];
+  let sharedFileProfiles = 0;
 
   for (const [key, personEntries] of byPerson) {
     const first = personEntries[0];
@@ -409,10 +437,16 @@ function main(): void {
     // this site failed to identify, and a transparency score must not absorb our
     // own extraction gaps.
     const noSubjectCount = categoryCounts.no_subject_recorded ?? 0;
+    // Rows whose subject our keyword vocabulary does not cover. Reported as our
+    // coverage, never as the office-holder's opacity — see the classifier.
+    const unclassifiedCount = categoryCounts.unclassified ?? 0;
+    const shared = coversMultiplePeople(first.sourceTitle);
     const profile: PersonProfile = {
       key,
       ministryId: first.ministryId,
-      personLabel: first.personLabel,
+      // A file covering several people must not be attributed to one of them by
+      // name, even when the title happens to name one.
+      personLabel: shared ? null : first.personLabel,
       personRole: first.personRole,
       roleLabelHe: first.roleLabelHe,
       entryCount: personEntries.length,
@@ -433,6 +467,12 @@ function main(): void {
         personEntries.length === 0
           ? null
           : Math.round((noSubjectCount / personEntries.length) * 1000) / 10,
+      unclassifiedCount,
+      unclassifiedPercent:
+        personEntries.length === 0
+          ? null
+          : Math.round((unclassifiedCount / personEntries.length) * 1000) / 10,
+      coversMultiplePeople: shared,
       categoryCounts,
       monthly: periodSeries((d) => d.slice(0, 7)),
       quarterly: periodSeries(quarterOf),
@@ -451,6 +491,14 @@ function main(): void {
     profiles.push(profile);
 
     // ---- findings ---------------------------------------------------------
+    // Every rule below describes one person's conduct. On a file that holds
+    // several people's diaries there is no such person, so no finding is
+    // published from it — the rows still count in the totals and the topic mix,
+    // which remain true of the file as a whole.
+    if (shared) {
+      sharedFileProfiles += 1;
+      continue;
+    }
     const push = (ruleId: string, evidenceHe: string, value: number | null): void => {
       diaryFindings.push({
         ruleId,
@@ -612,7 +660,9 @@ function main(): void {
         ruleId: candidate.kind === 'supplier' ? 'supplier_meeting' : 'support_recipient_meeting',
         entryId: entry.id,
         ministryId: entry.ministryId,
-        personLabel: entry.personLabel,
+        // The row is real, but on a file covering several people it cannot be
+        // attributed to the one the title happens to name.
+        personLabel: coversMultiplePeople(entry.sourceTitle) ? null : entry.personLabel,
         roleLabelHe: entry.roleLabelHe,
         date: entry.date,
         subject: entry.subject,
@@ -647,7 +697,8 @@ function main(): void {
       'חישוב אריתמטי על רשומות היומן שנאספו. הסיווג לקטגוריות דטרמיניסטי לפי מילון מוצהר; אין מודל שפה בזמן ריצה ואין מודל שפה בזיהוי החריגים. כל כלל מוצג עם הנוסחה והסף שלו.',
     caveats: [
       'מדד מחושב רק מול מה שאותו בעל תפקיד פרסם. יומן דל אינו עדות לעומס עבודה נמוך, אלא לפרסום חלקי.',
-      'מדד השקיפות סופר רק רשומות שבהן נכתב טקסט גנרי או מושחר. רשומות שפורסמו בלי טקסט נושא כלל נספרות בנפרד ("נושא לא נרשם כלל"), מפני שהיעדר טקסט יכול לנבוע גם מעמודה שהאתר לא זיהה בקובץ — ולא רק מהמקור.',
+      'מדד השקיפות סופר רק רשומות שבהן נכתב טקסט גנרי או מושחר. שני מצבים אחרים נספרים בנפרד ואינם נכנסים למדד: רשומה שפורסמה בלי טקסט נושא כלל ("נושא לא נרשם כלל"), שיכולה לנבוע גם מעמודה שהאתר לא זיהה בקובץ; ורשומה שיש בה טקסט אמיתי שמילון הקטגוריות של האתר אינו מכסה ("נושא שלא סווג"), שהיא פער בכיסוי שלנו. ייחוס פער כזה לאטימות של בעל תפקיד היה מדד שגוי.',
+      'פרסום שמאגד את יומניהם של כמה בעלי תפקיד באותו קובץ אינו יומן של אדם אחד. רשומותיו נספרות בסך הכולל ובתמהיל הנושאים, אך לא מופק ממנו שום ממצא אישי ולא מיוחס לו שם — פגישות חופפות או יום עמוס בקובץ כזה הם לוחות זמנים של אנשים שונים זה על גב זה.',
       'קטגוריה נקבעת לפי מילות הנושא כפי שנרשמו ביומן, ואינה קביעה על מהות הפגישה.',
       'ההצלבה עם ספקים ומקבלי תמיכות מבוססת על התאמת שם כטקסט. שם דומה אינו הוכחה לזהות, ופגישה עם ספק אינה טענה לפגם. כל התאמה מוצגת עם השם שהותאם ועם קישור לשתי הישויות, לבדיקה עצמאית.',
       'שעות ומשכים מופיעים רק כאשר היומן פרסם אותם. חפיפות זמן מלמדות שהרישום גולמי.',
@@ -675,10 +726,26 @@ function main(): void {
       ministries: new Set(profiles.map((p) => p.ministryId).filter((id) => id !== null)).size,
       findings: diaryFindings.length,
       crossMatches: crossMatches.length,
+      sharedFileProfiles,
       unspecifiedPercent:
         entries.length === 0
           ? null
           : Math.round(((categoryTotals.unspecified ?? 0) / entries.length) * 1000) / 10,
+      unclassifiedPercent:
+        entries.length === 0
+          ? null
+          : Math.round(((categoryTotals.unclassified ?? 0) / entries.length) * 1000) / 10,
+      classifiedPercent:
+        entries.length === 0
+          ? null
+          : Math.round(
+              ((entries.length -
+                (categoryTotals.unclassified ?? 0) -
+                (categoryTotals.unspecified ?? 0) -
+                (categoryTotals.no_subject_recorded ?? 0)) /
+                entries.length) *
+                1000,
+            ) / 10,
       noSubjectPercent:
         entries.length === 0
           ? null

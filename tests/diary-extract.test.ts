@@ -16,9 +16,11 @@ import { extractFromGrid, extractFromText, mapGridHeader } from '../scripts/lib/
 import {
   classifySubject,
   isGenericSubject,
+  matchesAsWord,
   normalizeSubject,
 } from '../scripts/classify-diary-categories';
 import {
+  coversMultiplePeople,
   isGovernmentEntityName,
   isWeekend,
   normalizeEntityName,
@@ -298,6 +300,59 @@ describe('subject classification', () => {
     );
     // A generic phrase stays in the opacity bucket.
     expect(classifySubject('פגישה', CATEGORIES, GENERIC, sentinels).categoryId).toBe('unspecified');
+  });
+
+  it('matches a keyword only as a whole word, since Hebrew words contain each other', () => {
+    // Every pair below misclassified real collected rows before the boundary
+    // rule existed: over 11,000 travel entries were filed as party politics
+    // because "נסיעה" contains "סיעה".
+    expect(matchesAsWord('נסיעה לירושלים', 'סיעה')).toBe(false);
+    expect(matchesAsWord('מעקב הוצאות והכנסות', 'כנס')).toBe(false);
+    expect(matchesAsWord('התכנסות מחלקתית', 'כנס')).toBe(false);
+    expect(matchesAsWord('דיון בנושא חברתי', 'חברת')).toBe(false);
+    // A real occurrence still matches, including through Hebrew's one-letter
+    // prefixes, which belong to the sentence rather than to the word.
+    expect(matchesAsWord('כינוס סיעה', 'סיעה')).toBe(true);
+    expect(matchesAsWord('הצבעה בכנסת', 'כנסת')).toBe(true);
+    expect(matchesAsWord('דיון ולסיעה הודע', 'סיעה')).toBe(true);
+    expect(matchesAsWord('חברת בזק', 'חברת')).toBe(true);
+    // A keyword that deliberately ends in an attaching prefix must still reach
+    // the word after it.
+    expect(matchesAsWord('ביקור במרכז הרפואי', 'ביקור ב')).toBe(true);
+  });
+
+  it("separates our own coverage gap from the office holder's opacity", () => {
+    // A subject with real, informative text that no keyword covers is a limit
+    // of this site's vocabulary. Counting it as opacity published a finding
+    // against people by name for words we simply had not listed.
+    const gap = classifySubject('דיון בנושא רפורמת הכשרות', CATEGORIES, GENERIC);
+    expect(gap.rule).toBe('no_match');
+    expect(gap.categoryId).toBe('unclassified');
+    expect(gap.matchedKeyword).toBeNull();
+    // Generic text remains the transparency measure, and absent text stays its
+    // own third thing.
+    expect(classifySubject('פגישה', CATEGORIES, GENERIC).categoryId).toBe('unspecified');
+    expect(classifySubject('', CATEGORIES, GENERIC, ['ללא נושא רשום']).categoryId).toBe(
+      'no_subject_recorded',
+    );
+  });
+
+  it("flags a publication that holds several people's diaries, and only on strong signals", () => {
+    // Titles taken verbatim from the collected publications.
+    expect(
+      coversMultiplePeople('יומן שר הרווחה, יעקב מרגי ויומן מנכ"ל משרד הרווחה, ינון אהרוני'),
+    ).toBe(true);
+    expect(coversMultiplePeople('יומני שרי ממשלת ישראל שנת 2023')).toBe(true);
+    expect(coversMultiplePeople('יומן שרי הפנים, אריה דרעי ומיכאל מלכיאלי לשנת 2023')).toBe(true);
+    expect(
+      coversMultiplePeople('יומני השר לביטחון לאומי, איתמר בן גביר ומנכ"ל המשרד, רפאל אנגל'),
+    ).toBe(true);
+    // The plural "יומני" alone is not a signal: offices use it for one person's
+    // several quarters, and treating it as multi-person would erase real
+    // profiles.
+    expect(coversMultiplePeople('יומני שר החוץ, אלי כהן, לשנת 2023 (רבעון ראשון)')).toBe(false);
+    expect(coversMultiplePeople('יומן מנכ"ל משרד הביטחון, אייל זמיר, לשנת 2025')).toBe(false);
+    expect(coversMultiplePeople('יומן שר המשפטים, יריב לוין, לשנת 2024 (רבעון שני)')).toBe(false);
   });
 
   it('normalises quote variants so the same subject classifies identically', () => {

@@ -9,7 +9,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_ocr",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -100,7 +100,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -113,7 +113,7 @@
     "location": "חדר ישיבות לשכת שר,משרד הפנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -126,7 +126,7 @@
     "location": "קפלן 2 משרד ראשי- מרתף אולם ישיבות קומה 1-",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -139,7 +139,7 @@
     "location": "לשכה כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -152,8 +152,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "personal_private",
-    "matchedKeyword": "שבעה"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "מליאה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-12",
@@ -191,7 +191,7 @@
     "location": "האוניברסיטה העברית בירושלים - האוניברסיטה העברית בירושלים, קרית אדמונד י' ספרא, גבעת רם, ירושלים, 9190401, ישראל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -217,7 +217,7 @@
     "location": "רח׳ פנים מאירות 9 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -230,7 +230,7 @@
     "location": "רח׳ אלפנדרי 33 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -243,7 +243,7 @@
     "location": "ישיבת אור החיים - רח׳ עזרא 1, ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -256,7 +256,7 @@
     "location": "חזון איש 17 ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -269,8 +269,8 @@
     "location": "ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-21",
@@ -282,7 +282,7 @@
     "location": "רח׳ חכם שמעון אגסי 1 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -321,7 +321,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -347,7 +347,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -360,7 +360,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -373,7 +373,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -451,8 +451,8 @@
     "location": "רח׳ יאיר אברהם שטרן 17 נתניה, ישראל פינת אבו שדיד",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "personal_private",
+    "matchedKeyword": "תפילה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-35",
@@ -464,7 +464,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -477,7 +477,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -490,7 +490,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -516,7 +516,7 @@
     "location": "ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -529,8 +529,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-41",
@@ -542,7 +542,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -633,7 +633,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -646,7 +646,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -659,7 +659,7 @@
     "location": "משרד הפנים,קפלן 2 ,קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -698,7 +698,7 @@
     "location": "לשכת השר ברח הארבעה 12, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -711,7 +711,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -724,7 +724,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -776,7 +776,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -789,7 +789,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -802,7 +802,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -828,7 +828,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -841,8 +841,8 @@
     "location": "מליאת הכנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-66",
@@ -854,7 +854,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -893,7 +893,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -919,7 +919,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -932,7 +932,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -945,7 +945,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -958,8 +958,8 @@
     "location": "מלון הילטון, הירקון 205, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "diplomacy",
-    "matchedKeyword": "שגריר"
+    "categoryId": "unclassified",
+    "matchedKeyword": null
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-75",
@@ -984,7 +984,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -997,7 +997,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1010,7 +1010,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1023,7 +1023,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1036,7 +1036,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1049,7 +1049,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1062,7 +1062,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1075,7 +1075,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1088,7 +1088,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1101,7 +1101,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1114,7 +1114,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1127,7 +1127,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1140,7 +1140,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1153,7 +1153,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1166,7 +1166,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1192,7 +1192,7 @@
     "location": "מליאה בכנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1205,7 +1205,7 @@
     "location": "מלון המלך דוד",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1218,7 +1218,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1244,7 +1244,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1257,7 +1257,7 @@
     "location": "מרכז רפואי צפון פוריה",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1296,7 +1296,7 @@
     "location": "רומת הייב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1309,7 +1309,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1322,7 +1322,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1335,7 +1335,7 @@
     "location": "משרד הבריאות לשכת שר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1361,7 +1361,7 @@
     "location": "ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1387,7 +1387,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1413,7 +1413,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1452,7 +1452,7 @@
     "location": "בית הנשיא, זבוטינסקי 44, ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1478,7 +1478,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1491,7 +1491,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1504,7 +1504,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1530,7 +1530,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1543,7 +1543,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1556,7 +1556,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1569,7 +1569,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1582,8 +1582,8 @@
     "location": "משרד הפנים,קפלן 2,קומה 1,לשכת שר הפנים.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "civil_society",
-    "matchedKeyword": "ועד"
+    "categoryId": "unclassified",
+    "matchedKeyword": null
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-111",
@@ -1608,7 +1608,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1621,7 +1621,7 @@
     "location": "חיפה",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1634,7 +1634,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1647,7 +1647,7 @@
     "location": "בביתו של אריה דרעי מושב ספסופא",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1673,7 +1673,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1686,7 +1686,7 @@
     "location": "הדסה עין כרם",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1699,7 +1699,7 @@
     "location": "בלשכה כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1712,8 +1712,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-121",
@@ -1738,7 +1738,7 @@
     "location": "משרד הפנים, קפלן 2, קומה 1,חדר ישיבות שר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1751,7 +1751,7 @@
     "location": "לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1764,7 +1764,7 @@
     "location": "משרד הפנים,קפלן 2,קומה1(חדר ישבות לשכת השר)",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1777,7 +1777,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1790,7 +1790,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1829,7 +1829,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1842,7 +1842,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1855,7 +1855,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1868,7 +1868,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר הפנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1881,7 +1881,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1, לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1920,7 +1920,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1946,7 +1946,7 @@
     "location": "מתחם האירוח \"ידידיה\", רוטשילד 85 ,פתח תקווה.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1959,7 +1959,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -1972,8 +1972,8 @@
     "location": "עמיקם",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ניחום אבלים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-141",
@@ -1985,8 +1985,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-142",
@@ -1998,7 +1998,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2037,7 +2037,7 @@
     "location": "לשכת היועצת בירושלים - סלאח א דין 29 , קומה 2",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2050,7 +2050,7 @@
     "location": "קפלן 2, משרד הפנים,לשכת שר פנים, קומה 1",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2089,7 +2089,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2102,7 +2102,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר הפנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2115,7 +2115,7 @@
     "location": "קפלן 2,משרד הפנים,קומה 1, לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2128,8 +2128,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-153",
@@ -2141,7 +2141,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2154,7 +2154,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2167,7 +2167,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2193,7 +2193,7 @@
     "location": "לשכת שר הבריאות,ירמיהו 39, ירושלים,קומה 13",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2206,7 +2206,7 @@
     "location": "לשכת שר הבריאות,ירמיהו 39 ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2219,7 +2219,7 @@
     "location": "לשכת השר בריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2245,7 +2245,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2271,7 +2271,7 @@
     "location": "חדר בכנסת 1478",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2284,8 +2284,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "מליאה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-165",
@@ -2297,7 +2297,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2310,8 +2310,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-167",
@@ -2323,7 +2323,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2336,7 +2336,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2349,7 +2349,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2362,7 +2362,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2375,7 +2375,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2388,7 +2388,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2401,7 +2401,7 @@
     "location": "לשכת השר בריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2414,7 +2414,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1 חדר ישיבות לשכת שר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2453,7 +2453,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2466,7 +2466,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2479,7 +2479,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2492,7 +2492,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2518,7 +2518,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2570,8 +2570,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-187",
@@ -2596,7 +2596,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2622,7 +2622,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2635,7 +2635,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2661,7 +2661,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2674,7 +2674,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2700,7 +2700,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2713,7 +2713,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2739,7 +2739,7 @@
     "location": "אצל פרופ' גמזו",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2752,7 +2752,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2765,7 +2765,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2778,7 +2778,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2791,7 +2791,7 @@
     "location": "משרד הפנים, קפלן 2, ירושלים, קומה 1, לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2804,7 +2804,7 @@
     "location": "משרד הפנים, קפלן 2, ירושלים, קומה 1, לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2830,7 +2830,7 @@
     "location": "לשכה בריאות-ירמיהו 39 ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2856,7 +2856,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2869,7 +2869,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2882,7 +2882,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2895,7 +2895,7 @@
     "location": "לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2908,7 +2908,7 @@
     "location": "ירושלים,ירמיהו 39,משרד הבריאות, לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2921,7 +2921,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2934,7 +2934,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -2960,8 +2960,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-217",
@@ -3012,7 +3012,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3025,8 +3025,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-222",
@@ -3064,7 +3064,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3129,8 +3129,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-230",
@@ -3142,7 +3142,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3181,7 +3181,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3220,7 +3220,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3233,7 +3233,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3246,8 +3246,8 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-239",
@@ -3259,7 +3259,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3272,7 +3272,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3285,7 +3285,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3298,7 +3298,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3311,7 +3311,7 @@
     "location": "לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3363,7 +3363,7 @@
     "location": "בלשכה כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3376,7 +3376,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3389,7 +3389,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3402,7 +3402,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3441,7 +3441,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3454,8 +3454,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "טיסה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-255",
@@ -3467,8 +3467,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "טיסה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-256",
@@ -3480,8 +3480,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "טיסה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-257",
@@ -3493,7 +3493,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3506,7 +3506,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3545,7 +3545,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3558,7 +3558,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3571,7 +3571,7 @@
     "location": "טלפוני",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3584,7 +3584,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ת\"א",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3610,7 +3610,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ת\"א",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3623,7 +3623,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3662,7 +3662,7 @@
     "location": "מתנס פסגות ה-7, דרך יצחק רבין 21, בית שמש",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3675,7 +3675,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3688,8 +3688,8 @@
     "location": "בני ברק",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ניחום אבלים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-273",
@@ -3701,7 +3701,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3727,7 +3727,7 @@
     "location": "לשכת שר הפנים קפלן 2,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3740,7 +3740,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3766,7 +3766,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3779,7 +3779,7 @@
     "location": "קפלן 2, קומה 5 ,לשכת שר הרווחה",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3792,7 +3792,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1 חדר ישיבות לשכת שר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3805,7 +3805,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3818,7 +3818,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3844,7 +3844,7 @@
     "location": "לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3870,8 +3870,8 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "private_sector",
-    "matchedKeyword": "לובי"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "ח\"כ"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-287",
@@ -3896,7 +3896,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39 ,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3909,7 +3909,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3935,7 +3935,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3948,7 +3948,7 @@
     "location": "כנסת חדר 1478",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3961,8 +3961,8 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-294",
@@ -3974,7 +3974,7 @@
     "location": "חדר 3836 קומה 3 בכנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -3987,8 +3987,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-296",
@@ -4000,7 +4000,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4013,7 +4013,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4026,7 +4026,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1, לשכת השר ,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4039,8 +4039,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-300",
@@ -4052,7 +4052,7 @@
     "location": "אודיטורים ע\"ש שילנסקי, כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4065,7 +4065,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4078,7 +4078,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4091,7 +4091,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת השר,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4104,7 +4104,7 @@
     "location": "מליאת הכנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4130,7 +4130,7 @@
     "location": "האנגר 11, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4143,7 +4143,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4156,8 +4156,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-309",
@@ -4182,8 +4182,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-311",
@@ -4195,7 +4195,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4208,7 +4208,7 @@
     "location": "רח' הארבעה 12, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4221,7 +4221,7 @@
     "location": "רח' הארבעה 12, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4234,7 +4234,7 @@
     "location": "כתובת רח' אחד העם 9, מגדל שלום, תל אביב",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4247,7 +4247,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4260,7 +4260,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4286,7 +4286,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4312,8 +4312,8 @@
     "location": "ר\"ח אהרון מסקין 3 ,כפר גנים ג', פתח תקווה",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-321",
@@ -4325,7 +4325,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4338,7 +4338,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4351,7 +4351,7 @@
     "location": "משרד הבריאות, ירמיהו 39, קומה 13, לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4390,7 +4390,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4429,7 +4429,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4442,7 +4442,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4468,7 +4468,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4481,7 +4481,7 @@
     "location": "משרד המשפטים, סאלח א-דין 29, קומה 2 בלשכה של המשנה ליועצת המשפטית אביטל סומפולינסקי",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4494,7 +4494,7 @@
     "location": "לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4507,7 +4507,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4520,7 +4520,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4533,7 +4533,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4559,7 +4559,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4585,8 +4585,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-342",
@@ -4598,7 +4598,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4624,7 +4624,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4650,7 +4650,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4663,7 +4663,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39, ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4689,7 +4689,7 @@
     "location": "מושב יסודות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4754,8 +4754,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-355",
@@ -4780,8 +4780,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-357",
@@ -4806,7 +4806,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4832,8 +4832,8 @@
     "location": "מרוקו",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-360",
@@ -4845,7 +4845,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4858,7 +4858,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4871,7 +4871,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4884,8 +4884,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-364",
@@ -4897,8 +4897,8 @@
     "location": "ארצות הברית",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-365",
@@ -4949,8 +4949,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ארוחת ערב"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-369",
@@ -4962,8 +4962,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-370",
@@ -4975,7 +4975,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -4988,8 +4988,8 @@
     "location": "נוי ג' רזי",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "private_sector",
-    "matchedKeyword": "מפעל"
+    "categoryId": "field_visits",
+    "matchedKeyword": "סיור"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-372",
@@ -5001,7 +5001,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5027,7 +5027,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5079,7 +5079,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5105,7 +5105,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5144,7 +5144,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5157,8 +5157,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-385",
@@ -5183,7 +5183,7 @@
     "location": "לשכת שר הבריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5196,7 +5196,7 @@
     "location": "לשכה בריאות-ירמיהו 39 ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5209,7 +5209,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5222,7 +5222,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5261,7 +5261,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5274,7 +5274,7 @@
     "location": "מושב בת מאיר",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5287,7 +5287,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5300,7 +5300,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5313,7 +5313,7 @@
     "location": "אוניברסיטת אריאל בשומרון",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5326,7 +5326,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5352,7 +5352,7 @@
     "location": "עמנואל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5365,7 +5365,7 @@
     "location": "ליד בנין המועצה - עמנואל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5378,7 +5378,7 @@
     "location": "הגר\"א 11 מול מתנ\"ספריה",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5391,8 +5391,8 @@
     "location": "עמנואל",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ארוחת צהריים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-e021e1b3-403",
@@ -5404,7 +5404,7 @@
     "location": "מול קופ\"ח לאומית",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5430,7 +5430,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5456,7 +5456,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5482,7 +5482,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5534,7 +5534,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5560,7 +5560,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5573,7 +5573,7 @@
     "location": "משרד הבריאות, לשכה תל-אביב, רח' הארבעה 12, לשכת שר הבריאות.",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5586,7 +5586,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12,ת\"א",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5599,7 +5599,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ,ת\"א",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5612,7 +5612,7 @@
     "location": "רח' בן ישי 4 ,ת\"א",
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5625,7 +5625,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5638,7 +5638,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5651,7 +5651,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5677,7 +5677,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "datastore",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5690,7 +5690,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_ocr",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5703,7 +5703,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_ocr",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5716,7 +5716,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5729,7 +5729,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5742,7 +5742,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5755,7 +5755,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5768,7 +5768,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5781,7 +5781,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5794,7 +5794,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5807,7 +5807,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5820,7 +5820,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5833,7 +5833,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5846,7 +5846,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5859,7 +5859,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5872,7 +5872,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5885,7 +5885,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5898,7 +5898,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5911,7 +5911,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5924,7 +5924,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5937,7 +5937,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5950,7 +5950,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5963,7 +5963,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5976,7 +5976,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -5989,7 +5989,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6002,7 +6002,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6015,7 +6015,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6028,7 +6028,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6041,7 +6041,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6054,7 +6054,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6067,7 +6067,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6080,7 +6080,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6093,7 +6093,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6106,7 +6106,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6119,7 +6119,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6132,7 +6132,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6145,7 +6145,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6158,7 +6158,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6171,7 +6171,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6184,7 +6184,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6197,7 +6197,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6210,7 +6210,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6223,7 +6223,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6236,7 +6236,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6249,7 +6249,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6262,7 +6262,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6275,7 +6275,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6288,7 +6288,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6301,7 +6301,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6314,7 +6314,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6327,7 +6327,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6340,7 +6340,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6353,7 +6353,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6366,7 +6366,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6379,7 +6379,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6392,7 +6392,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6405,7 +6405,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6418,7 +6418,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6431,7 +6431,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6444,7 +6444,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6457,7 +6457,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6470,7 +6470,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6483,7 +6483,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6496,7 +6496,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6509,7 +6509,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6522,7 +6522,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6535,7 +6535,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6548,7 +6548,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6561,7 +6561,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6574,7 +6574,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6587,7 +6587,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6600,7 +6600,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6613,7 +6613,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6626,7 +6626,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6639,7 +6639,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6652,7 +6652,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6665,7 +6665,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6678,7 +6678,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6691,7 +6691,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6704,7 +6704,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6717,7 +6717,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6730,7 +6730,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6743,7 +6743,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6756,7 +6756,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6769,7 +6769,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6782,7 +6782,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6795,7 +6795,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6808,7 +6808,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6821,7 +6821,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6834,7 +6834,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6847,7 +6847,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6860,7 +6860,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6873,7 +6873,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6886,7 +6886,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6899,7 +6899,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "pdf_text",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6925,7 +6925,7 @@
     "location": null,
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6951,7 +6951,7 @@
     "location": "בית הנשיא, זבוטינסקי 44, ירושלים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6977,7 +6977,7 @@
     "location": "לשכה בריאות",
     "participants": "sarpnim@moin.gov.il;משה ארבל;שרון אלרעי פרייס;רונה קייזר;רחל מנדלוביץ;ליאורה גיא דוד;חיים הופרט;איתי חזן",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -6990,7 +6990,7 @@
     "location": "לשכה בריאות",
     "participants": "משה בר סימן טוב;משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7003,7 +7003,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7029,7 +7029,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7042,7 +7042,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7055,7 +7055,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת השר",
     "participants": "sarpnim@moin.gov.il;'refaele@iplan.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7068,7 +7068,7 @@
     "location": "חדר ישיבות לשכת שר,משרד הפנים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7081,8 +7081,8 @@
     "location": "משרד הפנים,קפלן 2,קומה 1,לשכת שר הפנים.",
     "participants": "'tomerg@iplan.gov.il';'danke@iplan.gov.il';'yaelsa@iplan.gov.il';'erezbe@iplan.gov.il';'elnatan@moin.gov.il';'RonenSe@iplan.gov.il';משה ארבל;'erannit@iplan.gov.il';sarpnim@moin.gov.il;'refaele@iplan.gov.il';'odedflu@iplan.gov.il';'ShiraTa@iplan.gov.il';'michag@iplan.gov.il';'ronenpe@moin.gov.il';'diklaap@iplan.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "civil_society",
-    "matchedKeyword": "ועד"
+    "categoryId": "unclassified",
+    "matchedKeyword": null
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-111",
@@ -7107,7 +7107,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7120,7 +7120,7 @@
     "location": "חיפה",
     "participants": "sarpnim@moin.gov.il;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7133,7 +7133,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7146,7 +7146,7 @@
     "location": "בביתו של אריה דרעי מושב ספסופא",
     "participants": "'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7172,7 +7172,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7185,7 +7185,7 @@
     "location": "הדסה עין כרם",
     "participants": "sarpnim@moin.gov.il;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7198,7 +7198,7 @@
     "location": "בלשכה כנסת",
     "participants": "sarpnim@moin.gov.il;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7224,8 +7224,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-121",
@@ -7250,7 +7250,7 @@
     "location": "משרד הפנים, קפלן 2, קומה 1,חדר ישיבות שר",
     "participants": "'yoamash123@gmail.com';משה ארבל;רובי שמש;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7263,7 +7263,7 @@
     "location": "לשכת השר",
     "participants": "משה ארבל;sarpnim@moin.gov.il;רובי שמש",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7276,7 +7276,7 @@
     "location": "משרד הפנים,קפלן 2,קומה1(חדר ישבות לשכת השר)",
     "participants": "'eyalsi@piba.gov.il';'tamarmo@piba.gov.il';משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7289,7 +7289,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7302,7 +7302,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7354,7 +7354,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר",
     "participants": "sarpnim@moin.gov.il;'maiergo@moin.gov.il';'yogev@digital.gov.il';'amirar@moin.gov.il';משה ארבל;רובי שמש;'eyalsi@piba.gov.il';'tamarmo@piba.gov.il';'royf@cyber.gov.il';'naamab@cyber.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7367,7 +7367,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר הפנים",
     "participants": "עודד פורר חיצוני;sarpnim@moin.gov.il;משה ארבל;'tamarmo@piba.gov.il';'eyalsi@piba.gov.il';רובי שמש",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7380,7 +7380,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1, לשכת השר",
     "participants": "משה ארבל;sarpnim@moin.gov.il;'chaya@bichler.co.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7432,7 +7432,7 @@
     "location": "מתחם האירוח \"ידידיה\", רוטשילד 85 ,פתח תקווה.",
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7445,7 +7445,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7458,7 +7458,7 @@
     "location": "האוניברסיטה העברית בירושלים - האוניברסיטה העברית בירושלים, קרית אדמונד י' ספרא, גבעת רם, ירושלים, 9190401, ישראל",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7471,8 +7471,8 @@
     "location": "עמיקם",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ניחום אבלים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-141",
@@ -7484,8 +7484,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-142",
@@ -7497,7 +7497,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7536,7 +7536,7 @@
     "location": "לשכת היועצת בירושלים - סלאח א דין 29 , קומה 2",
     "participants": "משה ארבל;Roy Cohen;YM-OZRIM;YM-Yoman;Hagai Harush;sapir gavriel",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7549,7 +7549,7 @@
     "location": "קפלן 2, משרד הפנים,לשכת שר פנים, קומה 1",
     "participants": "'yiftachso@moin.gov.il';'yehudazi@moin.gov.il';sarpnim@moin.gov.il;'elnatan@moin.gov.il';'semadar.ben-maor@elbitsystems.com';'Ronenpe@moin.gov.il';ישראל אוזן;מיכל כהן1;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7588,7 +7588,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": "sarpnim@moin.gov.il;משה ארבל;משה בר סימן טוב;'D0505356615@gmail.com'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7601,7 +7601,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת שר הפנים",
     "participants": "sarpnim@moin.gov.il;משה ארבל;'moshemor@moin.gov.il';'yosefsim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7614,7 +7614,7 @@
     "location": "קפלן 2,משרד הפנים,קומה 1, לשכת השר",
     "participants": "משה ארבל;sarpnim@moin.gov.il;'shahartal@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7627,8 +7627,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-154",
@@ -7640,7 +7640,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7666,7 +7666,7 @@
     "location": "לשכת שר הבריאות,ירמיהו 39, ירושלים,קומה 13",
     "participants": "משה ארבל;משה בר סימן טוב;sarpnim@moin.gov.il;רן רידניק;ד\"ר הגר מזרחי;חיים הופרט;ליאור ברק;דנה נויפלד;רננה מיסקין;אורלי מלכה;ישראל בן דוד;שירה סולומון דוברת",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7679,7 +7679,7 @@
     "location": "לשכת שר הבריאות,ירמיהו 39 ירושלים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;ישראל אוזן;sharona@kilya.org.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7692,7 +7692,7 @@
     "location": "לשכת השר בריאות ירמיהו 39,ירושלים",
     "participants": "יובל לנדשפט;ישראל אוזן;'sarpnim@moin.gov.il';משה ארבל;רן רידניק;עידן בוק",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7705,7 +7705,7 @@
     "location": "רח׳ פנים מאירות 9 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7718,7 +7718,7 @@
     "location": "כנסת",
     "participants": "sarpnim@moin.gov.il;משה ארבל;'yor@shas.org.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7744,7 +7744,7 @@
     "location": "חדר בכנסת 1478",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7757,8 +7757,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "מליאה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-165",
@@ -7770,7 +7770,7 @@
     "location": "כנסת",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7783,7 +7783,7 @@
     "location": "רח׳ אלפנדרי 33 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7796,7 +7796,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "אשר שלמון - Dr. Asher Salmon;'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7809,7 +7809,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "ישראל אוזן;משה בר סימן טוב;'sarpnim@moin.gov.il';משה ארבל;turnerd@szmc.org.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7822,7 +7822,7 @@
     "location": "לשכה בריאות",
     "participants": "משה בר סימן טוב;דנה נויפלד;ישראל אוזן;משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7835,7 +7835,7 @@
     "location": "לשכת השר בריאות ירמיהו 39,ירושלים",
     "participants": "שרון אלרעי פרייס;אילנה גנס;רון רביע;ישראל אוזן;משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7848,7 +7848,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1 חדר ישיבות לשכת שר",
     "participants": "'ronenpe@moin.gov.il';משה ארבל;'sarpnim@moin.gov.il';'lishkat@azoriot.co.il';'shayh@merchavim.org.il';'elnatan@moin.gov.il';'yiftachso@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7887,7 +7887,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7900,7 +7900,7 @@
     "location": "ישיבת אור החיים - רח׳ עזרא 1, ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7913,7 +7913,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7926,7 +7926,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -7991,7 +7991,7 @@
     "location": "חזון איש 17 ירושלים",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8004,7 +8004,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8017,7 +8017,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": "תום דורון;משה ארבל;'sarpnim@moin.gov.il';'eyalsi@piba.gov.il';'tamarmo@piba.gov.il';רובי שמש",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8043,7 +8043,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8056,7 +8056,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8082,7 +8082,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8095,7 +8095,7 @@
     "location": "תל אביב, קרית הממשלה,רח' בגין 125,קומה 13,לשכת שר הפנים.",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8121,7 +8121,7 @@
     "location": "אצל פרופ' גמזו",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;משה בר סימן טוב;ישראל אוזן",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8134,8 +8134,8 @@
     "location": "ירושלים",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-203",
@@ -8147,7 +8147,7 @@
     "location": "משרד הפנים, קפלן 2, ירושלים, קומה 1, לשכת השר",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;ישראל אילוז",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8160,7 +8160,7 @@
     "location": "משרד הפנים, קפלן 2, ירושלים, קומה 1, לשכת השר",
     "participants": "'sarpnim@moin.gov.il';אופיר סופר חיצוני;'eyalsi@piba.gov.il';'tamarmo@piba.gov.il';משה ארבל;רובי שמש;'nayifhi@piba.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8186,7 +8186,7 @@
     "location": "לשכה בריאות-ירמיהו 39 ירושלים",
     "participants": "משה ארבל;משה בר סימן טוב;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8212,7 +8212,7 @@
     "location": "רח׳ חכם שמעון אגסי 1 - ירושלים, ישראל",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8225,7 +8225,7 @@
     "location": "לשכה פנים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8238,7 +8238,7 @@
     "location": "לשכת שר הבריאות",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;משה בר סימן טוב",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8251,7 +8251,7 @@
     "location": "ירושלים,ירמיהו 39,משרד הבריאות, לשכת השר",
     "participants": "רובי שמש;'margalitle@moin.gov.il';'yehudazi@moin.gov.il';'maiergo@moin.gov.il';'royf@cyber.gov.il';'elire@moin.gov.il';'amirar@moin.gov.il';'tamarmo@piba.gov.il';'eyalsi@piba.gov.il';משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8264,7 +8264,7 @@
     "location": "לשכה פנים",
     "participants": "ישראל אוזן;ישראל אילוז;יהודה ישראל כהן;יהונתן שי עוזרי;אורה ביטון;רובי שמש;תום דורון;שלום קבסה;נתנאל קורן;'shahartal@moin.gov.il';'sarpnim@moin.gov.il';משה ארבל;'natiben@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8277,7 +8277,7 @@
     "location": null,
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8381,7 +8381,7 @@
     "location": "לשכה בריאות",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;משה בר סימן טוב",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8394,7 +8394,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": "'ronenpe@moin.gov.il';'sarpnim@moin.gov.il';משה ארבל;יוסי שבתאי",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8407,7 +8407,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8420,7 +8420,7 @@
     "location": "לשכה פנים",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8433,7 +8433,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "דדון;sarpnim@moin.gov.il;משה ארבל;ישראל אילוז;יוסי שבתאי;תום דורון;משה בר סימן טוב",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8472,7 +8472,7 @@
     "location": "בלשכה כנסת",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8485,7 +8485,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8498,7 +8498,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';תום דורון",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8524,7 +8524,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';'ronenpe@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8537,8 +8537,8 @@
     "location": null,
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "טיסה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-255",
@@ -8550,8 +8550,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "טיסה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-257",
@@ -8563,7 +8563,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8576,7 +8576,7 @@
     "location": null,
     "participants": "'sarpnim@moin gov. il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8602,7 +8602,7 @@
     "location": null,
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8615,7 +8615,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ת\"א",
     "participants": "משה בר סימן טוב;'sarpnim@moin.gov.il';משה ארבל;ישראל אילוז;ישראל אוזן;יוסי שבתאי;חיים הופרט;Israel.uzan@labor.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8641,7 +8641,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ת\"א",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8680,7 +8680,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8693,7 +8693,7 @@
     "location": "מתנס פסגות ה-7, דרך יצחק רבין 21, בית שמש",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8706,8 +8706,8 @@
     "location": "בני ברק",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ניחום אבלים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-275",
@@ -8719,7 +8719,7 @@
     "location": "לשכת שר הפנים קפלן 2,ירושלים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;'yakir@tefen.muni.il';יוסי שבתאי",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8745,7 +8745,7 @@
     "location": "קפלן 2, קומה 5 ,לשכת שר הרווחה",
     "participants": "sarpnim@moin.gov.il;משה ארבל;'michalp@molsa.gov.il';רובי שמש;'eyalsi@piba.gov.il';'tamarmo@piba.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8758,7 +8758,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8771,7 +8771,7 @@
     "location": "קפלן 2, משרד הפנים, קומה 1 חדר ישיבות לשכת שר",
     "participants": "'hillelk@iplan.gov.il';'refaele@iplan.gov.il';'sarpnim@moin.gov.il';משה ארבל;יוסי שבתאי;'elnatan@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8810,8 +8810,8 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "ספי מנדלוביץ;יוסי שבתאי;'sarpnim@moin.gov.il';משה ארבל;יאסר חוג'יראת",
     "extractionMethod": "spreadsheet",
-    "categoryId": "private_sector",
-    "matchedKeyword": "לובי"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "ח\"כ"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-287",
@@ -8836,7 +8836,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39 ,ירושלים",
     "participants": "חנה קורצוייל;משה בר סימן טוב;sarpnim@moin.gov.il;משה ארבל;ישראל אילוז;יוסי שבתאי",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8862,7 +8862,7 @@
     "location": "כנסת",
     "participants": "sarpnim@moin.gov.il;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8875,7 +8875,7 @@
     "location": "כנסת חדר 1478",
     "participants": "'sarpnim@moin gov. il';משה ארבל;יוסי שבתאי;ישראל אילוז",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8888,8 +8888,8 @@
     "location": "כנסת",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-294",
@@ -8901,7 +8901,7 @@
     "location": "חדר 3836 קומה 3 בכנסת",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8914,7 +8914,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1, לשכת השר ,ירושלים",
     "participants": "ישראל אילוז;יוסי שבתאי;משה בר סימן טוב;תום דורון;משה ארבל;'uzi.b@meuhedet.co.il';רן רידניק;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8940,7 +8940,7 @@
     "location": "אודיטורים ע\"ש שילנסקי, כנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8953,7 +8953,7 @@
     "location": "לשכה פנים",
     "participants": "רובי שמש;'sarpnim@moin.gov.il';משה ארבל;'noas@mof.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8966,7 +8966,7 @@
     "location": "משרד הפנים,קפלן 2, קומה 1,לשכת השר,ירושלים",
     "participants": "sarpnim@moin.gov.il;'maiergo@moin.gov.il';'yogev@digital.gov.il';'amirar@moin.gov.il';משה ארבל;רובי שמש;'eyalsi@piba.gov.il';'tamarmo@piba.gov.il';'royf@cyber.gov.il';'naamab@cyber.gov.il';'דניאל סלומון';'אורן אריאב';'עירית ויסבלום'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8979,7 +8979,7 @@
     "location": "מליאת הכנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -8992,7 +8992,7 @@
     "location": "האנגר 11, תל אביב",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9018,7 +9018,7 @@
     "location": "רח' הארבעה 12, תל אביב",
     "participants": "'natiben@moin.gov.il';'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9031,7 +9031,7 @@
     "location": "רח' הארבעה 12, תל אביב",
     "participants": "משה ארבל;'natiben@moin.gov.il';'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9044,7 +9044,7 @@
     "location": "כתובת רח' אחד העם 9, מגדל שלום, תל אביב",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';'nasi@acb.org.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9057,7 +9057,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9070,7 +9070,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9096,8 +9096,8 @@
     "location": "ר\"ח אהרון מסקין 3 ,כפר גנים ג', פתח תקווה",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-322",
@@ -9109,7 +9109,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;ישראל אילוז;יוסי שבתאי;רן רידניק;משה בר סימן טוב;lishka10",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9122,7 +9122,7 @@
     "location": "משרד הבריאות, ירמיהו 39, קומה 13, לשכת שר הבריאות",
     "participants": "משה בר סימן טוב;sarpnim@moin.gov.il;משה ארבל;ישראל אילוז;יוסי שבתאי;דנה נויפלד;קטיה קיל;ד\"ר הגר מזרחי;אודי גלבשטיין;נעם ויצנר",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9187,7 +9187,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9213,7 +9213,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9226,7 +9226,7 @@
     "location": "משרד המשפטים, סאלח א-דין 29, קומה 2 בלשכה של המשנה ליועצת המשפטית אביטל סומפולינסקי",
     "participants": "'Josephbe@moin.gov.il';sarpnim@moin.gov.il;משה ארבל;'ronenpe@moin.gov.il';'efratdan@moin.gov.il';תום דורון;'tomdo@moin.gov.il';ישראל אוזן",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9239,7 +9239,7 @@
     "location": "לשכה בריאות",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9252,7 +9252,7 @@
     "location": "לשכה בריאות",
     "participants": "אורה ביטון;'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9265,7 +9265,7 @@
     "location": "כנסת",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9278,8 +9278,8 @@
     "location": "רח׳ יאיר אברהם שטרן 17 נתניה, ישראל פינת אבו שדיד",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "personal_private",
+    "matchedKeyword": "תפילה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-340",
@@ -9304,7 +9304,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9330,7 +9330,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "'sarpnim@moin gov. il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9343,7 +9343,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39, ירושלים",
     "participants": "ישראל אילוז;יוסי שבתאי;'sarpnim@moin.gov.il';משה ארבל;תום דורון;מועאוויה כבהה",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9369,7 +9369,7 @@
     "location": "מושב יסודות",
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9434,8 +9434,8 @@
     "location": "מרוקו",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-36",
@@ -9447,7 +9447,7 @@
     "location": "לשכה בריאות",
     "participants": "משה בר סימן טוב;'sarpnim@moin.gov.il';משה ארבל;ישראל אוזן",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9460,7 +9460,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9473,7 +9473,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9486,7 +9486,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9499,8 +9499,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-364",
@@ -9512,8 +9512,8 @@
     "location": "ארצות הברית",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-365",
@@ -9564,8 +9564,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ארוחת ערב"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-369",
@@ -9577,8 +9577,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "ceremonies",
-    "matchedKeyword": "כנס"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "כנסת"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-37",
@@ -9590,7 +9590,7 @@
     "location": "לשכה בריאות",
     "participants": "דנה נויפלד;ישראל אוזן;משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9603,7 +9603,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9616,8 +9616,8 @@
     "location": "נוי ג' רזי",
     "participants": "David Herzog;Mordy Herzog;Charles Herzog;Ilan Ron;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "private_sector",
-    "matchedKeyword": "מפעל"
+    "categoryId": "field_visits",
+    "matchedKeyword": "סיור"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-372",
@@ -9629,7 +9629,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9681,7 +9681,7 @@
     "location": "קפלן 2, ירושלים, משרד הפנים, קומה 1,לשכת השר",
     "participants": "'michalb@cyber.gov.il';'naamab@cyber.gov.il';'nofarsh@cyber.gov.il';'sarpnim@moin.gov.il';משה ארבל;'royf@cyber.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9733,7 +9733,7 @@
     "location": "לשכה בריאות-ירמיהו 39 ירושלים",
     "participants": "sarpnim@moin.gov.il;sari@giladl.co.il;משה ארבל;יוסי שבתאי;ישראל אילוז",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9746,7 +9746,7 @@
     "location": "לשכה בריאות",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;'elnatan@moin.gov.il';'שחר בקשי'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9759,7 +9759,7 @@
     "location": "לשכת שר הבריאות ירמיהו 39,ירושלים",
     "participants": "סיגל ליברנט-טאוב;'sarpnim@moin.gov.il';משה ארבל;ישראל אילוז;יוסי שבתאי",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9772,7 +9772,7 @@
     "location": "ירושלים",
     "participants": "'sarpnim@moin.gov.il';משה בר סימן טוב;ישראל אוזן;'yor@shas.org.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9785,7 +9785,7 @@
     "location": "כנסת",
     "participants": "sarpnim@moin.gov.il;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9798,7 +9798,7 @@
     "location": "מושב בת מאיר",
     "participants": "'sarpnim@moin gov. il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9811,7 +9811,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9824,7 +9824,7 @@
     "location": "אוניברסיטת אריאל בשומרון",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9837,7 +9837,7 @@
     "location": null,
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9863,7 +9863,7 @@
     "location": "עמנואל",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9876,8 +9876,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "politics_party",
-    "matchedKeyword": "סיעה"
+    "categoryId": "travel_logistics",
+    "matchedKeyword": "נסיעה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-400",
@@ -9889,7 +9889,7 @@
     "location": "ליד בנין המועצה - עמנואל",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9902,7 +9902,7 @@
     "location": "הגר\"א 11 מול מתנ\"ספריה",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9915,8 +9915,8 @@
     "location": "עמנואל",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
-    "matchedKeyword": null
+    "categoryId": "personal_private",
+    "matchedKeyword": "ארוחת צהריים"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-403",
@@ -9928,7 +9928,7 @@
     "location": "מול קופ\"ח לאומית",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9954,7 +9954,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -9967,7 +9967,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10019,7 +10019,7 @@
     "location": "משרד הבריאות, לשכה תל-אביב, רח' הארבעה 12, לשכת שר הבריאות.",
     "participants": "sarpnim@moin.gov.il;משה ארבל;'eyalsi@piba.gov.il';'tamarmo@piba.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10032,7 +10032,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12,ת\"א",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';'tamarmo@piba.gov.il';'eyalsi@piba.gov.il';רובי שמש;'shahartal@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10045,7 +10045,7 @@
     "location": "לשכת שר הבריאות רח' הארבעה 12 ,ת\"א",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';יוסי שבתאי;ישראל אילוז",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10058,7 +10058,7 @@
     "location": "רח' בן ישי 4 ,ת\"א",
     "participants": "'sarpnim@moin.gov.il';משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10071,7 +10071,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10084,7 +10084,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10097,7 +10097,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10149,7 +10149,7 @@
     "location": "משרד הפנים,קפלן 2 ,קומה 1,לשכת השר",
     "participants": "'rubisa@moin.gov.il';'sarpnim@moin.gov.il';משה ארבל;'yogev@digital.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10188,7 +10188,7 @@
     "location": "לשכת השר ברח הארבעה 12, תל אביב",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10201,7 +10201,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10214,7 +10214,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10266,7 +10266,7 @@
     "location": "לשכה פנים",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10279,7 +10279,7 @@
     "location": "לשכה פנים",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';'elnatan@moin.gov.il';ישראל אוזן",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10292,7 +10292,7 @@
     "location": "לשכה פנים",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10305,7 +10305,7 @@
     "location": "כנסת",
     "participants": "'sarpnim@moin.gov.il';משה ארבל;תום דורון",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10318,7 +10318,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10344,7 +10344,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10357,7 +10357,7 @@
     "location": "קפלן 2 משרד ראשי- מרתף אולם ישיבות קומה 1-",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10383,7 +10383,7 @@
     "location": "לשכה בריאות",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10396,7 +10396,7 @@
     "location": "לשכה בריאות",
     "participants": "'sarpnim@moin.gov.il';רוני גמזו;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10409,7 +10409,7 @@
     "location": null,
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10422,8 +10422,8 @@
     "location": "מלון הילטון, הירקון 205, תל אביב",
     "participants": "'sarpnim@moin.gov.il';תום דורון;משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "diplomacy",
-    "matchedKeyword": "שגריר"
+    "categoryId": "unclassified",
+    "matchedKeyword": null
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-77",
@@ -10435,7 +10435,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10448,7 +10448,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10461,7 +10461,7 @@
     "location": "לשכה כנסת",
     "participants": "משה ארבל",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10474,7 +10474,7 @@
     "location": "מליאה בכנסת",
     "participants": "משה ארבל;'sarpnim@moin.gov.il'",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10487,7 +10487,7 @@
     "location": "מלון המלך דוד",
     "participants": "תום דורון;'sarpnim@moin.gov.il';משה ארבל;'yael.nahir@mfa.gov.il';'rubisa@moin.gov.il';סימון מושיאשוילי;רון כץ",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10500,7 +10500,7 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10513,7 +10513,7 @@
     "location": "מרכז רפואי צפון פוריה",
     "participants": "sarpnim@moin.gov.il;משה ארבל;'moshemor@moin.gov.il';'yosefsim@moin.gov.il';ספי מנדלוביץ;ישראל אוזן;ישראל אילוז;רבקה ויזאן;Sbarniv@tzmc.gov.il;Nsela@tzmc.gov.il;שלום קבסה;יהודה ישראל כהן;אורה ביטון;נתנאל קורן;יהונתן שי עוזרי;תום דורון;ד\"ר דגן דודו;ד\"ר הגר מזרחי;ליהי רובין;Eonn@tzmc.gov.il;סיגל ליברנט-טאוב",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10552,7 +10552,7 @@
     "location": "רומת הייב",
     "participants": "משה ארבל;'sarpnim@moin.gov.il';רובי שמש",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10565,8 +10565,8 @@
     "location": null,
     "participants": null,
     "extractionMethod": "spreadsheet",
-    "categoryId": "personal_private",
-    "matchedKeyword": "שבעה"
+    "categoryId": "knesset_legislation",
+    "matchedKeyword": "מליאה"
   },
   {
     "id": "diary-13f2ebc6-56be-4f7a-8495-849fbad4b3be-08b11b09-spreadsheet-91",
@@ -10578,7 +10578,7 @@
     "location": "משרד הבריאות לשכת שר",
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10591,7 +10591,7 @@
     "location": "ירושלים",
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   },
   {
@@ -10617,7 +10617,7 @@
     "location": "כנסת",
     "participants": "משה ארבל;sarpnim@moin.gov.il",
     "extractionMethod": "spreadsheet",
-    "categoryId": "unspecified",
+    "categoryId": "unclassified",
     "matchedKeyword": null
   }
 ]

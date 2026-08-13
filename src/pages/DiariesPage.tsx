@@ -224,7 +224,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
         <DataUnavailable title="טרם נאספו רשומות יומן בגרסת נתונים זו" reason={index.source.note} />
       ) : (
         <>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             <Card>
               <p className="text-xs text-slate-500">רשומות יומן</p>
               <p className="num mt-1 text-xl font-semibold">{formatNumber(index.totals.entries)}</p>
@@ -254,6 +254,21 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   ? 'אין נתון'
                   : `${insights.totals.noSubjectPercent}%`}{' '}
                 פורסמו ללא טקסט נושא כלל
+              </p>
+            </Card>
+            <Card>
+              <p className="text-xs text-slate-500">כיסוי הסיווג</p>
+              <p className="num mt-1 text-xl font-semibold">
+                {insights.totals.classifiedPercent === null
+                  ? 'אין נתון'
+                  : `${insights.totals.classifiedPercent}%`}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                מהרשומות סווגו לקטגוריית תוכן;{' '}
+                {insights.totals.unclassifiedPercent === null
+                  ? 'אין נתון'
+                  : `${insights.totals.unclassifiedPercent}%`}{' '}
+                נושאן אמיתי אך מחוץ למילון של האתר
               </p>
             </Card>
             <Card>
@@ -297,8 +312,10 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               אינו עבירה — הוא אומר שהפרסום מקיים את הנוהל בצורתו ולא בתכליתו.
             </p>
             <p className="mt-1 max-w-3xl text-sm text-slate-600">
-              העמודה "ללא טקסט נושא" נספרת בנפרד ואינה חלק ממדד השקיפות: שורה בלי נושא יכולה לנבוע
-              מתא ריק במקור, אך גם מעמודה שהאתר לא זיהה בקובץ שפורסם — כלומר ממגבלת החילוץ שלנו.
+              שתי העמודות הימניות אינן חלק ממדד השקיפות, במכוון. "ללא טקסט נושא" יכול לנבוע מתא ריק
+              במקור אך גם מעמודה שהאתר לא זיהה בקובץ. "לא סווג" הוא נושא אמיתי שמילון הקטגוריות של
+              האתר אינו מכסה — מגבלה שלנו, לא של הלשכה. ספירתן כאטימות הייתה הופכת פער בכיסוי שלנו
+              לטענה על בעל תפקיד.
             </p>
             <div className="mt-3 overflow-x-auto">
               <table className="w-full min-w-[620px] text-sm">
@@ -309,6 +326,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                     <th className="py-1 pl-3">רשומות</th>
                     <th className="py-1 pl-3">נושא גנרי/מושחר</th>
                     <th className="py-1 pl-3">ללא טקסט נושא</th>
+                    <th className="py-1 pl-3">לא סווג</th>
                     <th className="py-1">מקור</th>
                   </tr>
                 </thead>
@@ -327,6 +345,16 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                         {profile.opacityPercent === null
                           ? 'אין נתון'
                           : `${profile.opacityPercent}%`}
+                      </td>
+                      <td className="num py-2 pl-3 text-slate-600">
+                        {profile.noSubjectPercent === null
+                          ? 'אין נתון'
+                          : `${profile.noSubjectPercent}%`}
+                      </td>
+                      <td className="num py-2 pl-3 text-slate-600">
+                        {profile.unclassifiedPercent === null
+                          ? 'אין נתון'
+                          : `${profile.unclassifiedPercent}%`}
                       </td>
                       <td className="py-2">
                         <SourceLink url={profile.sourceUrl} title="לפרסום" />

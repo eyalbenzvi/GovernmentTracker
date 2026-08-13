@@ -51,6 +51,7 @@ interface DiaryEntryLite {
   date: string | null;
   extractionMethod: string;
   categoryId?: string;
+  matchedKeyword?: string | null;
 }
 interface DiariesIndexLite {
   windowStart: string;
@@ -72,9 +73,22 @@ interface DiaryCategoriesLite {
   categories: Array<{ id: string; entryCount: number }>;
 }
 interface DiaryInsightsLite {
-  totals: { entries: number; people: number };
+  totals: {
+    entries: number;
+    people: number;
+    sharedFileProfiles: number;
+    unspecifiedPercent: number | null;
+    unclassifiedPercent: number | null;
+    classifiedPercent: number | null;
+    noSubjectPercent: number | null;
+  };
   rules: Array<{ id: string }>;
-  profiles: Array<{ key: string; entryCount: number }>;
+  profiles: Array<{
+    key: string;
+    entryCount: number;
+    personLabel: string | null;
+    coversMultiplePeople: boolean;
+  }>;
   findings: Array<{ ruleId: string; personKey: string }>;
   crossMatches: Array<{ entryId: string; ministryId: string }>;
 }
@@ -698,6 +712,58 @@ function main(): void {
     analysisProblems.push(
       `סכום הרשומות בפרופילים (${profileEntrySum}) שונה ממספר הרשומות (${diaries.length})`,
     );
+  }
+
+  // The transparency measure must never absorb this site's own coverage gap:
+  // a row is `unspecified` only when the office wrote generic text, and
+  // `unclassified` only when our vocabulary missed real text. Both are rows
+  // that matched no keyword, so a matched keyword on either is a leak.
+  for (const row of diaries) {
+    const isNonSubjectCategory =
+      row.categoryId === 'unspecified' ||
+      row.categoryId === 'unclassified' ||
+      row.categoryId === 'no_subject_recorded';
+    if (isNonSubjectCategory && row.matchedKeyword !== null && row.matchedKeyword !== undefined) {
+      analysisProblems.push(`רשומה בקטגוריה שאינה תוכן אך עם מילת מפתח: ${row.id}`);
+      break;
+    }
+    if (!isNonSubjectCategory && (row.matchedKeyword ?? '') === '') {
+      analysisProblems.push(`רשומה בקטגוריית תוכן ללא מילת המפתח שהפעילה אותה: ${row.id}`);
+      break;
+    }
+  }
+
+  // A file holding several people's diaries is nobody's personal conduct, so no
+  // person-level finding may be published from it — including under a name the
+  // title happens to mention.
+  const sharedProfileKeys = new Set(
+    diaryInsights.profiles.filter((prof) => prof.coversMultiplePeople).map((prof) => prof.key),
+  );
+  for (const finding of diaryInsights.findings) {
+    if (sharedProfileKeys.has(finding.personKey)) {
+      analysisProblems.push(`ממצא אישי מפרסום שמאגד כמה בעלי תפקיד: ${finding.personKey}`);
+      break;
+    }
+  }
+  for (const prof of diaryInsights.profiles) {
+    if (prof.coversMultiplePeople && prof.personLabel !== null) {
+      analysisProblems.push(`פרסום מאוגד שיוחס לאדם אחד בשמו: ${prof.key}`);
+      break;
+    }
+  }
+  if (diaryInsights.totals.sharedFileProfiles !== sharedProfileKeys.size) {
+    analysisProblems.push('מונה הפרסומים המאוגדים אינו תואם את הפרופילים');
+  }
+
+  // The four shares must account for every row exactly once.
+  const shareSum = [
+    diaryInsights.totals.classifiedPercent,
+    diaryInsights.totals.unclassifiedPercent,
+    diaryInsights.totals.unspecifiedPercent,
+    diaryInsights.totals.noSubjectPercent,
+  ].reduce((sum: number, value) => sum + (value ?? 0), 0);
+  if (diaries.length > 0 && Math.abs(shareSum - 100) > 0.5) {
+    analysisProblems.push(`שיעורי הסיווג אינם מסתכמים ל-100% (${shareSum})`);
   }
   check(
     'סיווג היומנים והתובנות עקביים, מלאים ומסומנים לפי שיטת החילוץ',

@@ -416,6 +416,11 @@ export interface DiaryProfile {
   opacityPercent: number | null;
   noSubjectCount: number;
   noSubjectPercent: number | null;
+  /** Rows with real subject text that the declared vocabulary does not cover. */
+  unclassifiedCount: number;
+  unclassifiedPercent: number | null;
+  /** True when one published file holds several people's diaries. */
+  coversMultiplePeople: boolean;
   categoryCounts: Record<string, number>;
   monthly: DiaryPeriodBucket[];
   quarterly: DiaryPeriodBucket[];
@@ -472,7 +477,11 @@ export interface DiaryInsights {
     ministries: number;
     findings: number;
     crossMatches: number;
+    /** Profiles skipped by the person-level rules because their file is shared. */
+    sharedFileProfiles: number;
     unspecifiedPercent: number | null;
+    unclassifiedPercent: number | null;
+    classifiedPercent: number | null;
     noSubjectPercent: number | null;
   };
   categoryTotals: Record<string, number>;
