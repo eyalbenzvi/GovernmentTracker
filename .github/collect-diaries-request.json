@@ -1,6 +1,7 @@
 {
-  "comment": "Touching this file triggers .github/workflows/collect-diaries.yml — the dispatch API is not available to the automation token, so a manual run is expressed as an explicit, reviewable commit. Bump requestedAt to re-run.",
+  "comment": "Touching this file triggers .github/workflows/collect-diaries.yml — the dispatch API is not available to the automation token, so a manual run is expressed as an explicit, reviewable commit. Bump requestedAt to re-run. Set freshFetch=true when the run should ignore the saved response cache and re-ask every source (use it to pick up new publications; leave false for repair runs).",
   "mode": "collect",
   "commit_changes": true,
-  "requestedAt": "2026-08-13T07:10:00Z"
+  "requestedAt": "2026-08-13T07:10:00Z",
+  "freshFetch": false
 }

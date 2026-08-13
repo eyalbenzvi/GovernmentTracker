@@ -33,6 +33,10 @@ on:
         description: 'Commit collected data if it changed (collect mode only)'
         type: boolean
         default: false
+      fresh_fetch:
+        description: 'Ignore the saved response cache and re-ask every source'
+        type: boolean
+        default: false
   push:
     branches: ['main', 'claude/**']
     paths: ['.github/collect-diaries-request.json']
@@ -64,9 +68,11 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
             echo "commit=${{ inputs.commit_changes }}" >> "$GITHUB_OUTPUT"
+            echo "fresh=${{ inputs.fresh_fetch }}" >> "$GITHUB_OUTPUT"
           else
             echo "mode=$(jq -r '.mode' .github/collect-diaries-request.json)" >> "$GITHUB_OUTPUT"
             echo "commit=$(jq -r '.commit_changes' .github/collect-diaries-request.json)" >> "$GITHUB_OUTPUT"
+            echo "fresh=$(jq -r '.freshFetch // false' .github/collect-diaries-request.json)" >> "$GITHUB_OUTPUT"
           fi
 
       # Diaries are published as spreadsheets, text PDFs and image-only scans.
@@ -81,8 +87,32 @@ jobs:
           pdftotext -v || true
           tesseract --list-langs || true
 
+      # Every collection repeats ~3,000 API calls, and the slow part — asking the
+      # archive whether a snapshot exists for each of ~1,200 files — has the same
+      # answer every time. The collector already caches responses on disk; this
+      # carries that cache between runs, so a re-run after a fix costs minutes
+      # instead of hours of someone else's bandwidth. Set freshFetch in the
+      # request file when the point of the run is to pick up new publications.
+      - name: Restore the collector's response cache
+        if: steps.request.outputs.mode == 'collect' && steps.request.outputs.fresh != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: data/.cache
+          key: diaries-http-cache-${{ github.run_id }}
+          restore-keys: |
+            diaries-http-cache-
+
       - name: Run the diaries collector
         run: npx tsx scripts/collect-diaries.ts --${{ steps.request.outputs.mode }}
+
+      # Saved even when a later step fails: the cache is what makes the repair
+      # run cheap, and a rejected collection is exactly when it is needed.
+      - name: Save the collector's response cache
+        if: always() && steps.request.outputs.mode == 'collect'
+        uses: actions/cache/save@v4
+        with:
+          path: data/.cache
+          key: diaries-http-cache-${{ github.run_id }}
 
       # Collection changes downstream artifacts (source catalog gains the
       # diaries hosts, data-version counts change, methodology text changes),
