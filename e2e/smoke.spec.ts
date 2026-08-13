@@ -353,7 +353,10 @@ test('the diaries screen labels how every row was extracted', async ({ page }) =
   // The transparency measure and the published-formula findings must both be present.
   await expect(page.getByRole('heading', { name: /שקיפות היומן/ })).toBeVisible();
   await expect(page.getByRole('heading', { name: /ממצאים מחושבים/ })).toBeVisible();
-  await expect(page.getByText(/שם דומה אינו הוכחה/)).toBeVisible();
+  // The "a similar name is not proof" caveat sits both above the cross-reference
+  // table and in the closing caveats list; either alone satisfies the intent, so
+  // assert on the first rather than requiring exactly one match.
+  await expect(page.getByText(/שם דומה אינו הוכחה/).first()).toBeVisible();
 });
 
 test('the diaries screen switches category mix between quarters and months', async ({ page }) => {
