@@ -89,13 +89,33 @@ jobs:
       # so classification, analysis, build and the full validation gate all run
       # before anything is committed.
       - name: Classify, analyse, rebuild and validate
+        id: gate
         if: steps.request.outputs.mode == 'collect'
+        continue-on-error: true
         run: |
           npm run data:diary-analysis
           npm run data:collect-sources
           npm run data:build
           npm run data:validate
           npm run data:report
+
+      # A collection run takes hours, and the gate can reject it over something
+      # trivial. Publication stays gated — nothing unvalidated reaches the site
+      # — but the collected data is preserved on its own branch so the defect
+      # can be fixed against the real data instead of by re-collecting.
+      - name: Preserve unvalidated data on a staging branch
+        if: steps.request.outputs.mode == 'collect' && steps.gate.outcome == 'failure'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B diaries-staging
+          git add -A data/
+          git commit -m "data(staging): unvalidated diary collection from run ${{ github.run_id }}" || {
+            echo "nothing to preserve"; exit 1;
+          }
+          git push -f origin diaries-staging
+          echo "::error::Validation rejected this collection. The data is preserved on branch diaries-staging (run ${{ github.run_id }}) so it can be repaired without collecting again."
+          exit 1
 
       - name: Upload the collection log as an artifact
         if: always()
@@ -113,7 +133,10 @@ jobs:
       # time it finishes. Rebase onto the remote before pushing, and retry, or
       # the whole run's data would be dropped on a non-fast-forward.
       - name: Commit collected data
-        if: steps.request.outputs.mode == 'collect' && steps.request.outputs.commit == 'true'
+        if: |
+          steps.request.outputs.mode == 'collect' &&
+          steps.request.outputs.commit == 'true' &&
+          steps.gate.outcome == 'success'
         run: |
           if git diff --quiet -- data/; then
             echo "No data changes; nothing to commit."

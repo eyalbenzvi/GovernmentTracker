@@ -809,6 +809,19 @@ export function parseDiaryTitle(title: string): ParsedDiaryTitle {
   };
 }
 
+/**
+ * Source-provided text, or a stated fallback when it is missing OR blank.
+ *
+ * Every label that reaches the screen is required to be non-empty, and a blank
+ * string is a value the source really does publish. Treating blank as present
+ * has already cost one full collection run, so all source text goes through
+ * here rather than through `??`.
+ */
+function orFallback(value: string | null | undefined, fallback: string): string {
+  const trimmed = (value ?? '').trim();
+  return trimmed !== '' ? trimmed : fallback;
+}
+
 function normalizeName(name: string): string {
   return name
     .replace(/\s+/g, ' ')
@@ -1108,7 +1121,7 @@ function extractPdf(
     pages.length > MAX_OCR_PAGES ? ` (פוענחו ${MAX_OCR_PAGES} מתוך ${pages.length} עמודים)` : '';
   const result = extractFromText(ocrText, 'pdf_ocr');
   return {
-    result: { ...result, note: `${result.note ?? ''}${truncationNote}` },
+    result: { ...result, note: orFallback(`${result.note ?? ''}${truncationNote}`, OCR_CAVEAT) },
     method: 'pdf_ocr',
   };
 }
@@ -1140,7 +1153,11 @@ async function extractFileResource(
   const { datasetId, datasetUrl, title, resource, format, resourceName, cov } = ctx;
 
   const disclose = (note: string): DiaryEntry[] => {
-    cov.unparsedResources.push({ name: resourceName, format, note });
+    cov.unparsedResources.push({
+      name: orFallback(resourceName, 'משאב ללא שם'),
+      format: orFallback(format, 'לא צוין פורמט'),
+      note: orFallback(note, 'הקובץ לא נקרא; הסיבה לא נרשמה'),
+    });
     return [];
   };
 
@@ -1189,8 +1206,10 @@ async function extractFileResource(
 
   if (extraction.rows.length === 0) {
     return disclose(
-      extraction.note ??
+      orFallback(
+        extraction.note,
         `לא חולצו שורות מהקובץ (${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן)`,
+      ),
     );
   }
   if (extraction.unparsedLineCount > 0) {
@@ -1300,11 +1319,12 @@ async function collect(): Promise<void> {
     };
 
     for (const resource of resources) {
-      const format = (resource.format ?? '?').toUpperCase();
-      const resourceName =
-        (resource.name ?? '').trim() !== ''
-          ? (resource.name as string).trim()
-          : (resource.id ?? 'משאב ללא שם');
+      // Nullish coalescing is not enough here: CKAN resources exist with
+      // format:"" and name:"", and an empty string would travel all the way to
+      // a field the schema requires to be non-empty — failing the gate after a
+      // three-hour collection over four blank cells.
+      const format = orFallback(resource.format, 'לא צוין פורמט').toUpperCase();
+      const resourceName = orFallback(resource.name, resource.id ?? 'משאב ללא שם');
       if (resource.datastore_active !== true) {
         // Images embedded in the FOI response letter are not diary content.
         if (format === 'PNG' || format === 'JPEG' || format === 'GIF') continue;
