@@ -521,6 +521,7 @@ export interface DiariesIndex {
     unparsedResources: number;
     duplicateRowsRemoved: number;
     datasetsWithoutIdentifier: number;
+    timeBudgetReached?: boolean;
     byExtractionMethod: Record<DiaryExtractionMethod, number>;
   };
   unmatchedTitles: string[];

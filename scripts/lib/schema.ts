@@ -526,6 +526,8 @@ export const diariesIndexSchema = z.object({
     unparsedResources: z.number().int().min(0),
     duplicateRowsRemoved: z.number().int().min(0),
     datasetsWithoutIdentifier: z.number().int().min(0),
+    /** Optional: absent in indexes written before the time budget existed. */
+    timeBudgetReached: z.boolean().optional(),
     byExtractionMethod: z.object({
       datastore: z.number().int().min(0),
       spreadsheet: z.number().int().min(0),

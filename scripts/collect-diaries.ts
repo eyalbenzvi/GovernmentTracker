@@ -46,7 +46,16 @@ import {
 } from './lib/diary-extract.js';
 import { parseCsvGrid, readXlsxGrid, type CellValue } from './lib/xlsx-lite.js';
 import { Logger } from './lib/log.js';
-import { COLLECTION_LOG_DIR, PROCESSED_DIR, RAW_DIR, readJson, writeJson } from './lib/paths.js';
+import {
+  CACHE_DIR,
+  COLLECTION_LOG_DIR,
+  PROCESSED_DIR,
+  RAW_DIR,
+  ensureDir,
+  readJson,
+  writeJson,
+} from './lib/paths.js';
+import { createHash } from 'node:crypto';
 
 const FOI_DIARIES_PAGE = 'https://foi.gov.il/he/node/6747';
 const GOVIL_DIARIES_PAGE = 'https://www.gov.il/he/pages/minister_diary';
@@ -608,6 +617,78 @@ interface UnparsedResource {
 }
 
 const MAX_OCR_PAGES = 40;
+/**
+ * Wall-clock budget for the whole collection.
+ *
+ * A CI job is killed at six hours with nothing preserved, and OCR over hundreds
+ * of scanned pages has taken close to three. When the budget runs out the
+ * collector stops taking on new files, writes what it has, and says so in the
+ * index — a disclosed partial collection beats a run that dies whole.
+ */
+const TIME_BUDGET_MINUTES = Number(process.env.DIARY_TIME_BUDGET_MINUTES ?? '210');
+const startedAtMs = Date.now();
+let timeBudgetReached = false;
+
+function budgetExhausted(): boolean {
+  if (timeBudgetReached) return true;
+  if ((Date.now() - startedAtMs) / 60_000 >= TIME_BUDGET_MINUTES) {
+    timeBudgetReached = true;
+    console.warn(
+      `  אזהרה: תקציב הזמן של ההרצה (${TIME_BUDGET_MINUTES} דקות) מוצה — קבצים שטרם נקראו מדווחים כלא-נקראו`,
+    );
+  }
+  return timeBudgetReached;
+}
+
+/**
+ * Extraction results are cached per resource, keyed by the identifiers that
+ * decide the content. Downloading a scan and running OCR over it costs minutes;
+ * the answer does not change between runs, and a repair run should not pay for
+ * it twice.
+ */
+const EXTRACT_CACHE_DIR = path.join(CACHE_DIR, 'diary-extract');
+
+interface CachedExtraction {
+  /** null when the file could not be read at all; the disclosures say why. */
+  method: ExtractionMethod | null;
+  extractionNote: string;
+  rows: Array<{
+    subject: string | null;
+    startDate: string | null;
+    startTime: string | null;
+    endTime: string | null;
+    location: string | null;
+    participants: string | null;
+  }>;
+  unparsedLineCount: number;
+  disclosures: string[];
+}
+
+function extractCachePath(datasetId: string, resource: CkanResource, format: string): string {
+  const key = createHash('sha256')
+    .update([datasetId, resource.id ?? '', resource.url ?? '', format].join('|'))
+    .digest('hex')
+    .slice(0, 32);
+  return path.join(EXTRACT_CACHE_DIR, `${key}.json`);
+}
+
+function readExtractCache(file: string): CachedExtraction | null {
+  try {
+    if (!fs.existsSync(file)) return null;
+    return JSON.parse(fs.readFileSync(file, 'utf8')) as CachedExtraction;
+  } catch {
+    return null;
+  }
+}
+
+function writeExtractCache(file: string, value: CachedExtraction): void {
+  try {
+    ensureDir(EXTRACT_CACHE_DIR);
+    fs.writeFileSync(file, JSON.stringify(value), 'utf8');
+  } catch {
+    // A cache write failure must never fail a collection.
+  }
+}
 /** Whole-run OCR budget: keeps a collection run bounded on CI wall-clock. */
 const MAX_OCR_PAGES_PER_RUN = 4_000;
 /**
@@ -1141,99 +1222,33 @@ function extractPdf(
  * because an unexplained absence on a transparency site is itself a false
  * statement.
  */
-async function extractFileResource(
-  logger: Logger,
-  ctx: {
-    datasetId: string;
-    datasetUrl: string;
-    title: string;
-    resource: CkanResource;
-    format: string;
-    resourceName: string;
-    ministryId: string | null;
-    parsedTitle: ParsedDiaryTitle;
-    collectedAt: string;
-    cov: DiaryDatasetCoverage;
-  },
-): Promise<DiaryEntry[]> {
-  const { datasetId, datasetUrl, title, resource, format, resourceName, cov } = ctx;
+interface FileResourceContext {
+  datasetId: string;
+  datasetUrl: string;
+  title: string;
+  resource: CkanResource;
+  format: string;
+  resourceName: string;
+  ministryId: string | null;
+  parsedTitle: ParsedDiaryTitle;
+  collectedAt: string;
+  cov: DiaryDatasetCoverage;
+}
 
-  const disclose = (note: string): DiaryEntry[] => {
-    cov.unparsedResources.push({
-      name: orFallback(resourceName, 'משאב ללא שם'),
-      format: orFallback(format, 'לא צוין פורמט'),
-      note: orFallback(note, 'הקובץ לא נקרא; הסיבה לא נרשמה'),
-    });
-    return [];
-  };
-
-  if (format === 'XLS') {
-    return disclose('פורמט XLS בינארי מדור קודם — אינו נקרא; הקובץ פתוח לעיון אנושי בקישור');
-  }
-  if (format === 'DOC' || format === 'DOCX' || format === 'ZIP') {
-    return disclose(`פורמט ${format} — אינו מפוענח; הקובץ פתוח לעיון אנושי בקישור`);
-  }
-
-  const download = await downloadResource(logger, datasetId, resource);
-  if (download === null) {
-    return disclose(
-      'הורדת הקובץ נדחתה על ידי המאגר (403) ולא נמצא עותק בארכיון האינטרנט — הקובץ פתוח לעיון אנושי בקישור',
-    );
-  }
-  const fromArchive = download.via === 'internet archive snapshot';
-
-  let extraction: ExtractionResult;
-  let method: ExtractionMethod;
-  let extractionNote: string;
-
-  if (format === 'PDF') {
-    const workDir = path.join(RAW_DIR, '.diary-work');
-    const pdfResult = extractPdf(download.bytes, workDir, `${datasetId}-${resource.id ?? 'r'}`);
-    if ('unavailable' in pdfResult) return disclose(pdfResult.unavailable);
-    extraction = pdfResult.result;
-    method = pdfResult.method;
-    extractionNote = method === 'pdf_ocr' ? OCR_CAVEAT : 'חולץ משכבת הטקסט של קובץ ה-PDF שפורסם';
-  } else {
-    let grid: CellValue[][];
-    try {
-      grid =
-        format === 'CSV'
-          ? parseCsvGrid(Buffer.from(download.bytes).toString('utf8'))
-          : readXlsxGrid(Buffer.from(download.bytes));
-    } catch (err) {
-      return disclose(
-        `הקובץ הורד אך לא נקרא: ${err instanceof Error ? err.message : String(err)}`.slice(0, 200),
-      );
-    }
-    extraction = extractFromGrid(grid);
-    method = 'spreadsheet';
-    extractionNote = 'חולץ מגיליון הנתונים שפורסם';
-  }
-
-  if (extraction.rows.length === 0) {
-    return disclose(
-      orFallback(
-        extraction.note,
-        `לא חולצו שורות מהקובץ (${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן)`,
-      ),
-    );
-  }
-  if (extraction.unparsedLineCount > 0) {
-    cov.unparsedResources.push({
-      name: resourceName,
-      format,
-      note: `חולצו ${extraction.rows.length} רשומות; ${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן ולא נכללו`,
-    });
-  }
-
-  // Where the bytes came from belongs on every row that came from them.
-  const provenanceNote = fromArchive
-    ? ` · הקובץ נקרא מעותק שמור בארכיון האינטרנט: ${download.viaUrl}`
-    : '';
-
+/**
+ * Turns extracted rows into diary entries. Shared by the fresh and the cached
+ * paths so a replay cannot drift from a first read.
+ */
+function buildEntries(
+  ctx: FileResourceContext,
+  rows: ReadonlyArray<CachedExtraction['rows'][number]>,
+  method: ExtractionMethod,
+  extractionNote: string,
+): DiaryEntry[] {
+  const { datasetId, datasetUrl, title, resource, cov } = ctx;
   const entries: DiaryEntry[] = [];
   let index = 0;
-  for (const row of extraction.rows) {
+  for (const row of rows) {
     index += 1;
     const subject = row.subject === null ? null : row.subject.trim().slice(0, 400);
     const date = parseDiaryDate(row.startDate);
@@ -1259,7 +1274,7 @@ async function extractFileResource(
       participants: row.participants === null ? null : row.participants.slice(0, 400),
       datasetId,
       extractionMethod: method,
-      extractionNote: `${extractionNote}${provenanceNote}`,
+      extractionNote,
       sourceUrl: datasetUrl,
       sourceTitle: title,
       collectedAt: ctx.collectedAt,
@@ -1267,6 +1282,127 @@ async function extractFileResource(
   }
   cov.machineReadableEntries += entries.length;
   return entries;
+}
+
+async function extractFileResource(
+  logger: Logger,
+  ctx: FileResourceContext,
+): Promise<DiaryEntry[]> {
+  const { datasetId, resource, format, resourceName, cov } = ctx;
+
+  const cacheFile = extractCachePath(datasetId, resource, format);
+  const disclosures: string[] = [];
+  const disclose = (note: string): DiaryEntry[] => {
+    const clean = orFallback(note, 'הקובץ לא נקרא; הסיבה לא נרשמה');
+    cov.unparsedResources.push({
+      name: orFallback(resourceName, 'משאב ללא שם'),
+      format: orFallback(format, 'לא צוין פורמט'),
+      note: clean,
+    });
+    disclosures.push(clean);
+    return [];
+  };
+  /** A refusal or an unreadable file costs as much as a successful read; cache it too. */
+  const discloseAndRemember = (note: string): DiaryEntry[] => {
+    const out = disclose(note);
+    writeExtractCache(cacheFile, {
+      method: null,
+      extractionNote: '',
+      rows: [],
+      unparsedLineCount: 0,
+      disclosures,
+    });
+    return out;
+  };
+
+  if (format === 'XLS') {
+    return disclose('פורמט XLS בינארי מדור קודם — אינו נקרא; הקובץ פתוח לעיון אנושי בקישור');
+  }
+  if (format === 'DOC' || format === 'DOCX' || format === 'ZIP') {
+    return disclose(`פורמט ${format} — אינו מפוענח; הקובץ פתוח לעיון אנושי בקישור`);
+  }
+
+  // A previous run already downloaded and read this exact resource; reuse it
+  // rather than spending minutes of OCR on an answer that cannot have changed.
+  const cached = readExtractCache(cacheFile);
+  if (cached !== null) {
+    for (const note of cached.disclosures) disclose(note);
+    return cached.method === null
+      ? []
+      : buildEntries(ctx, cached.rows, cached.method, cached.extractionNote);
+  }
+
+  if (budgetExhausted()) {
+    return disclose(
+      `תקציב הזמן של ההרצה (${TIME_BUDGET_MINUTES} דקות) מוצה לפני שהקובץ נקרא — הוא ייקרא בהרצה הבאה`,
+    );
+  }
+
+  const download = await downloadResource(logger, datasetId, resource);
+  if (download === null) {
+    return discloseAndRemember(
+      'הורדת הקובץ נדחתה על ידי המאגר (403) ולא נמצא עותק בארכיון האינטרנט — הקובץ פתוח לעיון אנושי בקישור',
+    );
+  }
+  const fromArchive = download.via === 'internet archive snapshot';
+
+  let extraction: ExtractionResult;
+  let method: ExtractionMethod;
+  let extractionNote: string;
+
+  if (format === 'PDF') {
+    const workDir = path.join(RAW_DIR, '.diary-work');
+    const pdfResult = extractPdf(download.bytes, workDir, `${datasetId}-${resource.id ?? 'r'}`);
+    if ('unavailable' in pdfResult) return discloseAndRemember(pdfResult.unavailable);
+    extraction = pdfResult.result;
+    method = pdfResult.method;
+    extractionNote = method === 'pdf_ocr' ? OCR_CAVEAT : 'חולץ משכבת הטקסט של קובץ ה-PDF שפורסם';
+  } else {
+    let grid: CellValue[][];
+    try {
+      grid =
+        format === 'CSV'
+          ? parseCsvGrid(Buffer.from(download.bytes).toString('utf8'))
+          : readXlsxGrid(Buffer.from(download.bytes));
+    } catch (err) {
+      return discloseAndRemember(
+        `הקובץ הורד אך לא נקרא: ${err instanceof Error ? err.message : String(err)}`.slice(0, 200),
+      );
+    }
+    extraction = extractFromGrid(grid);
+    method = 'spreadsheet';
+    extractionNote = 'חולץ מגיליון הנתונים שפורסם';
+  }
+
+  if (extraction.rows.length === 0) {
+    return discloseAndRemember(
+      orFallback(
+        extraction.note,
+        `לא חולצו שורות מהקובץ (${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן)`,
+      ),
+    );
+  }
+  if (extraction.unparsedLineCount > 0) {
+    cov.unparsedResources.push({
+      name: resourceName,
+      format,
+      note: `חולצו ${extraction.rows.length} רשומות; ${extraction.unparsedLineCount} שורות לא זוהו כרשומות יומן ולא נכללו`,
+    });
+  }
+
+  // Where the bytes came from belongs on every row that came from them.
+  const provenanceNote = fromArchive
+    ? ` · הקובץ נקרא מעותק שמור בארכיון האינטרנט: ${download.viaUrl}`
+    : '';
+  const fullNote = `${extractionNote}${provenanceNote}`;
+  writeExtractCache(cacheFile, {
+    method,
+    extractionNote: fullNote,
+    rows: extraction.rows,
+    unparsedLineCount: extraction.unparsedLineCount,
+    disclosures,
+  });
+  return buildEntries(ctx, extraction.rows, method, fullNote);
 }
 
 async function collect(): Promise<void> {
@@ -1539,6 +1675,10 @@ async function collect(): Promise<void> {
       note:
         'היומנים פורסמו על ידי המשרדים מכוח נוהל היומנים והועלו למאגר "מידע לעם" של התנועה לחופש המידע. ' +
         'gov.il ו-foi.gov.il דוחים לקוחות אוטומטיים מזוהים (HTTP 403) ולכן האיסוף נעשה מהמאגר האזרחי. ' +
+        (timeBudgetReached
+          ? `תקציב הזמן של ההרצה (${TIME_BUDGET_MINUTES} דקות) מוצה לפני שכל הקבצים נקראו; הקבצים שנותרו מדווחים ברשימת "לא נקרא" וייקראו בהרצה הבאה. ` +
+            'איסוף זה חלקי במוצהר. '
+          : '') +
         'נקראו רשומות מובנות ממסד הנתונים של המאגר, וכן קבצים שהורדו במידה שהמאגר איפשר: גיליונות, ' +
         'קובצי PDF עם שכבת טקסט, וסריקות שפוענחו ב-OCR. לכל רשומה מצוינת שיטת החילוץ, ורשומת OCR ' +
         'מסומנת במפורש כקריאה אוטומטית שעשויה לשגות. שום רשומה לא שוחזרה בניחוש.',
@@ -1552,6 +1692,7 @@ async function collect(): Promise<void> {
       unparsedResources: coverage.reduce((sum, c) => sum + c.unparsedResources.length, 0),
       duplicateRowsRemoved: duplicateRows,
       datasetsWithoutIdentifier: datasetsWithoutId,
+      timeBudgetReached: timeBudgetReached,
       byExtractionMethod: {
         datastore: deduped.filter((e) => e.extractionMethod === 'datastore').length,
         spreadsheet: deduped.filter((e) => e.extractionMethod === 'spreadsheet').length,
