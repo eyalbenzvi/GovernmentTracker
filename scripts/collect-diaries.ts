@@ -1141,19 +1141,24 @@ function extractPdf(
   fs.mkdirSync(workDir, { recursive: true });
   fs.writeFileSync(pdfPath, bytes);
 
-  const run = (command: string, args: string[]): string | null => {
+  // Every external call gets a hard timeout. Without one, a single malformed
+  // PDF can hang pdftoppm or tesseract indefinitely, and the whole collection
+  // dies when CI kills the job hours later with nothing preserved.
+  const run = (command: string, args: string[], timeoutMs: number): string | null => {
     try {
       return execFileSync(command, args, {
         encoding: 'utf8',
         maxBuffer: 64 * 1024 * 1024,
         stdio: ['ignore', 'pipe', 'pipe'],
+        timeout: timeoutMs,
+        killSignal: 'SIGKILL',
       });
     } catch {
       return null;
     }
   };
 
-  const layoutText = run('pdftotext', ['-layout', '-enc', 'UTF-8', pdfPath, '-']);
+  const layoutText = run('pdftotext', ['-layout', '-enc', 'UTF-8', pdfPath, '-'], 60_000);
   if (layoutText === null) {
     return { unavailable: 'pdftotext (poppler-utils) אינו מותקן בסביבה שבה רץ האיסוף' };
   }
@@ -1165,7 +1170,7 @@ function extractPdf(
   }
 
   const pngPrefix = path.join(workDir, `${label}-page`);
-  if (run('pdftoppm', ['-r', '300', '-png', pdfPath, pngPrefix]) === null) {
+  if (run('pdftoppm', ['-r', '300', '-png', pdfPath, pngPrefix], 300_000) === null) {
     return { unavailable: 'pdftoppm אינו מותקן; לא ניתן להריץ OCR על סריקה' };
   }
   const pages = fs
@@ -1175,6 +1180,7 @@ function extractPdf(
   if (pages.length === 0) {
     return { unavailable: 'לא נוצרו עמודי תמונה מה-PDF' };
   }
+  console.log(`    OCR: ${label} — ${pages.length} עמודים לפענוח`);
   const remainingBudget = Math.max(0, MAX_OCR_PAGES_PER_RUN - ocrPagesUsed);
   if (remainingBudget === 0) {
     return {
@@ -1185,20 +1191,18 @@ function extractPdf(
   const ocrParts: string[] = [];
   for (const page of pages.slice(0, pageLimit)) {
     ocrPagesUsed += 1;
-    const text = run('tesseract', [
-      path.join(workDir, page),
-      'stdout',
-      '-l',
-      'heb+eng',
-      '--psm',
-      '6',
-    ]);
+    const text = run(
+      'tesseract',
+      [path.join(workDir, page), 'stdout', '-l', 'heb+eng', '--psm', '6'],
+      120_000,
+    );
     if (text === null) {
       return { unavailable: 'tesseract עם מודל עברית אינו מותקן; הסריקה לא פוענחה' };
     }
     ocrParts.push(text);
   }
   const ocrText = ocrParts.join('\n');
+  console.log(`    OCR: ${label} — פוענחו ${ocrParts.length} עמודים (סה"כ בהרצה: ${ocrPagesUsed})`);
   // Rendered pages are worth megabytes each and are of no use once read.
   for (const page of pages) {
     fs.rmSync(path.join(workDir, page), { force: true });
