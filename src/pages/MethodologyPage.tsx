@@ -12,8 +12,8 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-8">
       <header>
         <h1 className="text-2xl sm:text-3xl">מתודולוגיה ומגבלות</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">{methodology.purpose}</p>
-        <p className="num mt-3 text-sm text-slate-500">
+        <p className="mt-2 max-w-3xl text-ink-2">{methodology.purpose}</p>
+        <p className="num mt-3 text-sm text-ink-3">
           גרסת נתונים {dataVersion.version} · תאריך איסוף אחרון {formatDate(methodology.windowEnd)}
         </p>
       </header>
@@ -30,23 +30,21 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
         <Card>
           <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div>
-              <dt className="text-sm font-medium text-slate-600">תקופת הממשלה</dt>
-              <dd className="mt-1 text-sm text-slate-800">{methodology.governmentPeriod}</dd>
+              <dt className="text-sm font-medium text-ink-2">תקופת הממשלה</dt>
+              <dd className="mt-1 text-sm text-ink">{methodology.governmentPeriod}</dd>
             </div>
             <div>
-              <dt className="text-sm font-medium text-slate-600">טווח הניתוח</dt>
-              <dd className="num mt-1 text-sm text-slate-800">
+              <dt className="text-sm font-medium text-ink-2">טווח הניתוח</dt>
+              <dd className="num mt-1 text-sm text-ink">
                 {formatDate(methodology.windowStart)} – {formatDate(methodology.windowEnd)}
               </dd>
             </div>
             <div>
-              <dt className="text-sm font-medium text-slate-600">שנות תקציב</dt>
-              <dd className="num mt-1 text-sm text-slate-800">
-                {methodology.analysisYears.join(', ')}
-              </dd>
+              <dt className="text-sm font-medium text-ink-2">שנות תקציב</dt>
+              <dd className="num mt-1 text-sm text-ink">{methodology.analysisYears.join(', ')}</dd>
             </div>
           </dl>
-          <p className="mt-4 border-t border-slate-200 pt-4 text-sm text-slate-600">
+          <p className="mt-4 border-t border-rule pt-4 text-sm text-ink-2">
             תאריך תחילת הטווח הוא פרמטר מוצהר של המוצר — תחילת כהונת הממשלה ה-37 — ולא נתון שנאסף.
             אימות מול המקור הרשמי אפשרי דרך עמוד ממשלות ישראל שמקוטלג ב
             <Link className="link" to="/sources">
@@ -61,7 +59,7 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
         <section key={section.id} aria-labelledby={`section-${section.id}`}>
           <SectionHeading id={`section-${section.id}`} title={section.title} />
           <Card>
-            <div className="space-y-3 text-sm leading-relaxed text-slate-700">
+            <div className="space-y-3 text-sm leading-relaxed text-ink-2">
               {section.paragraphs.map((paragraph, index) => (
                 <p key={`${section.id}-${index}`}>{paragraph}</p>
               ))}
@@ -72,10 +70,10 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
 
       <section aria-labelledby="causation-heading">
         <SectionHeading id="causation-heading" title="איסור פירוש מתאם כסיבתיות" />
-        <div className="rounded-lg border border-amber-300 bg-amber-50 p-5">
+        <div className="rounded-lg border border-state-partial/40 bg-state-partial-soft p-5">
           <div className="flex gap-3">
-            <AlertOctagon className="h-6 w-6 shrink-0 text-amber-700" aria-hidden="true" />
-            <div className="space-y-2 text-sm leading-relaxed text-amber-900">
+            <AlertOctagon className="h-6 w-6 shrink-0 text-state-partial" aria-hidden="true" />
+            <div className="space-y-2 text-sm leading-relaxed text-ink">
               <p>
                 גם כאשר מוצג קשר בין נושא פעילות ובין סעיף תקציבי, אין להסיק ממנו סיבתיות. הופעה של
                 נושא בפרסומי משרד אינה מוכיחה שהתקציב הוקצה בעקבותיה, וגם לא ההפך.
@@ -101,7 +99,7 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
           description="נכון לגרסת נתונים זו."
         />
         <Card>
-          <ul className="list-inside list-disc space-y-2 text-sm text-slate-700">
+          <ul className="list-inside list-disc space-y-2 text-sm text-ink-2">
             {/* These two were written when the site had no budget or activity data
                 at all, and kept interpolating the count after it did — so the page
                 read "there is no budget data on the site: 2,725 records were
@@ -165,7 +163,7 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
       <section aria-labelledby="corrections-heading">
         <SectionHeading id="corrections-heading" title="מדיניות תיקון שגיאות" />
         <Card>
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-ink-2">
             מצאתם נתון שגוי, מקור שאינו במקומו, מיפוי מוטעה או ניסוח מטעה — אנא פתחו Issue. כל תיקון
             נבדק מול המקור הראשוני לפני שינוי הנתונים.
           </p>
@@ -202,7 +200,7 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
           description={`${formatNumber(dataVersion.counts.sources)} מקורות, עם מפרסם, סוג, תקופה, שיטת גילוי וסטטוס אחזור.`}
         />
         <Card className="flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-ink-2">
             הקטלוג ניתן לסינון לפי משרד, שנה, סוג ומפרסם, וניתן להורדה כ-CSV.
           </p>
           <Link className="btn btn-primary" to="/sources">

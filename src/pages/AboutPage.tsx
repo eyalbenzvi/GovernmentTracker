@@ -107,7 +107,7 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
       key: 'limitations',
       header: 'מגבלות',
       render: (row) => (
-        <ul className="max-w-md list-inside list-disc space-y-1 text-xs text-slate-600">
+        <ul className="max-w-md list-inside list-disc space-y-1 text-xs text-ink-2">
           {row.limitations.map((limitation) => (
             <li key={limitation}>{limitation}</li>
           ))}
@@ -120,7 +120,7 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-8">
       <header>
         <h1 className="text-2xl sm:text-3xl">אודות ואיכות נתונים</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           מה בדיוק יש במאגר, מה חסר, וכמה ניתן להסתמך על כל חלק. הדף נבנה מקובצי הנתונים עצמם, ולכן
           אינו יכול לסטות מהם.
         </p>
@@ -141,13 +141,11 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
           {counts.map((item) => (
             <li key={item.label}>
               <Card className="h-full">
-                <p className="text-sm font-medium text-slate-600">{item.label}</p>
-                <p className="num mt-1 text-2xl font-semibold text-slate-900">
+                <p className="text-sm font-medium text-ink-2">{item.label}</p>
+                <p className="num mt-1 text-2xl font-semibold text-ink">
                   {formatNumber(item.value)}
                 </p>
-                {item.note !== undefined && (
-                  <p className="mt-1 text-xs text-slate-500">{item.note}</p>
-                )}
+                {item.note !== undefined && <p className="mt-1 text-xs text-ink-3">{item.note}</p>}
               </Card>
             </li>
           ))}
@@ -221,7 +219,7 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
       <section aria-labelledby="quality-heading">
         <SectionHeading id="quality-heading" title="הערות איכות וחסר" />
         <Card>
-          <ul className="list-inside list-disc space-y-2 text-sm text-slate-700">
+          <ul className="list-inside list-disc space-y-2 text-sm text-ink-2">
             <li>
               איכות זיהוי המשרד שונה בין משרדים: עבור התחבורה, החינוך והבריאות שם המשרד מופיע בכותרת
               מקור רשמי. עבור הגנת הסביבה והכלכלה הזיהוי נשען על שם קובץ ספר התקציב באתר הכנסת —
@@ -246,7 +244,7 @@ export function AboutPage({ data }: { data: Dataset }): JSX.Element {
       <section aria-labelledby="transparency-heading">
         <SectionHeading id="transparency-heading" title="הצהרת שקיפות" />
         <Card>
-          <p className="text-sm leading-relaxed text-slate-700">
+          <p className="text-sm leading-relaxed text-ink-2">
             אתר זה אינו מקור רשמי ואינו מחליף את המקורות המקוריים. הוא כלי הנגשה: הוא מפנה למקורות
             הרשמיים, מתעד מה נאסף ומה לא, ומאפשר לבדוק כל טענה. במקרה של סתירה בין האתר לבין המקור
             הרשמי — המקור הרשמי קובע.

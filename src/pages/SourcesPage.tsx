@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
+import { useUrlParam } from '../lib/useUrlState';
 import type { Dataset, SourceCatalogItem } from '../types/domain';
 import {
   Badge,
@@ -16,11 +17,11 @@ import { filterSources, uniqueSorted } from '../lib/selectors';
 const ALL = 'all';
 
 export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
-  const [ministryId, setMinistryId] = useState(ALL);
-  const [year, setYear] = useState(ALL);
-  const [sourceType, setSourceType] = useState(ALL);
-  const [publisher, setPublisher] = useState(ALL);
-  const [query, setQuery] = useState('');
+  const [ministryId, setMinistryId] = useUrlParam('ministry', ALL);
+  const [year, setYear] = useUrlParam('year', ALL);
+  const [sourceType, setSourceType] = useUrlParam('type', ALL);
+  const [publisher, setPublisher] = useUrlParam('publisher', ALL);
+  const [query, setQuery] = useUrlParam('q', '');
 
   const publishers = uniqueSorted(data.sources.map((s) => s.publisher));
   const types = uniqueSorted(data.sources.map((s) => s.sourceType));
@@ -40,7 +41,7 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
       render: (source) => (
         <div className="max-w-md">
           <span className="font-medium">{source.title}</span>
-          <span className="block text-xs text-slate-500">{source.periodCovered}</span>
+          <span className="block text-xs text-ink-3">{source.periodCovered}</span>
         </div>
       ),
       sortValue: (source) => source.title,
@@ -62,7 +63,7 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
       header: 'משרדים',
       render: (source) =>
         source.ministryIds.length === 0 ? (
-          <span className="text-slate-500">רוחבי</span>
+          <span className="text-ink-3">רוחבי</span>
         ) : (
           source.ministryIds
             .map((id) => data.ministries.find((m) => m.id === id)?.displayName ?? id)
@@ -119,7 +120,7 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl sm:text-3xl">קטלוג המקורות</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           כל מקור שהאתר מסתמך עליו או מפנה אליו, עם מפרסם, סוג, תקופה, שיטת גילוי, סטטוס אחזור
           וקישור ישיר. אין באתר תוכן ממקור חיצוני ללא URL.
         </p>
@@ -127,11 +128,11 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card>
-          <p className="text-sm font-medium text-slate-600">מקורות בקטלוג</p>
+          <p className="text-sm font-medium text-ink-2">מקורות בקטלוג</p>
           <p className="num mt-1 text-2xl font-semibold">{formatNumber(data.sources.length)}</p>
         </Card>
         <Card>
-          <p className="text-sm font-medium text-slate-600">מקורות רשמיים ראשוניים</p>
+          <p className="text-sm font-medium text-ink-2">מקורות רשמיים ראשוניים</p>
           <p className="num mt-1 text-2xl font-semibold">
             {formatNumber(
               data.sources.filter((s) => s.reliabilityLevel === 'primary_official').length,
@@ -139,9 +140,9 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
           </p>
         </Card>
         <Card>
-          <p className="text-sm font-medium text-slate-600">גוף המסמך אוחזר</p>
+          <p className="text-sm font-medium text-ink-2">גוף המסמך אוחזר</p>
           <p className="num mt-1 text-2xl font-semibold">{formatNumber(retrievedCount)}</p>
-          <p className="mt-1 text-xs text-slate-500">
+          <p className="mt-1 text-xs text-ink-3">
             מתוך {formatNumber(data.sources.length)} — היתר נשמרו כהפניה בלבד
           </p>
         </Card>
@@ -253,7 +254,7 @@ export function SourcesPage({ data }: { data: Dataset }): JSX.Element {
 
       <section aria-labelledby="catalog-table">
         <SectionHeading id="catalog-table" title="הקטלוג המלא" />
-        <p className="num mb-2 text-sm text-slate-600" role="status" aria-live="polite">
+        <p className="num mb-2 text-sm text-ink-2" role="status" aria-live="polite">
           {formatNumber(filtered.length)} מקורות מתוך {formatNumber(data.sources.length)}
         </p>
         {data.sources.length === 0 ? (

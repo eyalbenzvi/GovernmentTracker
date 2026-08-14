@@ -70,17 +70,44 @@ export function DataTable<T>({
 
   if (items.length === 0) {
     return (
-      <div className="rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+      <div className="rounded-lg border border-dashed border-rule-strong bg-surface-2 p-6 text-sm text-ink-2">
         {emptyMessage}
       </div>
     );
   }
 
   const rows = sorted.slice(0, visible);
+  const primary = columns[0];
+  const secondary = columns.slice(1);
 
   return (
     <div>
-      <div className="table-wrap max-h-[32rem] overflow-y-auto">
+      {/*
+       * Narrow screens get one card per row instead of a horizontally scrolling
+       * table: the first column heads the card and the rest become labelled pairs,
+       * so no column is lost off-screen and the header never scrolls away.
+       */}
+      <ul className="space-y-2 sm:hidden" data-rows="cards" aria-label={caption}>
+        {rows.map((item) => (
+          <li key={rowKey(item)} className="card p-3">
+            {primary !== undefined && (
+              <p className="text-sm font-medium text-ink">{primary.render(item)}</p>
+            )}
+            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
+              {secondary.map((column) => (
+                <div key={column.key} className="min-w-0">
+                  <dt className="truncate text-ink-3">{column.header}</dt>
+                  <dd className={`text-ink-2 ${column.align === 'end' ? 'num' : ''}`}>
+                    {column.render(item)}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </li>
+        ))}
+      </ul>
+
+      <div className="table-wrap hidden max-h-[32rem] overflow-y-auto sm:block">
         <table className="data-table">
           <caption className="sr-only">{caption}</caption>
           <thead>
@@ -102,7 +129,7 @@ export function DataTable<T>({
                     {column.sortValue !== undefined ? (
                       <button
                         type="button"
-                        className="inline-flex items-center gap-1 hover:text-brand-700"
+                        className="inline-flex items-center gap-1 hover:text-brand"
                         onClick={() => toggleSort(column.key)}
                         aria-label={`מיון לפי ${column.header}`}
                       >
@@ -141,7 +168,7 @@ export function DataTable<T>({
           </tbody>
         </table>
       </div>
-      <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-2">
         <span className="num">
           מוצגות {rows.length} מתוך {items.length} שורות
         </span>

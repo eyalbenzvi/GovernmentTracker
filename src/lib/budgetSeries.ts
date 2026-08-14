@@ -7,7 +7,7 @@
  */
 import type { BudgetItem, DataStatus } from '../types/domain';
 import { sumWithoutDoubleCounting } from './calc';
-import type { SeriesPoint } from '../components/charts';
+import type { SeriesPoint } from '../types/chart';
 
 export interface YearAggregate {
   fiscalYear: number;

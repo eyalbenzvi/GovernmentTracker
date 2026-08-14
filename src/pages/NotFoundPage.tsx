@@ -9,7 +9,7 @@ export function NotFoundPage({
   return (
     <Card className="mx-auto max-w-xl text-center">
       <h1 className="text-xl">לא נמצא</h1>
-      <p className="mt-2 text-sm text-slate-600">{message}</p>
+      <p className="mt-2 text-sm text-ink-2">{message}</p>
       <Link className="btn btn-primary mt-4" to="/">
         חזרה לדף הבית
       </Link>

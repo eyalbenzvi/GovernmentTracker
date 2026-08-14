@@ -1,16 +1,36 @@
 /**
  * Small shared presentation primitives.
  *
- * Two of these carry product rules rather than styling:
+ * Several of these carry product rules rather than styling:
  *  - `DataUnavailable` is the single way the site says "we don't have this".
  *    It always states *why*, so absence is never mistaken for zero.
- *  - `Measure` renders a figure together with its status and source, so a number
- *    can never appear on screen detached from its provenance.
+ *  - `Measure` renders a figure together with its status, its context (share, rank,
+ *    change) and its source, so a number can never appear detached from provenance.
+ *  - `QualityNote` is how a caveat reaches the reader from now on: folded into the
+ *    figure it qualifies, opened on demand. The screens used to stack seven to nine
+ *    warning boxes, which taught readers to skip yellow boxes — including the ones
+ *    that mattered. A prominent `Callout` is now reserved for a limitation that
+ *    changes the conclusion.
+ *  - `ReportErrorLink` and the corrections log exist because this site publishes
+ *    measures about named people, and a reader needs a way to contest a figure.
  */
-import type { ReactNode } from 'react';
-import { AlertTriangle, ExternalLink, FileWarning, Info, Loader2, ShieldAlert } from 'lucide-react';
-import { MISSING_LABEL, dataStatusLabel } from '../lib/format';
+import { useId, useState, type ReactNode } from 'react';
+import {
+  AlertTriangle,
+  Check,
+  ChevronDown,
+  ExternalLink,
+  FileWarning,
+  Flag,
+  Info,
+  Link2,
+  Loader2,
+  ShieldAlert,
+} from 'lucide-react';
+import { MISSING_LABEL, dataStatusLabel, formatNumber, formatPercent } from '../lib/format';
 import type { DataStatus } from '../types/domain';
+import { CHANGE_IS_NOMINAL_HE } from '../lib/context';
+import { ISSUES_URL } from '../lib/site';
 
 export function Card({
   children,
@@ -36,11 +56,9 @@ export function SectionHeading({
   return (
     <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h2 id={id} className="text-lg sm:text-xl">
-          {title}
-        </h2>
+        <h2 id={id}>{title}</h2>
         {description !== undefined && (
-          <p className="mt-1 max-w-3xl text-sm text-slate-600">{description}</p>
+          <p className="mt-1 max-w-3xl text-sm text-ink-2">{description}</p>
         )}
       </div>
       {action}
@@ -52,19 +70,23 @@ type CalloutTone = 'info' | 'warning' | 'caution';
 
 const TONE_STYLES: Record<CalloutTone, { box: string; icon: JSX.Element }> = {
   info: {
-    box: 'border-brand-100 bg-brand-50 text-brand-900',
-    icon: <Info className="h-5 w-5 shrink-0 text-brand-700" aria-hidden="true" />,
+    box: 'border-brand/30 bg-brand-soft text-ink',
+    icon: <Info className="h-5 w-5 shrink-0 text-brand" aria-hidden="true" />,
   },
   warning: {
-    box: 'border-amber-200 bg-amber-50 text-amber-900',
-    icon: <AlertTriangle className="h-5 w-5 shrink-0 text-amber-700" aria-hidden="true" />,
+    box: 'border-state-partial/40 bg-state-partial-soft text-ink',
+    icon: <AlertTriangle className="h-5 w-5 shrink-0 text-state-partial" aria-hidden="true" />,
   },
   caution: {
-    box: 'border-slate-300 bg-slate-100 text-slate-800',
-    icon: <ShieldAlert className="h-5 w-5 shrink-0 text-slate-600" aria-hidden="true" />,
+    box: 'border-rule-strong bg-surface-2 text-ink-2',
+    icon: <ShieldAlert className="h-5 w-5 shrink-0 text-ink-3" aria-hidden="true" />,
   },
 };
 
+/**
+ * A prominent box. Use only when the limitation changes what the reader should
+ * conclude; for everything else use QualityNote, which folds.
+ */
 export function Callout({
   tone = 'info',
   title,
@@ -87,6 +109,30 @@ export function Callout({
 }
 
 /**
+ * A caveat the reader can open. Quiet by default, complete when expanded — the
+ * replacement for a wall of warning boxes.
+ */
+export function QualityNote({
+  label = 'איך לקרוא את המספר הזה',
+  children,
+}: {
+  label?: string;
+  children: ReactNode;
+}): JSX.Element {
+  return (
+    <details className="group mt-2 text-sm">
+      <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-xs font-medium text-ink-3 hover:text-ink-2">
+        <ChevronDown className="h-3.5 w-3.5 transition group-open:rotate-180" aria-hidden="true" />
+        {label}
+      </summary>
+      <div className="mt-2 space-y-2 border-s-2 border-rule ps-3 text-sm leading-relaxed text-ink-2">
+        {children}
+      </div>
+    </details>
+  );
+}
+
+/**
  * The site's single "no data" presentation. `reason` is mandatory on purpose:
  * an empty panel must always explain itself.
  */
@@ -98,21 +144,21 @@ export function DataUnavailable({
   title?: string;
 }): JSX.Element {
   return (
-    <div className="flex items-start gap-3 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-5 text-sm">
-      <FileWarning className="h-5 w-5 shrink-0 text-slate-500" aria-hidden="true" />
+    <div className="flex items-start gap-3 rounded-lg border border-dashed border-rule-strong bg-surface-2 p-5 text-sm">
+      <FileWarning className="h-5 w-5 shrink-0 text-ink-3" aria-hidden="true" />
       <div>
-        <p className="font-semibold text-slate-800">{title}</p>
-        <p className="mt-1 max-w-2xl text-slate-600">{reason}</p>
+        <p className="font-semibold text-ink">{title}</p>
+        <p className="mt-1 max-w-2xl text-ink-2">{reason}</p>
       </div>
     </div>
   );
 }
 
 const STATUS_STYLES: Record<DataStatus, string> = {
-  final: 'bg-emerald-50 text-emerald-800 border-emerald-200',
-  partial: 'bg-amber-50 text-amber-800 border-amber-200',
-  estimate: 'bg-sky-50 text-sky-800 border-sky-200',
-  unavailable: 'bg-slate-100 text-slate-700 border-slate-300',
+  final: 'bg-state-final-soft text-state-final border-state-final/30',
+  partial: 'bg-state-partial-soft text-state-partial border-state-partial/30',
+  estimate: 'bg-state-estimate-soft text-state-estimate border-state-estimate/30',
+  unavailable: 'bg-state-missing-soft text-state-missing border-state-missing/30',
 };
 
 export function DataStatusBadge({ status }: { status: DataStatus }): JSX.Element {
@@ -130,14 +176,16 @@ export function Badge({
   tone = 'neutral',
 }: {
   children: ReactNode;
-  tone?: 'neutral' | 'primary' | 'muted';
+  tone?: 'neutral' | 'primary' | 'muted' | 'warm';
 }): JSX.Element {
   const styles =
     tone === 'primary'
-      ? 'bg-brand-50 text-brand-800 border-brand-100'
+      ? 'bg-brand-soft text-brand border-brand/30'
       : tone === 'muted'
-        ? 'bg-slate-50 text-slate-600 border-slate-200'
-        : 'bg-slate-100 text-slate-700 border-slate-300';
+        ? 'bg-surface-2 text-ink-3 border-rule'
+        : tone === 'warm'
+          ? 'bg-warm-soft text-warm border-warm/30'
+          : 'bg-surface-2 text-ink-2 border-rule-strong';
   return (
     <span className={`inline-flex items-center rounded border px-2 py-0.5 text-xs ${styles}`}>
       {children}
@@ -169,10 +217,70 @@ export function SourceLink({
   );
 }
 
+export interface MeasureContext {
+  /** "2.1% מהתקציב הרגיל" */
+  sharePercent?: number | null;
+  shareLabelHe?: string;
+  /** Nominal change against an earlier period. */
+  changePercent?: number | null;
+  changeLabelHe?: string;
+  /** "החמישי בגודלו מבין 43" */
+  rank?: number | null;
+  rankOutOf?: number | null;
+  rankLabelHe?: string;
+  /** Values for an inline sparkline, oldest first. */
+  trend?: readonly (number | null)[];
+}
+
+/** The three comparisons that turn a bare figure into a readable one. */
+function ContextRow({ context }: { context: MeasureContext }): JSX.Element | null {
+  const parts: JSX.Element[] = [];
+
+  if (context.sharePercent !== null && context.sharePercent !== undefined) {
+    parts.push(
+      <span key="share">
+        <span className="num font-medium text-ink">{formatPercent(context.sharePercent)}</span>{' '}
+        {context.shareLabelHe ?? 'מהסך'}
+      </span>,
+    );
+  }
+  if (context.changePercent !== null && context.changePercent !== undefined) {
+    const up = context.changePercent > 0;
+    parts.push(
+      <span key="change" title={CHANGE_IS_NOMINAL_HE}>
+        <span className={`num font-medium ${up ? 'text-up' : 'text-down'}`}>
+          {up ? '+' : ''}
+          {formatPercent(context.changePercent)}
+        </span>{' '}
+        {context.changeLabelHe ?? 'מהתקופה הקודמת'} <span className="text-ink-3">(נומינלי)</span>
+      </span>,
+    );
+  }
+  if (
+    context.rank !== null &&
+    context.rank !== undefined &&
+    context.rankOutOf !== null &&
+    context.rankOutOf !== undefined
+  ) {
+    parts.push(
+      <span key="rank">
+        מקום <span className="num font-medium text-ink">{formatNumber(context.rank)}</span> מתוך{' '}
+        <span className="num">{formatNumber(context.rankOutOf)}</span>{' '}
+        {context.rankLabelHe ?? 'סעיפים'}
+      </span>,
+    );
+  }
+
+  if (parts.length === 0) return null;
+  return (
+    <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-2">{parts}</p>
+  );
+}
+
 /**
- * A figure with its status and source attached. This is the only component that
- * renders a monetary or percentage value in a KPI position, which is how the
- * "every number carries a source" rule is kept structural rather than editorial.
+ * A figure with its status, context and source attached. This is the only component
+ * that renders a value in a KPI position, which is how the "every number carries a
+ * source and a scale" rule stays structural rather than editorial.
  */
 export function Measure({
   label,
@@ -182,6 +290,8 @@ export function Measure({
   sourceUrl,
   sourceTitle,
   note,
+  context,
+  children,
 }: {
   label: string;
   display: string;
@@ -189,34 +299,159 @@ export function Measure({
   status: DataStatus;
   sourceUrl?: string;
   sourceTitle?: string;
+  /** Short caveat, folded. Long-form belongs on the "how to read" screen. */
   note?: string;
+  context?: MeasureContext;
+  children?: ReactNode;
 }): JSX.Element {
   return (
     <div className="card card-pad flex h-full flex-col">
-      <p className="text-sm font-medium text-slate-600">{label}</p>
-      <p className="num mt-2 text-2xl font-semibold text-slate-900" title={fullValue ?? display}>
+      <p className="text-sm font-medium text-ink-2">{label}</p>
+      <p className="num mt-1.5 text-2xl font-semibold text-ink" title={fullValue ?? display}>
         {display}
       </p>
+      {context !== undefined && <ContextRow context={context} />}
       <div className="mt-3 flex flex-wrap items-center gap-2">
         <DataStatusBadge status={status} />
         {sourceUrl !== undefined && sourceTitle !== undefined && (
           <SourceLink url={sourceUrl} title={sourceTitle} />
         )}
       </div>
-      {note !== undefined && <p className="mt-2 text-xs leading-relaxed text-slate-500">{note}</p>}
+      {note !== undefined && <QualityNote>{<p>{note}</p>}</QualityNote>}
+      {children}
     </div>
+  );
+}
+
+/** A 0–100 index with its own bar, used by the scorecards. */
+export function ScoreBar({
+  score,
+  label,
+  max = 100,
+  tone = 'brand',
+}: {
+  score: number | null;
+  label: string;
+  max?: number;
+  tone?: 'brand' | 'warm';
+}): JSX.Element {
+  if (score === null) {
+    return <span className="text-xs text-ink-3">אין נתון</span>;
+  }
+  const width = Math.max(0, Math.min(100, (score / max) * 100));
+  return (
+    <span className="flex items-center gap-2" title={label}>
+      <span className="relative h-2 w-20 shrink-0 overflow-hidden rounded-full bg-surface-sunken">
+        <span
+          className={`absolute inset-y-0 right-0 rounded-full ${tone === 'warm' ? 'bg-warm' : 'bg-brand'}`}
+          style={{ width: `${width}%` }}
+        />
+      </span>
+      <span className="num text-xs font-medium text-ink">{formatNumber(score)}</span>
+    </span>
+  );
+}
+
+/** Copies a deep link to the current view, so a reader can cite what they see. */
+export function CopyLinkButton({ label = 'העתקת קישור לתצוגה' }: { label?: string }): JSX.Element {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      className="btn btn-sm"
+      onClick={() => {
+        void navigator.clipboard
+          ?.writeText(window.location.href)
+          .then(() => {
+            setCopied(true);
+            window.setTimeout(() => setCopied(false), 2500);
+          })
+          .catch(() => setCopied(false));
+      }}
+    >
+      {copied ? (
+        <Check className="h-4 w-4 text-state-final" aria-hidden="true" />
+      ) : (
+        <Link2 className="h-4 w-4" aria-hidden="true" />
+      )}
+      {copied ? 'הקישור הועתק' : label}
+    </button>
+  );
+}
+
+/**
+ * Opens a correction request with the figure's own context pre-filled. The site
+ * publishes measures about named office-holders; a reader who believes a figure is
+ * wrong needs a route that does not depend on knowing how to file a GitHub issue.
+ */
+export function ReportErrorLink({
+  subject,
+  context,
+  label = 'דווח על טעות',
+}: {
+  subject: string;
+  context?: string;
+  label?: string;
+}): JSX.Element {
+  const body = [
+    `הפריט: ${subject}`,
+    context !== undefined ? `ההקשר: ${context}` : null,
+    `הכתובת: ${typeof window === 'undefined' ? '' : window.location.href}`,
+    '',
+    'מה שגוי, ומה המקור שממנו ניתן לאמת את התיקון:',
+  ]
+    .filter((line): line is string => line !== null)
+    .join('\n');
+  const href = `${ISSUES_URL}/new?title=${encodeURIComponent(`תיקון: ${subject}`)}&body=${encodeURIComponent(body)}`;
+  return (
+    <a
+      className="inline-flex items-center gap-1 text-xs text-ink-3 underline decoration-dotted hover:text-ink-2"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Flag className="h-3 w-3" aria-hidden="true" />
+      {label}
+    </a>
   );
 }
 
 export function LoadingState({ label = 'טוען נתונים…' }: { label?: string }): JSX.Element {
   return (
     <div
-      className="flex items-center justify-center gap-3 p-12 text-slate-600"
+      className="flex items-center justify-center gap-3 p-12 text-ink-2"
       role="status"
       aria-live="polite"
     >
       <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
       <span>{label}</span>
+    </div>
+  );
+}
+
+/**
+ * A shaped placeholder for a screen whose heavy dataset is still arriving. Better
+ * than a spinner on a data-dense page: the reader sees where the content will land.
+ */
+export function SkeletonScreen({ label = 'טוען נתונים…' }: { label?: string }): JSX.Element {
+  const id = useId();
+  return (
+    <div className="space-y-6" role="status" aria-live="polite" aria-label={label}>
+      <div className="h-7 w-2/3 animate-pulse rounded bg-surface-2" />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {[0, 1, 2].map((i) => (
+          <div key={`${id}-kpi-${i}`} className="card card-pad">
+            <div className="h-4 w-24 animate-pulse rounded bg-surface-2" />
+            <div className="mt-3 h-7 w-32 animate-pulse rounded bg-surface-2" />
+            <div className="mt-3 h-3 w-40 animate-pulse rounded bg-surface-2" />
+          </div>
+        ))}
+      </div>
+      <div className="card card-pad">
+        <div className="h-4 w-40 animate-pulse rounded bg-surface-2" />
+        <div className="mt-4 h-64 w-full animate-pulse rounded bg-surface-2" />
+      </div>
+      <span className="sr-only">{label}</span>
     </div>
   );
 }

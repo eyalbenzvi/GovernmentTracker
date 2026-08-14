@@ -48,6 +48,32 @@ export function formatCurrencyShort(value: number | null): string {
   return `${sign}${numberFormat.format(abs)} ש"ח`;
 }
 
+/**
+ * Hebrew counting, so a generated sentence never reads "1 סעיפים".
+ * `one` is the singular form including its own word for one ("סעיף אחד").
+ */
+export function formatCountHe(count: number, one: string, many: string): string {
+  if (!Number.isFinite(count)) return MISSING_SHORT;
+  if (count === 1) return one;
+  return `${numberFormat.format(count)} ${many}`;
+}
+
+/**
+ * A chart axis tick: as short as possible while still readable. The currency word
+ * is dropped because the axis carries a single unit and the tooltip and table both
+ * spell the full figure out — a tick of "75.00 מיליארד ש\"ח" wraps and clips.
+ */
+export function formatCurrencyAxis(value: number | null): string {
+  if (value === null || !Number.isFinite(value)) return MISSING_SHORT;
+  const abs = Math.abs(value);
+  const sign = value < 0 ? '־' : '';
+  const compact = new Intl.NumberFormat(HE, { maximumFractionDigits: 1 });
+  if (abs >= 1_000_000_000) return `${sign}${compact.format(abs / 1_000_000_000)} מיליארד`;
+  if (abs >= 1_000_000) return `${sign}${compact.format(abs / 1_000_000)} מיליון`;
+  if (abs >= 1_000) return `${sign}${compact.format(abs / 1_000)} אלף`;
+  return `${sign}${numberFormat.format(abs)}`;
+}
+
 export function formatPercent(value: number | null): string {
   if (value === null || !Number.isFinite(value)) return MISSING_SHORT;
   return `${percentFormat.format(value)}%`;

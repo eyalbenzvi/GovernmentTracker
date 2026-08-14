@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useUrlParam } from '../lib/useUrlState';
 import { Link } from 'react-router-dom';
 import type { ActivityEvidence, Dataset } from '../types/domain';
 import { Badge, Callout, Card, DataUnavailable, SourceLink } from '../components/ui';
@@ -14,11 +15,11 @@ import { dataBackedTopics, filterActivities, uniqueSorted } from '../lib/selecto
 const ALL = 'all';
 
 export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
-  const [ministryId, setMinistryId] = useState(ALL);
-  const [year, setYear] = useState(ALL);
-  const [topicId, setTopicId] = useState(ALL);
-  const [sourceType, setSourceType] = useState(ALL);
-  const [query, setQuery] = useState('');
+  const [ministryId, setMinistryId] = useUrlParam('ministry', ALL);
+  const [year, setYear] = useUrlParam('year', ALL);
+  const [topicId, setTopicId] = useUrlParam('topic', ALL);
+  const [sourceType, setSourceType] = useUrlParam('type', ALL);
+  const [query, setQuery] = useUrlParam('q', '');
   const [visible, setVisible] = useState(50);
 
   const topics = dataBackedTopics(data);
@@ -33,7 +34,7 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl sm:text-3xl">פעילות פומבית</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           כל פריטי הפעילות במאגר. פריט פעילות הוא פרסום פומבי — הודעת משרד, עמוד ממשלתי, מסמך
           מדיניות או פרוטוקול ועדה — ולא תיעוד של עבודת עובדי המשרד.
         </p>
@@ -137,7 +138,7 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
             </div>
           </Card>
 
-          <p className="num text-sm text-slate-600" role="status" aria-live="polite">
+          <p className="num text-sm text-ink-2" role="status" aria-live="polite">
             {formatNumber(filtered.length)} פריטים מתוך {formatNumber(data.activities.length)}
           </p>
 
@@ -155,13 +156,9 @@ export function ActivityPage({ data }: { data: Dataset }): JSX.Element {
                     <Card>
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div className="min-w-0">
-                          <p className="num text-xs text-slate-500">{formatDate(activity.date)}</p>
-                          <h2 className="mt-1 text-sm font-semibold text-slate-800">
-                            {activity.title}
-                          </h2>
-                          <p className="mt-1 max-w-3xl text-sm text-slate-600">
-                            {activity.summary}
-                          </p>
+                          <p className="num text-xs text-ink-3">{formatDate(activity.date)}</p>
+                          <h2 className="mt-1 text-sm font-semibold text-ink">{activity.title}</h2>
+                          <p className="mt-1 max-w-3xl text-sm text-ink-2">{activity.summary}</p>
                         </div>
                         <SourceLink url={activity.sourceUrl} title={activity.sourceTitle} />
                       </div>
