@@ -370,6 +370,8 @@ export interface DiaryEntry {
   extractionMethod: DiaryExtractionMethod;
   categoryId?: string;
   matchedKeyword?: string | null;
+  /** How firm the keyword behind this assignment is, as its author stated it. */
+  matchedConfidence?: 'high' | 'medium' | 'low' | null;
 }
 
 export interface DiaryCategory {

@@ -10,7 +10,8 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-1",
@@ -23,7 +24,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-10",
@@ -36,7 +38,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-11",
@@ -49,7 +52,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-12",
@@ -62,7 +66,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-13",
@@ -75,7 +80,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-14",
@@ -88,7 +94,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-15",
@@ -101,7 +108,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-16",
@@ -114,7 +122,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-17",
@@ -127,7 +136,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-18",
@@ -140,7 +150,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-19",
@@ -153,7 +164,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-2",
@@ -166,7 +178,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-20",
@@ -179,7 +192,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-21",
@@ -192,7 +206,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-22",
@@ -205,7 +220,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-23",
@@ -218,7 +234,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-3",
@@ -231,7 +248,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-4",
@@ -244,7 +262,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-5",
@@ -257,7 +276,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-6",
@@ -270,7 +290,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-7",
@@ -283,7 +304,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-8",
@@ -296,7 +318,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-5d13a298-pdf_ocr-9",
@@ -309,7 +332,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-91b1b7f3-pdf_text-1",
@@ -322,7 +346,8 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-9",
@@ -335,7 +360,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-103",
@@ -348,7 +374,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-117",
@@ -361,7 +388,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-134",
@@ -374,7 +402,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-144",
@@ -387,7 +416,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-152",
@@ -400,7 +430,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-164",
@@ -413,7 +444,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-26",
@@ -426,7 +458,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-27",
@@ -439,7 +472,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-42",
@@ -452,7 +486,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-56",
@@ -465,7 +500,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-72",
@@ -478,7 +514,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-89",
@@ -491,7 +528,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-1",
@@ -504,7 +542,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-10",
@@ -517,7 +556,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-11",
@@ -530,7 +570,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-12",
@@ -543,7 +584,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-13",
@@ -556,7 +598,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-14",
@@ -569,7 +612,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-16",
@@ -582,7 +626,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-17",
@@ -595,7 +640,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-18",
@@ -608,7 +654,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-19",
@@ -621,7 +668,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-2",
@@ -634,7 +682,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-20",
@@ -647,7 +696,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-21",
@@ -660,7 +710,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-22",
@@ -673,7 +724,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-23",
@@ -686,7 +738,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-24",
@@ -699,7 +752,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-25",
@@ -712,7 +766,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-3",
@@ -725,7 +780,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-4",
@@ -738,7 +794,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-5",
@@ -751,7 +808,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-6",
@@ -764,7 +822,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-7",
@@ -777,7 +836,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-8",
@@ -790,7 +850,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-f1c833b2-pdf_text-2",
@@ -803,7 +864,8 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-35459bb1-941d-4333-b22f-631c613e7926-f1c833b2-pdf_text-3",
@@ -816,7 +878,8 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-69350bae-pdf_ocr-15",
@@ -829,7 +892,8 @@
     "participants": null,
     "extractionMethod": "pdf_ocr",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-91b1b7f3-pdf_text-2",
@@ -842,7 +906,8 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   },
   {
     "id": "diary-fa6e3db9-96d5-4a87-8b38-7791dc598929-91b1b7f3-pdf_text-3",
@@ -855,6 +920,7 @@
     "participants": null,
     "extractionMethod": "pdf_text",
     "categoryId": "unclassified",
-    "matchedKeyword": null
+    "matchedKeyword": null,
+    "matchedConfidence": null
   }
 ]

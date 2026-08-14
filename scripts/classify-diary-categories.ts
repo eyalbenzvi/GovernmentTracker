@@ -31,6 +31,32 @@
 import path from 'node:path';
 import { PROCESSED_DIR, RAW_DIR, readJson, writeJson } from './lib/paths.js';
 
+/** Confidence stated by the expert who proposed a keyword. */
+export type KeywordConfidence = 'high' | 'medium' | 'low';
+
+/**
+ * A keyword is either a bare string — the hand-curated vocabulary this project
+ * started with — or a record contributed by the expert panel, which carries the
+ * confidence, the experts behind it and their reasoning. Both forms are read;
+ * a bare string is treated as curated and certain.
+ */
+export type SeedKeyword =
+  | string
+  | {
+      keyword: string;
+      confidence: KeywordConfidence;
+      experts: string[];
+      reasoning: string;
+    };
+
+export function keywordTextOf(entry: SeedKeyword): string {
+  return typeof entry === 'string' ? entry : entry.keyword;
+}
+
+export function keywordConfidenceOf(entry: SeedKeyword): KeywordConfidence {
+  return typeof entry === 'string' ? 'high' : entry.confidence;
+}
+
 interface CategorySeed {
   id: string;
   labelHe: string;
@@ -38,7 +64,7 @@ interface CategorySeed {
   color: string;
   priority: number;
   reasoning: string;
-  keywords: string[];
+  keywords: SeedKeyword[];
 }
 
 interface CategoriesSeedFile {
@@ -46,6 +72,8 @@ interface CategoriesSeedFile {
   purpose: string;
   classifierRule: string;
   limitations: string[];
+  /** Provenance of the expert-panel vocabulary, published verbatim. */
+  expertPanel?: unknown;
   genericSubjects: string[];
   /** Subjects the collector writes when the source recorded no subject text. */
   noSubjectSentinels: string[];
@@ -81,6 +109,8 @@ export function isGenericSubject(subject: string, genericSubjects: readonly stri
 export interface CategoryMatch {
   categoryId: string;
   matchedKeyword: string | null;
+  /** How firm the assignment is — null when no keyword produced it. */
+  matchedConfidence: KeywordConfidence | null;
   rule: 'no_subject_recorded' | 'generic_subject' | 'keyword_match' | 'no_match';
 }
 
@@ -162,23 +192,34 @@ export function classifySubject(
   // Conflating them would let our own extraction gaps inflate a transparency
   // measure, so the sentinel is checked first and kept in its own category.
   if (isGenericSubject(subject, noSubjectSentinels)) {
-    return { categoryId: 'no_subject_recorded', matchedKeyword: null, rule: 'no_subject_recorded' };
+    return {
+      categoryId: 'no_subject_recorded',
+      matchedKeyword: null,
+      matchedConfidence: null,
+      rule: 'no_subject_recorded',
+    };
   }
   if (isGenericSubject(subject, genericSubjects)) {
-    return { categoryId: 'unspecified', matchedKeyword: null, rule: 'generic_subject' };
+    return {
+      categoryId: 'unspecified',
+      matchedKeyword: null,
+      matchedConfidence: null,
+      rule: 'generic_subject',
+    };
   }
   const haystack = normalizeSubject(subject).toLowerCase();
-  let best: { category: CategorySeed; keyword: string } | null = null;
+  let best: { category: CategorySeed; keyword: string; confidence: KeywordConfidence } | null =
+    null;
   for (const category of categories) {
-    for (const keyword of category.keywords) {
-      const needle = normalizeSubject(keyword).toLowerCase();
+    for (const entry of category.keywords) {
+      const needle = normalizeSubject(keywordTextOf(entry)).toLowerCase();
       if (needle === '' || !matchesAsWord(haystack, needle)) continue;
       if (
         best === null ||
         needle.length > best.keyword.length ||
         (needle.length === best.keyword.length && category.priority < best.category.priority)
       ) {
-        best = { category, keyword: needle };
+        best = { category, keyword: needle, confidence: keywordConfidenceOf(entry) };
       }
     }
   }
@@ -187,9 +228,19 @@ export function classifySubject(
     // These two were one category until an audit showed the consequence: rows
     // with perfectly informative subjects were counted into a person's opacity
     // score, and fed a published finding against them by name.
-    return { categoryId: 'unclassified', matchedKeyword: null, rule: 'no_match' };
+    return {
+      categoryId: 'unclassified',
+      matchedKeyword: null,
+      matchedConfidence: null,
+      rule: 'no_match',
+    };
   }
-  return { categoryId: best.category.id, matchedKeyword: best.keyword, rule: 'keyword_match' };
+  return {
+    categoryId: best.category.id,
+    matchedKeyword: best.keyword,
+    matchedConfidence: best.confidence,
+    rule: 'keyword_match',
+  };
 }
 
 interface DiariesIndex {
@@ -210,6 +261,7 @@ function main(): void {
   const index = readJson<DiariesIndex>(path.join(PROCESSED_DIR, 'diaries-index.json'));
 
   const counts = new Map<string, number>();
+  const confidenceCounts: Record<KeywordConfidence, number> = { high: 0, medium: 0, low: 0 };
   let classified = 0;
 
   // Entries live in per-section shards; each is classified and rewritten in
@@ -226,8 +278,14 @@ function main(): void {
         seed.noSubjectSentinels,
       );
       counts.set(match.categoryId, (counts.get(match.categoryId) ?? 0) + 1);
+      if (match.matchedConfidence !== null) confidenceCounts[match.matchedConfidence] += 1;
       classified += 1;
-      return { ...entry, categoryId: match.categoryId, matchedKeyword: match.matchedKeyword };
+      return {
+        ...entry,
+        categoryId: match.categoryId,
+        matchedKeyword: match.matchedKeyword,
+        matchedConfidence: match.matchedConfidence,
+      };
     });
     writeJson(shardPath, updated);
   }
@@ -246,10 +304,21 @@ function main(): void {
         color: c.color,
         reasoning: c.reasoning,
         keywordCount: c.keywords.length,
+        // Published so a reader can see how much of a category rests on
+        // keywords its authors were only moderately sure of.
+        keywordsByConfidence: {
+          high: c.keywords.filter((k) => keywordConfidenceOf(k) === 'high').length,
+          medium: c.keywords.filter((k) => keywordConfidenceOf(k) === 'medium').length,
+          low: c.keywords.filter((k) => keywordConfidenceOf(k) === 'low').length,
+        },
         entryCount: counts.get(c.id) ?? 0,
       }))
       .sort((a, b) => b.entryCount - a.entryCount),
-    totals: { classifiedEntries: classified },
+    expertPanel: seed.expertPanel ?? null,
+    totals: {
+      classifiedEntries: classified,
+      byMatchConfidence: confidenceCounts,
+    },
   };
 
   writeJson(path.join(PROCESSED_DIR, 'diary-categories.json'), output);

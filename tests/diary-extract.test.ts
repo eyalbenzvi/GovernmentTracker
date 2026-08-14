@@ -19,6 +19,7 @@ import {
   matchesAsWord,
   normalizeSubject,
 } from '../scripts/classify-diary-categories';
+import { mergeProposals } from '../scripts/merge-diary-expert-vocabulary';
 import {
   coversMultiplePeople,
   isGovernmentEntityName,
@@ -388,5 +389,122 @@ describe('insight helpers', () => {
     expect(isGovernmentEntityName('משרד הבריאות')).toBe(true);
     expect(isGovernmentEntityName('רשות המים')).toBe(true);
     expect(isGovernmentEntityName('שירותי בריאות כללית')).toBe(false);
+  });
+});
+
+describe('expert panel merge', () => {
+  // The five experts classify the same subjects independently, so the merge is
+  // where disagreements are decided. It must be reproducible: same proposals,
+  // same result, regardless of the order the files happened to be read in.
+  const priorityOf = (id: string): number =>
+    ({ diplomacy: 11, politics_party: 12, ceremonies: 13 })[id] ?? 99;
+
+  it('takes the assignment with the highest stated confidence', () => {
+    const merged = mergeProposals(
+      [
+        {
+          expert: 'media',
+          keyword: 'שגריר',
+          categoryId: 'ceremonies',
+          confidence: 'low',
+          reasoning: '',
+        },
+        {
+          expert: 'foreign',
+          keyword: 'שגריר',
+          categoryId: 'diplomacy',
+          confidence: 'high',
+          reasoning: '',
+        },
+      ],
+      priorityOf,
+    );
+    expect(merged.categoryId).toBe('diplomacy');
+    expect(merged.confidence).toBe('high');
+    expect(merged.conflict?.rejected).toEqual([
+      { expert: 'media', categoryId: 'ceremonies', confidence: 'low' },
+    ]);
+  });
+
+  it('falls to the majority of experts when confidence ties', () => {
+    const merged = mergeProposals(
+      [
+        {
+          expert: 'foreign',
+          keyword: 'ועידה',
+          categoryId: 'diplomacy',
+          confidence: 'medium',
+          reasoning: '',
+        },
+        {
+          expert: 'media',
+          keyword: 'ועידה',
+          categoryId: 'ceremonies',
+          confidence: 'medium',
+          reasoning: '',
+        },
+        {
+          expert: 'politics',
+          keyword: 'ועידה',
+          categoryId: 'ceremonies',
+          confidence: 'medium',
+          reasoning: '',
+        },
+      ],
+      priorityOf,
+    );
+    expect(merged.categoryId).toBe('ceremonies');
+    expect(merged.experts).toEqual(['media', 'politics']);
+    expect(merged.conflict?.resolvedBy).toBe('majority');
+  });
+
+  it('breaks a dead tie on declared priority, never on input order', () => {
+    const proposals = [
+      {
+        expert: 'politics',
+        keyword: 'כינוס',
+        categoryId: 'politics_party',
+        confidence: 'high' as const,
+        reasoning: '',
+      },
+      {
+        expert: 'foreign',
+        keyword: 'כינוס',
+        categoryId: 'diplomacy',
+        confidence: 'high' as const,
+        reasoning: '',
+      },
+    ];
+    const forward = mergeProposals(proposals, priorityOf);
+    const reversed = mergeProposals([...proposals].reverse(), priorityOf);
+    expect(forward.categoryId).toBe('diplomacy');
+    expect(reversed.categoryId).toBe(forward.categoryId);
+    expect(forward.conflict?.resolvedBy).toBe('priority');
+  });
+
+  it('records a unanimous assignment without inventing a conflict', () => {
+    const merged = mergeProposals(
+      [
+        {
+          expert: 'foreign',
+          keyword: 'או"ם',
+          categoryId: 'diplomacy',
+          confidence: 'high',
+          reasoning: 'א',
+        },
+        {
+          expert: 'law',
+          keyword: 'או"ם',
+          categoryId: 'diplomacy',
+          confidence: 'high',
+          reasoning: 'ב',
+        },
+      ],
+      priorityOf,
+    );
+    expect(merged.conflict).toBeUndefined();
+    expect(merged.experts).toEqual(['foreign', 'law']);
+    expect(merged.reasoning).toContain('[foreign]');
+    expect(merged.reasoning).toContain('[law]');
   });
 });

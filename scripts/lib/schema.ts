@@ -388,6 +388,7 @@ export const diaryEntrySchema = z.object({
   /** Added by classify-diary-categories; absent before classification runs. */
   categoryId: z.string().min(1).optional(),
   matchedKeyword: z.string().nullable().optional(),
+  matchedConfidence: z.enum(['high', 'medium', 'low']).nullable().optional(),
 });
 
 export const diaryCategoriesSchema = z.object({

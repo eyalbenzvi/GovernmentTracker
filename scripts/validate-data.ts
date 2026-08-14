@@ -52,6 +52,7 @@ interface DiaryEntryLite {
   extractionMethod: string;
   categoryId?: string;
   matchedKeyword?: string | null;
+  matchedConfidence?: 'high' | 'medium' | 'low' | null;
 }
 interface DiariesIndexLite {
   windowStart: string;
@@ -729,6 +730,14 @@ function main(): void {
     }
     if (!isNonSubjectCategory && (row.matchedKeyword ?? '') === '') {
       analysisProblems.push(`רשומה בקטגוריית תוכן ללא מילת המפתח שהפעילה אותה: ${row.id}`);
+      break;
+    }
+    // Confidence and keyword travel together: a reader who is shown a category
+    // must be able to see how firm the keyword behind it was.
+    const hasKeyword = (row.matchedKeyword ?? '') !== '';
+    const hasConfidence = (row.matchedConfidence ?? null) !== null;
+    if (hasKeyword !== hasConfidence) {
+      analysisProblems.push(`רשומה שבה מילת המפתח ורמת הביטחון אינן תואמות: ${row.id}`);
       break;
     }
   }
