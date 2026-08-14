@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useUrlParam } from '../lib/useUrlState';
 import { Link } from 'react-router-dom';
 import { BadgeCheck, Bot, ChevronDown, ChevronUp } from 'lucide-react';
 import type { Dataset } from '../types/domain';
@@ -35,8 +36,8 @@ const TOP_SHIFTS_LIMIT = 12;
 export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
   const analysisYears = data.methodology.analysisYears;
   const defaultYear = analysisYears.includes(2025) ? '2025' : String(analysisYears[0] ?? 2025);
-  const [ministryId, setMinistryId] = useState<string>(ALL);
-  const [year, setYear] = useState<string>(defaultYear);
+  const [ministryId, setMinistryId] = useUrlParam('ministry', ALL);
+  const [year, setYear] = useUrlParam('year', defaultYear);
   const selectedYear = Number(year);
 
   const ministryOptions = [
@@ -104,7 +105,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-8">
       <header>
         <h1 className="text-2xl sm:text-3xl">ניתוח: לאן הולך הכסף</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           שתי שכבות ניתוח על נתוני התקציב שנאספו: פירוק לפי <strong>סוגי שימוש</strong> על בסיס
           הסיווג הכלכלי הרשמי, ופירוק <strong>תמטי</strong> שסווג בסיוע מודל שפה בזמן בניית המאגר.
           לכל מספר יש מקור, ולכל שיוך יש נימוק גלוי.
@@ -168,7 +169,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
 
         {hundred.length > 0 && (
           <Card className="mb-4">
-            <h3 className="text-sm font-semibold text-slate-700">
+            <h3 className="text-sm font-semibold text-ink-2">
               מכל 100 ₪ בתקציב המעודכן ({selectedYear})
             </h3>
             <div
@@ -198,7 +199,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-2 text-xs text-ink-3">
               החישוב על רכיבים חיוביים בלבד; שורות הכנסות מיועדות וחשבונות מעבר בסכום אפס או שלילי
               אינן נכללות.
             </p>
@@ -342,7 +343,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
             ))}
           </ol>
         )}
-        <p className="mt-3 text-xs leading-relaxed text-slate-500">
+        <p className="mt-3 text-xs leading-relaxed text-ink-3">
           {data.budgetThemes.methodNote}{' '}
           <a
             className="link"
@@ -415,7 +416,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
                     <tr key={shift.item.id}>
                       <td>
                         <span className="font-medium">{shift.item.title}</span>
-                        <span className="block text-xs text-slate-500">
+                        <span className="block text-xs text-ink-3">
                           {ministry?.displayName ?? shift.item.ministryId} ·{' '}
                           <span className="num">{shift.item.budgetCode}</span>
                         </span>
@@ -441,13 +442,13 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
                       </td>
                       <td className="num text-left">
                         <span
-                          className={shift.deltaAbsolute > 0 ? 'text-emerald-700' : 'text-red-700'}
+                          className={shift.deltaAbsolute > 0 ? 'text-state-final' : 'text-red-700'}
                           title={formatCurrencyFull(shift.deltaAbsolute)}
                         >
                           {shift.deltaAbsolute > 0 ? '+' : '−'}
                           {formatCurrencyShort(Math.abs(shift.deltaAbsolute))}
                           {shift.deltaPercent !== null && (
-                            <span className="text-slate-500">
+                            <span className="text-ink-3">
                               {' '}
                               ({formatPercent(shift.deltaPercent)})
                             </span>
@@ -479,7 +480,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
             {volatility.map(({ ministry, index }) => (
               <li key={ministry.id}>
                 <Card className="h-full">
-                  <p className="text-sm font-medium text-slate-600">
+                  <p className="text-sm font-medium text-ink-2">
                     <Link className="link" to={`/ministry/${ministry.id}`}>
                       {ministry.displayName}
                     </Link>
@@ -487,7 +488,7 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
                   <p className="num mt-1 text-2xl font-semibold">
                     {formatPercent(index.indexPercent)}
                   </p>
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-ink-3">
                     <span className="num">{formatCurrencyShort(index.sumAbsoluteDelta)}</span> הוסטו
                     מתוך <span className="num">{formatCurrencyShort(index.sumOriginal)}</span> ·{' '}
                     <span className="num">{index.leafCount}</span> תוכניות
@@ -497,16 +498,16 @@ export function AnalysisPage({ data }: { data: Dataset }): JSX.Element {
             ))}
           </ul>
         )}
-        <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
+        <p className="mt-3 max-w-3xl text-xs leading-relaxed text-ink-3">
           מדד גבוה אינו בהכרח ביקורת: הוא יכול לשקף היערכות לחירום, תוספות שהוסכמו במהלך השנה או
           תכנון שמרני. הוא מודד תנועה, לא איכות.
         </p>
       </section>
 
-      <Card className="flex flex-wrap items-center justify-between gap-4 bg-brand-50">
+      <Card className="flex flex-wrap items-center justify-between gap-4 bg-brand-soft">
         <div>
           <h2 className="text-base font-semibold">רוצים שמות? מסך הממצאים</h2>
-          <p className="mt-1 max-w-2xl text-sm text-slate-700">
+          <p className="mt-1 max-w-2xl text-sm text-ink-2">
             הספקים המרכזיים של כל משרד, מקבלי התמיכות הגדולים, ההעברות שאושרו באמצע השנה עם ההסבר
             הרשמי, וסריקת חריגים בכל התקנות.
           </p>
@@ -547,7 +548,7 @@ function ThemeCard({ aggregate, data }: { aggregate: ThemeAggregate; data: Datas
           />
           <div className="min-w-0">
             <h3 className="text-base font-semibold">{theme.labelHe}</h3>
-            <p className="mt-0.5 max-w-2xl text-sm text-slate-600">{theme.description}</p>
+            <p className="mt-0.5 max-w-2xl text-sm text-ink-2">{theme.description}</p>
           </div>
         </div>
         <div className="text-left">
@@ -557,7 +558,7 @@ function ThemeCard({ aggregate, data }: { aggregate: ThemeAggregate; data: Datas
           >
             {formatCurrencyShort(aggregate.updatedBudget)}
           </p>
-          <p className="num text-xs text-slate-500">
+          <p className="num text-xs text-ink-3">
             {aggregate.shareOfRevised !== null
               ? `${formatPercent(aggregate.shareOfRevised)} מהתקציב המעודכן`
               : MISSING_SHORT}
@@ -566,7 +567,7 @@ function ThemeCard({ aggregate, data }: { aggregate: ThemeAggregate; data: Datas
       </div>
 
       {aggregate.shareOfRevised !== null && (
-        <div className="mt-3 h-2 w-full overflow-hidden rounded bg-slate-100" aria-hidden="true">
+        <div className="mt-3 h-2 w-full overflow-hidden rounded bg-surface-2" aria-hidden="true">
           <div
             className="h-full rounded"
             style={{
@@ -595,20 +596,18 @@ function ThemeCard({ aggregate, data }: { aggregate: ThemeAggregate; data: Datas
       </div>
 
       {open && (
-        <ul className="mt-3 space-y-2 border-t border-slate-100 pt-3">
+        <ul className="mt-3 space-y-2 border-t border-rule pt-3">
           {aggregate.members.map(({ item, assignment }) => {
             const ministry = data.ministries.find((m) => m.id === item.ministryId);
             return (
-              <li key={item.id} className="rounded border border-slate-100 bg-slate-50 p-3 text-sm">
+              <li key={item.id} className="rounded border border-rule bg-surface-2 p-3 text-sm">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div className="min-w-0">
                     <p className="font-medium">
                       {item.title}{' '}
-                      <span className="num text-xs text-slate-500">({item.budgetCode})</span>
+                      <span className="num text-xs text-ink-3">({item.budgetCode})</span>
                     </p>
-                    <p className="text-xs text-slate-500">
-                      {ministry?.displayName ?? item.ministryId}
-                    </p>
+                    <p className="text-xs text-ink-3">{ministry?.displayName ?? item.ministryId}</p>
                   </div>
                   <div className="flex shrink-0 items-center gap-2">
                     <span className="num" title={formatCurrencyFull(item.updatedBudget)}>
@@ -617,7 +616,7 @@ function ThemeCard({ aggregate, data }: { aggregate: ThemeAggregate; data: Datas
                     <SourceLink url={item.sourceUrl} title={item.sourceTitle} />
                   </div>
                 </div>
-                <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                <p className="mt-2 text-xs leading-relaxed text-ink-2">
                   <strong>נימוק השיוך:</strong> {assignment.reasoning}{' '}
                   <Badge tone={assignment.confidence === 'high' ? 'primary' : 'muted'}>
                     ודאות {assignment.confidence === 'high' ? 'גבוהה' : 'בינונית'}

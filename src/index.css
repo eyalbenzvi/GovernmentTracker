@@ -3,22 +3,172 @@
 @tailwind utilities;
 
 /*
- * Typography: no webfont is loaded from a CDN, because the published site must
- * make no external runtime request. Heebo/Assistant are used when the reader has
- * them installed; otherwise the stack falls back to a system Hebrew face.
+ * Typography: Heebo is self-hosted from public/fonts, so the published site makes
+ * no runtime request to any external host and the design does not depend on the
+ * reader happening to have a Hebrew face installed. Heebo ships as a variable
+ * font, so one file per subset covers every weight the site uses (42KB total).
  */
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/heebo-hebrew-de808528.woff2') format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
 
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/heebo-latin-480b1d24.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+ * Colour is defined once, as tokens, in three passes: the light palette on bare
+ * :root, the dark palette behind prefers-color-scheme (guarded so an explicit
+ * light choice still wins), and again behind [data-theme='dark'] so the in-page
+ * toggle wins in both directions. Components only ever read the tokens, never a
+ * literal — a colour defined solely inside a media query renders one theme's ink
+ * on the other theme's paper.
+ *
+ * Two families are kept apart on purpose:
+ *   --brand-*   identity and interaction (links, active nav, primary buttons)
+ *   --state-*   what the data *is* (final / partial / estimate / missing) and
+ *               whether a change is up or down. Status must never borrow the
+ *               brand hue, or "blue" would mean both "a link" and "a value".
+ */
 @layer base {
   :root {
     color-scheme: light;
+
+    --paper: 248 250 251;
+    --surface: 255 255 255;
+    --surface-2: 244 247 249;
+    --surface-sunken: 237 242 245;
+
+    --ink: 12 32 46;
+    --ink-2: 62 88 106;
+    --ink-3: 104 128 144;
+
+    --rule: 214 224 231;
+    --rule-strong: 183 199 210;
+
+    --brand: 21 75 111;
+    --brand-ink: 255 255 255;
+    --brand-soft: 226 238 246;
+    --brand-hover: 16 58 86;
+
+    --state-final: 22 101 74;
+    --state-final-soft: 226 244 236;
+    --state-partial: 141 84 12;
+    --state-partial-soft: 251 240 222;
+    --state-estimate: 30 90 132;
+    --state-estimate-soft: 227 239 248;
+    --state-missing: 90 106 118;
+    --state-missing-soft: 238 242 245;
+
+    --up: 130 44 52;
+    --down: 22 101 74;
+    --accent-warm: 143 95 19;
+    --accent-warm-soft: 247 238 224;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      color-scheme: dark;
+
+      --paper: 9 22 32;
+      --surface: 16 39 53;
+      --surface-2: 22 49 64;
+      --surface-sunken: 12 31 43;
+
+      --ink: 224 235 241;
+      --ink-2: 168 191 205;
+      --ink-3: 128 154 169;
+
+      --rule: 35 66 84;
+      --rule-strong: 55 92 113;
+
+      --brand: 122 187 226;
+      --brand-ink: 8 22 32;
+      --brand-soft: 20 54 74;
+      --brand-hover: 155 207 238;
+
+      --state-final: 124 199 165;
+      --state-final-soft: 16 51 41;
+      --state-partial: 226 174 100;
+      --state-partial-soft: 55 41 20;
+      --state-estimate: 130 187 225;
+      --state-estimate-soft: 17 45 63;
+      --state-missing: 150 172 185;
+      --state-missing-soft: 26 46 59;
+
+      --up: 232 150 158;
+      --down: 124 199 165;
+      --accent-warm: 217 163 74;
+      --accent-warm-soft: 51 41 26;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+
+    --paper: 9 22 32;
+    --surface: 16 39 53;
+    --surface-2: 22 49 64;
+    --surface-sunken: 12 31 43;
+
+    --ink: 224 235 241;
+    --ink-2: 168 191 205;
+    --ink-3: 128 154 169;
+
+    --rule: 35 66 84;
+    --rule-strong: 55 92 113;
+
+    --brand: 122 187 226;
+    --brand-ink: 8 22 32;
+    --brand-soft: 20 54 74;
+    --brand-hover: 155 207 238;
+
+    --state-final: 124 199 165;
+    --state-final-soft: 16 51 41;
+    --state-partial: 226 174 100;
+    --state-partial-soft: 55 41 20;
+    --state-estimate: 130 187 225;
+    --state-estimate-soft: 17 45 63;
+    --state-missing: 150 172 185;
+    --state-missing-soft: 26 46 59;
+
+    --up: 232 150 158;
+    --down: 124 199 165;
+    --accent-warm: 217 163 74;
+    --accent-warm-soft: 51 41 26;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-paper text-ink antialiased;
     font-family:
       'Heebo',
       'Assistant',
@@ -29,11 +179,27 @@
       sans-serif;
   }
 
-  h1,
-  h2,
-  h3,
+  /*
+   * One type scale, applied through headings rather than per-screen classes, so a
+   * new screen inherits the hierarchy instead of inventing one. h1 is a page
+   * title, h2 a section, h3 a card — nothing else sets a heading size.
+   */
+  h1 {
+    @apply text-2xl font-bold tracking-tight text-ink sm:text-[1.75rem];
+    text-wrap: balance;
+  }
+
+  h2 {
+    @apply text-lg font-semibold tracking-tight text-ink sm:text-xl;
+    text-wrap: balance;
+  }
+
+  h3 {
+    @apply text-base font-semibold tracking-tight text-ink;
+  }
+
   h4 {
-    @apply font-semibold tracking-tight text-slate-900;
+    @apply text-sm font-semibold text-ink;
   }
 
   /* A visible, high-contrast focus ring on every interactive element. */
@@ -41,8 +207,9 @@
   button:focus-visible,
   select:focus-visible,
   input:focus-visible,
+  summary:focus-visible,
   [tabindex]:focus-visible {
-    @apply outline-none ring-2 ring-offset-2 ring-brand-600;
+    @apply rounded outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper;
   }
 
   /* Numeric cells read better aligned left-to-right even inside an RTL page. */
@@ -55,38 +222,47 @@
 
 @layer components {
   .card {
-    @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+    @apply rounded-lg border border-rule bg-surface;
   }
 
   .card-pad {
     @apply p-4 sm:p-5;
   }
 
+  /* A quieter container for supporting material, so not everything is a card. */
+  .panel {
+    @apply rounded-lg bg-surface-2 p-4;
+  }
+
   .btn {
-    @apply inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2
-      text-sm font-medium text-slate-700 transition hover:bg-slate-50
+    @apply inline-flex items-center gap-2 rounded-md border border-rule-strong bg-surface px-3 py-2
+      text-sm font-medium text-ink-2 transition hover:bg-surface-2 hover:text-ink
       disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   .btn-primary {
-    @apply border-brand-700 bg-brand-700 text-white hover:bg-brand-800;
+    @apply border-brand bg-brand text-brand-ink hover:bg-brand-hover hover:text-brand-ink;
+  }
+
+  .btn-sm {
+    @apply px-2 py-1 text-xs;
   }
 
   .field-label {
-    @apply mb-1 block text-sm font-medium text-slate-700;
+    @apply mb-1 block text-sm font-medium text-ink-2;
   }
 
   .field {
-    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
-      focus:border-brand-600;
+    @apply w-full rounded-md border border-rule-strong bg-surface px-3 py-2 text-sm text-ink
+      focus:border-brand;
   }
 
   .link {
-    @apply text-brand-700 underline decoration-brand-700/40 underline-offset-2 hover:decoration-brand-700;
+    @apply text-brand underline decoration-brand/40 underline-offset-2 hover:decoration-brand;
   }
 
   .table-wrap {
-    @apply overflow-x-auto rounded-lg border border-slate-200 bg-white;
+    @apply overflow-x-auto rounded-lg border border-rule bg-surface;
   }
 
   .data-table {
@@ -94,20 +270,25 @@
   }
 
   .data-table thead th {
-    @apply sticky top-0 z-10 whitespace-nowrap border-b border-slate-200 bg-slate-100 px-3 py-2
-      text-right text-xs font-semibold uppercase tracking-wide text-slate-600;
+    @apply sticky top-0 z-10 whitespace-nowrap border-b border-rule bg-surface-2 px-3 py-2
+      text-right text-xs font-semibold tracking-wide text-ink-2;
   }
 
   .data-table tbody td {
-    @apply border-b border-slate-100 px-3 py-2 align-top text-slate-800;
+    @apply border-b border-rule/60 px-3 py-2 align-top text-ink-2;
   }
 
   .data-table tbody tr:hover {
-    @apply bg-slate-50;
+    @apply bg-surface-2;
   }
 
   .skip-link {
-    @apply absolute right-2 top-2 z-50 -translate-y-16 rounded bg-brand-700 px-4 py-2 text-white
+    @apply absolute right-2 top-2 z-50 -translate-y-16 rounded bg-brand px-4 py-2 text-brand-ink
       transition focus:translate-y-0;
+  }
+
+  /* An eyebrow label: small, spaced, quiet — used for measure and section kickers. */
+  .eyebrow {
+    @apply text-xs font-medium tracking-wide text-ink-3;
   }
 }

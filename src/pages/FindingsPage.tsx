@@ -1,4 +1,7 @@
 import { useMemo, useState } from 'react';
+import { useUrlParam } from '../lib/useUrlState';
+import { anomalyStrength, rankAnomalies, STRENGTH_RULE_HE } from '../lib/insights';
+import { HYGIENE_NOTE_HE, ruleHygiene } from '../lib/scorecards';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, SearchCode } from 'lucide-react';
 import type { Dataset } from '../types/domain';
@@ -7,6 +10,8 @@ import {
   Callout,
   Card,
   DataUnavailable,
+  QualityNote,
+  ReportErrorLink,
   SectionHeading,
   SourceLink,
 } from '../components/ui';
@@ -37,9 +42,9 @@ function kindLabel(kind: string | null): string {
 }
 
 export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
-  const [ministryId, setMinistryId] = useState<string>('transport');
-  const [ruleFilter, setRuleFilter] = useState<string>(ALL);
-  const [anomalyMinistry, setAnomalyMinistry] = useState<string>(ALL);
+  const [ministryId, setMinistryId] = useUrlParam('ministry', 'transport');
+  const [ruleFilter, setRuleFilter] = useUrlParam('rule', ALL);
+  const [anomalyMinistry, setAnomalyMinistry] = useUrlParam('anomalyMinistry', ALL);
 
   const ministryOptions = data.ministries.map((m) => ({ value: m.id, label: m.displayName }));
   const ministryName = data.ministries.find((m) => m.id === ministryId)?.displayName ?? ministryId;
@@ -55,22 +60,33 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
   const excluded = data.findings.excludedContracts[ministryId];
   const contractsSuspect = excluded?.dataSuspect === true;
 
+  /**
+   * Ranked, not left in scan order: hundreds of findings shown at equal weight are
+   * indistinguishable from noise. The formula is published in STRENGTH_RULE_HE and
+   * printed under the list.
+   */
   const anomalies = useMemo(
     () =>
-      data.anomalies.findings.filter(
-        (f) =>
-          (ruleFilter === ALL || f.ruleId === ruleFilter) &&
-          (anomalyMinistry === ALL || f.ministryId === anomalyMinistry),
+      rankAnomalies(
+        data.anomalies.findings.filter(
+          (f) =>
+            (ruleFilter === ALL || f.ruleId === ruleFilter) &&
+            (anomalyMinistry === ALL || f.ministryId === anomalyMinistry),
+        ),
       ),
     [data.anomalies.findings, ruleFilter, anomalyMinistry],
   );
   const ruleById = new Map(data.anomalies.rules.map((r) => [r.id, r]));
 
+  /** How often each rule fires per 1,000 scanned lines — a rule that fires on a
+   * large share of rows is describing routine budget mechanics, not an exception. */
+  const hygiene = useMemo(() => ruleHygiene(data.anomalies), [data.anomalies]);
+
   return (
     <div className="space-y-8">
       <header>
         <h1 className="text-2xl sm:text-3xl">ממצאים: ספקים, תמיכות והעברות</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           שכבת העומק של המאגר: עם מי המשרדים מתקשרים, מי מקבל תמיכות, אילו העברות תקציב אושרו באמצע
           השנה — ואילו תקנות עונות על כללי חריגה מוצהרים. הכול מקושר חזרה למקור.
         </p>
@@ -287,10 +303,10 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div className="min-w-0">
                       <p className="font-medium">{c.supplier ?? 'ספק לא מזוהה'}</p>
-                      <p className="mt-0.5 max-w-2xl text-sm text-slate-600">
+                      <p className="mt-0.5 max-w-2xl text-sm text-ink-2">
                         {c.purpose ?? MISSING_SHORT}
                       </p>
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-ink-3">
                         <span className="num">{formatDate(c.orderDate)}</span> · {c.method} ·{' '}
                         {c.budgetTitle ?? ''}{' '}
                         {c.budgetCode !== null && <span className="num">({c.budgetCode})</span>}
@@ -300,10 +316,7 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
                       <p className="num font-semibold" title={formatCurrencyFull(c.volume)}>
                         {formatCurrencyShort(c.volume)}
                       </p>
-                      <p
-                        className="num text-xs text-slate-500"
-                        title={formatCurrencyFull(c.executed)}
-                      >
+                      <p className="num text-xs text-ink-3" title={formatCurrencyFull(c.executed)}>
                         שולם: {formatCurrencyShort(c.executed)}
                       </p>
                       {c.entityUrl !== null && (
@@ -370,7 +383,7 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
                     <td className="num text-left" title={formatCurrencyFull(r.totalApproved)}>
                       {formatCurrencyShort(r.totalApproved)}
                     </td>
-                    <td className="max-w-xs text-xs text-slate-600">
+                    <td className="max-w-xs text-xs text-ink-2">
                       {r.exampleTitle ?? MISSING_SHORT}
                     </td>
                     <td>
@@ -457,15 +470,15 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
             />
           </div>
           {ruleFilter !== ALL && (
-            <div className="mt-3 rounded border border-slate-200 bg-slate-50 p-3 text-sm">
+            <div className="mt-3 rounded border border-rule bg-surface-2 p-3 text-sm">
               <p className="font-medium">{ruleById.get(ruleFilter)?.labelHe}</p>
-              <p className="num mt-1 text-slate-700">{ruleById.get(ruleFilter)?.formulaHe}</p>
-              <p className="mt-1 text-slate-600">{ruleById.get(ruleFilter)?.whyInterestingHe}</p>
+              <p className="num mt-1 text-ink-2">{ruleById.get(ruleFilter)?.formulaHe}</p>
+              <p className="mt-1 text-ink-2">{ruleById.get(ruleFilter)?.whyInterestingHe}</p>
             </div>
           )}
         </Card>
 
-        <p className="num mb-2 text-sm text-slate-600" role="status" aria-live="polite">
+        <p className="num mb-2 text-sm text-ink-2" role="status" aria-live="polite">
           {formatNumber(anomalies.length)} ממצאים מתוך{' '}
           {formatNumber(data.anomalies.findings.length)}
         </p>
@@ -480,19 +493,26 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
                 <li key={`${f.ruleId}-${f.code}-${f.year}`} className="card card-pad">
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div className="flex min-w-0 items-start gap-2">
-                      <SearchCode
-                        className="mt-1 h-4 w-4 shrink-0 text-slate-400"
-                        aria-hidden="true"
-                      />
+                      <SearchCode className="mt-1 h-4 w-4 shrink-0 text-ink-3" aria-hidden="true" />
                       <div className="min-w-0">
                         <p className="font-medium">
-                          {f.title} <span className="num text-xs text-slate-500">({f.code})</span>
+                          {f.title} <span className="num text-xs text-ink-3">({f.code})</span>
                         </p>
-                        <p className="mt-0.5 text-sm text-slate-700">{f.evidenceHe}</p>
-                        <p className="mt-1 text-xs text-slate-500">
-                          {ministry?.displayName ?? f.ministryId} ·{' '}
-                          <span className="num">{f.year}</span> ·{' '}
+                        <p className="mt-0.5 text-sm text-ink-2">{f.evidenceHe}</p>
+                        <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-3">
+                          <span>{ministry?.displayName ?? f.ministryId}</span>
+                          <span className="num">{f.year}</span>
                           <Badge tone="muted">{ruleById.get(f.ruleId)?.labelHe ?? f.ruleId}</Badge>
+                          <span title={STRENGTH_RULE_HE}>
+                            עוצמה{' '}
+                            <span className="num">
+                              {formatNumber(anomalyStrength(f, data.anomalies.findings))}
+                            </span>
+                          </span>
+                          <ReportErrorLink
+                            subject={`${f.title} (${f.code}), ${f.year}`}
+                            context={f.evidenceHe}
+                          />
                         </p>
                       </div>
                     </div>
@@ -504,10 +524,46 @@ export function FindingsPage({ data }: { data: Dataset }): JSX.Element {
           </ol>
         )}
         {anomalies.length > 60 && (
-          <p className="mt-2 text-xs text-slate-500">
-            מוצגים 60 הראשונים לפי גודל הסכום; הרשימה המלאה בהורדת ה-CSV.
+          <p className="mt-2 text-xs text-ink-3">
+            מוצגים 60 הראשונים לפי דירוג העוצמה; הרשימה המלאה בהורדת ה-CSV.
           </p>
         )}
+
+        {/* Hygiene: how selective each rule actually is. */}
+        <div className="mt-4">
+          <h3>כמה סלקטיבי כל כלל</h3>
+          <div className="table-wrap mt-2">
+            <table className="data-table">
+              <caption className="sr-only">שכיחות ההתראות של כל כלל בסריקה</caption>
+              <thead>
+                <tr>
+                  <th scope="col">כלל</th>
+                  <th scope="col">ממצאים</th>
+                  <th scope="col">ל-1,000 שורות שנסרקו</th>
+                  <th scope="col">סעיפים שבהם התריע</th>
+                  <th scope="col">חל על</th>
+                </tr>
+              </thead>
+              <tbody>
+                {hygiene.map((rule) => (
+                  <tr key={rule.ruleId}>
+                    <th scope="row" className="px-3 py-2 text-right font-medium text-ink-2">
+                      {rule.labelHe}
+                    </th>
+                    <td className="num text-left">{formatNumber(rule.findingCount)}</td>
+                    <td className="num text-left">{formatNumber(rule.ratePerThousand)}</td>
+                    <td className="num text-left">{formatNumber(rule.ministriesAffected)}</td>
+                    <td>{rule.appliesToClosedYearsOnly ? 'שנים סגורות בלבד' : 'כל השנים'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <QualityNote label="איך נקבע הדירוג, ומה שכיחות ההתראות אומרת">
+            <p>{STRENGTH_RULE_HE}</p>
+            <p>{HYGIENE_NOTE_HE}</p>
+          </QualityNote>
+        </div>
       </section>
 
       <Callout tone="caution" title="גבולות">
@@ -537,16 +593,16 @@ function ChangeCard({
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="font-medium">{change.reqTitle ?? 'פנייה תקציבית'}</p>
-          <p className="mt-1 text-xs text-slate-500">
+          <p className="mt-1 text-xs text-ink-3">
             <span className="num">{formatDate(change.date)}</span> · {change.changeTypeName ?? ''}{' '}
             {change.transactionId !== null && (
-              <span className="num text-slate-400">({change.transactionId})</span>
+              <span className="num text-ink-3">({change.transactionId})</span>
             )}
           </p>
         </div>
         <div className="shrink-0 text-left">
           <p
-            className={`num font-semibold ${diff !== null && diff < 0 ? 'text-red-700' : 'text-emerald-700'}`}
+            className={`num font-semibold ${diff !== null && diff < 0 ? 'text-red-700' : 'text-state-final'}`}
             title={formatCurrencyFull(diff)}
           >
             {diff !== null && diff > 0 ? '+' : ''}
@@ -571,7 +627,7 @@ function ChangeCard({
             ההסבר הרשמי שצורף לפנייה
           </button>
           {open && (
-            <blockquote className="mt-2 rounded border-r-4 border-slate-300 bg-slate-50 p-3 text-sm leading-relaxed text-slate-700">
+            <blockquote className="mt-2 rounded border-r-4 border-rule-strong bg-surface-2 p-3 text-sm leading-relaxed text-ink-2">
               {change.explanation}
               {change.explanation.length >= 600 && '…'}
             </blockquote>

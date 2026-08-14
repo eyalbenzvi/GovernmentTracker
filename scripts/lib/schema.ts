@@ -393,25 +393,23 @@ export const diaryEntrySchema = z.object({
   inferredFrom: z.enum(['name_cooccurrence', 'name_without_field']).nullable().optional(),
 });
 
+const diaryCategorySchema = z.object({
+  id: z.string().min(1),
+  labelHe: z.string().min(1),
+  description: z.string().min(1),
+  color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+  reasoning: z.string().min(1),
+  keywordCount: z.number().int().min(0),
+  entryCount: z.number().int().min(0),
+});
+
 export const diaryCategoriesSchema = z.object({
   generatedAt: isoDate,
   method: z.literal('llm_authored_rules_build_time'),
   methodNote: z.string().min(1),
   classifierRule: z.string().min(1),
   limitations: z.array(z.string().min(1)).min(1),
-  categories: z
-    .array(
-      z.object({
-        id: z.string().min(1),
-        labelHe: z.string().min(1),
-        description: z.string().min(1),
-        color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
-        reasoning: z.string().min(1),
-        keywordCount: z.number().int().min(0),
-        entryCount: z.number().int().min(0),
-      }),
-    )
-    .min(1),
+  categories: z.array(diaryCategorySchema).min(1),
   totals: z.object({ classifiedEntries: z.number().int().min(0) }),
 });
 
@@ -585,6 +583,138 @@ export const diariesIndexSchema = z.object({
           note: z.string().min(1),
         }),
       ),
+    }),
+  ),
+});
+
+/**
+ * The home-screen summary. Validated on the way out of build-summary.ts, because
+ * this is the one file whose figures reach a reader without the deep screens'
+ * per-row provenance — an insight sentence has to carry its own guard rails.
+ */
+const summaryInsightSchema = z.object({
+  id: z.string().min(1),
+  kind: z.enum(['budget', 'execution', 'procurement', 'diary', 'coverage']),
+  headline: z.string().min(1),
+  sentenceHe: z.string().min(20),
+  // Required and non-trivial: an insight that cannot say what it does not mean has
+  // no business leading the home screen.
+  notSayingHe: z.string().min(40),
+  href: z.string().startsWith('#/'),
+  sourceUrl: httpUrl.nullable(),
+  sourceTitleHe: z.string().min(1).nullable(),
+  strength: z.number().min(0).max(100),
+});
+
+const ministrySummarySchema = z.object({
+  id: z.string().min(1),
+  officialName: z.string().min(1),
+  displayName: z.string().min(1),
+  sectionKind: z.enum(['ministry', 'other']),
+  latestBudgetYear: z.number().int().nullable(),
+  originalBudget: measure,
+  updatedBudget: measure,
+  execution: measure,
+  executionIsEstimate: z.boolean(),
+  executionRatePercent: measure,
+  shareOfTotalPercent: measure,
+  budgetRank: z.number().int().positive().nullable(),
+  budgetRankOutOf: z.number().int().positive().nullable(),
+  activityCount: z.number().int().min(0),
+  diaryEntryCount: z.number().int().min(0),
+  diaryPeopleCount: z.number().int().min(0),
+  transparencyScore: measure,
+  procurementScore: measure,
+  exemptVolumeSharePercent: measure,
+  top5SharePercent: measure,
+  contractCount: z.number().int().min(0),
+  publicationState: z.enum([
+    'published_and_read',
+    'published_not_read',
+    'nothing_published',
+    'no_diary_expected',
+  ]),
+  publishedDatasets: z.number().int().min(0),
+  unreadDatasets: z.number().int().min(0),
+  anomalyCount: z.number().int().min(0),
+  supportRecipientCount: z.number().int().min(0),
+  crossMatchCount: z.number().int().min(0),
+  subjectMatterSharePercent: measure,
+  limitationCount: z.number().int().min(0),
+});
+
+export const siteSummarySchema = z.object({
+  generatedAt: isoDateTime,
+  dataVersion: z.object({
+    version: z.string().min(1),
+    builtAt: isoDateTime,
+    governmentPeriod: z.string().min(1),
+    collectionWindowStart: isoDate,
+    collectionWindowEnd: isoDate,
+    changelog: z.array(z.object({ date: isoDate, note: z.string().min(1) })),
+  }),
+  counts: z.object({
+    ministries: z.number().int().positive(),
+    ministrySections: z.number().int().min(0),
+    otherSections: z.number().int().min(0),
+    budgetItems: z.number().int().min(0),
+    activityItems: z.number().int().min(0),
+    diaryEntries: z.number().int().min(0),
+    diaryPeople: z.number().int().min(0),
+    sources: z.number().int().min(0),
+    sourcesRetrieved: z.number().int().min(0),
+    ministerTenures: z.number().int().min(0),
+    anomalyFindings: z.number().int().min(0),
+    diaryFindings: z.number().int().min(0),
+    crossMatches: z.number().int().min(0),
+    quartersPublishedButUnread: z.number().int().min(0),
+  }),
+  analysisYears: z.array(z.number().int()).min(1),
+  latestClosedYear: z.number().int(),
+  windowStart: isoDate,
+  windowEnd: isoDate,
+  trend: z.array(
+    z.object({
+      fiscalYear: z.number().int(),
+      originalBudget: measure,
+      updatedBudget: measure,
+      execution: measure,
+      executionIsEstimate: z.boolean(),
+      executionStatus: dataStatusSchema,
+    }),
+  ),
+  hundredShekel: z.array(
+    z.object({ label: z.string().min(1), value: z.number(), color: z.string().min(1) }),
+  ),
+  hundredShekelYear: z.number().int().nullable(),
+  insights: z.array(summaryInsightSchema),
+  ministries: z.array(ministrySummarySchema).min(1),
+  diaryGroups: z.array(
+    z.object({
+      id: z.string().min(1),
+      labelHe: z.string().min(1),
+      color: z.string().min(1),
+      count: z.number().int().min(0),
+      sharePercent: measure,
+    }),
+  ),
+  diaryCategories: z.array(diaryCategorySchema),
+  diaryTotals: z.object({
+    classifiedPercent: measure,
+    noTopicPercent: measure,
+    unclassifiedPercent: measure,
+    unspecifiedPercent: measure,
+  }),
+  hygiene: z.array(
+    z.object({
+      ruleId: z.string().min(1),
+      labelHe: z.string().min(1),
+      findingCount: z.number().int().min(0),
+      scannedCount: z.number().int().min(0),
+      ratePerThousand: measure,
+      ministriesAffected: z.number().int().min(0),
+      appliesToClosedYearsOnly: z.boolean(),
+      whyInterestingHe: z.string().min(1),
     }),
   ),
 });

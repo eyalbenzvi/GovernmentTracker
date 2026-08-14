@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useUrlParam } from '../lib/useUrlState';
 import { Link } from 'react-router-dom';
 import {
   Bar,
@@ -17,10 +18,18 @@ import type {
   DiaryPersonRole,
   DiaryProfile,
 } from '../types/domain';
-import { Badge, Callout, Card, DataUnavailable, SourceLink } from '../components/ui';
+import { Badge, Callout, Card, DataUnavailable, QualityNote, SourceLink } from '../components/ui';
+import { supplierId } from './SupplierPage';
+import {
+  DIARY_GROUP_RULE_HE,
+  NO_MONEY_VS_TIME_HE,
+  SUBJECT_MATTER_RULE_HE,
+  groupDiaryCounts,
+} from '../lib/taxonomy';
+import { subjectMatterShareOf } from '../lib/scorecards';
 import { CsvDownloadButton, FilterGrid, SearchField, SelectField } from '../components/controls';
 import { loadDiaryShard } from '../data/datasets';
-import { formatCurrencyShort, formatDate, formatNumber } from '../lib/format';
+import { formatCurrencyShort, formatDate, formatNumber, MISSING_SHORT } from '../lib/format';
 
 const ALL = 'all';
 
@@ -65,11 +74,23 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
     [index.shards, data.ministries],
   );
 
-  const [shardKey, setShardKey] = useState<string | null>(sectionsWithDiaries[0]?.shardKey ?? null);
+  /**
+   * The default section is the largest one that belongs to an actual ministry, not
+   * the largest shard overall: the unattributed file is both the biggest download on
+   * the site and the least useful place to land, since by definition its rows could
+   * not be tied to a ministry.
+   */
+  const defaultShardKey =
+    index.shards
+      .filter((shard) => shard.ministryId !== null)
+      .sort((a, b) => b.entryCount - a.entryCount)[0]?.shardKey ??
+    sectionsWithDiaries[0]?.shardKey ??
+    null;
+  const [shardKey, setShardKey] = useState<string | null>(defaultShardKey);
   const [entries, setEntries] = useState<DiaryEntry[] | null>(null);
-  const [personKey, setPersonKey] = useState(ALL);
-  const [categoryId, setCategoryId] = useState(ALL);
-  const [query, setQuery] = useState('');
+  const [personKey, setPersonKey] = useUrlParam('person', ALL);
+  const [categoryId, setCategoryId] = useUrlParam('category', ALL);
+  const [query, setQuery] = useUrlParam('q', '');
   const [visible, setVisible] = useState(50);
   const [granularity, setGranularity] = useState<'monthly' | 'quarterly'>('quarterly');
   const [ruleFilter, setRuleFilter] = useState(ALL);
@@ -110,6 +131,26 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
 
   const activeProfile: DiaryProfile | null =
     personKey === ALL ? null : (shardProfiles.find((p) => p.key === personKey) ?? null);
+
+  /**
+   * The time mix for whatever is in view — one person when one is selected, the
+   * whole section otherwise — rolled up to the eight reading groups.
+   */
+  const shardGroups = useMemo(() => {
+    const sources = activeProfile === null ? shardProfiles : [activeProfile];
+    const counts: Record<string, number> = {};
+    for (const profile of sources) {
+      for (const [categoryId, count] of Object.entries(profile.categoryCounts)) {
+        counts[categoryId] = (counts[categoryId] ?? 0) + count;
+      }
+    }
+    return groupDiaryCounts(counts, categories.categories);
+  }, [activeProfile, shardProfiles, categories.categories]);
+
+  const subjectShare = useMemo(
+    () => subjectMatterShareOf(activeProfile === null ? shardProfiles : [activeProfile]),
+    [activeProfile, shardProfiles],
+  );
 
   const filtered = useMemo(() => {
     if (entries === null) return [];
@@ -202,7 +243,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl sm:text-3xl">יומני שרים, סגני שרים ומנכ"לים</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-ink-2">
           לפי נוהל היומנים, בעלי תפקידים בכירים מפרסמים אחת לרבעון את יומן הפגישות שלהם. כאן מוצגות
           הרשומות שפורסמו, כלשונן — עם סיווג נושאים, פילוח לפי זמן, וממצאים מחושבים לפי נוסחאות
           מפורסמות.
@@ -227,29 +268,29 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
         <>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             <Card>
-              <p className="text-xs text-slate-500">רשומות יומן</p>
+              <p className="text-xs text-ink-3">רשומות יומן</p>
               <p className="num mt-1 text-xl font-semibold">{formatNumber(index.totals.entries)}</p>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-ink-3">
                 לאחר ניכוי {formatNumber(index.totals.duplicateRowsRemoved)} כפילויות
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">בעלי תפקיד</p>
+              <p className="text-xs text-ink-3">בעלי תפקיד</p>
               <p className="num mt-1 text-xl font-semibold">
                 {formatNumber(insights.totals.people)}
               </p>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-ink-3">
                 ב-{formatNumber(insights.totals.ministries)} משרדים
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">נושא גנרי או מושחר</p>
+              <p className="text-xs text-ink-3">נושא גנרי או מושחר</p>
               <p className="num mt-1 text-xl font-semibold">
                 {insights.totals.unspecifiedPercent === null
                   ? 'אין נתון'
                   : `${insights.totals.unspecifiedPercent}%`}
               </p>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-ink-3">
                 בנוסף,{' '}
                 {insights.totals.noSubjectPercent === null
                   ? 'אין נתון'
@@ -258,13 +299,13 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">סווגו לנושא</p>
+              <p className="text-xs text-ink-3">סווגו לנושא</p>
               <p className="num mt-1 text-xl font-semibold">
                 {insights.totals.classifiedPercent === null
                   ? 'אין נתון'
                   : `${insights.totals.classifiedPercent}%`}
               </p>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-ink-3">
                 בנוסף,{' '}
                 {insights.totals.noTopicPercent === null
                   ? 'אין נתון'
@@ -277,17 +318,17 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">פרסומים שלא פוענחו</p>
+              <p className="text-xs text-ink-3">פרסומים שלא פוענחו</p>
               <p className="num mt-1 text-xl font-semibold">
                 {formatNumber(index.totals.unparsedResources)}
               </p>
-              <p className="mt-1 text-xs text-slate-500">מדווחים בגלוי, ראו למטה</p>
+              <p className="mt-1 text-xs text-ink-3">מדווחים בגלוי, ראו למטה</p>
             </Card>
           </div>
 
           <Card>
             <h2 className="text-lg font-semibold">איך הגיעו הרשומות</h2>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               לכל רשומה מצוינת שיטת החילוץ. רשומה שפוענחה מסריקה ב-OCR היא קריאה אוטומטית של תמונה —
               היא מסומנת ככזו ועשויה להכיל שגיאות תעתיק.
             </p>
@@ -297,10 +338,10 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   [DiaryExtractionMethod, number]
                 >
               ).map(([method, count]) => (
-                <li key={method} className="rounded-md border border-slate-200 px-3 py-2">
-                  <span className="text-slate-600">{EXTRACTION_LABELS[method]}: </span>
+                <li key={method} className="rounded-md border border-rule px-3 py-2">
+                  <span className="text-ink-2">{EXTRACTION_LABELS[method]}: </span>
                   <span className="num font-semibold">{formatNumber(count)}</span>
-                  <span className="num text-xs text-slate-500">
+                  <span className="num text-xs text-ink-3">
                     {' '}
                     ({percent(count, index.totals.entries)})
                   </span>
@@ -311,12 +352,12 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
 
           <Card>
             <h2 className="text-lg font-semibold">שקיפות היומן — מי כותב במה עסק</h2>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               שיעור הרשומות שנושאן גנרי ("פגישה", "שיחה") או מושחר, בקרב בעלי תפקיד עם{' '}
               {formatNumber(insights.thresholds.OPACITY_MIN_ENTRIES ?? 20)} רשומות ומעלה. שיעור גבוה
               אינו עבירה — הוא אומר שהפרסום מקיים את הנוהל בצורתו ולא בתכליתו.
             </p>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               שתי העמודות הימניות אינן חלק ממדד השקיפות, במכוון. "ללא טקסט נושא" יכול לנבוע מתא ריק
               במקור אך גם מעמודה שהאתר לא זיהה בקובץ. "לא סווג" הוא נושא אמיתי שמילון הקטגוריות של
               האתר אינו מכסה — מגבלה שלנו, לא של הלשכה. ספירתן כאטימות הייתה הופכת פער בכיסוי שלנו
@@ -325,7 +366,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
             <div className="mt-3 overflow-x-auto">
               <table className="w-full min-w-[620px] text-sm">
                 <thead>
-                  <tr className="text-right text-xs text-slate-500">
+                  <tr className="text-right text-xs text-ink-3">
                     <th className="py-1 pl-3">בעל תפקיד</th>
                     <th className="py-1 pl-3">משרד</th>
                     <th className="py-1 pl-3">רשומות</th>
@@ -337,12 +378,12 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                 </thead>
                 <tbody>
                   {opacityRanking.map((profile) => (
-                    <tr key={profile.key} className="border-t border-slate-100">
+                    <tr key={profile.key} className="border-t border-rule">
                       <td className="py-2 pl-3">
                         {profile.personLabel ?? profile.roleLabelHe}
-                        <span className="block text-xs text-slate-500">{profile.roleLabelHe}</span>
+                        <span className="block text-xs text-ink-3">{profile.roleLabelHe}</span>
                       </td>
-                      <td className="py-2 pl-3 text-xs text-slate-600">
+                      <td className="py-2 pl-3 text-xs text-ink-2">
                         {ministryName(profile.ministryId)}
                       </td>
                       <td className="num py-2 pl-3">{formatNumber(profile.entryCount)}</td>
@@ -351,12 +392,12 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                           ? 'אין נתון'
                           : `${profile.opacityPercent}%`}
                       </td>
-                      <td className="num py-2 pl-3 text-slate-600">
+                      <td className="num py-2 pl-3 text-ink-2">
                         {profile.noSubjectPercent === null
                           ? 'אין נתון'
                           : `${profile.noSubjectPercent}%`}
                       </td>
-                      <td className="num py-2 pl-3 text-slate-600">
+                      <td className="num py-2 pl-3 text-ink-2">
                         {profile.unclassifiedPercent === null
                           ? 'אין נתון'
                           : `${profile.unclassifiedPercent}%`}
@@ -375,11 +416,11 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
                 <h2 className="text-lg font-semibold">בחירת סעיף ובעל תפקיד</h2>
-                <p className="mt-1 text-sm text-slate-600">
+                <p className="mt-1 text-sm text-ink-2">
                   הרשומות נטענות לפי סעיף, כדי שהאתר יישאר מהיר גם עם מאות אלפי שורות.
                 </p>
               </div>
-              <p className="num text-sm text-slate-600">
+              <p className="num text-sm text-ink-2">
                 {formatNumber(sectionsWithDiaries.length)} סעיפים עם יומנים
               </p>
             </div>
@@ -450,17 +491,17 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </h2>
               <dl className="mt-3 grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
                 <div>
-                  <dt className="text-xs text-slate-500">רשומות</dt>
+                  <dt className="text-xs text-ink-3">רשומות</dt>
                   <dd className="num font-semibold">{formatNumber(activeProfile.entryCount)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">טווח תאריכים</dt>
+                  <dt className="text-xs text-ink-3">טווח תאריכים</dt>
                   <dd className="num">
                     {formatDate(activeProfile.firstDate)} – {formatDate(activeProfile.lastDate)}
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">נושא גנרי או מושחר</dt>
+                  <dt className="text-xs text-ink-3">נושא גנרי או מושחר</dt>
                   <dd className="num font-semibold">
                     {activeProfile.opacityPercent === null
                       ? 'אין נתון'
@@ -468,7 +509,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">ללא טקסט נושא</dt>
+                  <dt className="text-xs text-ink-3">ללא טקסט נושא</dt>
                   <dd className="num">
                     {activeProfile.noSubjectPercent === null
                       ? 'אין נתון'
@@ -476,23 +517,23 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">רשומות עם שעה</dt>
+                  <dt className="text-xs text-ink-3">רשומות עם שעה</dt>
                   <dd className="num">{formatNumber(activeProfile.timedEntryCount)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">שישי-שבת</dt>
+                  <dt className="text-xs text-ink-3">שישי-שבת</dt>
                   <dd className="num">{formatNumber(activeProfile.weekendCount)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">שעות לילה</dt>
+                  <dt className="text-xs text-ink-3">שעות לילה</dt>
                   <dd className="num">{formatNumber(activeProfile.lateNightCount)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">ימי מרתון</dt>
+                  <dt className="text-xs text-ink-3">ימי מרתון</dt>
                   <dd className="num">{formatNumber(activeProfile.marathonDays.length)}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs text-slate-500">היום העמוס</dt>
+                  <dt className="text-xs text-ink-3">היום העמוס</dt>
                   <dd className="num">
                     {activeProfile.busiestDay === null
                       ? 'אין נתון'
@@ -502,12 +543,12 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </dl>
               {activeProfile.repeatedSubjects.length > 0 && (
                 <div className="mt-4">
-                  <h3 className="text-sm font-semibold text-slate-700">נושאים חוזרים ביומן</h3>
+                  <h3 className="text-sm font-semibold text-ink-2">נושאים חוזרים ביומן</h3>
                   <ul className="mt-2 flex flex-wrap gap-2">
                     {activeProfile.repeatedSubjects.map((item) => (
                       <li
                         key={item.subject}
-                        className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-700"
+                        className="rounded-md bg-surface-2 px-2 py-1 text-xs text-ink-2"
                       >
                         {item.subject}{' '}
                         <span className="num font-semibold">×{formatNumber(item.count)}</span>
@@ -518,6 +559,59 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               )}
             </Card>
           )}
+
+          <Card>
+            <h2 className="text-lg font-semibold">במה עסק הזמן — שמונה קבוצות קריאה</h2>
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
+              אוצר המילים המפורסם מכיל 30 קטגוריות, יותר משגרף אחד יכול לשאת. הקבוצות מסכמות אותן;
+              הקטגוריות עצמן מוצגות מיד מתחת.
+            </p>
+            {shardGroups.length === 0 ? (
+              <DataUnavailable reason="לא סווגו רשומות בסעיף שנבחר, ולכן אין תמהיל להצגה." />
+            ) : (
+              <ul className="mt-3 space-y-2">
+                {shardGroups.map((group) => (
+                  <li key={group.group.id}>
+                    <div className="flex items-baseline justify-between gap-3 text-sm">
+                      <span className="text-ink-2" title={group.group.descriptionHe}>
+                        {group.group.labelHe}
+                      </span>
+                      <span className="num font-medium text-ink">
+                        {group.sharePercent === null ? MISSING_SHORT : `${group.sharePercent}%`}{' '}
+                        <span className="text-ink-3">({formatNumber(group.count)})</span>
+                      </span>
+                    </div>
+                    <div className="mt-1 h-2 w-full overflow-hidden rounded bg-surface-sunken">
+                      <div
+                        className="h-full rounded"
+                        style={{
+                          width: `${group.sharePercent ?? 0}%`,
+                          backgroundColor: group.group.color,
+                        }}
+                      />
+                    </div>
+                    <p className="mt-1 text-xs text-ink-3">
+                      {group.categories
+                        .slice(0, 4)
+                        .map((c) => `${c.labelHe} (${formatNumber(c.count)})`)
+                        .join(' · ')}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {subjectShare.sharePercent !== null && (
+              <p className="mt-3 border-t border-rule pt-3 text-sm font-medium text-ink">
+                <span className="eyebrow me-2">שורה תחתונה</span>
+                {`${subjectShare.sharePercent}% מהשורות שסווגו בסעיף הזה הן עיסוק בתוכן; היתר ניהול המשרד, נסיעות ואישי, שורות בלי נושא, ושורות שאוצר המילים שלנו לא כיסה.`}
+              </p>
+            )}
+            <QualityNote>
+              <p>{DIARY_GROUP_RULE_HE}</p>
+              <p>{SUBJECT_MATTER_RULE_HE}</p>
+              <p>{NO_MONEY_VS_TIME_HE}</p>
+            </QualityNote>
+          </Card>
 
           <Card>
             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -539,7 +633,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                 </button>
               </div>
             </div>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">{categories.methodNote}</p>
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">{categories.methodNote}</p>
             {series.length === 0 ? (
               <DataUnavailable
                 title="אין רשומות מתוארכות להצגה בגרף"
@@ -573,7 +667,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
                 <h2 className="text-lg font-semibold">ממצאים מחושבים</h2>
-                <p className="mt-1 max-w-3xl text-sm text-slate-600">
+                <p className="mt-1 max-w-3xl text-sm text-ink-2">
                   כל ממצא הוא תוצאה של נוסחה מפורסמת עם סף קבוע. ממצא אינו טענה שנעשה דבר פסול.
                 </p>
               </div>
@@ -604,24 +698,21 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   return (
                     <li
                       key={`${finding.ruleId}-${finding.personKey}-${i}`}
-                      className="rounded-md border border-slate-200 p-3"
+                      className="rounded-md border border-rule p-3"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-2">
                         <div>
                           <Badge tone="primary">{rule?.labelHe ?? finding.ruleId}</Badge>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">
+                          <p className="mt-1 text-sm font-semibold text-ink">
                             {finding.personLabel ?? finding.roleLabelHe}
-                            <span className="font-normal text-slate-500">
-                              {' '}
-                              · {finding.roleLabelHe}
-                            </span>
+                            <span className="font-normal text-ink-3"> · {finding.roleLabelHe}</span>
                           </p>
-                          <p className="mt-1 text-sm text-slate-700">{finding.evidenceHe}</p>
+                          <p className="mt-1 text-sm text-ink-2">{finding.evidenceHe}</p>
                         </div>
                         <SourceLink url={finding.sourceUrl} title="לפרסום המקורי" />
                       </div>
                       {rule !== undefined && (
-                        <p className="mt-2 text-xs text-slate-500">
+                        <p className="mt-2 text-xs text-ink-3">
                           נוסחה: {rule.formulaHe} · למה זה מעניין: {rule.whyInterestingHe}
                         </p>
                       )}
@@ -634,37 +725,37 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
 
           <Card>
             <h2 className="text-lg font-semibold">מי היה בפגישה — שיוך שנגזר מהיומנים</h2>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               חלק ניכר מהרשומות הן שם של אדם ולא נושא. כשאותו שם מופיע בשורות אחרות שנושאן כן סווג,
               התחום של אותן שורות הוא עדות לגבי השורה שאין בה נושא. זו{' '}
               <strong>הסקה, לא ציטוט</strong>: הלשכה לא כתבה את התחום, ולכן כל שורה כזו נושאת רמת
               ביטחון נמוכה ומסומנת כמסקנה.
             </p>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               {nameInferences.rule} השיוך נשען על היומנים בלבד — לא על ידע חיצוני על זהות אנשים,
               שהקורא אינו יכול לאמת.
             </p>
             <ul className="mt-3 flex flex-wrap gap-3 text-sm">
-              <li className="rounded-md border border-slate-200 px-3 py-2">
-                <span className="text-slate-600">שמות שנבדקו: </span>
+              <li className="rounded-md border border-rule px-3 py-2">
+                <span className="text-ink-2">שמות שנבדקו: </span>
                 <span className="num font-semibold">
                   {formatNumber(nameInferences.totals.candidateNames)}
                 </span>
               </li>
-              <li className="rounded-md border border-slate-200 px-3 py-2">
-                <span className="text-slate-600">שויכו לתחום: </span>
+              <li className="rounded-md border border-rule px-3 py-2">
+                <span className="text-ink-2">שויכו לתחום: </span>
                 <span className="num font-semibold">
                   {formatNumber(nameInferences.totals.namesResolvedToField)}
                 </span>
               </li>
-              <li className="rounded-md border border-slate-200 px-3 py-2">
-                <span className="text-slate-600">שורות שקיבלו תחום בהסקה: </span>
+              <li className="rounded-md border border-rule px-3 py-2">
+                <span className="text-ink-2">שורות שקיבלו תחום בהסקה: </span>
                 <span className="num font-semibold">
                   {formatNumber(nameInferences.totals.rowsGivenAFieldByInference)}
                 </span>
               </li>
-              <li className="rounded-md border border-slate-200 px-3 py-2">
-                <span className="text-slate-600">הסקות שנדחו כהכללה מרחיקת לכת: </span>
+              <li className="rounded-md border border-rule px-3 py-2">
+                <span className="text-ink-2">הסקות שנדחו כהכללה מרחיקת לכת: </span>
                 <span className="num font-semibold">
                   {formatNumber(nameInferences.totals.inferencesRefusedAsOverExtrapolated)}
                 </span>
@@ -674,7 +765,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[560px] text-sm">
                   <thead>
-                    <tr className="text-right text-xs text-slate-500">
+                    <tr className="text-right text-xs text-ink-3">
                       <th className="py-1 pl-3">השם ביומן</th>
                       <th className="py-1 pl-3">התחום שנגזר</th>
                       <th className="py-1 pl-3">שורות תומכות</th>
@@ -683,9 +774,9 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </thead>
                   <tbody>
                     {nameInferences.inferences.slice(0, 25).map((inference) => (
-                      <tr key={inference.name} className="border-t border-slate-100">
+                      <tr key={inference.name} className="border-t border-rule">
                         <td className="py-2 pl-3">{inference.name}</td>
-                        <td className="py-2 pl-3 text-slate-600">
+                        <td className="py-2 pl-3 text-ink-2">
                           {categories.categories.find((c) => c.id === inference.categoryId)
                             ?.labelHe ?? inference.categoryId}
                         </td>
@@ -700,7 +791,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                 </table>
               </div>
             )}
-            <ul className="mt-3 list-disc space-y-1 pr-5 text-xs text-slate-500">
+            <ul className="mt-3 list-disc space-y-1 pr-5 text-xs text-ink-3">
               {nameInferences.caveats.map((caveat) => (
                 <li key={caveat}>{caveat}</li>
               ))}
@@ -709,7 +800,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
 
           <Card>
             <h2 className="text-lg font-semibold">הצלבה: פגישות עם ספקים ומקבלי תמיכות</h2>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               רשומות יומן שנושאן מכיל שם של ספק מדוחות ההתקשרויות או של מקבל תמיכות באותו משרד.
               התאמת שם היא טקסטואלית: שם דומה אינו הוכחה לזהות, ופגישה עם ספק אינה טענה לפגם — זו
               הצלבה שמוצגת עם שני הקישורים כדי שהקורא יבדוק בעצמו.
@@ -723,7 +814,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[720px] text-sm">
                   <thead>
-                    <tr className="text-right text-xs text-slate-500">
+                    <tr className="text-right text-xs text-ink-3">
                       <th className="py-1 pl-3">תאריך</th>
                       <th className="py-1 pl-3">נושא כפי שפורסם</th>
                       <th className="py-1 pl-3">השם שהותאם</th>
@@ -735,21 +826,21 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                     {shardCrossMatches.slice(0, 30).map((match) => (
                       <tr
                         key={`${match.entryId}-${match.matchedName}`}
-                        className="border-t border-slate-100 align-top"
+                        className="border-t border-rule align-top"
                       >
                         <td className="num py-2 pl-3 text-xs">{formatDate(match.date)}</td>
                         <td className="py-2 pl-3">{match.subject}</td>
                         <td className="py-2 pl-3">
-                          {match.matchedName}
-                          <span className="block text-xs text-slate-500">
+                          <Link className="link" to={`/supplier/${supplierId(match.matchedName)}`}>
+                            {match.matchedName}
+                          </Link>
+                          <span className="block text-xs text-ink-3">
                             {match.ruleId === 'supplier_meeting' ? 'ספק' : 'מקבל תמיכות'}
                           </span>
                         </td>
                         <td className="num py-2 pl-3">
                           {formatCurrencyShort(match.amount)}
-                          <span className="block text-xs text-slate-500">
-                            {match.amountLabelHe}
-                          </span>
+                          <span className="block text-xs text-ink-3">{match.amountLabelHe}</span>
                         </td>
                         <td className="py-2 text-xs">
                           <SourceLink url={match.diarySourceUrl} title="ליומן" />
@@ -760,7 +851,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </tbody>
                 </table>
                 {shardCrossMatches.length > 30 && (
-                  <p className="mt-2 text-xs text-slate-500">
+                  <p className="mt-2 text-xs text-ink-3">
                     מוצגות 30 מתוך {formatNumber(shardCrossMatches.length)} הצלבות בסעיף.
                   </p>
                 )}
@@ -772,7 +863,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
             <div className="flex flex-wrap items-end justify-between gap-3">
               <h2 className="text-lg font-semibold">הרשומות עצמן</h2>
               <div className="flex items-end gap-3">
-                <p className="num text-sm text-slate-600" role="status" aria-live="polite">
+                <p className="num text-sm text-ink-2" role="status" aria-live="polite">
                   {entries === null
                     ? 'טוען רשומות…'
                     : `${formatNumber(filtered.length)} רשומות מתוך ${formatNumber(entries.length)} בסעיף`}
@@ -806,19 +897,17 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   const meta = datasetById.get(entry.datasetId);
                   const category = categoryById.get(entry.categoryId ?? '');
                   return (
-                    <li key={entry.id} className="rounded-md border border-slate-200 p-3">
+                    <li key={entry.id} className="rounded-md border border-rule p-3">
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div className="min-w-0">
-                          <p className="num text-xs text-slate-500">
+                          <p className="num text-xs text-ink-3">
                             {formatDate(entry.date)}
                             {entry.startTime !== null && ` · ${entry.startTime}`}
                             {entry.endTime !== null && `–${entry.endTime}`}
                           </p>
-                          <h3 className="mt-1 text-sm font-semibold text-slate-800">
-                            {entry.subject}
-                          </h3>
+                          <h3 className="mt-1 text-sm font-semibold text-ink">{entry.subject}</h3>
                           {entry.participants !== null && (
-                            <p className="mt-1 max-w-3xl text-xs text-slate-600">
+                            <p className="mt-1 max-w-3xl text-xs text-ink-2">
                               משתתפים כפי שפורסמו: {entry.participants}
                             </p>
                           )}
@@ -866,7 +955,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
 
           <Card>
             <h2 className="text-lg font-semibold">מה פורסם אך לא נכנס לרשומות</h2>
-            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            <p className="mt-1 max-w-3xl text-sm text-ink-2">
               {formatNumber(index.totals.unparsedResources)} קבצים לא הניבו רשומות: סריקות שה-OCR לא
               הצליח לפרסר לשורות, פורמטים שאינם נתמכים, וקבצים שהמאגר סירב להוריד. הם קיימים ופתוחים
               לעיון אנושי בקישור, ולא שוחזרו בניחוש. {formatNumber(scansOnly.length)} פרסומים לא
@@ -876,7 +965,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[560px] text-sm">
                   <thead>
-                    <tr className="text-right text-xs text-slate-500">
+                    <tr className="text-right text-xs text-ink-3">
                       <th className="py-1 pl-3">פרסום</th>
                       <th className="py-1 pl-3">סיבה</th>
                       <th className="py-1">מקור</th>
@@ -884,9 +973,9 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </thead>
                   <tbody>
                     {scansOnly.slice(0, 25).map((d) => (
-                      <tr key={d.datasetId} className="border-t border-slate-100 align-top">
+                      <tr key={d.datasetId} className="border-t border-rule align-top">
                         <td className="py-2 pl-3">{d.title}</td>
-                        <td className="py-2 pl-3 text-xs text-slate-600">
+                        <td className="py-2 pl-3 text-xs text-ink-2">
                           {d.unparsedResources[0]?.note ?? 'לא פוענח'}
                         </td>
                         <td className="py-2">
@@ -897,7 +986,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                   </tbody>
                 </table>
                 {scansOnly.length > 25 && (
-                  <p className="mt-2 text-xs text-slate-500">
+                  <p className="mt-2 text-xs text-ink-3">
                     מוצגים 25 מתוך {formatNumber(scansOnly.length)}; הרשימה המלאה בקובץ
                     diaries-index.json.
                   </p>

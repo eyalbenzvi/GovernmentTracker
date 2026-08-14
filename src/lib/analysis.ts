@@ -6,7 +6,7 @@
  * enough provenance for the UI to show where each figure came from.
  */
 import type { BudgetItem, BudgetTheme, ThemeAssignment, UsageRow } from '../types/domain';
-import type { SeriesDefinition, SeriesPoint } from '../components/charts';
+import type { SeriesDefinition, SeriesPoint } from '../types/chart';
 
 /**
  * Fixed colors for the Finance Ministry's economic-classification categories,

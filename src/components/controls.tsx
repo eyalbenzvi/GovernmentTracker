@@ -48,7 +48,7 @@ export function SelectField({
         ))}
       </select>
       {hint !== undefined && (
-        <p id={hintId} className="mt-1 text-xs text-slate-500">
+        <p id={hintId} className="mt-1 text-xs text-ink-3">
           {hint}
         </p>
       )}
@@ -75,7 +75,7 @@ export function SearchField({
       </label>
       <div className="relative">
         <Search
-          className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+          className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-3"
           aria-hidden="true"
         />
         <input
@@ -124,7 +124,7 @@ export function CsvDownloadButton<T>({
     >
       <Download className="h-4 w-4" aria-hidden="true" />
       {label}
-      {!disabled && <span className="num text-slate-500">({items.length})</span>}
+      {!disabled && <span className="num text-ink-3">({items.length})</span>}
     </button>
   );
 }

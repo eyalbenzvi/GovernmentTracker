@@ -1,17 +1,34 @@
 /**
- * Dataset loading.
+ * Dataset loading, in two tiers.
  *
  * The published site is fully static: every dataset is a JSON file produced by
  * the build-time pipeline in scripts/ and shipped as its own lazily-loaded
  * chunk. There is no API, no server and no runtime request to any external host.
  *
- * Loading is deliberately dynamic so the initial HTML/JS payload stays small and
- * the data chunks can be cached independently — which also keeps the site fast
- * if the datasets grow to thousands of records.
+ * Tier 1 — `getSummary()` loads data/processed/site-summary.json, tens of
+ * kilobytes holding the figures the home screen and the layout need. It is the only
+ * thing a reader waits for when they open the site.
+ *
+ * Tier 2 — `getDataset()` loads the full corpus, ~12MB across 18 files. It is
+ * fetched only when a screen that needs the underlying rows is opened, and never on
+ * first paint. Before this split, opening the home page parsed all of it.
  */
 import type { Dataset, DiaryEntry } from '../types/domain';
+import type { SiteSummary } from '../types/summary';
 
-let cached: Promise<Dataset> | null = null;
+let cachedSummary: Promise<SiteSummary> | null = null;
+let cachedDataset: Promise<Dataset> | null = null;
+
+async function loadSummary(): Promise<SiteSummary> {
+  const module = await import('../../data/processed/site-summary.json');
+  return module.default as unknown as SiteSummary;
+}
+
+/** Memoised; the summary is small enough to keep for the session. */
+export function getSummary(): Promise<SiteSummary> {
+  cachedSummary ??= loadSummary();
+  return cachedSummary;
+}
 
 async function loadAll(): Promise<Dataset> {
   const [
@@ -77,7 +94,7 @@ async function loadAll(): Promise<Dataset> {
 }
 
 /**
- * Diary rows are sharded per budget section (~190k rows in total), so a shard is
+ * Diary rows are sharded per budget section (~223k rows in total), so a shard is
  * fetched only when a reader opens that section. import.meta.glob keeps the
  * mapping static, which is what lets Vite emit one cacheable chunk per shard
  * instead of bundling them all into the initial payload.
@@ -101,6 +118,6 @@ export function loadDiaryShard(shardKey: string): Promise<DiaryEntry[]> {
 
 /** Memoised so navigating between screens never re-parses the datasets. */
 export function getDataset(): Promise<Dataset> {
-  cached ??= loadAll();
-  return cached;
+  cachedDataset ??= loadAll();
+  return cachedDataset;
 }

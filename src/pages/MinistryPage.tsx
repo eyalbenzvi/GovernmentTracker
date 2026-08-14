@@ -5,20 +5,27 @@ import {
   Badge,
   Callout,
   Card,
+  CopyLinkButton,
   DataStatusBadge,
   DataUnavailable,
   Measure,
+  QualityNote,
   SectionHeading,
   SourceLink,
 } from '../components/ui';
 import { CsvDownloadButton, FilterGrid, SearchField, SelectField } from '../components/controls';
-import { BUDGET_SERIES, ChartWithTable } from '../components/charts';
+import { BUDGET_SERIES, ChartWithTable, WaterfallChart } from '../components/charts';
+import { TenureRibbon } from '../components/TenureRibbon';
 import { DataTable, type Column } from '../components/DataTable';
 import { aggregateByYear, toSeriesPoints } from '../lib/budgetSeries';
+import { buildWaterfall, WATERFALL_RULE_HE } from '../lib/waterfall';
+import { changePercent, rankOf, shareOf } from '../lib/context';
+import { budgetTrendSentence } from '../lib/insights';
 import {
   budgetChangeAbsolute,
   budgetChangePercent,
   executionRate,
+  sumWithoutDoubleCounting,
   EXECUTION_RATE_OUTLIER_HINT,
   isExecutionRateOutlier,
   isLargeChange,
@@ -73,6 +80,55 @@ export function MinistryPage({
   const latestOriginal = latest?.originalBudget ?? null;
   const latestUpdated = latest?.updatedBudget ?? null;
 
+  // Context for the headline figure: share of everything collected, nominal change
+  // against the previous year that has a figure, and rank among all sections.
+  const previous = [...aggregates]
+    .reverse()
+    .find((a) => a.updatedBudget !== null && a.fiscalYear !== latest?.fiscalYear);
+  const updatedChange = changePercent(previous?.updatedBudget ?? null, latestUpdated);
+  const allSectionsLatest = new Map<string, number | null>(
+    data.ministries.map((m) => {
+      const items = data.budgetItems.filter(
+        (i) => i.ministryId === m.id && i.fiscalYear === latest?.fiscalYear,
+      );
+      return [m.id, sumWithoutDoubleCounting(items, (i) => i.updatedBudget).total];
+    }),
+  );
+  const shareOfAllUpdated = shareOf(
+    latestUpdated,
+    [...allSectionsLatest.values()].reduce<number>(
+      (acc, v) => (v !== null && v > 0 ? acc + v : acc),
+      0,
+    ),
+  );
+  const budgetRank = rankOf(ministry.id, allSectionsLatest);
+
+  // The waterfall uses the latest year that has both a budget level and an
+  // execution figure, so the bridge is complete rather than half-drawn.
+  const waterfallYear =
+    [...aggregates].reverse().find((a) => a.updatedBudget !== null && a.execution !== null)
+      ?.fiscalYear ??
+    latest?.fiscalYear ??
+    null;
+  const waterfall = buildWaterfall(
+    data.budgetItems,
+    data.findings.budgetChanges[ministry.id] ?? [],
+    ministry.id,
+    waterfallYear ?? 0,
+  );
+  const waterfallTransfer = waterfall.steps.find((s) => s.id === 'transfer')?.value ?? null;
+  const waterfallUnused = waterfall.steps.find((s) => s.id === 'unused')?.value ?? null;
+  const waterfallTakeaway =
+    waterfallYear === null || waterfallTransfer === null
+      ? null
+      : `ב-${waterfallYear} ${waterfallTransfer >= 0 ? 'נוספו' : 'הופחתו'} ${formatCurrencyShort(Math.abs(waterfallTransfer))} בין התקציב המקורי למעודכן${
+          waterfallUnused === null
+            ? ''
+            : waterfallUnused < 0
+              ? `, ובסוף השנה נותרו ${formatCurrencyShort(Math.abs(waterfallUnused))} שלא נוצלו`
+              : `, והביצוע חרג ב-${formatCurrencyShort(waterfallUnused)} מעל התקציב המעודכן`
+        }.`;
+
   const noBudgetReason =
     `לא נאספו רשומות תקציב עבור ${ministry.displayName}. ${coverage?.limitations[0] ?? ''}`.trim();
   const noActivityReason = `לא נאספו פריטי פעילות פומבית עבור ${ministry.displayName}. היעדר פריטים אינו אומר שלא הייתה פעילות — הוא אומר שלא נאסף מקור.`;
@@ -80,14 +136,14 @@ export function MinistryPage({
   return (
     <div className="space-y-8">
       <header>
-        <nav aria-label="מסלול ניווט" className="mb-2 text-sm text-slate-500">
+        <nav aria-label="מסלול ניווט" className="mb-2 text-sm text-ink-3">
           <Link className="link" to="/">
             בית
           </Link>{' '}
           / {ministry.displayName}
         </nav>
         <h1 className="text-2xl sm:text-3xl">{ministry.officialName}</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">{ministry.description}</p>
+        <p className="mt-2 max-w-3xl text-ink-2">{ministry.description}</p>
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <Badge tone="primary">{ministry.governmentPeriod}</Badge>
           {coverage !== undefined && (
@@ -121,11 +177,11 @@ export function MinistryPage({
         />
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <Card>
-            <h3 className="text-sm font-medium text-slate-600">מקורות</h3>
+            <h3 className="text-sm font-medium text-ink-2">מקורות</h3>
             <p className="num mt-2 text-2xl font-semibold">
               {formatNumber(coverage?.sourcesDefined ?? 0)}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-ink-3">
               מקורות רשמיים זוהו וקוטלגו · מתוכם{' '}
               <span className="num">
                 {formatNumber(coverage?.sourcesSuccessfullyCollected ?? 0)}
@@ -134,11 +190,11 @@ export function MinistryPage({
             </p>
           </Card>
           <Card>
-            <h3 className="text-sm font-medium text-slate-600">רשומות תקציב</h3>
+            <h3 className="text-sm font-medium text-ink-2">רשומות תקציב</h3>
             <p className="num mt-2 text-2xl font-semibold">
               {formatNumber(coverage?.budgetRecordCount ?? 0)}
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-ink-3">
               שנות תקציב זמינות:{' '}
               <span className="num">
                 {coverage !== undefined && coverage.budgetYearsAvailable.length > 0
@@ -148,11 +204,11 @@ export function MinistryPage({
             </p>
           </Card>
           <Card>
-            <h3 className="text-sm font-medium text-slate-600">פריטי פעילות</h3>
+            <h3 className="text-sm font-medium text-ink-2">פריטי פעילות</h3>
             <p className="num mt-2 text-2xl font-semibold">
               {formatNumber(coverage?.activityItemCount ?? 0)}
             </p>
-            <p className="mt-1 text-xs text-slate-500">פרסומים פומביים בלבד</p>
+            <p className="mt-1 text-xs text-ink-3">פרסומים פומביים בלבד</p>
           </Card>
         </div>
         {coverage !== undefined && coverage.limitations.length > 0 && (
@@ -215,7 +271,8 @@ export function MinistryPage({
         <SectionHeading
           id="budget-heading"
           title="סיכום תקציבי"
-          description="תקציב מקורי, תקציב מעודכן, ביצוע או אומדן — כל אחד עם סטטוס הנתון שלו."
+          description="תקציב מקורי, תקציב מעודכן, ביצוע או אומדן — כל אחד עם סטטוס הנתון, נתח מסך התקציב ומקום בדירוג."
+          action={<CopyLinkButton />}
         />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <Measure
@@ -229,6 +286,15 @@ export function MinistryPage({
             display={formatCurrencyShort(latestUpdated)}
             fullValue={formatCurrencyFull(latestUpdated)}
             status={latestUpdated === null ? 'unavailable' : 'partial'}
+            context={{
+              sharePercent: shareOfAllUpdated,
+              shareLabelHe: 'מהתקציב המעודכן שנאסף',
+              changePercent: updatedChange,
+              changeLabelHe: `מ-${previous?.fiscalYear ?? ''}`,
+              rank: budgetRank?.rank ?? null,
+              rankOutOf: budgetRank?.outOf ?? null,
+              rankLabelHe: 'סעיפים לפי גודל',
+            }}
           />
           <Measure
             label="שיעור ביצוע"
@@ -248,13 +314,84 @@ export function MinistryPage({
           />
         </div>
 
+        {/* Who held the office over the years the charts below cover. */}
+        {tenures.length > 0 && (
+          <div className="mt-4">
+            <TenureRibbon
+              tenures={tenures}
+              windowStart={data.methodology.windowStart}
+              windowEnd={data.methodology.windowEnd}
+            />
+          </div>
+        )}
+
         <div className="mt-4">
           <ChartWithTable
             title="תקציב מקורי מול מעודכן מול ביצוע/אומדן"
             description="לפי שנת תקציב. שנה בלי נתון מוצגת כפער בגרף, לא כאפס."
             points={toSeriesPoints(aggregates)}
             series={BUDGET_SERIES}
+            takeaway={budgetTrendSentence(aggregates, ministry.displayName)}
             emptyReason={noBudgetReason}
+          />
+        </div>
+
+        {/* The bridge between the three levels, which the line chart cannot show. */}
+        <div className="mt-4">
+          <WaterfallChart
+            title={`ממה הורכב התקציב ${waterfallYear ?? ''} — מהמקורי לביצוע`}
+            description="כל מדרגה היא המעבר בין שתי רמות שפורסמו. הפניות שבידינו מוצגות מתחת לגרף."
+            steps={waterfall.steps}
+            takeaway={waterfallTakeaway}
+            emptyReason={`אין נתוני תקציב מלאים ל-${waterfallYear ?? 'שנה שנבחרה'} עבור ${ministry.displayName}, ולכן לא ניתן לבנות את המפל.`}
+            footer={
+              <div className="mt-3 space-y-2 border-t border-rule pt-3">
+                {waterfall.requests.length > 0 ? (
+                  <>
+                    <p className="text-xs font-medium text-ink-2">
+                      פניות ועדת הכספים שבידינו לשנה זו:{' '}
+                      <span className="num">{formatNumber(waterfall.requests.length)}</span>, בסך{' '}
+                      <span className="num">{formatCurrencyShort(waterfall.requestsNetTotal)}</span>
+                    </p>
+                    <ul className="space-y-1 text-xs text-ink-2">
+                      {waterfall.requests.slice(0, 5).map((request) => (
+                        <li key={`${request.transactionId ?? ''}-${request.date ?? ''}`}>
+                          <span className="num">{formatDate(request.date)}</span> —{' '}
+                          {request.reqTitle ?? 'פנייה ללא כותרת'} (
+                          <span className="num">{formatCurrencyShort(request.netExpenseDiff)}</span>
+                          , {request.changeTypeName ?? 'סוג לא מדווח'}){' '}
+                          <a
+                            className="link"
+                            href={request.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            למקור
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    {waterfall.unexplainedTransfer !== null && (
+                      <p className="text-xs text-ink-3">
+                        ההפרש שאינו מוסבר בפניות שבידינו:{' '}
+                        <span className="num">
+                          {formatCurrencyShort(waterfall.unexplainedTransfer)}
+                        </span>
+                        . האתר מחזיק מדגם פניות ולא את כל תנועות התקציב.
+                      </p>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-xs text-ink-3">
+                    לא נאספו פניות תקציביות לשנה זו בסעיף הזה. מדרגת ההעברות היא ההפרש בין הרמות
+                    שפורסמו.
+                  </p>
+                )}
+                <QualityNote>
+                  <p>{WATERFALL_RULE_HE}</p>
+                </QualityNote>
+              </div>
+            }
           />
         </div>
       </section>
@@ -291,9 +428,9 @@ export function MinistryPage({
                   <h3 className="text-base">
                     {data.topics.find((t) => t.id === link.topicId)?.labelHe ?? link.topicId}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-700">{link.mappingBasis}</p>
-                  <p className="mt-2 text-sm text-amber-800">{link.caveat}</p>
-                  <p className="num mt-2 text-xs text-slate-500">
+                  <p className="mt-2 text-sm text-ink-2">{link.mappingBasis}</p>
+                  <p className="mt-2 text-sm text-state-partial">{link.caveat}</p>
+                  <p className="num mt-2 text-xs text-ink-3">
                     {link.activityIds.length} פריטי פעילות · {link.budgetItemIds.length} סעיפי תקציב
                   </p>
                 </Card>
@@ -334,8 +471,8 @@ export function MinistryPage({
                 <Card>
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <h3 className="text-sm font-semibold text-slate-800">{source.title}</h3>
-                      <p className="mt-1 text-xs text-slate-500">
+                      <h3 className="text-sm font-semibold text-ink">{source.title}</h3>
+                      <p className="mt-1 text-xs text-ink-3">
                         {source.publisher} · {source.sourceTypeLabelHe} · {source.periodCovered}
                       </p>
                     </div>
@@ -350,7 +487,7 @@ export function MinistryPage({
                       <SourceLink url={source.url} title={source.title} />
                     </div>
                   </div>
-                  <p className="mt-2 text-xs text-slate-500">{source.retrievalNote}</p>
+                  <p className="mt-2 text-xs text-ink-3">{source.retrievalNote}</p>
                 </Card>
               </li>
             ))}
@@ -399,7 +536,7 @@ function BudgetItemsSection({
       render: (item) => (
         <div>
           <span className="font-medium">{item.title}</span>
-          <span className="block text-xs text-slate-500">{item.hierarchyPath.join(' › ')}</span>
+          <span className="block text-xs text-ink-3">{item.hierarchyPath.join(' › ')}</span>
         </div>
       ),
       sortValue: (item) => item.title,
@@ -442,9 +579,9 @@ function BudgetItemsSection({
         return (
           <span title={LARGE_CHANGE_RULE_HE}>
             {formatCurrencyShort(abs)}
-            {pct !== null && <span className="text-slate-500"> ({formatPercent(pct)})</span>}
+            {pct !== null && <span className="text-ink-3"> ({formatPercent(pct)})</span>}
             {isLargeChange(item) && (
-              <span className="ms-1 rounded bg-amber-100 px-1 text-xs text-amber-800">
+              <span className="ms-1 rounded bg-state-partial-soft px-1 text-xs text-state-partial">
                 שינוי גדול
               </span>
             )}
@@ -482,7 +619,9 @@ function BudgetItemsSection({
           >
             {formatPercent(rate)}
             {outlier && (
-              <span className="ms-1 rounded bg-amber-100 px-1 text-xs text-amber-800">חריגה</span>
+              <span className="ms-1 rounded bg-state-partial-soft px-1 text-xs text-state-partial">
+                חריגה
+              </span>
             )}
           </span>
         );
@@ -720,11 +859,9 @@ function ActivitySection({
                 <Card>
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="num text-xs text-slate-500">{formatDate(activity.date)}</p>
-                      <h3 className="mt-1 text-sm font-semibold text-slate-800">
-                        {activity.title}
-                      </h3>
-                      <p className="mt-1 max-w-3xl text-sm text-slate-600">{activity.summary}</p>
+                      <p className="num text-xs text-ink-3">{formatDate(activity.date)}</p>
+                      <h3 className="mt-1 text-sm font-semibold text-ink">{activity.title}</h3>
+                      <p className="mt-1 max-w-3xl text-sm text-ink-2">{activity.summary}</p>
                     </div>
                     <SourceLink url={activity.sourceUrl} title={activity.sourceTitle} />
                   </div>
@@ -773,9 +910,9 @@ function ActivitySection({
               <li key={topic.id} className="card card-pad">
                 <div className="flex items-center justify-between gap-3">
                   <span className="text-sm font-medium">{topic.labelHe}</span>
-                  <span className="num text-sm text-slate-600">{topic.activityItemCount}</span>
+                  <span className="num text-sm text-ink-2">{topic.activityItemCount}</span>
                 </div>
-                <p className="mt-1 text-xs text-slate-500">{topic.classificationRule}</p>
+                <p className="mt-1 text-xs text-ink-3">{topic.classificationRule}</p>
               </li>
             ))}
           </ul>
