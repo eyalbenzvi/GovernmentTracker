@@ -89,10 +89,22 @@ interface CategoriesSeedFile {
  */
 const BIDI_CONTROLS = /[‎‏‪-‮⁦-⁩]/g;
 
+/**
+ * Wrappers the calendar and mail systems put around a subject, and one XLSX
+ * artefact. They are not part of what the office wrote, and left in place they
+ * are actively harmful: "הזמנה עודכנה" is longer than most real keywords, so
+ * under longest-match-wins it would steal the row from its true subject.
+ * Measured in the collected rows: הזמנה עודכנה 1,280 · הזמנה: 747 · FW: 446 ·
+ * Canceled 239 · _x000D_ 218.
+ */
+const SUBJECT_WRAPPERS =
+  /(_x000D_|הזמנה עודכנה|הזמנה מבוטלת|הזמנה:|\bFW\s*:|\bRE\s*:|\bFwd\s*:|Canceled\s*:?|Cancelled\s*:?)/gi;
+
 export function normalizeSubject(subject: string): string {
   return subject
     .replace(/["'״׳]/g, '"')
     .replace(BIDI_CONTROLS, '')
+    .replace(SUBJECT_WRAPPERS, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -185,9 +197,30 @@ function boundsAWord(
 }
 
 /**
- * Longest-keyword-wins matching. Length is the tie-break that keeps
- * "ישיבת ממשלה" from being swallowed by "ישיבה", and declared priority
- * resolves exact-length ties so the result never depends on object order.
+ * Categories that describe the absence of a subject rather than a subject.
+ * Their keywords are a last resort, never competitors on length — see below.
+ */
+const NON_TOPIC_CATEGORY_IDS = new Set([
+  'meeting_without_subject',
+  'named_person_meeting',
+  'unclassified',
+  'unspecified',
+  'no_subject_recorded',
+]);
+
+/**
+ * Longest-keyword-wins matching, in two passes.
+ *
+ * Length is the tie-break that keeps "ישיבת ממשלה" from being swallowed by
+ * "ישיבה", and declared priority resolves exact-length ties so the result never
+ * depends on object order.
+ *
+ * But length must not let an absence beat a presence. "ראיון טלפוני" contains
+ * both "ראיון" (a media interview — five letters) and "טלפוני" (by phone —
+ * seven), and on length alone the row was labelled as a meeting with no stated
+ * subject when the office had in fact said exactly what it was. So the words
+ * that only describe the form of a meeting are tried in a second pass, and only
+ * when nothing said what the meeting was about.
  */
 export function classifySubject(
   subject: string,
@@ -217,21 +250,29 @@ export function classifySubject(
     };
   }
   const haystack = normalizeSubject(subject).toLowerCase();
-  let best: { category: CategorySeed; keyword: string; confidence: KeywordConfidence } | null =
-    null;
-  for (const category of categories) {
-    for (const entry of category.keywords) {
-      const needle = normalizeSubject(keywordTextOf(entry)).toLowerCase();
-      if (needle === '' || !matchesAsWord(haystack, needle)) continue;
-      if (
-        best === null ||
-        needle.length > best.keyword.length ||
-        (needle.length === best.keyword.length && category.priority < best.category.priority)
-      ) {
-        best = { category, keyword: needle, confidence: keywordConfidenceOf(entry) };
+  const bestOf = (
+    pool: readonly CategorySeed[],
+  ): { category: CategorySeed; keyword: string; confidence: KeywordConfidence } | null => {
+    let found: { category: CategorySeed; keyword: string; confidence: KeywordConfidence } | null =
+      null;
+    for (const category of pool) {
+      for (const entry of category.keywords) {
+        const needle = normalizeSubject(keywordTextOf(entry)).toLowerCase();
+        if (needle === '' || !matchesAsWord(haystack, needle)) continue;
+        if (
+          found === null ||
+          needle.length > found.keyword.length ||
+          (needle.length === found.keyword.length && category.priority < found.category.priority)
+        ) {
+          found = { category, keyword: needle, confidence: keywordConfidenceOf(entry) };
+        }
       }
     }
-  }
+    return found;
+  };
+  const best =
+    bestOf(categories.filter((c) => !NON_TOPIC_CATEGORY_IDS.has(c.id))) ??
+    bestOf(categories.filter((c) => NON_TOPIC_CATEGORY_IDS.has(c.id)));
   if (best === null) {
     // Not "the office was opaque" — "our vocabulary did not cover this text".
     // These two were one category until an audit showed the consequence: rows
@@ -294,6 +335,10 @@ function main(): void {
         categoryId: match.categoryId,
         matchedKeyword: match.matchedKeyword,
         matchedConfidence: match.matchedConfidence,
+        // This pass re-decides the row from the office's own words, so any
+        // inference a later step wrote is void. Leaving it behind would label a
+        // keyword match as inferred and make the pipeline order-dependent.
+        inferredFrom: null,
       };
     });
     writeJson(shardPath, updated);

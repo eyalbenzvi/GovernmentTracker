@@ -47,6 +47,7 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
   const index = data.diariesIndex;
   const insights = data.diaryInsights;
   const categories = data.diaryCategories;
+  const nameInferences = data.diaryNameInferences;
 
   const sectionsWithDiaries = useMemo(
     () =>
@@ -257,14 +258,18 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
               </p>
             </Card>
             <Card>
-              <p className="text-xs text-slate-500">כיסוי הסיווג</p>
+              <p className="text-xs text-slate-500">סווגו לנושא</p>
               <p className="num mt-1 text-xl font-semibold">
                 {insights.totals.classifiedPercent === null
                   ? 'אין נתון'
                   : `${insights.totals.classifiedPercent}%`}
               </p>
               <p className="mt-1 text-xs text-slate-500">
-                מהרשומות סווגו לקטגוריית תוכן;{' '}
+                בנוסף,{' '}
+                {insights.totals.noTopicPercent === null
+                  ? 'אין נתון'
+                  : `${insights.totals.noTopicPercent}%`}{' '}
+                מסרו שהתקיים מפגש או עם מי, בלי נושא;{' '}
                 {insights.totals.unclassifiedPercent === null
                   ? 'אין נתון'
                   : `${insights.totals.unclassifiedPercent}%`}{' '}
@@ -625,6 +630,81 @@ export function DiariesPage({ data }: { data: Dataset }): JSX.Element {
                 })}
               </ul>
             )}
+          </Card>
+
+          <Card>
+            <h2 className="text-lg font-semibold">מי היה בפגישה — שיוך שנגזר מהיומנים</h2>
+            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+              חלק ניכר מהרשומות הן שם של אדם ולא נושא. כשאותו שם מופיע בשורות אחרות שנושאן כן סווג,
+              התחום של אותן שורות הוא עדות לגבי השורה שאין בה נושא. זו{' '}
+              <strong>הסקה, לא ציטוט</strong>: הלשכה לא כתבה את התחום, ולכן כל שורה כזו נושאת רמת
+              ביטחון נמוכה ומסומנת כמסקנה.
+            </p>
+            <p className="mt-1 max-w-3xl text-sm text-slate-600">
+              {nameInferences.rule} השיוך נשען על היומנים בלבד — לא על ידע חיצוני על זהות אנשים,
+              שהקורא אינו יכול לאמת.
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-3 text-sm">
+              <li className="rounded-md border border-slate-200 px-3 py-2">
+                <span className="text-slate-600">שמות שנבדקו: </span>
+                <span className="num font-semibold">
+                  {formatNumber(nameInferences.totals.candidateNames)}
+                </span>
+              </li>
+              <li className="rounded-md border border-slate-200 px-3 py-2">
+                <span className="text-slate-600">שויכו לתחום: </span>
+                <span className="num font-semibold">
+                  {formatNumber(nameInferences.totals.namesResolvedToField)}
+                </span>
+              </li>
+              <li className="rounded-md border border-slate-200 px-3 py-2">
+                <span className="text-slate-600">שורות שקיבלו תחום בהסקה: </span>
+                <span className="num font-semibold">
+                  {formatNumber(nameInferences.totals.rowsGivenAFieldByInference)}
+                </span>
+              </li>
+              <li className="rounded-md border border-slate-200 px-3 py-2">
+                <span className="text-slate-600">הסקות שנדחו כהכללה מרחיקת לכת: </span>
+                <span className="num font-semibold">
+                  {formatNumber(nameInferences.totals.inferencesRefusedAsOverExtrapolated)}
+                </span>
+              </li>
+            </ul>
+            {nameInferences.inferences.length > 0 && (
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[560px] text-sm">
+                  <thead>
+                    <tr className="text-right text-xs text-slate-500">
+                      <th className="py-1 pl-3">השם ביומן</th>
+                      <th className="py-1 pl-3">התחום שנגזר</th>
+                      <th className="py-1 pl-3">שורות תומכות</th>
+                      <th className="py-1">שורות שהושפעו</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {nameInferences.inferences.slice(0, 25).map((inference) => (
+                      <tr key={inference.name} className="border-t border-slate-100">
+                        <td className="py-2 pl-3">{inference.name}</td>
+                        <td className="py-2 pl-3 text-slate-600">
+                          {categories.categories.find((c) => c.id === inference.categoryId)
+                            ?.labelHe ?? inference.categoryId}
+                        </td>
+                        <td className="num py-2 pl-3">
+                          {inference.supportingRows}/{inference.classifiedAppearances} (
+                          {inference.dominance}%)
+                        </td>
+                        <td className="num py-2">{formatNumber(inference.rowsAffected)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            <ul className="mt-3 list-disc space-y-1 pr-5 text-xs text-slate-500">
+              {nameInferences.caveats.map((caveat) => (
+                <li key={caveat}>{caveat}</li>
+              ))}
+            </ul>
           </Card>
 
           <Card>

@@ -20,6 +20,7 @@ import {
   normalizeSubject,
 } from '../scripts/classify-diary-categories';
 import { mergeProposals } from '../scripts/merge-diary-expert-vocabulary';
+import { decideNameField, isOverExtrapolated } from '../scripts/infer-diary-participants';
 import {
   coversMultiplePeople,
   isGovernmentEntityName,
@@ -506,5 +507,66 @@ describe('expert panel merge', () => {
     expect(merged.experts).toEqual(['foreign', 'law']);
     expect(merged.reasoning).toContain('[foreign]');
     expect(merged.reasoning).toContain('[law]');
+  });
+});
+
+describe('participant inference', () => {
+  // A name in a diary row says who, not what. Attributing a field to it is an
+  // inference, and these are the guards that keep it from becoming a fabrication.
+  it('attributes a name only on enough evidence, and on a clear majority', () => {
+    // Five supporting rows out of six: strong enough.
+    expect(
+      decideNameField(
+        new Map([
+          ['local_government', 5],
+          ['ceremonies', 1],
+        ]),
+      ),
+    ).toEqual({
+      categoryId: 'local_government',
+      supportingRows: 5,
+      classifiedAppearances: 6,
+      dominance: 83.3,
+    });
+    // Four appearances is below the floor, however lopsided.
+    expect(decideNameField(new Map([['government_cabinet', 4]]))).toBeNull();
+    // Enough rows, but no field dominates.
+    expect(
+      decideNameField(
+        new Map([
+          ['diplomacy', 6],
+          ['media_pr', 5],
+        ]),
+      ),
+    ).toBeNull();
+    expect(decideNameField(new Map())).toBeNull();
+  });
+
+  it('resolves an exact tie by category id, never by insertion order', () => {
+    const a = decideNameField(
+      new Map([
+        ['budget_finance', 5],
+        ['ceremonies', 5],
+      ]),
+    );
+    const b = decideNameField(
+      new Map([
+        ['ceremonies', 5],
+        ['budget_finance', 5],
+      ]),
+    );
+    // A 50/50 split fails the dominance test either way — the point is that both
+    // orderings agree.
+    expect(a).toEqual(b);
+  });
+
+  it('refuses an inference stretched further than its evidence carries', () => {
+    // The case that forced this guard: a name attributed on four appearances was
+    // applied to 498 rows, most of them OCR page headers rather than meetings.
+    expect(isOverExtrapolated(4, 498)).toBe(true);
+    expect(isOverExtrapolated(6, 60)).toBe(true);
+    // Proportionate application is allowed.
+    expect(isOverExtrapolated(33, 38)).toBe(false);
+    expect(isOverExtrapolated(10, 80)).toBe(false);
   });
 });

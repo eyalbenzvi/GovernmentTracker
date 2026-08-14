@@ -372,6 +372,11 @@ export interface DiaryEntry {
   matchedKeyword?: string | null;
   /** How firm the keyword behind this assignment is, as its author stated it. */
   matchedConfidence?: 'high' | 'medium' | 'low' | null;
+  /**
+   * Set when the category was not read from the office's own words but inferred
+   * from who the row names, using the diaries as the only evidence.
+   */
+  inferredFrom?: 'name_cooccurrence' | 'name_without_field' | null;
 }
 
 export interface DiaryCategory {
@@ -483,6 +488,8 @@ export interface DiaryInsights {
     sharedFileProfiles: number;
     unspecifiedPercent: number | null;
     unclassifiedPercent: number | null;
+    /** Rows stating that a meeting happened, or with whom, but not about what. */
+    noTopicPercent: number | null;
     classifiedPercent: number | null;
     noSubjectPercent: number | null;
   };
@@ -491,6 +498,39 @@ export interface DiaryInsights {
   profiles: DiaryProfile[];
   findings: DiaryFinding[];
   crossMatches: DiaryCrossMatch[];
+}
+
+/**
+ * Attribution of a person named in a diary row to a field, inferred from the
+ * diaries themselves — never from outside knowledge of who anyone is, which a
+ * reader could not check.
+ */
+export interface DiaryNameInferences {
+  generatedAt: string;
+  method: string;
+  rule: string;
+  caveats: string[];
+  thresholds: Record<string, number>;
+  totals: {
+    candidateNames: number;
+    namesResolvedToField: number;
+    rowsGivenAFieldByInference: number;
+    rowsMarkedAsNamedPersonOnly: number;
+    inferencesRefusedAsOverExtrapolated: number;
+  };
+  inferences: Array<{
+    name: string;
+    categoryId: string;
+    supportingRows: number;
+    classifiedAppearances: number;
+    dominance: number;
+    rowsAffected: number;
+  }>;
+  refusedAsOverExtrapolated: Array<{
+    name: string;
+    supportingRows: number;
+    wouldTouch: number;
+  }>;
 }
 
 export interface DiaryUnparsedResource {
@@ -563,4 +603,5 @@ export interface Dataset {
   diariesIndex: DiariesIndex;
   diaryCategories: DiaryCategories;
   diaryInsights: DiaryInsights;
+  diaryNameInferences: DiaryNameInferences;
 }

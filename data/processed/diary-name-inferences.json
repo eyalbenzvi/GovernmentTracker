@@ -1,0 +1,832 @@
+{
+  "generatedAt": "2026-08-14",
+  "method": "שיוך שם לתחום נעשה מתוך היומנים עצמם: אם אותו שם מופיע בשורות אחרות שנושאן כן סווג, הקטגוריה של אותן שורות היא עדות לגבי השורה שאין בה נושא. לא נעשה שימוש בשום ידע חיצוני על זהות אנשים — ידע כזה אינו ניתן לאימות על ידי הקורא.",
+  "rule": "שם מיוחס לתחום רק אם הוא מופיע לצד נושא מסווג לפחות 5 פעמים, ולפחות 70% מהופעותיו המסווגות הן באותו תחום. שם שאינו עומד בכך, ושהקורפוס מראה שהוא של אדם (תואר אישי לצדו בשורה אחרת), מסומן כ\"פגישה עם אדם ששמו נקוב, בלי נושא\".",
+  "caveats": [
+    "זו הסקה, לא ציטוט: הלשכה לא כתבה את התחום. כל שורה כזו מסומנת בממשק כמסקנה ורמת הביטחון שלה נמוכה.",
+    "שם זהה יכול להיות של שני אנשים שונים. ההסקה נשענת על רוב ההופעות ולא על זיהוי ודאי.",
+    "פגישה עם אדם מתחום מסוים אינה קובעת שנושא הפגישה היה אותו תחום."
+  ],
+  "thresholds": {
+    "MIN_SUPPORTING_ROWS": 5,
+    "MIN_DOMINANCE": 0.7,
+    "MIN_NAME_WORDS": 2,
+    "MAX_NAME_WORDS": 4
+  },
+  "totals": {
+    "candidateNames": 3018,
+    "namesResolvedToField": 100,
+    "rowsGivenAFieldByInference": 1130,
+    "rowsMarkedAsNamedPersonOnly": 4648,
+    "inferencesRefusedAsOverExtrapolated": 1
+  },
+  "inferences": [
+    {
+      "name": "סיגלית גבאי",
+      "categoryId": "internal_management",
+      "supportingRows": 10,
+      "classifiedAppearances": 13,
+      "dominance": 76.9,
+      "rowsAffected": 55
+    },
+    {
+      "name": "רון תומר",
+      "categoryId": "private_sector",
+      "supportingRows": 28,
+      "classifiedAppearances": 37,
+      "dominance": 75.7,
+      "rowsAffected": 51
+    },
+    {
+      "name": "אלקנה באבד",
+      "categoryId": "politics_party",
+      "supportingRows": 20,
+      "classifiedAppearances": 20,
+      "dominance": 100,
+      "rowsAffected": 41
+    },
+    {
+      "name": "יוסי שלי",
+      "categoryId": "government_cabinet",
+      "supportingRows": 41,
+      "classifiedAppearances": 54,
+      "dominance": 75.9,
+      "rowsAffected": 41
+    },
+    {
+      "name": "חיים פרלוק",
+      "categoryId": "local_government",
+      "supportingRows": 33,
+      "classifiedAppearances": 40,
+      "dominance": 82.5,
+      "rowsAffected": 38
+    },
+    {
+      "name": "ניצן אלון",
+      "categoryId": "field_visits",
+      "supportingRows": 7,
+      "classifiedAppearances": 7,
+      "dominance": 100,
+      "rowsAffected": 36
+    },
+    {
+      "name": "חיים ביבס",
+      "categoryId": "local_government",
+      "supportingRows": 20,
+      "classifiedAppearances": 28,
+      "dominance": 71.4,
+      "rowsAffected": 34
+    },
+    {
+      "name": "שירה לב עמי",
+      "categoryId": "internal_management",
+      "supportingRows": 10,
+      "classifiedAppearances": 12,
+      "dominance": 83.3,
+      "rowsAffected": 33
+    },
+    {
+      "name": "אביטל בן שלמה",
+      "categoryId": "internal_management",
+      "supportingRows": 8,
+      "classifiedAppearances": 10,
+      "dominance": 80,
+      "rowsAffected": 32
+    },
+    {
+      "name": "מייק הרצוג",
+      "categoryId": "diplomacy",
+      "supportingRows": 15,
+      "classifiedAppearances": 18,
+      "dominance": 83.3,
+      "rowsAffected": 31
+    },
+    {
+      "name": "גיא אטיאס",
+      "categoryId": "budget_finance",
+      "supportingRows": 10,
+      "classifiedAppearances": 13,
+      "dominance": 76.9,
+      "rowsAffected": 29
+    },
+    {
+      "name": "אורית סטרוק",
+      "categoryId": "government_cabinet",
+      "supportingRows": 77,
+      "classifiedAppearances": 107,
+      "dominance": 72,
+      "rowsAffected": 25
+    },
+    {
+      "name": "מאיר שפיגלר",
+      "categoryId": "private_sector",
+      "supportingRows": 18,
+      "classifiedAppearances": 20,
+      "dominance": 90,
+      "rowsAffected": 22
+    },
+    {
+      "name": "נועה שוקרון",
+      "categoryId": "budget_finance",
+      "supportingRows": 16,
+      "classifiedAppearances": 19,
+      "dominance": 84.2,
+      "rowsAffected": 21
+    },
+    {
+      "name": "נחל שורק",
+      "categoryId": "local_government",
+      "supportingRows": 33,
+      "classifiedAppearances": 38,
+      "dominance": 86.8,
+      "rowsAffected": 21
+    },
+    {
+      "name": "רון דרמר",
+      "categoryId": "government_cabinet",
+      "supportingRows": 27,
+      "classifiedAppearances": 37,
+      "dominance": 73,
+      "rowsAffected": 21
+    },
+    {
+      "name": "שאול גולדשטיין",
+      "categoryId": "private_sector",
+      "supportingRows": 8,
+      "classifiedAppearances": 10,
+      "dominance": 80,
+      "rowsAffected": 21
+    },
+    {
+      "name": "תומר גלאם",
+      "categoryId": "local_government",
+      "supportingRows": 39,
+      "classifiedAppearances": 52,
+      "dominance": 75,
+      "rowsAffected": 21
+    },
+    {
+      "name": "אופיר סופר",
+      "categoryId": "government_cabinet",
+      "supportingRows": 32,
+      "classifiedAppearances": 43,
+      "dominance": 74.4,
+      "rowsAffected": 18
+    },
+    {
+      "name": "אלון דוידי",
+      "categoryId": "local_government",
+      "supportingRows": 21,
+      "classifiedAppearances": 29,
+      "dominance": 72.4,
+      "rowsAffected": 18
+    },
+    {
+      "name": "יחידת מגן",
+      "categoryId": "internal_management",
+      "supportingRows": 5,
+      "classifiedAppearances": 7,
+      "dominance": 71.4,
+      "rowsAffected": 17
+    },
+    {
+      "name": "עידית סילמן",
+      "categoryId": "government_cabinet",
+      "supportingRows": 61,
+      "classifiedAppearances": 83,
+      "dominance": 73.5,
+      "rowsAffected": 16
+    },
+    {
+      "name": "שחקן ישראלי",
+      "categoryId": "regulation_licensing",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 16
+    },
+    {
+      "name": "התרת חסמים",
+      "categoryId": "travel_logistics",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 14
+    },
+    {
+      "name": "כפיר בטאט",
+      "categoryId": "budget_finance",
+      "supportingRows": 10,
+      "classifiedAppearances": 10,
+      "dominance": 100,
+      "rowsAffected": 14
+    },
+    {
+      "name": "אורי קלנר",
+      "categoryId": "local_government",
+      "supportingRows": 18,
+      "classifiedAppearances": 20,
+      "dominance": 90,
+      "rowsAffected": 13
+    },
+    {
+      "name": "לאה רקובר",
+      "categoryId": "legal_judicial",
+      "supportingRows": 18,
+      "classifiedAppearances": 19,
+      "dominance": 94.7,
+      "rowsAffected": 13
+    },
+    {
+      "name": "נעם דן",
+      "categoryId": "budget_finance",
+      "supportingRows": 14,
+      "classifiedAppearances": 18,
+      "dominance": 77.8,
+      "rowsAffected": 13
+    },
+    {
+      "name": "יואב שמחי",
+      "categoryId": "civil_society",
+      "supportingRows": 12,
+      "classifiedAppearances": 16,
+      "dominance": 75,
+      "rowsAffected": 12
+    },
+    {
+      "name": "יוסי פוקס",
+      "categoryId": "government_cabinet",
+      "supportingRows": 13,
+      "classifiedAppearances": 18,
+      "dominance": 72.2,
+      "rowsAffected": 12
+    },
+    {
+      "name": "נילי אהרון",
+      "categoryId": "local_government",
+      "supportingRows": 16,
+      "classifiedAppearances": 21,
+      "dominance": 76.2,
+      "rowsAffected": 12
+    },
+    {
+      "name": "רונן פלוט",
+      "categoryId": "local_government",
+      "supportingRows": 36,
+      "classifiedAppearances": 51,
+      "dominance": 70.6,
+      "rowsAffected": 12
+    },
+    {
+      "name": "גיא יפרח",
+      "categoryId": "local_government",
+      "supportingRows": 11,
+      "classifiedAppearances": 14,
+      "dominance": 78.6,
+      "rowsAffected": 11
+    },
+    {
+      "name": "הורי התצפיתניות",
+      "categoryId": "security_emergency",
+      "supportingRows": 27,
+      "classifiedAppearances": 32,
+      "dominance": 84.4,
+      "rowsAffected": 11
+    },
+    {
+      "name": "שי חגג",
+      "categoryId": "local_government",
+      "supportingRows": 5,
+      "classifiedAppearances": 7,
+      "dominance": 71.4,
+      "rowsAffected": 11
+    },
+    {
+      "name": "דוד בן בסט",
+      "categoryId": "media_pr",
+      "supportingRows": 12,
+      "classifiedAppearances": 14,
+      "dominance": 85.7,
+      "rowsAffected": 10
+    },
+    {
+      "name": "לינדזי גראהם",
+      "categoryId": "diplomacy",
+      "supportingRows": 10,
+      "classifiedAppearances": 11,
+      "dominance": 90.9,
+      "rowsAffected": 10
+    },
+    {
+      "name": "מצפה רמון",
+      "categoryId": "local_government",
+      "supportingRows": 51,
+      "classifiedAppearances": 65,
+      "dominance": 78.5,
+      "rowsAffected": 10
+    },
+    {
+      "name": "שירית אביטן",
+      "categoryId": "media_pr",
+      "supportingRows": 5,
+      "classifiedAppearances": 6,
+      "dominance": 83.3,
+      "rowsAffected": 10
+    },
+    {
+      "name": "איתמר רביבו",
+      "categoryId": "local_government",
+      "supportingRows": 9,
+      "classifiedAppearances": 12,
+      "dominance": 75,
+      "rowsAffected": 9
+    },
+    {
+      "name": "בהר המנוחות",
+      "categoryId": "religious_lifecycle",
+      "supportingRows": 6,
+      "classifiedAppearances": 7,
+      "dominance": 85.7,
+      "rowsAffected": 9
+    },
+    {
+      "name": "דוד בן עמרם",
+      "categoryId": "local_government",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 9
+    },
+    {
+      "name": "הפגנת המיליון",
+      "categoryId": "ceremonies",
+      "supportingRows": 6,
+      "classifiedAppearances": 6,
+      "dominance": 100,
+      "rowsAffected": 9
+    },
+    {
+      "name": "יוחנן מאלי",
+      "categoryId": "settlement_periphery",
+      "supportingRows": 8,
+      "classifiedAppearances": 10,
+      "dominance": 80,
+      "rowsAffected": 9
+    },
+    {
+      "name": "פתחי וזמרי",
+      "categoryId": "media_pr",
+      "supportingRows": 59,
+      "classifiedAppearances": 60,
+      "dominance": 98.3,
+      "rowsAffected": 9
+    },
+    {
+      "name": "קריה תל אביב",
+      "categoryId": "government_cabinet",
+      "supportingRows": 24,
+      "classifiedAppearances": 30,
+      "dominance": 80,
+      "rowsAffected": 9
+    },
+    {
+      "name": "שבי קדוש",
+      "categoryId": "government_cabinet",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 9
+    },
+    {
+      "name": "אופיר כץ",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 17,
+      "classifiedAppearances": 23,
+      "dominance": 73.9,
+      "rowsAffected": 7
+    },
+    {
+      "name": "בינג -",
+      "categoryId": "internal_management",
+      "supportingRows": 9,
+      "classifiedAppearances": 11,
+      "dominance": 81.8,
+      "rowsAffected": 7
+    },
+    {
+      "name": "יוקרת השירות",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 7,
+      "classifiedAppearances": 7,
+      "dominance": 100,
+      "rowsAffected": 7
+    },
+    {
+      "name": "קרית אתא",
+      "categoryId": "local_government",
+      "supportingRows": 31,
+      "classifiedAppearances": 40,
+      "dominance": 77.5,
+      "rowsAffected": 7
+    },
+    {
+      "name": "שי רייכנר",
+      "categoryId": "local_government",
+      "supportingRows": 22,
+      "classifiedAppearances": 25,
+      "dominance": 88,
+      "rowsAffected": 7
+    },
+    {
+      "name": "שירן שושנה",
+      "categoryId": "legal_judicial",
+      "supportingRows": 7,
+      "classifiedAppearances": 8,
+      "dominance": 87.5,
+      "rowsAffected": 7
+    },
+    {
+      "name": "שמעון סוסן",
+      "categoryId": "local_government",
+      "supportingRows": 10,
+      "classifiedAppearances": 12,
+      "dominance": 83.3,
+      "rowsAffected": 7
+    },
+    {
+      "name": "אשר בן לולו",
+      "categoryId": "diplomacy",
+      "supportingRows": 6,
+      "classifiedAppearances": 6,
+      "dominance": 100,
+      "rowsAffected": 6
+    },
+    {
+      "name": "דני עברי",
+      "categoryId": "local_government",
+      "supportingRows": 5,
+      "classifiedAppearances": 6,
+      "dominance": 83.3,
+      "rowsAffected": 6
+    },
+    {
+      "name": "יגאל סרוסי",
+      "categoryId": "security_emergency",
+      "supportingRows": 9,
+      "classifiedAppearances": 11,
+      "dominance": 81.8,
+      "rowsAffected": 6
+    },
+    {
+      "name": "מזכרת בתיה",
+      "categoryId": "local_government",
+      "supportingRows": 8,
+      "classifiedAppearances": 10,
+      "dominance": 80,
+      "rowsAffected": 6
+    },
+    {
+      "name": "נווה מדבר",
+      "categoryId": "local_government",
+      "supportingRows": 5,
+      "classifiedAppearances": 7,
+      "dominance": 71.4,
+      "rowsAffected": 6
+    },
+    {
+      "name": "שגיא קייזלר",
+      "categoryId": "internal_management",
+      "supportingRows": 8,
+      "classifiedAppearances": 9,
+      "dominance": 88.9,
+      "rowsAffected": 6
+    },
+    {
+      "name": "שחר גליק",
+      "categoryId": "media_pr",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 6
+    },
+    {
+      "name": "שלמה אייזיק",
+      "categoryId": "internal_management",
+      "supportingRows": 7,
+      "classifiedAppearances": 10,
+      "dominance": 70,
+      "rowsAffected": 6
+    },
+    {
+      "name": "שמעון ערנרייך",
+      "categoryId": "religious_lifecycle",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 6
+    },
+    {
+      "name": "אלעד קלימי",
+      "categoryId": "local_government",
+      "supportingRows": 6,
+      "classifiedAppearances": 7,
+      "dominance": 85.7,
+      "rowsAffected": 5
+    },
+    {
+      "name": "גלעד מתאנה",
+      "categoryId": "personal_private",
+      "supportingRows": 5,
+      "classifiedAppearances": 6,
+      "dominance": 83.3,
+      "rowsAffected": 5
+    },
+    {
+      "name": "חן גוטרמן",
+      "categoryId": "local_government",
+      "supportingRows": 6,
+      "classifiedAppearances": 7,
+      "dominance": 85.7,
+      "rowsAffected": 5
+    },
+    {
+      "name": "מאיר רובינשטיין",
+      "categoryId": "local_government",
+      "supportingRows": 10,
+      "classifiedAppearances": 12,
+      "dominance": 83.3,
+      "rowsAffected": 5
+    },
+    {
+      "name": "ציפי חוטובלי",
+      "categoryId": "diplomacy",
+      "supportingRows": 13,
+      "classifiedAppearances": 13,
+      "dominance": 100,
+      "rowsAffected": 5
+    },
+    {
+      "name": "צעדי התכנסות",
+      "categoryId": "budget_finance",
+      "supportingRows": 8,
+      "classifiedAppearances": 8,
+      "dominance": 100,
+      "rowsAffected": 5
+    },
+    {
+      "name": "שוקי אוחנה",
+      "categoryId": "local_government",
+      "supportingRows": 12,
+      "classifiedAppearances": 16,
+      "dominance": 75,
+      "rowsAffected": 5
+    },
+    {
+      "name": "תעריפי מים לחקלאות",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 15,
+      "classifiedAppearances": 20,
+      "dominance": 75,
+      "rowsAffected": 5
+    },
+    {
+      "name": "מוטי קסטל",
+      "categoryId": "media_pr",
+      "supportingRows": 7,
+      "classifiedAppearances": 10,
+      "dominance": 70,
+      "rowsAffected": 4
+    },
+    {
+      "name": "מירב לשם גונן",
+      "categoryId": "security_emergency",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 4
+    },
+    {
+      "name": "מעוז שלי ואלרואי אריה",
+      "categoryId": "politics_party",
+      "supportingRows": 12,
+      "classifiedAppearances": 12,
+      "dominance": 100,
+      "rowsAffected": 4
+    },
+    {
+      "name": "נחמן גלבך",
+      "categoryId": "politics_party",
+      "supportingRows": 5,
+      "classifiedAppearances": 6,
+      "dominance": 83.3,
+      "rowsAffected": 4
+    },
+    {
+      "name": "שאול אמסטרדמסקי",
+      "categoryId": "media_pr",
+      "supportingRows": 8,
+      "classifiedAppearances": 9,
+      "dominance": 88.9,
+      "rowsAffected": 4
+    },
+    {
+      "name": "שמואל סלבין",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 16,
+      "classifiedAppearances": 17,
+      "dominance": 94.1,
+      "rowsAffected": 4
+    },
+    {
+      "name": "גל לוי",
+      "categoryId": "civil_society",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 3
+    },
+    {
+      "name": "ללו זוהר",
+      "categoryId": "local_government",
+      "supportingRows": 11,
+      "classifiedAppearances": 12,
+      "dominance": 91.7,
+      "rowsAffected": 3
+    },
+    {
+      "name": "ספי עובדיה",
+      "categoryId": "media_pr",
+      "supportingRows": 11,
+      "classifiedAppearances": 11,
+      "dominance": 100,
+      "rowsAffected": 3
+    },
+    {
+      "name": "שגית אפיק",
+      "categoryId": "legal_judicial",
+      "supportingRows": 5,
+      "classifiedAppearances": 6,
+      "dominance": 83.3,
+      "rowsAffected": 3
+    },
+    {
+      "name": "שי קינן",
+      "categoryId": "local_government",
+      "supportingRows": 10,
+      "classifiedAppearances": 14,
+      "dominance": 71.4,
+      "rowsAffected": 3
+    },
+    {
+      "name": "אלמוג כהן",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 21,
+      "classifiedAppearances": 27,
+      "dominance": 77.8,
+      "rowsAffected": 2
+    },
+    {
+      "name": "דן רשל",
+      "categoryId": "internal_management",
+      "supportingRows": 7,
+      "classifiedAppearances": 9,
+      "dominance": 77.8,
+      "rowsAffected": 2
+    },
+    {
+      "name": "חנוך מילביצקי",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 2
+    },
+    {
+      "name": "יערה שפירא",
+      "categoryId": "media_pr",
+      "supportingRows": 13,
+      "classifiedAppearances": 13,
+      "dominance": 100,
+      "rowsAffected": 2
+    },
+    {
+      "name": "ליאת רון",
+      "categoryId": "media_pr",
+      "supportingRows": 14,
+      "classifiedAppearances": 15,
+      "dominance": 93.3,
+      "rowsAffected": 2
+    },
+    {
+      "name": "מובילים דיגיטליים",
+      "categoryId": "internal_management",
+      "supportingRows": 5,
+      "classifiedAppearances": 7,
+      "dominance": 71.4,
+      "rowsAffected": 2
+    },
+    {
+      "name": "נווה אילן",
+      "categoryId": "media_pr",
+      "supportingRows": 14,
+      "classifiedAppearances": 20,
+      "dominance": 70,
+      "rowsAffected": 2
+    },
+    {
+      "name": "עודד בן עמי",
+      "categoryId": "media_pr",
+      "supportingRows": 21,
+      "classifiedAppearances": 21,
+      "dominance": 100,
+      "rowsAffected": 2
+    },
+    {
+      "name": "קריית ים",
+      "categoryId": "local_government",
+      "supportingRows": 10,
+      "classifiedAppearances": 13,
+      "dominance": 76.9,
+      "rowsAffected": 2
+    },
+    {
+      "name": "רן קוניק",
+      "categoryId": "local_government",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 2
+    },
+    {
+      "name": "שלומי אמונים",
+      "categoryId": "ceremonies",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 2
+    },
+    {
+      "name": "שלמה קוק",
+      "categoryId": "personal_private",
+      "supportingRows": 5,
+      "classifiedAppearances": 7,
+      "dominance": 71.4,
+      "rowsAffected": 2
+    },
+    {
+      "name": "אושרת לוי",
+      "categoryId": "legal_judicial",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 1
+    },
+    {
+      "name": "דניאל הרשקוביץ",
+      "categoryId": "government_cabinet",
+      "supportingRows": 25,
+      "classifiedAppearances": 33,
+      "dominance": 75.8,
+      "rowsAffected": 1
+    },
+    {
+      "name": "יצחק פינדרוס",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 12,
+      "classifiedAppearances": 13,
+      "dominance": 92.3,
+      "rowsAffected": 1
+    },
+    {
+      "name": "ניסים ואטורי",
+      "categoryId": "knesset_legislation",
+      "supportingRows": 16,
+      "classifiedAppearances": 20,
+      "dominance": 80,
+      "rowsAffected": 1
+    },
+    {
+      "name": "ספי ויניר",
+      "categoryId": "media_pr",
+      "supportingRows": 40,
+      "classifiedAppearances": 40,
+      "dominance": 100,
+      "rowsAffected": 1
+    },
+    {
+      "name": "פנטהון אספה דויט",
+      "categoryId": "diplomacy",
+      "supportingRows": 5,
+      "classifiedAppearances": 5,
+      "dominance": 100,
+      "rowsAffected": 1
+    }
+  ],
+  "refusedAsOverExtrapolated": [
+    {
+      "name": "עמית גל",
+      "supportingRows": 6,
+      "wouldTouch": 60
+    }
+  ]
+}

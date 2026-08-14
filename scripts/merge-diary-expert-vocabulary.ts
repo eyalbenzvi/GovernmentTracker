@@ -84,6 +84,122 @@ interface CategoriesSeedFile {
   expertPanel?: unknown;
 }
 
+/**
+ * Corrections applied to the panel's proposals, declared here rather than
+ * edited into the expert files — those stay exactly as delivered, so a reader
+ * can see both what an expert proposed and what this project did with it.
+ *
+ * Every entry was checked against all 223,032 collected rows before being
+ * written, with scripts/audit-diary-vocabulary.ts.
+ */
+const PANEL_OVERRIDES: Array<{
+  keyword: string;
+  action: 'drop' | 'remap';
+  toCategoryId?: string;
+  reasonHe: string;
+}> = [
+  {
+    keyword: 'מס',
+    action: 'drop',
+    reasonHe:
+      'תופס 632 שורות, ובהן "מפגש מס\' 1" — הגרש אינו אות עברית ולכן קיצור המילה "מספר" נספר כמילת המס. מומחה העברית עצמו סימן את המילה כאסורה בדוח שלו והציע אותה בכל זאת; הצורות הרב-מיליות (מס רכוש, מס הכנסה) נשמרו.',
+  },
+  {
+    keyword: 'שבת',
+    action: 'drop',
+    reasonHe:
+      'תופס 557 שורות, ובהן "השבת מענקי הסיוע" ו"השבת רכוש" — אות השימוש ה מאפשרת התאמה לשורש הָשָׁבָה. הצורות "כניסת שבת" ו"ליל שבת" נשמרו.',
+  },
+  {
+    keyword: 'בית',
+    action: 'drop',
+    reasonHe:
+      'הוצע כ"בית" במשמעות אישית, אך תופס 585 שורות ובהן "בית שאן", "בית אל" ו"משחק בית"ר" — כלומר שמות מקומות וקבוצות, לא ענייני בית. מומחה העברית סימן את המילה כמסוכנת.',
+  },
+  {
+    keyword: 'פרטיות',
+    action: 'drop',
+    reasonHe:
+      'נועד לסמן נושא שהושחר, אך תופס גם "הרשות להגנת הפרטיות" ו"קרקעות פרטיות" — כלומר היה מסמן דיון מקצועי בפרטיות כאילו הלשכה הסתירה את הנושא. סמני ההשחרה המפורשים (מושחר, מסתיר, צד ג\') נשמרו.',
+  },
+  // The meeting-format words tell a reader that a meeting happened, or by what
+  // medium — never what it was about. They are not the office writing nothing
+  // (that is `unspecified`), and not a gap in our vocabulary (we recognise the
+  // word perfectly); they are their own fact, and they get their own category.
+  ...[
+    'פגישה',
+    'פגישת',
+    'פגישות',
+    'ישיבה',
+    'ישיבות',
+    'מפגש',
+    'מפגשים',
+    'דיון',
+    'דיונים',
+    'דיוני',
+    'שיחה',
+    'שיחת',
+    'שיחות',
+    'התייעצות',
+    'התייעצויות',
+    'התיעצות',
+    'עדכון',
+    'עדכונים',
+    'עדכוני',
+    'סטטוס',
+    'סטאטוס',
+    'מקצועי',
+    'מקצועית',
+    'מקצועיות',
+    'זום',
+    'בזום',
+    'גוגל מיט',
+    'וובינר',
+    'היוועדות חזותית',
+    'שיחת זום',
+    'טלפוני',
+    'טלפונית',
+    'שיחה טלפונית',
+    'ויעוד',
+    'היכרות',
+    'הכרות',
+    'הכירות',
+    'פ.היכרות',
+    // The "work meeting" abbreviations, in every spelling the diaries use.
+    // 8,399 rows: the row says a work meeting happened, nothing more.
+    'פ.ע',
+    'פ"ע',
+    'פ.ע.',
+    'פע',
+    'פ.א',
+    'פ"א',
+    // Role titles: they name the counterpart, which is who and not what. 10,185
+    // rows. Filing them as internal management would present "פ.ע מנכ״ל" as if
+    // the diary disclosed a management subject.
+    'מנכ"ל',
+    'מנכ"לית',
+    'מנכל',
+    'מנכ"לים',
+    'משנה למנכ"ל',
+    'סמנכ"ל',
+    'סמנכ"לית',
+    'רמ"ט',
+    'יועצים',
+    // Contentless status words. 4,782 rows.
+    'שוטף',
+    'הכנה',
+    'לשכה',
+    'פנימי',
+    'פנימית',
+  ].map((keyword) => ({
+    keyword,
+    action: 'remap' as const,
+    toCategoryId: 'meeting_without_subject',
+    reasonHe:
+      'מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב "הלשכה לא כתבה דבר" עם "הלשכה כתבה שהייתה פגישה".',
+  })),
+];
+
 /** Same normalisation the classifier applies, so a keyword cannot merge into
  *  two entries that differ only by quote style or spacing. */
 function normalizeKeyword(value: string): string {
@@ -217,6 +333,11 @@ function main(): void {
   const knownCategoryIds = new Set(seed.categories.map((c) => c.id));
 
   // ---- keyword proposals --------------------------------------------------
+  const overrideByKeyword = new Map(
+    PANEL_OVERRIDES.map((o) => [normalizeKeyword(o.keyword), o] as const),
+  );
+  const appliedOverrides: Array<{ keyword: string; action: string; reasonHe: string }> = [];
+
   const byKeyword = new Map<string, Array<ExpertKeyword & { expert: string }>>();
   const rejectedUnknownCategory: Array<{ expert: string; keyword: string; categoryId: string }> =
     [];
@@ -224,6 +345,17 @@ function main(): void {
     for (const k of e.keywords) {
       const keyword = normalizeKeyword(k.keyword);
       if (keyword === '') continue;
+      const override = overrideByKeyword.get(keyword);
+      if (override !== undefined) {
+        appliedOverrides.push({
+          keyword,
+          action:
+            override.action === 'drop' ? 'drop' : `remap → ${override.toCategoryId ?? '(none)'}`,
+          reasonHe: override.reasonHe,
+        });
+        if (override.action === 'drop') continue;
+        k.categoryId = override.toCategoryId ?? k.categoryId;
+      }
       if (!knownCategoryIds.has(k.categoryId)) {
         rejectedUnknownCategory.push({ expert: e.expert, keyword, categoryId: k.categoryId });
         continue;
@@ -270,6 +402,8 @@ function main(): void {
       'חמישה מומחי תחום — עברית, פוליטיקה ישראלית, תקשורת, משפט ישראלי ויחסי חוץ — קראו את שורות הנושא האמיתיות והציעו התאמות של מילת מפתח לקטגוריה, כל אחת עם רמת ביטחון מוצהרת ונימוק. ההצעות הופקו בסיוע מודל שפה בזמן בנייה ונשמרות במלואן ב-data/raw/seeds/diary-experts. האתר המפורסם אינו מריץ מודל שפה, וההתאמה עצמה דטרמיניסטית.',
     mergeRule:
       'לכל מילת מפתח: (1) רמת הביטחון הגבוהה ביותר גוברת; (2) בין ההצעות באותה רמה — הקטגוריה שהוצעה על ידי הכי הרבה מומחים; (3) בתיקו — הקטגוריה בעלת ה-priority הנמוך יותר, כדי שהתוצאה לא תלויה בסדר הקבצים. מילת מפתח שכבר נוסחה ידנית קודם לכן אינה נדרסת. כל מחלוקת נשמרת בדוח האיחוד עם הצד שנדחה ועם דרך ההכרעה.',
+    overrideRule:
+      'תיקונים להצעות הפאנל מוצהרים בסקריפט האיחוד ולא נערכים לתוך קבצי המומחים — הקבצים נשמרים כפי שנמסרו, כדי שניתן יהיה לראות גם מה מומחה הציע וגם מה נעשה עם ההצעה. כל תיקון נבדק מול כל הרשומות שנאספו לפני שנכתב, ומופיע בדוח האיחוד עם הנימוק.',
     experts: experts.map((e) => ({
       expert: e.expert,
       summary: e.summary,
@@ -290,6 +424,7 @@ function main(): void {
       skippedAlreadyCurated: skippedAlreadyCurated.length,
       rejectedUnknownCategory: rejectedUnknownCategory.length,
       conflicts: resolutions.filter((r) => r.conflict !== undefined).length,
+      overridesApplied: appliedOverrides.length,
       categoriesAdded: addedCategories,
       byConfidence: {
         high: resolutions.filter((r) => r.confidence === 'high').length,
@@ -298,6 +433,7 @@ function main(): void {
       },
     },
     conflicts: resolutions.filter((r) => r.conflict !== undefined),
+    appliedOverrides,
     rejectedUnknownCategory,
     skippedAlreadyCurated,
   };

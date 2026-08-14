@@ -389,6 +389,7 @@ export const diaryEntrySchema = z.object({
   categoryId: z.string().min(1).optional(),
   matchedKeyword: z.string().nullable().optional(),
   matchedConfidence: z.enum(['high', 'medium', 'low']).nullable().optional(),
+  inferredFrom: z.enum(['name_cooccurrence', 'name_without_field']).nullable().optional(),
 });
 
 export const diaryCategoriesSchema = z.object({
@@ -443,6 +444,7 @@ export const diaryInsightsSchema = z.object({
     sharedFileProfiles: z.number().int().min(0),
     unspecifiedPercent: z.number().nullable(),
     unclassifiedPercent: z.number().nullable(),
+    noTopicPercent: z.number().nullable(),
     classifiedPercent: z.number().nullable(),
     noSubjectPercent: z.number().nullable(),
   }),

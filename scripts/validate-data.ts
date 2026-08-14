@@ -53,6 +53,7 @@ interface DiaryEntryLite {
   categoryId?: string;
   matchedKeyword?: string | null;
   matchedConfidence?: 'high' | 'medium' | 'low' | null;
+  inferredFrom?: string | null;
 }
 interface DiariesIndexLite {
   windowStart: string;
@@ -80,6 +81,7 @@ interface DiaryInsightsLite {
     sharedFileProfiles: number;
     unspecifiedPercent: number | null;
     unclassifiedPercent: number | null;
+    noTopicPercent: number | null;
     classifiedPercent: number | null;
     noSubjectPercent: number | null;
   };
@@ -720,16 +722,30 @@ function main(): void {
   // `unclassified` only when our vocabulary missed real text. Both are rows
   // that matched no keyword, so a matched keyword on either is a leak.
   for (const row of diaries) {
-    const isNonSubjectCategory =
-      row.categoryId === 'unspecified' ||
-      row.categoryId === 'unclassified' ||
-      row.categoryId === 'no_subject_recorded';
-    if (isNonSubjectCategory && row.matchedKeyword !== null && row.matchedKeyword !== undefined) {
-      analysisProblems.push(`רשומה בקטגוריה שאינה תוכן אך עם מילת מפתח: ${row.id}`);
+    // Only these two are pure fallbacks, reached when no keyword fired at all:
+    // the office wrote nothing, or wrote something our vocabulary misses. The
+    // other non-topic categories are keyword-driven and must carry one like any
+    // other category — `unspecified` through an explicit redaction marker
+    // ("צד ג'", "מושחר"), `meeting_without_subject` through a meeting-format
+    // word, `named_person_meeting` through the person's name.
+    const isPureFallback =
+      row.categoryId === 'unclassified' || row.categoryId === 'no_subject_recorded';
+    if (isPureFallback && row.matchedKeyword !== null && row.matchedKeyword !== undefined) {
+      analysisProblems.push(`רשומה בקטגוריית מפלט אך עם מילת מפתח: ${row.id}`);
       break;
     }
-    if (!isNonSubjectCategory && (row.matchedKeyword ?? '') === '') {
+    // `unspecified` is the one category reached both ways: by the generic-text
+    // rule, which has no keyword, and by an explicit redaction marker, which
+    // does. Every other category must name the keyword that produced it.
+    const mayLackKeyword = isPureFallback || row.categoryId === 'unspecified';
+    if (!mayLackKeyword && (row.matchedKeyword ?? '') === '') {
       analysisProblems.push(`רשומה בקטגוריית תוכן ללא מילת המפתח שהפעילה אותה: ${row.id}`);
+      break;
+    }
+    // An inference is never allowed to present itself as firmly as the office's
+    // own words: it must carry the lowest confidence and name its rule.
+    if ((row.inferredFrom ?? null) !== null && row.matchedConfidence !== 'low') {
+      analysisProblems.push(`שורה שסווגה בהסקה אך אינה מסומנת ברמת ביטחון נמוכה: ${row.id}`);
       break;
     }
     // Confidence and keyword travel together: a reader who is shown a category
@@ -767,6 +783,7 @@ function main(): void {
   // The four shares must account for every row exactly once.
   const shareSum = [
     diaryInsights.totals.classifiedPercent,
+    diaryInsights.totals.noTopicPercent,
     diaryInsights.totals.unclassifiedPercent,
     diaryInsights.totals.unspecifiedPercent,
     diaryInsights.totals.noSubjectPercent,

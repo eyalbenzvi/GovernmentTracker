@@ -735,6 +735,19 @@ function main(): void {
         entries.length === 0
           ? null
           : Math.round(((categoryTotals.unclassified ?? 0) / entries.length) * 1000) / 10,
+      // Five categories describe the absence of a subject rather than a subject,
+      // so none of them may be counted as a topic. Leaving the two newer ones out
+      // of this subtraction would have reported "a meeting happened" and "a name,
+      // no topic" as if the office had disclosed what the meeting was about.
+      noTopicPercent:
+        entries.length === 0
+          ? null
+          : Math.round(
+              (((categoryTotals.meeting_without_subject ?? 0) +
+                (categoryTotals.named_person_meeting ?? 0)) /
+                entries.length) *
+                1000,
+            ) / 10,
       classifiedPercent:
         entries.length === 0
           ? null
@@ -742,7 +755,9 @@ function main(): void {
               ((entries.length -
                 (categoryTotals.unclassified ?? 0) -
                 (categoryTotals.unspecified ?? 0) -
-                (categoryTotals.no_subject_recorded ?? 0)) /
+                (categoryTotals.no_subject_recorded ?? 0) -
+                (categoryTotals.meeting_without_subject ?? 0) -
+                (categoryTotals.named_person_meeting ?? 0)) /
                 entries.length) *
                 1000,
             ) / 10,

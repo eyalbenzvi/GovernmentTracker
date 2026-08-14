@@ -1,0 +1,1176 @@
+{
+  "generatedAt": "2026-08-14",
+  "expertFiles": [
+    "expert-foreign.json",
+    "expert-hebrew.json",
+    "expert-law.json",
+    "expert-media.json",
+    "expert-politics.json"
+  ],
+  "totals": {
+    "proposalsRead": 2366,
+    "distinctKeywords": 2002,
+    "keywordsAdded": 1878,
+    "skippedAlreadyCurated": 124,
+    "rejectedUnknownCategory": 0,
+    "conflicts": 36,
+    "overridesApplied": 63,
+    "categoriesAdded": [
+      "calendar_admin",
+      "comms_telecom_regulation",
+      "diaspora_jewish_world",
+      "holidays_calendar",
+      "legal_judicial",
+      "regulation_licensing",
+      "religious_lifecycle",
+      "sectoral_affairs",
+      "settlement_periphery",
+      "war_recovery"
+    ],
+    "byConfidence": {
+      "high": 1338,
+      "medium": 456,
+      "low": 84
+    }
+  },
+  "conflicts": [
+    {
+      "keyword": "אכיפה",
+      "categoryId": "legal_judicial",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אכיפה, רגולציה וביקורת. שימו לב ש\"ביקורת\" אינה נתפסת על ידי \"ביקור\" (ולהיפך) בגלל כלל האות העוקבת — כאן החוק דווקא עוזר.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "אכיפת",
+      "categoryId": "legal_judicial",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אכיפה, רגולציה וביקורת. שימו לב ש\"ביקורת\" אינה נתפסת על ידי \"ביקור\" (ולהיפך) בגלל כלל האות העוקבת — כאן החוק דווקא עוזר.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "אסדרה",
+      "categoryId": "legal_judicial",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אסדרה — המונח העברי לרגולציה; מילה שונה לחלוטין מ\"רגולציה\" ולכן חובה בנפרד.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "בדואים",
+      "categoryId": "sectoral_affairs",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] מדיניות ממשלתית כלפי החברה הבדואית ('החלטת ממשלה בדואים', 'מיקוד בדואים', 'רשות הבדואים').",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "civil_society",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "ביקורת המדינה",
+      "categoryId": "legal_judicial",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"הוועדה לביקורת המדינה\", \"מענה לדוח ביקורת המדינה\", \"עבודת ביקורת המדינה לעניין אסדרת מדי מים\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "knesset_legislation",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "גרעין תורני",
+      "categoryId": "settlement_periphery",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] צורה מפורשת.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "civil_society",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "גרעינים",
+      "categoryId": "civil_society",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] חברה אזרחית: עמותות, איגודים, גרעינים, מכינות ותנועות נוער. \"גרעין\" לבדה הושמטה — היא מתנגשת ב\"גרעין שליטה\" מהמגזר הפרטי.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "settlement_periphery",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "דרוזים",
+      "categoryId": "sectoral_affairs",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] 'החלטת ממשלה דרוזים', 'פגישה עם מחמוד שאנן - דרוזים'.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "civil_society",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "הפגנה",
+      "categoryId": "civil_society",
+      "confidence": "medium",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] מחאה ציבורית ('הפגנת המיליון'); בחלק מהיומנים ההקשר משטרתי-ביטחוני.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "politics_party",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "ועדות איתור",
+      "categoryId": "government_cabinet",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] ריבוי.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "internal_management",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "ועדת איתור",
+      "categoryId": "government_cabinet",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] ועדות איתור למינויים בכירים בשירות הציבורי.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "internal_management",
+            "confidence": "medium"
+          },
+          {
+            "expert": "law",
+            "categoryId": "internal_management",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "חו\"ל",
+      "categoryId": "diplomacy",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] דיפלומטיה: שגרירים, נספחים, משלחות וחו\"ל. \"שגריר\" הוא המנוף הכי חסכוני — רשומה חד-פעמית כמו \"פגישה עם שגריר צ'ילה\" נתפסת בו.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "foreign",
+            "categoryId": "travel_logistics",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "מבקר המדינה",
+      "categoryId": "legal_judicial",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] 46 רשומות בראש ועוד בזנב: \"דו\"ח מבקר המדינה\", \"הכנה למבקר המדינה\", \"פגישה עם צוות משרד מבקר המדינה\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "government_cabinet",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "מח\"ש",
+      "categoryId": "security_emergency",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] קיצורי מערכת הביטחון והמשטרה כפי שנכתבים בלשכות: שהב\"ט, מפכ\"ל, שב\"ס, מג\"ב, כב\"ה, מח\"ש, מתפ\"ש. כולם מופיעים גם בלי גרשיים.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "legal_judicial",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "מחאה",
+      "categoryId": "civil_society",
+      "confidence": "medium",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] תנועות המחאה של התקופה ('פעילי מחאה', 'מחאה נגד חרם ובריונות').",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "politics_party",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "מטה מול מטה",
+      "categoryId": "government_cabinet",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] פורמט עבודה בין שני משרדי ממשלה; מונח ייחודי וברור.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "internal_management",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "מינויים",
+      "categoryId": "internal_management",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] הליכי מינוי ואיתור בכירים — עבודת מטה/כוח אדם.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "government_cabinet",
+            "confidence": "low"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "מכרז",
+      "categoryId": "budget_finance",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] תקציב, מיסוי, תמיכות ורכש. הסט התקציבי הוא דוגמת המורפולוגיה הקלאסית: תקציב/תקציבי/תקציבית/תקציבים/תקצוב הן חמש מילים נפרדות למנוע.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "מכרזים",
+      "categoryId": "budget_finance",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] תקציב, מיסוי, תמיכות ורכש. הסט התקציבי הוא דוגמת המורפולוגיה הקלאסית: תקציב/תקציבי/תקציבית/תקציבים/תקצוב הן חמש מילים נפרדות למנוע.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "מעריב",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "experts": [
+        "media"
+      ],
+      "reasoning": "[media] עיתון; 'אנה ברסקי - מעריב'.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "personal_private",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "נציב שירות המדינה",
+      "categoryId": "government_cabinet",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] נציבות שירות המדינה — מנגנון רוחבי של הממשלה.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "internal_management",
+            "confidence": "high"
+          },
+          {
+            "expert": "law",
+            "categoryId": "internal_management",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "נציבות שירות המדינה",
+      "categoryId": "government_cabinet",
+      "confidence": "high",
+      "experts": [
+        "politics"
+      ],
+      "reasoning": "[politics] אותו גוף.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "internal_management",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "עוטף",
+      "categoryId": "security_emergency",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אוצר המילים של מלחמה, חירום, חטופים, פצועים וכוננות. שימו לב לזוגות שאינם נגזרים: כוננות/כוננויות, פצוע/פצועים, תרגיל/תרגול/תרחיש.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "war_recovery",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "עיצום",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"היטל, עיצום, קרן ופיקוח\" — יחיד.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "עיצומים",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"דיון עיצומים\", \"עיצומים כספיים\", \"כספי עיצומים\" — סנקציה מנהלית.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "פיקוח",
+      "categoryId": "legal_judicial",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אכיפה, רגולציה וביקורת. שימו לב ש\"ביקורת\" אינה נתפסת על ידי \"ביקור\" (ולהיפך) בגלל כלל האות העוקבת — כאן החוק דווקא עוזר.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "פרסום יומן",
+      "categoryId": "calendar_admin",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] עבודת פרסום היומן עצמו — מטא-רשומה.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "צו",
+      "categoryId": "knesset_legislation",
+      "confidence": "medium",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] חקיקת משנה. \"צו\" קצרה מאוד ולכן בינוני.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "צווים",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"תק\"שחים, חתימות על צווים\" — חתימת שר על צווים.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "knesset_legislation",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "רגולטורי",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"צוות לצמצום ארביטראז' רגולטורי\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "רגולטורים",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"שוטף עם רגולטורים פיננסים\", \"סנכרון ותיאום עם כלל הרגולטורים הפיננסיים\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "רגולטורית",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"הקמת רשות רגולטורית\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "רגולציה",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] \"פורום מובילי מדיניות רגולציה\", \"הצגת הרגולציה בסייבר\", \"טיוב רגולציה\", \"בג\"צ רגולציה הוגנת\".",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "legal_judicial",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "שימוע",
+      "categoryId": "legal_judicial",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] מערכת המשפט: שופטים, דיינים, פרקליטות, סנגוריה, חנינות ושימועים. גוף גדול מאוד בנתונים שאין לו בית בטקסונומיה הקיימת.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "law",
+            "categoryId": "regulation_licensing",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    },
+    {
+      "keyword": "תקומה",
+      "categoryId": "security_emergency",
+      "confidence": "high",
+      "experts": [
+        "hebrew_language"
+      ],
+      "reasoning": "[hebrew_language] אוצר המילים של מלחמה, חירום, חטופים, פצועים וכוננות. שימו לב לזוגות שאינם נגזרים: כוננות/כוננויות, פצוע/פצועים, תרגיל/תרגול/תרחיש.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "politics",
+            "categoryId": "war_recovery",
+            "confidence": "high"
+          }
+        ],
+        "resolvedBy": "priority"
+      }
+    },
+    {
+      "keyword": "תקנות",
+      "categoryId": "regulation_licensing",
+      "confidence": "high",
+      "experts": [
+        "law"
+      ],
+      "reasoning": "[law] 48 רשומות: \"תקנות אופק חדש\", \"תיקון תקנות התשלומים של בזק\", \"אישור טיוטת תקנות\", \"תקנות הדיור המוגן\" — חקיקת משנה.",
+      "conflict": {
+        "rejected": [
+          {
+            "expert": "hebrew_language",
+            "categoryId": "knesset_legislation",
+            "confidence": "medium"
+          }
+        ],
+        "resolvedBy": "confidence"
+      }
+    }
+  ],
+  "appliedOverrides": [
+    {
+      "keyword": "פ\"ע",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פ.ע",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פע",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פ.ע.",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פ\"א",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פ.א",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פ.היכרות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שוטף",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מנכ\"ל",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מנכל",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מנכ\"לית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מנכ\"לים",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "סמנכ\"ל",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "סמנכ\"לית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "רמ\"ט",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "משנה למנכ\"ל",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "יועצים",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פנימי",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פנימית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "הכנה",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פגישה",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פגישת",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פגישות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "ישיבה",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "ישיבות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מפגש",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מפגשים",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "דיון",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "דיונים",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "דיוני",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שיחה",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שיחת",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שיחות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "התייעצות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "התייעצויות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "התיעצות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "עדכון",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "עדכונים",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "עדכוני",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "סטטוס",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "סטאטוס",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מקצועי",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מקצועית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "מקצועיות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "זום",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "בזום",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "גוגל מיט",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "וובינר",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "היוועדות חזותית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שיחת זום",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "טלפוני",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "טלפונית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "שיחה טלפונית",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "ויעוד",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "פרטיות",
+      "action": "drop",
+      "reasonHe": "נועד לסמן נושא שהושחר, אך תופס גם \"הרשות להגנת הפרטיות\" ו\"קרקעות פרטיות\" — כלומר היה מסמן דיון מקצועי בפרטיות כאילו הלשכה הסתירה את הנושא. סמני ההשחרה המפורשים (מושחר, מסתיר, צד ג') נשמרו."
+    },
+    {
+      "keyword": "שבת",
+      "action": "drop",
+      "reasonHe": "תופס 557 שורות, ובהן \"השבת מענקי הסיוע\" ו\"השבת רכוש\" — אות השימוש ה מאפשרת התאמה לשורש הָשָׁבָה. הצורות \"כניסת שבת\" ו\"ליל שבת\" נשמרו."
+    },
+    {
+      "keyword": "מס",
+      "action": "drop",
+      "reasonHe": "תופס 632 שורות, ובהן \"מפגש מס' 1\" — הגרש אינו אות עברית ולכן קיצור המילה \"מספר\" נספר כמילת המס. מומחה העברית עצמו סימן את המילה כאסורה בדוח שלו והציע אותה בכל זאת; הצורות הרב-מיליות (מס רכוש, מס הכנסה) נשמרו."
+    },
+    {
+      "keyword": "בית",
+      "action": "drop",
+      "reasonHe": "הוצע כ\"בית\" במשמעות אישית, אך תופס 585 שורות ובהן \"בית שאן\", \"בית אל\" ו\"משחק בית\"ר\" — כלומר שמות מקומות וקבוצות, לא ענייני בית. מומחה העברית סימן את המילה כמסוכנת."
+    },
+    {
+      "keyword": "לשכה",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "היכרות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "הכרות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "הכירות",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    },
+    {
+      "keyword": "וובינר",
+      "action": "remap → meeting_without_subject",
+      "reasonHe": "מילה שמתארת את עצם המפגש או את אמצעי הקיום שלו, ולא את נושאו. הועברה מקטגוריית האטימות לקטגוריה נפרדת, כדי לא לערבב \"הלשכה לא כתבה דבר\" עם \"הלשכה כתבה שהייתה פגישה\"."
+    }
+  ],
+  "rejectedUnknownCategory": [],
+  "skippedAlreadyCurated": [
+    "OECD",
+    "א.צהריים",
+    "אגף",
+    "אגף התקציבים",
+    "או\"ם",
+    "אולפן",
+    "אזכרה",
+    "איגוד",
+    "אירוע",
+    "אירוע משפחתי",
+    "ארגוני",
+    "ארוחת ערב",
+    "ארוחת צהריים",
+    "בחירות",
+    "בין משרדי",
+    "בינלאומי",
+    "ביקור ב",
+    "בנק",
+    "בר מצווה",
+    "דובר",
+    "דוברות",
+    "האיחוד האירופי",
+    "הבנקים",
+    "הכנסת",
+    "המליאה",
+    "הסוכנות היהודית",
+    "הסעה",
+    "הענקת",
+    "הפסקה",
+    "הצעת חוק",
+    "השגרירות",
+    "התאחדות התעשיינים",
+    "התנדבות",
+    "ועדת הכנסת",
+    "ועדת שרים",
+    "ועידה",
+    "זמן אישי",
+    "ח\"כ",
+    "חבר הכנסת",
+    "חברת",
+    "חברת הכנסת",
+    "חופש",
+    "חופשה",
+    "חטופים",
+    "חירום",
+    "חנוכת",
+    "חקיקה",
+    "חתונה",
+    "טיסה",
+    "טקס",
+    "טקסי",
+    "יהדות התפוצות",
+    "יום הזיכרון",
+    "יום העצמאות",
+    "יועץ משפטי",
+    "יזם",
+    "יזמים",
+    "יחסי ציבור",
+    "ישיבת ממשלה",
+    "כינוס",
+    "כנס",
+    "כנסת",
+    "כתבים",
+    "לוויה",
+    "לשכה משפטית",
+    "מועצה אזורית",
+    "מזכיר הממשלה",
+    "מחלה",
+    "מילואים",
+    "מל\"ל",
+    "מלחמה",
+    "מליאה",
+    "מליאת הכנסת",
+    "מסיבת עיתונאים",
+    "מפונים",
+    "מפלגה",
+    "מפלגתי",
+    "מרכז המפלגה",
+    "מרכז השלטון המקומי",
+    "משלחות",
+    "משלחת",
+    "משקיעים",
+    "נאום",
+    "נסיעה",
+    "נסיעות",
+    "סיור",
+    "סיורים",
+    "סיעה",
+    "עיריית",
+    "עיתונאים",
+    "עמותה",
+    "פודקאסט",
+    "פוליטי",
+    "פוליטית",
+    "פורום ה-15",
+    "פורום הנהלה",
+    "פורום ציבורי",
+    "פיקוד העורף",
+    "פריימריז",
+    "פרס",
+    "פתיחת",
+    "צה\"ל",
+    "צילום",
+    "צילומים",
+    "קבינט",
+    "קונגרס",
+    "ראיון",
+    "ראיון עבודה",
+    "ראיונות",
+    "ראש המועצה",
+    "ראש העיר",
+    "ראש עיריית",
+    "רשויות מקומיות",
+    "שאילתה",
+    "שב\"כ",
+    "שגריר",
+    "שגרירת",
+    "שידור",
+    "שלטון מקומי",
+    "תאגיד",
+    "תדרוך עיתונאים",
+    "תפילה",
+    "תקציב",
+    "תקשורת"
+  ]
+}

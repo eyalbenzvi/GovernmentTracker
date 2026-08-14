@@ -32,6 +32,7 @@ async function loadAll(): Promise<Dataset> {
     diariesIndex,
     diaryCategories,
     diaryInsights,
+    diaryNameInferences,
   ] = await Promise.all([
     import('../../data/processed/ministries.json'),
     import('../../data/processed/minister-tenures.json'),
@@ -50,6 +51,7 @@ async function loadAll(): Promise<Dataset> {
     import('../../data/processed/diaries-index.json'),
     import('../../data/processed/diary-categories.json'),
     import('../../data/processed/diary-insights.json'),
+    import('../../data/processed/diary-name-inferences.json'),
   ]);
 
   return {
@@ -70,6 +72,7 @@ async function loadAll(): Promise<Dataset> {
     diariesIndex: diariesIndex.default as unknown as Dataset['diariesIndex'],
     diaryCategories: diaryCategories.default as unknown as Dataset['diaryCategories'],
     diaryInsights: diaryInsights.default as unknown as Dataset['diaryInsights'],
+    diaryNameInferences: diaryNameInferences.default as unknown as Dataset['diaryNameInferences'],
   };
 }
 
