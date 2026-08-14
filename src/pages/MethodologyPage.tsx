@@ -102,13 +102,32 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
         />
         <Card>
           <ul className="list-inside list-disc space-y-2 text-sm text-slate-700">
-            <li>
-              אין באתר נתוני תקציב או ביצוע: {formatNumber(dataVersion.counts.budgetItems)} רשומות
-              תקציב נאספו. הסיבה מפורטת בסעיף מגבלת סביבת הבנייה.
-            </li>
-            <li>
-              אין באתר פריטי פעילות: {formatNumber(dataVersion.counts.activityItems)} פריטים נאספו.
-            </li>
+            {/* These two were written when the site had no budget or activity data
+                at all, and kept interpolating the count after it did — so the page
+                read "there is no budget data on the site: 2,725 records were
+                collected". A limitation that no longer holds must stop being
+                published as one. */}
+            {dataVersion.counts.budgetItems === 0 ? (
+              <li>
+                אין באתר נתוני תקציב או ביצוע בגרסה זו. הסיבה מפורטת בסעיף מגבלת סביבת הבנייה.
+              </li>
+            ) : (
+              <li>
+                נתוני התקציב מכסים את התקציב הרגיל בלבד:{' '}
+                {formatNumber(dataVersion.counts.budgetItems)} רשומות. תקציב הפיתוח, המפעלים
+                העסקיים, שירות החוב והרזרבה הכללית אינם נכללים — ראו "מה לא נכלל בנתוני התקציב".
+              </li>
+            )}
+            {dataVersion.counts.activityItems === 0 ? (
+              <li>אין באתר פריטי פעילות בגרסה זו.</li>
+            ) : (
+              <li>
+                פריטי הפעילות מכסים {formatNumber(dataVersion.counts.ministriesWithActivityData)}{' '}
+                מתוך {formatNumber(dataVersion.counts.ministries)} הסעיפים:{' '}
+                {formatNumber(dataVersion.counts.activityItems)} פריטים. היעדר פריטים בסעיף אינו
+                היעדר פעילות.
+              </li>
+            )}
             <li>
               אין באתר נתוני כהונת שרים: תאריכי כהונה לא נאספו ממקור רשמי, ואינם נגזרים בהסקה.
             </li>

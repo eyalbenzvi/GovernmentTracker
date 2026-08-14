@@ -649,6 +649,8 @@ function budgetExhausted(): boolean {
 const EXTRACT_CACHE_DIR = path.join(CACHE_DIR, 'diary-extract');
 
 interface CachedExtraction {
+  /** Archived copy this extraction was read from, so a cache hit keeps provenance. */
+  archiveUrl?: string | null;
   /** null when the file could not be read at all; the disclosures say why. */
   method: ExtractionMethod | null;
   extractionNote: string;
@@ -715,6 +717,13 @@ interface DiaryDatasetCoverage {
   outOfWindowRows: number;
   truncated: boolean;
   unparsedResources: UnparsedResource[];
+  /**
+   * Which archived copies this publication's files were actually read from.
+   * Recorded per publication rather than per row: the same URL on 223,032 rows
+   * would add tens of megabytes to a static site, and a row already carries its
+   * datasetId, so row → publication → copy is one hop.
+   */
+  archiveCopiesRead: Array<{ resourceUrl: string; archiveUrl: string }>;
 }
 
 /**
@@ -1331,6 +1340,19 @@ async function extractFileResource(
   const cached = readExtractCache(cacheFile);
   if (cached !== null) {
     for (const note of cached.disclosures) disclose(note);
+    // A cache hit must carry the provenance the original read established,
+    // otherwise a repair run would silently publish fewer archive addresses
+    // than the collection it reused.
+    const cachedArchiveUrl = cached.archiveUrl ?? null;
+    if (
+      cachedArchiveUrl !== null &&
+      !cov.archiveCopiesRead.some((c) => c.archiveUrl === cachedArchiveUrl)
+    ) {
+      cov.archiveCopiesRead.push({
+        resourceUrl: resource.url ?? '',
+        archiveUrl: cachedArchiveUrl,
+      });
+    }
     return cached.method === null
       ? []
       : buildEntries(ctx, cached.rows, cached.method, cached.extractionNote);
@@ -1398,9 +1420,16 @@ async function extractFileResource(
   const provenanceNote = fromArchive
     ? ` · הקובץ נקרא מעותק שמור בארכיון האינטרנט: ${download.viaUrl}`
     : '';
+  // ...and, because the note is not carried into the published rows, the address
+  // is recorded once on the publication. Without this the site claimed a
+  // provenance it did not publish.
+  if (fromArchive && !cov.archiveCopiesRead.some((c) => c.archiveUrl === download.viaUrl)) {
+    cov.archiveCopiesRead.push({ resourceUrl: resource.url ?? '', archiveUrl: download.viaUrl });
+  }
   const fullNote = `${extractionNote}${provenanceNote}`;
   writeExtractCache(cacheFile, {
     method,
+    archiveUrl: fromArchive ? download.viaUrl : null,
     extractionNote: fullNote,
     rows: extraction.rows,
     unparsedLineCount: extraction.unparsedLineCount,
@@ -1462,6 +1491,7 @@ async function collect(): Promise<void> {
       outOfWindowRows: 0,
       truncated: false,
       unparsedResources: [],
+      archiveCopiesRead: [],
     };
 
     for (const resource of resources) {
@@ -1695,6 +1725,7 @@ async function collect(): Promise<void> {
       unattributedDatasets: coverage.filter((c) => c.ministryId === null).length,
       unparsedResources: coverage.reduce((sum, c) => sum + c.unparsedResources.length, 0),
       duplicateRowsRemoved: duplicateRows,
+      archiveCopiesRead: coverage.reduce((sum, c) => sum + c.archiveCopiesRead.length, 0),
       datasetsWithoutIdentifier: datasetsWithoutId,
       timeBudgetReached: timeBudgetReached,
       byExtractionMethod: {

@@ -135,6 +135,36 @@ export function coversMultiplePeople(title: string): boolean {
   return secondDiary || pluralOffice || joinedRole;
 }
 
+/**
+ * Whether a row states a clock time that a rule about clock times may use.
+ *
+ * These exports write an all-day or date-only entry as 00:00, and often as
+ * 00:00–00:00. Read literally, that is a meeting at midnight lasting no time,
+ * and it was read literally: 64% of every row this site published as a
+ * "night meeting" started at 00:xx, and 59% also ended at 00:00 — fast days,
+ * birthdays, "מושב חורף בכנסת", "יום ירושלים". The site was publishing, against
+ * named people, that they held hundreds of meetings in the middle of the night.
+ *
+ * Two exclusions, both narrow:
+ *   - start equal to end: no duration, so nothing about duration or overlap can
+ *     be read from it;
+ *   - start exactly 00:00: indistinguishable from the all-day marker these
+ *     files use, so it is not treated as a midnight meeting. A stated 00:20 —
+ *     an overnight flight, for instance — is a real time and is kept.
+ *
+ * The row itself stays in the corpus, in its category and in the day's count.
+ * Only the clock-time rules refuse it.
+ */
+export function hasUsableClockTime(entry: {
+  startTime: string | null;
+  endTime: string | null;
+}): boolean {
+  if (entry.startTime === null) return false;
+  if (entry.startTime === entry.endTime) return false;
+  if (entry.startTime === '00:00') return false;
+  return true;
+}
+
 function minutesOf(time: string | null): number | null {
   if (time === null) return null;
   const m = /^(\d{2}):(\d{2})$/.exec(time);
@@ -188,6 +218,8 @@ interface PersonProfile {
   entryCount: number;
   datedEntryCount: number;
   timedEntryCount: number;
+  /** Rows whose stated time a clock-time rule may use — see hasUsableClockTime. */
+  usableClockTimeCount: number;
   firstDate: string | null;
   lastDate: string | null;
   datasetIds: string[];
@@ -393,7 +425,11 @@ function main(): void {
       if (busiestDay === null || dayEntries.length > busiestDay.count) {
         busiestDay = { date: day, count: dayEntries.length };
       }
+      // Only rows that state a real clock time may feed a rule about clock
+      // times — see hasUsableClockTime. Everything else keeps its place in the
+      // day's count, so a marathon day by volume is unaffected.
       const spans = dayEntries
+        .filter(hasUsableClockTime)
         .map((e) => ({ start: minutesOf(e.startTime), end: minutesOf(e.endTime) }))
         .filter((s): s is { start: number; end: number | null } => s.start !== null);
       for (const span of spans) {
@@ -412,8 +448,12 @@ function main(): void {
       ) {
         marathonDays.push(day);
       }
-      // Overlap counting on pairs that both declare a start and an end.
-      const closed = spans.filter((s): s is { start: number; end: number } => s.end !== null);
+      // Overlap counting on pairs that both declare a start and a later end. A
+      // zero-length span cannot overlap anything, and counting it did: a day of
+      // all-day markers produced a pair for every combination of them.
+      const closed = spans.filter(
+        (s): s is { start: number; end: number } => s.end !== null && s.end > s.start,
+      );
       for (let i = 0; i < closed.length; i += 1) {
         for (let j = i + 1; j < closed.length; j += 1) {
           const a = closed[i];
@@ -452,6 +492,7 @@ function main(): void {
       entryCount: personEntries.length,
       datedEntryCount: dated.length,
       timedEntryCount: personEntries.filter((e) => e.startTime !== null).length,
+      usableClockTimeCount: personEntries.filter(hasUsableClockTime).length,
       firstDate: dates[0] ?? null,
       lastDate: dates[dates.length - 1] ?? null,
       datasetIds: [...new Set(personEntries.map((e) => e.datasetId))].sort(),

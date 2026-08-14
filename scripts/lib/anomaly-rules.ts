@@ -69,11 +69,19 @@ export const ANOMALY_RULES: readonly AnomalyRule[] = [
     appliesToClosedYearsOnly: true,
   },
   {
-    id: 'yoy_jump',
-    labelHe: 'קפיצה חדה בין שנים',
-    formulaHe: '|מעודכן השנה − מעודכן אשתקד| > פי 3 מאשתקד וגם ההפרש > 20 מיליון ש"ח',
+    id: 'enacted_jump',
+    labelHe: 'קפיצה חדה בתקציב שאושר',
+    formulaHe: '|מקורי השנה − מקורי אשתקד| > פי 3 מאשתקד וגם ההפרש > 20 מיליון ש"ח',
     whyInterestingHe:
-      'תקציב התקנה השתנה בין שנתיים עוקבות בסדר גודל. לעיתים זו החלטת מדיניות מוצהרת, לעיתים ארגון מחדש של סעיפים.',
+      'התקציב שאושר לתקנה בתחילת השנה השתנה בין שנתיים עוקבות בסדר גודל. ההשוואה היא מקורי מול מקורי — שני מספרים מאותו שלב בשנה — ולכן היא משקפת החלטת תקצוב ולא תנועות במהלך השנה.',
+    appliesToClosedYearsOnly: false,
+  },
+  {
+    id: 'in_year_reinforcement',
+    labelHe: 'תוספת גדולה במהלך השנה',
+    formulaHe: 'מעודכן − מקורי > פי 3 מהמקורי וגם ההפרש > 20 מיליון ש"ח, באותה שנה',
+    whyInterestingHe:
+      'התקנה קיבלה במהלך השנה תוספת גדולה מהתקציב שאושר לה בתחילתה. זהו נוהג תקציבי חוקי ושכיח — העברות מאושרות בוועדת הכספים — והשאלה המעניינת היא הסדר גודל והחזרתיות, לא עצם קיומו. ההשוואה היא בתוך אותה שנה, ולכן היא אינה מושפעת מארגון מחדש של סעיפים בין שנים.',
     appliesToClosedYearsOnly: false,
   },
   {
@@ -146,20 +154,44 @@ export function scanRegulations(
       });
     }
 
+    // Year over year is compared on the *allocated* figure, never the revised
+    // one. A closed year's revised budget is what remained after transfers in
+    // and out, while an open year's is its opening allocation, so comparing them
+    // manufactured jumps out of ordinary budget movement: the Knesset's routine
+    // maintenance line was published as ₪1M → ₪63.5M when its allocation barely
+    // moved. Allocated against allocated is two numbers from the same stage of
+    // the year.
     const prior = byCodeYear.get(`${row.code}:${row.year - 1}`);
     if (
       prior !== undefined &&
-      prior.revised !== null &&
-      prior.revised > 0 &&
-      row.revised !== null &&
-      Math.abs(row.revised - prior.revised) > prior.revised * 3 &&
-      Math.abs(row.revised - prior.revised) > 20 * MILLION
+      prior.allocated !== null &&
+      prior.allocated > 0 &&
+      row.allocated !== null &&
+      Math.abs(row.allocated - prior.allocated) > prior.allocated * 3 &&
+      Math.abs(row.allocated - prior.allocated) > 20 * MILLION
     ) {
       findings.push({
-        ruleId: 'yoy_jump',
+        ruleId: 'enacted_jump',
         ministryId,
         ...pick(row),
-        evidenceHe: `מ-${money(prior.revised)} ב-${prior.year} ל-${money(row.revised)} ב-${row.year}`,
+        evidenceHe: `התקציב שאושר לתקנה: מ-${money(prior.allocated)} ב-${prior.year} ל-${money(row.allocated)} ב-${row.year}`,
+        sourceUrl: link(row),
+      });
+    }
+
+    // Within-year reinforcement, which is a different fact and a lawful one.
+    if (
+      row.allocated !== null &&
+      row.allocated > 0 &&
+      row.revised !== null &&
+      row.revised - row.allocated > row.allocated * 3 &&
+      row.revised - row.allocated > 20 * MILLION
+    ) {
+      findings.push({
+        ruleId: 'in_year_reinforcement',
+        ministryId,
+        ...pick(row),
+        evidenceHe: `מ-${money(row.allocated)} שאושרו לתקנה ל-${money(row.revised)} מעודכן באותה שנה`,
         sourceUrl: link(row),
       });
     }

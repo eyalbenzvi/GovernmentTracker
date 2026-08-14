@@ -1,0 +1,2177 @@
+{
+  "generatedAt": "2026-08-14",
+  "method": "המאגר שבו מרוכזים קבצי היומנים עונה ל-API שלו אך דוחה כל דרך להורדת קובץ (403). לכן הקבצים נקראו מעותקים שמורים בארכיון האינטרנט — מתחם אחר, שמפרסם עותקים ציבוריים ומתיר גישה אוטומטית. זו הרשימה המלאה של העותקים שנקראו בפועל.",
+  "limitation": "הרשימה אינה משויכת לפרסומים בודדים. כתובת העותק בארכיון מכילה את כתובת הקובץ המקורית, ובה מזהה החבילה (id) של CKAN, בעוד המפתח שהאתר משתמש בו הוא שם החבילה (name) — שני מזהים שונים, והתרגום ביניהם נמצא מאחורי ה-API של המאגר, שאינו נגיש מסביבת הבנייה. שיוך לכל פרסום הוא שינוי בשלב האיסוף, שיודע את שני המזהים, ויופיע בהרצה הבאה. עד אז מדווח כאן מה שניתן לאמת: כל העותקים שנקראו.",
+  "totals": {
+    "archiveCopiesRead": 361,
+    "distinctCopies": 361
+  },
+  "reads": [
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/560b0d67-ef9b-4b16-8177-1402035a5920/resource/de4db3b9-a216-4ffd-9847-3395a7ebb40f/download/-.csv-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230425104923id_/https://www.odata.org.il/dataset/560b0d67-ef9b-4b16-8177-1402035a5920/resource/de4db3b9-a216-4ffd-9847-3395a7ebb40f/download/-.csv-2023.pdf",
+      "bytes": 260332,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5bfa9545-2ed8-4ec7-aff9-75533f3ca3c3/resource/3520cae8-0e6e-4179-9cfd-21eef410a831/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230511090901id_/https://www.odata.org.il/dataset/5bfa9545-2ed8-4ec7-aff9-75533f3ca3c3/resource/3520cae8-0e6e-4179-9cfd-21eef410a831/download/-2023.xlsx",
+      "bytes": 40648,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/661437e4-e7bd-43f2-9170-6eaccfd8baa2/download/-23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230515203350id_/https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/661437e4-e7bd-43f2-9170-6eaccfd8baa2/download/-23.xlsx",
+      "bytes": 24445,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/ee28d3f0-2bc8-41a3-b8f7-bf2bc1fef45b/download/-23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230515213705id_/https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/ee28d3f0-2bc8-41a3-b8f7-bf2bc1fef45b/download/-23.xlsx",
+      "bytes": 24703,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c59b6116-7336-4f03-b49b-d13e040cc432/resource/9831e629-099e-4ba5-a935-50e71b22168e/download/-1.1.23-30.3.23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230516172414id_/https://www.odata.org.il/dataset/c59b6116-7336-4f03-b49b-d13e040cc432/resource/9831e629-099e-4ba5-a935-50e71b22168e/download/-1.1.23-30.3.23.xlsx",
+      "bytes": 41906,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/0a76d88c-b138-4b25-afa8-80dbb63fefaf/download/-23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230520075429id_/https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/0a76d88c-b138-4b25-afa8-80dbb63fefaf/download/-23.xlsx",
+      "bytes": 18558,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/76534e0e-3689-4f62-977f-163cd72c68fe/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230620154436id_/https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/76534e0e-3689-4f62-977f-163cd72c68fe/download/-2023.xlsx",
+      "bytes": 35307,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/09fe63c8-1b90-428f-853f-c9c367c5af54/download/-0115.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230620155222id_/https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/09fe63c8-1b90-428f-853f-c9c367c5af54/download/-0115.pdf",
+      "bytes": 113167,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/aa19ebad-fadc-4a4e-a8ed-c693c9c0a68e/resource/5b089452-0cc2-4eaa-a513-a3b7569af75a/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230625133012id_/https://www.odata.org.il/dataset/aa19ebad-fadc-4a4e-a8ed-c693c9c0a68e/resource/5b089452-0cc2-4eaa-a513-a3b7569af75a/download/-.pdf",
+      "bytes": 445214,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1fe42225-d864-4b2c-a94b-535fdbcb4f2a/resource/8049dd0d-b6a3-43a8-b804-c19495a84c3e/download/bezalel1_1_23-31_3_23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230628133749id_/https://www.odata.org.il/dataset/1fe42225-d864-4b2c-a94b-535fdbcb4f2a/resource/8049dd0d-b6a3-43a8-b804-c19495a84c3e/download/bezalel1_1_23-31_3_23.xlsx",
+      "bytes": 119286,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/7b4bae92-7a4d-4eb2-94e0-5eefeb0cab35/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20230628210629id_/https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/7b4bae92-7a4d-4eb2-94e0-5eefeb0cab35/download/-2023.xlsx",
+      "bytes": 48382,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/ed46b348-1378-4265-b644-add7b5539e90/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230629140818id_/https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/ed46b348-1378-4265-b644-add7b5539e90/download/-2023.pdf",
+      "bytes": 631326,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/6aac4406-e1b3-4b24-a4a9-0ce1631cea3d/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230629201929id_/https://www.odata.org.il/dataset/f8a31bdf-a1b3-41f4-be0b-032ffd8a96fa/resource/6aac4406-e1b3-4b24-a4a9-0ce1631cea3d/download/-2023.pdf",
+      "bytes": 693826,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9c70614c-ab1d-488d-869e-cbd07a93b415/resource/68a2b625-d534-4a92-a8f6-a4b50a52ee35/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230926115820id_/https://www.odata.org.il/dataset/9c70614c-ab1d-488d-869e-cbd07a93b415/resource/68a2b625-d534-4a92-a8f6-a4b50a52ee35/download/-.pdf",
+      "bytes": 286778,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c2089662-28e4-4a91-a2a9-f963fccb224a/resource/2bb3a04e-6057-4ddb-b2a9-38866f8f81df/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230928104956id_/https://www.odata.org.il/dataset/c2089662-28e4-4a91-a2a9-f963fccb224a/resource/2bb3a04e-6057-4ddb-b2a9-38866f8f81df/download/-.pdf",
+      "bytes": 443540,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5bfa9545-2ed8-4ec7-aff9-75533f3ca3c3/resource/86131035-4546-446e-911a-439284f9c23f/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230928113528id_/https://www.odata.org.il/dataset/5bfa9545-2ed8-4ec7-aff9-75533f3ca3c3/resource/86131035-4546-446e-911a-439284f9c23f/download/-.pdf",
+      "bytes": 143828,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9c70614c-ab1d-488d-869e-cbd07a93b415/resource/18770b55-9af8-4938-a831-a2b462c9d4cd/download/untitled_20230509_191242.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230928115500id_/https://www.odata.org.il/dataset/9c70614c-ab1d-488d-869e-cbd07a93b415/resource/18770b55-9af8-4938-a831-a2b462c9d4cd/download/untitled_20230509_191242.pdf",
+      "bytes": 266916,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/14f9d9d3-d22a-4789-a59f-e82eef368a6e/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20230928121017id_/https://www.odata.org.il/dataset/deada903-09ce-4ec7-8285-83947c3e28a3/resource/14f9d9d3-d22a-4789-a59f-e82eef368a6e/download/-2023.pdf",
+      "bytes": 211097,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a5ca888f-3b5b-46bb-9214-742da2f4d4de/resource/532c4655-72c1-4e41-94f3-1c2810f00f18/download/-4.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240201152455id_/https://www.odata.org.il/dataset/a5ca888f-3b5b-46bb-9214-742da2f4d4de/resource/532c4655-72c1-4e41-94f3-1c2810f00f18/download/-4.xlsx",
+      "bytes": 29132,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/49c6bb7f-157a-4086-b5b2-968f89192cf6/resource/25a7b35f-8d1f-43ef-b250-6bc2d517d913/download/-2023-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240201154200id_/https://www.odata.org.il/dataset/49c6bb7f-157a-4086-b5b2-968f89192cf6/resource/25a7b35f-8d1f-43ef-b250-6bc2d517d913/download/-2023-.xlsx",
+      "bytes": 45853,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/49c6bb7f-157a-4086-b5b2-968f89192cf6/resource/7a7dc95b-db43-42b1-b260-6c00ab007517/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240201154223id_/https://www.odata.org.il/dataset/49c6bb7f-157a-4086-b5b2-968f89192cf6/resource/7a7dc95b-db43-42b1-b260-6c00ab007517/download/-.pdf",
+      "bytes": 91691,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b3430d7c-52e2-4995-9287-fa6304754342/resource/ee77e1c1-2c3e-4989-b1ca-026c0aa92121/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240216152218id_/https://www.odata.org.il/dataset/b3430d7c-52e2-4995-9287-fa6304754342/resource/ee77e1c1-2c3e-4989-b1ca-026c0aa92121/download/-.pdf",
+      "bytes": 147475,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/0ae22edf-0240-451a-ad68-9f42f3e4d854/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240522120358id_/https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/0ae22edf-0240-451a-ad68-9f42f3e4d854/download/-.pdf",
+      "bytes": 268021,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/21756d64-2f50-40ec-b26c-dbb68d0eb63e/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240522123610id_/https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/21756d64-2f50-40ec-b26c-dbb68d0eb63e/download/-.pdf",
+      "bytes": 14321651,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4a03324f-d01d-4b62-9aaa-cce4e76f9e76/resource/08b11b09-1418-450e-8096-92eeab4e5df6/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240523162716id_/https://www.odata.org.il/dataset/4a03324f-d01d-4b62-9aaa-cce4e76f9e76/resource/08b11b09-1418-450e-8096-92eeab4e5df6/download/-.xlsx",
+      "bytes": 72108,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4a03324f-d01d-4b62-9aaa-cce4e76f9e76/resource/7dd641cd-9edd-4bb8-8d8f-7e0eedafc59a/download/untitled_20231106_201515.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240523171715id_/https://www.odata.org.il/dataset/4a03324f-d01d-4b62-9aaa-cce4e76f9e76/resource/7dd641cd-9edd-4bb8-8d8f-7e0eedafc59a/download/untitled_20231106_201515.pdf",
+      "bytes": 274892,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/62459fa2-18cd-4baf-a484-df4d6e8761cb/resource/4681dc28-c0cd-41cd-bc76-a9f39b6181c6/download/-1-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240524184109id_/https://www.odata.org.il/dataset/62459fa2-18cd-4baf-a484-df4d6e8761cb/resource/4681dc28-c0cd-41cd-bc76-a9f39b6181c6/download/-1-2024.xlsx",
+      "bytes": 76962,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d4e49f78-d7e4-4aaf-94ea-83de34ca8d8f/resource/54af1f9b-8994-4c39-86a8-bf6ad7d617b3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240525014511id_/https://www.odata.org.il/dataset/d4e49f78-d7e4-4aaf-94ea-83de34ca8d8f/resource/54af1f9b-8994-4c39-86a8-bf6ad7d617b3/download/-.pdf",
+      "bytes": 228525,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d4e49f78-d7e4-4aaf-94ea-83de34ca8d8f/resource/952d2a67-debf-4354-beca-43a9ce2c1cae/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240525033707id_/https://www.odata.org.il/dataset/d4e49f78-d7e4-4aaf-94ea-83de34ca8d8f/resource/952d2a67-debf-4354-beca-43a9ce2c1cae/download/-2023.xlsx",
+      "bytes": 309110,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/27f11f48-1606-4eb9-b19f-b9f4bdb347d2/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240525132357id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/27f11f48-1606-4eb9-b19f-b9f4bdb347d2/download/-2023.xlsx",
+      "bytes": 28958,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/c239de83-66be-472f-8a87-894da18e6734/download/-16-31-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240525132358id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/c239de83-66be-472f-8a87-894da18e6734/download/-16-31-2023.xlsx",
+      "bytes": 19368,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/f22e17f3-158d-43b3-87ea-66a84113e76a/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240525132401id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/f22e17f3-158d-43b3-87ea-66a84113e76a/download/-2023.xlsx",
+      "bytes": 27134,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/21cd7b4b-360a-497b-98be-f3f61c6b14fa/download/-16-31-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240525132424id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/21cd7b4b-360a-497b-98be-f3f61c6b14fa/download/-16-31-2023.pdf",
+      "bytes": 247611,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/f231f32a-93e2-4e52-b5bd-ab430218bb89/download/-2023.-0392.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240525132424id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/f231f32a-93e2-4e52-b5bd-ab430218bb89/download/-2023.-0392.pdf",
+      "bytes": 111575,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/aea3dd54-a04b-48b1-a452-64318cbe435c/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240525132444id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/aea3dd54-a04b-48b1-a452-64318cbe435c/download/-2023.pdf",
+      "bytes": 348508,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/ff221140-4c96-4ec4-83c4-71380d41a179/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240525132457id_/https://www.odata.org.il/dataset/9ca04e7e-53f6-4e09-9852-9aed1288a3de/resource/ff221140-4c96-4ec4-83c4-71380d41a179/download/-2023.pdf",
+      "bytes": 356648,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e7af20a8-a789-4884-9dac-b3e57e193906/resource/e315677c-8bc8-4830-8ce6-e9dfb70f15f4/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240525153309id_/https://www.odata.org.il/dataset/e7af20a8-a789-4884-9dac-b3e57e193906/resource/e315677c-8bc8-4830-8ce6-e9dfb70f15f4/download/-2024.xlsx",
+      "bytes": 36133,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e86936fa-fe59-4ff5-ac5f-af8f1b229db9/resource/ada77db3-f25f-4cbd-85d4-41f956903963/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240526003604id_/https://www.odata.org.il/dataset/e86936fa-fe59-4ff5-ac5f-af8f1b229db9/resource/ada77db3-f25f-4cbd-85d4-41f956903963/download/-2024.xlsx",
+      "bytes": 36545,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e86936fa-fe59-4ff5-ac5f-af8f1b229db9/resource/18d9c354-5ec7-423c-bc3a-a91775e8f420/download/-1-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240526004118id_/https://www.odata.org.il/dataset/e86936fa-fe59-4ff5-ac5f-af8f1b229db9/resource/18d9c354-5ec7-423c-bc3a-a91775e8f420/download/-1-2024.xlsx",
+      "bytes": 35872,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/b17626d2-629e-4429-8812-156cd3407ede/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240526020831id_/https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/b17626d2-629e-4429-8812-156cd3407ede/download/-2024.pdf",
+      "bytes": 6993322,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/7376e759-e340-44a4-8751-1d816f907d22/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240526021024id_/https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/7376e759-e340-44a4-8751-1d816f907d22/download/-2024.pdf",
+      "bytes": 6478800,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/b123c90f-0d0b-4b16-a3ec-852b3152e3f9/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240526023133id_/https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/b123c90f-0d0b-4b16-a3ec-852b3152e3f9/download/-.pdf",
+      "bytes": 66419,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/f900cee1-51dc-427d-90b3-87407e53c869/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240526024055id_/https://www.odata.org.il/dataset/c888de41-a544-4b26-8098-f23c5d71c5ef/resource/f900cee1-51dc-427d-90b3-87407e53c869/download/-2024.pdf",
+      "bytes": 6999236,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/f109cad5-fae9-4a30-b531-d92d5632cb13/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240526182043id_/https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/f109cad5-fae9-4a30-b531-d92d5632cb13/download/-2023.xlsx",
+      "bytes": 47004,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/5e8bfede-2dcf-4f72-b737-4af113773baa/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240526182058id_/https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/5e8bfede-2dcf-4f72-b737-4af113773baa/download/-2023.xlsx",
+      "bytes": 28811,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/f2bf1fdc-1f9d-49d9-b8f8-9b084cead163/download/-2023_4.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240526182122id_/https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/f2bf1fdc-1f9d-49d9-b8f8-9b084cead163/download/-2023_4.pdf",
+      "bytes": 100362,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/04a9c444-28c5-47f9-b497-2efa10a65ec4/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240526182134id_/https://www.odata.org.il/dataset/93f250b7-3a74-41b3-a600-bb4af7d04798/resource/04a9c444-28c5-47f9-b497-2efa10a65ec4/download/-.xlsx",
+      "bytes": 29361,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/c9782570-d7d9-482a-a2d6-8b493318cd8a/download/-1.1.24-31.3.24.csv",
+      "archiveUrl": "http://web.archive.org/web/20240527204417id_/https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/c9782570-d7d9-482a-a2d6-8b493318cd8a/download/-1.1.24-31.3.24.csv",
+      "bytes": 30344,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/9d004d86-507d-45c7-bb90-f43b77b03669/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240527204446id_/https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/9d004d86-507d-45c7-bb90-f43b77b03669/download/-.pdf",
+      "bytes": 111496,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/130d09a3-fe41-4097-94cb-d48b25cb3642/download/-2024-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240527204504id_/https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/130d09a3-fe41-4097-94cb-d48b25cb3642/download/-2024-.pdf",
+      "bytes": 279132,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/306d6281-d9ea-478a-94fe-4a4971c3d59e/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240527204528id_/https://www.odata.org.il/dataset/c94aa3aa-7186-407a-a02b-d34402dae8f4/resource/306d6281-d9ea-478a-94fe-4a4971c3d59e/download/-2024.pdf",
+      "bytes": 241527,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/144c7a49-7411-4110-8d30-d5b62a03f217/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240528110655id_/https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/144c7a49-7411-4110-8d30-d5b62a03f217/download/-.xlsx",
+      "bytes": 59530,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/25cdf7c3-0570-46a7-b1a2-e113d377b246/download/-1-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240528110711id_/https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/25cdf7c3-0570-46a7-b1a2-e113d377b246/download/-1-2024.xlsx",
+      "bytes": 48563,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/c4519f47-569b-433e-890b-032b1a14af17/download/-0016-2024-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528110712id_/https://www.odata.org.il/dataset/67f16093-b4ba-435e-b78a-3e0b4e4d3278/resource/c4519f47-569b-433e-890b-032b1a14af17/download/-0016-2024-.pdf",
+      "bytes": 295344,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/393772b4-55b8-485b-b0d0-813e6ff0353c/resource/b68bd451-3720-4b2a-8df4-b759af793999/download/-3-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240528110736id_/https://www.odata.org.il/dataset/393772b4-55b8-485b-b0d0-813e6ff0353c/resource/b68bd451-3720-4b2a-8df4-b759af793999/download/-3-2023.xlsx",
+      "bytes": 42932,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/56ce6ef1-0c74-4cf2-9b29-5333e055ad4b/resource/d387a89b-9815-478b-a3c6-4a35f854e1f6/download/-4-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240528110742id_/https://www.odata.org.il/dataset/56ce6ef1-0c74-4cf2-9b29-5333e055ad4b/resource/d387a89b-9815-478b-a3c6-4a35f854e1f6/download/-4-2023.xlsx",
+      "bytes": 56619,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/56ce6ef1-0c74-4cf2-9b29-5333e055ad4b/resource/57fa7950-94c5-4fe0-9c10-9fa1c6a040c1/download/-00078-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528110751id_/https://www.odata.org.il/dataset/56ce6ef1-0c74-4cf2-9b29-5333e055ad4b/resource/57fa7950-94c5-4fe0-9c10-9fa1c6a040c1/download/-00078-2023.pdf",
+      "bytes": 465544,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/393772b4-55b8-485b-b0d0-813e6ff0353c/resource/5643d46f-e111-42ea-b850-4c5d502b6e45/download/-00070-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528110753id_/https://www.odata.org.il/dataset/393772b4-55b8-485b-b0d0-813e6ff0353c/resource/5643d46f-e111-42ea-b850-4c5d502b6e45/download/-00070-2023.pdf",
+      "bytes": 472831,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/7798fc94-9711-49ab-82a6-13ac3bce9b4b/download/attachment2.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528113236id_/https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/7798fc94-9711-49ab-82a6-13ac3bce9b4b/download/attachment2.pdf",
+      "bytes": 385755,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/f2ad98c9-3d86-471e-bf1f-cc5b2aaccba2/download/attachment1.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528113322id_/https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/f2ad98c9-3d86-471e-bf1f-cc5b2aaccba2/download/attachment1.pdf",
+      "bytes": 176521,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/447c08af-7bb9-4950-9e1c-43d19f8dafb1/download/policereply.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240528113355id_/https://www.odata.org.il/dataset/22d04263-fa99-4c52-9a1b-594a4a435f30/resource/447c08af-7bb9-4950-9e1c-43d19f8dafb1/download/policereply.pdf",
+      "bytes": 39708,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/36e5da72-e718-4d66-b58d-5cd547ea73ef/download/-1.1.2024-14.1.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240529132541id_/https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/36e5da72-e718-4d66-b58d-5cd547ea73ef/download/-1.1.2024-14.1.2024.xlsx",
+      "bytes": 13009,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/db543510-f6f7-43c4-891a-812975e429bb/download/-4.2.2024-31.3.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240529153235id_/https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/db543510-f6f7-43c4-891a-812975e429bb/download/-4.2.2024-31.3.2024.xlsx",
+      "bytes": 22779,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/b7e262ec-601b-44ae-9581-5b8da1b7d727/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240529231536id_/https://www.odata.org.il/dataset/1c2ebcc3-58b8-4542-bdee-a6f8650b0ea9/resource/b7e262ec-601b-44ae-9581-5b8da1b7d727/download/-2024.pdf",
+      "bytes": 518818,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/3fde3482-5b90-4f25-ba04-8e3fe978769a/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240603004647id_/https://www.odata.org.il/dataset/8ed2075b-5139-4050-a5a1-d507d2a6125a/resource/3fde3482-5b90-4f25-ba04-8e3fe978769a/download/-.pdf",
+      "bytes": 4683888,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ece8f284-149f-4efb-a228-78d0d7b6a389/resource/c8e05489-3eb8-4f12-8a98-f0ed4d5ba424/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240605130815id_/https://www.odata.org.il/dataset/ece8f284-149f-4efb-a228-78d0d7b6a389/resource/c8e05489-3eb8-4f12-8a98-f0ed4d5ba424/download/-2023.pdf",
+      "bytes": 117890,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c19f5d62-5cf9-420e-9aca-db49ec94fb3f/resource/d6c3bcc9-fa98-4214-806c-60623c896bca/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240606170134id_/https://www.odata.org.il/dataset/c19f5d62-5cf9-420e-9aca-db49ec94fb3f/resource/d6c3bcc9-fa98-4214-806c-60623c896bca/download/-2024-.xlsx",
+      "bytes": 43375,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/13e2b051-a072-459e-84fc-170fdeddf64a/resource/98c750cc-6a5f-4cd6-ad14-30f66b083d22/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240616150237id_/https://www.odata.org.il/dataset/13e2b051-a072-459e-84fc-170fdeddf64a/resource/98c750cc-6a5f-4cd6-ad14-30f66b083d22/download/-.pdf",
+      "bytes": 242285,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/13e2b051-a072-459e-84fc-170fdeddf64a/resource/b8616ac6-48ee-4ffe-8f47-ab3b4d2cbc5f/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240616183345id_/https://www.odata.org.il/dataset/13e2b051-a072-459e-84fc-170fdeddf64a/resource/b8616ac6-48ee-4ffe-8f47-ab3b4d2cbc5f/download/-.xlsx",
+      "bytes": 26230,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2329f15d-6a75-4e13-9e0b-204200b00fd1/resource/c23b36ca-cbc6-42e2-b8e4-164d1492836f/download/7-12.23.csv",
+      "archiveUrl": "http://web.archive.org/web/20240620131000id_/https://www.odata.org.il/dataset/2329f15d-6a75-4e13-9e0b-204200b00fd1/resource/c23b36ca-cbc6-42e2-b8e4-164d1492836f/download/7-12.23.csv",
+      "bytes": 50695,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/acaea8a8-40f1-4dfb-bff6-6ab7fdb61fa8/resource/f1be267b-6788-42f9-b4bb-b9608c4bd2e7/download/-2023_240609_085539.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240623211114id_/https://www.odata.org.il/dataset/acaea8a8-40f1-4dfb-bff6-6ab7fdb61fa8/resource/f1be267b-6788-42f9-b4bb-b9608c4bd2e7/download/-2023_240609_085539.pdf",
+      "bytes": 88564,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb3085ac-8844-44b9-a7dc-1ed728b1c020/resource/69350bae-f41d-486c-8c67-86b762dd58ef/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240624203429id_/https://www.odata.org.il/dataset/cb3085ac-8844-44b9-a7dc-1ed728b1c020/resource/69350bae-f41d-486c-8c67-86b762dd58ef/download/-.pdf",
+      "bytes": 6014916,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb3085ac-8844-44b9-a7dc-1ed728b1c020/resource/91b1b7f3-6874-44a2-af8b-adeecbec4497/download/-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240624215355id_/https://www.odata.org.il/dataset/cb3085ac-8844-44b9-a7dc-1ed728b1c020/resource/91b1b7f3-6874-44a2-af8b-adeecbec4497/download/-2023-.pdf",
+      "bytes": 119748,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/965268b0-516e-4253-8cdb-53c7f836a424/resource/7326fac9-3fe5-4750-bcf8-1d7a9ed56222/download/-1-2024-6-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240630092452id_/https://www.odata.org.il/dataset/965268b0-516e-4253-8cdb-53c7f836a424/resource/7326fac9-3fe5-4750-bcf8-1d7a9ed56222/download/-1-2024-6-24.pdf",
+      "bytes": 213091,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9876dca2-f57e-43f6-8aac-67f80f8319a7/resource/9c68465f-f6a3-44f7-826e-45728364e765/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240704233025id_/https://www.odata.org.il/dataset/9876dca2-f57e-43f6-8aac-67f80f8319a7/resource/9c68465f-f6a3-44f7-826e-45728364e765/download/-.pdf",
+      "bytes": 99688,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/784b53d0-6799-427c-be86-e795328c00ab/download/-22-_redacted.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240705021040id_/https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/784b53d0-6799-427c-be86-e795328c00ab/download/-22-_redacted.pdf",
+      "bytes": 18869781,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/0ea022e9-fd74-4add-835c-c74f5d0d6e0c/download/-2022-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240705021835id_/https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/0ea022e9-fd74-4add-835c-c74f5d0d6e0c/download/-2022-.pdf",
+      "bytes": 5897122,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/cde94345-6512-490c-a64e-51425196f110/download/-2022-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240705022354id_/https://www.odata.org.il/dataset/7fa1aa0c-cda4-4cdc-bce8-2c4ef0dc2b4a/resource/cde94345-6512-490c-a64e-51425196f110/download/-2022-.pdf",
+      "bytes": 6403373,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/bbb8eca3-1281-4c33-b8db-0d41ed7e344f/resource/a7e2e4a5-3bce-4b4a-aaa1-f33b3c92c0b6/download/-1-24-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240710124253id_/https://www.odata.org.il/dataset/bbb8eca3-1281-4c33-b8db-0d41ed7e344f/resource/a7e2e4a5-3bce-4b4a-aaa1-f33b3c92c0b6/download/-1-24-.xlsx",
+      "bytes": 46140,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/bbb8eca3-1281-4c33-b8db-0d41ed7e344f/resource/81dc4e1e-c124-46bb-9776-da76f1bb113b/download/-1-2024-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240710152552id_/https://www.odata.org.il/dataset/bbb8eca3-1281-4c33-b8db-0d41ed7e344f/resource/81dc4e1e-c124-46bb-9776-da76f1bb113b/download/-1-2024-.pdf",
+      "bytes": 113837,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5ac9163d-cdcf-4c15-9a63-6ad8e375030e/resource/9735f733-8ed0-4451-8dfd-ddf32762437f/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240711033130id_/https://www.odata.org.il/dataset/5ac9163d-cdcf-4c15-9a63-6ad8e375030e/resource/9735f733-8ed0-4451-8dfd-ddf32762437f/download/-.pdf",
+      "bytes": 98889,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/62128d96-ffc2-4fbc-b32e-211808a0d146/resource/f1c833b2-7d96-4848-8117-bc4bcc53314f/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240718165951id_/https://www.odata.org.il/dataset/62128d96-ffc2-4fbc-b32e-211808a0d146/resource/f1c833b2-7d96-4848-8117-bc4bcc53314f/download/-.pdf",
+      "bytes": 117973,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/597fdcba-b303-4057-87f5-f5b5879b8e39/resource/074feeed-f830-45bc-9631-97b558a69aff/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240718183453id_/https://www.odata.org.il/dataset/597fdcba-b303-4057-87f5-f5b5879b8e39/resource/074feeed-f830-45bc-9631-97b558a69aff/download/-2023.pdf",
+      "bytes": 288715,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/22ccdc76-d202-407c-bda7-6dba9d3bef27/resource/b197275b-058f-43c8-98a5-538027910694/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240720195310id_/https://www.odata.org.il/dataset/22ccdc76-d202-407c-bda7-6dba9d3bef27/resource/b197275b-058f-43c8-98a5-538027910694/download/-.pdf",
+      "bytes": 5909564,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8dc8cd50-3c67-464e-8ede-5135675e5101/resource/3590f950-d910-464d-9ec8-abf3d6f97534/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240722121750id_/https://www.odata.org.il/dataset/8dc8cd50-3c67-464e-8ede-5135675e5101/resource/3590f950-d910-464d-9ec8-abf3d6f97534/download/-.pdf",
+      "bytes": 443584,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/62128d96-ffc2-4fbc-b32e-211808a0d146/resource/5d13a298-e8f3-40c4-b103-8f91f30b4c1d/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240802133437id_/https://www.odata.org.il/dataset/62128d96-ffc2-4fbc-b32e-211808a0d146/resource/5d13a298-e8f3-40c4-b103-8f91f30b4c1d/download/-2023.pdf",
+      "bytes": 5375785,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/42717768-d67a-41ae-957a-51914a6220b0/resource/799c516c-8efe-4b95-995f-39333ff12a55/download/-2015-23-0177.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240802151353id_/https://www.odata.org.il/dataset/42717768-d67a-41ae-957a-51914a6220b0/resource/799c516c-8efe-4b95-995f-39333ff12a55/download/-2015-23-0177.pdf",
+      "bytes": 387385,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b1d33da0-fed6-45a2-9e5e-79cdf569210c/resource/2e92c133-22ed-43c9-bebd-274d82af2417/download/-1.4-30.6-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240802155237id_/https://www.odata.org.il/dataset/b1d33da0-fed6-45a2-9e5e-79cdf569210c/resource/2e92c133-22ed-43c9-bebd-274d82af2417/download/-1.4-30.6-.pdf",
+      "bytes": 743934,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/bead6f3b-711a-4e0a-8ed8-3c1fe734c825/resource/82cc6a15-0bf5-4861-b20c-d265bc7fc6cb/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240808092448id_/https://www.odata.org.il/dataset/bead6f3b-711a-4e0a-8ed8-3c1fe734c825/resource/82cc6a15-0bf5-4861-b20c-d265bc7fc6cb/download/-.pdf",
+      "bytes": 443240,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9b25ced5-b36b-425f-8983-7b818a9e06e2/resource/ae9bdab0-d0c2-402d-975a-5d021726d14c/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240815083121id_/https://www.odata.org.il/dataset/9b25ced5-b36b-425f-8983-7b818a9e06e2/resource/ae9bdab0-d0c2-402d-975a-5d021726d14c/download/-2023.xlsx",
+      "bytes": 42538,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9b25ced5-b36b-425f-8983-7b818a9e06e2/resource/f5f87a6e-4a77-4d94-a32c-2b13472e7209/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240815132602id_/https://www.odata.org.il/dataset/9b25ced5-b36b-425f-8983-7b818a9e06e2/resource/f5f87a6e-4a77-4d94-a32c-2b13472e7209/download/-2023.pdf",
+      "bytes": 99572,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/11100c23-e5c4-4b9d-90ff-84b2bbb89163/resource/a729f365-09f0-4412-bc1a-a549e67a3cef/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240818155029id_/https://www.odata.org.il/dataset/11100c23-e5c4-4b9d-90ff-84b2bbb89163/resource/a729f365-09f0-4412-bc1a-a549e67a3cef/download/-.pdf",
+      "bytes": 386471,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/c5bcb870-d0c6-4212-9525-ed101f3b2f88/download/-1-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240818155906id_/https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/c5bcb870-d0c6-4212-9525-ed101f3b2f88/download/-1-2024.pdf",
+      "bytes": 386482,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/fb70fded-38de-422b-9478-4141918464fc/download/-1-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240818164627id_/https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/fb70fded-38de-422b-9478-4141918464fc/download/-1-2024.xlsx",
+      "bytes": 23695,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6c2ad08a-1acc-4627-aa9b-58ea45f6df18/resource/c82556b1-d72f-4e85-b288-2606db9e5bbf/download/-2-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240818171056id_/https://www.odata.org.il/dataset/6c2ad08a-1acc-4627-aa9b-58ea45f6df18/resource/c82556b1-d72f-4e85-b288-2606db9e5bbf/download/-2-2024.pdf",
+      "bytes": 386791,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/27fd556b-b8d9-4332-9869-2ad40b80fe86/download/-1-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240818191559id_/https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/27fd556b-b8d9-4332-9869-2ad40b80fe86/download/-1-2024.xlsx",
+      "bytes": 25142,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/11100c23-e5c4-4b9d-90ff-84b2bbb89163/resource/f6ee4f05-4a39-4ce6-8659-4352e6908c84/download/-4-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240818212440id_/https://www.odata.org.il/dataset/11100c23-e5c4-4b9d-90ff-84b2bbb89163/resource/f6ee4f05-4a39-4ce6-8659-4352e6908c84/download/-4-2023.xlsx",
+      "bytes": 28185,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/c3e6fa65-4f50-410f-8df7-6fc42e140378/download/-1-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240819063707id_/https://www.odata.org.il/dataset/93178fd4-58be-4ab5-ac8a-7603759e5502/resource/c3e6fa65-4f50-410f-8df7-6fc42e140378/download/-1-2024.pdf",
+      "bytes": 386372,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/02831bf4-ed41-4bf6-9294-41777b903552/resource/1ceee401-3a31-444b-b4cc-b653d710635a/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240819141512id_/https://www.odata.org.il/dataset/02831bf4-ed41-4bf6-9294-41777b903552/resource/1ceee401-3a31-444b-b4cc-b653d710635a/download/-.pdf",
+      "bytes": 385894,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7aba6962-f178-475b-8fcb-cd2f65dce01f/resource/1855b7ef-6378-4ff7-9f78-4532c26abb40/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240828080308id_/https://www.odata.org.il/dataset/7aba6962-f178-475b-8fcb-cd2f65dce01f/resource/1855b7ef-6378-4ff7-9f78-4532c26abb40/download/-2024-.xlsx",
+      "bytes": 81046,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7aba6962-f178-475b-8fcb-cd2f65dce01f/resource/e2c9a2dd-308a-447d-a730-6c04999216a0/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240828091611id_/https://www.odata.org.il/dataset/7aba6962-f178-475b-8fcb-cd2f65dce01f/resource/e2c9a2dd-308a-447d-a730-6c04999216a0/download/-2024.pdf",
+      "bytes": 236887,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/f0023784-cf2a-4c2e-9779-008b6dc0c3d5/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240829163004id_/https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/f0023784-cf2a-4c2e-9779-008b6dc0c3d5/download/-.pdf",
+      "bytes": 8600739,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/e417f3c3-8ab0-4afd-9a68-1d7a9b121ac3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240829234852id_/https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/e417f3c3-8ab0-4afd-9a68-1d7a9b121ac3/download/-.pdf",
+      "bytes": 5412845,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/db709406-5145-40bf-b3b7-614de10b5ce8/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240901154913id_/https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/db709406-5145-40bf-b3b7-614de10b5ce8/download/-24.pdf",
+      "bytes": 129219,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/aab2c07f-f4c7-40ad-88be-271427b50e5b/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240901160225id_/https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/aab2c07f-f4c7-40ad-88be-271427b50e5b/download/-.pdf",
+      "bytes": 127677,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/3b94d237-e9d6-49b0-a108-ae57e8c2df26/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240901163204id_/https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/3b94d237-e9d6-49b0-a108-ae57e8c2df26/download/-24.pdf",
+      "bytes": 99829,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/9fb1e4f4-fdf6-4715-8058-b80eaa0bf674/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240901175708id_/https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/9fb1e4f4-fdf6-4715-8058-b80eaa0bf674/download/-2024.pdf",
+      "bytes": 394065,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/874f1473-56a7-473a-a16b-9207f34eb46f/resource/1a186e08-598e-40bf-880b-a889092e7825/download/-pdf.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240903014120id_/https://www.odata.org.il/dataset/874f1473-56a7-473a-a16b-9207f34eb46f/resource/1a186e08-598e-40bf-880b-a889092e7825/download/-pdf.pdf",
+      "bytes": 69630,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/874f1473-56a7-473a-a16b-9207f34eb46f/resource/16db689a-af33-49d9-a00b-8780023c62fb/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240903064400id_/https://www.odata.org.il/dataset/874f1473-56a7-473a-a16b-9207f34eb46f/resource/16db689a-af33-49d9-a00b-8780023c62fb/download/-2023.xlsx",
+      "bytes": 16554,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b05d6c9-5c56-48ae-bdb8-095631ce7763/resource/eed741ff-68df-4967-8b26-e25b39440cb4/download/-3-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905080139id_/https://www.odata.org.il/dataset/3b05d6c9-5c56-48ae-bdb8-095631ce7763/resource/eed741ff-68df-4967-8b26-e25b39440cb4/download/-3-2023.xlsx",
+      "bytes": 22417,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b05d6c9-5c56-48ae-bdb8-095631ce7763/resource/77db1333-acc5-4f87-989e-4df24028c6fe/download/-3-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240905081349id_/https://www.odata.org.il/dataset/3b05d6c9-5c56-48ae-bdb8-095631ce7763/resource/77db1333-acc5-4f87-989e-4df24028c6fe/download/-3-2023-.pdf",
+      "bytes": 86736,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8675662a-5dce-42d0-8962-575cd603a331/resource/d90d3f35-754e-4ed3-9325-db8aa51c6e66/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905111944id_/https://www.odata.org.il/dataset/8675662a-5dce-42d0-8962-575cd603a331/resource/d90d3f35-754e-4ed3-9325-db8aa51c6e66/download/-2024.xlsx",
+      "bytes": 69706,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/643ef3dc-e39e-4d65-81df-aba535f2054b/download/-04.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905160824id_/https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/643ef3dc-e39e-4d65-81df-aba535f2054b/download/-04.2024.xlsx",
+      "bytes": 19733,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/3752b881-6ae3-4e2b-bc18-b664a3dea2b9/download/-24-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905182103id_/https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/3752b881-6ae3-4e2b-bc18-b664a3dea2b9/download/-24-.xlsx",
+      "bytes": 20886,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/8bb33cf1-820b-44ba-bc2b-454c1f4a982a/download/-05.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905182333id_/https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/8bb33cf1-820b-44ba-bc2b-454c1f4a982a/download/-05.2024.xlsx",
+      "bytes": 25198,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/430af5d9-fbf4-4a58-b7f3-b5603e6ee8a1/download/-23-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240905182631id_/https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/430af5d9-fbf4-4a58-b7f3-b5603e6ee8a1/download/-23-.xlsx",
+      "bytes": 27894,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ff152a87-6da3-40f5-9a37-7174d13f7189/resource/81d6e02c-72d0-4017-a3f2-60f427027bd9/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240912133248id_/https://www.odata.org.il/dataset/ff152a87-6da3-40f5-9a37-7174d13f7189/resource/81d6e02c-72d0-4017-a3f2-60f427027bd9/download/-.xlsx",
+      "bytes": 42007,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ff152a87-6da3-40f5-9a37-7174d13f7189/resource/bae6c67f-3ea6-40dc-9ddd-35df68eda21b/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240912162010id_/https://www.odata.org.il/dataset/ff152a87-6da3-40f5-9a37-7174d13f7189/resource/bae6c67f-3ea6-40dc-9ddd-35df68eda21b/download/-2024-.xlsx",
+      "bytes": 54241,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/14bf2beb-5f35-45c4-9272-d6cc441f2b9f/resource/b3e49989-fd88-4263-8007-00362067b9f4/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240913171217id_/https://www.odata.org.il/dataset/14bf2beb-5f35-45c4-9272-d6cc441f2b9f/resource/b3e49989-fd88-4263-8007-00362067b9f4/download/-.pdf",
+      "bytes": 13246220,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/0ed98446-0ebb-4471-9c53-2272acd0dfb6/download/-2024-002.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240916163226id_/https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/0ed98446-0ebb-4471-9c53-2272acd0dfb6/download/-2024-002.xlsx",
+      "bytes": 35631,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/40d2b68d-af8e-40fe-aea3-31cc45a4954b/download/-2024-002.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240916163757id_/https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/40d2b68d-af8e-40fe-aea3-31cc45a4954b/download/-2024-002.xlsx",
+      "bytes": 30118,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a496c8e3-5262-4523-a671-40af2da2ef19/resource/741fb9ee-c125-44f9-bcc6-501d960af266/download/-2015-24-0215.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240918125859id_/https://www.odata.org.il/dataset/a496c8e3-5262-4523-a671-40af2da2ef19/resource/741fb9ee-c125-44f9-bcc6-501d960af266/download/-2015-24-0215.pdf",
+      "bytes": 133279,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/f991c8d3-1c74-4f62-a2a1-b404b25731d3/download/-1.10.23-31.12.23.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240918141042id_/https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/f991c8d3-1c74-4f62-a2a1-b404b25731d3/download/-1.10.23-31.12.23.xlsx",
+      "bytes": 36919,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a496c8e3-5262-4523-a671-40af2da2ef19/resource/14135a08-0359-4dd5-ad52-87fe182e447b/download/-1.1.24-31.3.24.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240918182808id_/https://www.odata.org.il/dataset/a496c8e3-5262-4523-a671-40af2da2ef19/resource/14135a08-0359-4dd5-ad52-87fe182e447b/download/-1.1.24-31.3.24.xlsx",
+      "bytes": 37535,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/4941f602-d73a-4a1c-b481-ef31ac447a1c/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240919000912id_/https://www.odata.org.il/dataset/dd0bd6ec-9de7-45de-a455-3981f10690ea/resource/4941f602-d73a-4a1c-b481-ef31ac447a1c/download/-.pdf",
+      "bytes": 5381676,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/744fd502-fd31-42b2-acc9-16f3d2c1bc2f/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240919060742id_/https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/744fd502-fd31-42b2-acc9-16f3d2c1bc2f/download/-2023.pdf",
+      "bytes": 144559,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/65fd3212-6e3b-4132-9d8f-d72cb33c0ab1/resource/23fd86da-afb3-4127-b66f-b43b0636ee67/download/-2023-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240919091724id_/https://www.odata.org.il/dataset/65fd3212-6e3b-4132-9d8f-d72cb33c0ab1/resource/23fd86da-afb3-4127-b66f-b43b0636ee67/download/-2023-2023.pdf",
+      "bytes": 919206,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ce4f8c65-69fa-45e9-86c0-d433e20f9abd/resource/b5b4a1be-a035-4e09-9702-63c3b2b6e812/download/-2015-23-0560.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240919222355id_/https://www.odata.org.il/dataset/ce4f8c65-69fa-45e9-86c0-d433e20f9abd/resource/b5b4a1be-a035-4e09-9702-63c3b2b6e812/download/-2015-23-0560.pdf",
+      "bytes": 151368,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b8dd570-bdcb-4290-a1bb-7cc7f8f39a22/resource/d589b056-504a-496b-9720-e5df947fbbf0/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240925142114id_/https://www.odata.org.il/dataset/3b8dd570-bdcb-4290-a1bb-7cc7f8f39a22/resource/d589b056-504a-496b-9720-e5df947fbbf0/download/-24.pdf",
+      "bytes": 242292,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b8dd570-bdcb-4290-a1bb-7cc7f8f39a22/resource/67ecbf18-82ba-4489-868f-14af29f0d881/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240925142120id_/https://www.odata.org.il/dataset/3b8dd570-bdcb-4290-a1bb-7cc7f8f39a22/resource/67ecbf18-82ba-4489-868f-14af29f0d881/download/-.xlsx",
+      "bytes": 40639,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4c1413de-23c1-4c92-abf1-1f34f5d01dca/resource/8a2713f0-20be-4f76-bcf5-fe3842dccb07/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240925142211id_/https://www.odata.org.il/dataset/4c1413de-23c1-4c92-abf1-1f34f5d01dca/resource/8a2713f0-20be-4f76-bcf5-fe3842dccb07/download/-2024.xlsx",
+      "bytes": 43070,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4c1413de-23c1-4c92-abf1-1f34f5d01dca/resource/aaf5edaa-1a34-4c87-8cf3-2440c5bf7746/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240925142301id_/https://www.odata.org.il/dataset/4c1413de-23c1-4c92-abf1-1f34f5d01dca/resource/aaf5edaa-1a34-4c87-8cf3-2440c5bf7746/download/-2024.pdf",
+      "bytes": 236704,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ed6cfb9e-1a28-46f0-bdf4-9870fadc8eda/resource/bb929b45-f561-49cb-a313-7fa146de16a3/download/-1-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240926144900id_/https://www.odata.org.il/dataset/ed6cfb9e-1a28-46f0-bdf4-9870fadc8eda/resource/bb929b45-f561-49cb-a313-7fa146de16a3/download/-1-2024-.xlsx",
+      "bytes": 27210,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ed6cfb9e-1a28-46f0-bdf4-9870fadc8eda/resource/ddb40483-c71e-4bb1-9ae1-8284926d9399/download/-1-2024-6-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20240926145126id_/https://www.odata.org.il/dataset/ed6cfb9e-1a28-46f0-bdf4-9870fadc8eda/resource/ddb40483-c71e-4bb1-9ae1-8284926d9399/download/-1-2024-6-24.pdf",
+      "bytes": 210117,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f28bba10-0477-466e-9e94-282163e36806/resource/a7a07d85-565f-401f-aaa8-4b0307e338ec/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240926150547id_/https://www.odata.org.il/dataset/f28bba10-0477-466e-9e94-282163e36806/resource/a7a07d85-565f-401f-aaa8-4b0307e338ec/download/-2023.xlsx",
+      "bytes": 21265,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/254a6f5d-21b9-4abb-a365-a627bf692049/resource/fdbcfb23-e128-4eae-99cf-5fa660616029/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20240930174551id_/https://www.odata.org.il/dataset/254a6f5d-21b9-4abb-a365-a627bf692049/resource/fdbcfb23-e128-4eae-99cf-5fa660616029/download/-2024-.xlsx",
+      "bytes": 26235,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/a396be28-b362-443e-9b00-af9fc22315d3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241001063343id_/https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/a396be28-b362-443e-9b00-af9fc22315d3/download/-.pdf",
+      "bytes": 279755,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/dbc39c00-b7ad-4788-a21e-c7a01900cd6e/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241001085142id_/https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/dbc39c00-b7ad-4788-a21e-c7a01900cd6e/download/-.xlsx",
+      "bytes": 37730,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/124dc11d-5794-464d-b70b-e3bcda870fd6/resource/879f58ff-7388-4083-a649-e1b4383a47d3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241001091025id_/https://www.odata.org.il/dataset/124dc11d-5794-464d-b70b-e3bcda870fd6/resource/879f58ff-7388-4083-a649-e1b4383a47d3/download/-.pdf",
+      "bytes": 279755,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/124dc11d-5794-464d-b70b-e3bcda870fd6/resource/ac03566d-9f31-4be8-ad42-1372edb3ba74/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241001151433id_/https://www.odata.org.il/dataset/124dc11d-5794-464d-b70b-e3bcda870fd6/resource/ac03566d-9f31-4be8-ad42-1372edb3ba74/download/-.xlsx",
+      "bytes": 26062,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/bd2a6dff-7652-4240-b450-2b25d0b58ddc/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241001200927id_/https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/bd2a6dff-7652-4240-b450-2b25d0b58ddc/download/-2024.pdf",
+      "bytes": 754294,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/6fcedf25-19a1-454f-9f12-ce0203380629/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241001214817id_/https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/6fcedf25-19a1-454f-9f12-ce0203380629/download/-2024.xlsx",
+      "bytes": 52101,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/5f5b8e55-cdde-47d0-a0a7-126fd9823d8e/download/-1-2-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241002003202id_/https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/5f5b8e55-cdde-47d0-a0a7-126fd9823d8e/download/-1-2-2024.xlsx",
+      "bytes": 10784,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/ab98889f-a34b-4553-98cd-01924ed156d1/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241002233308id_/https://www.odata.org.il/dataset/af946a2f-f95a-4857-b497-64ca9ccc206b/resource/ab98889f-a34b-4553-98cd-01924ed156d1/download/-.pdf",
+      "bytes": 12771204,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f488c1d8-6aa7-45c4-a5f2-0594e76ba040/resource/60961004-540e-41b6-9201-c4ce3ef56e0d/download/-1-3.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241003125600id_/https://www.odata.org.il/dataset/f488c1d8-6aa7-45c4-a5f2-0594e76ba040/resource/60961004-540e-41b6-9201-c4ce3ef56e0d/download/-1-3.2024.xlsx",
+      "bytes": 35225,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f488c1d8-6aa7-45c4-a5f2-0594e76ba040/resource/cb379328-0afc-420d-ac99-efc557a0c96a/download/-7-12.24.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241003161450id_/https://www.odata.org.il/dataset/f488c1d8-6aa7-45c4-a5f2-0594e76ba040/resource/cb379328-0afc-420d-ac99-efc557a0c96a/download/-7-12.24.xlsx",
+      "bytes": 55167,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/6df39e38-7341-42e0-92c7-6b9179425621/download/-0159.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241008120313id_/https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/6df39e38-7341-42e0-92c7-6b9179425621/download/-0159.pdf",
+      "bytes": 125886,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/49fd4fe8-6d82-4fdf-9122-772dcb3550f1/download/-1-2-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241008120519id_/https://www.odata.org.il/dataset/f000b4aa-2632-442f-b8c1-7f3de0d30c1b/resource/49fd4fe8-6d82-4fdf-9122-772dcb3550f1/download/-1-2-2024.pdf",
+      "bytes": 152912,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/6cb20873-b7c4-4f71-a8e1-b45cf378cd20/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241026171225id_/https://www.odata.org.il/dataset/689a7834-aec4-4122-9e30-450877063dc7/resource/6cb20873-b7c4-4f71-a8e1-b45cf378cd20/download/-24.pdf",
+      "bytes": 105504,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1a06c4b8-6008-49da-b5bd-47ff3e21369d/resource/30e8b709-5311-4e11-835c-deb48ad97e13/download/-3-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241101202633id_/https://www.odata.org.il/dataset/1a06c4b8-6008-49da-b5bd-47ff3e21369d/resource/30e8b709-5311-4e11-835c-deb48ad97e13/download/-3-2024.xlsx",
+      "bytes": 41598,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8b2554b1-f29a-4b8a-990c-e7116065ac98/resource/267847d8-d66b-4ef6-af86-961106bf104b/download/doc230924-23092024144700.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241101205335id_/https://www.odata.org.il/dataset/8b2554b1-f29a-4b8a-990c-e7116065ac98/resource/267847d8-d66b-4ef6-af86-961106bf104b/download/doc230924-23092024144700.pdf",
+      "bytes": 3035241,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a3d99818-6476-4ed1-90aa-bbc85696ef46/resource/bb98402c-6cd6-4f0a-916b-d48b02129847/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241102084449id_/https://www.odata.org.il/dataset/a3d99818-6476-4ed1-90aa-bbc85696ef46/resource/bb98402c-6cd6-4f0a-916b-d48b02129847/download/-2024.xlsx",
+      "bytes": 40336,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a3d99818-6476-4ed1-90aa-bbc85696ef46/resource/8aab9a54-6094-4b67-a1ff-36541cd162ad/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241102201822id_/https://www.odata.org.il/dataset/a3d99818-6476-4ed1-90aa-bbc85696ef46/resource/8aab9a54-6094-4b67-a1ff-36541cd162ad/download/-2024.pdf",
+      "bytes": 236919,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8b2554b1-f29a-4b8a-990c-e7116065ac98/resource/ada0bdd9-3935-4ff1-ac7e-62e17a84fc22/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241103031024id_/https://www.odata.org.il/dataset/8b2554b1-f29a-4b8a-990c-e7116065ac98/resource/ada0bdd9-3935-4ff1-ac7e-62e17a84fc22/download/-.pdf",
+      "bytes": 246621,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f93da717-e2c5-44db-a800-730c66c9d831/resource/bf4bbe99-bd54-440e-92c7-5f8b87219856/download/-3-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241105011517id_/https://www.odata.org.il/dataset/f93da717-e2c5-44db-a800-730c66c9d831/resource/bf4bbe99-bd54-440e-92c7-5f8b87219856/download/-3-2024.xlsx",
+      "bytes": 38518,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/22038b6c-b284-4165-a8da-10a563ca04e3/resource/f508d0ec-09cd-464d-80cb-ce097e8b1101/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241106035012id_/https://www.odata.org.il/dataset/22038b6c-b284-4165-a8da-10a563ca04e3/resource/f508d0ec-09cd-464d-80cb-ce097e8b1101/download/-2024.xlsx",
+      "bytes": 39117,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3423c91d-501f-4888-a4db-edb34e983adf/resource/1dbfbab5-d717-4f0f-a76c-6160809ff67c/download/-08.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241106131035id_/https://www.odata.org.il/dataset/3423c91d-501f-4888-a4db-edb34e983adf/resource/1dbfbab5-d717-4f0f-a76c-6160809ff67c/download/-08.2024.xlsx",
+      "bytes": 22527,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4cf856d0-1566-4ce7-8b0e-af4d2a83b725/resource/0234813b-3510-4560-8fca-8f3fa3c565d9/download/untitled_20241103_190824.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241106131045id_/https://www.odata.org.il/dataset/4cf856d0-1566-4ce7-8b0e-af4d2a83b725/resource/0234813b-3510-4560-8fca-8f3fa3c565d9/download/untitled_20241103_190824.pdf",
+      "bytes": 261892,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/93d95701-8b55-4292-8c52-5bba85283a93/download/-_compressed.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241106131703id_/https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/93d95701-8b55-4292-8c52-5bba85283a93/download/-_compressed.pdf",
+      "bytes": 2170434,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/8d3d63e1-89a9-4814-950f-1180423abe43/download/-_compressed.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241106131804id_/https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/8d3d63e1-89a9-4814-950f-1180423abe43/download/-_compressed.pdf",
+      "bytes": 5372522,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/88b15fd1-160c-4b4a-ae34-13516d8bcce6/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241106131921id_/https://www.odata.org.il/dataset/49cd298a-604c-437b-b5a5-cd8a2991b5a4/resource/88b15fd1-160c-4b4a-ae34-13516d8bcce6/download/-.pdf",
+      "bytes": 433948,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1a06c4b8-6008-49da-b5bd-47ff3e21369d/resource/214b4745-5467-46e2-b063-6f59b882e963/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241106234929id_/https://www.odata.org.il/dataset/1a06c4b8-6008-49da-b5bd-47ff3e21369d/resource/214b4745-5467-46e2-b063-6f59b882e963/download/-2024.xlsx",
+      "bytes": 39117,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/d860688f-f170-4463-87f9-6ba1413de90d/download/-06.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241108131526id_/https://www.odata.org.il/dataset/2ea49fcd-8c36-4eca-83da-5312ac244a2f/resource/d860688f-f170-4463-87f9-6ba1413de90d/download/-06.2024.xlsx",
+      "bytes": 25732,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/5b61bc67-8754-4fc4-809f-6b0f8603ef49/download/-24-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241109115240id_/https://www.odata.org.il/dataset/fc07089b-5a48-468e-bf6d-bf132341f1c0/resource/5b61bc67-8754-4fc4-809f-6b0f8603ef49/download/-24-.xlsx",
+      "bytes": 37492,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b02f0c9-1bbb-40d7-95dd-bcf50b2509c0/resource/0e24ccd5-9684-46f8-a2de-3d81cc3c82a0/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241110172131id_/https://www.odata.org.il/dataset/3b02f0c9-1bbb-40d7-95dd-bcf50b2509c0/resource/0e24ccd5-9684-46f8-a2de-3d81cc3c82a0/download/-.pdf",
+      "bytes": 144312,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b02f0c9-1bbb-40d7-95dd-bcf50b2509c0/resource/5c1259eb-2e0d-49f9-9079-3272f945de72/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241110172131id_/https://www.odata.org.il/dataset/3b02f0c9-1bbb-40d7-95dd-bcf50b2509c0/resource/5c1259eb-2e0d-49f9-9079-3272f945de72/download/-2024.xlsx",
+      "bytes": 29701,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/c3eb4d6e-6e1c-4d43-a5af-f5b8586db062/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241110172256id_/https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/c3eb4d6e-6e1c-4d43-a5af-f5b8586db062/download/-.pdf",
+      "bytes": 144312,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/ffc06959-15c9-4175-8cd5-b67e6f1c79d1/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241110172300id_/https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/ffc06959-15c9-4175-8cd5-b67e6f1c79d1/download/-2024.xlsx",
+      "bytes": 29701,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/8f94ba28-e12c-402c-ac46-28ff78796905/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241110172301id_/https://www.odata.org.il/dataset/e38104a2-7879-4b8a-84be-7f8fbeda8778/resource/8f94ba28-e12c-402c-ac46-28ff78796905/download/-2024.xlsx",
+      "bytes": 17139,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/25c8d808-e49d-421b-8cba-8b396eb1ad94/resource/c4183f67-8083-4ed7-9dea-99e6eda988b3/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241110232409id_/https://www.odata.org.il/dataset/25c8d808-e49d-421b-8cba-8b396eb1ad94/resource/c4183f67-8083-4ed7-9dea-99e6eda988b3/download/-.xlsx",
+      "bytes": 61336,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6dba1cb3-e84b-4ed6-9011-d3927c35db09/resource/c80b8e51-6a01-42ee-8683-4473b3a7026c/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241111100330id_/https://www.odata.org.il/dataset/6dba1cb3-e84b-4ed6-9011-d3927c35db09/resource/c80b8e51-6a01-42ee-8683-4473b3a7026c/download/-2024-.xlsx",
+      "bytes": 31699,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6dba1cb3-e84b-4ed6-9011-d3927c35db09/resource/8f318ff4-952f-4477-8e11-59c50c0bcd9a/download/-2023-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241111100346id_/https://www.odata.org.il/dataset/6dba1cb3-e84b-4ed6-9011-d3927c35db09/resource/8f318ff4-952f-4477-8e11-59c50c0bcd9a/download/-2023-.xlsx",
+      "bytes": 35394,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1a11378b-1a74-43a0-8bff-786ab63fc95a/resource/67d7c0f3-9428-43b9-843d-95f2bfbb0d40/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241116025703id_/https://www.odata.org.il/dataset/1a11378b-1a74-43a0-8bff-786ab63fc95a/resource/67d7c0f3-9428-43b9-843d-95f2bfbb0d40/download/-2024.xlsx",
+      "bytes": 33809,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/8670afd1-6e26-471f-b429-ca76899fea9c/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241118044649id_/https://www.odata.org.il/dataset/d35af78e-dcea-4b5a-945a-95cec2ce1a48/resource/8670afd1-6e26-471f-b429-ca76899fea9c/download/-2024.pdf",
+      "bytes": 196681,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/c4e09e72-7d37-41b3-a3b4-3d943bc96663/download/-2015-24-0753.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241120203224id_/https://www.odata.org.il/dataset/43c33237-72db-42f7-80f0-7c7071f59bbb/resource/c4e09e72-7d37-41b3-a3b4-3d943bc96663/download/-2015-24-0753.pdf",
+      "bytes": 128269,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ce4f8c65-69fa-45e9-86c0-d433e20f9abd/resource/33126894-03ce-4116-9a2b-626191522ee7/download/-2.7-15.10.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241121055358id_/https://www.odata.org.il/dataset/ce4f8c65-69fa-45e9-86c0-d433e20f9abd/resource/33126894-03ce-4116-9a2b-626191522ee7/download/-2.7-15.10.xlsx",
+      "bytes": 35247,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/32d3ec23-497b-467a-a92c-011d0e47baea/resource/33f4204d-563d-4772-b5d4-53ed247ac7ca/download/-1.4.24-30.6.24.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241121224629id_/https://www.odata.org.il/dataset/32d3ec23-497b-467a-a92c-011d0e47baea/resource/33f4204d-563d-4772-b5d4-53ed247ac7ca/download/-1.4.24-30.6.24.xlsx",
+      "bytes": 34466,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/32d3ec23-497b-467a-a92c-011d0e47baea/resource/cae0b0be-8ca4-4b9d-9968-96b8d3bf38da/download/-2015-24-0378.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241121224634id_/https://www.odata.org.il/dataset/32d3ec23-497b-467a-a92c-011d0e47baea/resource/cae0b0be-8ca4-4b9d-9968-96b8d3bf38da/download/-2015-24-0378.pdf",
+      "bytes": 150446,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9bdba8e9-34fb-480e-be9a-e08b98441c58/resource/258607b8-ffd9-4598-85ba-840ab1e3c85b/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241124160204id_/https://www.odata.org.il/dataset/9bdba8e9-34fb-480e-be9a-e08b98441c58/resource/258607b8-ffd9-4598-85ba-840ab1e3c85b/download/-2024.xlsx",
+      "bytes": 25608,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9bdba8e9-34fb-480e-be9a-e08b98441c58/resource/ba4dccb1-dad6-48a9-9d5e-41a85b2e95b2/download/-2024-20-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241124182836id_/https://www.odata.org.il/dataset/9bdba8e9-34fb-480e-be9a-e08b98441c58/resource/ba4dccb1-dad6-48a9-9d5e-41a85b2e95b2/download/-2024-20-24.pdf",
+      "bytes": 210250,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/042ef0aa-b581-43f4-9dfa-e98e231686c2/resource/c423f1eb-6fe8-4468-9a48-caacc2710c4a/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241125023513id_/https://www.odata.org.il/dataset/042ef0aa-b581-43f4-9dfa-e98e231686c2/resource/c423f1eb-6fe8-4468-9a48-caacc2710c4a/download/-2024-.xlsx",
+      "bytes": 24528,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67f2e074-344f-4495-81e0-08ac10d7e82e/resource/f86dfa1b-6206-4bc3-b1df-de3101d12b64/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241202135840id_/https://www.odata.org.il/dataset/67f2e074-344f-4495-81e0-08ac10d7e82e/resource/f86dfa1b-6206-4bc3-b1df-de3101d12b64/download/-2023.pdf",
+      "bytes": 237316,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67f2e074-344f-4495-81e0-08ac10d7e82e/resource/b0af7520-5cac-4511-87e1-6e54b6e7990b/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241202142543id_/https://www.odata.org.il/dataset/67f2e074-344f-4495-81e0-08ac10d7e82e/resource/b0af7520-5cac-4511-87e1-6e54b6e7990b/download/-2023.xlsx",
+      "bytes": 57445,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/039caabe-b775-43e1-b61a-339205b68c24/resource/d025ff0c-f353-45c3-86f0-3de19fe79eb5/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241203122924id_/https://www.odata.org.il/dataset/039caabe-b775-43e1-b61a-339205b68c24/resource/d025ff0c-f353-45c3-86f0-3de19fe79eb5/download/-.pdf",
+      "bytes": 164857,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9a167b6c-bd15-41eb-ae80-f104010c605b/resource/13b7fc44-e9c6-462f-8067-23b6e8c4a8ed/download/-3-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241206100210id_/https://www.odata.org.il/dataset/9a167b6c-bd15-41eb-ae80-f104010c605b/resource/13b7fc44-e9c6-462f-8067-23b6e8c4a8ed/download/-3-2024.pdf",
+      "bytes": 387158,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1cf0d900-eb9f-4e05-80de-efba10d1304d/resource/cc9cd478-8295-4937-b256-895dc527f51f/download/-2-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241206102728id_/https://www.odata.org.il/dataset/1cf0d900-eb9f-4e05-80de-efba10d1304d/resource/cc9cd478-8295-4937-b256-895dc527f51f/download/-2-2024.pdf",
+      "bytes": 386632,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/c8cdb72c-85f4-445a-bab8-8e3ce0fca430/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241222061644id_/https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/c8cdb72c-85f4-445a-bab8-8e3ce0fca430/download/-.pdf",
+      "bytes": 108704,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/405a93b9-bbe7-4913-a81e-2668b7cb874a/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241222061725id_/https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/405a93b9-bbe7-4913-a81e-2668b7cb874a/download/-.pdf",
+      "bytes": 108704,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/1e33b883-4a66-45d1-9931-749b952da39b/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241222063625id_/https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/1e33b883-4a66-45d1-9931-749b952da39b/download/-.pdf",
+      "bytes": 111705,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/27cf4978-928b-4bf9-9c5c-d820bc33f319/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241222064604id_/https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/27cf4978-928b-4bf9-9c5c-d820bc33f319/download/-.pdf",
+      "bytes": 111705,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/4672b70a-02a0-460f-bb84-39ccb91e8b50/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241222072826id_/https://www.odata.org.il/dataset/6b7b1479-3736-40b0-8723-bf1812f56520/resource/4672b70a-02a0-460f-bb84-39ccb91e8b50/download/-.pdf",
+      "bytes": 104760,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/6b5873ad-be92-4ba3-81a9-3c874c96bb63/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241223072119id_/https://www.odata.org.il/dataset/b54b61c2-4b18-438e-8e8a-d39952c916ea/resource/6b5873ad-be92-4ba3-81a9-3c874c96bb63/download/-.pdf",
+      "bytes": 104760,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c8af3a92-c0da-4354-98c2-9d559123cc9e/resource/8c260eea-f472-4092-90a8-21cf592c701c/download/-1-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241224153322id_/https://www.odata.org.il/dataset/c8af3a92-c0da-4354-98c2-9d559123cc9e/resource/8c260eea-f472-4092-90a8-21cf592c701c/download/-1-.pdf",
+      "bytes": 20284619,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9320b2fa-7c27-419d-8b1a-6dd29f09d8cf/resource/f13629b9-0262-4437-970a-9cc5884501f2/download/-23-24_.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241224153347id_/https://www.odata.org.il/dataset/9320b2fa-7c27-419d-8b1a-6dd29f09d8cf/resource/f13629b9-0262-4437-970a-9cc5884501f2/download/-23-24_.xlsx",
+      "bytes": 141661,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c8af3a92-c0da-4354-98c2-9d559123cc9e/resource/bb7973dc-9c38-4a91-bfd9-43d097a4ba76/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241224153831id_/https://www.odata.org.il/dataset/c8af3a92-c0da-4354-98c2-9d559123cc9e/resource/bb7973dc-9c38-4a91-bfd9-43d097a4ba76/download/-2024.pdf",
+      "bytes": 120062,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/796d9170-0d11-4eef-a6ee-dcfe4526c216/resource/7dba674b-0cb0-4287-bdf1-7e7b84517be6/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241224160549id_/https://www.odata.org.il/dataset/796d9170-0d11-4eef-a6ee-dcfe4526c216/resource/7dba674b-0cb0-4287-bdf1-7e7b84517be6/download/-.xlsx",
+      "bytes": 47005,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/796d9170-0d11-4eef-a6ee-dcfe4526c216/resource/ee7c4516-0e1e-4617-bab3-0fb5dd6a017b/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241224162630id_/https://www.odata.org.il/dataset/796d9170-0d11-4eef-a6ee-dcfe4526c216/resource/ee7c4516-0e1e-4617-bab3-0fb5dd6a017b/download/-2024.pdf",
+      "bytes": 237093,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/75de10d4-4d13-4fdf-b8fa-50c0c3d395ef/download/-2024.-0298.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241225130321id_/https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/75de10d4-4d13-4fdf-b8fa-50c0c3d395ef/download/-2024.-0298.pdf",
+      "bytes": 126387,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/3440f37b-a467-4f42-b924-79f392470ae3/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20241225131025id_/https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/3440f37b-a467-4f42-b924-79f392470ae3/download/-2024.xlsx",
+      "bytes": 52000,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/13cfd842-6c03-4e88-8ecb-29425644bef6/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20241225131030id_/https://www.odata.org.il/dataset/8819cbbc-c488-4e68-80d9-90dc40f4149c/resource/13cfd842-6c03-4e88-8ecb-29425644bef6/download/-2024.pdf",
+      "bytes": 683658,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7f4a5838-6890-48e8-b0c0-1ea9e3ae24f3/resource/4e275a1a-8e42-4f18-bd36-32f689743e32/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250116102456id_/https://www.odata.org.il/dataset/7f4a5838-6890-48e8-b0c0-1ea9e3ae24f3/resource/4e275a1a-8e42-4f18-bd36-32f689743e32/download/-.pdf",
+      "bytes": 168615,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ea53be86-04ec-4368-9810-0aa8f0a512f5/resource/83f2936c-8e29-4f8f-99c4-c2c97766ad8f/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250117175239id_/https://www.odata.org.il/dataset/ea53be86-04ec-4368-9810-0aa8f0a512f5/resource/83f2936c-8e29-4f8f-99c4-c2c97766ad8f/download/-2024.xlsx",
+      "bytes": 79846,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/43886e63-4e56-44ab-958a-6fb2eacc52d2/resource/e2ee729b-8482-4d0c-9520-5018b61737f9/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250120030546id_/https://www.odata.org.il/dataset/43886e63-4e56-44ab-958a-6fb2eacc52d2/resource/e2ee729b-8482-4d0c-9520-5018b61737f9/download/-2024.pdf",
+      "bytes": 236486,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/586821c2-3e5c-4dd3-ae56-7bf9cbe39a88/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250125175213id_/https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/586821c2-3e5c-4dd3-ae56-7bf9cbe39a88/download/-.pdf",
+      "bytes": 584351,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/3b7be41c-8e0e-46e6-925c-af86a7f476e9/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250125175248id_/https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/3b7be41c-8e0e-46e6-925c-af86a7f476e9/download/-.pdf",
+      "bytes": 307146,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/fa934b41-c708-4df6-923a-faf5fb3b4ff8/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250125175343id_/https://www.odata.org.il/dataset/3c63ea5b-2273-4531-852d-601de4ecacb5/resource/fa934b41-c708-4df6-923a-faf5fb3b4ff8/download/-.pdf",
+      "bytes": 120451,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f1325a85-8907-4100-83b5-c941c86758fc/resource/b93d937a-7804-4863-802e-2053d49feb22/download/-0066-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127095720id_/https://www.odata.org.il/dataset/f1325a85-8907-4100-83b5-c941c86758fc/resource/b93d937a-7804-4863-802e-2053d49feb22/download/-0066-2024.pdf",
+      "bytes": 146911,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/555efe8b-2c62-43be-8c3e-58bf2a6df5c8/download/-2-3.2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143210id_/https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/555efe8b-2c62-43be-8c3e-58bf2a6df5c8/download/-2-3.2024.pdf",
+      "bytes": 241527,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/ef6afb1b-3ed5-49d5-b54a-f99c8bf64976/download/-1.2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143328id_/https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/ef6afb1b-3ed5-49d5-b54a-f99c8bf64976/download/-1.2024.pdf",
+      "bytes": 279132,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ef508d2d-9c7a-4179-8697-18bf913339ca/resource/3e050a5c-4e6d-4b13-9586-52faf3a48c48/download/-4-2024-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143402id_/https://www.odata.org.il/dataset/ef508d2d-9c7a-4179-8697-18bf913339ca/resource/3e050a5c-4e6d-4b13-9586-52faf3a48c48/download/-4-2024-.pdf",
+      "bytes": 789806,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/7ba67754-cb15-49e9-87da-ea7feba2fd7b/download/-7.2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143608id_/https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/7ba67754-cb15-49e9-87da-ea7feba2fd7b/download/-7.2024.pdf",
+      "bytes": 130900,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/74fa1dab-55bf-4bfa-ac71-a796f83d598e/download/-2024-27.1.2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143705id_/https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/74fa1dab-55bf-4bfa-ac71-a796f83d598e/download/-2024-27.1.2025.pdf",
+      "bytes": 166103,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/8a45d439-9956-4afe-8ba7-2860cb97b2b7/download/-4-6.2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143743id_/https://www.odata.org.il/dataset/3cf3b02e-784c-4d12-a715-2027a6a74d1c/resource/8a45d439-9956-4afe-8ba7-2860cb97b2b7/download/-4-6.2024.pdf",
+      "bytes": 389849,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9a8b5dc9-5ca5-4b1f-81fa-943923ef43ea/resource/4e2a03d3-32ef-4050-9c4b-36d6f60e49ab/download/-2024-27.1.2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127143925id_/https://www.odata.org.il/dataset/9a8b5dc9-5ca5-4b1f-81fa-943923ef43ea/resource/4e2a03d3-32ef-4050-9c4b-36d6f60e49ab/download/-2024-27.1.2025.pdf",
+      "bytes": 166103,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ef508d2d-9c7a-4179-8697-18bf913339ca/resource/8759d183-102c-421e-ab80-9655599b4be0/download/untitled_20250127_201801.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127144201id_/https://www.odata.org.il/dataset/ef508d2d-9c7a-4179-8697-18bf913339ca/resource/8759d183-102c-421e-ab80-9655599b4be0/download/untitled_20250127_201801.pdf",
+      "bytes": 270086,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/53c7d391-b541-48b6-8bfc-55d83c169cbd/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127145921id_/https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/53c7d391-b541-48b6-8bfc-55d83c169cbd/download/-24.pdf",
+      "bytes": 162798,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/cf72dcf4-de5f-4f2a-b6f0-37444ba83898/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127150744id_/https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/cf72dcf4-de5f-4f2a-b6f0-37444ba83898/download/-24.pdf",
+      "bytes": 172892,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/acb345b4-371e-4c2a-abea-8ced838f6d1d/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127151042id_/https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/acb345b4-371e-4c2a-abea-8ced838f6d1d/download/-.pdf",
+      "bytes": 124495,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/69d49f52-842c-4aab-9f9f-dd4a4d519304/download/-24.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127151144id_/https://www.odata.org.il/dataset/23122838-e1dc-41fa-a39a-c49233dc890e/resource/69d49f52-842c-4aab-9f9f-dd4a4d519304/download/-24.pdf",
+      "bytes": 195686,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2d3b2d0f-466b-4cc7-83f7-5c07eee9f3c3/resource/fa454e4e-1e75-4b25-9222-e6c6688628ba/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250127151850id_/https://www.odata.org.il/dataset/2d3b2d0f-466b-4cc7-83f7-5c07eee9f3c3/resource/fa454e4e-1e75-4b25-9222-e6c6688628ba/download/-.pdf",
+      "bytes": 124495,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9a8b5dc9-5ca5-4b1f-81fa-943923ef43ea/resource/9b7ad2ef-59d6-4d06-b8be-a9beae675d46/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250129094915id_/https://www.odata.org.il/dataset/9a8b5dc9-5ca5-4b1f-81fa-943923ef43ea/resource/9b7ad2ef-59d6-4d06-b8be-a9beae675d46/download/-2024.xlsx",
+      "bytes": 41141,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/21b91041-0b02-47d8-aa4a-5c498006449f/resource/ef7b388f-d4d9-4bb0-8d8e-1951615b29ca/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250130063629id_/https://www.odata.org.il/dataset/21b91041-0b02-47d8-aa4a-5c498006449f/resource/ef7b388f-d4d9-4bb0-8d8e-1951615b29ca/download/-2024.xlsx",
+      "bytes": 57184,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/568e64e6-9ac7-473e-baba-1fe8f5982edd/resource/eb4edafd-59e2-4264-804d-f34016be8659/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250130070938id_/https://www.odata.org.il/dataset/568e64e6-9ac7-473e-baba-1fe8f5982edd/resource/eb4edafd-59e2-4264-804d-f34016be8659/download/-2024.pdf",
+      "bytes": 472161,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/597f18df-104f-4620-b56c-158c03189ac8/resource/3fd983e6-1912-4f8d-b98c-4ba84ff78b5e/download/-2015-24-0378.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250130083925id_/https://www.odata.org.il/dataset/597f18df-104f-4620-b56c-158c03189ac8/resource/3fd983e6-1912-4f8d-b98c-4ba84ff78b5e/download/-2015-24-0378.pdf",
+      "bytes": 147937,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/597f18df-104f-4620-b56c-158c03189ac8/resource/01786ee3-d8b6-4ee8-9688-061bb9bbaebe/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250130090612id_/https://www.odata.org.il/dataset/597f18df-104f-4620-b56c-158c03189ac8/resource/01786ee3-d8b6-4ee8-9688-061bb9bbaebe/download/-2024.xlsx",
+      "bytes": 55160,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ad1f4d8e-5765-407d-9b59-24dee4a9343c/resource/b162e5ce-92db-4b38-94d2-c37c075d4409/download/-1.7.2024-31.12.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250130093148id_/https://www.odata.org.il/dataset/ad1f4d8e-5765-407d-9b59-24dee4a9343c/resource/b162e5ce-92db-4b38-94d2-c37c075d4409/download/-1.7.2024-31.12.2024.xlsx",
+      "bytes": 57694,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0805b475-efd2-4f4b-9b1c-e0f09b4c8494/resource/ab7b570a-e7e5-4a3c-a607-71163097d524/download/36-24-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250130184833id_/https://www.odata.org.il/dataset/0805b475-efd2-4f4b-9b1c-e0f09b4c8494/resource/ab7b570a-e7e5-4a3c-a607-71163097d524/download/36-24-2024.pdf",
+      "bytes": 209987,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0805b475-efd2-4f4b-9b1c-e0f09b4c8494/resource/f390b36d-d0f3-44f5-89bc-3843327dc396/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250131081430id_/https://www.odata.org.il/dataset/0805b475-efd2-4f4b-9b1c-e0f09b4c8494/resource/f390b36d-d0f3-44f5-89bc-3843327dc396/download/-2024.xlsx",
+      "bytes": 24515,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/325b1670-3fdb-464b-9e93-9ed951086bf0/resource/8d7596c6-78f3-4a7c-abde-a83f130fac1b/download/-2015-23-0753.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250216070024id_/https://www.odata.org.il/dataset/325b1670-3fdb-464b-9e93-9ed951086bf0/resource/8d7596c6-78f3-4a7c-abde-a83f130fac1b/download/-2015-23-0753.pdf",
+      "bytes": 130638,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/047b846f-c9d7-4959-a226-4ee083f30f84/resource/79a87733-2efa-4133-844a-8ac6b4da77d8/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250224101315id_/https://www.odata.org.il/dataset/047b846f-c9d7-4959-a226-4ee083f30f84/resource/79a87733-2efa-4133-844a-8ac6b4da77d8/download/-2024.pdf",
+      "bytes": 980494,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/047b846f-c9d7-4959-a226-4ee083f30f84/resource/5c35a810-5c55-4759-a7b2-8c959459ee85/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250225185559id_/https://www.odata.org.il/dataset/047b846f-c9d7-4959-a226-4ee083f30f84/resource/5c35a810-5c55-4759-a7b2-8c959459ee85/download/-2024.xlsx",
+      "bytes": 94318,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f3a6ed0b-9d76-4dc9-8fb5-394f55dedfe4/resource/c90936a1-6d21-407f-821d-bad7bb6eb492/download/-2023.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250313065125id_/https://www.odata.org.il/dataset/f3a6ed0b-9d76-4dc9-8fb5-394f55dedfe4/resource/c90936a1-6d21-407f-821d-bad7bb6eb492/download/-2023.xlsx",
+      "bytes": 146562,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/aaa99e26-b1b0-41c2-9133-2c4a5ccd44b7/resource/ad6cfde7-2c2e-4263-aa6a-e18bc861852c/download/-2015-24-0846.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250314052832id_/https://www.odata.org.il/dataset/aaa99e26-b1b0-41c2-9133-2c4a5ccd44b7/resource/ad6cfde7-2c2e-4263-aa6a-e18bc861852c/download/-2015-24-0846.pdf",
+      "bytes": 163221,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/aaa99e26-b1b0-41c2-9133-2c4a5ccd44b7/resource/5015088e-be04-4c16-a38f-da2deafc7275/download/-1.10.24-31.12.24-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250314102424id_/https://www.odata.org.il/dataset/aaa99e26-b1b0-41c2-9133-2c4a5ccd44b7/resource/5015088e-be04-4c16-a38f-da2deafc7275/download/-1.10.24-31.12.24-.xlsx",
+      "bytes": 32754,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1e0bab73-38b7-4575-8d89-13cf0b3dcf70/resource/ef5e0da2-9ad2-4103-994f-630cb7f79cd2/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250318153313id_/https://www.odata.org.il/dataset/1e0bab73-38b7-4575-8d89-13cf0b3dcf70/resource/ef5e0da2-9ad2-4103-994f-630cb7f79cd2/download/-2024.xlsx",
+      "bytes": 35159,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c3ec5b5a-ec37-455e-9156-621fb922cb08/resource/b57c1c35-7adc-436c-a468-151f9fb8692b/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250318164937id_/https://www.odata.org.il/dataset/c3ec5b5a-ec37-455e-9156-621fb922cb08/resource/b57c1c35-7adc-436c-a468-151f9fb8692b/download/-2024.pdf",
+      "bytes": 171999,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1e0bab73-38b7-4575-8d89-13cf0b3dcf70/resource/9c3e14a4-5e13-4b97-bac2-c1b3792d0822/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250318175801id_/https://www.odata.org.il/dataset/1e0bab73-38b7-4575-8d89-13cf0b3dcf70/resource/9c3e14a4-5e13-4b97-bac2-c1b3792d0822/download/-2024.pdf",
+      "bytes": 171122,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6b4d09ff-0b3f-4f9d-8a41-d8d59e390e4d/resource/dfa668d5-cc60-498d-ae8c-cb475267f3a0/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250402150614id_/https://www.odata.org.il/dataset/6b4d09ff-0b3f-4f9d-8a41-d8d59e390e4d/resource/dfa668d5-cc60-498d-ae8c-cb475267f3a0/download/-.xlsx",
+      "bytes": 25634,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4bdf71ae-91f9-46f8-a7e3-28f74fd38c48/resource/6b095857-0572-4793-9f84-79cdee4166e0/download/46-24-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250406041818id_/https://www.odata.org.il/dataset/4bdf71ae-91f9-46f8-a7e3-28f74fd38c48/resource/6b095857-0572-4793-9f84-79cdee4166e0/download/46-24-2024.pdf",
+      "bytes": 213661,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4bdf71ae-91f9-46f8-a7e3-28f74fd38c48/resource/7f1b2916-c6c9-44d8-9617-4bafccc5ccfb/download/-2024-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250406041832id_/https://www.odata.org.il/dataset/4bdf71ae-91f9-46f8-a7e3-28f74fd38c48/resource/7f1b2916-c6c9-44d8-9617-4bafccc5ccfb/download/-2024-.xlsx",
+      "bytes": 24333,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/09605392-c43f-4c95-8ca1-aacaea045732/resource/37618ad4-056f-4aa0-bf86-124c57aa06e4/download/-4-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250407082903id_/https://www.odata.org.il/dataset/09605392-c43f-4c95-8ca1-aacaea045732/resource/37618ad4-056f-4aa0-bf86-124c57aa06e4/download/-4-2024.pdf",
+      "bytes": 388077,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/09605392-c43f-4c95-8ca1-aacaea045732/resource/b1bb5112-d5bd-4940-9dd9-9ed96cd7cc4a/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250407084402id_/https://www.odata.org.il/dataset/09605392-c43f-4c95-8ca1-aacaea045732/resource/b1bb5112-d5bd-4940-9dd9-9ed96cd7cc4a/download/-2024.xlsx",
+      "bytes": 27038,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fe902adf-932a-44cd-8652-8915914683f6/resource/bead9ec1-1d8d-4391-88b2-1657fa279051/download/-2015-25-0172.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250408113344id_/https://www.odata.org.il/dataset/fe902adf-932a-44cd-8652-8915914683f6/resource/bead9ec1-1d8d-4391-88b2-1657fa279051/download/-2015-25-0172.pdf",
+      "bytes": 193125,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fe902adf-932a-44cd-8652-8915914683f6/resource/09d6cea0-cf78-4a51-a274-ea39447ce9b9/download/-1.1.25-31.3.25.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250408113731id_/https://www.odata.org.il/dataset/fe902adf-932a-44cd-8652-8915914683f6/resource/09d6cea0-cf78-4a51-a274-ea39447ce9b9/download/-1.1.25-31.3.25.xlsx",
+      "bytes": 35483,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/75c11e67-0e9c-4efd-8965-04c7bf6a15dc/resource/78b055a0-2f06-4bca-9667-5d7cac9600a7/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250423160328id_/https://www.odata.org.il/dataset/75c11e67-0e9c-4efd-8965-04c7bf6a15dc/resource/78b055a0-2f06-4bca-9667-5d7cac9600a7/download/-.pdf",
+      "bytes": 144356,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fa399725-d3b3-4333-835c-b45573a9d295/resource/3f14c109-2d13-4c12-aae9-d1f88196d067/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250423160904id_/https://www.odata.org.il/dataset/fa399725-d3b3-4333-835c-b45573a9d295/resource/3f14c109-2d13-4c12-aae9-d1f88196d067/download/-.pdf",
+      "bytes": 144356,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/4756c9f4-3cbd-4e15-9bba-da72a50a4cd5/download/-01.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250423162307id_/https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/4756c9f4-3cbd-4e15-9bba-da72a50a4cd5/download/-01.2025.xlsx",
+      "bytes": 25292,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6e18826f-e183-446a-bffa-5c03aea80f54/resource/82b1e628-ce5f-4aff-929b-db9530cd2a6c/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250423162657id_/https://www.odata.org.il/dataset/6e18826f-e183-446a-bffa-5c03aea80f54/resource/82b1e628-ce5f-4aff-929b-db9530cd2a6c/download/-.pdf",
+      "bytes": 144356,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/7842e53e-5d5c-4df6-a680-dba0d9b3c294/download/-02.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250423162729id_/https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/7842e53e-5d5c-4df6-a680-dba0d9b3c294/download/-02.2025.xlsx",
+      "bytes": 26653,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/f7f1fbbd-5372-4f60-a486-457ffa426d0b/download/-03.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250423163319id_/https://www.odata.org.il/dataset/c5f820e1-f736-4baa-8627-ff4e6628ce62/resource/f7f1fbbd-5372-4f60-a486-457ffa426d0b/download/-03.2025.xlsx",
+      "bytes": 26151,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f89ffca2-0b90-4867-813e-a70731e7ba96/resource/96dd87f4-4ec8-4789-b21f-e8dbff673308/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250423181028id_/https://www.odata.org.il/dataset/f89ffca2-0b90-4867-813e-a70731e7ba96/resource/96dd87f4-4ec8-4789-b21f-e8dbff673308/download/-.xlsx",
+      "bytes": 70325,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f89ffca2-0b90-4867-813e-a70731e7ba96/resource/d2d2bd3d-a273-457d-bcc3-375a5c375bf1/download/-23.4.25.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250423181116id_/https://www.odata.org.il/dataset/f89ffca2-0b90-4867-813e-a70731e7ba96/resource/d2d2bd3d-a273-457d-bcc3-375a5c375bf1/download/-23.4.25.pdf",
+      "bytes": 205742,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/597fdcba-b303-4057-87f5-f5b5879b8e39/resource/09511d89-8e92-46c8-9aed-1a89628dc26e/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505033802id_/https://www.odata.org.il/dataset/597fdcba-b303-4057-87f5-f5b5879b8e39/resource/09511d89-8e92-46c8-9aed-1a89628dc26e/download/-.pdf",
+      "bytes": 113786,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/e152e6ce-4735-4dd7-9d6b-07fe9ef676b4/download/-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505034910id_/https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/e152e6ce-4735-4dd7-9d6b-07fe9ef676b4/download/-2023-.pdf",
+      "bytes": 9489149,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/451d4e10-5fd7-406b-afe7-124efecf77a8/download/-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505044154id_/https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/451d4e10-5fd7-406b-afe7-124efecf77a8/download/-2023-.pdf",
+      "bytes": 241049,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/2f21e866-a1d8-4ee3-8522-0cddae5457e9/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505044938id_/https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/2f21e866-a1d8-4ee3-8522-0cddae5457e9/download/-.pdf",
+      "bytes": 112915,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4b3f07cb-8cfa-47a4-871c-e3d015c0e0f9/resource/9330757b-f11a-495b-bae9-ccb4a94aee38/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505051239id_/https://www.odata.org.il/dataset/4b3f07cb-8cfa-47a4-871c-e3d015c0e0f9/resource/9330757b-f11a-495b-bae9-ccb4a94aee38/download/-.pdf",
+      "bytes": 7826946,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/5dd48fb0-dcfe-496b-8360-a07101508113/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505060847id_/https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/5dd48fb0-dcfe-496b-8360-a07101508113/download/-.pdf",
+      "bytes": 105868,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/452bf0bd-5a4e-4e95-a9d6-94de9c64001b/download/-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505094938id_/https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/452bf0bd-5a4e-4e95-a9d6-94de9c64001b/download/-2023-.pdf",
+      "bytes": 5866910,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0dd221da-2b33-4602-898f-8e55882dc272/resource/930b8de1-17ed-4fe2-9635-8a9796243dc4/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505123519id_/https://www.odata.org.il/dataset/0dd221da-2b33-4602-898f-8e55882dc272/resource/930b8de1-17ed-4fe2-9635-8a9796243dc4/download/-.pdf",
+      "bytes": 236726,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/8a5a04dd-88ed-49b6-b124-ebc907bc47e3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505125501id_/https://www.odata.org.il/dataset/a31d97f3-0a56-4182-a8cf-ff1c1c00668d/resource/8a5a04dd-88ed-49b6-b124-ebc907bc47e3/download/-.pdf",
+      "bytes": 114056,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/961a05e8-fdab-4814-a3a1-80c7899ed6de/download/-2023-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250505130431id_/https://www.odata.org.il/dataset/4fc13f04-cf70-4013-8a3c-a1d927562fdf/resource/961a05e8-fdab-4814-a3a1-80c7899ed6de/download/-2023-.pdf",
+      "bytes": 4352537,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/2566a666-66d4-4ee5-875d-a0464cad5479/resource/181737e3-04c6-408e-8907-10fe77a59957/download/-4-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250513091724id_/https://www.odata.org.il/dataset/2566a666-66d4-4ee5-875d-a0464cad5479/resource/181737e3-04c6-408e-8907-10fe77a59957/download/-4-2024.pdf",
+      "bytes": 388077,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/ab6497bd-3332-4a44-a1da-8aa43e4d0f34/download/-1-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250518173458id_/https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/ab6497bd-3332-4a44-a1da-8aa43e4d0f34/download/-1-2025.xlsx",
+      "bytes": 38870,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/fbd22bc2-83e1-4a02-8163-83fcde6f8a1d/download/-1-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250518181310id_/https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/fbd22bc2-83e1-4a02-8163-83fcde6f8a1d/download/-1-2025.xlsx",
+      "bytes": 50292,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/23354a2d-cc64-4e8e-a81d-45b0796e2473/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250520165507id_/https://www.odata.org.il/dataset/b30a5159-f0fd-4415-8396-dde7b9034341/resource/23354a2d-cc64-4e8e-a81d-45b0796e2473/download/-.pdf",
+      "bytes": 158554,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/5622d3f0-fa44-4c54-9130-3b3e4943577c/download/-1.7.24-30.9.24.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620111531id_/https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/5622d3f0-fa44-4c54-9130-3b3e4943577c/download/-1.7.24-30.9.24.xlsx",
+      "bytes": 36106,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/2b2cf3e6-b980-493f-b83f-376b4edb94d6/download/-2015-24-0578.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620112321id_/https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/2b2cf3e6-b980-493f-b83f-376b4edb94d6/download/-2015-24-0578.pdf",
+      "bytes": 134364,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/02e2a2ff-8f6c-42d8-ab78-e343af324b7e/download/-2015-24-0578.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620113808id_/https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/02e2a2ff-8f6c-42d8-ab78-e343af324b7e/download/-2015-24-0578.pdf",
+      "bytes": 178825,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/b70a7203-675a-4e99-b8eb-5af5d602979a/download/-07-09.2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620115707id_/https://www.odata.org.il/dataset/cb60781a-d0e1-4c12-b9c5-dc7ce73600e7/resource/b70a7203-675a-4e99-b8eb-5af5d602979a/download/-07-09.2024.xlsx",
+      "bytes": 57216,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1e72dd9b-0689-4b53-b238-9e62068412c0/resource/90a06895-fa8c-4d0f-befe-08aa44b8e1d7/download/-2025-29042025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620120559id_/https://www.odata.org.il/dataset/1e72dd9b-0689-4b53-b238-9e62068412c0/resource/90a06895-fa8c-4d0f-befe-08aa44b8e1d7/download/-2025-29042025.xlsx",
+      "bytes": 80118,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/9ac3d37a-aa7e-403c-a564-dbbf50c47f67/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620122043id_/https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/9ac3d37a-aa7e-403c-a564-dbbf50c47f67/download/-2024.xlsx",
+      "bytes": 191385,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/8f586143-655f-43d9-8220-6ed60a477449/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620123923id_/https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/8f586143-655f-43d9-8220-6ed60a477449/download/-2024.pdf",
+      "bytes": 207064,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/7add18ed-5aef-438c-8ba3-378cc6662aa3/download/-2024_-_.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620125037id_/https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/7add18ed-5aef-438c-8ba3-378cc6662aa3/download/-2024_-_.xlsx",
+      "bytes": 44623,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/4db8fbc1-57b4-4d4f-a88c-7e379b982c82/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620130223id_/https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/4db8fbc1-57b4-4d4f-a88c-7e379b982c82/download/-2024.xlsx",
+      "bytes": 68709,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ec4e653e-edf9-483f-8690-900fa082763b/resource/25e41a9a-9b70-45a0-81bf-746f231a11ce/download/-4-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620132347id_/https://www.odata.org.il/dataset/ec4e653e-edf9-483f-8690-900fa082763b/resource/25e41a9a-9b70-45a0-81bf-746f231a11ce/download/-4-2024.xlsx",
+      "bytes": 36211,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/67002be1-ca9a-4792-8bf3-e312fe5ec304/resource/8a6cc9bb-6328-4f75-a5f8-c1c7849ba7a4/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620132747id_/https://www.odata.org.il/dataset/67002be1-ca9a-4792-8bf3-e312fe5ec304/resource/8a6cc9bb-6328-4f75-a5f8-c1c7849ba7a4/download/-.pdf",
+      "bytes": 144312,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/b47e47df-841e-4adc-bbf2-4c50c9583487/download/-2019.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620132906id_/https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/b47e47df-841e-4adc-bbf2-4c50c9583487/download/-2019.pdf",
+      "bytes": 66068,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3771a987-0bde-424c-bf27-316881c69264/resource/f28a1129-5472-4d66-b935-16352e224d9e/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620133340id_/https://www.odata.org.il/dataset/3771a987-0bde-424c-bf27-316881c69264/resource/f28a1129-5472-4d66-b935-16352e224d9e/download/-2025.xlsx",
+      "bytes": 37157,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/a4d8927d-31e6-4610-aabf-039ddaa9abe2/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620134449id_/https://www.odata.org.il/dataset/d997ffda-aa5b-4bd5-b032-43270abd0b75/resource/a4d8927d-31e6-4610-aabf-039ddaa9abe2/download/-.pdf",
+      "bytes": 359055,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/5cff5419-9390-4915-b8b1-7172fc6cff59/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620140744id_/https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/5cff5419-9390-4915-b8b1-7172fc6cff59/download/-2024.pdf",
+      "bytes": 130251,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/90945a0e-4daf-4ce1-8bba-59972271e75e/resource/947b9724-37fa-457f-b13b-bec3ee0325e4/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620141124id_/https://www.odata.org.il/dataset/90945a0e-4daf-4ce1-8bba-59972271e75e/resource/947b9724-37fa-457f-b13b-bec3ee0325e4/download/-2024.pdf",
+      "bytes": 150490,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/8311f918-673e-43ad-be62-763fb70bbe09/download/-4-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620141424id_/https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/8311f918-673e-43ad-be62-763fb70bbe09/download/-4-2024.xlsx",
+      "bytes": 22915,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/f5183e4d-d670-4510-acc4-d74154b7614d/resource/2d013746-177e-4122-bcd4-8b359d4cd869/download/-2023-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620141805id_/https://www.odata.org.il/dataset/f5183e4d-d670-4510-acc4-d74154b7614d/resource/2d013746-177e-4122-bcd4-8b359d4cd869/download/-2023-.xlsx",
+      "bytes": 27757,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/91ba88e6-2161-4d36-801e-6c7a5a3ac9f3/download/-2-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620142534id_/https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/91ba88e6-2161-4d36-801e-6c7a5a3ac9f3/download/-2-2024.xlsx",
+      "bytes": 19598,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/24dcf68e-1d43-4567-9687-c07de3faee0f/resource/5ca2de10-84bb-46e5-9318-29d423079d39/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620143131id_/https://www.odata.org.il/dataset/24dcf68e-1d43-4567-9687-c07de3faee0f/resource/5ca2de10-84bb-46e5-9318-29d423079d39/download/-.pdf",
+      "bytes": 5372522,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c5148cda-93f7-4581-ad00-cfc060a25928/resource/aca3dc34-04b3-4362-8942-9b7ae40260ee/download/-11.22-2.23.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620145716id_/https://www.odata.org.il/dataset/c5148cda-93f7-4581-ad00-cfc060a25928/resource/aca3dc34-04b3-4362-8942-9b7ae40260ee/download/-11.22-2.23.pdf",
+      "bytes": 20907925,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/24dcf68e-1d43-4567-9687-c07de3faee0f/resource/6b893204-3533-4209-8ef3-f0ee05d4ee48/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620150948id_/https://www.odata.org.il/dataset/24dcf68e-1d43-4567-9687-c07de3faee0f/resource/6b893204-3533-4209-8ef3-f0ee05d4ee48/download/-.pdf",
+      "bytes": 2170434,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b0f93de6-1eae-4508-a78d-20a226046688/resource/f2acb0d7-9615-41b3-9684-edcfe96546b7/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620153600id_/https://www.odata.org.il/dataset/b0f93de6-1eae-4508-a78d-20a226046688/resource/f2acb0d7-9615-41b3-9684-edcfe96546b7/download/-2025.xlsx",
+      "bytes": 31121,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3b16fb1c-1980-4239-8cb6-ce897d843030/resource/f5c1a0e8-7962-4b94-8cf1-dcbfe12a27e7/download/-1-12-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620154555id_/https://www.odata.org.il/dataset/3b16fb1c-1980-4239-8cb6-ce897d843030/resource/f5c1a0e8-7962-4b94-8cf1-dcbfe12a27e7/download/-1-12-2024.xlsx",
+      "bytes": 97435,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a848d953-353d-4734-9421-bba13433f2c1/resource/f56e3c14-ced9-45b1-b8a6-de5d7f887a22/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620155221id_/https://www.odata.org.il/dataset/a848d953-353d-4734-9421-bba13433f2c1/resource/f56e3c14-ced9-45b1-b8a6-de5d7f887a22/download/-.xlsx",
+      "bytes": 37059,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/52af35ff-aa6d-453e-bec6-1d873d40fd70/resource/c89ffcee-2cc8-4af8-8131-56518ad41894/download/-01-03.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620155701id_/https://www.odata.org.il/dataset/52af35ff-aa6d-453e-bec6-1d873d40fd70/resource/c89ffcee-2cc8-4af8-8131-56518ad41894/download/-01-03.2025.xlsx",
+      "bytes": 28395,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b9b3c2ca-8892-4c7e-b091-1fdcea1dff9a/resource/bc90c266-5b05-4a1e-8c6c-f592a88a8cdd/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620155937id_/https://www.odata.org.il/dataset/b9b3c2ca-8892-4c7e-b091-1fdcea1dff9a/resource/bc90c266-5b05-4a1e-8c6c-f592a88a8cdd/download/-.pdf",
+      "bytes": 1531316,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/45de9e5b-4b95-42f4-bf20-e345faf6e260/download/-3-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620170355id_/https://www.odata.org.il/dataset/c2d22f7c-fef7-45e1-bdca-f114c2746721/resource/45de9e5b-4b95-42f4-bf20-e345faf6e260/download/-3-2024.xlsx",
+      "bytes": 22524,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7947ca61-a146-4afe-bd91-23899613a65e/resource/9ce8a9b7-fb78-4248-9477-a3cb3392f678/download/-4-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620170449id_/https://www.odata.org.il/dataset/7947ca61-a146-4afe-bd91-23899613a65e/resource/9ce8a9b7-fb78-4248-9477-a3cb3392f678/download/-4-2024.xlsx",
+      "bytes": 27349,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1142c74d-8781-4d40-be5b-e14baadbb23c/resource/0c1f30f0-fd08-4565-b0bd-6d2314da6231/download/-1-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620171154id_/https://www.odata.org.il/dataset/1142c74d-8781-4d40-be5b-e14baadbb23c/resource/0c1f30f0-fd08-4565-b0bd-6d2314da6231/download/-1-2025.xlsx",
+      "bytes": 68830,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a848d953-353d-4734-9421-bba13433f2c1/resource/73c3d805-984b-4cfa-bd4d-7c12e383481f/download/doc300325-30032025090254.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620175504id_/https://www.odata.org.il/dataset/a848d953-353d-4734-9421-bba13433f2c1/resource/73c3d805-984b-4cfa-bd4d-7c12e383481f/download/doc300325-30032025090254.pdf",
+      "bytes": 154103,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e58e1744-d251-469e-8a13-ebe37fda097f/resource/21a1a62b-a4ed-4960-9ef1-96f0d2a0b54c/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620185003id_/https://www.odata.org.il/dataset/e58e1744-d251-469e-8a13-ebe37fda097f/resource/21a1a62b-a4ed-4960-9ef1-96f0d2a0b54c/download/-2024.pdf",
+      "bytes": 11113112,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/7947ca61-a146-4afe-bd91-23899613a65e/resource/806d9b45-2081-4aa8-88d4-7dcd991de6b9/download/-4-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620185107id_/https://www.odata.org.il/dataset/7947ca61-a146-4afe-bd91-23899613a65e/resource/806d9b45-2081-4aa8-88d4-7dcd991de6b9/download/-4-2024.xlsx",
+      "bytes": 36211,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3771a987-0bde-424c-bf27-316881c69264/resource/04d1fc22-241b-4630-9e6a-2ee763501d37/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620190514id_/https://www.odata.org.il/dataset/3771a987-0bde-424c-bf27-316881c69264/resource/04d1fc22-241b-4630-9e6a-2ee763501d37/download/-.pdf",
+      "bytes": 170167,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e58e1744-d251-469e-8a13-ebe37fda097f/resource/a909cada-4ef1-4390-abc9-8036000b4424/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250620194514id_/https://www.odata.org.il/dataset/e58e1744-d251-469e-8a13-ebe37fda097f/resource/a909cada-4ef1-4390-abc9-8036000b4424/download/-.pdf",
+      "bytes": 434064,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/b76be26f-ecb8-465c-8781-4f52aaf4e5ad/resource/7260e0ea-3c8a-4301-b209-41d69fa72099/download/-2024_-_.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250620200703id_/https://www.odata.org.il/dataset/b76be26f-ecb8-465c-8781-4f52aaf4e5ad/resource/7260e0ea-3c8a-4301-b209-41d69fa72099/download/-2024_-_.xlsx",
+      "bytes": 44623,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/2d4e0048-de68-40bd-9327-c949276e094d/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250621014015id_/https://www.odata.org.il/dataset/c084588e-f4f1-4c55-9d8f-f1f78fcfb16a/resource/2d4e0048-de68-40bd-9327-c949276e094d/download/-2024.pdf",
+      "bytes": 2432233,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d771b635-f305-46e0-97a6-7128956d64b5/resource/d2b71eb1-3e4d-45ff-8545-839bb9b452d5/download/-2-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250721140951id_/https://www.odata.org.il/dataset/d771b635-f305-46e0-97a6-7128956d64b5/resource/d2b71eb1-3e4d-45ff-8545-839bb9b452d5/download/-2-2025.xlsx",
+      "bytes": 80673,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/e391fa83-d95e-460f-8c99-f6c15da20ddd/resource/69103796-f560-41f9-8f7b-54d03f879022/download/-2-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250721140957id_/https://www.odata.org.il/dataset/e391fa83-d95e-460f-8c99-f6c15da20ddd/resource/69103796-f560-41f9-8f7b-54d03f879022/download/-2-2025.xlsx",
+      "bytes": 34303,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0b020415-bea9-4d7f-825f-114a3b790748/resource/ac0a7786-969d-416f-bfde-7672e8779c7d/download/-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250721150009id_/https://www.odata.org.il/dataset/0b020415-bea9-4d7f-825f-114a3b790748/resource/ac0a7786-969d-416f-bfde-7672e8779c7d/download/-2025.pdf",
+      "bytes": 5213486,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0b020415-bea9-4d7f-825f-114a3b790748/resource/8a3595a0-7f4d-44fe-bc6e-5309a256cd6d/download/-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250721151338id_/https://www.odata.org.il/dataset/0b020415-bea9-4d7f-825f-114a3b790748/resource/8a3595a0-7f4d-44fe-bc6e-5309a256cd6d/download/-2025.pdf",
+      "bytes": 4958335,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/32b87853-bcba-4551-bafa-dd696b32afd2/resource/46d01ef2-9932-42da-ab6c-d7c11b7f0316/download/-2-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250721151347id_/https://www.odata.org.il/dataset/32b87853-bcba-4551-bafa-dd696b32afd2/resource/46d01ef2-9932-42da-ab6c-d7c11b7f0316/download/-2-2025.xlsx",
+      "bytes": 35322,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/fea87add-1a81-4923-8a1c-dc6f9f562880/resource/10a444fe-d160-4d9d-b64f-ab80ff8b08e7/download/yodevcalendar1_4_24-30_6_25.csv",
+      "archiveUrl": "http://web.archive.org/web/20250721153215id_/https://www.odata.org.il/dataset/fea87add-1a81-4923-8a1c-dc6f9f562880/resource/10a444fe-d160-4d9d-b64f-ab80ff8b08e7/download/yodevcalendar1_4_24-30_6_25.csv",
+      "bytes": 428035,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6cde12de-b563-4666-9532-e69716574a45/resource/d7862161-514f-4c7a-bd71-d04b287975b3/download/-2025.csv",
+      "archiveUrl": "http://web.archive.org/web/20250721153939id_/https://www.odata.org.il/dataset/6cde12de-b563-4666-9532-e69716574a45/resource/d7862161-514f-4c7a-bd71-d04b287975b3/download/-2025.csv",
+      "bytes": 92375,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/0a13e1b2-99b9-4b0f-aafb-b7ebf9abff84/resource/cd21df8a-24d1-4c7f-8f08-4f412aed10c1/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250721161307id_/https://www.odata.org.il/dataset/0a13e1b2-99b9-4b0f-aafb-b7ebf9abff84/resource/cd21df8a-24d1-4c7f-8f08-4f412aed10c1/download/-2025.xlsx",
+      "bytes": 23958,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/36bc967d-1d31-4157-b219-54f958df0de8/resource/02a868b4-962a-4701-b96d-9c48b6d46245/download/-1-2025-10-25.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250730170130id_/https://www.odata.org.il/dataset/36bc967d-1d31-4157-b219-54f958df0de8/resource/02a868b4-962a-4701-b96d-9c48b6d46245/download/-1-2025-10-25.pdf",
+      "bytes": 214603,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/ce717a23-b2b3-4846-9bc0-122713e79c61/resource/9e1cc459-b919-44f6-850d-75eb295c6426/download/-2025-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250730171409id_/https://www.odata.org.il/dataset/ce717a23-b2b3-4846-9bc0-122713e79c61/resource/9e1cc459-b919-44f6-850d-75eb295c6426/download/-2025-.xlsx",
+      "bytes": 65008,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/36bc967d-1d31-4157-b219-54f958df0de8/resource/f305f4be-e3e4-46c5-a21e-35eb27e0447c/download/-__________2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250730193121id_/https://www.odata.org.il/dataset/36bc967d-1d31-4157-b219-54f958df0de8/resource/f305f4be-e3e4-46c5-a21e-35eb27e0447c/download/-__________2025.xlsx",
+      "bytes": 28563,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/bd586abb-ecc8-4ca4-b5e0-d7a7cd2022e9/resource/f204ba29-6595-42e9-8a72-ea3f8da4ed13/download/-2024-.csv",
+      "archiveUrl": "http://web.archive.org/web/20250806043258id_/https://www.odata.org.il/dataset/bd586abb-ecc8-4ca4-b5e0-d7a7cd2022e9/resource/f204ba29-6595-42e9-8a72-ea3f8da4ed13/download/-2024-.csv",
+      "bytes": 91547,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8e8d33a9-d118-4471-bf53-763857f4e235/resource/308212b1-bd03-4f9a-b5ea-f3dcc9d576c0/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250806211650id_/https://www.odata.org.il/dataset/8e8d33a9-d118-4471-bf53-763857f4e235/resource/308212b1-bd03-4f9a-b5ea-f3dcc9d576c0/download/-2024.pdf",
+      "bytes": 590095,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/4bbd621a-3ed4-4a86-8db3-bf36f264e2e3/resource/fb65c363-8e52-4df0-a872-043bfac99b1d/download/-2015-25-0356-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250806214045id_/https://www.odata.org.il/dataset/4bbd621a-3ed4-4a86-8db3-bf36f264e2e3/resource/fb65c363-8e52-4df0-a872-043bfac99b1d/download/-2015-25-0356-.pdf",
+      "bytes": 182546,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/1df3205c-c435-4e8d-b429-6178675af9e3/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250814134315id_/https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/1df3205c-c435-4e8d-b429-6178675af9e3/download/-.pdf",
+      "bytes": 117620,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/7fb12ef1-7d54-4711-9749-e18ee78ed276/download/-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250814135221id_/https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/7fb12ef1-7d54-4711-9749-e18ee78ed276/download/-2024.pdf",
+      "bytes": 189074,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/acc5f0e8-78f3-4887-b998-90a07ad0fcaa/download/-2023.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250814151759id_/https://www.odata.org.il/dataset/8a4b85c7-69c6-41ac-9085-5db98d7b5a03/resource/acc5f0e8-78f3-4887-b998-90a07ad0fcaa/download/-2023.pdf",
+      "bytes": 211230,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a332d8b8-cd30-43f0-bcd5-96064de15ab6/resource/60289a25-1edf-4a93-9f18-0e78f4f56358/download/-2-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250817102556id_/https://www.odata.org.il/dataset/a332d8b8-cd30-43f0-bcd5-96064de15ab6/resource/60289a25-1edf-4a93-9f18-0e78f4f56358/download/-2-2025.xlsx",
+      "bytes": 27534,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3bba6457-4153-46f4-99cc-9accc472b692/resource/a369f5d8-4cf9-4965-a6bc-0624af9f6fd6/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250820110127id_/https://www.odata.org.il/dataset/3bba6457-4153-46f4-99cc-9accc472b692/resource/a369f5d8-4cf9-4965-a6bc-0624af9f6fd6/download/-.pdf",
+      "bytes": 141730,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5070831f-6995-40d2-bbf7-60243ac4dc31/resource/d98d0238-a2d7-48d1-b109-3ea224586c45/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250820125026id_/https://www.odata.org.il/dataset/5070831f-6995-40d2-bbf7-60243ac4dc31/resource/d98d0238-a2d7-48d1-b109-3ea224586c45/download/-.xlsx",
+      "bytes": 56015,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/171e597c-ec11-4dff-bb37-7e7cc4bf7eef/resource/240268b9-b19e-4635-a9b0-a805a6087883/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250820125824id_/https://www.odata.org.il/dataset/171e597c-ec11-4dff-bb37-7e7cc4bf7eef/resource/240268b9-b19e-4635-a9b0-a805a6087883/download/-.pdf",
+      "bytes": 141730,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/3cc5bde1-6537-4dcd-86c5-1370ad6d7455/download/-04.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250821153548id_/https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/3cc5bde1-6537-4dcd-86c5-1370ad6d7455/download/-04.2025.xlsx",
+      "bytes": 22203,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a07e2f36-1dd8-481e-b877-ec434d1e1e8b/resource/5b7505ee-13ae-42ad-99fc-f14365a4d414/download/-luah-updated.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250821154200id_/https://www.odata.org.il/dataset/a07e2f36-1dd8-481e-b877-ec434d1e1e8b/resource/5b7505ee-13ae-42ad-99fc-f14365a4d414/download/-luah-updated.xlsx",
+      "bytes": 128502,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/8faa4d8c-7e39-44e1-a8db-9849a2b801af/download/-06.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250821160229id_/https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/8faa4d8c-7e39-44e1-a8db-9849a2b801af/download/-06.2025.xlsx",
+      "bytes": 24618,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/6e9273c8-bf62-46a1-ab0b-f9824ed3acea/download/-05.2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250821173634id_/https://www.odata.org.il/dataset/91f1eb39-bc89-4316-85a3-a837f1d7acfa/resource/6e9273c8-bf62-46a1-ab0b-f9824ed3acea/download/-05.2025.xlsx",
+      "bytes": 26535,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/66aba9c5-03c8-4300-8e62-bcae5dbb4c24/resource/ffc010d5-9ef1-4968-aec4-f88e8e7c0037/download/-2-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250822013652id_/https://www.odata.org.il/dataset/66aba9c5-03c8-4300-8e62-bcae5dbb4c24/resource/ffc010d5-9ef1-4968-aec4-f88e8e7c0037/download/-2-2025.xlsx",
+      "bytes": 32185,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/e8a7277e-70d7-485c-bb3d-3c29649304ad/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250823180747id_/https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/e8a7277e-70d7-485c-bb3d-3c29649304ad/download/-.pdf",
+      "bytes": 114551,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/5a2d183a-af43-42db-bc74-394e16cb90dd/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250823184618id_/https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/5a2d183a-af43-42db-bc74-394e16cb90dd/download/-2025.xlsx",
+      "bytes": 33401,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/ce2332be-baf0-4814-93b6-e438be472347/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250823190124id_/https://www.odata.org.il/dataset/6c23f6b0-11ce-4deb-bf30-a321627f8099/resource/ce2332be-baf0-4814-93b6-e438be472347/download/-2024.xlsx",
+      "bytes": 78532,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/cb7db42c-6c7f-4f3a-a0e1-20f4bf2851d4/resource/25825a89-2a21-4fbc-b077-77e4fb4db098/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250831114817id_/https://www.odata.org.il/dataset/cb7db42c-6c7f-4f3a-a0e1-20f4bf2851d4/resource/25825a89-2a21-4fbc-b077-77e4fb4db098/download/-.xlsx",
+      "bytes": 36507,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/70e42aee-f7fd-42cf-9ee0-895cda42b546/resource/60f19c81-be43-4544-9968-200e84c115fa/download/-0011-2025-0033-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20250901150704id_/https://www.odata.org.il/dataset/70e42aee-f7fd-42cf-9ee0-895cda42b546/resource/60f19c81-be43-4544-9968-200e84c115fa/download/-0011-2025-0033-2025.pdf",
+      "bytes": 194706,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/70e42aee-f7fd-42cf-9ee0-895cda42b546/resource/4f05ea2c-0e0e-492c-841d-c4fc52cc441e/download/-2025.-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250901154356id_/https://www.odata.org.il/dataset/70e42aee-f7fd-42cf-9ee0-895cda42b546/resource/4f05ea2c-0e0e-492c-841d-c4fc52cc441e/download/-2025.-.xlsx",
+      "bytes": 63134,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/23fd54d6-f5cd-4aef-9966-44371f43e253/resource/109954f2-7e9c-4a7d-ad72-351fe2b714f9/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250904213006id_/https://www.odata.org.il/dataset/23fd54d6-f5cd-4aef-9966-44371f43e253/resource/109954f2-7e9c-4a7d-ad72-351fe2b714f9/download/-.xlsx",
+      "bytes": 72399,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/1cf0d900-eb9f-4e05-80de-efba10d1304d/resource/8c5d990e-80de-4b39-a525-ccc5919780f2/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250904234412id_/https://www.odata.org.il/dataset/1cf0d900-eb9f-4e05-80de-efba10d1304d/resource/8c5d990e-80de-4b39-a525-ccc5919780f2/download/-2024.xlsx",
+      "bytes": 18643,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9a167b6c-bd15-41eb-ae80-f104010c605b/resource/7c98a1e4-d8a6-41cd-b0e5-38a4151c44b0/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250905025316id_/https://www.odata.org.il/dataset/9a167b6c-bd15-41eb-ae80-f104010c605b/resource/7c98a1e4-d8a6-41cd-b0e5-38a4151c44b0/download/-2024.xlsx",
+      "bytes": 12736,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/3d8e9c4a-2f71-4725-a87d-bf0e570399c9/download/tmp9jf5kg1n.csv",
+      "archiveUrl": "http://web.archive.org/web/20250909184630id_/https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/3d8e9c4a-2f71-4725-a87d-bf0e570399c9/download/tmp9jf5kg1n.csv",
+      "bytes": 37355,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/a0acf322-c696-4db7-9b52-00d39a8c3f0e/download/tmpxfiy99wn.csv",
+      "archiveUrl": "http://web.archive.org/web/20250909190543id_/https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/a0acf322-c696-4db7-9b52-00d39a8c3f0e/download/tmpxfiy99wn.csv",
+      "bytes": 37355,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/80cfabf3-65bb-44cf-a443-e5157af34a0c/download/tmppyxezo3n.csv",
+      "archiveUrl": "http://web.archive.org/web/20250909200525id_/https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/80cfabf3-65bb-44cf-a443-e5157af34a0c/download/tmppyxezo3n.csv",
+      "bytes": 37355,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/d8c40c8d-bfb6-4aeb-89fa-267bfcb80522/download/-1.7.24-30.9.24.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20250913213227id_/https://www.odata.org.il/dataset/92965ee9-547e-41ec-a8c3-f4ec38deee05/resource/d8c40c8d-bfb6-4aeb-89fa-267bfcb80522/download/-1.7.24-30.9.24.xlsx",
+      "bytes": 36106,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/daa8901c-d281-4bcc-ad1c-90aedfb57bfe/resource/62365d51-670d-4798-894a-8a2ff7e1e8bd/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251012022739id_/https://www.odata.org.il/dataset/daa8901c-d281-4bcc-ad1c-90aedfb57bfe/resource/62365d51-670d-4798-894a-8a2ff7e1e8bd/download/-.pdf",
+      "bytes": 66603,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/392ef491-4321-4c13-a354-9bf4a4bb09ed/resource/f9478b0e-ee35-4c41-9af2-40bf187f1dc4/download/-2025-19-25.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027120043id_/https://www.odata.org.il/dataset/392ef491-4321-4c13-a354-9bf4a4bb09ed/resource/f9478b0e-ee35-4c41-9af2-40bf187f1dc4/download/-2025-19-25.pdf",
+      "bytes": 236283,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/dbb442ec-d421-426c-8561-1956dd50f449/resource/c9052b74-3b96-4464-85e9-26257cf4a92f/download/-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027120531id_/https://www.odata.org.il/dataset/dbb442ec-d421-426c-8561-1956dd50f449/resource/c9052b74-3b96-4464-85e9-26257cf4a92f/download/-2025.pdf",
+      "bytes": 386823,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/8809f97d-1d14-43f3-999a-e092001eaa5a/download/-0239.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027121452id_/https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/8809f97d-1d14-43f3-999a-e092001eaa5a/download/-0239.pdf",
+      "bytes": 146761,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/224cf8e3-bea3-428b-8365-44564c96dd45/download/-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027122030id_/https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/224cf8e3-bea3-428b-8365-44564c96dd45/download/-2025.pdf",
+      "bytes": 719718,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/dbb442ec-d421-426c-8561-1956dd50f449/resource/4dddcb8a-76d5-4a23-9000-68995705ce7e/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20251027123146id_/https://www.odata.org.il/dataset/dbb442ec-d421-426c-8561-1956dd50f449/resource/4dddcb8a-76d5-4a23-9000-68995705ce7e/download/-2025.xlsx",
+      "bytes": 21946,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/392ef491-4321-4c13-a354-9bf4a4bb09ed/resource/7bc92ea8-0287-4413-bc7e-031cd82c49d3/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20251027123233id_/https://www.odata.org.il/dataset/392ef491-4321-4c13-a354-9bf4a4bb09ed/resource/7bc92ea8-0287-4413-bc7e-031cd82c49d3/download/-2025.xlsx",
+      "bytes": 11524,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9b1d147e-dd00-42dd-a3bb-c2e12dd13758/resource/d31c3373-267f-4f05-b9d7-137084287a4a/download/-2025-19-25.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027150159id_/https://www.odata.org.il/dataset/9b1d147e-dd00-42dd-a3bb-c2e12dd13758/resource/d31c3373-267f-4f05-b9d7-137084287a4a/download/-2025-19-25.pdf",
+      "bytes": 236283,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/9b1d147e-dd00-42dd-a3bb-c2e12dd13758/resource/0d35fcd7-3ef1-43c1-aec6-adc4279bcd8a/download/-.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027151157id_/https://www.odata.org.il/dataset/9b1d147e-dd00-42dd-a3bb-c2e12dd13758/resource/0d35fcd7-3ef1-43c1-aec6-adc4279bcd8a/download/-.pdf",
+      "bytes": 10344260,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/b80afc3e-23c5-47b7-9828-1ee093c6b3ba/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20251027222138id_/https://www.odata.org.il/dataset/d4270fac-a064-4ee6-b04d-26d6bfdce00c/resource/b80afc3e-23c5-47b7-9828-1ee093c6b3ba/download/-2025.xlsx",
+      "bytes": 49250,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/3134ad90-45f3-4bab-8e65-6a4b9959160e/resource/49791dd3-f92d-4a49-a033-776cd056854e/download/-2-2024.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251027230132id_/https://www.odata.org.il/dataset/3134ad90-45f3-4bab-8e65-6a4b9959160e/resource/49791dd3-f92d-4a49-a033-776cd056854e/download/-2-2024.pdf",
+      "bytes": 386791,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/d0d574b6-bfe3-4eda-a7d1-0c646f764260/resource/78ebcaa5-7f24-4e81-8885-b2d9f1f31781/download/-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20251029071810id_/https://www.odata.org.il/dataset/d0d574b6-bfe3-4eda-a7d1-0c646f764260/resource/78ebcaa5-7f24-4e81-8885-b2d9f1f31781/download/-2025.pdf",
+      "bytes": 386823,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/a9cdc658-e86d-4c30-bcdc-0613ac8f8891/resource/19495313-c9c4-415e-8f5a-f2d8a2c061e6/download/-.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20251216193953id_/https://www.odata.org.il/dataset/a9cdc658-e86d-4c30-bcdc-0613ac8f8891/resource/19495313-c9c4-415e-8f5a-f2d8a2c061e6/download/-.xlsx",
+      "bytes": 37803,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/f94fa136-40df-4b0f-9d2f-e1eea6c8593b/download/-2024-2025.pdf",
+      "archiveUrl": "http://web.archive.org/web/20260203071413id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/f94fa136-40df-4b0f-9d2f-e1eea6c8593b/download/-2024-2025.pdf",
+      "bytes": 100781,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/df1b6836-22d9-4d04-a986-db2e74c17f86/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20260203071440id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/df1b6836-22d9-4d04-a986-db2e74c17f86/download/-2024.xlsx",
+      "bytes": 23164,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/01248e65-5105-44db-bb9b-042002c3907c/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20260203071504id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/01248e65-5105-44db-bb9b-042002c3907c/download/-2025.xlsx",
+      "bytes": 32451,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/82764bd0-ed20-4568-8c18-1592e395c551/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20260203071532id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/82764bd0-ed20-4568-8c18-1592e395c551/download/-2025.xlsx",
+      "bytes": 19963,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/e71526ff-da9f-45c1-b509-2876fc34bbfb/download/-2024.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20260203071554id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/e71526ff-da9f-45c1-b509-2876fc34bbfb/download/-2024.xlsx",
+      "bytes": 35145,
+      "readAt": "2026-08-13"
+    },
+    {
+      "resourceUrl": "https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/d843fc33-81d1-4ad6-a00e-a85c358ac688/download/-2025.xlsx",
+      "archiveUrl": "http://web.archive.org/web/20260203071620id_/https://www.odata.org.il/dataset/5708743e-8741-4734-8571-5da0ff72dddf/resource/d843fc33-81d1-4ad6-a00e-a85c358ac688/download/-2025.xlsx",
+      "bytes": 46586,
+      "readAt": "2026-08-13"
+    }
+  ]
+}

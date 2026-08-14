@@ -60,13 +60,41 @@ describe('scanRegulations', () => {
     expect(findings).toHaveLength(0);
   });
 
-  it('flags a year-over-year jump using the prior-year row', () => {
-    const findings = scanRegulations(
-      [row({ year: 2023, revised: 5_000_000 }), row({ year: 2024, revised: 40_000_000 })],
+  it('compares year over year on the allocated figure, not the revised one', () => {
+    // Allocated against allocated: two numbers from the same stage of the year.
+    const enacted = scanRegulations(
+      [
+        row({ year: 2023, allocated: 5_000_000, revised: 5_000_000 }),
+        row({ year: 2024, allocated: 40_000_000, revised: 40_000_000 }),
+      ],
       'transport',
       2025,
     );
-    expect(findings.map((f) => f.ruleId)).toContain('yoy_jump');
+    expect(enacted.map((f) => f.ruleId)).toContain('enacted_jump');
+  });
+
+  it('does not call ordinary budget movement a jump between years', () => {
+    // The defect this replaced: a closed year's revised budget is what remained
+    // after transfers, an open year's is its opening allocation, and comparing
+    // them published "₪1M → ₪63.5M" on a line whose allocation barely moved.
+    const findings = scanRegulations(
+      [
+        row({ year: 2025, allocated: 37_740_000, revised: 1_000_000 }),
+        row({ year: 2026, allocated: 37_990_000, revised: 37_990_000 }),
+      ],
+      'transport',
+      2025,
+    );
+    expect(findings.map((f) => f.ruleId)).not.toContain('enacted_jump');
+  });
+
+  it('reports a large mid-year addition as its own, lawful pattern', () => {
+    const findings = scanRegulations(
+      [row({ year: 2024, allocated: 10_000_000, revised: 90_000_000, executed: 80_000_000 })],
+      'transport',
+      2025,
+    );
+    expect(findings.map((f) => f.ruleId)).toContain('in_year_reinforcement');
   });
 
   it('flags direct execution from a reserve regulation', () => {

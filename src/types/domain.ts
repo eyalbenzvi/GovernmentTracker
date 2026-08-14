@@ -414,6 +414,8 @@ export interface DiaryProfile {
   entryCount: number;
   datedEntryCount: number;
   timedEntryCount: number;
+  /** Rows whose stated time may feed a clock-time rule; 00:00 all-day markers cannot. */
+  usableClockTimeCount: number;
   firstDate: string | null;
   lastDate: string | null;
   datasetIds: string[];

@@ -460,6 +460,7 @@ export const diaryInsightsSchema = z.object({
       entryCount: z.number().int().min(0),
       datedEntryCount: z.number().int().min(0),
       timedEntryCount: z.number().int().min(0),
+      usableClockTimeCount: z.number().int().min(0),
       firstDate: isoDate.nullable(),
       lastDate: isoDate.nullable(),
       datasetIds: z.array(z.string().min(1)),
@@ -564,6 +565,11 @@ export const diariesIndexSchema = z.object({
       roleLabelHe: z.string().min(1),
       periodLabel: z.string().min(1).nullable(),
       machineReadableEntries: z.number().int().min(0),
+      // Written from the next collection onward; absent in data collected before
+      // the provenance gap was found, so optional rather than required.
+      archiveCopiesRead: z
+        .array(z.object({ resourceUrl: httpUrl, archiveUrl: httpUrl }))
+        .optional(),
       skippedEmptyRows: z.number().int().min(0),
       outOfWindowRows: z.number().int().min(0),
       truncated: z.boolean(),
