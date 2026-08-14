@@ -80,10 +80,19 @@ interface CategoriesSeedFile {
   categories: CategorySeed[];
 }
 
+/**
+ * Bidirectional formatting controls — marks, embeddings, overrides and isolates.
+ * The PDF text layer of a Hebrew diary is full of them, and 9,197 collected rows
+ * carry at least one. They are invisible, so a subject that reads exactly
+ * "פגישה" can fail an exact comparison against "פגישה" for reasons no one can
+ * see on screen.
+ */
+const BIDI_CONTROLS = /[‎‏‪-‮⁦-⁩]/g;
+
 export function normalizeSubject(subject: string): string {
   return subject
     .replace(/["'״׳]/g, '"')
-    .replace(/[‏‎]/g, '')
+    .replace(BIDI_CONTROLS, '')
     .replace(/\s+/g, ' ')
     .trim();
 }

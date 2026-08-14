@@ -1,0 +1,2038 @@
+{
+  "expert": "media",
+  "summary": "היומנים מכילים שתי משפחות שונות לגמרי של רשומות תקשורת, ואת ההפרדה ביניהן ראיתי כמשימה המרכזית שלי. המשפחה הראשונה היא הופעה תקשורתית ועבודת דוברות: 'ריאיון ערוץ 14', 'ריאיון - רדיו קול ברמה', 'שיחת רקע עיתונאי', 'פ.ע דוברים', 'זמן הסברה', 'רכש מדיה', 'קמפיין עלייה', 'צילומי תדמית', וכן עשרות עיתונאים המופיעים בשמם - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13') ולעיתים כשורה חשופה ('עמית סגל'). המשפחה השנייה מגיעה כמעט כולה מיומני משרד התקשורת והיא מדיניות ורגולציה: 'חוק השידורים', 'שוק סיטונאי בזק', 'פיקוח הוט', 'אתרי סלולר', 'הרשות השנייה', 'עידן פלוס', 'שימוע רישיון הדואר'. אלה אינן הופעות תקשורתיות אלא עבודת רגולטור, ובאתר שקיפות ערבוב שלהן תיצור רושם שגוי שהשר מתראיין כשלמעשה הוא מסדיר שוק - ולכן הצעתי עבורן קטגוריה נפרדת. בנוסף אתרתי מלכוד מרכזי שנכנס ישירות לתחומי: 'ריאיון עבודה' (מיון מועמדים) מופיע כ-20 פעמים ואינו תקשורת כלל, ולכן הוספתי אותו במפורש לניהול פנימי כדי שיגבר על 'ריאיון'. באותה רוח נמנעתי מ'תדרוך' (ביומנים הוא כמעט תמיד ביטחוני או מדיני), מ'כתב' ו'כתבי' (נתפסים בתוך 'מכתב'/'מכתבי' בגלל תחילית מ), מ'עורך' (עורך דין), מ'שיווק' (שיווק קרקעות) ומ'פרסום' (פרסום מכרזים ודוחות).",
+  "keywords": [
+    {
+      "keyword": "ריאיון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "הכתיב הרווח ביומנים (24 מופעים). כמעט תמיד ראיון תקשורתי. המלכוד היחיד הוא 'ריאיון עבודה', ולכן הוספתי אותו כמילת מפתח ארוכה יותר שגוברת עליו."
+    },
+    {
+      "keyword": "ריאיונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צורת רבים של ריאיון; אין לה קריאה אחרת."
+    },
+    {
+      "keyword": "ראיון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חלופי שמופיע ביומנים (למשל 'הכנה לראיון'). נתפס גם בצורת 'לראיון' בזכות תחילית ל."
+    },
+    {
+      "keyword": "ראיונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים של הכתיב החלופי."
+    },
+    {
+      "keyword": "ריאיון עבודה",
+      "categoryId": "internal_management",
+      "confidence": "high",
+      "reasoning": "מלכוד ממשי: 'ריאיון עבודה לתפקיד רמ\"ט', 'ריאיון עבודה למשרת נהג' - מיון וגיוס עובדים, לא תקשורת. בזכות כלל ההתאמה הארוכה זו מגינה על 'ריאיון'."
+    },
+    {
+      "keyword": "ראיון עבודה",
+      "categoryId": "internal_management",
+      "confidence": "high",
+      "reasoning": "אותה הגנה בכתיב החלופי."
+    },
+    {
+      "keyword": "ריאיונות עבודה",
+      "categoryId": "internal_management",
+      "confidence": "high",
+      "reasoning": "רבים; מיון מועמדים, לא תקשורת."
+    },
+    {
+      "keyword": "הכנה לריאיון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "הכנה לקראת הופעה תקשורתית."
+    },
+    {
+      "keyword": "הכנה לראיון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אותו דבר בכתיב החלופי."
+    },
+    {
+      "keyword": "ריאיון טלפוני",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פורמט ראיון מפורש."
+    },
+    {
+      "keyword": "ריאיון רדיו",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פורמט ראיון מפורש."
+    },
+    {
+      "keyword": "הכנה לרדיו",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "הכנה לשידור רדיו."
+    },
+    {
+      "keyword": "עיתונאי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מופיע ביומנים גם כשורה עצמאית ('14:00 - עיתונאי/ת', 'פגישה עם עיתונאי'). התאמה נעצרת לפני '/', ולכן נתפס גם 'עיתונאי/ת'."
+    },
+    {
+      "keyword": "עיתונאית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צורת נקבה; 'פגישה עם עיתונאית בריטניה'."
+    },
+    {
+      "keyword": "עיתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "עיתונאיות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים נקבה."
+    },
+    {
+      "keyword": "עתונאי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר שמופיע ביומנים ('הכנה לתדרוך עתונאים')."
+    },
+    {
+      "keyword": "עתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר, רבים."
+    },
+    {
+      "keyword": "עתונאית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר, נקבה."
+    },
+    {
+      "keyword": "עיתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מילה חד-משמעית בתחום: 'לשכת העיתונות הממשלתית', 'פגוש את העיתונות'."
+    },
+    {
+      "keyword": "עתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר: 'הודעה לעתונות'."
+    },
+    {
+      "keyword": "לשכת העיתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "לע\"מ - צילומי לשכת העיתונות הממשלתית."
+    },
+    {
+      "keyword": "פגוש את העיתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם תוכנית ראיונות ותיקה; אין קריאה אחרת."
+    },
+    {
+      "keyword": "שיחת רקע",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פורמט מובהק של עבודה מול עיתונאים ('שיחת רקע עיתונאי', 'שיחת רקע עם דנה ירקצי - כתבת כלכלה כאן 11')."
+    },
+    {
+      "keyword": "שיחות רקע",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים; 'הכנה לשיחות רקע'."
+    },
+    {
+      "keyword": "פגישת רקע",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'קובי דהן כתב חרדים i24 פגישת רקע על הגיוס'."
+    },
+    {
+      "keyword": "מסיבת עיתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מונח סטנדרטי; לא הופיע במדגם אך מכליל היטב על פני 223 אלף שורות."
+    },
+    {
+      "keyword": "מסיבות עיתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "מסיבת עתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר."
+    },
+    {
+      "keyword": "תדרוך עיתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תדרוך תקשורתי. שימו לב: 'תדרוך' לבדו ביומנים הוא כמעט תמיד ביטחוני או מדיני, ולכן לא הצעתי אותו."
+    },
+    {
+      "keyword": "תדרוך עתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר, מופיע בפועל: 'הכנה לתדרוך עתונאים'."
+    },
+    {
+      "keyword": "תדריך עיתונאים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "וריאנט."
+    },
+    {
+      "keyword": "תדרוך תקשורתי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'תדרוך תקשורתי באנגלית' - עבודה מול תקשורת זרה."
+    },
+    {
+      "keyword": "תדרוך כתבי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'תדרוך כתבי מגזר'. נדיר, אך הצירוף חד-משמעי."
+    },
+    {
+      "keyword": "הודעה לעיתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מוצר דוברות מובהק."
+    },
+    {
+      "keyword": "הודעה לעתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "הכתיב שמופיע בפועל ביומן: 'הודעה לעתונות פילר'."
+    },
+    {
+      "keyword": "הודעות לעיתונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "כתבת",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'כתבת כלכלה כאן 11', 'כתבת לענייני חרדים', 'פגישה עם כתבת'. יכול גם להיות 'כתבה עיתונאית' וגם צורת פועל, ולכן medium. הימנעתי מ'כתב' ו'כתבי' - הם נתפסים בתוך 'מכתב' ו'מכתבי' בגלל תחילית מ."
+    },
+    {
+      "keyword": "כתבות",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "רבים; אותה אי-ודאות."
+    },
+    {
+      "keyword": "כתבה",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "יכול להיות פריט עיתונאי ('צילומי סינק עבור כתבה') אך גם צורת פועל. סימנתי low במכוון."
+    },
+    {
+      "keyword": "פרשן",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "פרשן תקשורתי; קיים גם 'פרשן' בהקשרים אחרים אך נדיר."
+    },
+    {
+      "keyword": "פרשנית",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'כתבת כלכלה/פרשנית מעריב, וואלה'."
+    },
+    {
+      "keyword": "פרשנים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "עורך ראשי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'גידו רן - העורך הראשי של ynet'. נמנעתי מ'עורך' לבדו בגלל 'עורך דין'."
+    },
+    {
+      "keyword": "העורך הראשי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צורה מיודעת פנימית שאינה נתפסת על ידי 'עורך ראשי'."
+    },
+    {
+      "keyword": "עורכת ראשית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'גלית חמי עורכת ראשית כלכליסט'."
+    },
+    {
+      "keyword": "סגן עורך",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'ניקי לוי - סגן עורך ידיעות אחרונות'."
+    },
+    {
+      "keyword": "עורך עיתון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צירוף חד-משמעי."
+    },
+    {
+      "keyword": "עורכת כלכלית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'עורכת כלכלית של ישראל היום'."
+    },
+    {
+      "keyword": "עיתון",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'סמי פרץ עיתון דה מרקר'. לרוב מזהה כלי תקשורת."
+    },
+    {
+      "keyword": "עיתונים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "אולפן",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אולפן שידור."
+    },
+    {
+      "keyword": "אולפני",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'אולפני וואלה - טל שלו'."
+    },
+    {
+      "keyword": "שידור חי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פורמט שידור; נתפס גם כ'בשידור חי' בזכות תחילית ב."
+    },
+    {
+      "keyword": "משדר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'ניצן חן - משדר אחדות'. לא מתנגש עם 'משדרות' כי אחריה אות עברית."
+    },
+    {
+      "keyword": "מהדורה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'מהדורה מרכזית', 'מהדורה 14'."
+    },
+    {
+      "keyword": "מהדורת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'מהדורת 12'."
+    },
+    {
+      "keyword": "מהדורה מרכזית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מהדורת החדשות המרכזית."
+    },
+    {
+      "keyword": "הקלטה",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'הקלטה ברדיוס', 'רדיו צפון, גדי נס, הקלטה', 'הקלטה אודי סגל'. יכולה גם להיות הקלטת ישיבה."
+    },
+    {
+      "keyword": "הקלטות",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "צילומי תדמית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צירוף מובהק של עבודת תדמית."
+    },
+    {
+      "keyword": "צילומי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "כל המופעים ביומנים תקשורתיים: 'צילומי סרטונים', 'צילומי השרים', 'צילומי סינק', 'צילומי לשכת העיתונות'. עדיין ייתכן צילום רפואי."
+    },
+    {
+      "keyword": "צילומים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "אותה הנמקה."
+    },
+    {
+      "keyword": "פוטואופ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תעתיק photo-op; מופיע ביומן כשורה עצמאית."
+    },
+    {
+      "keyword": "פוטו אופ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "וריאנט כתיב."
+    },
+    {
+      "keyword": "סרטון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'סרטון חזרה לחבל התקומה' - תוצר תקשורתי."
+    },
+    {
+      "keyword": "סרטונים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'צילומי סרטונים'."
+    },
+    {
+      "keyword": "תמונה משותפת",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "צילום משותף - פוטו אופ. יכול להיות גם אירוע טקסי."
+    },
+    {
+      "keyword": "מאגר תמונות",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "ניהול חומר צילומי בלשכה."
+    },
+    {
+      "keyword": "פאנל",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "הופעה בפאנל ציבורי; בבדיקה המופע היחיד היה פאנל בהקרנת סרט - כלומר אירוע/כנס ולא תקשורת. low במכוון."
+    },
+    {
+      "keyword": "וובינר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'הכנה לוובינר' - שידור מקוון; לעיתים מקצועי ולא תקשורתי."
+    },
+    {
+      "keyword": "פודקאסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פורמט תקשורתי חד-משמעי."
+    },
+    {
+      "keyword": "פודקאסטים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים."
+    },
+    {
+      "keyword": "הופעה תקשורתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צירוף מפורש."
+    },
+    {
+      "keyword": "אחד על אחד",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "שם פורמט ריאיון, אך הצירוף משמש גם לתיאור פגישה אישית רגילה. low במכוון."
+    },
+    {
+      "keyword": "ערוץ 14",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 12",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 13",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 7",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 11",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 20",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 10",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ 9",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם ערוץ טלוויזיה/רדיו כפי שהיומנים כותבים אותו. ערוץ 14 ו-12 הם הנפוצים ביותר במדגם."
+    },
+    {
+      "keyword": "ערוץ הכנסת",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "ערוץ שידור; לעיתים מופיע בהקשר של סיקור ועדות."
+    },
+    {
+      "keyword": "ערוץ הספורט",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "כלי תקשורת; בהקשרי משרד התרבות והספורט עשוי להיות עסקי-ספורטיבי."
+    },
+    {
+      "keyword": "חדשות 12",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג חדשות."
+    },
+    {
+      "keyword": "חדשות 13",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג חדשות."
+    },
+    {
+      "keyword": "חדשות 14",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג חדשות."
+    },
+    {
+      "keyword": "כאן 11",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תאגיד השידור. חובה לציין את המספר - 'כאן' לבדה היא מילה עברית רגילה."
+    },
+    {
+      "keyword": "כאן 33",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "ערוץ תאגיד השידור."
+    },
+    {
+      "keyword": "כאן חדשות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג חדשות של התאגיד."
+    },
+    {
+      "keyword": "כאן רשת ב",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנת הרדיו של התאגיד כפי שנכתבת ביומן."
+    },
+    {
+      "keyword": "תאגיד השידור",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שם הגוף המשדר הציבורי."
+    },
+    {
+      "keyword": "רשת ב'",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנת רדיו; 'ריאיון רשת ב''."
+    },
+    {
+      "keyword": "רשת ב",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "הכתיב ללא גרש מופיע ביומנים ('אסתי פרז - רשת ב'). מסתיים באות בודדת ולכן עלול להידבק למילה הבאה - ולכן medium."
+    },
+    {
+      "keyword": "רשת 13",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג ערוץ."
+    },
+    {
+      "keyword": "קשת 12",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מותג ערוץ. נמנעתי מ'קשת' לבדה - שם פרטי ומילה רגילה."
+    },
+    {
+      "keyword": "שידורי קשת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'מנהל בשידורי קשת'."
+    },
+    {
+      "keyword": "i24",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "ערוץ חדשות בינלאומי; מופיע פעמיים ('כתב חרדים i24', 'עמיאל ירחי מi24'). לטינית - התאמת גבולות פחות ודאית."
+    },
+    {
+      "keyword": "ilTV",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "ערוץ הסברה באנגלית ('מנכ\"ל ilTV בנושא פרויקט הסברה')."
+    },
+    {
+      "keyword": "גל\"צ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "גלי צה\"ל. מופיע גם כ'ריאיון גלצ' וגם 'יובל שגב גל\"צ'."
+    },
+    {
+      "keyword": "גלצ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אותו שם ללא גרשיים."
+    },
+    {
+      "keyword": "גלי צה\"ל",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "השם המלא."
+    },
+    {
+      "keyword": "גלגל\"צ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנת האחות."
+    },
+    {
+      "keyword": "קול חי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנת רדיו חרדית; 'רדיו קול חי', 'אבי בלום - קול חי'."
+    },
+    {
+      "keyword": "קול ברמה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנת רדיו חרדית; 'ריאיון - רדיו קול ברמה'."
+    },
+    {
+      "keyword": "גלי ישראל",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנה אזורית; 'ריאיון לגלי ישראל', 'פתחי וזמרי - גלי ישראל'."
+    },
+    {
+      "keyword": "רדיו",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'ריאיון רדיו', 'הכנה לרדיו'. שימו לב שחלק מהמופעים הם רגולציה ('תחום הרדיו', 'הארכות זיכיון ברדיו') - שם צירופים ארוכים יותר גוברים."
+    },
+    {
+      "keyword": "רדיוס",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "תחנת רדיו ('רדיוס fm100', 'הקלטה ברדיוס')."
+    },
+    {
+      "keyword": "רדיו צפון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנה אזורית ('רדיו צפון, גדי נס, הקלטה')."
+    },
+    {
+      "keyword": "רדיו חיפה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תחנה אזורית."
+    },
+    {
+      "keyword": "103fm",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "תחנה ('אודי וענת 103 fm'); כתיב לטיני."
+    },
+    {
+      "keyword": "ידיעות אחרונות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון; 'סגן עורך ידיעות אחרונות', 'יוסי יהושע - ידיעות אחרונות'."
+    },
+    {
+      "keyword": "ישראל היום",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון; 'יהודה שלזינגר ישראל היום'."
+    },
+    {
+      "keyword": "מקור ראשון",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון; 'ריקי ממן מקור ראשון'."
+    },
+    {
+      "keyword": "מעריב",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון; 'אנה ברסקי - מעריב'."
+    },
+    {
+      "keyword": "עיתון הארץ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון מרכזי. הצירוף המלא הכרחי: בבדיקה שערכתי 'הארץ' לבדה נתפסה רק במופעים שגויים - 'רבני הארץ הטובה', 'בכל הארץ', 'תוצרת הארץ' - ולכן פסלתי אותה."
+    },
+    {
+      "keyword": "דה מרקר",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון כלכלי; 'סמי פרץ עיתון דה מרקר'."
+    },
+    {
+      "keyword": "דהמרקר",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב מחובר."
+    },
+    {
+      "keyword": "כלכליסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון כלכלי; 'גלית חמי עורכת ראשית כלכליסט'."
+    },
+    {
+      "keyword": "גלובס",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון כלכלי."
+    },
+    {
+      "keyword": "וואלה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אתר חדשות; 'טל שלו - וואלה', 'אולפני וואלה'."
+    },
+    {
+      "keyword": "ynet",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "אתר חדשות; 'העורך הראשי של ynet'. כתיב לטיני."
+    },
+    {
+      "keyword": "ווינט",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "תעתיק עברי; 'כתבת מווינט' (נתפס בזכות תחילית מ)."
+    },
+    {
+      "keyword": "ויינט",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "תעתיק חלופי; 'ניר כהן (שוקו) - ויינט'."
+    },
+    {
+      "keyword": "וואי נט",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "תעתיק חלופי שמופיע ביומן."
+    },
+    {
+      "keyword": "סרוגים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אתר ציוני-דתי; 'אמיר אטינגר סרוגים'."
+    },
+    {
+      "keyword": "אתר כיפה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אתר ציוני-דתי; 'סמנכ\"לית אתר כיפה', 'אלעזר כהן אתר כיפה'."
+    },
+    {
+      "keyword": "כיפה",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "האתר מופיע גם בלי המילה 'אתר' ('עמיאל ירחי- כיפה'), אבל המילה היא גם פריט לבוש. לא מתנגש עם 'אכיפה' כי א אינה תחילית מותרת - אבל עדיין low."
+    },
+    {
+      "keyword": "כיכר השבת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אתר חרדי; 'ישי כהן- כיכר השבת'."
+    },
+    {
+      "keyword": "ככר השבת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב חסר שמופיע ביומן."
+    },
+    {
+      "keyword": "בחדרי חרדים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אתר חרדי; לא במדגם אך מכליל."
+    },
+    {
+      "keyword": "הצינור",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'תכנית הצינור ערוץ 13'."
+    },
+    {
+      "keyword": "ניו יורק טיימס",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון זר; 'פרטיק - ניו יורק טיימס'."
+    },
+    {
+      "keyword": "האקונומיסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'שיחת הכנה לפגישה עם האקונומיסט'."
+    },
+    {
+      "keyword": "אקונומיסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כתיב ללא ה' הידיעה."
+    },
+    {
+      "keyword": "רויטרס",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "סוכנות ידיעות ('Interview Reuters')."
+    },
+    {
+      "keyword": "בלומברג",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "כלי תקשורת כלכלי."
+    },
+    {
+      "keyword": "ג'רוזלם פוסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "עיתון באנגלית."
+    },
+    {
+      "keyword": "טיים",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "כלי תקשורת, אך המילה קצרה ומתנגשת. low במכוון."
+    },
+    {
+      "keyword": "הפטריוטים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תוכנית בערוץ 14; מופיעה כשורה עצמאית ('21:30-22:30 הפטריוטים') וגם 'הפטריוטים ערוץ 14'."
+    },
+    {
+      "keyword": "פטריוטים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "אותה תוכנית ללא ה' הידיעה ('פטריוטים ערוץ 14'); המילה עצמה כללית ולכן medium."
+    },
+    {
+      "keyword": "דובר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "דובר משרד. מתנגש עם 'דובר' במובן שפה ('הקהילה דוברת צרפתית'), ולכן medium."
+    },
+    {
+      "keyword": "דוברת",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'פ\"ע דוברת', 'לילך וייסמן - דוברת'. אותו מלכוד ('דוברת צרפתית')."
+    },
+    {
+      "keyword": "דוברים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פ.ע דוברים', 'ישיבת דוברים' - צוות הדוברות של המשרד."
+    },
+    {
+      "keyword": "דוברות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "יחידת הדוברות."
+    },
+    {
+      "keyword": "הדוברת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פגישה עם לילך הדוברת'."
+    },
+    {
+      "keyword": "דוברת המשרד",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "חד-משמעי."
+    },
+    {
+      "keyword": "דובר המשרד",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "חד-משמעי."
+    },
+    {
+      "keyword": "לשכת הדובר",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "חד-משמעי."
+    },
+    {
+      "keyword": "ישיבת דוברים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מפגש צוות דוברות."
+    },
+    {
+      "keyword": "יח\"צ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "יחסי ציבור; 'פ.ע. שוטף עם היח\"צ עדן ומישל', 'יח\"צ פ\"ע'."
+    },
+    {
+      "keyword": "יחסי ציבור",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פגישה עם משרד יחסי הציבור של הרשות'."
+    },
+    {
+      "keyword": "יח\"צנית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "בעלת מקצוע בתחום."
+    },
+    {
+      "keyword": "יועץ תקשורת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תפקיד מובהק."
+    },
+    {
+      "keyword": "יועצת תקשורת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תפקיד מובהק."
+    },
+    {
+      "keyword": "יועץ תדמית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תפקיד מובהק."
+    },
+    {
+      "keyword": "תדמית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'צילומי תדמית'; המילה שייכת לתחום התדמית הציבורית."
+    },
+    {
+      "keyword": "אסטרטגיה תקשורתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מופיע ביומנים כשורה עצמאית וגם 'אסטרטגיה תקשורתית - חלב'."
+    },
+    {
+      "keyword": "היערכות תקשורתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'היערכות תקשורתית לשבועות הקרובים'."
+    },
+    {
+      "keyword": "תקשורתי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'קולות קוראים ופרויקטים תקשורתיים'; לעיתים במובן טכני של תקשורת נתונים."
+    },
+    {
+      "keyword": "תקשורתית",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "אותה הנמקה."
+    },
+    {
+      "keyword": "תקשורת",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "המילה משמשת גם ל'משרד התקשורת' ולתשתיות תקשורת. סימנתי low - צירופים ארוכים יותר צריכים לגבור עליה."
+    },
+    {
+      "keyword": "הסברה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מונח ליבה: 'זמן הסברה', 'ישיבת הסברה', 'מרכז הסברה', 'שרת ההסברה', 'פעיל הסברה'. אין לו קריאה אחרת בעברית ממשלתית."
+    },
+    {
+      "keyword": "הסברתי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "נגזרת."
+    },
+    {
+      "keyword": "הסברתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'בחינה הסברתית של מדינת קמרון'."
+    },
+    {
+      "keyword": "מרכז הסברה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פ.ע מנהל מרכז הסברה'."
+    },
+    {
+      "keyword": "שרת ההסברה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תיק ההסברה."
+    },
+    {
+      "keyword": "משרד ההסברה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "המשרד עצמו."
+    },
+    {
+      "keyword": "אשת הסברה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פגישה עם שרון חזום- אשת הסברה'."
+    },
+    {
+      "keyword": "קמפיין",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'קמפיין עלייה', 'קמפיין גיוסים', 'קמפיין מאבק באלימות' - תמיד קמפיין ציבורי/פרסומי."
+    },
+    {
+      "keyword": "קמפיינים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רבים; 'פגישה בנושא קמפיינים'."
+    },
+    {
+      "keyword": "קמפיין שיווק",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'קמפיין שיווק - ישראל'. נמנעתי מ'שיווק' לבדה - ביומנים היא כמעט תמיד שיווק קרקעות."
+    },
+    {
+      "keyword": "רכש מדיה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "רכש שטחי פרסום; מופיע שוב ושוב במשרד התרבות ובאוצר."
+    },
+    {
+      "keyword": "רכש המדיה",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'עמלות רכש המדיה'."
+    },
+    {
+      "keyword": "מדיה",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "כל המופעים במדגם הם 'רכש מדיה', אך המילה כללית."
+    },
+    {
+      "keyword": "תוכן פרסומי",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פ\"ע תוכן פרסומי', 'היוועצות תוכן פרסומי - משרד הבריאות'."
+    },
+    {
+      "keyword": "תכנים פרסומיים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "וריאנט."
+    },
+    {
+      "keyword": "פרסומת",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פרסום מסחרי/ממשלתי."
+    },
+    {
+      "keyword": "פרסומות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'לשדר חסויות/פרסומות'."
+    },
+    {
+      "keyword": "לפ\"מ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "לשכת הפרסום הממשלתית; 'פ\"ע מנכ\"ל עם מנהלת לפ\"מ, מוריה שלם'."
+    },
+    {
+      "keyword": "לפמ",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "אותו ראשי תיבות ללא גרשיים ('פגישה עם מנכלית לפ\"מ')."
+    },
+    {
+      "keyword": "לשכת הפרסום הממשלתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "השם המלא."
+    },
+    {
+      "keyword": "סקרים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "רבים; פחות מתנגש."
+    },
+    {
+      "keyword": "תוצאות סקר",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'אסטרטגיה מפלגתית מצומצם עם אבי לרנר תוצאות סקר'."
+    },
+    {
+      "keyword": "דעת קהל",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'מובילי דעת קהל'."
+    },
+    {
+      "keyword": "מובילי דעת קהל",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "משפיענים - שכבת יחסי הציבור."
+    },
+    {
+      "keyword": "אישור מסרים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'אישור מסרים', 'אישור מסרים לקראת נסיעתו לארה\"ב' - עבודת מסרים תקשורתית."
+    },
+    {
+      "keyword": "מסרים",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "לרוב מסרים תקשורתיים, אך המילה כללית."
+    },
+    {
+      "keyword": "נאומים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פ.ע נאומים', 'הכנה עם הכותבת נאומים', 'פ\"ע נחום - נאומים' - עבודת נאומים בלשכה."
+    },
+    {
+      "keyword": "נאום",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "יחיד."
+    },
+    {
+      "keyword": "כתיבת נאומים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "צירוף מפורש."
+    },
+    {
+      "keyword": "כותב נאומים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "תפקיד."
+    },
+    {
+      "keyword": "כותבת נאומים",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'הכנה עם הכותבת נאומים'."
+    },
+    {
+      "keyword": "רשתות חברתיות",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "'פ.ע. מירי + מירב - עידכון רשתות חברתיות', 'ניתוח סנטימנט ברשתות חברתיות'."
+    },
+    {
+      "keyword": "רשת חברתית",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "יחיד."
+    },
+    {
+      "keyword": "פייסבוק",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'פייסבוק לייב עם שמחה רוטמן' (הופעה) אך גם 'מנכ\"לית פייסבוק ישראל' (פגישה עם חברה)."
+    },
+    {
+      "keyword": "פייסבוק לייב",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "שידור חי ברשת."
+    },
+    {
+      "keyword": "טוויטר",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פלטפורמה תקשורתית."
+    },
+    {
+      "keyword": "אינסטגרם",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פלטפורמה תקשורתית."
+    },
+    {
+      "keyword": "יוטיוב",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "פלטפורמה תקשורתית."
+    },
+    {
+      "keyword": "טיקטוק",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'פגישה עם טיקטוק', 'הכנה לפגישה עם הנהלת טיקטוק' - פגישה עם פלטפורמה; אפשר לקרוא לזה גם מגזר פרטי."
+    },
+    {
+      "keyword": "נטפליקס",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "'Netflix meeting with the Minister of Culture', 'סמנכ\"לית הפולסי EMEA של נטפליקס' - חברת תוכן."
+    },
+    {
+      "keyword": "טלוויזיה",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "לעיתים רגולציה ולעיתים תוכן/יוצרים ('אלי בן דוד - יוצר טלוויזיה'). ברירת המחדל הבטוחה היא תקשורת."
+    },
+    {
+      "keyword": "טלויזיה",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "כתיב חלופי ('20 שנה לטלויזיה המסחרית')."
+    },
+    {
+      "keyword": "עמית סגל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יעקב ברדוגו",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "קלמן ליבסקינד",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "מתי טוכפלד",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אמילי עמרוסי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "דפנה ליאל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יקי אדמקר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ינון מגל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אריאל כהנא",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יהודה שלזינגר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אלמוג בוקר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יאיר שרקי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "איילה חסון",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "רביב דרוקר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "מורן אזולאי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ניר דבורי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "איתי בלומנטל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "צבי זרחיה",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "עמיחי אתאלי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "גד ליאור",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "עוזי ברוך",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אמיר אטינגר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אראל סגל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "חגי סגל",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "נדב העצני",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "עמנואל רוזן",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ליטל שמש",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "רועי שרון",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "שרי רוט",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יוסי יהושע",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "זאב קם",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יובל שגב",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אמיר איבגי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ישראל פישר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אסתי פרז",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "סוניה גורודיסקי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ריקי ממן",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "חנן גרינווד",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אודליה אזולאי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "גדעון אוקו",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "עופר חדד",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "יוני קמפינסקי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "אבי בלום",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "עמיאל ירחי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "מומו פילבר",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "גלית חמי",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "סמי פרץ",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "טל שלו",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "דנה וייס",
+      "categoryId": "media_pr",
+      "confidence": "medium",
+      "reasoning": "שם עיתונאי/ת ישראלי/ת שמופיע ביומנים - לעיתים לצד שם הכלי ('רביב דרוקר- ערוץ 13', 'סמי פרץ - דה מרקר') ולעיתים כשורה עצמאית. השם המלא (שתי מילים) מצמצם מאוד את סכנת ההתנגשות, אך פגישה עם עיתונאי אינה בהכרח ראיון - ולכן medium ולא high."
+    },
+    {
+      "keyword": "ארי שביט",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "פובליציסט; שם נפוץ יחסית ולכן low."
+    },
+    {
+      "keyword": "גדי טאוב",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "פובליציסט ואיש אקדמיה - הפגישה יכולה להיות אקדמית ולא תקשורתית."
+    },
+    {
+      "keyword": "ישי כהן",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "עיתונאי כיכר השבת, אך זהו אחד השמות הנפוצים בישראל. low מובהק."
+    },
+    {
+      "keyword": "יוסי אלי",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "מופיע כ'יוסי אלי, עיתונאי', אך השם מתנגש עם 'יוסי אליטוב' ועם שמות אחרים."
+    },
+    {
+      "keyword": "אודי סגל",
+      "categoryId": "media_pr",
+      "confidence": "low",
+      "reasoning": "עיתונאי; שם משפחה נפוץ בשילוב שם פרטי נפוץ."
+    },
+    {
+      "keyword": "פובליציסט",
+      "categoryId": "media_pr",
+      "confidence": "high",
+      "reasoning": "מופיע ביומן כשורה עצמאית ('13:00 - פובליציסט') - מקצוע תקשורתי מובהק."
+    },
+    {
+      "keyword": "חוק השידורים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חקיקת שידורים - מדיניות, לא הופעה תקשורתית. חוזר עשרות פעמים ביומני משרד התקשורת."
+    },
+    {
+      "keyword": "חוק שידורים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב ללא ה' הידיעה ('חוק שידורים - בעליות צולבות')."
+    },
+    {
+      "keyword": "שידורים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'סטטוס שידורים', 'צוות שידורים', 'מועצת הכבלים והלוויין - שידורים' - עבודת מטה רגולטורית."
+    },
+    {
+      "keyword": "שידור",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "יחיד; 'שידור חי' גובר עליו ומופנה לתקשורת."
+    },
+    {
+      "keyword": "הרשות השנייה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "הרשות השנייה לטלוויזיה ולרדיו - רגולטור שידורים."
+    },
+    {
+      "keyword": "הרשות השניה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב חסר שמופיע ביומנים."
+    },
+    {
+      "keyword": "רשות השנייה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "ללא ה' הידיעה ('יו\"ר רשות השנייה')."
+    },
+    {
+      "keyword": "רשות השניה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב חסר ('מועמדים למועצת הרשות השניה')."
+    },
+    {
+      "keyword": "מועצת הרשות השניה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "הגוף הממנה - בחירת מועמדי השר."
+    },
+    {
+      "keyword": "מועצת הכבלים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'פגישה מועצת כבלים ולויין', 'ניר שויקי מועצת הכבלים והלוויין'."
+    },
+    {
+      "keyword": "מועצת הכבלים והלוויין",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "השם המלא."
+    },
+    {
+      "keyword": "כבלים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "בהקשר משרד התקשורת - טלוויזיה בכבלים; המילה עצמה כללית."
+    },
+    {
+      "keyword": "לוויין",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "שידורי לוויין."
+    },
+    {
+      "keyword": "לווין",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב חסר ('כבלים ולויין')."
+    },
+    {
+      "keyword": "לויין",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב שמופיע בפועל ביומן."
+    },
+    {
+      "keyword": "רשות החדשות",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'מנכ\"ל רשות החדשות' - גוף שידורי מוסדר."
+    },
+    {
+      "keyword": "עידן פלוס",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "מערך השידור הדיגיטלי הקרקעי; 'חוק עידן פלוס', 'מערך עידן פלוס'."
+    },
+    {
+      "keyword": "חוק ערוץ זר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חקיקה על שידורי ערוץ זר."
+    },
+    {
+      "keyword": "אלמיאדין",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'דיון בנושא אלמיאדין', 'דיון אלמיאדין - תקש\"ח' - צעדי רגולציה נגד ערוץ."
+    },
+    {
+      "keyword": "הפקות טלוויזיוניות",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'תמיכה בהפקות טלוויזיוניות על בסיס נתוני צפייה' - מדיניות תמיכה בשידורים."
+    },
+    {
+      "keyword": "ועדת טלוויזיה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "ועדה רגולטורית."
+    },
+    {
+      "keyword": "וועדת טלוויזיה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "היומנים כותבים לעיתים קרובות 'וועדה' בכתיב וו כפול, ואז 'ועדת טלוויזיה' אינה נתפסת - למשל 'שיחת הכנה לוועדת טלוויזיה'."
+    },
+    {
+      "keyword": "תחום הרדיו",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'סטטוס תזכיר לתחום הרדיו' - חקיקה, לא ראיון."
+    },
+    {
+      "keyword": "הרדיו האזורי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'חוק הרחבת הרדיו האזורי'."
+    },
+    {
+      "keyword": "זיכיון ברדיו",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'הארכות זיכיון ברדיו'."
+    },
+    {
+      "keyword": "צוות רדיו",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'סטאטוס צוות רדיו' - עבודת מטה רגולטורית."
+    },
+    {
+      "keyword": "משרד התקשורת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "מפגש מול/בתוך משרד התקשורת בנושא מדיניות."
+    },
+    {
+      "keyword": "בזק",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת התשתית המרכזית; 'שוק סיטונאי בזק', 'הפרדה מבנית בזק', 'תיקון תקנות התשלומים של בזק'."
+    },
+    {
+      "keyword": "הוט",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת תקשורת; 'פיקוח הוט', 'בג\"ץ הוט', 'הפרה של הוט פרישה אונברסלית'."
+    },
+    {
+      "keyword": "סלקום",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת סלולר; 'השקת סיב של סלקום', 'צוות מוגנות ילדים ברשת - סלקום'."
+    },
+    {
+      "keyword": "פרטנר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת סלולר."
+    },
+    {
+      "keyword": "פלאפון",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת סלולר."
+    },
+    {
+      "keyword": "גולן טלקום",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חברת סלולר."
+    },
+    {
+      "keyword": "וויקום",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'בקשת וויקום להיות MVNO', 'מנכ\"ל וויקום'."
+    },
+    {
+      "keyword": "סטארלינק",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'סגירת הסכם מול סטארלינק' - הסדרת שירות לוויני."
+    },
+    {
+      "keyword": "אינטרנט רימון",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "ספק סינון אינטרנט."
+    },
+    {
+      "keyword": "סלולר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'דוחות פיקוח סלולר', 'העמקה בסלולר', 'אתרי סלולר', 'קליטת סלולר בפריפריה'."
+    },
+    {
+      "keyword": "סלולרי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'התשתית הסלולרית', 'תדרוך וחתימה על סלולרי צבאי'."
+    },
+    {
+      "keyword": "סלולרית",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "נגזרת."
+    },
+    {
+      "keyword": "סלולריות",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'פורום החברות הסלולריות בישראל'."
+    },
+    {
+      "keyword": "אתרי סלולר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "הקמת אנטנות - נושא רגולטורי מובהק."
+    },
+    {
+      "keyword": "אנטנות",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "תשתית סלולרית; המילה יכולה להופיע גם בהקשר ביטחוני."
+    },
+    {
+      "keyword": "תדרים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "הקצאת תדרים."
+    },
+    {
+      "keyword": "תדרי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'דיון על תדרי 2600 ו3500'."
+    },
+    {
+      "keyword": "תדר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "יחיד; מילה קצרה יחסית."
+    },
+    {
+      "keyword": "סיב אופטי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'פ\"ע עם זיו גלעדי - בנושא סיב אופטי'."
+    },
+    {
+      "keyword": "סיבים אופטיים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'דיון בנושא סיבים אופטים וקו הנפט'."
+    },
+    {
+      "keyword": "סיבים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "'צוות סיבים', 'טיפול באינטרנט וסיבים'; המילה כללית."
+    },
+    {
+      "keyword": "שוק סיטונאי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "רגולציית שוק הסיטונאי בתקשורת."
+    },
+    {
+      "keyword": "מחירים סיטונאים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'14:00 מחירים סיטונאים - בזק'."
+    },
+    {
+      "keyword": "פרישה אוניברסלית",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חובת פריסה של מפעיל תקשורת."
+    },
+    {
+      "keyword": "פרישה אונברסלית",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "הכתיב השגוי שמופיע בפועל ביומן."
+    },
+    {
+      "keyword": "דור 5",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'צוות דור 5' - דור חמישי בסלולר."
+    },
+    {
+      "keyword": "דור חמישי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "וריאנט."
+    },
+    {
+      "keyword": "MVNO",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "מפעיל וירטואלי - מונח רגולטורי."
+    },
+    {
+      "keyword": "טלגרף אלחוטי",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'תקנות הטלגרף האלחוטי (רישיונות, תעודות ואגרות)'."
+    },
+    {
+      "keyword": "מכשירי קשר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'תקנות מכשירי קשר', 'אגרות מכשירי קשר'."
+    },
+    {
+      "keyword": "קווים כשרים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'הצ\"ח קוים כשרים', 'ימות המשיח בנושא קווים כשרים' - הסדרת קווי טלפון כשרים."
+    },
+    {
+      "keyword": "קוים כשרים",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "כתיב חסר שמופיע בפועל."
+    },
+    {
+      "keyword": "טלפון כשר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'הקמת מסלול טלפון כשר'."
+    },
+    {
+      "keyword": "חוק הקומה הכשרה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "חקיקה בתחום התקשורת החרדית."
+    },
+    {
+      "keyword": "תשתיות תקשורת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "מדיניות תשתית."
+    },
+    {
+      "keyword": "שוק התקשורת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "מדיניות ענפית."
+    },
+    {
+      "keyword": "חברות התקשורת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "רגולציה על המפעילים."
+    },
+    {
+      "keyword": "מוגנות ילדים ברשת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'צוות מוגנות ילדים ברשת' - מדיניות מרחב מקוון שמנוהלת במשרד התקשורת מול החברות."
+    },
+    {
+      "keyword": "מוגנות ברשת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "וריאנט."
+    },
+    {
+      "keyword": "גלישה בטוחה",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'גלישה בטוחה - החודש הלאומי להגנה על ילדים ברשת'."
+    },
+    {
+      "keyword": "הסתות ברשת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "low",
+      "reasoning": "'צוות לטיפול בהסתות ברשת' - אפשר לקרוא לזה גם ביטחון/אכיפה ולא מדיניות תקשורת. low במכוון."
+    },
+    {
+      "keyword": "הסתה ברשת",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "low",
+      "reasoning": "אותה אי-ודאות."
+    },
+    {
+      "keyword": "דואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "medium",
+      "reasoning": "'שימוע רישיון הדואר', 'מענה לבג\"ץ דואר', 'סגירת 14 יחידות דואר' - הדואר מוסדר על ידי משרד התקשורת. medium כי המילה משמשת גם ל'דואר אלקטרוני'."
+    },
+    {
+      "keyword": "הפרטת הדואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'ההחלטה על הפרטת הדואר'."
+    },
+    {
+      "keyword": "רישיון הדואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'שימוע רישיון הדואר'."
+    },
+    {
+      "keyword": "מינהל הדואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'אורן לביאן - מנהל מינהל הדואר'."
+    },
+    {
+      "keyword": "שעבוד הדואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "סוגיה רגולטורית ספציפית שחוזרת."
+    },
+    {
+      "keyword": "יו\"ר הדואר",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "'שימוע ליו\"ר הדואר עם השר אמסלם'."
+    },
+    {
+      "keyword": "חברת דואר ישראל",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "השם המלא."
+    },
+    {
+      "keyword": "דואר ישראל",
+      "categoryId": "comms_telecom_regulation",
+      "confidence": "high",
+      "reasoning": "השם המלא."
+    }
+  ],
+  "proposedCategories": [
+    {
+      "id": "comms_telecom_regulation",
+      "labelHe": "רגולציית תקשורת, שידורים ודואר",
+      "description": "מדיניות והסדרה בתחומי התקשורת: חוק השידורים והרשות השנייה, מועצת הכבלים והלוויין, זיכיונות רדיו, שוק הסלולר והתדרים, השוק הסיטונאי והפריסה האוניברסלית, פיקוח על בזק, הוט, סלקום ופרטנר, מוגנות ילדים ברשת, והסדרת הדואר. רשומות אלה עוסקות בעבודת רגולטור - לא בהופעה של השר בתקשורת.",
+      "color": "#0f766e",
+      "reasoning": "גוף גדול של רשומות מיומני משרד התקשורת אינו מתאים לאף אחת מ-18 הקטגוריות הקיימות. לשים 'חוק השידורים' או 'פיקוח הוט' תחת media_pr ('תקשורת, ראיונות ותדמית') היה מטעה במיוחד באתר שקיפות: הקורא היה מסיק שהשר עסק בהופעות תקשורתיות בזמן שהוא עסק בהסדרת שוק. private_sector לא מתאים כי הפגישה אינה עם בעל עניין עסקי אלא סביב כלי רגולציה; knesset_legislation תופס רק את שלב החקיקה ולא את השימועים, הפיקוח, התדרים והרישיונות; budget_finance אינו רלוונטי. הגבול שקבעתי פשוט וניתן להסבר לקורא: אם הנושא הוא הופעה, ראיון, דוברות, קמפיין או צילום - media_pr; אם הנושא הוא רישיון, תדר, תעריף, זיכיון, שימוע, חוק שידורים או תשתית תקשורת - הקטגוריה החדשה."
+    }
+  ],
+  "unclassifiableNote": "השארתי במכוון ללא סיווג כמה משפחות שאפשר היה לגרוף אליהן כיסוי בזול: (1) 'תדרוך', 'תדריך' ו'תדרוך עיתי' לבדם - ביומנים הם כמעט תמיד תדרוך ביטחוני, מדיני או תדרוך עסקי, ורק צירוף מפורש ('תדרוך עיתונאים', 'תדרוך תקשורתי') מעיד על תקשורת. (2) שמות פרטיים בודדים של אנשי תקשורת - שם פרטי אחד או שם משפחה אחד אינו סימן אמין, והכנסתי רק שמות מלאים בני שתי מילים, ואף אותם ב-medium. (3) 'ועידת גלובס' ו'ועידת ידיעות אחרונות' - השתתפות בוועידה שמארגן גוף תקשורת היא כנס, לא הופעה תקשורתית, והשארתי אותן למומחה הטקסים והכנסים. (4) שורות OCR משובשות ('ריאיוןן', שורות עם תווי כיווניות ותאריכים מוטמעים) - אין ללמוד מהן אוצר מילים. (5) 'הקלטה', 'צילומים', 'פאנל' ו'וובינר' סומנו medium ולא high כי הם עשויים לתאר תיעוד ישיבה פנימית או כנס מקצועי, ולא בהכרח פעילות מול הציבור. (6) 'פרסום' ו'שיווק' לבדן לא נכללו כלל: ביומנים אלה 'פרסום מכרזים', 'פרסום הדו\"ח' ו'שיווק קרקעות'. לבסוף, המלצה לפיצול: אם בעתיד תרצו לחדד את media_pr, הגבול הטבעי אינו בין כלי תקשורת לפורמטים אלא בין 'הופעה תקשורתית של הנבחר' (ריאיון, אולפן, מהדורה, פוטו אופ, שמות כלים ועיתונאים) לבין 'מנגנון ההסברה של המשרד' (דוברות, יח\"צ, קמפיינים, רכש מדיה, סקרים, כתיבת נאומים) - שתי הקבוצות מובחנות היטב במילות המפתח שלמעלה וניתן להפריד ביניהן מכנית."
+}
