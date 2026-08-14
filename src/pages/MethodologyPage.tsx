@@ -128,9 +128,19 @@ export function MethodologyPage({ data }: { data: Dataset }): JSX.Element {
                 היעדר פעילות.
               </li>
             )}
-            <li>
-              אין באתר נתוני כהונת שרים: תאריכי כהונה לא נאספו ממקור רשמי, ואינם נגזרים בהסקה.
-            </li>
+            {dataVersion.counts.ministerTenures === 0 ? (
+              <li>
+                אין באתר נתוני כהונת שרים בגרסה זו: תאריכי כהונה לא נאספו ממקור רשמי, ואינם נגזרים
+                בהסקה.
+              </li>
+            ) : (
+              <li>
+                כהונות השרים נאספות משירות ה-OData של הכנסת —{' '}
+                {formatNumber(dataVersion.counts.ministerTenures)} כהונות, מהן{' '}
+                {formatNumber(dataVersion.counts.ministerTenuresEnded)} הסתיימו במהלך כהונת הממשלה.
+                מינוי במשרד שאין לו סעיף תקציב עצמאי נספר בנפרד ואינו משויך בכוח לסעיף שכן.
+              </li>
+            )}
             <li>
               קטלוג המקורות מכיל {formatNumber(dataVersion.counts.sources)} מקורות אמיתיים, אך גוף
               המסמך אוחזר עבור {formatNumber(dataVersion.counts.sourcesRetrieved)} מהם בלבד.

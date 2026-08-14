@@ -172,6 +172,7 @@ export interface DataVersion {
     budgetItems: number;
     activityItems: number;
     ministerTenures: number;
+    ministerTenuresEnded: number;
     sources: number;
     sourcesRetrieved: number;
     topicsDefined: number;
@@ -434,6 +435,9 @@ export interface DiaryProfile {
   monthly: DiaryPeriodBucket[];
   quarterly: DiaryPeriodBucket[];
   weekendCount: number;
+  fridayMeetingCount: number;
+  saturdayMeetingCount: number;
+  weekendNonMeetingCount: number;
   lateNightCount: number;
   longMeetingCount: number;
   marathonDays: string[];
@@ -488,6 +492,8 @@ export interface DiaryInsights {
     crossMatches: number;
     /** Profiles skipped by the person-level rules because their file is shared. */
     sharedFileProfiles: number;
+    /** Quarters an office published that this site could not read. */
+    quartersPublishedButUnread: number;
     unspecifiedPercent: number | null;
     unclassifiedPercent: number | null;
     /** Rows stating that a meeting happened, or with whom, but not about what. */

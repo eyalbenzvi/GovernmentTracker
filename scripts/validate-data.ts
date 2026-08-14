@@ -79,6 +79,7 @@ interface DiaryInsightsLite {
     entries: number;
     people: number;
     sharedFileProfiles: number;
+    quartersPublishedButUnread: number;
     unspecifiedPercent: number | null;
     unclassifiedPercent: number | null;
     noTopicPercent: number | null;

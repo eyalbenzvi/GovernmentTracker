@@ -1,1 +1,682 @@
-[]
+[
+  {
+    "id": "tenure-30717",
+    "personName": "ניר ברקת",
+    "role": "שר הכלכלה והתעשייה",
+    "ministryId": "economy",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30687",
+    "personName": "חיים ביטון",
+    "role": "שר בלי תיק במשרד החינוך",
+    "ministryId": "education",
+    "startDate": "2022-12-29",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30706",
+    "personName": "יואב קיש",
+    "role": "שר החינוך",
+    "ministryId": "education",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30704",
+    "personName": "עידית סילמן",
+    "role": "השרה להגנת הסביבה",
+    "ministryId": "environment",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30690",
+    "personName": "אריה מכלוף דרעי",
+    "role": "שר הבריאות",
+    "ministryId": "health",
+    "startDate": "2022-12-29",
+    "endDate": "2023-01-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30714",
+    "personName": "בצלאל סמוטריץ'",
+    "role": "שר נוסף במשרד הביטחון",
+    "ministryId": "sec-15",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30684",
+    "personName": "יואב גלנט",
+    "role": "שר הביטחון",
+    "ministryId": "sec-15",
+    "startDate": "2022-12-29",
+    "endDate": "2024-11-08",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30693",
+    "personName": "מכלוף מיקי זוהר",
+    "role": "שר התרבות והספורט",
+    "ministryId": "sec-19",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30699",
+    "personName": "מיכאל מלכיאלי",
+    "role": "השר לשירותי דת",
+    "ministryId": "sec-22",
+    "startDate": "2022-12-29",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31011",
+    "personName": "יואב בן צור",
+    "role": "שר במשרד העבודה והביטחון החברתי",
+    "ministryId": "sec-23",
+    "startDate": "2022-12-29",
+    "endDate": "2023-01-30",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31010",
+    "personName": "יעקב מרגי",
+    "role": "שר הרווחה והביטחון החברתי",
+    "ministryId": "sec-23",
+    "startDate": "2022-12-29",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30682",
+    "personName": "יצחק גולדקנופ",
+    "role": "שר הבינוי והשיכון",
+    "ministryId": "sec-29",
+    "startDate": "2022-12-29",
+    "endDate": "2025-06-15",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30702",
+    "personName": "אופיר סופר",
+    "role": "שר העלייה והקליטה",
+    "ministryId": "sec-30",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30686",
+    "personName": "אבי דיכטר",
+    "role": "שר החקלאות וביטחון המזון",
+    "ministryId": "sec-33",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30696",
+    "personName": "ישראל כץ",
+    "role": "שר האנרגיה והתשתיות",
+    "ministryId": "sec-34",
+    "startDate": "2022-12-29",
+    "endDate": "2024-01-01",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30695",
+    "personName": "חיים כץ",
+    "role": "שר התיירות",
+    "ministryId": "sec-37",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30708",
+    "personName": "שלמה קרעי",
+    "role": "שר התקשורת",
+    "ministryId": "sec-39",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30823",
+    "personName": "אריה מכלוף דרעי",
+    "role": "המשנה לראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": "2023-01-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30679",
+    "personName": "בנימין נתניהו",
+    "role": "ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33485",
+    "personName": "בנימין נתניהו",
+    "role": "ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30688",
+    "personName": "גלית דיסטל אטבריאן",
+    "role": "שרה בלי תיק במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": "2023-01-16",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30683",
+    "personName": "יצחק גולדקנופ",
+    "role": "שר במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": "2025-03-26",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30698",
+    "personName": "יריב לוין",
+    "role": "סגן ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30705",
+    "personName": "בצלאל סמוטריץ'",
+    "role": "שר האוצר",
+    "ministryId": "sec-5",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30689",
+    "personName": "אריה מכלוף דרעי",
+    "role": "שר הפנים",
+    "ministryId": "sec-6",
+    "startDate": "2022-12-29",
+    "endDate": "2023-01-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30691",
+    "personName": "איתמר בן גביר",
+    "role": "השר לביטחון לאומי",
+    "ministryId": "sec-7",
+    "startDate": "2022-12-29",
+    "endDate": "2025-01-21",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30697",
+    "personName": "יריב לוין",
+    "role": "שר המשפטים",
+    "ministryId": "sec-8",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30694",
+    "personName": "אלי כהן",
+    "role": "שר החוץ",
+    "ministryId": "sec-9",
+    "startDate": "2022-12-29",
+    "endDate": "2024-01-01",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30709",
+    "personName": "מירי מרים רגב",
+    "role": "שרת התחבורה והבטיחות בדרכים",
+    "ministryId": "transport",
+    "startDate": "2022-12-29",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30799",
+    "personName": "משה ארבל",
+    "role": "סגן שר במשרד הבריאות",
+    "ministryId": "health",
+    "startDate": "2023-01-03",
+    "endDate": "2023-01-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30802",
+    "personName": "יעקב טסלר",
+    "role": "סגן שר במשרד התרבות והספורט",
+    "ministryId": "sec-19",
+    "startDate": "2023-01-03",
+    "endDate": "2025-07-17",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30801",
+    "personName": "משה אבוטבול",
+    "role": "סגן שר במשרד החקלאות וביטחון המזון",
+    "ministryId": "sec-33",
+    "startDate": "2023-01-03",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30798",
+    "personName": "אבי מעוז",
+    "role": "סגן שר במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2023-01-03",
+    "endDate": "2023-03-01",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30803",
+    "personName": "אורי מקלב",
+    "role": "סגן שר במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2023-01-03",
+    "endDate": "2025-07-16",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30805",
+    "personName": "מיכל מרים וולדיגר",
+    "role": "סגנית שר במשרד האוצר",
+    "ministryId": "sec-5",
+    "startDate": "2023-01-03",
+    "endDate": "2023-10-29",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30800",
+    "personName": "משה ארבל",
+    "role": "סגן שר במשרד הפנים",
+    "ministryId": "sec-6",
+    "startDate": "2023-01-03",
+    "endDate": "2023-01-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-30804",
+    "personName": "אורי מקלב",
+    "role": "סגן שר במשרד התחבורה והבטיחות בדרכים",
+    "ministryId": "transport",
+    "startDate": "2023-01-03",
+    "endDate": "2025-07-16",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31008",
+    "personName": "מאי גולן",
+    "role": "שרה בלי תיק במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2023-01-16",
+    "endDate": "2023-05-01",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31013",
+    "personName": "יואב בן צור",
+    "role": "ממלא מקום שר הבריאות",
+    "ministryId": "health",
+    "startDate": "2023-01-24",
+    "endDate": "2023-04-19",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31014",
+    "personName": "מיכאל מלכיאלי",
+    "role": "ממלא מקום שר הפנים",
+    "ministryId": "sec-6",
+    "startDate": "2023-01-24",
+    "endDate": "2023-04-19",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31042",
+    "personName": "יואב בן צור",
+    "role": "שר העבודה",
+    "ministryId": "sec-36",
+    "startDate": "2023-01-30",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31456",
+    "personName": "דוד אמסלם",
+    "role": "שר נוסף במשרד המשפטים",
+    "ministryId": "sec-8",
+    "startDate": "2023-03-28",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31465",
+    "personName": "משה ארבל",
+    "role": "שר משרד הבריאות",
+    "ministryId": "health",
+    "startDate": "2023-04-19",
+    "endDate": "2023-10-12",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31464",
+    "personName": "משה ארבל",
+    "role": "שר הפנים",
+    "ministryId": "sec-6",
+    "startDate": "2023-04-19",
+    "endDate": "2025-07-22",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31626",
+    "personName": "אבי מעוז",
+    "role": "סגן שר במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2023-06-05",
+    "endDate": "2025-03-26",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31712",
+    "personName": "אוריאל בוסו",
+    "role": "שר הבריאות",
+    "ministryId": "health",
+    "startDate": "2023-10-12",
+    "endDate": "2025-07-20",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31809",
+    "personName": "אלי כהן",
+    "role": "שר האנרגיה והתשתיות",
+    "ministryId": "sec-34",
+    "startDate": "2024-01-01",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-31808",
+    "personName": "ישראל כץ",
+    "role": "שר החוץ",
+    "ministryId": "sec-9",
+    "startDate": "2024-01-01",
+    "endDate": "2024-11-08",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32041",
+    "personName": "ישראל כץ",
+    "role": "שר הביטחון",
+    "ministryId": "sec-15",
+    "startDate": "2024-11-08",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32039",
+    "personName": "זאב אלקין",
+    "role": "שר נוסף במשרד האוצר",
+    "ministryId": "sec-5",
+    "startDate": "2024-11-08",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32040",
+    "personName": "גדעון סער",
+    "role": "שר החוץ",
+    "ministryId": "sec-9",
+    "startDate": "2024-11-08",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32050",
+    "personName": "שרן מרים השכל",
+    "role": "סגנית שר במשרד החוץ",
+    "ministryId": "sec-9",
+    "startDate": "2024-11-11",
+    "endDate": "2026-07-16",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32122",
+    "personName": "חיים כץ",
+    "role": "ממלא מקום השר לביטחון לאומי",
+    "ministryId": "sec-7",
+    "startDate": "2025-01-27",
+    "endDate": "2025-03-19",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32164",
+    "personName": "איתמר בן גביר",
+    "role": "השר לביטחון לאומי",
+    "ministryId": "sec-7",
+    "startDate": "2025-03-19",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32184",
+    "personName": "אלמוג כהן",
+    "role": "סגן שר במשרד ראש הממשלה",
+    "ministryId": "sec-4",
+    "startDate": "2025-04-02",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32262",
+    "personName": "חיים כץ",
+    "role": "ממלא מקום שר הבינוי והשיכון",
+    "ministryId": "sec-29",
+    "startDate": "2025-06-15",
+    "endDate": "2025-09-17",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32366",
+    "personName": "חיים כץ",
+    "role": "ממלא מקום שר הבריאות",
+    "ministryId": "health",
+    "startDate": "2025-07-29",
+    "endDate": "2025-11-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32370",
+    "personName": "יריב לוין",
+    "role": "ממלא מקום השר לשירותי דת",
+    "ministryId": "sec-22",
+    "startDate": "2025-07-29",
+    "endDate": "2025-11-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32367",
+    "personName": "חיים כץ",
+    "role": "ממלא מקום שר הרווחה והביטחון החברתי",
+    "ministryId": "sec-23",
+    "startDate": "2025-07-29",
+    "endDate": "2025-11-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32369",
+    "personName": "יריב לוין",
+    "role": "ממלא מקום שר העבודה",
+    "ministryId": "sec-36",
+    "startDate": "2025-07-29",
+    "endDate": "2025-11-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32368",
+    "personName": "יריב לוין",
+    "role": "ממלא מקום שר הפנים",
+    "ministryId": "sec-6",
+    "startDate": "2025-07-29",
+    "endDate": "2025-12-24",
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-32408",
+    "personName": "חיים כץ",
+    "role": "שר הבינוי והשיכון",
+    "ministryId": "sec-29",
+    "startDate": "2025-09-17",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33453",
+    "personName": "חיים כץ",
+    "role": "שר הבריאות",
+    "ministryId": "health",
+    "startDate": "2025-11-24",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33451",
+    "personName": "יריב לוין",
+    "role": "השר לשירותי דת",
+    "ministryId": "sec-22",
+    "startDate": "2025-11-24",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33454",
+    "personName": "חיים כץ",
+    "role": "שר הרווחה והביטחון החברתי",
+    "ministryId": "sec-23",
+    "startDate": "2025-11-24",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33450",
+    "personName": "יריב לוין",
+    "role": "שר העבודה",
+    "ministryId": "sec-36",
+    "startDate": "2025-11-24",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33678",
+    "personName": "ישראל אייכלר",
+    "role": "סגן שר במשרד התקשורת",
+    "ministryId": "sec-39",
+    "startDate": "2026-01-19",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  },
+  {
+    "id": "tenure-33869",
+    "personName": "מישל בוסקילה",
+    "role": "סגן שר החוץ",
+    "ministryId": "sec-9",
+    "startDate": "2026-07-16",
+    "endDate": null,
+    "sourceUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "sourceTitle": "הרכב הממשלה ה-37 — אתר הכנסת (נתוני שירות ה-OData של הכנסת)"
+  }
+]

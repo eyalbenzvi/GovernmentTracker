@@ -1,0 +1,54 @@
+{
+  "collectorId": "collect-minister-tenures",
+  "startedAt": "2026-08-14T09:17:33.677Z",
+  "finishedAt": "2026-08-14T09:17:37.614Z",
+  "environmentNote": "נקרא משירות ה-OData של הכנסת בבקשה מזוהה. תאריכים לא הוסקו ולא הושלמו; משרד ללא סעיף תקציב מדווח ואינו משויך בכוח.",
+  "attempts": [
+    {
+      "url": "https://knesset.gov.il/Odata/ParliamentInfo.svc/KNS_PersonToPosition?$filter=GovernmentNum%20eq%2037&$format=json",
+      "purpose": "collect: government 37 appointments from the Knesset OData service",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 52274,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-14T09:17:34.789Z",
+      "durationMs": 1111
+    },
+    {
+      "url": "https://knesset.gov.il/Odata/ParliamentInfo.svc/KNS_Person?$filter=PersonID%20eq%20468%20or%20PersonID%20eq%20556%20or%20PersonID%20eq%20563%20or%20PersonID%20eq%20965%20or%20PersonID%20eq%201025%20or%20PersonID%20eq%201027%20or%20PersonID%20eq%201056%20or%20PersonID%20eq%201057%20or%20PersonID%20eq%202291%20or%20PersonID%20eq%204395%20or%20PersonID%20eq%204397%20or%20PersonID%20eq%2011835%20or%20PersonID%20eq%2012937%20or%20PersonID%20eq%2012951%20or%20PersonID%20eq%2012959%20or%20PersonID%20eq%2023551%20or%20PersonID%20eq%2023564%20or%20PersonID%20eq%2028513%20or%20PersonID%20eq%2030055%20or%20PersonID%20eq%2030057&$format=json",
+      "purpose": "collect: office-holder names from the Knesset OData service",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 5015,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-14T09:17:35.172Z",
+      "durationMs": 382
+    },
+    {
+      "url": "https://knesset.gov.il/Odata/ParliamentInfo.svc/KNS_Person?$filter=PersonID%20eq%2030058%20or%20PersonID%20eq%2030077%20or%20PersonID%20eq%2030082%20or%20PersonID%20eq%2030083%20or%20PersonID%20eq%2030118%20or%20PersonID%20eq%2030470%20or%20PersonID%20eq%2030657%20or%20PersonID%20eq%2030660%20or%20PersonID%20eq%2030671%20or%20PersonID%20eq%2030683%20or%20PersonID%20eq%2030700%20or%20PersonID%20eq%2030704%20or%20PersonID%20eq%2030708%20or%20PersonID%20eq%2030717%20or%20PersonID%20eq%2030718%20or%20PersonID%20eq%2030749%20or%20PersonID%20eq%2030765%20or%20PersonID%20eq%2030786%20or%20PersonID%20eq%2030799%20or%20PersonID%20eq%2030804&$format=json",
+      "purpose": "collect: office-holder names from the Knesset OData service",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 4999,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-14T09:17:36.313Z",
+      "durationMs": 1141
+    },
+    {
+      "url": "https://knesset.gov.il/Odata/ParliamentInfo.svc/KNS_Person?$filter=PersonID%20eq%2030809%20or%20PersonID%20eq%2030810%20or%20PersonID%20eq%2030811%20or%20PersonID%20eq%2030814%20or%20PersonID%20eq%2030833%20or%20PersonID%20eq%2030836%20or%20PersonID%20eq%2030846%20or%20PersonID%20eq%2030847%20or%20PersonID%20eq%2030857%20or%20PersonID%20eq%2030866&$format=json",
+      "purpose": "collect: office-holder names from the Knesset OData service",
+      "outcome": "ok",
+      "httpStatus": 200,
+      "bytes": 2666,
+      "errorMessage": null,
+      "attemptedAt": "2026-08-14T09:17:37.599Z",
+      "durationMs": 1285
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "ok": 4,
+    "blocked": 0,
+    "failed": 0
+  }
+}

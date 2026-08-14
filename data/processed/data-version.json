@@ -1,6 +1,6 @@
 {
   "version": "2026-08-14.1",
-  "builtAt": "2026-08-14T09:04:11.937Z",
+  "builtAt": "2026-08-14T09:20:05.824Z",
   "collectionWindowStart": "2022-12-29",
   "collectionWindowEnd": "2026-08-14",
   "governmentPeriod": "הממשלה ה-37",
@@ -10,7 +10,8 @@
     "ministriesWithActivityData": 21,
     "budgetItems": 2725,
     "activityItems": 2386,
-    "ministerTenures": 0,
+    "ministerTenures": 68,
+    "ministerTenuresEnded": 39,
     "sources": 54,
     "sourcesRetrieved": 46,
     "topicsDefined": 12,

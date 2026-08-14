@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-08-14",
+  "source": {
+    "name": "שירות ה-OData של הכנסת (ParliamentInfo.svc)",
+    "appointmentsUrl": "https://knesset.gov.il/Odata/ParliamentInfo.svc/KNS_PersonToPosition?$filter=GovernmentNum%20eq%2037&$format=json",
+    "humanReadableUrl": "https://main.knesset.gov.il/mk/government/Pages/CurrentGovernment.aspx",
+    "note": "מקור רשמי ראשוני. עמוד הרכב הממשלה ב-gov.il דוחה לקוחות אוטומטיים מזוהים, אך הכנסת מפרסמת את אותן עובדות בשירות פתוח ומתועד, ולכן אין צורך להתחזות לדפדפן ואין צורך להסיק תאריכים."
+  },
+  "totals": {
+    "appointmentsRead": 97,
+    "people": 50,
+    "tenuresWritten": 68,
+    "tenuresEndedMidTerm": 39,
+    "appointmentsWithoutAMatchedSection": 29,
+    "appointmentsWithoutAName": 0
+  },
+  "unmatchedMinistries": [
+    {
+      "ministryName": "בלי תיק",
+      "appointments": 7
+    },
+    {
+      "ministryName": "משרד המורשת",
+      "appointments": 3
+    },
+    {
+      "ministryName": "משרד הנגב, הגליל והחוסן הלאומי",
+      "appointments": 3
+    },
+    {
+      "ministryName": "המשרד לשוויון חברתי וקידום מעמד האישה",
+      "appointments": 2
+    },
+    {
+      "ministryName": "המשרד לשיתוף פעולה אזורי",
+      "appointments": 2
+    },
+    {
+      "ministryName": "משרד החדשנות, המדע והטכנולוגיה",
+      "appointments": 2
+    },
+    {
+      "ministryName": "משרד המודיעין",
+      "appointments": 2
+    },
+    {
+      "ministryName": "משרד ירושלים ומסורת ישראל",
+      "appointments": 2
+    },
+    {
+      "ministryName": "המשרד לעניינים אסטרטגיים",
+      "appointments": 1
+    },
+    {
+      "ministryName": "המשרד לקידום מעמד האישה",
+      "appointments": 1
+    },
+    {
+      "ministryName": "משרד ההסברה",
+      "appointments": 1
+    },
+    {
+      "ministryName": "משרד ההתיישבות והמשימות הלאומיות",
+      "appointments": 1
+    },
+    {
+      "ministryName": "משרד הקשר בין הממשלה לכנסת",
+      "appointments": 1
+    },
+    {
+      "ministryName": "משרד התפוצות והמאבק באנטישמיות",
+      "appointments": 1
+    }
+  ],
+  "limitations": [
+    "שיוך משרד לסעיף תקציב נעשה רק לפי רשימת הכינויים המוצהרת. מינוי במשרד שאין לו סעיף תקציב עצמאי — למשל ירושלים ומורשת, או שר בלי תיק — נספר כאן ואינו נדחס לסעיף שכן.",
+    "התאריכים הם תאריכי המינוי והסיום כפי שהכנסת מפרסמת אותם. כהונה שטרם הסתיימה מופיעה בלי תאריך סיום, ולא עם תאריך משוער.",
+    "מינוי בפועל וממלא מקום מופיעים בתיאור התפקיד כלשונו (DutyDesc) ואינם מאוחדים עם כהונה מלאה."
+  ]
+}

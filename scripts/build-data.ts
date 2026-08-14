@@ -174,10 +174,15 @@ function main(): void {
   });
 
   // ---- minister tenures ---------------------------------------------------
-  // Emitted only from a retrieved official source. The cabinet-composition page
-  // is catalogued but was not retrievable, and tenure dates must not be inferred,
-  // so this dataset is intentionally empty in this build.
-  const tenures: MinisterTenure[] = [];
+  // Collected by scripts/collect-minister-tenures.ts from the Knesset's own
+  // OData service, and read here rather than rebuilt. This was an empty dataset
+  // for the life of the project, on the stated grounds that the cabinet page on
+  // gov.il refuses automated clients — true of gov.il, and irrelevant: the
+  // Knesset publishes the same appointments in an open, documented service.
+  const tenuresPath = path.join(PROCESSED_DIR, 'minister-tenures.json');
+  const tenures: MinisterTenure[] = fs.existsSync(tenuresPath)
+    ? readJson<MinisterTenure[]>(tenuresPath)
+    : [];
 
   // ---- activity ↔ budget links -------------------------------------------
   // A link is emitted only when both sides exist AND a documented mapping basis
@@ -225,7 +230,7 @@ function main(): void {
           refusedHosts.length > 0
             ? `מתחמים שהחזירו דחייה ברמת ה-HTTP לבקשה אוטומטית מזוהה: ${refusedHosts.join(', ')}. אתר gov.il ואתר הכנסת מפעילים הגנת bot שדוחה לקוחות שאינם דפדפן. לא נעשה ניסיון להתחזות לדפדפן כדי לעקוף אותה — זו הייתה עקיפה של סירוב מפורש של המקור, בניגוד לכללי האיסוף של הפרויקט.`
             : 'לא נרשמו דחיות HTTP מצד המקורות.',
-          'ההשלכה המעשית: נתוני התקציב, הביצוע ופריטי הפעילות נאספים דרך המראה הציבורית של מפתח התקציב (החלטות ממשלה, פרסומי משרדים וקולות קוראים שמקורם ב-gov.il), עם קישור לעמוד המקורי בכל פריט. תאריכי כהונת שרים עדיין אינם נאספים, מפני שעמוד הרכב הממשלה אינו נגיש לאיסוף אוטומטי ותאריכים אינם נגזרים בהסקה.',
+          'ההשלכה המעשית: נתוני התקציב, הביצוע ופריטי הפעילות נאספים דרך המראה הציבורית של מפתח התקציב (החלטות ממשלה, פרסומי משרדים וקולות קוראים שמקורם ב-gov.il), עם קישור לעמוד המקורי בכל פריט. תאריכי כהונת השרים נאספים משירות ה-OData של הכנסת: עמוד הרכב הממשלה ב-gov.il אינו נגיש לאיסוף אוטומטי, אך הכנסת מפרסמת את אותם מינויים בשירות פתוח ומתועד, ולכן אין צורך להסיק תאריכים.',
         ],
       },
       {
@@ -340,6 +345,7 @@ function main(): void {
       budgetItems: budgetItems.length,
       activityItems: activities.length,
       ministerTenures: tenures.length,
+      ministerTenuresEnded: tenures.filter((t) => t.endDate !== null).length,
       sources: catalog.length,
       sourcesRetrieved: catalog.filter((s) => s.retrievalStatus === 'retrieved').length,
       topicsDefined: topics.length,

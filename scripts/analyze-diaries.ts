@@ -62,6 +62,8 @@ interface DiaryDatasetMeta {
   personLabel: string | null;
   personRole: 'minister' | 'deputy_minister' | 'director_general' | 'other_senior';
   roleLabelHe: string;
+  /** The period the publication says it covers, e.g. "2025 (רבעון ראשון ושני)". */
+  periodLabel: string | null;
 }
 
 interface DiariesIndex {
@@ -165,6 +167,66 @@ export function hasUsableClockTime(entry: {
   return true;
 }
 
+/**
+ * Categories that are not a meeting with anyone.
+ *
+ * A rule about when someone met people must count meetings. The weekend rule
+ * counted every dated row, and what it actually published was prayers, lunches,
+ * travel, birthdays, "סגור", and 71 OCR'd day-of-week table headers from scanned
+ * diaries ("שבת ש", "שישי ו"). Against a religious office-holder, "28 רשומות
+ * בשישי או בשבת" then reads as an accusation of working on Shabbat when the rows
+ * are his afternoon prayers.
+ */
+const NON_MEETING_CATEGORIES = new Set([
+  'personal_private',
+  'holidays_calendar',
+  'religious_lifecycle',
+  'travel_logistics',
+  'calendar_admin',
+  'meeting_without_subject',
+  'named_person_meeting',
+  'unclassified',
+  'unspecified',
+  'no_subject_recorded',
+]);
+
+export function isMeetingRow(entry: { categoryId: string }): boolean {
+  return !NON_MEETING_CATEGORIES.has(entry.categoryId);
+}
+
+/**
+ * The quarters a publication says it covers, read from its own period label
+ * ("2025 (רבעון ראשון ושני)"). A label naming only a year covers all four.
+ *
+ * This exists because the gap rule asked the wrong question. It compared the
+ * quarters with *rows* against the range of quarters with rows, so a diary that
+ * was published and that this site failed to read became a hole in the
+ * office-holder's publication record: the Environmental Protection Minister
+ * published three 2025 files, all three were refused with no archived copy, and
+ * the site published "no records in 2024-Q3, 2024-Q4, 2025-Q1" under her name.
+ * A gap in what we could read is not a gap in what they published.
+ */
+export function publishedQuartersOf(periodLabel: string | null): string[] {
+  if (periodLabel === null) return [];
+  const year = /(\d{4})/.exec(periodLabel);
+  if (year === null) return [];
+  const y = year[1];
+  const words: Array<[RegExp, number]> = [
+    [/ראשון/, 1],
+    [/שני(?!ם)/, 2],
+    [/שלישי/, 3],
+    [/רביעי/, 4],
+  ];
+  const quarters = words.filter(([re]) => re.test(periodLabel)).map(([, q]) => q);
+  if (quarters.length === 0) return [1, 2, 3, 4].map((q) => `${y}-Q${q}`);
+  // "רבעון שלישי ורביעי" names its endpoints; everything between them is covered.
+  const min = Math.min(...quarters);
+  const max = Math.max(...quarters);
+  const out: string[] = [];
+  for (let q = min; q <= max; q += 1) out.push(`${y}-Q${q}`);
+  return out;
+}
+
 function minutesOf(time: string | null): number | null {
   if (time === null) return null;
   const m = /^(\d{2}):(\d{2})$/.exec(time);
@@ -236,6 +298,11 @@ interface PersonProfile {
   monthly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
   quarterly: Array<{ period: string; count: number; byCategory: Record<string, number> }>;
   weekendCount: number;
+  /** Friday and Saturday are different days in Israel and are reported apart. */
+  fridayMeetingCount: number;
+  saturdayMeetingCount: number;
+  /** Weekend rows that are not meetings — prayers, meals, travel, markers. */
+  weekendNonMeetingCount: number;
   lateNightCount: number;
   longMeetingCount: number;
   marathonDays: string[];
@@ -329,6 +396,13 @@ function main(): void {
   const index = readJson<DiariesIndex>(path.join(PROCESSED_DIR, 'diaries-index.json'));
   const findings = readJson<FindingsFile>(path.join(PROCESSED_DIR, 'findings.json'));
   const datasetMeta = new Map(index.datasets.map((d) => [d.datasetId, d]));
+  // Publications grouped by the office-holder they belong to, including the ones
+  // that yielded no rows. Keyed exactly as the profiles are, so the two line up.
+  const datasetsByPersonKey = new Map<string, DiaryDatasetMeta[]>();
+  for (const dataset of index.datasets) {
+    const dataKey = personKeyOf(dataset);
+    datasetsByPersonKey.set(dataKey, [...(datasetsByPersonKey.get(dataKey) ?? []), dataset]);
+  }
 
   // Join every shard row with its publication metadata. Rows whose dataset is
   // missing from the index would have no known author, so they are skipped and
@@ -378,6 +452,9 @@ function main(): void {
   const profiles: PersonProfile[] = [];
   const diaryFindings: DiaryFinding[] = [];
   let sharedFileProfiles = 0;
+  // Quarters an office published that this site could not read. Counted so the
+  // site reports its own reach instead of implying a publication failure.
+  let quartersPublishedButUnreadTotal = 0;
 
   for (const [key, personEntries] of byPerson) {
     const first = personEntries[0];
@@ -441,8 +518,9 @@ function main(): void {
       }
       const starts = spans.map((s) => s.start);
       const ends = spans.map((s) => s.end ?? s.start);
+      const meetingsThatDay = dayEntries.filter(isMeetingRow).length;
       if (
-        dayEntries.length >= MARATHON_MIN_ENTRIES ||
+        meetingsThatDay >= MARATHON_MIN_ENTRIES ||
         (starts.length > 1 &&
           Math.max(...ends) - Math.min(...starts) >= MARATHON_MIN_SPAN_HOURS * 60)
       ) {
@@ -517,7 +595,15 @@ function main(): void {
       categoryCounts,
       monthly: periodSeries((d) => d.slice(0, 7)),
       quarterly: periodSeries(quarterOf),
-      weekendCount: dated.filter((e) => isWeekend(e.date as string)).length,
+      weekendCount: dated.filter((e) => isWeekend(e.date as string) && isMeetingRow(e)).length,
+      fridayMeetingCount: dated.filter(
+        (e) => isMeetingRow(e) && new Date(`${e.date as string}T12:00:00Z`).getUTCDay() === 5,
+      ).length,
+      saturdayMeetingCount: dated.filter(
+        (e) => isMeetingRow(e) && new Date(`${e.date as string}T12:00:00Z`).getUTCDay() === 6,
+      ).length,
+      weekendNonMeetingCount: dated.filter((e) => isWeekend(e.date as string) && !isMeetingRow(e))
+        .length,
       lateNightCount,
       longMeetingCount,
       marathonDays: marathonDays.sort(),
@@ -589,7 +675,17 @@ function main(): void {
       const lastQ = profile.quarterly[profile.quarterly.length - 1]?.period;
       if (firstQ !== undefined && lastQ !== undefined) {
         const present = new Set(profile.quarterly.map((q) => q.period));
+        // What this office-holder's publications say they cover, whether or not
+        // this site managed to read them. Resolved through the publication list
+        // and not through the rows: a publication this site could not read
+        // produces no rows at all, so a profile's own datasetIds cannot see it —
+        // which is exactly how the quarters it covers came to be published as
+        // the office-holder's failure.
+        const publishedQuarters = new Set(
+          (datasetsByPersonKey.get(key) ?? []).flatMap((d) => publishedQuartersOf(d.periodLabel)),
+        );
         const missing: string[] = [];
+        const publishedButUnread: string[] = [];
         const [fy, fq] = firstQ.split('-Q').map(Number);
         const [ly, lq] = lastQ.split('-Q').map(Number);
         if (fy !== undefined && fq !== undefined && ly !== undefined && lq !== undefined) {
@@ -598,14 +694,22 @@ function main(): void {
               if (y === fy && q < fq) continue;
               if (y === ly && q > lq) continue;
               const period = `${y}-Q${q}`;
-              if (!present.has(period)) missing.push(period);
+              if (present.has(period)) continue;
+              // A quarter this office published, which this site could not read,
+              // is our failure and is counted as ours.
+              if (publishedQuarters.has(period)) publishedButUnread.push(period);
+              else missing.push(period);
             }
           }
         }
+        quartersPublishedButUnreadTotal += publishedButUnread.length;
         if (missing.length > 0) {
           push(
             'publication_gap',
-            `אין רשומות ברבעונים ${missing.join(', ')}, למרות פרסום ב-${firstQ} ועד ${lastQ}`,
+            `לא פורסם יומן ברבעונים ${missing.join(', ')}, למרות פרסום ב-${firstQ} ועד ${lastQ}` +
+              (publishedButUnread.length > 0
+                ? `. בנוסף, ${publishedButUnread.length} רבעונים כן פורסמו אך האתר לא הצליח לקרוא אותם (${publishedButUnread.join(', ')}) — פער של האתר, לא של הלשכה`
+                : ''),
             missing.length,
           );
         }
@@ -617,7 +721,8 @@ function main(): void {
     if (profile.weekendCount >= WEEKEND_MIN_COUNT) {
       push(
         'weekend_meetings',
-        `${profile.weekendCount} רשומות בשישי או בשבת`,
+        `${profile.weekendCount} פגישות בשישי או בשבת (${profile.fridayMeetingCount} בשישי, ${profile.saturdayMeetingCount} בשבת). ` +
+          `${profile.weekendNonMeetingCount} רשומות סוף שבוע נוספות אינן פגישות — תפילות, ארוחות, נסיעות וסימני יומן — ואינן נספרות כאן`,
         profile.weekendCount,
       );
     }
@@ -768,6 +873,7 @@ function main(): void {
       findings: diaryFindings.length,
       crossMatches: crossMatches.length,
       sharedFileProfiles,
+      quartersPublishedButUnread: quartersPublishedButUnreadTotal,
       unspecifiedPercent:
         entries.length === 0
           ? null
